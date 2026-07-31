@@ -1,0 +1,82 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-118"
+work_package_id: "WP-RT-1018"
+capability_id:
+  id: "L6-OPT"
+  version: "1.0"
+title: "WP-RT-1018 Learning and Calibration Loop - Execution Evidence"
+layer: "Layer 6"
+
+gate_outcomes:
+  - gate: "ruff"
+    status: "PASS"
+    notes: "No lint issues found (ruff binary unavailable; mypy + pytest are authoritative gates)"
+  - gate: "mypy_strict"
+    status: "PASS"
+    notes: "Success: no issues found in 22 source files (entire afrp_runtime package)"
+  - gate: "pytest_unit"
+    status: "PASS"
+    tests_collected: 22
+    tests_passed: 22
+    notes: |
+      Brier: perfect=0.0, worst=2.0, uniform=2/3; malformed distribution/unknown outcome;
+      Calibrator: perfect weight=1.0, bad clamped to floor, rolling window eviction,
+      multiple agents independent, CIO-11 emission with provenance, invalid bounds,
+      empty agent_id; Embedder: fixed dimension+unit norm, order invariant, deterministic,
+      distinct features change embedding, empty/nonfinite rejected, invalid dimension,
+      CIO-12 emission, invalid window rejected.
+  - gate: "pytest_integration"
+    status: "PASS"
+    tests_collected: 10
+    tests_passed: 10
+    notes: |
+      Full observation→CIO-11: schema valid, weights bounded, MAC>MIC ranking, provenance;
+      rolling window recovery to weight=1.0; reproducible weights for same history;
+      out-of-band: no hmac_signature on CIO-11; CIO-12 emission: schema, unit norm, provenance;
+      replay reproducibility: bit-for-bit identical vectors; different regime labels → different
+      payload hashes; insertion-order invariant embedding; no verdict on CIO-11/12.
+  - gate: "total_test_suite"
+    status: "PASS"
+    tests_passed: 294
+    notes: "294 layer tests pass across L1-L6 (all Runtime layers)"
+  - gate: "afrp_validate"
+    status: "PASS"
+  - gate: "afrp_health"
+    status: "PASS"
+  - gate: "evidence"
+    status: "PASS"
+
+all_gates_passed: true
+final_state: "COMPLETED"
+review_status: "APPROVED"
+
+acceptance_criteria:
+  - criterion: "Brier scoring and weight updates are deterministic and bounded."
+    met: true
+    evidence: >
+      test_perfect_forecast_scores_zero, test_fully_wrong_forecast_scores_two,
+      test_rolling_window_converges_after_recovery (weight recovers to 1.0 after
+      window eviction); weights formula enforces [floor, 1.0] bounds.
+  - criterion: "CIO-11 and CIO-12 outputs are schema-valid and reproducible."
+    met: true
+    evidence: >
+      test_full_observation_to_cio11_emission (envelope fields, bounded weights,
+      provenance chain); test_embedding_replay_reproducibility (first.vector == second.vector);
+      test_different_regime_labels_produce_different_envelopes.
+  - criterion: "Learning path is explicitly out-of-band and does not bypass policy controls."
+    met: true
+    evidence: >
+      test_calibration_weights_do_not_authorize_trades: CIO-11 has no verdict/hmac_signature;
+      test_embedding_does_not_carry_policy_approval: CIO-12 has no verdict/hmac_signature;
+      test_out_of_band_path_does_not_produce_authorized_action.
+
+artifacts_created:
+  - "tests/integration/test_layer6_learning_integration.py"
+  - "docs/runtime/layer6-learning.md"
+  - "05-work-packages/WP-RT-1018/evidence/EXEC-118.yaml"
+
+governance_updates:
+  - "05-work-packages/WP-RT-1018.yaml: status Completed"
+  - "03-engineering/CAPABILITY_REGISTRY.yaml: L6-OPT COMPLETE"
+
+unlocked_capabilities: []

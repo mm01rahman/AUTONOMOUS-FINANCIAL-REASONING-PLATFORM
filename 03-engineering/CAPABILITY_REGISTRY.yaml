@@ -339,8 +339,8 @@ capabilities:
     version: "1.0"
     title: "Learning loop: Brier scoring, CIO-11 weights, CIO-12 embeddings"
     owner: "SLS-600"
-    status: "AVAILABLE"
-    planning_status: "READY"
+    status: "COMPLETE"
+    planning_status: "COMPLETE"
     layer: "Layer 6"
     depends_on: ["L5-EXE", "L1-RDB", "L1-MEM"]
     work_package: "WP-RT-1018"
