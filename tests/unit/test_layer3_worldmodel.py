@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import pytest
-
 from afrp_runtime.common.errors import ContractViolationError
 from afrp_runtime.contracts.cio import THETA
 from afrp_runtime.layer3.dsmt import (
@@ -15,7 +14,6 @@ from afrp_runtime.layer3.dsmt import (
     render_label,
     validate_mass_function,
 )
-
 
 # ── label parsing / rendering ──────────────────────────────────────────────────
 
