@@ -17,6 +17,9 @@ dev = [
     "jsonschema>=4.21.0",
     "types-pyyaml>=6.0.0",
     "types-jsonschema>=4.21.0",
+    "types-protobuf>=4.25.0",
+    "grpcio-tools>=1.62.0",
+    "protobuf>=4.25.0",
 ]
 
 [build-system]

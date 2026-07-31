@@ -1,0 +1,680 @@
+{
+  "messages": {
+    "afrp.v1.AuthorizedAction": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "10": [
+        "constraint_diagnostics",
+        "TYPE_STRING",
+        "LABEL_REPEATED"
+      ],
+      "11": [
+        "hmac_signature",
+        "TYPE_BYTES",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "candidate_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "verdict",
+        "TYPE_ENUM",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "direction",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "size",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "7": [
+        "entry_price",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "8": [
+        "stop_price",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "9": [
+        "mission_profile_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.CalibrationWeights": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "agent_weights",
+        "TYPE_MESSAGE",
+        "LABEL_REPEATED"
+      ],
+      "3": [
+        "brier_scores",
+        "TYPE_MESSAGE",
+        "LABEL_REPEATED"
+      ],
+      "4": [
+        "window_cycles",
+        "TYPE_UINT32",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.CalibrationWeights.AgentWeightsEntry": {
+      "1": [
+        "key",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "value",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.CalibrationWeights.BrierScoresEntry": {
+      "1": [
+        "key",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "value",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.CognitiveEnvelope": {
+      "1": [
+        "message_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "10": [
+        "trace_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "11": [
+        "span_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "cognitive_cycle_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "producer_subsystem_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "schema_version",
+        "TYPE_UINT32",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "semantic_version",
+        "TYPE_UINT32",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "generated_at_ns",
+        "TYPE_INT64",
+        "LABEL_OPTIONAL"
+      ],
+      "7": [
+        "mission_profile_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "8": [
+        "parent_cio_ids",
+        "TYPE_STRING",
+        "LABEL_REPEATED"
+      ],
+      "9": [
+        "payload_hash",
+        "TYPE_BYTES",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.DecisionContext": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "world_state_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "scenario_set_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "portfolio_state_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "risk_aversion_lambda",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "7": [
+        "max_position_size",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "8": [
+        "available_cash",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.DomainBelief": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "agent_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "masses",
+        "TYPE_MESSAGE",
+        "LABEL_REPEATED"
+      ],
+      "5": [
+        "reliability",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "degraded",
+        "TYPE_BOOL",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.DomainBelief.MassesEntry": {
+      "1": [
+        "key",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "value",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.EpisodicEmbedding": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "vector",
+        "TYPE_DOUBLE",
+        "LABEL_REPEATED"
+      ],
+      "4": [
+        "regime_label",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "window_start_ns",
+        "TYPE_INT64",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "window_end_ns",
+        "TYPE_INT64",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.ExecutionCandidate": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "10": [
+        "risk_adjusted_utility",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "direction",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "size",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "entry_price",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "stop_price",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "7": [
+        "target_price",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "8": [
+        "expected_utility",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "9": [
+        "expected_risk",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.ExecutionIntent": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "order_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "authorized_action_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "state",
+        "TYPE_ENUM",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "direction",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "7": [
+        "quantity",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "8": [
+        "limit_price",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.ExecutionReport": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "order_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "event",
+        "TYPE_ENUM",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "fill_quantity",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "fill_price",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "venue",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "7": [
+        "venue_at_ns",
+        "TYPE_INT64",
+        "LABEL_OPTIONAL"
+      ],
+      "8": [
+        "reason",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.PortfolioState": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "positions",
+        "TYPE_MESSAGE",
+        "LABEL_REPEATED"
+      ],
+      "3": [
+        "cash",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "equity",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "gross_exposure",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "reconciled_at_ns",
+        "TYPE_INT64",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.PortfolioState.Position": {
+      "1": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "quantity",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "average_price",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "unrealized_pnl",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.RawObservation": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "10": [
+        "event_at_ns",
+        "TYPE_INT64",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "kind",
+        "TYPE_ENUM",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "price",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "bid",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "ask",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "7": [
+        "size",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "8": [
+        "venue",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "9": [
+        "ingest_sequence",
+        "TYPE_UINT64",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.ScenarioSet": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "scenarios",
+        "TYPE_MESSAGE",
+        "LABEL_REPEATED"
+      ],
+      "4": [
+        "differential_entropy",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "horizon_seconds",
+        "TYPE_UINT32",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "random_seed",
+        "TYPE_UINT64",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.ScenarioSet.Scenario": {
+      "1": [
+        "scenario_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "probability",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "terminal_price",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "max_drawdown",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "max_runup",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.StandardFeature": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "feature_id",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "4": [
+        "value",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "window_seconds",
+        "TYPE_UINT32",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "quality",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "7": [
+        "source_sequence",
+        "TYPE_UINT64",
+        "LABEL_OPTIONAL"
+      ]
+    },
+    "afrp.v1.WorldStateVector": {
+      "1": [
+        "envelope",
+        "TYPE_MESSAGE",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "instrument",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "3": [
+        "fused_masses",
+        "TYPE_MESSAGE",
+        "LABEL_REPEATED"
+      ],
+      "4": [
+        "epistemic_uncertainty",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "5": [
+        "conflict_mass",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ],
+      "6": [
+        "regime_context",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "7": [
+        "active_hypotheses",
+        "TYPE_STRING",
+        "LABEL_REPEATED"
+      ],
+      "8": [
+        "agent_quorum",
+        "TYPE_UINT32",
+        "LABEL_OPTIONAL"
+      ],
+      "9": [
+        "fusion_trace",
+        "TYPE_STRING",
+        "LABEL_REPEATED"
+      ]
+    },
+    "afrp.v1.WorldStateVector.FusedMassesEntry": {
+      "1": [
+        "key",
+        "TYPE_STRING",
+        "LABEL_OPTIONAL"
+      ],
+      "2": [
+        "value",
+        "TYPE_DOUBLE",
+        "LABEL_OPTIONAL"
+      ]
+    }
+  },
+  "schema": "afrp-contract-manifest-1"
+}

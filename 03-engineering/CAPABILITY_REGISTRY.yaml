@@ -69,21 +69,21 @@ capabilities:
     version: "1.0"
     title: "proto custom options: cio_id, owner_subsystem, stability_level"
     owner: "L0-CONTRACTS"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     depends_on: ["EOS-ORCHESTRATOR"]
     work_package: "WP-IMP-0009"
   - id: "RT-PROTO-ENVELOPE"
     version: "1.0"
     title: "CognitiveEnvelope universal transport header"
     owner: "L0-CONTRACTS"
-    status: "LOCKED"
+    status: "COMPLETE"
     depends_on: ["RT-PROTO-ANNOTATIONS"]
     work_package: "WP-IMP-0010"
   - id: "RT-PROTO-CIO"
     version: "1.0"
     title: "CIO-01..CIO-12 canonical information objects"
     owner: "L0-CONTRACTS"
-    status: "LOCKED"
+    status: "COMPLETE"
     depends_on: ["RT-PROTO-ENVELOPE"]
     work_package: "WP-IMP-0011"
   - id: "RT-COMMON"
@@ -99,7 +99,7 @@ capabilities:
     version: "1.0"
     title: "Layer 1 ingress: telemetry ingestion emitting CIO-01"
     owner: "SLS-100"
-    status: "LOCKED"
+    status: "AVAILABLE"
     depends_on: ["RT-PROTO-CIO", "RT-COMMON"]
     work_package: "WP-IMP-0013"
   - id: "L1-FST"

@@ -1,0 +1,47 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-007"
+work_package_id: "WP-IMP-0009"
+capability:
+  id: "RT-PROTO-ANNOTATIONS"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (Claude Fable 5)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T18:15:00+06:00"
+  finished_at: "2026-07-31T18:25:00+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-07-31T18:25:00+06:00"
+      note: "Autopilot governed self-review per ADR-0002"
+preconditions:
+  - predicate: "capability.complete('EOS-ORCHESTRATOR')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "proto/afrp/v1/annotations.proto"
+  files_modified:
+    - "proto/afrp/v1/annotations.proto"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "proto_validation"
+    command: "uv run python -m tools.proto_gate"
+    result: "PASS"
+    detail: "proto_compile PASS; fit_003 PASS; nfr_010 PASS (20 messages)"
+artifacts:
+  source_files:
+    - "proto/afrp/v1/annotations.proto"
+unlocked_capabilities:
+  - id: "RT-PROTO-ENVELOPE"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    Custom options 50001-50003 (message) and 50101-50102 (field) per REF-001;
+    consumed successfully by envelope.proto and cio.proto under the gate.

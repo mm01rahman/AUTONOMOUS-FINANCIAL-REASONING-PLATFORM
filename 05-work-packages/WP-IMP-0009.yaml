@@ -1,0 +1,94 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0009"
+capability_id:
+  id: "RT-PROTO-ANNOTATIONS"
+  version: "1.0"
+title: "Author afrp.v1 custom option annotations (FIT-003 surface)"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "L0-CONTRACTS"
+  traceability:
+    implements_req: ["FR-007", "FIT-003"]
+    trace_sls: "REF-001"
+    trace_adr: ["ADR-0001", "ADR-0003"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-ORCHESTRATOR')"
+
+resources:
+  cpu: "low"
+  memory: "256MB"
+  network: false
+  filesystem:
+    write:
+      - "proto/afrp/v1/annotations.proto"
+      - "05-work-packages/WP-IMP-0009/evidence/"
+    read:
+      - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+
+execution:
+  priority: "high"
+  estimated_complexity: "small"
+  estimated_duration: "30m"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+
+outputs:
+  expected_source_files:
+    - "proto/afrp/v1/annotations.proto"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0009/evidence/EXEC-007.yaml"
+
+execution_results:
+  source_files_modified:
+    - "proto/afrp/v1/annotations.proto"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0009/evidence/EXEC-007.yaml"
+
+produces:
+  capability:
+    id: "RT-PROTO-ANNOTATIONS"
+    version: "1.0"
+  unlocks:
+    - id: "RT-PROTO-ENVELOPE"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "proto/afrp/v1/annotations.proto"
+  non_goals:
+    - "No message contracts (WP-IMP-0010/0011)."
+
+requirements:
+  annotations:
+    module: "proto/afrp/v1/annotations.proto"
+    rules:
+      - "Message options: cio_id (50001), owner_subsystem (50002), stability_level (50003)."
+      - "Field options: implements_req (50101), trace_sls (50102)."
+
+quality_gates:
+  proto_validation:
+    required: true
+    command: "uv run python -m tools.proto_gate"
+
+completion:
+  success_requires:
+    - "Options compile and are consumable by dependent contracts."
+
+failure_modes:
+  ERR-PROTO-SYNTAX: "protoc rejects the contract."
+
+execution_prompt: |
+  Execute WP-IMP-0009: author the afrp.v1 custom option annotations exactly per
+  REF-001 and ADR-0003, strictly within bounded_files.

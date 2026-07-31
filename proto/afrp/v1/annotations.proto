@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package afrp.v1;
+
+import "google/protobuf/descriptor.proto";
+
+// AFRP custom options (FIT-003). Every AFRP message MUST set the three
+// message-level options; field-level options carry traceability metadata.
+
+extend google.protobuf.MessageOptions {
+  // Canonical Information Object identity, e.g. "CIO-03-v1" or "ENVELOPE-v1".
+  string cio_id = 50001;
+  // Owning subsystem, e.g. "L2-AGENTS", "L3-WRM", or "ALL".
+  string owner_subsystem = 50002;
+  // Contract stability level, e.g. "L3" (frozen), "L2" (additive), "L1".
+  string stability_level = 50003;
+}
+
+extend google.protobuf.FieldOptions {
+  // Requirement id this field implements, e.g. "UX-001".
+  string implements_req = 50101;
+  // Service-level specification trace, e.g. "OBS-01", "ARB-03".
+  string trace_sls = 50102;
+}

@@ -81,9 +81,14 @@ requirements:
     title: "Protobuf annotations, CognitiveEnvelope, CIO-01..12 contracts"
     source: "02-architecture/200_REFERENCE_SPECIFICATION.md#1"
     capability: "RT-PROTO-CIO"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "proto/afrp/v1/annotations.proto"
+      - "proto/afrp/v1/envelope.proto"
+      - "proto/afrp/v1/cio.proto"
+    verified_by:
+      - "tests/unit/test_contracts.py"
+      - "05-work-packages/WP-IMP-0011/evidence/EXEC-009.yaml"
   - id: "FR-008"
     title: "Runtime common services: config, logging, exceptions, FSM, seeds"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
@@ -226,9 +231,13 @@ requirements:
     title: "Protobuf wire contract immutability"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
     capability: "RT-PROTO-CIO"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "tools/proto_gate.py"
+      - "09-validation/contracts/afrp_v1.snapshot.json"
+    verified_by:
+      - "tests/unit/test_contracts.py"
+      - "05-work-packages/WP-IMP-0011/evidence/EXEC-009.yaml"
 
   # ── Architecture fitness functions (ARCH-001 §3) ────────────────────
   - id: "FIT-001"
@@ -255,9 +264,13 @@ requirements:
     title: "Protobuf custom option presence check"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
     capability: "RT-PROTO-ANNOTATIONS"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "proto/afrp/v1/annotations.proto"
+      - "tools/proto_gate.py"
+    verified_by:
+      - "tests/unit/test_contracts.py"
+      - "05-work-packages/WP-IMP-0009/evidence/EXEC-007.yaml"
   - id: "FIT-004"
     title: "Cross-layer import prohibition in 06-runtime"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
@@ -377,9 +390,13 @@ requirements:
     title: "No protobuf breaking wire changes without major version bump"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "RT-PROTO-CIO"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "tools/proto_gate.py"
+      - "09-validation/contracts/afrp_v1.snapshot.json"
+    verified_by:
+      - "tests/unit/test_contracts.py"
+      - "05-work-packages/WP-IMP-0011/evidence/EXEC-009.yaml"
   - id: "EDR-011"
     title: "100% mypy --strict; implicit Any prohibited"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
