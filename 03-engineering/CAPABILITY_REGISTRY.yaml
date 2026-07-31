@@ -60,7 +60,7 @@ capabilities:
     version: "1.0"
     title: "afrp run: EGP-2.0 control plane, write locks, gates, rollback"
     owner: "EOS-CLI"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     depends_on: ["EOS-HEALTH"]
     work_package: "WP-IMP-0008"
 
@@ -69,7 +69,7 @@ capabilities:
     version: "1.0"
     title: "proto custom options: cio_id, owner_subsystem, stability_level"
     owner: "L0-CONTRACTS"
-    status: "LOCKED"
+    status: "AVAILABLE"
     depends_on: ["EOS-ORCHESTRATOR"]
     work_package: "WP-IMP-0009"
   - id: "RT-PROTO-ENVELOPE"
@@ -90,7 +90,7 @@ capabilities:
     version: "1.0"
     title: "Runtime common: config precedence, OBS-01 logging, exceptions, SYS-03 FSM, seeds"
     owner: "RT-COMMON"
-    status: "LOCKED"
+    status: "AVAILABLE"
     depends_on: ["EOS-ORCHESTRATOR"]
     work_package: "WP-IMP-0012"
 

@@ -1,0 +1,137 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0008"
+capability_id:
+  id: "EOS-ORCHESTRATOR"
+  version: "1.0"
+title: "Implement afrp run orchestrator: RSM-1.0 lifecycle, gates, rollback"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "EOS-CLI"
+  traceability:
+    implements_req: ["FR-006", "NFR-009", "EDR-011"]
+    trace_sls: "ROS-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-HEALTH')"
+  - predicate: "file.exists('00-governance/BASELINE_FINGERPRINT.yaml')"
+
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/afrp-cli/afrp/"
+      - "tests/unit/"
+      - "05-work-packages/WP-IMP-0008/evidence/"
+    read:
+      - "00-governance/"
+      - "03-engineering/"
+      - "05-work-packages/"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "medium"
+  estimated_duration: "2h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "00-governance/BASELINE_FINGERPRINT.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/afrp-cli/afrp/core/lifecycle.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tools/afrp-cli/afrp/commands/run.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_orchestrator.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0008/evidence/EXEC-006.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/afrp-cli/afrp/core/lifecycle.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tools/afrp-cli/afrp/commands/run.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_orchestrator.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0008/evidence/EXEC-006.yaml"
+
+produces:
+  capability:
+    id: "EOS-ORCHESTRATOR"
+    version: "1.0"
+  unlocks:
+    - id: "RT-PROTO-ANNOTATIONS"
+      version: "1.0"
+    - id: "RT-COMMON"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "tools/afrp-cli/afrp/core/lifecycle.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tools/afrp-cli/afrp/commands/run.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_orchestrator.py"
+  non_goals:
+    - "Do not implement runtime layer code (Stage C/D work packages)."
+    - "Do not auto-commit or push git history."
+
+requirements:
+  lifecycle:
+    module: "tools/afrp-cli/afrp/core/lifecycle.py"
+    rules:
+      - "Model RSM-1.0 states INITIAL..HALTED with a legal-transition table."
+      - "Reject illegal transitions with InvariantError; record history."
+  orchestrator:
+    module: "tools/afrp-cli/afrp/core/orchestrator.py"
+    rules:
+      - "Drive: baseline verify -> WP load -> precondition eval -> gate execution -> boundary audit -> REVIEW_PENDING."
+      - "Preconditions support git.tag, file.exists, capability.complete predicates."
+      - "Quality gates executed via subprocess; any required failure => rollback bounded files (git checkout) and HALT."
+      - "Dry-run mode evaluates everything but executes no gates and writes nothing."
+  run_command:
+    module: "tools/afrp-cli/afrp/commands/run.py"
+    rules:
+      - "afrp run --wp <id> [--dry-run] [--skip-gates] renders each transition and verdict."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/afrp-cli/ tests/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/afrp-cli/ tests/unit/test_orchestrator.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_orchestrator.py -v"
+
+completion:
+  success_requires:
+    - "'afrp run' drives the full RSM-1.0 lifecycle on a synthetic WP."
+    - "Failure path proven: failing gate triggers rollback and HALTED."
+    - "Quality gates pass with zero errors."
+
+failure_modes:
+  ERR-CONTRACT-REFERENCE: "Missing baseline ledger, registry, or WP contract."
+  ERR-PRECONDITION: "A WP precondition evaluates to FAIL."
+  ERR-GATE-FAILURE: "A required quality gate failed; bounded files rolled back."
+  ERR-EXEC-BOUNDARY: "Touched files outside bounded_files."
+
+execution_prompt: |
+  You are an autonomous AI Software Engineer executing Work Package WP-IMP-0008 in role AEF-02.
+  Implement the afrp run orchestrator strictly within bounded_files.
+  Run quality gates and generate EXEC-006.yaml evidence record upon completion.

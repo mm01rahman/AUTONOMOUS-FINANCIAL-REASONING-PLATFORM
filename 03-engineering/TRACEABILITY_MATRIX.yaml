@@ -69,9 +69,14 @@ requirements:
     title: "afrp run orchestrator control plane under EGP-2.0"
     source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#2"
     capability: "EOS-ORCHESTRATOR"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/lifecycle.py"
+      - "tools/afrp-cli/afrp/core/orchestrator.py"
+      - "tools/afrp-cli/afrp/commands/run.py"
+    verified_by:
+      - "tests/unit/test_orchestrator.py"
+      - "05-work-packages/WP-IMP-0008/evidence/EXEC-006.yaml"
   - id: "FR-007"
     title: "Protobuf annotations, CognitiveEnvelope, CIO-01..12 contracts"
     source: "02-architecture/200_REFERENCE_SPECIFICATION.md#1"
@@ -211,9 +216,12 @@ requirements:
     title: "100% strict MyPy compliance"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
     capability: "EOS-ORCHESTRATOR"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "pyproject.toml"
+      - "03-engineering/BUILD_PROFILE.yaml"
+    verified_by:
+      - "05-work-packages/WP-IMP-0008/evidence/EXEC-006.yaml"
   - id: "NFR-010"
     title: "Protobuf wire contract immutability"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
@@ -376,9 +384,11 @@ requirements:
     title: "100% mypy --strict; implicit Any prohibited"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "EOS-ORCHESTRATOR"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "pyproject.toml"
+    verified_by:
+      - "05-work-packages/WP-IMP-0008/evidence/EXEC-006.yaml"
   - id: "EDR-012"
     title: "Deprecations honor one-minor-version grace period"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
