@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 1 market data collection engine"
 layer: "Layer 1"
 description: "Ingest market telemetry into CIO-01 with provider abstraction and canonical normalization."
 objective: "Deliver deterministic, contract-compliant market data ingestion for tick and OHLCV inputs."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 
@@ -32,6 +32,8 @@ resources:
       - "tests/unit/test_layer1_ingest.py"
       - "tests/integration/test_layer1_ingest_integration.py"
       - "docs/runtime/layer1-ingest.md"
+      - "05-work-packages/WP-RT-1001.yaml"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
       - "05-work-packages/WP-RT-1001/evidence/"
     read:
       - "06-runtime/afrp_runtime/contracts/"
@@ -54,6 +56,8 @@ outputs:
     - "tests/unit/test_layer1_ingest.py"
     - "tests/integration/test_layer1_ingest_integration.py"
     - "docs/runtime/layer1-ingest.md"
+    - "05-work-packages/WP-RT-1001.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   expected_evidence:
     - "05-work-packages/WP-RT-1001/evidence/EXEC-101.yaml"
 
@@ -69,6 +73,8 @@ scope:
     - "tests/unit/test_layer1_ingest.py"
     - "tests/integration/test_layer1_ingest_integration.py"
     - "docs/runtime/layer1-ingest.md"
+    - "05-work-packages/WP-RT-1001.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   non_goals:
     - "No feature engineering or feature-store logic."
     - "No replay, memory, or cross-layer orchestration."
@@ -111,3 +117,14 @@ architecture_references:
 traceability_links: ["FR-009", "FIT-004", "FIT-005", "SLS-100"]
 execution_prompt: |
   Execute WP-RT-1001 strictly within bounded_files and non_goals.
+
+execution_results:
+  source_files_modified:
+    - "06-runtime/afrp_runtime/layer1/ingest.py"
+    - "tests/unit/test_layer1_ingest.py"
+    - "tests/integration/test_layer1_ingest_integration.py"
+    - "docs/runtime/layer1-ingest.md"
+    - "05-work-packages/WP-RT-1001.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-RT-1001/evidence/EXEC-101.yaml"

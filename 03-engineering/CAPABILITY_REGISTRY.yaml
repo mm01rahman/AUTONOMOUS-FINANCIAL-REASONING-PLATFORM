@@ -99,7 +99,7 @@ capabilities:
     version: "1.0"
     title: "Layer 1 ingress: telemetry ingestion emitting CIO-01"
     owner: "SLS-100"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     planning_status: "READY"
     layer: "Layer 1"
     depends_on: ["RT-PROTO-CIO", "RT-COMMON"]
@@ -113,7 +113,7 @@ capabilities:
     version: "1.0"
     title: "Layer 1 feature store: normalized features emitting CIO-02"
     owner: "SLS-100"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 1"
     depends_on: ["L1-ING"]
@@ -127,7 +127,7 @@ capabilities:
     version: "1.0"
     title: "Layer 1 relational persistence"
     owner: "SLS-100"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 1"
     depends_on: ["L1-ING"]
