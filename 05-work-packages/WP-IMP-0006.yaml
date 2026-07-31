@@ -1,0 +1,139 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0006"
+capability_id:
+  id: "EOS-EVIDENCE"
+  version: "1.0"
+title: "Implement afrp evidence command, WP loader & FIT-005 boundary audit"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "EOS-CLI"
+  traceability:
+    implements_req: ["FR-004", "FIT-005"]
+    trace_sls: "ROS-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-VALIDATOR')"
+  - predicate: "file.exists('09-validation/schemas/wps-1.0.schema.json')"
+  - predicate: "file.exists('09-validation/schemas/ers-1.0.schema.json')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/afrp-cli/afrp/"
+      - "tests/unit/"
+      - "05-work-packages/WP-IMP-0006/evidence/"
+    read:
+      - "05-work-packages/"
+      - "09-validation/schemas/"
+
+execution:
+  priority: "high"
+  estimated_complexity: "medium"
+  estimated_duration: "1h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "09-validation/schemas/wps-1.0.schema.json"
+    - "09-validation/schemas/ers-1.0.schema.json"
+
+outputs:
+  expected_source_files:
+    - "tools/afrp-cli/afrp/core/workpackage.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tools/afrp-cli/afrp/commands/evidence.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_evidence.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0006/evidence/EXEC-004.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/afrp-cli/afrp/core/workpackage.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tools/afrp-cli/afrp/commands/evidence.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_evidence.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0006/evidence/EXEC-004.yaml"
+
+produces:
+  capability:
+    id: "EOS-EVIDENCE"
+    version: "1.0"
+  unlocks:
+    - id: "EOS-HEALTH"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "tools/afrp-cli/afrp/core/workpackage.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tools/afrp-cli/afrp/commands/evidence.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_evidence.py"
+  non_goals:
+    - "Do not implement health metrics (deferred to IMP-0007)."
+    - "Do not implement the orchestrator control loop (deferred to IMP-0008)."
+
+requirements:
+  wp_loader:
+    module: "tools/afrp-cli/afrp/core/workpackage.py"
+    rules:
+      - "Load WP-*.yaml and validate against 09-validation/schemas/wps-1.0.schema.json."
+      - "Expose typed accessors for bounded_files, quality_gates, produces."
+  boundary_audit:
+    module: "tools/afrp-cli/afrp/core/evidence.py"
+    rules:
+      - "FIT-005: compare a set of modified files against bounded_files; report violations."
+      - "Modified files obtained from git diff --name-only <ref> plus untracked files."
+  evidence_engine:
+    module: "tools/afrp-cli/afrp/core/evidence.py"
+    rules:
+      - "Compose ERS-1.0 records and validate against ers-1.0.schema.json before writing."
+      - "Refuse to write schema-invalid evidence."
+  evidence_command:
+    module: "tools/afrp-cli/afrp/commands/evidence.py"
+    rules:
+      - "afrp evidence --wp <id> audits the working tree against the WP bounded_files."
+      - "Render PASS/FAIL verdict; exit non-zero on boundary violations."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/afrp-cli/ tests/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/afrp-cli/ tests/unit/test_evidence.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_evidence.py -v"
+
+completion:
+  success_requires:
+    - "'afrp evidence' command registered and executable."
+    - "FIT-005 audit proven on compliant and violating fixtures."
+    - "ERS emission rejects schema-invalid records."
+    - "Quality gates pass with zero errors."
+
+failure_modes:
+  ERR-CONTRACT-REFERENCE: "Missing WP contract or schema files."
+  ERR-CONTRACT-SCHEMA: "WP or evidence record fails JSON Schema validation."
+  ERR-EXEC-BOUNDARY: "Touched files outside bounded_files."
+
+execution_prompt: |
+  You are an autonomous AI Software Engineer executing Work Package WP-IMP-0006 in role AEF-02.
+  Implement afrp evidence, the WPS loader and FIT-005 boundary audit strictly within bounded_files.
+  Run quality gates and generate EXEC-004.yaml evidence record upon completion.
