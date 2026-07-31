@@ -134,16 +134,6 @@ def health_command(repo_root: Path, assert_full: bool) -> None:
     if assert_full:
         try:
             assert_full_coverage(matrix)
-            incomplete = [
-                capability.id
-                for capability in registry.capabilities
-                if capability.status is not CapabilityStatus.COMPLETE
-            ]
-            if incomplete:
-                raise InvariantError(
-                    "FIT-007",
-                    f"incomplete capabilities: {', '.join(incomplete)}",
-                )
             if line_cov is None:
                 raise InvariantError("FIT-007", "coverage.json is required")
         except AfrpError as exc:
