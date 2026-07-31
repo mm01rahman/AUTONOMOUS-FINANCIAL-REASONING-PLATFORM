@@ -11,7 +11,9 @@ import yaml
 from afrp.cli import cli
 from afrp.core.evidence import (
     audit_boundaries,
+    load_evidence,
     modified_files,
+    resolve_evidence_target,
     validate_evidence,
     write_evidence,
 )
@@ -123,6 +125,15 @@ class TestFit005Audit:
     def test_empty_change_set_compliant(self) -> None:
         assert audit_boundaries(("a.py",), ()).compliant
 
+    @pytest.mark.parametrize(
+        "relative", ["../EXEC-999.yaml", "/EXEC-999.yaml", "C:\\EXEC-999.yaml"]
+    )
+    def test_unsafe_evidence_target_rejected(
+        self, tmp_path: Path, relative: str
+    ) -> None:
+        with pytest.raises(ManifestValidationError, match="unsafe"):
+            resolve_evidence_target(tmp_path, (relative,), relative)
+
 
 class TestModifiedFiles:
     def test_detects_untracked_file(self, tmp_path: Path) -> None:
@@ -167,6 +178,24 @@ class TestEvidenceEngine:
             write_evidence(record, REPO_ROOT, tmp_path / "bad.yaml")
         assert not (tmp_path / "bad.yaml").exists()
 
+    def test_existing_record_is_never_overwritten(self, tmp_path: Path) -> None:
+        target = tmp_path / "EXEC-999.yaml"
+        target.write_text("original\n", encoding="utf-8")
+        with pytest.raises(ManifestValidationError, match="already exists"):
+            write_evidence(minimal_evidence(), REPO_ROOT, target)
+        assert target.read_text(encoding="utf-8") == "original\n"
+
+    def test_failed_publish_cleans_temporary_file(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        def fail_link(source: Path, target: Path) -> None:
+            raise OSError("simulated publication failure")
+
+        monkeypatch.setattr("afrp.core.evidence.os.link", fail_link)
+        with pytest.raises(ManifestValidationError, match="publication failure"):
+            write_evidence(minimal_evidence(), REPO_ROOT, tmp_path / "EXEC-999.yaml")
+        assert list(tmp_path.glob("*.tmp")) == []
+
     def test_missing_required_block_refused(self) -> None:
         record = minimal_evidence()
         del record["boundary_compliance"]
@@ -210,3 +239,119 @@ class TestEvidenceCommand:
         # bounds, so either verdict is legitimate; the command must not crash.
         assert outcome.exit_code in (0, 3)
         assert "fit_005:" in outcome.output
+
+    def test_compliant_change_emits_truthful_pending_evidence(
+        self, tmp_path: Path
+    ) -> None:
+        schemas = tmp_path / "09-validation" / "schemas"
+        schemas.mkdir(parents=True)
+        for name in ("wps-1.0.schema.json", "ers-1.0.schema.json"):
+            (schemas / name).write_text(
+                (REPO_ROOT / "09-validation" / "schemas" / name).read_text(
+                    encoding="utf-8"
+                ),
+                encoding="utf-8",
+            )
+        work_packages = tmp_path / "05-work-packages"
+        work_packages.mkdir()
+        wp_doc = {
+            "schema_version": "WPS-1.0",
+            "work_package_id": "WP-TST-0001",
+            "capability_id": {"id": "TEST-CAP", "version": "1.0"},
+            "title": "Evidence fixture",
+            "status": "Assigned",
+            "is_immutable": True,
+            "governance": {
+                "target_subsystem": "TEST",
+                "traceability": {"implements_req": ["FR-TEST"]},
+            },
+            "preconditions": [],
+            "resources": {"filesystem": {"write": ["src/", "05-work-packages/"]}},
+            "execution": {"deterministic": True},
+            "rollback": {"strategy": "git_checkout_bounded_files"},
+            "inputs": {},
+            "outputs": {
+                "expected_source_files": ["src/a.py"],
+                "expected_evidence": [
+                    "05-work-packages/WP-TST-0001/evidence/EXEC-900.yaml"
+                ],
+            },
+            "produces": {
+                "capability": {"id": "TEST-CAP", "version": "1.0"},
+                "unlocks": [],
+            },
+            "scope": {
+                "bounded_files": [
+                    "src/",
+                    "05-work-packages/WP-TST-0001/evidence/",
+                ]
+            },
+            "requirements": {},
+            "quality_gates": {
+                "pytest": {"required": True, "command": "uv run pytest"}
+            },
+            "completion": {"success_requires": ["evidence"]},
+            "failure_modes": {},
+        }
+        (work_packages / "WP-TST-0001.yaml").write_text(
+            yaml.safe_dump(wp_doc, sort_keys=False), encoding="utf-8"
+        )
+        subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+        subprocess.run(["git", "add", "."], cwd=tmp_path, check=True)
+        subprocess.run(
+            [
+                "git",
+                "-c",
+                "user.email=t@t",
+                "-c",
+                "user.name=t",
+                "commit",
+                "-q",
+                "-m",
+                "root",
+            ],
+            cwd=tmp_path,
+            check=True,
+        )
+        source = tmp_path / "src" / "a.py"
+        source.parent.mkdir()
+        source.write_text("VALUE = 1\n", encoding="utf-8")
+
+        runner = CliRunner()
+        outcome = runner.invoke(
+            cli,
+            ["evidence", "--wp", "WP-TST-0001", "--repo-root", str(tmp_path)],
+        )
+        assert outcome.exit_code == 0, outcome.output
+        target = (
+            tmp_path
+            / "05-work-packages"
+            / "WP-TST-0001"
+            / "evidence"
+            / "EXEC-900.yaml"
+        )
+        record = load_evidence(tmp_path, target)
+        assert record["boundary_compliance"]["compliant"] is True
+        assert record["quality_gates"][0]["result"] == "SKIPPED"
+        assert record["verdict"] == {
+            "all_gates_passed": False,
+            "boundary_compliant": True,
+            "review_status": "PENDING_ARB",
+        }
+
+        second = runner.invoke(
+            cli,
+            ["evidence", "--wp", "WP-TST-0001", "--repo-root", str(tmp_path)],
+        )
+        assert second.exit_code == 0
+        assert "validated existing evidence" in second.output
+
+        stale = yaml.safe_load(target.read_text(encoding="utf-8"))
+        stale["work_package_id"] = "WP-TST-9999"
+        target.write_text(yaml.safe_dump(stale, sort_keys=False), encoding="utf-8")
+        rejected = runner.invoke(
+            cli,
+            ["evidence", "--wp", "WP-TST-0001", "--repo-root", str(tmp_path)],
+        )
+        assert rejected.exit_code == 2
+        assert "does not match" in rejected.output

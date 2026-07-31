@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 from pathlib import Path
 
 import pytest
@@ -44,6 +45,16 @@ MINIMAL_MANIFEST: dict[str, object] = {
 
 def write_manifest(path: Path, data: dict[str, object]) -> None:
     path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+
+
+def ledger_doc(artifacts: list[dict[str, str]]) -> dict[str, object]:
+    return {
+        "schema_version": "1.0",
+        "ledger_id": "BASELINE_FINGERPRINT",
+        "baseline_id": "AFRP-BASELINE-1.0.0",
+        "hash_algorithm": "sha256",
+        "artifacts": artifacts,
+    }
 
 
 class TestManifestParser:
@@ -143,11 +154,7 @@ class TestBaselineVerification:
         ledger = tmp_path / "ledger.yaml"
         ledger.write_text(
             yaml.safe_dump(
-                {
-                    "artifacts": [
-                        {"path": "doc.md", "sha256": "0" * 64},
-                    ]
-                }
+                ledger_doc([{"path": "doc.md", "sha256": "0" * 64}])
             ),
             encoding="utf-8",
         )
@@ -162,7 +169,7 @@ class TestBaselineVerification:
     def test_missing_listed_artifact_raises(self, tmp_path: Path) -> None:
         ledger = tmp_path / "ledger.yaml"
         ledger.write_text(
-            yaml.safe_dump({"artifacts": [{"path": "ghost.md", "sha256": "0" * 64}]}),
+            yaml.safe_dump(ledger_doc([{"path": "ghost.md", "sha256": "0" * 64}])),
             encoding="utf-8",
         )
         with pytest.raises(ContractReferenceError):
@@ -171,10 +178,93 @@ class TestBaselineVerification:
     def test_malformed_ledger_entry_raises_integrity_error(self, tmp_path: Path) -> None:
         ledger = tmp_path / "ledger.yaml"
         ledger.write_text(
-            yaml.safe_dump({"artifacts": [{"sha256": "0" * 64}]}),
+            yaml.safe_dump(ledger_doc([{"sha256": "0" * 64}])),
             encoding="utf-8",
         )
-        with pytest.raises(BaselineIntegrityError):
+        with pytest.raises(ManifestValidationError):
+            verify_baseline(tmp_path, ledger)
+
+    @pytest.mark.parametrize(
+        ("content", "match"),
+        [
+            ("schema_version: [unterminated", "YAML parse failure"),
+            ("- not\n- a\n- mapping\n", "root must be a mapping"),
+            (yaml.safe_dump({}), "schema_version"),
+            (
+                yaml.safe_dump(
+                    {
+                        **ledger_doc([{"path": "doc.md", "sha256": "0" * 64}]),
+                        "hash_algorithm": "sha512",
+                    }
+                ),
+                "hash_algorithm",
+            ),
+            (
+                yaml.safe_dump(
+                    {
+                        **ledger_doc([{"path": "doc.md", "sha256": "0" * 64}]),
+                        "baseline_id": "OTHER",
+                    }
+                ),
+                "baseline_id",
+            ),
+            (yaml.safe_dump(ledger_doc([])), "non-empty"),
+        ],
+    )
+    def test_malformed_ledger_rejected(
+        self, tmp_path: Path, content: str, match: str
+    ) -> None:
+        ledger = tmp_path / "ledger.yaml"
+        ledger.write_text(content, encoding="utf-8")
+        with pytest.raises(ManifestValidationError, match=match):
+            verify_baseline(tmp_path, ledger)
+
+    @pytest.mark.parametrize(
+        "unsafe_path",
+        [
+            "../outside.md",
+            "nested/../../outside.md",
+            "/absolute.md",
+            "C:\\absolute.md",
+        ],
+    )
+    def test_unsafe_artifact_path_rejected(
+        self, tmp_path: Path, unsafe_path: str
+    ) -> None:
+        ledger = tmp_path / "ledger.yaml"
+        ledger.write_text(
+            yaml.safe_dump(ledger_doc([{"path": unsafe_path, "sha256": "0" * 64}])),
+            encoding="utf-8",
+        )
+        with pytest.raises(ManifestValidationError, match="path"):
+            verify_baseline(tmp_path, ledger)
+
+    def test_duplicate_paths_rejected(self, tmp_path: Path) -> None:
+        artifact = tmp_path / "doc.md"
+        artifact.write_text("document", encoding="utf-8")
+        digest = hashlib.sha256(artifact.read_bytes()).hexdigest()
+        ledger = tmp_path / "ledger.yaml"
+        ledger.write_text(
+            yaml.safe_dump(
+                ledger_doc(
+                    [
+                        {"path": "doc.md", "sha256": digest},
+                        {"path": "doc.md", "sha256": digest},
+                    ]
+                )
+            ),
+            encoding="utf-8",
+        )
+        with pytest.raises(ManifestValidationError, match="duplicate"):
+            verify_baseline(tmp_path, ledger)
+
+    def test_invalid_sha256_rejected(self, tmp_path: Path) -> None:
+        ledger = tmp_path / "ledger.yaml"
+        ledger.write_text(
+            yaml.safe_dump(ledger_doc([{"path": "doc.md", "sha256": "not-a-digest"}])),
+            encoding="utf-8",
+        )
+        with pytest.raises(ManifestValidationError, match="SHA256"):
             verify_baseline(tmp_path, ledger)
 
 

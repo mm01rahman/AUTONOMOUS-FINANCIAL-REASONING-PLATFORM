@@ -5,8 +5,17 @@ from __future__ import annotations
 from pathlib import Path
 
 import click
-from afrp.core.evidence import audit_boundaries, modified_files
-from afrp.core.exceptions import AfrpError
+from afrp.core.evidence import (
+    audit_boundaries,
+    compose_boundary_evidence,
+    load_evidence,
+    modified_files,
+    resolve_evidence_target,
+    validate_existing_evidence,
+    write_evidence,
+)
+from afrp.core.exceptions import AfrpError, ManifestValidationError
+from afrp.core.orchestrator import _workspace_lock
 from afrp.core.workpackage import load_work_package
 
 
@@ -29,9 +38,31 @@ def evidence_command(wp_id: str, base_ref: str, repo_root: Path) -> None:
     """Audit working-tree changes against the Work Package bounded_files."""
     root = repo_root.resolve()
     try:
-        wp = load_work_package(root, wp_id)
-        changed = modified_files(root, base_ref)
-        audit = audit_boundaries(wp.bounded_files, changed)
+        with _workspace_lock(root):
+            wp = load_work_package(root, wp_id)
+            changed = modified_files(root, base_ref)
+            audit = audit_boundaries(wp.bounded_files, changed)
+            if audit.compliant:
+                if not wp.expected_evidence:
+                    raise ManifestValidationError(
+                        f"{wp.work_package_id} declares no expected evidence path"
+                    )
+                target = resolve_evidence_target(
+                    root,
+                    wp.bounded_files,
+                    wp.expected_evidence[0],
+                    allow_existing_unbounded=wp.status == "Completed",
+                )
+                if target.exists():
+                    record = load_evidence(root, target)
+                    validate_existing_evidence(record, wp, target, audit)
+                    evidence_status = (
+                        f"validated existing evidence: {target.relative_to(root)}"
+                    )
+                else:
+                    record = compose_boundary_evidence(wp, audit, ())
+                    write_evidence(record, root, target)
+                    evidence_status = f"emitted evidence: {target.relative_to(root)}"
     except AfrpError as exc:
         click.echo(f"HALTED: {exc}", err=True)
         raise SystemExit(exc.exit_code) from exc
@@ -41,6 +72,7 @@ def evidence_command(wp_id: str, base_ref: str, repo_root: Path) -> None:
     click.echo(f"files_modified: {len(audit.files_modified)}")
     if audit.compliant:
         click.echo("fit_005: PASS (all changes within bounded_files)")
+        click.echo(evidence_status)
         return
     click.echo(f"fit_005: FAIL ({len(audit.violations)} violation(s))")
     for name in audit.violations:

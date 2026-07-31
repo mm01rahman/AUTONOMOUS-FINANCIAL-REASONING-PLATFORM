@@ -9,14 +9,21 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
+import uuid
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
-from pathlib import Path
-from typing import Any
+from datetime import UTC, datetime
+from pathlib import Path, PurePosixPath, PureWindowsPath
+from typing import TYPE_CHECKING, Any
 
 import jsonschema
 import yaml
 from afrp.core.exceptions import ContractReferenceError, ManifestValidationError
+
+if TYPE_CHECKING:
+    from afrp.core.workpackage import WorkPackage
 
 ERS_SCHEMA_RELPATH = Path("09-validation") / "schemas" / "ers-1.0.schema.json"
 
@@ -90,6 +97,51 @@ def audit_boundaries(
     )
 
 
+def resolve_evidence_target(
+    repo_root: Path,
+    bounded_files: tuple[str, ...],
+    relative: str,
+    *,
+    allow_existing_unbounded: bool = False,
+) -> Path:
+    """Resolve a bounded evidence path and reject traversal or repository escape."""
+    posix = PurePosixPath(relative)
+    windows = PureWindowsPath(relative)
+    if (
+        not relative.strip()
+        or posix.is_absolute()
+        or windows.is_absolute()
+        or windows.drive
+        or ".." in posix.parts
+        or ".." in windows.parts
+    ):
+        raise ManifestValidationError(
+            f"unsafe expected evidence path: {relative!r}"
+        )
+    normalized = posix.as_posix()
+    root = repo_root.resolve()
+    target = (root / Path(*posix.parts)).resolve()
+    try:
+        target.relative_to(root)
+    except ValueError as exc:
+        raise ManifestValidationError(
+            f"expected evidence path escapes repository: {relative!r}"
+        ) from exc
+    resolved_relative = target.relative_to(root).as_posix()
+    lexical_bounded = audit_boundaries(bounded_files, (normalized,)).compliant
+    resolved_bounded = audit_boundaries(
+        bounded_files, (resolved_relative,)
+    ).compliant
+    if not (lexical_bounded and resolved_bounded) and not (
+        allow_existing_unbounded and target.is_file()
+    ):
+        raise ManifestValidationError(
+            "evidence target is outside bounded_files "
+            f"(possible symlink redirect): {normalized} -> {resolved_relative}"
+        )
+    return target
+
+
 def load_ers_schema(repo_root: Path) -> dict[str, Any]:
     """Load the ERS-1.0 JSON Schema."""
     schema_path = repo_root / ERS_SCHEMA_RELPATH
@@ -113,13 +165,158 @@ def validate_evidence(record: dict[str, Any], repo_root: Path) -> None:
         raise ManifestValidationError(f"evidence violates ERS-1.0: {exc.message}") from exc
 
 
-def write_evidence(record: dict[str, Any], repo_root: Path, target: Path) -> Path:
-    """Validate then write an ERS-1.0 record as YAML; refuse invalid records."""
-    validate_evidence(record, repo_root)
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(
-        yaml.safe_dump(record, sort_keys=False, default_flow_style=False),
-        encoding="utf-8",
-        newline="\n",
+def load_evidence(repo_root: Path, target: Path) -> dict[str, Any]:
+    """Load and validate one existing ERS record."""
+    if not target.is_file():
+        raise ContractReferenceError(str(target))
+    try:
+        loaded = yaml.safe_load(target.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, yaml.YAMLError) as exc:
+        raise ManifestValidationError(f"evidence YAML parse failure: {exc}") from exc
+    if not isinstance(loaded, dict):
+        raise ManifestValidationError("evidence root must be a mapping")
+    validate_evidence(loaded, repo_root)
+    return loaded
+
+
+def validate_existing_evidence(
+    record: dict[str, Any],
+    wp: WorkPackage,
+    target: Path,
+    audit: BoundaryAudit | None = None,
+) -> None:
+    """Verify that an existing ERS record belongs to its requested contract."""
+    expected_identity = {
+        "evidence_id": target.stem,
+        "work_package_id": wp.work_package_id,
+    }
+    for field, expected in expected_identity.items():
+        if record.get(field) != expected:
+            raise ManifestValidationError(
+                f"existing evidence {field} does not match {expected!r}"
+            )
+    if record.get("capability") != {
+        "id": wp.capability_id,
+        "version": wp.capability_version,
+    }:
+        raise ManifestValidationError("existing evidence capability does not match WPS")
+    if audit is None or wp.status == "Completed":
+        return
+    boundary = record.get("boundary_compliance")
+    if not isinstance(boundary, dict):
+        raise ManifestValidationError("existing evidence has no boundary mapping")
+    current_files = [
+        path for path in audit.files_modified if path not in wp.expected_evidence
+    ]
+    expected_boundary = {
+        "bounded_files": list(audit.bounded_files),
+        "files_modified": current_files,
+        "violations": list(audit.violations),
+        "compliant": audit.compliant,
+    }
+    if any(boundary.get(key) != value for key, value in expected_boundary.items()):
+        raise ManifestValidationError(
+            "existing evidence boundary data is stale for the current change set"
+        )
+
+
+def compose_boundary_evidence(
+    wp: WorkPackage,
+    audit: BoundaryAudit,
+    gates: Sequence[Mapping[str, object]],
+    *,
+    started_at: datetime | None = None,
+    finished_at: datetime | None = None,
+    final_state: str = "REVIEW_PENDING",
+    preconditions: Sequence[Mapping[str, object]] = (),
+) -> dict[str, Any]:
+    """Compose truthful internal ERS data for a boundary-controlled run."""
+    started = started_at or datetime.now(UTC)
+    finished = finished_at or datetime.now(UTC)
+    gate_records = [dict(gate) for gate in gates]
+    supplied_gates = {str(gate.get("gate")) for gate in gate_records}
+    gate_records.extend(
+        [
+            {
+                "gate": name,
+                "command": command,
+                "result": "SKIPPED",
+                "detail": "gate result was not supplied",
+            }
+            for name, command, _required in wp.quality_gates
+            if name not in supplied_gates
+        ]
     )
+    if not wp.expected_evidence:
+        raise ManifestValidationError(
+            f"{wp.work_package_id} declares no expected evidence path"
+        )
+    target = Path(wp.expected_evidence[0])
+    changed_sources = [
+        path for path in audit.files_modified if path not in wp.expected_evidence
+    ]
+    return {
+        "schema_version": "ERS-1.0",
+        "evidence_id": target.stem,
+        "work_package_id": wp.work_package_id,
+        "capability": {"id": wp.capability_id, "version": wp.capability_version},
+        "agent_identity": {
+            "role": "AEF-02 (Software Engineer)",
+            "agent_vendor": "GitHub",
+            "agent_name": "Copilot CLI",
+        },
+        "lifecycle": {
+            "protocol_version": "EGP-2.0",
+            "started_at": started.isoformat(),
+            "finished_at": finished.isoformat(),
+            "final_state": final_state,
+        },
+        "preconditions": [dict(precondition) for precondition in preconditions],
+        "boundary_compliance": {
+            "bounded_files": list(audit.bounded_files),
+            "files_modified": list(audit.files_modified),
+            "violations": list(audit.violations),
+            "compliant": audit.compliant,
+        },
+        "quality_gates": gate_records,
+        "artifacts": {"source_files": changed_sources},
+        "unlocked_capabilities": [],
+        "verdict": {
+            "all_gates_passed": bool(gate_records)
+            and all(gate.get("result") == "PASS" for gate in gate_records),
+            "boundary_compliant": audit.compliant,
+            "review_status": "PENDING_ARB",
+        },
+    }
+
+
+def write_evidence(record: dict[str, Any], repo_root: Path, target: Path) -> Path:
+    """Atomically publish a new ERS record, refusing every overwrite."""
+    validate_evidence(record, repo_root)
+    payload = yaml.safe_dump(
+        record, sort_keys=False, default_flow_style=False
+    ).encode("utf-8")
+    try:
+        target.parent.mkdir(parents=True, exist_ok=True)
+    except OSError as exc:
+        raise ManifestValidationError(f"evidence directory creation failed: {exc}") from exc
+    temporary = target.with_name(f".{target.name}.{uuid.uuid4().hex}.tmp")
+    try:
+        descriptor = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+        with os.fdopen(descriptor, "wb") as stream:
+            stream.write(payload)
+            stream.flush()
+            os.fsync(stream.fileno())
+        try:
+            os.link(temporary, target)
+        except FileExistsError as exc:
+            raise ManifestValidationError(
+                f"evidence already exists and will not be overwritten: {target}"
+            ) from exc
+        except OSError as exc:
+            raise ManifestValidationError(f"evidence publication failed: {exc}") from exc
+    except OSError as exc:
+        raise ManifestValidationError(f"evidence staging failed: {exc}") from exc
+    finally:
+        temporary.unlink(missing_ok=True)
     return target

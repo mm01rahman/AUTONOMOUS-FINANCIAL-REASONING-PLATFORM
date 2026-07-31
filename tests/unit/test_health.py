@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import json
+import subprocess
 from pathlib import Path
 
 import pytest
 import yaml
 from afrp.cli import cli
-from afrp.commands.health import read_line_coverage
+from afrp.commands.health import collect_coverage, read_line_coverage
 from afrp.core.exceptions import (
     ContractReferenceError,
     InvariantError,
@@ -136,10 +137,39 @@ class TestLineCoverage:
     def test_missing_file_yields_none(self, tmp_path: Path) -> None:
         assert read_line_coverage(tmp_path / "coverage.json") is None
 
-    def test_malformed_totals_yield_none(self, tmp_path: Path) -> None:
+    def test_malformed_totals_raise_typed_error(self, tmp_path: Path) -> None:
         cov = tmp_path / "coverage.json"
         cov.write_text(json.dumps({"totals": {}}), encoding="utf-8")
-        assert read_line_coverage(cov) is None
+        with pytest.raises(ManifestValidationError, match="percent_covered"):
+            read_line_coverage(cov)
+
+    def test_malformed_json_raises_typed_error(self, tmp_path: Path) -> None:
+        cov = tmp_path / "coverage.json"
+        cov.write_text("{not-json", encoding="utf-8")
+        with pytest.raises(ManifestValidationError, match="malformed"):
+            read_line_coverage(cov)
+
+    def test_collector_uses_exact_argv_without_shell(self, tmp_path: Path) -> None:
+        captured: dict[str, object] = {}
+
+        def runner(
+            argv: list[str], **kwargs: object
+        ) -> subprocess.CompletedProcess[str]:
+            captured["argv"] = argv
+            captured.update(kwargs)
+            return subprocess.CompletedProcess(argv, 0, "", "")
+
+        collect_coverage(tmp_path, runner)
+        assert captured["argv"] == [
+            "uv",
+            "run",
+            "pytest",
+            "tests",
+            "--cov",
+            "--cov-report=json",
+            "-q",
+        ]
+        assert "shell" not in captured
 
 
 class TestHealthCommand:
@@ -156,9 +186,9 @@ class TestHealthCommand:
         outcome = runner.invoke(
             cli, ["health", "--repo-root", str(REPO_ROOT), "--assert-full"]
         )
-        # During the build TVM is intentionally not yet 100%; flag must gate.
         matrix = load_matrix(REPO_ROOT / "03-engineering" / "TRACEABILITY_MATRIX.yaml")
-        if matrix.coverage_ratio == 1.0:
+        coverage_present = (REPO_ROOT / "coverage.json").is_file()
+        if matrix.coverage_ratio == 1.0 and coverage_present:
             assert outcome.exit_code == 0
         else:
             assert outcome.exit_code == 3
@@ -169,3 +199,47 @@ class TestHealthCommand:
         outcome = runner.invoke(cli, ["health", "--repo-root", str(tmp_path)])
         assert outcome.exit_code == 2
         assert "HALTED" in outcome.output
+
+    def test_absent_coverage_is_collected_in_normal_cli(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        engineering = tmp_path / "03-engineering"
+        engineering.mkdir()
+        for name in ("TRACEABILITY_MATRIX.yaml", "CAPABILITY_REGISTRY.yaml"):
+            (engineering / name).write_text(
+                (REPO_ROOT / "03-engineering" / name).read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+        calls: list[Path] = []
+
+        def fake_collect(root: Path) -> None:
+            calls.append(root)
+            (root / "coverage.json").write_text(
+                json.dumps({"totals": {"percent_covered": 91.25}}),
+                encoding="utf-8",
+            )
+
+        monkeypatch.setattr("afrp.commands.health._running_under_pytest", lambda: False)
+        monkeypatch.setattr("afrp.commands.health.collect_coverage", fake_collect)
+        outcome = CliRunner().invoke(
+            cli, ["health", "--repo-root", str(tmp_path), "--assert-full"]
+        )
+        assert outcome.exit_code == 0, outcome.output
+        assert calls == [tmp_path.resolve()]
+        assert "test_coverage: 91.2%" in outcome.output
+
+    def test_assert_full_rejects_missing_coverage_during_pytest(
+        self, tmp_path: Path
+    ) -> None:
+        engineering = tmp_path / "03-engineering"
+        engineering.mkdir()
+        for name in ("TRACEABILITY_MATRIX.yaml", "CAPABILITY_REGISTRY.yaml"):
+            (engineering / name).write_text(
+                (REPO_ROOT / "03-engineering" / name).read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+        outcome = CliRunner().invoke(
+            cli, ["health", "--repo-root", str(tmp_path), "--assert-full"]
+        )
+        assert outcome.exit_code == 3
+        assert "coverage.json is required" in outcome.output
