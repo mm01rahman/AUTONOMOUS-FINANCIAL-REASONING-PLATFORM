@@ -143,9 +143,14 @@ requirements:
     title: "Layer 4 decision engine: synthesis, optimization, policy validation"
     source: "02-architecture/130_MATHEMATICAL_FOUNDATION.md#4"
     capability: "L4-VAL"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer4/synthesizer.py"
+      - "06-runtime/afrp_runtime/layer4/optimizer.py"
+      - "06-runtime/afrp_runtime/layer4/policy.py"
+    verified_by:
+      - "tests/unit/test_layer4.py"
+      - "05-work-packages/WP-IMP-0028/evidence/EXEC-026.yaml"
   - id: "FR-013"
     title: "Layer 5 execution gateway: order FSM, fills, portfolio reconciliation"
     source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
@@ -245,9 +250,12 @@ requirements:
     title: "Pre-allocated or pooled memory in live execution path"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
     capability: "L4-DEC"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer4/optimizer.py"
+    verified_by:
+      - "tests/unit/test_layer4.py"
+      - "05-work-packages/WP-IMP-0027/evidence/EXEC-025.yaml"
   - id: "NFR-009"
     title: "100% strict MyPy compliance"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"

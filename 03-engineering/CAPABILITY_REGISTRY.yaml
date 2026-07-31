@@ -197,21 +197,21 @@ capabilities:
     version: "1.0"
     title: "Utility optimizer: argmax U_r emitting CIO-06"
     owner: "SLS-401"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     depends_on: ["L4-FUS"]
     work_package: "WP-IMP-0027"
   - id: "L4-VAL"
     version: "1.0"
     title: "Policy engine: Pi_C projection, a_null fallback, MP-01..05, CIO-07"
     owner: "SLS-402"
-    status: "LOCKED"
+    status: "COMPLETE"
     depends_on: ["L4-DEC"]
     work_package: "WP-IMP-0028"
   - id: "L5-EXE"
     version: "1.0"
     title: "Order gateway: state machine CIO-08, fills CIO-09, portfolio CIO-10"
     owner: "SLS-500"
-    status: "LOCKED"
+    status: "AVAILABLE"
     depends_on: ["L4-VAL", "L1-RDB"]
     work_package: "WP-IMP-0029"
 
