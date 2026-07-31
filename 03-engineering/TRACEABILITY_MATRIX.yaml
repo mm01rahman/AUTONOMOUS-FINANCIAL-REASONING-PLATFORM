@@ -1,0 +1,343 @@
+schema_version: "1.0"
+matrix_id: "TVM-001"
+# Traceability Verification Matrix (Article IV). FIT-007 asserts coverage.
+# A requirement is COVERED when it has >=1 artifact and >=1 verification.
+# status: planned | implemented
+
+requirements:
+  # ── Functional requirements ──────────────────────────────────────────
+  - id: "FR-001"
+    title: "afrp boot command with manifest and kernel parsers"
+    source: "03-engineering/300_IMPLEMENTATION_GUIDE.md#3"
+    capability: "EOS-CONTEXT"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-002"
+    title: "afrp plan capability DAG engine with cycle detection"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#1"
+    capability: "EOS-GRAPH"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-003"
+    title: "afrp validate AST invariant checker"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#1"
+    capability: "EOS-VALIDATOR"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-004"
+    title: "afrp evidence boundary audit and ERS-1.0 emission"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#1"
+    capability: "EOS-EVIDENCE"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-005"
+    title: "afrp health coverage and traceability analyzer"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#1"
+    capability: "EOS-HEALTH"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-006"
+    title: "afrp run orchestrator control plane under EGP-2.0"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#2"
+    capability: "EOS-ORCHESTRATOR"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-007"
+    title: "Protobuf annotations, CognitiveEnvelope, CIO-01..12 contracts"
+    source: "02-architecture/200_REFERENCE_SPECIFICATION.md#1"
+    capability: "RT-PROTO-CIO"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-008"
+    title: "Runtime common services: config, logging, exceptions, FSM, seeds"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-009"
+    title: "Layer 1 data platform: ingress, features, persistence, memory"
+    source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+    capability: "L1-ING"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-010"
+    title: "Layer 2 specialized belief agents emitting DSmT masses"
+    source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+    capability: "L2-BASE"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-011"
+    title: "Layer 3 world model kernel PCR5 fusion and scenario simulation"
+    source: "02-architecture/130_MATHEMATICAL_FOUNDATION.md#2"
+    capability: "L3-WRM"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-012"
+    title: "Layer 4 decision engine: synthesis, optimization, policy validation"
+    source: "02-architecture/130_MATHEMATICAL_FOUNDATION.md#4"
+    capability: "L4-VAL"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-013"
+    title: "Layer 5 execution gateway: order FSM, fills, portfolio reconciliation"
+    source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+    capability: "L5-EXE"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-014"
+    title: "Layer 6 out-of-band learning: Brier scoring, discounting, embeddings"
+    source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+    capability: "L6-OPT"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-015"
+    title: "Research platform deterministic backtest harness"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#1"
+    capability: "RESEARCH-HARNESS"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FR-016"
+    title: "Operations deployment configuration and security posture"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "OPS-DEPLOY"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "OBS-01"
+    title: "Structured JSON logging and trace propagation schema"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+
+  # ── Non-functional requirements (ARCH-001 §2) ───────────────────────
+  - id: "NFR-001"
+    title: "P99 decision loop latency <= 50ms"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "SYSTEM-VALIDATION"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "NFR-002"
+    title: "High-availability active-passive posture"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "OPS-DEPLOY"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "NFR-003"
+    title: "Graceful degradation via m(Theta) padding on feed loss"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "L2-BASE"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "NFR-004"
+    title: "Deterministic math under identical inputs and seed 42"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "RT-COMMON"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "NFR-005"
+    title: "RPO = 0 lost trades; RTO < 60s"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "L5-EXE"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "NFR-006"
+    title: "Zero-trust mTLS with SPIFFE identities on internal calls"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "OPS-DEPLOY"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "NFR-007"
+    title: "HMAC-signed audit log and OTel trace on every order"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "L5-EXE"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "NFR-008"
+    title: "Pre-allocated or pooled memory in live execution path"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "L4-DEC"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "NFR-009"
+    title: "100% strict MyPy compliance"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "EOS-ORCHESTRATOR"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "NFR-010"
+    title: "Protobuf wire contract immutability"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "RT-PROTO-CIO"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+
+  # ── Architecture fitness functions (ARCH-001 §3) ────────────────────
+  - id: "FIT-001"
+    title: "DAG circularity check in capability registry"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-GRAPH"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FIT-002"
+    title: "AST illegal syntax audit: bare except, untyped defs"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-VALIDATOR"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FIT-003"
+    title: "Protobuf custom option presence check"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "RT-PROTO-ANNOTATIONS"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FIT-004"
+    title: "Cross-layer import prohibition in 06-runtime"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-VALIDATOR"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FIT-005"
+    title: "Boundary confinement verification against bounded_files"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-EVIDENCE"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FIT-006"
+    title: "KERNEL.md length <= 400 words"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-CONTEXT"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FIT-007"
+    title: "100% requirement coverage in traceability matrix"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-HEALTH"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "FIT-008"
+    title: "Deterministic replay of historical ticks reproduces state"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "SYSTEM-VALIDATION"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+
+  # ── Engineering decision rules (ARCH-001 §4) ────────────────────────
+  - id: "EDR-001"
+    title: "Business logic depends on abstract interfaces"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-002"
+    title: "No direct cross-layer Python imports in 06-runtime"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "EOS-VALIDATOR"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-003"
+    title: "asyncio for I/O-bound; process pools/Rust for CPU-bound"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "L3-WRM"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-004"
+    title: "No bare except or swallowed generic Exception"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-005"
+    title: "Config precedence: Emergency > Mission Profile > Policy > Subsystem"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-006"
+    title: "Structured JSON logging conforming to OBS-01"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-007"
+    title: "Live decision path P99 <= 50ms"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "SYSTEM-VALIDATION"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-008"
+    title: "Zero hardcoded secrets"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-009"
+    title: "Offline math testable under deterministic seed 42"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-010"
+    title: "No protobuf breaking wire changes without major version bump"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-PROTO-CIO"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-011"
+    title: "100% mypy --strict; implicit Any prohibited"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "EOS-ORCHESTRATOR"
+    status: "planned"
+    artifacts: []
+    verified_by: []
+  - id: "EDR-012"
+    title: "Deprecations honor one-minor-version grace period"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "GOV-BASELINE"
+    status: "planned"
+    artifacts: []
+    verified_by: []

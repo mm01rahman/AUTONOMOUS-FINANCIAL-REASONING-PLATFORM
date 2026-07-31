@@ -1,0 +1,126 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0003"
+capability_id:
+  id: "EOS-CONTEXT"
+  version: "1.0"
+title: "Implement afrp boot command & Manifest/Kernel Parsers"
+status: "Assigned"
+is_immutable: true
+
+governance:
+  target_subsystem: "EOS-CLI"
+  traceability:
+    implements_req: ["FR-001", "OBS-01"]
+    trace_sls: "ROS-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "git.tag == 'm1.1-start'"
+  - predicate: "file.exists('REPOSITORY_MANIFEST.yaml')"
+  - predicate: "file.exists('00-governance/KERNEL.md')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/afrp-cli/afrp/"
+      - "tests/unit/"
+      - "05-work-packages/WP-IMP-0003/evidence/"
+    read:
+      - "REPOSITORY_MANIFEST.yaml"
+      - "00-governance/KERNEL.md"
+
+execution:
+  priority: "high"
+  estimated_complexity: "small"
+  estimated_duration: "1h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "REPOSITORY_MANIFEST.yaml"
+    - "00-governance/KERNEL.md"
+
+outputs:
+  expected_source_files:
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tools/afrp-cli/afrp/commands/boot.py"
+    - "tools/afrp-cli/afrp/core/manifest.py"
+    - "tools/afrp-cli/afrp/core/kernel.py"
+    - "tools/afrp-cli/afrp/core/exceptions.py"
+    - "tests/unit/test_bootloader.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0003/evidence/EXEC-001.yaml"
+
+execution_results:
+  source_files_modified: []
+  evidence_generated: []
+
+produces:
+  capability:
+    id: "EOS-CONTEXT"
+    version: "1.0"
+  unlocks:
+    - id: "EOS-GRAPH"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tools/afrp-cli/afrp/commands/boot.py"
+    - "tools/afrp-cli/afrp/core/manifest.py"
+    - "tools/afrp-cli/afrp/core/kernel.py"
+    - "tools/afrp-cli/afrp/core/exceptions.py"
+    - "tests/unit/test_bootloader.py"
+
+  non_goals:
+    - "Do not implement dependency DAG parsing (deferred to IMP-0004)."
+    - "Do not implement AST linter checking (deferred to IMP-0005)."
+
+requirements:
+  boot_parser:
+    module: "tools/afrp-cli/afrp/core/manifest.py"
+    rules:
+      - "Parse REPOSITORY_MANIFEST.yaml into Pydantic model RepositoryManifest."
+      - "Validate schema_version == '1.0'."
+  kernel_parser:
+    module: "tools/afrp-cli/afrp/core/kernel.py"
+    rules:
+      - "Parse 00-governance/KERNEL.md."
+      - "Assert word count <= 400. Raise InvariantError if breached."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/afrp-cli/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/afrp-cli/"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_bootloader.py -v"
+
+completion:
+  success_requires:
+    - "'afrp boot' command registered and executable."
+    - "100% unit tests passing."
+    - "Quality gates pass with zero errors."
+
+failure_modes:
+  ERR-CONTRACT-REFERENCE: "Missing REPOSITORY_MANIFEST.yaml or KERNEL.md."
+  ERR-CONTRACT-AMBIGUITY: "KERNEL.md word count exceeds 400."
+  ERR-EXEC-BOUNDARY: "Touched files outside bounded_files."
+
+execution_prompt: |
+  You are an autonomous AI Software Engineer executing Work Package WP-IMP-0003 in role AEF-02.
+  Implement afrp boot command, manifest parser, and kernel parser strictly within bounded_files.
+  Run quality gates and generate EXEC-001.yaml evidence record upon completion.
+

@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afrp:schemas:wps-1.0",
+  "title": "AFRP Work Package Schema (WPS-1.0)",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "work_package_id",
+    "capability_id",
+    "title",
+    "status",
+    "is_immutable",
+    "governance",
+    "preconditions",
+    "resources",
+    "execution",
+    "rollback",
+    "inputs",
+    "outputs",
+    "produces",
+    "scope",
+    "requirements",
+    "quality_gates",
+    "completion",
+    "failure_modes"
+  ],
+  "properties": {
+    "schema_version": { "const": "WPS-1.0" },
+    "work_package_id": { "type": "string", "pattern": "^WP-[A-Z]+-[0-9]{4}$" },
+    "capability_id": { "$ref": "#/$defs/capabilityRef" },
+    "title": { "type": "string", "minLength": 1 },
+    "status": {
+      "enum": ["Draft", "Assigned", "Executing", "ReviewPending", "Completed", "Halted"]
+    },
+    "is_immutable": { "type": "boolean" },
+    "governance": {
+      "type": "object",
+      "required": ["target_subsystem", "traceability"],
+      "properties": {
+        "target_subsystem": { "type": "string" },
+        "traceability": {
+          "type": "object",
+          "required": ["implements_req"],
+          "properties": {
+            "implements_req": {
+              "type": "array",
+              "items": { "type": "string" },
+              "minItems": 1
+            },
+            "trace_sls": { "type": "string" },
+            "trace_adr": { "type": "array", "items": { "type": "string" } },
+            "trace_vvc": { "type": "string" }
+          }
+        }
+      }
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["predicate"],
+        "properties": { "predicate": { "type": "string" } }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "required": ["filesystem"],
+      "properties": {
+        "cpu": { "type": "string" },
+        "memory": { "type": "string" },
+        "network": { "type": "boolean" },
+        "filesystem": {
+          "type": "object",
+          "required": ["write"],
+          "properties": {
+            "write": { "type": "array", "items": { "type": "string" } },
+            "read": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "properties": {
+        "priority": { "enum": ["low", "medium", "high", "critical"] },
+        "estimated_complexity": { "enum": ["small", "medium", "large"] },
+        "estimated_duration": { "type": "string" },
+        "parallelizable": { "type": "boolean" },
+        "deterministic": { "type": "boolean" }
+      }
+    },
+    "rollback": {
+      "type": "object",
+      "required": ["strategy"],
+      "properties": {
+        "strategy": { "enum": ["git_checkout_bounded_files", "git_reset_hard"] },
+        "restore_tag": { "type": "string" }
+      }
+    },
+    "inputs": {
+      "type": "object",
+      "properties": {
+        "required_files": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "required": ["expected_source_files", "expected_evidence"],
+      "properties": {
+        "expected_source_files": { "type": "array", "items": { "type": "string" } },
+        "expected_evidence": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "execution_results": {
+      "type": "object",
+      "properties": {
+        "source_files_modified": { "type": "array", "items": { "type": "string" } },
+        "evidence_generated": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "produces": {
+      "type": "object",
+      "required": ["capability"],
+      "properties": {
+        "capability": { "$ref": "#/$defs/capabilityRef" },
+        "unlocks": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/capabilityRef" }
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "required": ["bounded_files"],
+      "properties": {
+        "bounded_files": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "non_goals": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "requirements": { "type": "object" },
+    "quality_gates": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["required", "command"],
+        "properties": {
+          "required": { "type": "boolean" },
+          "command": { "type": "string" }
+        }
+      }
+    },
+    "completion": {
+      "type": "object",
+      "required": ["success_requires"],
+      "properties": {
+        "success_requires": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "failure_modes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "execution_prompt": { "type": "string" }
+  },
+  "$defs": {
+    "capabilityRef": {
+      "type": "object",
+      "required": ["id", "version"],
+      "properties": {
+        "id": { "type": "string" },
+        "version": { "type": "string" }
+      }
+    }
+  }
+}

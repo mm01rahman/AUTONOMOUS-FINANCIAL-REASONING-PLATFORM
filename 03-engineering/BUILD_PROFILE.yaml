@@ -1,0 +1,54 @@
+schema_version: "1.0"
+profile_id: "BUILD_PROFILE"
+# Level 2 engineering standard (GOV-002). Governs toolchain and quality gates.
+
+platform:
+  os: "windows"
+  python: ">=3.11,<3.13"
+  package_manager: "uv"
+
+quality_gates:
+  ruff_lint:
+    command: "uv run ruff check ."
+    required: true
+  mypy_typecheck:
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+    required: true
+  pytest_units:
+    command: "uv run pytest tests -q"
+    required: true
+  proto_validation:
+    command: "uv run python -m tools.proto_gate"
+    required: true
+    note: "Compiles proto/afrp/v1 via grpcio-tools and enforces FIT-003 custom options."
+
+toolchain_waivers:
+  - id: "W-001"
+    tool: "buf"
+    status: "absent_on_host"
+    substitute: >-
+      grpcio-tools compilation plus repository FIT-003 checker enforce
+      contract validity; wire compatibility (NFR-010/EDR-010) is enforced by
+      contract snapshot comparison in 09-validation.
+    approved_by: "ADR-0002"
+  - id: "W-002"
+    tool: "cargo"
+    status: "absent_on_host"
+    substitute: >-
+      EDR-003 CPU-bound branch satisfied via multiprocessing process pools;
+      Rust extension slots remain declared in Cargo.toml workspace for later
+      adoption without architectural change.
+    approved_by: "ADR-0002"
+
+determinism:
+  global_seed: 42
+  requirement: "NFR-004 / EDR-009"
+
+conventions:
+  line_length: 100
+  target_python: "py311"
+  strict_typing: true
+  forbidden:
+    - "bare except clauses (EDR-004)"
+    - "hardcoded secrets (EDR-008)"
+    - "cross-layer runtime imports (EDR-002)"
