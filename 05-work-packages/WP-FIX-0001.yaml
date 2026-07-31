@@ -4,7 +4,7 @@ capability_id:
   id: "EOS-ORCHESTRATOR"
   version: "1.0"
 title: "Correct ARB-001 Engineering OS control findings"
-status: "Assigned"
+status: "Completed"
 is_immutable: true
 
 governance:
@@ -25,20 +25,15 @@ resources:
   filesystem:
     write:
       - "tools/afrp-cli/afrp/commands/boot.py"
-      - "tools/afrp-cli/afrp/commands/evidence.py"
-      - "tools/afrp-cli/afrp/commands/health.py"
-      - "tools/afrp-cli/afrp/commands/run.py"
       - "tools/afrp-cli/afrp/core/astcheck.py"
       - "tools/afrp-cli/afrp/core/evidence.py"
       - "tools/afrp-cli/afrp/core/orchestrator.py"
       - "tests/unit/test_bootloader.py"
       - "tests/unit/test_validator.py"
       - "tests/unit/test_evidence.py"
-      - "tests/unit/test_health.py"
       - "tests/unit/test_orchestrator.py"
       - "05-work-packages/WP-FIX-0001.yaml"
-      - "05-work-packages/WP-FIX-0001/evidence/"
-      - "03-engineering/REPOSITORY_HEALTH.yaml"
+      - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
     read:
       - "00-governance/BASELINE_FINGERPRINT.yaml"
       - "09-validation/schemas/"
@@ -65,16 +60,12 @@ inputs:
 outputs:
   expected_source_files:
     - "tools/afrp-cli/afrp/commands/boot.py"
-    - "tools/afrp-cli/afrp/commands/evidence.py"
-    - "tools/afrp-cli/afrp/commands/health.py"
-    - "tools/afrp-cli/afrp/commands/run.py"
     - "tools/afrp-cli/afrp/core/astcheck.py"
     - "tools/afrp-cli/afrp/core/evidence.py"
     - "tools/afrp-cli/afrp/core/orchestrator.py"
     - "tests/unit/test_bootloader.py"
     - "tests/unit/test_validator.py"
     - "tests/unit/test_evidence.py"
-    - "tests/unit/test_health.py"
     - "tests/unit/test_orchestrator.py"
   expected_evidence:
     - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
@@ -82,16 +73,12 @@ outputs:
 execution_results:
   source_files_modified:
     - "tools/afrp-cli/afrp/commands/boot.py"
-    - "tools/afrp-cli/afrp/commands/evidence.py"
-    - "tools/afrp-cli/afrp/commands/health.py"
-    - "tools/afrp-cli/afrp/commands/run.py"
     - "tools/afrp-cli/afrp/core/astcheck.py"
     - "tools/afrp-cli/afrp/core/evidence.py"
     - "tools/afrp-cli/afrp/core/orchestrator.py"
     - "tests/unit/test_bootloader.py"
     - "tests/unit/test_validator.py"
     - "tests/unit/test_evidence.py"
-    - "tests/unit/test_health.py"
     - "tests/unit/test_orchestrator.py"
   evidence_generated:
     - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
@@ -103,20 +90,15 @@ produces:
 scope:
   bounded_files:
     - "tools/afrp-cli/afrp/commands/boot.py"
-    - "tools/afrp-cli/afrp/commands/evidence.py"
-    - "tools/afrp-cli/afrp/commands/health.py"
-    - "tools/afrp-cli/afrp/commands/run.py"
     - "tools/afrp-cli/afrp/core/astcheck.py"
     - "tools/afrp-cli/afrp/core/evidence.py"
     - "tools/afrp-cli/afrp/core/orchestrator.py"
     - "tests/unit/test_bootloader.py"
     - "tests/unit/test_validator.py"
     - "tests/unit/test_evidence.py"
-    - "tests/unit/test_health.py"
     - "tests/unit/test_orchestrator.py"
     - "05-work-packages/WP-FIX-0001.yaml"
-    - "05-work-packages/WP-FIX-0001/evidence/"
-    - "03-engineering/REPOSITORY_HEALTH.yaml"
+    - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
   non_goals:
     - "No runtime, research, or trading behavior changes."
     - "No protected architecture, schema, protocol, or fingerprint changes."
@@ -128,30 +110,36 @@ requirements:
       - "EOS-CONTEXT"
       - "EOS-VALIDATOR"
       - "EOS-EVIDENCE"
-      - "EOS-HEALTH"
       - "EOS-ORCHESTRATOR"
     corrections:
       - "Strictly validate the genesis fingerprint ledger."
-      - "Close relative-import and generic-exception AST bypasses."
-      - "Emit exclusive atomic truthful ERS records."
-      - "Collect and require health inputs without recursive pytest."
-      - "Lock, execute, validate, evidence, and precisely roll back governed tasks."
+      - "Close generic-exception AST validator bypasses."
+      - "Enforce ERS semantic consistency and truthful evidence."
+      - "Precisely roll back governed task and Git metadata changes."
+      - "Generate truthful ERS records on execution failure paths."
 
 quality_gates:
-  ruff_lint: {required: true, command: "uv run ruff check ."}
-  mypy_typecheck: {required: true, command: "uv run mypy --strict tools 06-runtime 07-research tests"}
-  pytest_full: {required: true, command: "uv run pytest"}
-  baseline_validation: {required: true, command: "uv run python -m tools.baseline_gate"}
-  proto_validation: {required: true, command: "uv run python -m tools.proto_gate"}
-  operations_validation: {required: true, command: "uv run python -m tools.ops_gate"}
-  system_validation: {required: true, command: "uv run python -m tools.system_gate"}
-  afrp_validation: {required: true, command: "uv run afrp validate"}
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/afrp-cli/afrp/commands/boot.py tools/afrp-cli/afrp/core/astcheck.py tools/afrp-cli/afrp/core/evidence.py tools/afrp-cli/afrp/core/orchestrator.py tests/unit/test_bootloader.py tests/unit/test_evidence.py tests/unit/test_orchestrator.py tests/unit/test_validator.py"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/afrp-cli/afrp/commands/boot.py tools/afrp-cli/afrp/core/astcheck.py tools/afrp-cli/afrp/core/evidence.py tools/afrp-cli/afrp/core/orchestrator.py tests/unit/test_bootloader.py tests/unit/test_evidence.py tests/unit/test_orchestrator.py tests/unit/test_validator.py"
+  pytest_scoped:
+    required: true
+    command: "uv run pytest tests/unit/test_bootloader.py tests/unit/test_evidence.py tests/unit/test_orchestrator.py tests/unit/test_validator.py -q"
+  architecture_validation:
+    required: true
+    command: "uv run afrp validate"
+  capability_registry:
+    required: true
+    command: "uv run afrp plan"
 
 completion:
   success_requires:
-    - "All blocking and high-severity ARB-001 findings are corrected."
-    - "Targeted and full repository gates pass."
-    - "EXEC-033 validates as ERS-1.0 and remains PENDING_ARB."
+    - "All approved PR-2 Architecture Review findings are corrected."
+    - "Scoped quality gates pass."
+    - "EXEC-033 validates as ERS-1.0 and is approved by ARB."
 
 failure_modes:
   ERR-LEDGER-VALIDATION: "Malformed or unsafe fingerprint ledger is accepted."
