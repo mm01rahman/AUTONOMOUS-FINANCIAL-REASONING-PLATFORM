@@ -435,3 +435,90 @@ class TestEvidenceCommand:
         )
         assert rejected.exit_code == 2
         assert "does not match" in rejected.output
+
+    def test_wp_rt_expected_evidence_is_accepted_without_scope_entry(
+        self, tmp_path: Path
+    ) -> None:
+        schemas = tmp_path / "09-validation" / "schemas"
+        schemas.mkdir(parents=True)
+        for name in ("wps-1.0.schema.json", "ers-1.0.schema.json"):
+            (schemas / name).write_text(
+                (REPO_ROOT / "09-validation" / "schemas" / name).read_text(
+                    encoding="utf-8"
+                ),
+                encoding="utf-8",
+            )
+        work_packages = tmp_path / "05-work-packages"
+        work_packages.mkdir()
+        wp_doc = {
+            "schema_version": "WPS-1.0",
+            "work_package_id": "WP-RT-9001",
+            "capability_id": {"id": "L1-TEST", "version": "1.0"},
+            "title": "Runtime evidence fixture",
+            "status": "Draft",
+            "is_immutable": False,
+            "governance": {
+                "target_subsystem": "SLS-100",
+                "traceability": {"implements_req": ["FR-009"]},
+            },
+            "preconditions": [],
+            "resources": {"filesystem": {"write": ["src/", "05-work-packages/"]}},
+            "execution": {"deterministic": True},
+            "rollback": {"strategy": "git_checkout_bounded_files"},
+            "inputs": {},
+            "outputs": {
+                "expected_source_files": ["src/a.py"],
+                "expected_evidence": [
+                    "05-work-packages/WP-RT-9001/evidence/EXEC-901.yaml"
+                ],
+            },
+            "produces": {"capability": {"id": "L1-TEST", "version": "1.0"}, "unlocks": []},
+            "scope": {"bounded_files": ["src/"]},
+            "requirements": {},
+            "quality_gates": {
+                "pytest": {"required": True, "command": "uv run pytest"}
+            },
+            "completion": {"success_requires": ["evidence"]},
+            "failure_modes": {},
+        }
+        (work_packages / "WP-RT-9001.yaml").write_text(
+            yaml.safe_dump(wp_doc, sort_keys=False), encoding="utf-8"
+        )
+        subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+        subprocess.run(["git", "add", "."], cwd=tmp_path, check=True)
+        subprocess.run(
+            [
+                "git",
+                "-c",
+                "user.email=t@t",
+                "-c",
+                "user.name=t",
+                "commit",
+                "-q",
+                "-m",
+                "root",
+            ],
+            cwd=tmp_path,
+            check=True,
+        )
+        source = tmp_path / "src" / "a.py"
+        source.parent.mkdir()
+        source.write_text("VALUE = 1\n", encoding="utf-8")
+
+        runner = CliRunner()
+        outcome = runner.invoke(
+            cli,
+            ["evidence", "--wp", "WP-RT-9001", "--repo-root", str(tmp_path)],
+        )
+        assert outcome.exit_code == 0, outcome.output
+        target = (
+            tmp_path
+            / "05-work-packages"
+            / "WP-RT-9001"
+            / "evidence"
+            / "EXEC-901.yaml"
+        )
+        record = load_evidence(tmp_path, target)
+        assert "05-work-packages/WP-RT-9001/evidence/EXEC-901.yaml" in record[
+            "boundary_compliance"
+        ]["bounded_files"]

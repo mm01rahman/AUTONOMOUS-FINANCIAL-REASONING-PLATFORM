@@ -1,0 +1,106 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-101"
+work_package_id: "WP-RT-1001"
+capability:
+  id: "L1-ING"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (GPT-5.3-Codex)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-01T04:06:54+06:00"
+  finished_at: "2026-08-01T04:25:39+06:00"
+  final_state: "COMPLETED"
+  state_transitions:
+    - state: "WORK_PACKAGE_LOADED"
+      at: "2026-08-01T04:11:00+06:00"
+      note: "Selected first READY runtime capability from registry DAG."
+    - state: "EXECUTING"
+      at: "2026-08-01T04:18:00+06:00"
+      note: "Implemented provider abstraction and canonical tick/OHLCV normalization."
+    - state: "VALIDATING"
+      at: "2026-08-01T04:24:00+06:00"
+      note: "All mandatory quality gates and runtime checks passed."
+    - state: "EVIDENCE_GENERATED"
+      at: "2026-08-01T04:25:00+06:00"
+      note: "Boundary audit PASS and ERS record generated."
+    - state: "COMPLETED"
+      at: "2026-08-01T04:25:39+06:00"
+      note: "WP-RT-1001 finalized and approved for lifecycle closure."
+preconditions:
+  - predicate: "capability.complete('RT-PROTO-CIO')"
+    result: "PASS"
+  - predicate: "capability.complete('RT-COMMON')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer1/ingest.py"
+    - "tests/unit/test_layer1_ingest.py"
+    - "tests/integration/test_layer1_ingest_integration.py"
+    - "docs/runtime/layer1-ingest.md"
+    - "05-work-packages/WP-RT-1001.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "05-work-packages/WP-RT-1001/evidence/EXEC-101.yaml"
+  files_modified:
+    - "06-runtime/afrp_runtime/layer1/ingest.py"
+    - "tests/unit/test_layer1_ingest.py"
+    - "tests/integration/test_layer1_ingest_integration.py"
+    - "docs/runtime/layer1-ingest.md"
+    - "05-work-packages/WP-RT-1001.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check 06-runtime/ tests/"
+    result: "PASS"
+    detail: "All checks passed"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict 06-runtime/ tests/"
+    result: "PASS"
+    detail: "Success: no issues found in 47 source files"
+  - gate: "pytest_units"
+    command: "uv run pytest tests/unit/test_layer1_ingest.py -v"
+    result: "PASS"
+    detail: "6 passed"
+  - gate: "pytest_integration"
+    command: "uv run pytest tests/integration/test_layer1_ingest_integration.py -v"
+    result: "PASS"
+    detail: "1 passed"
+  - gate: "coverage"
+    command: "uv run pytest tests --cov --cov-report=term"
+    result: "PASS"
+    detail: "490 passed; coverage collection succeeded"
+  - gate: "fit_004"
+    command: "uv run afrp validate"
+    result: "PASS"
+    detail: "fit_006 PASS; fit_002 PASS; fit_004 PASS; violations 0"
+  - gate: "boundary_validation"
+    command: "uv run afrp evidence --wp WP-RT-1001"
+    result: "PASS"
+    detail: "fit_005 PASS; expected evidence target emitted within bounded files"
+artifacts:
+  source_files:
+    - "06-runtime/afrp_runtime/layer1/ingest.py"
+    - "05-work-packages/WP-RT-1001.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+  test_files:
+    - "tests/unit/test_layer1_ingest.py"
+    - "tests/integration/test_layer1_ingest_integration.py"
+  documentation:
+    - "docs/runtime/layer1-ingest.md"
+unlocked_capabilities:
+  - id: "L1-FST"
+    version: "1.0"
+  - id: "L1-RDB"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    WP-RT-1001 satisfies FR-009/SLS-100 acceptance criteria with deterministic
+    mixed-provider CIO-01 ingestion, canonical timestamp normalization, explicit
+    health/metrics exposure, and full mandatory gate pass.
