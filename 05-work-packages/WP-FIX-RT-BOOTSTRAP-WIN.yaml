@@ -1,0 +1,97 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-FIX-RT-BOOTSTRAP-WIN"
+capability_id:
+  id: "EOS-BOOT"
+  version: "1.0"
+title: "Stabilize Windows bootstrap test and health gating"
+status: "Assigned"
+is_immutable: false
+
+governance:
+  target_subsystem: "ENGINEERING_OS"
+  traceability:
+    implements_req: ["FR-001", "FIT-007"]
+    trace_sls: "ARCH-001"
+    trace_adr: ["ADR-0001", "ADR-0002"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-BOOT')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tests/unit/test_bootstrap_workspace.py"
+      - "05-work-packages/WP-FIX-RT-BOOTSTRAP-WIN.yaml"
+      - "05-work-packages/WP-FIX-RT-BOOTSTRAP-WIN/evidence/EXEC-901.yaml"
+    read:
+      - "bootstrap_m1.sh"
+      - "tools/afrp-cli/afrp/core/bootstrap.py"
+
+execution:
+  priority: "high"
+  estimated_complexity: "small"
+  estimated_duration: "2h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "bootstrap_m1.sh"
+    - "tools/afrp-cli/afrp/core/bootstrap.py"
+
+outputs:
+  expected_source_files:
+    - "tests/unit/test_bootstrap_workspace.py"
+  expected_evidence:
+    - "05-work-packages/WP-FIX-RT-BOOTSTRAP-WIN/evidence/EXEC-901.yaml"
+
+produces:
+  capability: {id: "EOS-BOOT", version: "1.0"}
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tests/unit/test_bootstrap_workspace.py"
+    - "05-work-packages/WP-FIX-RT-BOOTSTRAP-WIN.yaml"
+    - "05-work-packages/WP-FIX-RT-BOOTSTRAP-WIN/evidence/EXEC-901.yaml"
+  non_goals:
+    - "No Runtime layer implementation changes."
+    - "No architecture/governance contract redesign."
+
+requirements:
+  acceptance_criteria:
+    - "Bootstrap workspace tests pass on Windows and Unix execution paths."
+    - "Coverage and health gates no longer fail due bootstrap harness portability."
+    - "No behavior regressions in bootstrap core logic."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tests/unit/test_bootstrap_workspace.py"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tests/unit/test_bootstrap_workspace.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_bootstrap_workspace.py -v"
+  eos_validation:
+    required: true
+    command: "uv run afrp validate"
+
+completion:
+  success_requires:
+    - "Windows bootstrap blockers are removed and gate stability is restored."
+
+failure_modes:
+  ERR-WIN-SCRIPT-EXEC: "Windows process launcher cannot execute bootstrap workflow."
+
+execution_prompt: |
+  Implement WP-FIX-RT-BOOTSTRAP-WIN strictly within bounded_files.
