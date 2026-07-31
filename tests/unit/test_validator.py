@@ -130,6 +130,22 @@ class TestFit002Excepts:
         )
         assert any("without re-raise" in finding.message for finding in findings)
 
+    @pytest.mark.parametrize("terminal", ["assert False", "assert 0"])
+    def test_raise_after_terminating_assert_is_unreachable(
+        self, terminal: str
+    ) -> None:
+        findings = check(
+            f"""
+            def f() -> None:
+                try:
+                    pass
+                except Exception:
+                    {terminal}
+                    raise
+            """
+        )
+        assert any("without re-raise" in finding.message for finding in findings)
+
     def test_typed_except_allowed(self) -> None:
         findings = check(
             """

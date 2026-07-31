@@ -10,6 +10,7 @@ from __future__ import annotations
 import hashlib
 import re
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path, PurePosixPath, PureWindowsPath
 
 import click
@@ -33,6 +34,17 @@ _LEDGER_ID = "BASELINE_FINGERPRINT"
 _BASELINE_ID = "AFRP-BASELINE-1.0.0"
 _HASH_ALGORITHM = "sha256"
 _SHA256_PATTERN = re.compile(r"^[0-9a-fA-F]{64}$")
+_LEDGER_KEYS = frozenset(
+    {
+        "schema_version",
+        "ledger_id",
+        "baseline_id",
+        "hash_algorithm",
+        "generated_at",
+        "artifacts",
+    }
+)
+_ARTIFACT_KEYS = frozenset({"path", "sha256"})
 
 
 @dataclass(frozen=True)
@@ -93,6 +105,17 @@ def _load_fingerprint_ledger(repo_root: Path, ledger_path: Path) -> FingerprintL
         raise _ledger_error(f"YAML parse failure: {exc}") from exc
     if not isinstance(loaded, dict):
         raise _ledger_error("root must be a mapping")
+    if not all(isinstance(key, str) for key in loaded):
+        raise _ledger_error("all top-level keys must be strings")
+    unknown_keys = set(loaded) - _LEDGER_KEYS
+    missing_keys = _LEDGER_KEYS - set(loaded)
+    if unknown_keys or missing_keys:
+        detail: list[str] = []
+        if missing_keys:
+            detail.append(f"missing keys: {', '.join(sorted(missing_keys))}")
+        if unknown_keys:
+            detail.append(f"unknown keys: {', '.join(sorted(unknown_keys))}")
+        raise _ledger_error("; ".join(detail))
 
     identities = {
         "schema_version": _LEDGER_SCHEMA_VERSION,
@@ -103,6 +126,17 @@ def _load_fingerprint_ledger(repo_root: Path, ledger_path: Path) -> FingerprintL
     for field, expected in identities.items():
         if loaded.get(field) != expected:
             raise _ledger_error(f"{field} must be {expected!r}")
+    generated_at = loaded["generated_at"]
+    if not isinstance(generated_at, str) or not generated_at.strip():
+        raise _ledger_error("generated_at must be a non-empty ISO datetime string")
+    try:
+        parsed_generated_at = datetime.fromisoformat(
+            generated_at.replace("Z", "+00:00")
+        )
+    except ValueError as exc:
+        raise _ledger_error("generated_at must be an ISO datetime string") from exc
+    if parsed_generated_at.tzinfo is None:
+        raise _ledger_error("generated_at must include a timezone")
 
     raw_artifacts = loaded.get("artifacts")
     if not isinstance(raw_artifacts, list) or not raw_artifacts:
@@ -112,6 +146,17 @@ def _load_fingerprint_ledger(repo_root: Path, ledger_path: Path) -> FingerprintL
     for index, entry in enumerate(raw_artifacts):
         if not isinstance(entry, dict):
             raise _ledger_error(f"artifact {index} must be a mapping")
+        if not all(isinstance(key, str) for key in entry):
+            raise _ledger_error(f"artifact {index} keys must be strings")
+        if set(entry) != _ARTIFACT_KEYS:
+            unknown = set(entry) - _ARTIFACT_KEYS
+            missing = _ARTIFACT_KEYS - set(entry)
+            detail = []
+            if missing:
+                detail.append(f"missing keys: {', '.join(sorted(missing))}")
+            if unknown:
+                detail.append(f"unknown keys: {', '.join(sorted(unknown))}")
+            raise _ledger_error(f"artifact {index} {'; '.join(detail)}")
         rel = _safe_artifact_path(repo_root, entry.get("path"))
         if rel in seen:
             raise _ledger_error(f"duplicate artifact path: {rel}")

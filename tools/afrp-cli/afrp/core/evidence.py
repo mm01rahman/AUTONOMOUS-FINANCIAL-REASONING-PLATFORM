@@ -30,6 +30,12 @@ _TOOLING_DIRECTORIES = frozenset(
     {".venv", ".pytest_cache", ".mypy_cache", ".ruff_cache", "__pycache__"}
 )
 _TOOLING_FILES = frozenset({".coverage", "coverage.json"})
+_LEGACY_REVIEWED_IDENTITIES = frozenset(
+    {
+        ("WP-IMP-0001", "EXEC-032"),
+        *((f"WP-IMP-{number:04d}", f"EXEC-{number - 2:03d}") for number in range(3, 34)),
+    }
+)
 
 
 @dataclass(frozen=True)
@@ -184,6 +190,65 @@ def validate_evidence(record: dict[str, Any], repo_root: Path) -> None:
         jsonschema.validate(record, load_ers_schema(repo_root))
     except jsonschema.ValidationError as exc:
         raise ManifestValidationError(f"evidence violates ERS-1.0: {exc.message}") from exc
+    gates = record["quality_gates"]
+    all_gates_passed = all(gate["result"] == "PASS" for gate in gates)
+    verdict = record["verdict"]
+    if verdict["all_gates_passed"] is not all_gates_passed:
+        raise ManifestValidationError(
+            "evidence semantic contradiction: all_gates_passed must be true "
+            "iff every quality gate is PASS"
+        )
+    boundary = record["boundary_compliance"]
+    recomputed_boundary = audit_boundaries(
+        tuple(boundary["bounded_files"]),
+        tuple(boundary["files_modified"]),
+    )
+    if list(recomputed_boundary.violations) != boundary["violations"]:
+        raise ManifestValidationError(
+            "evidence semantic contradiction: boundary violations must be "
+            "recomputed from bounded_files and files_modified"
+        )
+    boundary_compliant = recomputed_boundary.compliant
+    if boundary["compliant"] is not boundary_compliant:
+        raise ManifestValidationError(
+            "evidence semantic contradiction: boundary compliant must match violations"
+        )
+    if verdict["boundary_compliant"] is not boundary["compliant"]:
+        raise ManifestValidationError(
+            "evidence semantic contradiction: verdict boundary_compliant must "
+            "match boundary block"
+        )
+    final_state = record["lifecycle"]["final_state"]
+    review_status = verdict["review_status"]
+    success_state = final_state in {"EVIDENCE_GENERATED", "COMPLETED"}
+    if success_state and (not all_gates_passed or not boundary_compliant):
+        raise ManifestValidationError(
+            "evidence semantic contradiction: successful lifecycle state "
+            "requires passing gates and compliant boundary"
+        )
+    if final_state == "COMPLETED" and review_status != "APPROVED":
+        raise ManifestValidationError(
+            "evidence semantic contradiction: COMPLETED requires APPROVED review"
+        )
+    legacy_reviewed = (
+        final_state == "REVIEW_PENDING"
+        and review_status == "APPROVED"
+        and isinstance(verdict.get("review_note"), str)
+        and bool(verdict["review_note"].strip())
+        and (record["work_package_id"], record["evidence_id"])
+        in _LEGACY_REVIEWED_IDENTITIES
+    )
+    if final_state in {"EVIDENCE_GENERATED", "REVIEW_PENDING"} and (
+        review_status != "PENDING_ARB" and not legacy_reviewed
+    ):
+        raise ManifestValidationError(
+            "evidence semantic contradiction: pre-completion lifecycle state "
+            "requires PENDING_ARB"
+        )
+    if final_state == "HALTED" and review_status == "APPROVED":
+        raise ManifestValidationError(
+            "evidence semantic contradiction: HALTED cannot have APPROVED review"
+        )
 
 
 def load_evidence(repo_root: Path, target: Path) -> dict[str, Any]:

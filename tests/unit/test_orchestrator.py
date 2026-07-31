@@ -108,6 +108,7 @@ def fixture_repo(tmp_path: Path) -> Path:
                 "ledger_id": "BASELINE_FINGERPRINT",
                 "baseline_id": "AFRP-BASELINE-1.0.0",
                 "hash_algorithm": "sha256",
+                "generated_at": "2026-07-31T15:45:18+00:00",
                 "artifacts": [{"path": "README.md", "sha256": readme_digest}],
             },
             sort_keys=False,
@@ -340,6 +341,41 @@ class TestOrchestrator:
         assert record["lifecycle"]["final_state"] == "HALTED"
         assert all(gate["result"] == "SKIPPED" for gate in record["quality_gates"])
 
+    def test_rollback_failure_still_emits_truthful_halted_evidence(
+        self, fixture_repo: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        wp_path.write_text(
+            yaml.safe_dump(
+                synthetic_wp(
+                    'python -c "pass"',
+                    ["python", "-c", "raise SystemExit(9)"],
+                ),
+                sort_keys=False,
+            ),
+            encoding="utf-8",
+        )
+
+        def fail_restore(repo_root: Path, snapshot: object) -> None:
+            raise OSError(f"simulated restore failure in {repo_root}: {snapshot!r}")
+
+        monkeypatch.setattr(
+            "afrp.core.orchestrator._restore_git_control", fail_restore
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.HALTED
+        assert "rollback FAILED" in (report.halted_reason or "")
+        evidence = (
+            fixture_repo
+            / "05-work-packages"
+            / "WP-TST-0001"
+            / "evidence"
+            / "EXEC-900.yaml"
+        )
+        record = load_evidence(fixture_repo, evidence)
+        assert record["lifecycle"]["final_state"] == "HALTED"
+        assert "rollback FAILED" in record["verdict"]["review_note"]
+
     def test_precondition_failure_halts_zero_write(self, fixture_repo: Path) -> None:
         wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
         document = synthetic_wp('python -c "pass"')
@@ -393,6 +429,64 @@ class TestOrchestrator:
         assert report.final_state is LifecycleState.HALTED
         assert "EXECUTING" not in [state for state, _ in report.transitions]
         assert (fixture_repo / "src" / "mod.py").read_text(encoding="utf-8") == "VALUE = 1\n"
+        evidence = (
+            fixture_repo
+            / "05-work-packages"
+            / "WP-TST-0001"
+            / "evidence"
+            / "EXEC-900.yaml"
+        )
+        record = load_evidence(fixture_repo, evidence)
+        assert record["lifecycle"]["final_state"] == "HALTED"
+        assert all(gate["result"] == "SKIPPED" for gate in record["quality_gates"])
+
+    def test_invalid_command_halts_with_evidence_before_executing(
+        self, fixture_repo: Path
+    ) -> None:
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        wp_path.write_text(
+            yaml.safe_dump(
+                synthetic_wp('python -c "pass"', 'python -c "unterminated'),
+                sort_keys=False,
+            ),
+            encoding="utf-8",
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.HALTED
+        assert "EXECUTING" not in [state for state, _ in report.transitions]
+        assert "invalid command quoting" in (report.halted_reason or "")
+        evidence = (
+            fixture_repo
+            / "05-work-packages"
+            / "WP-TST-0001"
+            / "evidence"
+            / "EXEC-900.yaml"
+        )
+        assert load_evidence(fixture_repo, evidence)["lifecycle"]["final_state"] == "HALTED"
+
+    def test_nul_command_halts_with_evidence_before_executing(
+        self, fixture_repo: Path
+    ) -> None:
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        wp_path.write_text(
+            yaml.safe_dump(
+                synthetic_wp('python -c "pass"', ["bad\x00command"]),
+                sort_keys=False,
+            ),
+            encoding="utf-8",
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.HALTED
+        assert "EXECUTING" not in [state for state, _ in report.transitions]
+        assert "must not contain NUL" in (report.halted_reason or "")
+        evidence = (
+            fixture_repo
+            / "05-work-packages"
+            / "WP-TST-0001"
+            / "evidence"
+            / "EXEC-900.yaml"
+        )
+        assert load_evidence(fixture_repo, evidence)["lifecycle"]["final_state"] == "HALTED"
 
     def test_noop_command_cannot_satisfy_expected_outputs(
         self, fixture_repo: Path
@@ -615,7 +709,8 @@ class TestOrchestrator:
                 "Path('src/mod.py').write_text('VALUE = 8\\n'); "
                 "subprocess.run(['git','add','src/mod.py'],check=True); "
                 "subprocess.run(['git','config','arb.task','mutated'],check=True); "
-                "Path('.git/hooks/task-hook').write_text('mutated')"
+                "Path('.git/hooks/task-hook').write_text('mutated'); "
+                "Path('.git/info/afrp-orchestrator.lock').write_text('unrelated')"
             ),
         ]
         wp_path.write_text(
@@ -645,10 +740,67 @@ class TestOrchestrator:
         )
         assert config.returncode == 1
         assert not (fixture_repo / ".git" / "hooks" / "task-hook").exists()
+        assert not (
+            fixture_repo / ".git" / "info" / "afrp-orchestrator.lock"
+        ).exists()
+
+    def test_external_custom_index_is_restored_exactly(
+        self, fixture_repo: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        custom_index = fixture_repo / "custom-index"
+        custom_index.write_bytes((fixture_repo / ".git" / "index").read_bytes())
+        original = custom_index.read_bytes()
+        monkeypatch.setenv("GIT_INDEX_FILE", str(custom_index))
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        command = [
+            "python",
+            "-c",
+            (
+                "from pathlib import Path; import subprocess; "
+                "Path('src/mod.py').write_text('VALUE = 11\\n'); "
+                "subprocess.run(['git','add','src/mod.py'],check=True)"
+            ),
+        ]
+        wp_path.write_text(
+            yaml.safe_dump(
+                synthetic_wp('python -c "pass"', command), sort_keys=False
+            ),
+            encoding="utf-8",
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.HALTED
+        assert "prohibited Git state" in (report.halted_reason or "")
+        assert custom_index.read_bytes() == original
 
     def test_head_and_refs_mutation_is_prohibited_and_restored(
         self, fixture_repo: Path
     ) -> None:
+        subprocess.run(
+            ["git", "status", "--porcelain"], cwd=fixture_repo, check=True, capture_output=True
+        )
+        git_dir = fixture_repo / ".git"
+
+        def metadata_tree() -> tuple[dict[str, bytes], set[str]]:
+            files = {
+                path.relative_to(git_dir).as_posix(): path.read_bytes()
+                for path in git_dir.rglob("*")
+                if path.is_file()
+                and path.name != "afrp-orchestrator.lock"
+            }
+            directories = {
+                path.relative_to(git_dir).as_posix()
+                for path in git_dir.rglob("*")
+                if path.is_dir()
+            }
+            return files, directories
+
+        original_metadata = metadata_tree()
+        original_index_state = subprocess.run(
+            ["git", "ls-files", "--stage", "-z"],
+            cwd=fixture_repo,
+            check=True,
+            capture_output=True,
+        ).stdout
         original_head = subprocess.run(
             ["git", "rev-parse", "HEAD"],
             cwd=fixture_repo,
@@ -685,7 +837,10 @@ class TestOrchestrator:
                 "subprocess.run(['git','add','src/mod.py'],check=True); "
                 "subprocess.run(['git','-c','user.email=t@t','-c','user.name=t',"
                 "'commit','-q','-m','forbidden'],check=True); "
-                "subprocess.run(['git','tag','task-created'],check=True)"
+                "subprocess.run(['git','tag','task-created'],check=True); "
+                "subprocess.run(['git','hash-object','-w','--stdin'],"
+                "input=b'task-object',check=True); "
+                "Path('.git/info/task-created').write_text('mutated')"
             ),
         ]
         wp_path.write_text(
@@ -712,6 +867,13 @@ class TestOrchestrator:
             text=True,
         ).stdout == original_refs
         assert head_log_path.read_bytes() == original_head_log
+        assert subprocess.run(
+            ["git", "ls-files", "--stage", "-z"],
+            cwd=fixture_repo,
+            check=True,
+            capture_output=True,
+        ).stdout == original_index_state
+        assert metadata_tree() == original_metadata
         assert (fixture_repo / "src" / "mod.py").read_text(encoding="utf-8") == "VALUE = 1\n"
 
     def test_existing_evidence_is_validated_without_overwrite(

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import copy
 import subprocess
 from pathlib import Path
 from typing import Any
@@ -232,14 +233,63 @@ class TestEvidenceEngine:
         with pytest.raises(ManifestValidationError):
             validate_evidence(record, REPO_ROOT)
 
-    def test_real_evidence_records_validate(self) -> None:
+    @pytest.mark.parametrize(
+        "mutation",
+        [
+            "gate_skipped_but_all_passed",
+            "gate_passed_but_not_all_passed",
+            "violations_but_compliant",
+            "out_of_bounds_omitted",
+            "verdict_boundary_mismatch",
+            "completed_pending_review",
+            "completed_failed_gate",
+            "review_pending_approved",
+            "halted_approved",
+        ],
+    )
+    def test_semantic_contradictions_rejected(self, mutation: str) -> None:
+        record = copy.deepcopy(minimal_evidence())
+        if mutation == "gate_skipped_but_all_passed":
+            record["quality_gates"][0]["result"] = "SKIPPED"
+        elif mutation == "gate_passed_but_not_all_passed":
+            record["verdict"]["all_gates_passed"] = False
+        elif mutation == "violations_but_compliant":
+            record["boundary_compliance"]["violations"] = ["rogue.py"]
+        elif mutation == "out_of_bounds_omitted":
+            record["boundary_compliance"]["files_modified"] = ["rogue.py"]
+        elif mutation == "verdict_boundary_mismatch":
+            record["verdict"]["boundary_compliant"] = False
+        elif mutation == "completed_pending_review":
+            record["lifecycle"]["final_state"] = "COMPLETED"
+        elif mutation == "completed_failed_gate":
+            record["lifecycle"]["final_state"] = "COMPLETED"
+            record["verdict"]["review_status"] = "APPROVED"
+            record["quality_gates"][0]["result"] = "FAIL"
+            record["verdict"]["all_gates_passed"] = False
+        elif mutation == "review_pending_approved":
+            record["verdict"]["review_status"] = "APPROVED"
+            record["verdict"]["review_note"] = "new approval"
+        elif mutation == "halted_approved":
+            record["lifecycle"]["final_state"] = "HALTED"
+            record["verdict"]["review_status"] = "APPROVED"
+        with pytest.raises(ManifestValidationError, match="semantic contradiction"):
+            validate_evidence(record, REPO_ROOT)
+
+    def test_existing_reviewed_evidence_records_remain_valid(self) -> None:
         for rel in [
             "05-work-packages/WP-IMP-0003/evidence/EXEC-001.yaml",
             "05-work-packages/WP-IMP-0004/evidence/EXEC-002.yaml",
-            "05-work-packages/WP-IMP-0005/evidence/EXEC-003.yaml",
         ]:
             record = yaml.safe_load((REPO_ROOT / rel).read_text(encoding="utf-8"))
             validate_evidence(record, REPO_ROOT)
+        contradictory = yaml.safe_load(
+            (
+                REPO_ROOT
+                / "05-work-packages/WP-IMP-0005/evidence/EXEC-003.yaml"
+            ).read_text(encoding="utf-8")
+        )
+        with pytest.raises(ManifestValidationError, match="semantic contradiction"):
+            validate_evidence(contradictory, REPO_ROOT)
 
 
 class TestEvidenceCommand:

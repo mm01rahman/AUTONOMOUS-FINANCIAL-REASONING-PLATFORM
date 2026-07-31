@@ -53,6 +53,8 @@ def _block_reaches_next(statements: list[ast.stmt]) -> bool:
 def _statement_reaches_next(statement: ast.stmt) -> bool:
     if isinstance(statement, ast.Return | ast.Raise | ast.Break | ast.Continue):
         return False
+    if isinstance(statement, ast.Assert) and isinstance(statement.test, ast.Constant):
+        return bool(statement.test.value)
     if isinstance(statement, ast.If):
         if isinstance(statement.test, ast.Constant):
             selected = statement.body if statement.test.value else statement.orelse

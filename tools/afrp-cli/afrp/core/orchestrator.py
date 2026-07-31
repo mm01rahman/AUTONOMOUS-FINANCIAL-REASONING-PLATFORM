@@ -95,6 +95,8 @@ class _WorkspaceSnapshot:
 class _GitControlSnapshot:
     roots: tuple[Path, ...]
     files: dict[Path, _FileState]
+    directories: dict[Path, int]
+    lock_path: Path
     index_path: Path
     index_state: bytes
     head: str
@@ -149,6 +151,8 @@ def _command_argv(command: str | Sequence[str]) -> list[str]:
         raise InvariantError("EGP-2.0", "command must be a string or argv list")
     if not argv or not argv[0]:
         raise InvariantError("EGP-2.0", "command must not be empty")
+    if any("\x00" in argument for argument in argv):
+        raise InvariantError("EGP-2.0", "command arguments must not contain NUL")
     return argv
 
 
@@ -163,6 +167,10 @@ def _execute_command(
     repo_root: Path, command: str | Sequence[str]
 ) -> tuple[bool, str, float]:
     argv = _command_argv(command)
+    return _execute_argv(repo_root, argv)
+
+
+def _execute_argv(repo_root: Path, argv: Sequence[str]) -> tuple[bool, str, float]:
     started = time.monotonic()
     try:
         proc = subprocess.run(
@@ -173,7 +181,7 @@ def _execute_command(
             shell=False,
             check=False,
         )
-    except OSError as exc:
+    except (OSError, ValueError) as exc:
         elapsed = time.monotonic() - started
         return False, f"spawn failure: {exc}", elapsed
     elapsed = time.monotonic() - started
@@ -228,12 +236,15 @@ def _snapshot_workspace(repo_root: Path) -> _WorkspaceSnapshot:
 
 
 def _git_output(repo_root: Path, arguments: list[str]) -> bytes:
+    environment = os.environ.copy()
+    environment["GIT_OPTIONAL_LOCKS"] = "0"
     try:
         result = subprocess.run(
             ["git", *arguments],
             cwd=repo_root,
             capture_output=True,
             check=True,
+            env=environment,
         )
     except (OSError, subprocess.CalledProcessError) as exc:
         raise ManifestValidationError(
@@ -243,12 +254,15 @@ def _git_output(repo_root: Path, arguments: list[str]) -> bytes:
 
 
 def _git_optional_output(repo_root: Path, arguments: list[str]) -> bytes:
+    environment = os.environ.copy()
+    environment["GIT_OPTIONAL_LOCKS"] = "0"
     try:
         result = subprocess.run(
             ["git", *arguments],
             cwd=repo_root,
             capture_output=True,
             check=False,
+            env=environment,
         )
     except OSError as exc:
         raise ManifestValidationError(
@@ -272,15 +286,31 @@ def _git_path(repo_root: Path, name: str) -> Path:
     return path.resolve() if path.is_absolute() else (repo_root / path).resolve()
 
 
-def _metadata_files(roots: Sequence[Path]) -> dict[Path, _FileState]:
+def _git_directory(repo_root: Path, argument: str) -> Path:
+    raw = _git_output(repo_root, ["rev-parse", argument]).decode(
+        "utf-8", errors="strict"
+    ).strip()
+    if not raw:
+        raise ManifestValidationError(f"git returned an empty path for {argument}")
+    path = Path(raw)
+    return path.resolve() if path.is_absolute() else (repo_root / path).resolve()
+
+
+def _metadata_files(
+    roots: Sequence[Path], excluded_path: Path | None = None
+) -> dict[Path, _FileState]:
     files: dict[Path, _FileState] = {}
     for root in roots:
+        if root == excluded_path:
+            continue
         if root.is_symlink() or root.is_file():
             state = _read_file_state(root)
             if state is not None:
                 files[root] = state
         elif root.is_dir():
             for path in root.rglob("*"):
+                if path == excluded_path:
+                    continue
                 if path.is_symlink() or path.is_file():
                     state = _read_file_state(path)
                     if state is not None:
@@ -288,25 +318,32 @@ def _metadata_files(roots: Sequence[Path]) -> dict[Path, _FileState]:
     return files
 
 
+def _metadata_directories(roots: Sequence[Path]) -> dict[Path, int]:
+    directories: dict[Path, int] = {}
+    for root in roots:
+        if root.is_dir():
+            directories[root] = stat.S_IMODE(root.stat().st_mode)
+            directories.update(
+                {
+                    path: stat.S_IMODE(path.stat().st_mode)
+                    for path in root.rglob("*")
+                    if path.is_dir()
+                }
+            )
+    return directories
+
+
 def _snapshot_git_control(repo_root: Path) -> _GitControlSnapshot:
     index_path = _git_path(repo_root, "index")
+    common_dir = _git_directory(repo_root, "--git-common-dir")
+    git_dir = _git_directory(repo_root, "--git-dir")
+    lock_path = common_dir / _LOCK_NAME
     roots = tuple(
         dict.fromkeys(
-            _git_path(repo_root, name)
-            for name in (
-                "HEAD",
-                "index",
-                "config",
-                "config.worktree",
-                "packed-refs",
-                "refs",
-                "logs/refs",
-                "logs/HEAD",
-                "hooks",
-                "ORIG_HEAD",
-                "MERGE_HEAD",
-                "CHERRY_PICK_HEAD",
-                "REVERT_HEAD",
+            (
+                common_dir,
+                git_dir,
+                index_path,
             )
         )
     )
@@ -331,7 +368,9 @@ def _snapshot_git_control(repo_root: Path) -> _GitControlSnapshot:
     )
     return _GitControlSnapshot(
         roots=roots,
-        files=_metadata_files(roots),
+        files=_metadata_files(roots, lock_path),
+        directories=_metadata_directories(roots),
+        lock_path=lock_path,
         index_path=index_path,
         index_state=index_state,
         head=head,
@@ -354,25 +393,15 @@ def _git_control_changes(
         changed.append("refs")
     if current.index_state != snapshot.index_state:
         changed.append("index")
-    current_metadata = {
-        path: state
-        for path, state in current.files.items()
-        if path != current.index_path
-    }
-    original_metadata = {
-        path: state
-        for path, state in snapshot.files.items()
-        if path != snapshot.index_path
-    }
-    if current_metadata != original_metadata:
-        changed.append("config/hooks/ref metadata")
+    if current.files != snapshot.files or current.directories != snapshot.directories:
+        changed.append("complete Git metadata tree")
     return tuple(changed)
 
 
 def _restore_git_control(
     repo_root: Path, snapshot: _GitControlSnapshot
 ) -> None:
-    current = _metadata_files(snapshot.roots)
+    current = _metadata_files(snapshot.roots, snapshot.lock_path)
     for path in sorted(
         set(current) - set(snapshot.files),
         key=lambda item: len(item.parts),
@@ -390,17 +419,21 @@ def _restore_git_control(
         else:
             path.write_bytes(original.contents)
             path.chmod(original.mode)
-    for root in sorted(snapshot.roots, key=lambda item: len(item.parts), reverse=True):
-        if root.is_dir():
-            for directory in sorted(
-                (path for path in root.rglob("*") if path.is_dir()),
-                key=lambda item: len(item.parts),
-                reverse=True,
-            ):
-                try:
-                    directory.rmdir()
-                except OSError:
-                    pass
+    for directory, mode in sorted(
+        snapshot.directories.items(), key=lambda item: len(item[0].parts)
+    ):
+        directory.mkdir(parents=True, exist_ok=True)
+        directory.chmod(mode)
+    current_directories = _metadata_directories(snapshot.roots)
+    for directory in sorted(
+        set(current_directories) - set(snapshot.directories),
+        key=lambda item: len(item.parts),
+        reverse=True,
+    ):
+        try:
+            directory.rmdir()
+        except OSError:
+            pass
 
 
 def _verify_restored_state(
@@ -420,18 +453,28 @@ def _verify_restored_state(
         git_changes.append("refs")
     if current_git.index_state != git_control.index_state:
         git_changes.append("index")
-    current_metadata = {
-        path: state
-        for path, state in current_git.files.items()
-        if path != current_git.index_path
-    }
-    original_metadata = {
-        path: state
-        for path, state in git_control.files.items()
-        if path != git_control.index_path
-    }
-    if current_metadata != original_metadata:
-        git_changes.append("config/hooks/ref metadata")
+    if (
+        current_git.files != git_control.files
+        or current_git.directories != git_control.directories
+    ):
+        changed_files = sorted(
+            str(path)
+            for path in set(current_git.files) | set(git_control.files)
+            if current_git.files.get(path) != git_control.files.get(path)
+        )
+        changed_directories = sorted(
+            str(path)
+            for path in set(current_git.directories) | set(git_control.directories)
+            if current_git.directories.get(path) != git_control.directories.get(path)
+        )
+        git_changes.append(
+            "complete Git metadata tree"
+            + (
+                f" files={changed_files}, directories={changed_directories}"
+                if changed_files or changed_directories
+                else ""
+            )
+        )
     if current_git.status != git_control.status:
         git_changes.append("index/worktree status")
     if workspace_changes or git_changes:
@@ -443,7 +486,11 @@ def _verify_restored_state(
 
 def _remove_path(path: Path) -> None:
     if path.is_symlink() or path.is_file():
-        path.unlink()
+        try:
+            path.unlink()
+        except PermissionError:
+            path.chmod(stat.S_IMODE(path.stat().st_mode) | stat.S_IWRITE)
+            path.unlink()
     elif path.is_dir():
         shutil.rmtree(path)
 
@@ -647,9 +694,19 @@ def _halt_with_evidence(
 ) -> tuple[str, tuple[str, ...]]:
     attempted = snapshot.changed(_snapshot_workspace(repo_root))
     audit = audit_boundaries(wp.bounded_files, attempted)
-    _restore_git_control(repo_root, git_control)
-    _restore_workspace(repo_root, snapshot)
-    _verify_restored_state(repo_root, snapshot, git_control)
+    rollback_error: str | None = None
+    try:
+        _restore_git_control(repo_root, git_control)
+        _restore_workspace(repo_root, snapshot)
+        _verify_restored_state(repo_root, snapshot, git_control)
+    except (AfrpError, OSError, ValueError, UnicodeError) as exc:
+        rollback_error = str(exc)
+    rollback_detail = (
+        "task-introduced changes rolled back and verified"
+        if rollback_error is None
+        else f"rollback FAILED: {rollback_error}"
+    )
+    full_reason = f"{reason}; {rollback_detail}"
     record = compose_boundary_evidence(
         wp,
         audit,
@@ -659,10 +716,11 @@ def _halt_with_evidence(
         final_state="HALTED",
         preconditions=_precondition_evidence(preconditions),
     )
+    record["verdict"]["review_note"] = full_reason
     write_evidence(record, repo_root, evidence_target)
     full_reason = (
-        f"{reason}; task-introduced changes rolled back and verified; "
-        f"HALTED evidence emitted to {evidence_target.relative_to(repo_root)}"
+        f"{full_reason}; HALTED evidence emitted to "
+        f"{evidence_target.relative_to(repo_root)}"
     )
     machine.halt(full_reason)
     return full_reason, audit.violations
@@ -686,6 +744,9 @@ def orchestrate(
     halted_reason: str | None = None
     snapshot: _WorkspaceSnapshot | None = None
     git_control: _GitControlSnapshot | None = None
+    wp: WorkPackage | None = None
+    evidence_target: Path | None = None
+    execution_started_at: datetime | None = None
 
     if skip_gates:
         reason = "skip_gates is prohibited; required gates must execute"
@@ -735,17 +796,42 @@ def orchestrate(
                 return _report(
                     wp_id, machine, preconditions, gates, violations, reason
                 )
-            command = wp.raw.get("execution", {}).get("command")
-            if command is None:
-                reason = "non-dry-run execution requires execution.command"
-                machine.halt(reason)
-                return _report(wp_id, machine, preconditions, gates, violations, reason)
-
             snapshot = _snapshot_workspace(root)
             git_control = _snapshot_git_control(root)
             execution_started_at = datetime.now(UTC)
+            command = wp.raw.get("execution", {}).get("command")
+            if command is None:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    "non-dry-run execution requires execution.command",
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
+            try:
+                task_argv = _command_argv(command)
+            except InvariantError as exc:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    str(exc),
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
             machine.advance(LifecycleState.EXECUTING, "executing WPS execution.command")
-            passed, detail, duration = _execute_command(root, command)
+            passed, detail, duration = _execute_argv(root, task_argv)
             if not passed:
                 reason, violations = _halt_with_evidence(
                     machine,
@@ -939,16 +1025,48 @@ def orchestrate(
             evidence_note = f"atomically emitted {relative_evidence}"
             machine.advance(LifecycleState.EVIDENCE_GENERATED, evidence_note)
             machine.advance(LifecycleState.REVIEW_PENDING, "awaiting ARB disposition")
-    except AfrpError as exc:
+    except (AfrpError, OSError, ValueError, UnicodeError) as exc:
         halted_reason = str(exc)
-        if snapshot is not None and git_control is not None and not machine.terminal:
+        if (
+            snapshot is not None
+            and git_control is not None
+            and wp is not None
+            and evidence_target is not None
+            and execution_started_at is not None
+            and not machine.terminal
+        ):
             try:
-                _restore_git_control(root, git_control)
-                _restore_workspace(root, snapshot)
-                _verify_restored_state(root, snapshot, git_control)
-                halted_reason += "; task-introduced changes rolled back and verified"
-            except AfrpError as rollback_error:
-                halted_reason += f"; rollback failed: {rollback_error}"
+                halted_reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    halted_reason,
+                )
+            except (AfrpError, OSError, ValueError, UnicodeError) as rollback_error:
+                try:
+                    _restore_git_control(root, git_control)
+                    _restore_workspace(root, snapshot)
+                    _verify_restored_state(root, snapshot, git_control)
+                    halted_reason += (
+                        "; HALTED evidence publication failed: "
+                        f"{rollback_error}; rollback verified"
+                    )
+                except (
+                    AfrpError,
+                    OSError,
+                    ValueError,
+                    UnicodeError,
+                ) as final_rollback_error:
+                    halted_reason += (
+                        f"; HALTED evidence failed: {rollback_error}; "
+                        f"rollback failed: {final_rollback_error}"
+                    )
         if not machine.terminal:
             machine.halt(halted_reason)
 

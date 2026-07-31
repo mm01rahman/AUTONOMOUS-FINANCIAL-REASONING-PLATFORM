@@ -53,6 +53,7 @@ def ledger_doc(artifacts: list[dict[str, str]]) -> dict[str, object]:
         "ledger_id": "BASELINE_FINGERPRINT",
         "baseline_id": "AFRP-BASELINE-1.0.0",
         "hash_algorithm": "sha256",
+        "generated_at": "2026-07-31T15:45:18+00:00",
         "artifacts": artifacts,
     }
 
@@ -209,6 +210,33 @@ class TestBaselineVerification:
                 "baseline_id",
             ),
             (yaml.safe_dump(ledger_doc([])), "non-empty"),
+            (
+                yaml.safe_dump(
+                    {
+                        **ledger_doc([{"path": "doc.md", "sha256": "0" * 64}]),
+                        "generated_at": "not-a-datetime",
+                    }
+                ),
+                "ISO datetime",
+            ),
+            (
+                yaml.safe_dump(
+                    {
+                        **ledger_doc([{"path": "doc.md", "sha256": "0" * 64}]),
+                        "generated_at": "2026-07-31T15:45:18",
+                    }
+                ),
+                "timezone",
+            ),
+            (
+                yaml.safe_dump(
+                    {
+                        **ledger_doc([{"path": "doc.md", "sha256": "0" * 64}]),
+                        "unexpected": True,
+                    }
+                ),
+                "unknown keys",
+            ),
         ],
     )
     def test_malformed_ledger_rejected(
@@ -256,6 +284,20 @@ class TestBaselineVerification:
             encoding="utf-8",
         )
         with pytest.raises(ManifestValidationError, match="duplicate"):
+            verify_baseline(tmp_path, ledger)
+
+    def test_unknown_artifact_field_rejected(self, tmp_path: Path) -> None:
+        ledger = tmp_path / "ledger.yaml"
+        artifact = {
+            "path": "doc.md",
+            "sha256": "0" * 64,
+            "size": 1,
+        }
+        ledger.write_text(
+            yaml.safe_dump(ledger_doc([artifact])),  # type: ignore[list-item]
+            encoding="utf-8",
+        )
+        with pytest.raises(ManifestValidationError, match="unknown keys"):
             verify_baseline(tmp_path, ledger)
 
     def test_invalid_sha256_rejected(self, tmp_path: Path) -> None:
