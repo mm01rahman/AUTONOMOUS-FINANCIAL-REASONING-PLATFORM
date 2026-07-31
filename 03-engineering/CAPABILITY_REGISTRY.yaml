@@ -141,7 +141,7 @@ capabilities:
     version: "1.0"
     title: "Layer 1 vector memory"
     owner: "SLS-100"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     planning_status: "READY"
     layer: "Layer 1"
     depends_on: ["L1-FST"]
