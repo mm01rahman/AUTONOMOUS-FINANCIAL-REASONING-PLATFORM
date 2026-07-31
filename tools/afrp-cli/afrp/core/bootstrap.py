@@ -9,9 +9,9 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Callable, Mapping, Sequence
 
 BOOTSTRAP_TAG = "m1.1-start"
 DIRECTORIES: tuple[str, ...] = (
@@ -197,8 +197,6 @@ def _require_success(result: subprocess.CompletedProcess[str], context: str) -> 
 
 
 def _ensure_toolchain(which: WhichFunction) -> tuple[str, ...]:
-    if sys.version_info < (3, 11):
-        raise BootstrapError("python3.11+ is required for EOS-BOOT")
     missing = [name for name in ("git", "uv") if which(name) is None]
     if missing:
         joined = ", ".join(missing)
@@ -303,7 +301,15 @@ def _tracked_status(
     run_command: CommandRunner,
     env: Mapping[str, str] | None,
 ) -> str:
-    status = _git(repo_root, "status", "--porcelain", "--", *tracked, run_command=run_command, env=env)
+    status = _git(
+        repo_root,
+        "status",
+        "--porcelain",
+        "--",
+        *tracked,
+        run_command=run_command,
+        env=env,
+    )
     return status.stdout.strip()
 
 

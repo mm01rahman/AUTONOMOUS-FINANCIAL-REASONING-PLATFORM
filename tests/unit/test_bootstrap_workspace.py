@@ -6,6 +6,7 @@ import os
 import subprocess
 from pathlib import Path
 
+import pytest
 from afrp.core.bootstrap import BOOTSTRAP_TAG, bootstrap_workspace
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -51,7 +52,9 @@ def tag_points_at_head(repo_root: Path) -> bool:
 
 
 class TestBootstrapWorkspace:
-    def test_bootstrap_workspace_is_idempotent(self, tmp_path: Path, monkeypatch) -> None:
+    def test_bootstrap_workspace_is_idempotent(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
         fake_bin = install_fake_uv(tmp_path / "tools")
         monkeypatch.setenv("PATH", f"{fake_bin}:{os.environ['PATH']}")
 
@@ -69,7 +72,9 @@ class TestBootstrapWorkspace:
         assert tag_points_at_head(workspace)
         assert "buf" in first.waived_tools
 
-    def test_script_wrapper_runs_end_to_end(self, tmp_path: Path, monkeypatch) -> None:
+    def test_script_wrapper_runs_end_to_end(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
         fake_bin = install_fake_uv(tmp_path / "tools")
         monkeypatch.setenv("PATH", f"{fake_bin}:{os.environ['PATH']}")
 
@@ -86,7 +91,9 @@ class TestBootstrapWorkspace:
         assert BOOTSTRAP_TAG in outcome.stdout
         assert tag_points_at_head(workspace)
 
-    def test_failed_sync_rolls_back_created_tag(self, tmp_path: Path, monkeypatch) -> None:
+    def test_failed_sync_rolls_back_created_tag(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
         fake_bin = install_fake_uv(tmp_path / "tools", exit_code=7)
         monkeypatch.setenv("PATH", f"{fake_bin}:{os.environ['PATH']}")
 
