@@ -78,6 +78,7 @@ artifacts:
     - "docs/runtime/layer2-forward.md"
     - "05-work-packages/WP-RT-1010.yaml"
     - "03-engineering/CAPABILITY_REGISTRY.yaml"
+unlocked_capabilities: []
 verdict:
   all_gates_passed: true
   boundary_compliant: true
