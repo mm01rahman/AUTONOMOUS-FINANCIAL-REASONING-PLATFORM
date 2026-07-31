@@ -1,0 +1,95 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0010"
+capability_id:
+  id: "RT-PROTO-ENVELOPE"
+  version: "1.0"
+title: "Author CognitiveEnvelope universal transport header"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "L0-CONTRACTS"
+  traceability:
+    implements_req: ["FR-007", "UX-001"]
+    trace_sls: "REF-001"
+    trace_adr: ["ADR-0001", "ADR-0003"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('RT-PROTO-ANNOTATIONS')"
+
+resources:
+  cpu: "low"
+  memory: "256MB"
+  network: false
+  filesystem:
+    write:
+      - "proto/afrp/v1/envelope.proto"
+      - "05-work-packages/WP-IMP-0010/evidence/"
+    read:
+      - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+
+execution:
+  priority: "high"
+  estimated_complexity: "small"
+  estimated_duration: "30m"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+    - "proto/afrp/v1/annotations.proto"
+
+outputs:
+  expected_source_files:
+    - "proto/afrp/v1/envelope.proto"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0010/evidence/EXEC-008.yaml"
+
+execution_results:
+  source_files_modified:
+    - "proto/afrp/v1/envelope.proto"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0010/evidence/EXEC-008.yaml"
+
+produces:
+  capability:
+    id: "RT-PROTO-ENVELOPE"
+    version: "1.0"
+  unlocks:
+    - id: "RT-PROTO-CIO"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "proto/afrp/v1/envelope.proto"
+  non_goals:
+    - "No CIO payload contracts (WP-IMP-0011)."
+
+requirements:
+  envelope:
+    module: "proto/afrp/v1/envelope.proto"
+    rules:
+      - "Transcribe CognitiveEnvelope verbatim from REF-001 section 1: 11 fields, exact names, numbers, types, and option annotations."
+
+quality_gates:
+  proto_validation:
+    required: true
+    command: "uv run python -m tools.proto_gate"
+
+completion:
+  success_requires:
+    - "Envelope compiles, carries FIT-003 options, matches REF-001 field-for-field."
+
+failure_modes:
+  ERR-PROTO-SYNTAX: "protoc rejects the contract."
+  ERR-SPEC-DRIFT: "Envelope deviates from REF-001."
+
+execution_prompt: |
+  Execute WP-IMP-0010: author CognitiveEnvelope exactly per REF-001 section 1,
+  strictly within bounded_files.

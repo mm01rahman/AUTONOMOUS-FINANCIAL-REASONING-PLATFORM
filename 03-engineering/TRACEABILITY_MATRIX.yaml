@@ -1,0 +1,530 @@
+schema_version: "1.0"
+matrix_id: "TVM-001"
+# Traceability Verification Matrix (Article IV). FIT-007 asserts coverage.
+# A requirement is COVERED when it has >=1 artifact and >=1 verification.
+# status: planned | implemented
+
+requirements:
+  # ── Functional requirements ──────────────────────────────────────────
+  - id: "FR-001"
+    title: "afrp boot command with manifest and kernel parsers"
+    source: "03-engineering/300_IMPLEMENTATION_GUIDE.md#3"
+    capability: "EOS-CONTEXT"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/cli.py"
+      - "tools/afrp-cli/afrp/commands/boot.py"
+      - "tools/afrp-cli/afrp/core/manifest.py"
+      - "tools/afrp-cli/afrp/core/kernel.py"
+      - "tools/afrp-cli/afrp/core/exceptions.py"
+    verified_by:
+      - "tests/unit/test_bootloader.py"
+      - "05-work-packages/WP-IMP-0003/evidence/EXEC-001.yaml"
+  - id: "FR-002"
+    title: "afrp plan capability DAG engine with cycle detection"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#1"
+    capability: "EOS-GRAPH"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/registry.py"
+      - "tools/afrp-cli/afrp/commands/plan.py"
+    verified_by:
+      - "tests/unit/test_graph.py"
+      - "05-work-packages/WP-IMP-0004/evidence/EXEC-002.yaml"
+  - id: "FR-003"
+    title: "afrp validate AST invariant checker"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#1"
+    capability: "EOS-VALIDATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/astcheck.py"
+      - "tools/afrp-cli/afrp/commands/validate.py"
+    verified_by:
+      - "tests/unit/test_validator.py"
+      - "05-work-packages/WP-IMP-0005/evidence/EXEC-003.yaml"
+  - id: "FR-004"
+    title: "afrp evidence boundary audit and ERS-1.0 emission"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#1"
+    capability: "EOS-EVIDENCE"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/workpackage.py"
+      - "tools/afrp-cli/afrp/core/evidence.py"
+      - "tools/afrp-cli/afrp/commands/evidence.py"
+    verified_by:
+      - "tests/unit/test_evidence.py"
+      - "05-work-packages/WP-IMP-0006/evidence/EXEC-004.yaml"
+  - id: "FR-005"
+    title: "afrp health coverage and traceability analyzer"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#1"
+    capability: "EOS-HEALTH"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/traceability.py"
+      - "tools/afrp-cli/afrp/commands/health.py"
+    verified_by:
+      - "tests/unit/test_health.py"
+      - "05-work-packages/WP-IMP-0007/evidence/EXEC-005.yaml"
+  - id: "FR-006"
+    title: "afrp run orchestrator control plane under EGP-2.0"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#2"
+    capability: "EOS-ORCHESTRATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/lifecycle.py"
+      - "tools/afrp-cli/afrp/core/orchestrator.py"
+      - "tools/afrp-cli/afrp/commands/run.py"
+    verified_by:
+      - "tests/unit/test_orchestrator.py"
+      - "05-work-packages/WP-IMP-0008/evidence/EXEC-006.yaml"
+  - id: "FR-007"
+    title: "Protobuf annotations, CognitiveEnvelope, CIO-01..12 contracts"
+    source: "02-architecture/200_REFERENCE_SPECIFICATION.md#1"
+    capability: "RT-PROTO-CIO"
+    status: "implemented"
+    artifacts:
+      - "proto/afrp/v1/annotations.proto"
+      - "proto/afrp/v1/envelope.proto"
+      - "proto/afrp/v1/cio.proto"
+    verified_by:
+      - "tests/unit/test_contracts.py"
+      - "05-work-packages/WP-IMP-0011/evidence/EXEC-009.yaml"
+  - id: "FR-008"
+    title: "Runtime common services: config, logging, exceptions, FSM, seeds"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/config.py"
+      - "06-runtime/afrp_runtime/common/obslog.py"
+      - "06-runtime/afrp_runtime/common/errors.py"
+      - "06-runtime/afrp_runtime/common/statemachine.py"
+      - "06-runtime/afrp_runtime/common/seeds.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+  - id: "FR-009"
+    title: "Layer 1 data platform: ingress, features, persistence, memory"
+    source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+    capability: "L1-ING"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer1/ingest.py"
+      - "06-runtime/afrp_runtime/layer1/features.py"
+      - "06-runtime/afrp_runtime/layer1/persistence.py"
+      - "06-runtime/afrp_runtime/layer1/memory.py"
+    verified_by:
+      - "tests/unit/test_layer1.py"
+      - "05-work-packages/WP-IMP-0013/evidence/EXEC-011.yaml"
+  - id: "FR-010"
+    title: "Layer 2 specialized belief agents emitting DSmT masses"
+    source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+    capability: "L2-BASE"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer2/base.py"
+      - "06-runtime/afrp_runtime/layer2/agents.py"
+    verified_by:
+      - "tests/unit/test_layer2.py"
+      - "05-work-packages/WP-IMP-0017/evidence/EXEC-015.yaml"
+  - id: "FR-011"
+    title: "Layer 3 world model kernel PCR5 fusion and scenario simulation"
+    source: "02-architecture/130_MATHEMATICAL_FOUNDATION.md#2"
+    capability: "L3-WRM"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer3/dsmt.py"
+      - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+      - "06-runtime/afrp_runtime/layer3/simulator.py"
+    verified_by:
+      - "tests/unit/test_layer3.py"
+      - "05-work-packages/WP-IMP-0024/evidence/EXEC-022.yaml"
+  - id: "FR-012"
+    title: "Layer 4 decision engine: synthesis, optimization, policy validation"
+    source: "02-architecture/130_MATHEMATICAL_FOUNDATION.md#4"
+    capability: "L4-VAL"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer4/synthesizer.py"
+      - "06-runtime/afrp_runtime/layer4/optimizer.py"
+      - "06-runtime/afrp_runtime/layer4/policy.py"
+    verified_by:
+      - "tests/unit/test_layer4.py"
+      - "05-work-packages/WP-IMP-0028/evidence/EXEC-026.yaml"
+  - id: "FR-013"
+    title: "Layer 5 execution gateway: order FSM, fills, portfolio reconciliation"
+    source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+    capability: "L5-EXE"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer5/execution.py"
+    verified_by:
+      - "tests/unit/test_layer5.py"
+      - "05-work-packages/WP-IMP-0029/evidence/EXEC-027.yaml"
+  - id: "FR-014"
+    title: "Layer 6 out-of-band learning: Brier scoring, discounting, embeddings"
+    source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+    capability: "L6-OPT"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer6/learning.py"
+    verified_by:
+      - "tests/unit/test_layer6.py"
+      - "05-work-packages/WP-IMP-0030/evidence/EXEC-028.yaml"
+  - id: "FR-015"
+    title: "Research platform deterministic backtest harness"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#1"
+    capability: "RESEARCH-HARNESS"
+    status: "implemented"
+    artifacts:
+      - "07-research/afrp_research/backtest.py"
+    verified_by:
+      - "tests/unit/test_research.py"
+      - "05-work-packages/WP-IMP-0031/evidence/EXEC-029.yaml"
+  - id: "FR-016"
+    title: "Operations deployment configuration and security posture"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "OPS-DEPLOY"
+    status: "implemented"
+    artifacts:
+      - "08-operations/policies/security.yaml"
+      - "08-operations/policies/high-availability.yaml"
+      - "08-operations/policies/recovery.yaml"
+      - "08-operations/policies/observability.yaml"
+      - "08-operations/docker/Dockerfile"
+      - ".github/workflows/quality.yml"
+      - "tools/ops_gate.py"
+    verified_by:
+      - "tests/unit/test_operations.py"
+      - "05-work-packages/WP-IMP-0032/evidence/EXEC-030.yaml"
+  - id: "OBS-01"
+    title: "Structured JSON logging and trace propagation schema"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/obslog.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+
+  # ── Non-functional requirements (ARCH-001 §2) ───────────────────────
+  - id: "NFR-001"
+    title: "P99 decision loop latency <= 50ms"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "SYSTEM-VALIDATION"
+    status: "implemented"
+    artifacts:
+      - "tools/system_gate.py"
+    verified_by:
+      - "tests/performance/test_latency.py"
+      - "05-work-packages/WP-IMP-0033/evidence/EXEC-031.yaml"
+  - id: "NFR-002"
+    title: "High-availability active-passive posture"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "OPS-DEPLOY"
+    status: "implemented"
+    artifacts:
+      - "08-operations/policies/high-availability.yaml"
+      - "tools/ops_gate.py"
+    verified_by:
+      - "tests/unit/test_operations.py"
+      - "05-work-packages/WP-IMP-0032/evidence/EXEC-030.yaml"
+  - id: "NFR-003"
+    title: "Graceful degradation via m(Theta) padding on feed loss"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "L2-BASE"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer2/base.py"
+      - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+    verified_by:
+      - "tests/unit/test_layer2.py"
+      - "05-work-packages/WP-IMP-0017/evidence/EXEC-015.yaml"
+      - "tests/chaos/test_degradation.py"
+      - "05-work-packages/WP-IMP-0033/evidence/EXEC-031.yaml"
+  - id: "NFR-004"
+    title: "Deterministic math under identical inputs and seed 42"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "RT-COMMON"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/seeds.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+  - id: "NFR-005"
+    title: "RPO = 0 lost trades; RTO < 60s"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "L5-EXE"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer1/persistence.py"
+      - "06-runtime/afrp_runtime/layer5/execution.py"
+    verified_by:
+      - "tests/unit/test_layer1.py"
+      - "tests/unit/test_layer5.py"
+      - "05-work-packages/WP-IMP-0029/evidence/EXEC-027.yaml"
+  - id: "NFR-006"
+    title: "Zero-trust mTLS with SPIFFE identities on internal calls"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "OPS-DEPLOY"
+    status: "implemented"
+    artifacts:
+      - "08-operations/policies/security.yaml"
+      - "tools/ops_gate.py"
+    verified_by:
+      - "tests/unit/test_operations.py"
+      - "05-work-packages/WP-IMP-0032/evidence/EXEC-030.yaml"
+  - id: "NFR-007"
+    title: "HMAC-signed audit log and OTel trace on every order"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "L5-EXE"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer4/policy.py"
+      - "06-runtime/afrp_runtime/layer5/execution.py"
+    verified_by:
+      - "tests/unit/test_layer4.py"
+      - "tests/unit/test_layer5.py"
+      - "05-work-packages/WP-IMP-0029/evidence/EXEC-027.yaml"
+  - id: "NFR-008"
+    title: "Pre-allocated or pooled memory in live execution path"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "L4-DEC"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer4/optimizer.py"
+    verified_by:
+      - "tests/unit/test_layer4.py"
+      - "05-work-packages/WP-IMP-0027/evidence/EXEC-025.yaml"
+  - id: "NFR-009"
+    title: "100% strict MyPy compliance"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "EOS-ORCHESTRATOR"
+    status: "implemented"
+    artifacts:
+      - "pyproject.toml"
+      - "03-engineering/BUILD_PROFILE.yaml"
+    verified_by:
+      - "05-work-packages/WP-IMP-0008/evidence/EXEC-006.yaml"
+  - id: "NFR-010"
+    title: "Protobuf wire contract immutability"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
+    capability: "RT-PROTO-CIO"
+    status: "implemented"
+    artifacts:
+      - "tools/proto_gate.py"
+      - "09-validation/contracts/afrp_v1.snapshot.json"
+    verified_by:
+      - "tests/unit/test_contracts.py"
+      - "05-work-packages/WP-IMP-0011/evidence/EXEC-009.yaml"
+
+  # ── Architecture fitness functions (ARCH-001 §3) ────────────────────
+  - id: "FIT-001"
+    title: "DAG circularity check in capability registry"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-GRAPH"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/registry.py"
+    verified_by:
+      - "tests/unit/test_graph.py"
+      - "05-work-packages/WP-IMP-0004/evidence/EXEC-002.yaml"
+  - id: "FIT-002"
+    title: "AST illegal syntax audit: bare except, untyped defs"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-VALIDATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/astcheck.py"
+    verified_by:
+      - "tests/unit/test_validator.py"
+      - "05-work-packages/WP-IMP-0005/evidence/EXEC-003.yaml"
+  - id: "FIT-003"
+    title: "Protobuf custom option presence check"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "RT-PROTO-ANNOTATIONS"
+    status: "implemented"
+    artifacts:
+      - "proto/afrp/v1/annotations.proto"
+      - "tools/proto_gate.py"
+    verified_by:
+      - "tests/unit/test_contracts.py"
+      - "05-work-packages/WP-IMP-0009/evidence/EXEC-007.yaml"
+  - id: "FIT-004"
+    title: "Cross-layer import prohibition in 06-runtime"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-VALIDATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/astcheck.py"
+    verified_by:
+      - "tests/unit/test_validator.py"
+      - "05-work-packages/WP-IMP-0005/evidence/EXEC-003.yaml"
+  - id: "FIT-005"
+    title: "Boundary confinement verification against bounded_files"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-EVIDENCE"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/evidence.py"
+    verified_by:
+      - "tests/unit/test_evidence.py"
+      - "05-work-packages/WP-IMP-0006/evidence/EXEC-004.yaml"
+  - id: "FIT-006"
+    title: "KERNEL.md length <= 400 words"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-CONTEXT"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/kernel.py"
+    verified_by:
+      - "tests/unit/test_bootloader.py"
+      - "05-work-packages/WP-IMP-0003/evidence/EXEC-001.yaml"
+  - id: "FIT-007"
+    title: "100% requirement coverage in traceability matrix"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "EOS-HEALTH"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/traceability.py"
+    verified_by:
+      - "tests/unit/test_health.py"
+      - "05-work-packages/WP-IMP-0007/evidence/EXEC-005.yaml"
+  - id: "FIT-008"
+    title: "Deterministic replay of historical ticks reproduces state"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
+    capability: "SYSTEM-VALIDATION"
+    status: "implemented"
+    artifacts:
+      - "tools/system_gate.py"
+      - "09-validation/fixtures/mp04_ticks.yaml"
+      - "09-validation/fixtures/mp04_expected.sha256"
+    verified_by:
+      - "tests/integration/test_system_replay.py"
+      - "05-work-packages/WP-IMP-0033/evidence/EXEC-031.yaml"
+
+  # ── Engineering decision rules (ARCH-001 §4) ────────────────────────
+  - id: "EDR-001"
+    title: "Business logic depends on abstract interfaces"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/contracts/cio.py"
+      - "06-runtime/afrp_runtime/contracts/envelope.py"
+    verified_by:
+      - "tests/unit/test_runtime_contracts.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+  - id: "EDR-002"
+    title: "No direct cross-layer Python imports in 06-runtime"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "EOS-VALIDATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/astcheck.py"
+    verified_by:
+      - "tests/unit/test_validator.py"
+      - "05-work-packages/WP-IMP-0005/evidence/EXEC-003.yaml"
+  - id: "EDR-003"
+    title: "asyncio for I/O-bound; process pools/Rust for CPU-bound"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "L3-WRM"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer3/dsmt.py"
+    verified_by:
+      - "tests/unit/test_layer3.py"
+      - "05-work-packages/WP-IMP-0024/evidence/EXEC-022.yaml"
+  - id: "EDR-004"
+    title: "No bare except or swallowed generic Exception"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/errors.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+  - id: "EDR-005"
+    title: "Config precedence: Emergency > Mission Profile > Policy > Subsystem"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/config.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+  - id: "EDR-006"
+    title: "Structured JSON logging conforming to OBS-01"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/obslog.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+  - id: "EDR-007"
+    title: "Live decision path P99 <= 50ms"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "SYSTEM-VALIDATION"
+    status: "implemented"
+    artifacts:
+      - "tools/system_gate.py"
+    verified_by:
+      - "tests/performance/test_latency.py"
+      - "05-work-packages/WP-IMP-0033/evidence/EXEC-031.yaml"
+  - id: "EDR-008"
+    title: "Zero hardcoded secrets"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/config.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+  - id: "EDR-009"
+    title: "Offline math testable under deterministic seed 42"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-COMMON"
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/seeds.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+  - id: "EDR-010"
+    title: "No protobuf breaking wire changes without major version bump"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "RT-PROTO-CIO"
+    status: "implemented"
+    artifacts:
+      - "tools/proto_gate.py"
+      - "09-validation/contracts/afrp_v1.snapshot.json"
+    verified_by:
+      - "tests/unit/test_contracts.py"
+      - "05-work-packages/WP-IMP-0011/evidence/EXEC-009.yaml"
+  - id: "EDR-011"
+    title: "100% mypy --strict; implicit Any prohibited"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "EOS-ORCHESTRATOR"
+    status: "implemented"
+    artifacts:
+      - "pyproject.toml"
+    verified_by:
+      - "05-work-packages/WP-IMP-0008/evidence/EXEC-006.yaml"
+  - id: "EDR-012"
+    title: "Deprecations honor one-minor-version grace period"
+    source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
+    capability: "GOV-BASELINE"
+    status: "implemented"
+    artifacts:
+      - "03-engineering/DEPRECATION_POLICY.yaml"
+      - "tools/system_gate.py"
+    verified_by:
+      - "tests/integration/test_system_replay.py"
+      - "05-work-packages/WP-IMP-0033/evidence/EXEC-031.yaml"

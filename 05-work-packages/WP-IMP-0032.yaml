@@ -1,0 +1,115 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0032"
+capability_id:
+  id: "OPS-DEPLOY"
+  version: "1.0"
+title: "Implement enforceable operations and deployment posture"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "OPS"
+  traceability:
+    implements_req: ["FR-016", "NFR-002", "NFR-005", "NFR-006", "NFR-007"]
+    trace_sls: "ARCH-001"
+    trace_adr: ["ADR-0001", "ADR-0002"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('RT-COMMON')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "08-operations/"
+      - "tools/ops_gate.py"
+      - "tests/unit/test_operations.py"
+      - ".github/workflows/quality.yml"
+      - "05-work-packages/WP-IMP-0032/evidence/"
+    read:
+      - "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+
+execution:
+  priority: "high"
+  estimated_complexity: "medium"
+  estimated_duration: "1h"
+  parallelizable: true
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+
+outputs:
+  expected_source_files:
+    - "08-operations/policies/security.yaml"
+    - "08-operations/policies/high-availability.yaml"
+    - "08-operations/policies/recovery.yaml"
+    - "08-operations/policies/observability.yaml"
+    - "08-operations/docker/Dockerfile"
+    - "tools/ops_gate.py"
+    - "tests/unit/test_operations.py"
+    - ".github/workflows/quality.yml"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0032/evidence/EXEC-030.yaml"
+
+execution_results:
+  source_files_modified:
+    - "08-operations/policies/security.yaml"
+    - "08-operations/policies/high-availability.yaml"
+    - "08-operations/policies/recovery.yaml"
+    - "08-operations/policies/observability.yaml"
+    - "08-operations/docker/Dockerfile"
+    - "tools/ops_gate.py"
+    - "tests/unit/test_operations.py"
+    - ".github/workflows/quality.yml"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0032/evidence/EXEC-030.yaml"
+
+produces:
+  capability: {id: "OPS-DEPLOY", version: "1.0"}
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "08-operations/"
+    - "tools/ops_gate.py"
+    - "tests/unit/test_operations.py"
+    - ".github/workflows/quality.yml"
+  non_goals:
+    - "No broker-specific cloud account or secret provisioning."
+
+requirements:
+  operations:
+    module: "tools/ops_gate.py"
+    rules:
+      - "Enforce active-passive 99.99% posture, durable lease, fencing, and <60s failover."
+      - "Enforce TLS 1.3 mTLS, SPIFFE identity, Vault/environment secrets."
+      - "Enforce RPO=0 synchronous events and RTO<60s."
+      - "Enforce OBS-01, OpenTelemetry, and HMAC audit on every order."
+      - "Enforce non-root frozen-lock production image and complete CI gate set."
+
+quality_gates:
+  ops_validation: {required: true, command: "uv run python -m tools.ops_gate"}
+  ruff_lint: {required: true, command: "uv run ruff check tools/ tests/"}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict tools/ tests/unit/test_operations.py"}
+  pytest_units: {required: true, command: "uv run pytest tests/unit/test_operations.py -v"}
+
+completion:
+  success_requires:
+    - "Every required operations invariant has a failing mutation test."
+
+failure_modes:
+  ERR-OPS-POLICY: "An NFR operational invariant is missing or weakened."
+  ERR-CONTAINER: "Image is root, unlocked, or ungoverned."
+  ERR-CI: "A mandatory quality gate is absent."
+
+execution_prompt: |
+  Execute WP-IMP-0032 strictly within bounded_files.

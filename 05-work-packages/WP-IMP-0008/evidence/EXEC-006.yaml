@@ -1,0 +1,92 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-006"
+work_package_id: "WP-IMP-0008"
+capability:
+  id: "EOS-ORCHESTRATOR"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (Claude Fable 5)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T17:45:00+06:00"
+  finished_at: "2026-07-31T18:10:00+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "BASELINE_VERIFIED"
+      at: "2026-07-31T17:45:00+06:00"
+    - state: "WORK_PACKAGE_LOADED"
+      at: "2026-07-31T17:45:20+06:00"
+    - state: "PRECONDITIONS_VERIFIED"
+      at: "2026-07-31T17:45:30+06:00"
+    - state: "EXECUTION_AUTHORIZED"
+      at: "2026-07-31T17:45:40+06:00"
+    - state: "EXECUTING"
+      at: "2026-07-31T17:46:00+06:00"
+    - state: "VALIDATING"
+      at: "2026-07-31T18:05:00+06:00"
+    - state: "EVIDENCE_GENERATED"
+      at: "2026-07-31T18:10:00+06:00"
+    - state: "REVIEW_PENDING"
+      at: "2026-07-31T18:10:00+06:00"
+      note: "Autopilot governed self-review per ADR-0002; disposition in verdict"
+preconditions:
+  - predicate: "capability.complete('EOS-HEALTH')"
+    result: "PASS"
+  - predicate: "file.exists('00-governance/BASELINE_FINGERPRINT.yaml')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "tools/afrp-cli/afrp/core/lifecycle.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tools/afrp-cli/afrp/commands/run.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_orchestrator.py"
+  files_modified:
+    - "tools/afrp-cli/afrp/core/lifecycle.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tools/afrp-cli/afrp/commands/run.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_orchestrator.py"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check tools/afrp-cli/ tests/"
+    result: "PASS"
+    detail: "All checks passed"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools/afrp-cli/ tests/"
+    result: "PASS"
+    detail: "Success: no issues found in 23 source files"
+  - gate: "pytest_units"
+    command: "uv run pytest tests/unit/test_orchestrator.py -v"
+    result: "PASS"
+    detail: "21 passed (119 total suite-wide)"
+artifacts:
+  source_files:
+    - "tools/afrp-cli/afrp/core/lifecycle.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tools/afrp-cli/afrp/commands/run.py"
+    - "tools/afrp-cli/afrp/cli.py"
+  test_files:
+    - "tests/unit/test_orchestrator.py"
+unlocked_capabilities:
+  - id: "RT-PROTO-ANNOTATIONS"
+    version: "1.0"
+  - id: "RT-COMMON"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    Governed self-review: full RSM-1.0 lifecycle proven on a synthetic
+    governed repository — happy path to REVIEW_PENDING; failing gate
+    triggers bounded-file git rollback (file content verified restored)
+    then HALT; precondition failure halts zero-write; out-of-bounds write
+    halts with FIT-005 naming; tampered baseline halts before WP load;
+    illegal lifecycle jumps and post-HALT resurrection rejected. Live
+    dry-run against the real repository reached EXECUTION_AUTHORIZED and
+    halted cleanly. EOS toolchain (EOS-002) is complete; Layer work unlocked.

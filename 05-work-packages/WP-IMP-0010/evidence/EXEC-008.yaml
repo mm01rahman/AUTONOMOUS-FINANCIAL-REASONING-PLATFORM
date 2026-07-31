@@ -1,0 +1,48 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-008"
+work_package_id: "WP-IMP-0010"
+capability:
+  id: "RT-PROTO-ENVELOPE"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (Claude Fable 5)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T18:25:00+06:00"
+  finished_at: "2026-07-31T18:35:00+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-07-31T18:35:00+06:00"
+      note: "Autopilot governed self-review per ADR-0002"
+preconditions:
+  - predicate: "capability.complete('RT-PROTO-ANNOTATIONS')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "proto/afrp/v1/envelope.proto"
+  files_modified:
+    - "proto/afrp/v1/envelope.proto"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "proto_validation"
+    command: "uv run python -m tools.proto_gate"
+    result: "PASS"
+    detail: "proto_compile PASS; fit_003 PASS; nfr_010 PASS"
+artifacts:
+  source_files:
+    - "proto/afrp/v1/envelope.proto"
+unlocked_capabilities:
+  - id: "RT-PROTO-CIO"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    CognitiveEnvelope transcribed verbatim from REF-001 section 1 — 11 fields
+    with exact names, numbers, types and option annotations; verified
+    field-for-field by tests/unit/test_contracts.py::test_envelope_matches_ref_001.

@@ -1,0 +1,129 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0011"
+capability_id:
+  id: "RT-PROTO-CIO"
+  version: "1.0"
+title: "Author CIO-01..CIO-12 contracts, proto gate & compat snapshot"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "L0-CONTRACTS"
+  traceability:
+    implements_req: ["FR-007", "NFR-010", "EDR-010", "FIT-003"]
+    trace_sls: "REF-001"
+    trace_adr: ["ADR-0001", "ADR-0003"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('RT-PROTO-ENVELOPE')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "proto/afrp/v1/cio.proto"
+      - "tools/proto_gate.py"
+      - "09-validation/contracts/afrp_v1.snapshot.json"
+      - "tests/unit/test_contracts.py"
+      - "05-work-packages/WP-IMP-0011/evidence/"
+    read:
+      - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+      - "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+
+execution:
+  priority: "high"
+  estimated_complexity: "medium"
+  estimated_duration: "2h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "proto/afrp/v1/annotations.proto"
+    - "proto/afrp/v1/envelope.proto"
+
+outputs:
+  expected_source_files:
+    - "proto/afrp/v1/cio.proto"
+    - "tools/proto_gate.py"
+    - "09-validation/contracts/afrp_v1.snapshot.json"
+    - "tests/unit/test_contracts.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0011/evidence/EXEC-009.yaml"
+
+execution_results:
+  source_files_modified:
+    - "proto/afrp/v1/cio.proto"
+    - "tools/proto_gate.py"
+    - "09-validation/contracts/afrp_v1.snapshot.json"
+    - "tests/unit/test_contracts.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0011/evidence/EXEC-009.yaml"
+
+produces:
+  capability:
+    id: "RT-PROTO-CIO"
+    version: "1.0"
+  unlocks:
+    - id: "L1-ING"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "proto/afrp/v1/cio.proto"
+    - "tools/proto_gate.py"
+    - "09-validation/contracts/afrp_v1.snapshot.json"
+    - "tests/unit/test_contracts.py"
+  non_goals:
+    - "No runtime layer implementations (Stage D)."
+    - "No committed generated pb2 code (ADR-0003)."
+
+requirements:
+  cio_contracts:
+    module: "proto/afrp/v1/cio.proto"
+    rules:
+      - "One message per CIO-01..CIO-12 (REF-001 section 2), envelope as field 1."
+      - "Every message carries cio_id/owner_subsystem/stability_level (FIT-003)."
+      - "DSmT masses as map<string,double> over canonical D^Theta focal labels."
+  proto_gate:
+    module: "tools/proto_gate.py"
+    rules:
+      - "Compile contracts with grpcio-tools (W-001 substitute for buf lint)."
+      - "Enforce FIT-003 via generated descriptor options."
+      - "NFR-010/EDR-10: descriptor manifest compared against committed snapshot; removals, renames, renumbers, retypes are breaking."
+
+quality_gates:
+  proto_validation:
+    required: true
+    command: "uv run python -m tools.proto_gate"
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/ tests/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/ tests/"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_contracts.py -v"
+
+completion:
+  success_requires:
+    - "All 12 CIO messages compile with FIT-003 options."
+    - "Compat gate proves detection of removal/rename/renumber/retype."
+    - "Quality gates pass with zero errors."
+
+failure_modes:
+  ERR-PROTO-SYNTAX: "protoc rejects a contract."
+  ERR-FIT-003: "A message lacks required custom options."
+  ERR-NFR-010: "Breaking wire change against the snapshot."
+
+execution_prompt: |
+  Execute WP-IMP-0011: author CIO-01..CIO-12, the proto gate and the compat
+  snapshot strictly within bounded_files.

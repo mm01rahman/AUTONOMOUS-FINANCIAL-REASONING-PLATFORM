@@ -1,0 +1,73 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-009"
+work_package_id: "WP-IMP-0011"
+capability:
+  id: "RT-PROTO-CIO"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (Claude Fable 5)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T18:35:00+06:00"
+  finished_at: "2026-07-31T19:00:00+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-07-31T19:00:00+06:00"
+      note: "Autopilot governed self-review per ADR-0002"
+preconditions:
+  - predicate: "capability.complete('RT-PROTO-ENVELOPE')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "proto/afrp/v1/cio.proto"
+    - "tools/proto_gate.py"
+    - "09-validation/contracts/afrp_v1.snapshot.json"
+    - "tests/unit/test_contracts.py"
+  files_modified:
+    - "proto/afrp/v1/cio.proto"
+    - "tools/proto_gate.py"
+    - "09-validation/contracts/afrp_v1.snapshot.json"
+    - "tests/unit/test_contracts.py"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "proto_validation"
+    command: "uv run python -m tools.proto_gate"
+    result: "PASS"
+    detail: "proto_compile PASS; fit_003 PASS; nfr_010 PASS (20 messages)"
+  - gate: "ruff_lint"
+    command: "uv run ruff check tools/ tests/"
+    result: "PASS"
+    detail: "All checks passed"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools/ tests/"
+    result: "PASS"
+    detail: "Success: no issues found in 25 source files"
+  - gate: "pytest_units"
+    command: "uv run pytest tests/unit/test_contracts.py -v"
+    result: "PASS"
+    detail: "11 passed (130 total suite-wide)"
+artifacts:
+  source_files:
+    - "proto/afrp/v1/cio.proto"
+    - "tools/proto_gate.py"
+    - "09-validation/contracts/afrp_v1.snapshot.json"
+  test_files:
+    - "tests/unit/test_contracts.py"
+unlocked_capabilities:
+  - id: "L1-ING"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    All 12 CIOs modeled with envelope-first layout and FIT-003 options; DSmT
+    masses as canonical D^Theta focal-label maps; enums for observation,
+    authorization, order-state and execution-event domains. Compat gate
+    proven to detect message removal, field removal, rename, renumber and
+    retype, while additive evolution passes. Snapshot committed under
+    09-validation/contracts/ per ADR-0003.

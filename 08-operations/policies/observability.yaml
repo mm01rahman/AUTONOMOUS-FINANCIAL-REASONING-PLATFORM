@@ -1,0 +1,14 @@
+schema_version: "1.0"
+policy_id: "AFRP-OBSERVABILITY"
+observability:
+  log_schema: "OBS-01"
+  structured_json_required: true
+  opentelemetry_required: true
+  trace_every_order: true
+  hmac_audit_every_order: true
+  metrics:
+    - "decision_loop_latency_ms"
+    - "agent_quorum"
+    - "epistemic_uncertainty"
+    - "order_state_transitions"
+    - "recovery_time_seconds"

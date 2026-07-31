@@ -1,0 +1,272 @@
+syntax = "proto3";
+
+package afrp.v1;
+
+import "afrp/v1/annotations.proto";
+import "afrp/v1/envelope.proto";
+
+// Canonical Information Object taxonomy (REF-001 section 2).
+// Every message carries the CognitiveEnvelope as field 1 and the FIT-003
+// custom options. Layers communicate exclusively through these contracts
+// (EDR-002 / FIT-004).
+
+enum ObservationKind {
+  OBSERVATION_KIND_UNSPECIFIED = 0;
+  OBSERVATION_KIND_TRADE = 1;
+  OBSERVATION_KIND_QUOTE = 2;
+  OBSERVATION_KIND_ORACLE = 3;
+  OBSERVATION_KIND_MACRO = 4;
+}
+
+enum AuthorizationVerdict {
+  AUTHORIZATION_VERDICT_UNSPECIFIED = 0;
+  AUTHORIZATION_VERDICT_AUTHORIZED = 1;
+  AUTHORIZATION_VERDICT_PROJECTED = 2;  // a* projected onto constraint set C
+  AUTHORIZATION_VERDICT_NULL_TRADE = 3; // a_null fallback (Article VIII)
+  AUTHORIZATION_VERDICT_REJECTED = 4;
+}
+
+enum OrderState {
+  ORDER_STATE_UNSPECIFIED = 0;
+  ORDER_STATE_NEW = 1;
+  ORDER_STATE_SUBMITTED = 2;
+  ORDER_STATE_ACKNOWLEDGED = 3;
+  ORDER_STATE_PARTIALLY_FILLED = 4;
+  ORDER_STATE_FILLED = 5;
+  ORDER_STATE_CANCELLED = 6;
+  ORDER_STATE_REJECTED = 7;
+  ORDER_STATE_EXPIRED = 8;
+}
+
+enum ExecutionEventKind {
+  EXECUTION_EVENT_KIND_UNSPECIFIED = 0;
+  EXECUTION_EVENT_KIND_ACK = 1;
+  EXECUTION_EVENT_KIND_PARTIAL_FILL = 2;
+  EXECUTION_EVENT_KIND_FILL = 3;
+  EXECUTION_EVENT_KIND_CANCEL = 4;
+  EXECUTION_EVENT_KIND_REJECT = 5;
+  EXECUTION_EVENT_KIND_EXPIRE = 6;
+}
+
+// CIO-01 — Raw Observation (L1-ING): unprocessed trade/quote/oracle event.
+message RawObservation {
+  option (cio_id) = "CIO-01-v1";
+  option (owner_subsystem) = "L1-ING";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string instrument = 2 [(trace_sls) = "SLS-100"];
+  ObservationKind kind = 3 [(trace_sls) = "SLS-100"];
+  double price = 4 [(trace_sls) = "SLS-100"];
+  double bid = 5 [(trace_sls) = "SLS-100"];
+  double ask = 6 [(trace_sls) = "SLS-100"];
+  double size = 7 [(trace_sls) = "SLS-100"];
+  string venue = 8 [(trace_sls) = "SLS-100"];
+  uint64 ingest_sequence = 9 [(trace_sls) = "OBS-01"];
+  int64 event_at_ns = 10 [(trace_sls) = "OBS-01"];
+}
+
+// CIO-02 — Standard Feature (L1-FST): normalized, immutable engineered value.
+message StandardFeature {
+  option (cio_id) = "CIO-02-v1";
+  option (owner_subsystem) = "L1-FST";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string feature_id = 2 [(trace_sls) = "SLS-100"];
+  string instrument = 3 [(trace_sls) = "SLS-100"];
+  double value = 4 [(trace_sls) = "SLS-100"];
+  uint32 window_seconds = 5 [(trace_sls) = "SLS-100"];
+  double quality = 6 [(trace_sls) = "SLS-100"];
+  uint64 source_sequence = 7 [(trace_sls) = "OBS-01"];
+}
+
+// CIO-03 — Domain Belief (L2 agents): DSmT basic belief assignment over
+// Dedekind's lattice D^Theta. Keys are canonical focal-element labels
+// ("BULL", "BEAR", "RANGE", unions "BULL|BEAR", intersections "BULL&BEAR",
+// and "THETA" for total ignorance m(Theta)).
+message DomainBelief {
+  option (cio_id) = "CIO-03-v1";
+  option (owner_subsystem) = "L2-AGENTS";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string agent_id = 2 [(trace_sls) = "SLS-200"];
+  string instrument = 3 [(trace_sls) = "SLS-200"];
+  map<string, double> masses = 4 [(trace_sls) = "SLS-200"];
+  double reliability = 5 [(trace_sls) = "SLS-600"];
+  bool degraded = 6 [(implements_req) = "NFR-003", (trace_sls) = "SYS-03"];
+}
+
+// CIO-04 — WorldState Vector (L3-WRM): fused global market state S_t.
+message WorldStateVector {
+  option (cio_id) = "CIO-04-v1";
+  option (owner_subsystem) = "L3-WRM";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string instrument = 2 [(trace_sls) = "SLS-300"];
+  map<string, double> fused_masses = 3 [(trace_sls) = "SLS-300"];
+  double epistemic_uncertainty = 4 [(trace_sls) = "SLS-300"];
+  double conflict_mass = 5 [(trace_sls) = "SLS-300"];
+  string regime_context = 6 [(trace_sls) = "SLS-300"];
+  repeated string active_hypotheses = 7 [(trace_sls) = "SLS-300"];
+  uint32 agent_quorum = 8 [(implements_req) = "NFR-003", (trace_sls) = "SYS-03"];
+  repeated string fusion_trace = 9 [(implements_req) = "UX-001", (trace_sls) = "ARB-03"];
+}
+
+// CIO-05A — ScenarioSet (L3-SIM): probability distribution over trajectories.
+message ScenarioSet {
+  option (cio_id) = "CIO-05A-v1";
+  option (owner_subsystem) = "L3-SIM";
+  option (stability_level) = "L3";
+
+  message Scenario {
+    string scenario_id = 1;
+    double probability = 2;
+    double terminal_price = 3;
+    double max_drawdown = 4;
+    double max_runup = 5;
+  }
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string instrument = 2 [(trace_sls) = "SLS-301"];
+  repeated Scenario scenarios = 3 [(trace_sls) = "SLS-301"];
+  double differential_entropy = 4 [(trace_sls) = "SLS-301"];
+  uint32 horizon_seconds = 5 [(trace_sls) = "SLS-301"];
+  uint64 random_seed = 6 [(implements_req) = "NFR-004", (trace_sls) = "SLS-301"];
+}
+
+// CIO-05B — DecisionContext (L4-FUS): contextualized optimization payload.
+message DecisionContext {
+  option (cio_id) = "CIO-05B-v1";
+  option (owner_subsystem) = "L4-FUS";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string instrument = 2 [(trace_sls) = "SLS-400"];
+  string world_state_id = 3 [(implements_req) = "UX-001", (trace_sls) = "ARB-03"];
+  string scenario_set_id = 4 [(implements_req) = "UX-001", (trace_sls) = "ARB-03"];
+  string portfolio_state_id = 5 [(implements_req) = "UX-001", (trace_sls) = "ARB-03"];
+  double risk_aversion_lambda = 6 [(trace_sls) = "SLS-400"];
+  double max_position_size = 7 [(trace_sls) = "SLS-402"];
+  double available_cash = 8 [(trace_sls) = "SLS-500"];
+}
+
+// CIO-06 — Execution Candidate (L4-DEC): unconstrained utility-maximized
+// proposal a* = argmax U_r.
+message ExecutionCandidate {
+  option (cio_id) = "CIO-06-v1";
+  option (owner_subsystem) = "L4-DEC";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string instrument = 2 [(trace_sls) = "SLS-401"];
+  double direction = 3 [(trace_sls) = "SLS-401"];  // +1 long, -1 short, 0 flat
+  double size = 4 [(trace_sls) = "SLS-401"];
+  double entry_price = 5 [(trace_sls) = "SLS-401"];
+  double stop_price = 6 [(trace_sls) = "SLS-402"];
+  double target_price = 7 [(trace_sls) = "SLS-401"];
+  double expected_utility = 8 [(trace_sls) = "SLS-401"];
+  double expected_risk = 9 [(trace_sls) = "SLS-402"];
+  double risk_adjusted_utility = 10 [(trace_sls) = "SLS-401"];
+}
+
+// CIO-07 — Authorized Action (L4-VAL): policy-validated trade authorization
+// a_e = Pi_C(a*) with a_null fallback (MATH-001 section 4, Article VIII).
+message AuthorizedAction {
+  option (cio_id) = "CIO-07-v1";
+  option (owner_subsystem) = "L4-VAL";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string candidate_id = 2 [(implements_req) = "UX-001", (trace_sls) = "ARB-03"];
+  AuthorizationVerdict verdict = 3 [(trace_sls) = "SLS-402"];
+  string instrument = 4 [(trace_sls) = "SLS-402"];
+  double direction = 5 [(trace_sls) = "SLS-402"];
+  double size = 6 [(trace_sls) = "SLS-402"];
+  double entry_price = 7 [(trace_sls) = "SLS-402"];
+  double stop_price = 8 [(trace_sls) = "SLS-402"];
+  string mission_profile_id = 9 [(trace_sls) = "SYS-05"];
+  repeated string constraint_diagnostics = 10 [(implements_req) = "UX-001", (trace_sls) = "ARB-03"];
+  bytes hmac_signature = 11 [(implements_req) = "NFR-007", (trace_sls) = "OBS-05"];
+}
+
+// CIO-08 — Execution Intent (L5-EXE): internal order state machine commitment.
+message ExecutionIntent {
+  option (cio_id) = "CIO-08-v1";
+  option (owner_subsystem) = "L5-EXE";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string order_id = 2 [(trace_sls) = "SLS-500"];
+  string authorized_action_id = 3 [(implements_req) = "UX-001", (trace_sls) = "ARB-03"];
+  OrderState state = 4 [(trace_sls) = "SLS-500"];
+  string instrument = 5 [(trace_sls) = "SLS-500"];
+  double direction = 6 [(trace_sls) = "SLS-500"];
+  double quantity = 7 [(trace_sls) = "SLS-500"];
+  double limit_price = 8 [(trace_sls) = "SLS-500"];
+}
+
+// CIO-09 — Execution Report (L5-EXE): standardized venue event response.
+message ExecutionReport {
+  option (cio_id) = "CIO-09-v1";
+  option (owner_subsystem) = "L5-EXE";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string order_id = 2 [(trace_sls) = "SLS-500"];
+  ExecutionEventKind event = 3 [(trace_sls) = "SLS-500"];
+  double fill_quantity = 4 [(trace_sls) = "SLS-500"];
+  double fill_price = 5 [(trace_sls) = "SLS-500"];
+  string venue = 6 [(trace_sls) = "SLS-500"];
+  int64 venue_at_ns = 7 [(trace_sls) = "OBS-01"];
+  string reason = 8 [(trace_sls) = "SLS-500"];
+}
+
+// CIO-10 — Portfolio State (L5-EXE): reconciled snapshot of exposure and cash.
+message PortfolioState {
+  option (cio_id) = "CIO-10-v1";
+  option (owner_subsystem) = "L5-EXE";
+  option (stability_level) = "L3";
+
+  message Position {
+    string instrument = 1;
+    double quantity = 2;
+    double average_price = 3;
+    double unrealized_pnl = 4;
+  }
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  repeated Position positions = 2 [(trace_sls) = "SLS-500"];
+  double cash = 3 [(trace_sls) = "SLS-500"];
+  double equity = 4 [(trace_sls) = "SLS-500"];
+  double gross_exposure = 5 [(trace_sls) = "SLS-402"];
+  int64 reconciled_at_ns = 6 [(implements_req) = "NFR-005", (trace_sls) = "OBS-01"];
+}
+
+// CIO-11 — Calibration Weights (L6-OPT): reliability discounting modifiers.
+message CalibrationWeights {
+  option (cio_id) = "CIO-11-v1";
+  option (owner_subsystem) = "L6-OPT";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  map<string, double> agent_weights = 2 [(trace_sls) = "SLS-600"];
+  map<string, double> brier_scores = 3 [(trace_sls) = "SLS-600"];
+  uint32 window_cycles = 4 [(trace_sls) = "SLS-600"];
+}
+
+// CIO-12 — Episodic Embedding (L6-OPT): latent market-regime representation.
+message EpisodicEmbedding {
+  option (cio_id) = "CIO-12-v1";
+  option (owner_subsystem) = "L6-OPT";
+  option (stability_level) = "L3";
+
+  CognitiveEnvelope envelope = 1 [(trace_sls) = "OBS-01"];
+  string instrument = 2 [(trace_sls) = "SLS-600"];
+  repeated double vector = 3 [(trace_sls) = "SLS-600"];
+  string regime_label = 4 [(trace_sls) = "SLS-600"];
+  int64 window_start_ns = 5 [(trace_sls) = "OBS-01"];
+  int64 window_end_ns = 6 [(trace_sls) = "OBS-01"];
+}

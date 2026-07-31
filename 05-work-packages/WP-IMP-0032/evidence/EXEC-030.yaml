@@ -1,0 +1,61 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-030"
+work_package_id: "WP-IMP-0032"
+capability: {id: "OPS-DEPLOY", version: "1.0"}
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (GPT-5.6 Sol)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T23:03:00+06:00"
+  finished_at: "2026-07-31T23:03:58+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - {state: "REVIEW_PENDING", at: "2026-07-31T23:03:58+06:00", note: "Autopilot governed self-review"}
+preconditions:
+  - {predicate: "capability.complete('RT-COMMON')", result: "PASS"}
+boundary_compliance:
+  bounded_files:
+    - "08-operations/"
+    - "tools/ops_gate.py"
+    - "tests/unit/test_operations.py"
+    - ".github/workflows/quality.yml"
+  files_modified:
+    - "08-operations/policies/security.yaml"
+    - "08-operations/policies/high-availability.yaml"
+    - "08-operations/policies/recovery.yaml"
+    - "08-operations/policies/observability.yaml"
+    - "08-operations/docker/Dockerfile"
+    - "tools/ops_gate.py"
+    - "tests/unit/test_operations.py"
+    - ".github/workflows/quality.yml"
+  violations: []
+  compliant: true
+quality_gates:
+  - {gate: "ops_validation", command: "uv run python -m tools.ops_gate", result: "PASS", detail: "NFR-002/005/006/007, container, and CI posture pass"}
+  - {gate: "ruff_lint", command: "uv run ruff check tools/ tests/", result: "PASS"}
+  - {gate: "mypy_typecheck", command: "uv run mypy --strict tools/ tests/unit/test_operations.py", result: "PASS"}
+  - {gate: "pytest_units", command: "uv run pytest tests/unit/test_operations.py -v", result: "PASS", detail: "19 passed"}
+artifacts:
+  source_files:
+    - "tools/ops_gate.py"
+    - "08-operations/docker/Dockerfile"
+    - ".github/workflows/quality.yml"
+  test_files: ["tests/unit/test_operations.py"]
+  documentation:
+    - "08-operations/policies/security.yaml"
+    - "08-operations/policies/high-availability.yaml"
+    - "08-operations/policies/recovery.yaml"
+    - "08-operations/policies/observability.yaml"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    The real posture passes. Mutation tests prove detection of TLS downgrade,
+    disabled mTLS, non-SPIFFE identity, illegal secret source, single replica,
+    active-active drift, invalid lease timing, slow failover, nonzero RPO,
+    RTO boundary, asynchronous order writes, missing order traces, root
+    containers, and omitted CI gates.

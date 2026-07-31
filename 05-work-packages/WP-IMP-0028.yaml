@@ -1,0 +1,106 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0028"
+capability_id:
+  id: "L4-VAL"
+  version: "1.0"
+title: "Implement Layer 4 policy projection and a_null fallback emitting CIO-07"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "SLS-402"
+  traceability:
+    implements_req: ["FR-012", "NFR-007"]
+    trace_sls: "SLS-402"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('L4-DEC')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/layer4/policy.py"
+      - "tests/unit/test_layer4.py"
+      - "05-work-packages/WP-IMP-0028/evidence/"
+    read:
+      - "06-runtime/afrp_runtime/common/"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "medium"
+  estimated_duration: "1h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/layer4/policy.py"
+    - "tests/unit/test_layer4.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0028/evidence/EXEC-026.yaml"
+
+execution_results:
+  source_files_modified:
+    - "06-runtime/afrp_runtime/layer4/policy.py"
+    - "tests/unit/test_layer4.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0028/evidence/EXEC-026.yaml"
+
+produces:
+  capability:
+    id: "L4-VAL"
+    version: "1.0"
+  unlocks:
+    - id: "L5-EXE"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer4/policy.py"
+    - "tests/unit/test_layer4.py"
+  non_goals:
+    - "No venue order state machine."
+
+requirements:
+  projection:
+    module: "06-runtime/afrp_runtime/layer4/policy.py"
+    rules:
+      - "Project size onto mission-profile and portfolio exposure constraints."
+      - "Default to a_null on state, quorum, spread, utility, stop, or profile failure."
+      - "HMAC-sign authorized and null actions using an environment-only key."
+      - "Carry human-readable constraint diagnostics."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check 06-runtime/ tests/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict 06-runtime/ tests/unit/test_layer4.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_layer4.py -v"
+
+completion:
+  success_requires:
+    - "All unsafe conditions prove a_null fallback."
+    - "Every CIO-07 carries an HMAC signature and diagnostics."
+
+failure_modes:
+  ERR-CONFIG-SECRET: "AFRP_AUDIT_HMAC_KEY is absent."
+
+execution_prompt: |
+  Execute WP-IMP-0028 strictly within bounded_files. Prefer No Trade over Poor Trade.

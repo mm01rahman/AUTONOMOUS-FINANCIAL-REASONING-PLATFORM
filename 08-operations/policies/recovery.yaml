@@ -1,0 +1,10 @@
+schema_version: "1.0"
+policy_id: "AFRP-RECOVERY"
+recovery:
+  rpo_lost_trades: 0
+  rto_seconds: 55
+  order_event_writes: "synchronous"
+  sqlite_synchronous_mode: "FULL"
+  checkpoint_every_order_event: true
+  restore_validation_required: true
+  drill_interval_days: 30

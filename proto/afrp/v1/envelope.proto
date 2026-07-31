@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package afrp.v1;
+
+import "afrp/v1/annotations.proto";
+
+// Universal Transport Header (REF-001 section 1). Wraps every AFRP message.
+message CognitiveEnvelope {
+    option (cio_id) = "ENVELOPE-v1";
+    option (owner_subsystem) = "ALL";
+    option (stability_level) = "L3";
+
+    string message_id = 1 [(trace_sls) = "OBS-01"];
+    string cognitive_cycle_id = 2 [(implements_req) = "UX-001", (trace_sls) = "ARB-03"];
+    string producer_subsystem_id = 3 [(trace_sls) = "ARB-01"];
+    uint32 schema_version = 4 [(trace_sls) = "ICC-02"];
+    uint32 semantic_version = 5 [(trace_sls) = "ICC-02"];
+    int64 generated_at_ns = 6 [(trace_sls) = "OBS-01"];
+    string mission_profile_id = 7 [(trace_sls) = "SYS-05"];
+    repeated string parent_cio_ids = 8 [(implements_req) = "UX-001", (trace_sls) = "ARB-03"];
+    bytes payload_hash = 9 [(trace_sls) = "OBS-05"];
+    string trace_id = 10 [(trace_sls) = "OBS-01"];
+    string span_id = 11 [(trace_sls) = "OBS-01"];
+}

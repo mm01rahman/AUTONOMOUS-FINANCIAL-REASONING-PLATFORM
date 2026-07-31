@@ -1,0 +1,246 @@
+schema_version: "1.0"
+registry_id: "CAPABILITY_REGISTRY"
+# Authoritative execution DAG (GLOSS-001 item 12). FIT-001 asserts acyclicity.
+# status: COMPLETE | AVAILABLE (all deps COMPLETE) | LOCKED (deps outstanding)
+
+capabilities:
+  # ── Stage A — Genesis ────────────────────────────────────────────────
+  - id: "GOV-BASELINE"
+    version: "1.0"
+    title: "Governance corpus, manifests, schemas, fingerprint ledger"
+    owner: "ARB"
+    status: "COMPLETE"
+    depends_on: []
+    work_package: null
+  - id: "EOS-BOOT"
+    version: "1.0"
+    title: "Workspace skeleton, workspace configs, tag m1.1-start"
+    owner: "EOS-CLI"
+    status: "COMPLETE"
+    depends_on: ["GOV-BASELINE"]
+    work_package: null
+
+  # ── Stage B — Engineering Operating System ──────────────────────────
+  - id: "EOS-CONTEXT"
+    version: "1.0"
+    title: "afrp boot: manifest + kernel parsers"
+    owner: "EOS-CLI"
+    status: "COMPLETE"
+    depends_on: ["EOS-BOOT"]
+    work_package: "WP-IMP-0003"
+  - id: "EOS-GRAPH"
+    version: "1.0"
+    title: "afrp plan: capability DAG engine, cycle detection (FIT-001)"
+    owner: "EOS-CLI"
+    status: "COMPLETE"
+    depends_on: ["EOS-CONTEXT"]
+    work_package: "WP-IMP-0004"
+  - id: "EOS-VALIDATOR"
+    version: "1.0"
+    title: "afrp validate: AST invariant checker (FIT-002, FIT-004, FIT-006)"
+    owner: "EOS-CLI"
+    status: "COMPLETE"
+    depends_on: ["EOS-GRAPH"]
+    work_package: "WP-IMP-0005"
+  - id: "EOS-EVIDENCE"
+    version: "1.0"
+    title: "afrp evidence: boundary audit (FIT-005), ERS-1.0 emission"
+    owner: "EOS-CLI"
+    status: "COMPLETE"
+    depends_on: ["EOS-VALIDATOR"]
+    work_package: "WP-IMP-0006"
+  - id: "EOS-HEALTH"
+    version: "1.0"
+    title: "afrp health: coverage + TVM traceability (FIT-007)"
+    owner: "EOS-CLI"
+    status: "COMPLETE"
+    depends_on: ["EOS-EVIDENCE"]
+    work_package: "WP-IMP-0007"
+  - id: "EOS-ORCHESTRATOR"
+    version: "1.0"
+    title: "afrp run: EGP-2.0 control plane, write locks, gates, rollback"
+    owner: "EOS-CLI"
+    status: "COMPLETE"
+    depends_on: ["EOS-HEALTH"]
+    work_package: "WP-IMP-0008"
+
+  # ── Stage C — Wire contracts & shared runtime infrastructure ────────
+  - id: "RT-PROTO-ANNOTATIONS"
+    version: "1.0"
+    title: "proto custom options: cio_id, owner_subsystem, stability_level"
+    owner: "L0-CONTRACTS"
+    status: "COMPLETE"
+    depends_on: ["EOS-ORCHESTRATOR"]
+    work_package: "WP-IMP-0009"
+  - id: "RT-PROTO-ENVELOPE"
+    version: "1.0"
+    title: "CognitiveEnvelope universal transport header"
+    owner: "L0-CONTRACTS"
+    status: "COMPLETE"
+    depends_on: ["RT-PROTO-ANNOTATIONS"]
+    work_package: "WP-IMP-0010"
+  - id: "RT-PROTO-CIO"
+    version: "1.0"
+    title: "CIO-01..CIO-12 canonical information objects"
+    owner: "L0-CONTRACTS"
+    status: "COMPLETE"
+    depends_on: ["RT-PROTO-ENVELOPE"]
+    work_package: "WP-IMP-0011"
+  - id: "RT-COMMON"
+    version: "1.0"
+    title: "Runtime common: config precedence, OBS-01 logging, exceptions, SYS-03 FSM, seeds"
+    owner: "RT-COMMON"
+    status: "COMPLETE"
+    depends_on: ["EOS-ORCHESTRATOR"]
+    work_package: "WP-IMP-0012"
+
+  # ── Stage D — Runtime layers ─────────────────────────────────────────
+  - id: "L1-ING"
+    version: "1.0"
+    title: "Layer 1 ingress: telemetry ingestion emitting CIO-01"
+    owner: "SLS-100"
+    status: "COMPLETE"
+    depends_on: ["RT-PROTO-CIO", "RT-COMMON"]
+    work_package: "WP-IMP-0013"
+  - id: "L1-FST"
+    version: "1.0"
+    title: "Layer 1 feature store: normalized features emitting CIO-02"
+    owner: "SLS-100"
+    status: "COMPLETE"
+    depends_on: ["L1-ING"]
+    work_package: "WP-IMP-0014"
+  - id: "L1-RDB"
+    version: "1.0"
+    title: "Layer 1 relational persistence"
+    owner: "SLS-100"
+    status: "COMPLETE"
+    depends_on: ["L1-ING"]
+    work_package: "WP-IMP-0015"
+  - id: "L1-MEM"
+    version: "1.0"
+    title: "Layer 1 vector memory"
+    owner: "SLS-100"
+    status: "COMPLETE"
+    depends_on: ["L1-FST"]
+    work_package: "WP-IMP-0016"
+  - id: "L2-BASE"
+    version: "1.0"
+    title: "Layer 2 agent base + DSmT mass library over D^Theta"
+    owner: "SLS-200"
+    status: "COMPLETE"
+    depends_on: ["L1-FST"]
+    work_package: "WP-IMP-0017"
+  - id: "L2-MAC"
+    version: "1.0"
+    title: "Macro agent emitting CIO-03"
+    owner: "SLS-200"
+    status: "COMPLETE"
+    depends_on: ["L2-BASE"]
+    work_package: "WP-IMP-0018"
+  - id: "L2-MIC"
+    version: "1.0"
+    title: "Microstructure agent emitting CIO-03"
+    owner: "SLS-200"
+    status: "COMPLETE"
+    depends_on: ["L2-BASE"]
+    work_package: "WP-IMP-0019"
+  - id: "L2-LIQ"
+    version: "1.0"
+    title: "Liquidity agent emitting CIO-03"
+    owner: "SLS-200"
+    status: "COMPLETE"
+    depends_on: ["L2-BASE"]
+    work_package: "WP-IMP-0020"
+  - id: "L2-REG"
+    version: "1.0"
+    title: "Regime agent emitting CIO-03"
+    owner: "SLS-200"
+    status: "COMPLETE"
+    depends_on: ["L2-BASE"]
+    work_package: "WP-IMP-0021"
+  - id: "L2-FOR"
+    version: "1.0"
+    title: "Forward/expectations agent emitting CIO-03"
+    owner: "SLS-200"
+    status: "COMPLETE"
+    depends_on: ["L2-BASE"]
+    work_package: "WP-IMP-0022"
+  - id: "L2-BEH"
+    version: "1.0"
+    title: "Behavioral agent emitting CIO-03"
+    owner: "SLS-200"
+    status: "COMPLETE"
+    depends_on: ["L2-BASE"]
+    work_package: "WP-IMP-0023"
+  - id: "L3-WRM"
+    version: "1.0"
+    title: "World Model Kernel: DSmT PCR5 fusion emitting CIO-04"
+    owner: "SLS-300"
+    status: "COMPLETE"
+    depends_on: ["L2-MAC", "L2-MIC", "L2-LIQ", "L2-REG", "L2-FOR", "L2-BEH"]
+    work_package: "WP-IMP-0024"
+  - id: "L3-SIM"
+    version: "1.0"
+    title: "Scenario simulator: Sigma_EWM trajectories emitting CIO-05A"
+    owner: "SLS-301"
+    status: "COMPLETE"
+    depends_on: ["L3-WRM"]
+    work_package: "WP-IMP-0025"
+  - id: "L4-FUS"
+    version: "1.0"
+    title: "Decision synthesizer emitting CIO-05B"
+    owner: "SLS-400"
+    status: "COMPLETE"
+    depends_on: ["L3-WRM", "L3-SIM"]
+    work_package: "WP-IMP-0026"
+  - id: "L4-DEC"
+    version: "1.0"
+    title: "Utility optimizer: argmax U_r emitting CIO-06"
+    owner: "SLS-401"
+    status: "COMPLETE"
+    depends_on: ["L4-FUS"]
+    work_package: "WP-IMP-0027"
+  - id: "L4-VAL"
+    version: "1.0"
+    title: "Policy engine: Pi_C projection, a_null fallback, MP-01..05, CIO-07"
+    owner: "SLS-402"
+    status: "COMPLETE"
+    depends_on: ["L4-DEC"]
+    work_package: "WP-IMP-0028"
+  - id: "L5-EXE"
+    version: "1.0"
+    title: "Order gateway: state machine CIO-08, fills CIO-09, portfolio CIO-10"
+    owner: "SLS-500"
+    status: "COMPLETE"
+    depends_on: ["L4-VAL", "L1-RDB"]
+    work_package: "WP-IMP-0029"
+
+  # ── Stage E — Learning, research, operations, system validation ─────
+  - id: "L6-OPT"
+    version: "1.0"
+    title: "Learning loop: Brier scoring, CIO-11 weights, CIO-12 embeddings"
+    owner: "SLS-600"
+    status: "COMPLETE"
+    depends_on: ["L5-EXE", "L1-RDB", "L1-MEM"]
+    work_package: "WP-IMP-0030"
+  - id: "RESEARCH-HARNESS"
+    version: "1.0"
+    title: "Offline backtest harness under deterministic seeds"
+    owner: "RESEARCH"
+    status: "COMPLETE"
+    depends_on: ["L5-EXE"]
+    work_package: "WP-IMP-0031"
+  - id: "OPS-DEPLOY"
+    version: "1.0"
+    title: "Deployment configuration and operational posture"
+    owner: "OPS"
+    status: "COMPLETE"
+    depends_on: ["RT-COMMON"]
+    work_package: "WP-IMP-0032"
+  - id: "SYSTEM-VALIDATION"
+    version: "1.0"
+    title: "FIT-008 deterministic replay, degradation chaos, latency benchmark"
+    owner: "VALIDATION"
+    status: "COMPLETE"
+    depends_on: ["L5-EXE"]
+    work_package: "WP-IMP-0033"

@@ -1,0 +1,16 @@
+schema_version: "1.0"
+fixture_id: "MP04-REPLAY-001"
+mission_profile_id: "MP-04"
+instrument: "XAUUSD"
+events:
+  - {instrument: "XAUUSD", kind: "QUOTE", bid: 2399.0, ask: 2401.0, event_at_ns: 1000000000, venue: "REPLAY"}
+  - {instrument: "XAUUSD", kind: "TRADE", price: 2402.0, size: 1.0, event_at_ns: 2000000000, venue: "REPLAY"}
+  - {instrument: "XAUUSD", kind: "QUOTE", bid: 2401.0, ask: 2403.0, event_at_ns: 3000000000, venue: "REPLAY"}
+  - {instrument: "XAUUSD", kind: "TRADE", price: 2404.0, size: 0.8, event_at_ns: 4000000000, venue: "REPLAY"}
+  - {instrument: "XAUUSD", kind: "QUOTE", bid: 2403.0, ask: 2405.0, event_at_ns: 5000000000, venue: "REPLAY"}
+  - {instrument: "XAUUSD", kind: "TRADE", price: 2406.0, size: 1.2, event_at_ns: 6000000000, venue: "REPLAY"}
+macro_features:
+  macro_real_yield: -0.65
+  macro_dxy_log_return: -0.004
+  forward_curve_slope: 0.012
+  positioning_sentiment: 0.35

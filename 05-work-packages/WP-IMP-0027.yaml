@@ -1,0 +1,106 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0027"
+capability_id:
+  id: "L4-DEC"
+  version: "1.0"
+title: "Implement Layer 4 risk-adjusted utility optimizer emitting CIO-06"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "SLS-401"
+  traceability:
+    implements_req: ["FR-012", "NFR-008"]
+    trace_sls: "SLS-401"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('L4-FUS')"
+
+resources:
+  cpu: "medium"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/layer4/optimizer.py"
+      - "tests/unit/test_layer4.py"
+      - "05-work-packages/WP-IMP-0027/evidence/"
+    read:
+      - "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "medium"
+  estimated_duration: "1h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/layer4/optimizer.py"
+    - "tests/unit/test_layer4.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0027/evidence/EXEC-025.yaml"
+
+execution_results:
+  source_files_modified:
+    - "06-runtime/afrp_runtime/layer4/optimizer.py"
+    - "tests/unit/test_layer4.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0027/evidence/EXEC-025.yaml"
+
+produces:
+  capability:
+    id: "L4-DEC"
+    version: "1.0"
+  unlocks:
+    - id: "L4-VAL"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer4/optimizer.py"
+    - "tests/unit/test_layer4.py"
+  non_goals:
+    - "No policy projection or order submission."
+
+requirements:
+  optimization:
+    module: "06-runtime/afrp_runtime/layer4/optimizer.py"
+    rules:
+      - "Solve U_r = U - lambda*R over a pre-allocated action grid."
+      - "Use expected P&L and tail expected shortfall."
+      - "Include a flat action so dominated proposals default to No Trade."
+      - "Use stable candidate-order tie-breaking."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check 06-runtime/ tests/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict 06-runtime/ tests/unit/test_layer4.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_layer4.py -v"
+
+completion:
+  success_requires:
+    - "Bullish and bearish scenario oracles select the correct direction."
+    - "Dominated actions select the flat action."
+
+failure_modes:
+  ERR-CONTRACT-VIOLATION: "Scenario reference or spot price is invalid."
+
+execution_prompt: |
+  Execute WP-IMP-0027 strictly within bounded_files. Article I applies.

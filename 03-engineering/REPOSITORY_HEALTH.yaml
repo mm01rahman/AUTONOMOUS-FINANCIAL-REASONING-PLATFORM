@@ -1,0 +1,78 @@
+schema_version: "1.0"
+health_id: "AFRP-HEALTH-1.0.0"
+generated_at: "2026-07-31T23:20:16+06:00"
+source_ref: "v1.0.0-baseline"
+status: "GREEN"
+
+governance:
+  baseline_id: "AFRP-BASELINE-1.0.0"
+  protocol: "EGP-2.0"
+  kernel_words: 265
+  kernel_budget: 400
+  fingerprint_status: "PASS"
+
+completion:
+  capabilities_complete: 33
+  capabilities_total: 33
+  requirements_covered: 47
+  requirements_total: 47
+  work_packages_executed: 31
+  evidence_records_valid: 31
+  executable_targets_remaining: 0
+
+architecture_baseline:
+  version: "1.0.0"
+  protected_artifacts: 36
+  fingerprinted_artifacts: 35
+  canonical_concerns: 26
+  metadata_complete: true
+  dependency_graph_acyclic: true
+  exact_duplicate_groups: 0
+
+quality:
+  tests_passed: 387
+  tests_failed: 0
+  statements: 3046
+  covered_lines: 2784
+  line_and_branch_coverage_percent: 88.9610
+  branches: 804
+  covered_branches: 641
+  ruff: "PASS"
+  mypy_strict: "PASS"
+  pytest: "PASS"
+  work_package_schema: "PASS"
+  evidence_schema: "PASS"
+  baseline_gate: "PASS"
+  proto_compile: "PASS"
+  proto_compatibility: "PASS"
+  operations_gate: "PASS"
+  system_gate: "PASS"
+
+fitness:
+  FIT-001: "PASS"
+  FIT-002: "PASS"
+  FIT-003: "PASS"
+  FIT-004: "PASS"
+  FIT-005: "PASS"
+  FIT-006: "PASS"
+  FIT-007: "PASS"
+  FIT-008: "PASS"
+
+performance:
+  decision_execution_p99_ms_observed: 0.145
+  decision_execution_p99_budget_ms: 50.0
+  margin_status: "PASS"
+
+deployment:
+  core_release: "GO"
+  live_money_activation: "CONDITIONAL"
+  prerequisites:
+    - "Provision SPIRE/Vault and prove workload certificate rotation."
+    - "Deploy the durable active-passive lease/persistence backend and run failover drill."
+    - "Supply and certify a governed venue adapter Work Package."
+    - "Repeat latency and recovery drills on target production infrastructure."
+    - "Build and publish the production image in a Docker-capable release runner."
+
+waivers:
+  - "W-001: buf substituted by grpcio-tools + descriptor snapshot."
+  - "W-002: cargo absent; process/Python path used."

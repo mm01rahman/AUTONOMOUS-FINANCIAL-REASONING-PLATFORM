@@ -1,0 +1,184 @@
+schema_version: "1.0"
+map_id: "AFRP-CANONICAL-SOURCES-1.0.0"
+baseline_version: "1.0.0"
+status: "Approved"
+owner: "Architecture Review Board"
+authority: "Derived from GOV-002"
+
+concerns:
+  - id: "constitutional_governance"
+    owner: "00-governance/000_ENGINEERING_CONSTITUTION.md"
+    depends_on: []
+    subordinate:
+      - "00-governance/KERNEL.md"
+
+  - id: "architecture_baseline_membership"
+    owner: "02-architecture/AFRP_BASELINE_v1.md"
+    depends_on: ["constitutional_governance"]
+    subordinate:
+      - "02-architecture/050_FORMAL_SYSTEM_GLOSSARY.md"
+      - "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+      - "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+      - "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+      - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+
+  - id: "formal_terminology"
+    owner: "02-architecture/050_FORMAL_SYSTEM_GLOSSARY.md"
+    depends_on: ["architecture_baseline_membership"]
+    subordinate: []
+
+  - id: "product_architecture_nfr_fitness_edr"
+    owner: "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+    depends_on: ["constitutional_governance", "formal_terminology"]
+    subordinate: []
+
+  - id: "runtime_layers_and_operational_state"
+    owner: "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+    depends_on: ["product_architecture_nfr_fitness_edr", "formal_terminology"]
+    subordinate: []
+
+  - id: "mathematical_truth"
+    owner: "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+    depends_on: ["constitutional_governance", "formal_terminology"]
+    subordinate: []
+
+  - id: "conceptual_transport_and_cio_taxonomy"
+    owner: "02-architecture/200_REFERENCE_SPECIFICATION.md"
+    depends_on:
+      - "runtime_layers_and_operational_state"
+      - "mathematical_truth"
+    subordinate: []
+
+  - id: "wire_contract"
+    owner: "proto/afrp/v1/"
+    depends_on: ["conceptual_transport_and_cio_taxonomy"]
+    subordinate:
+      - "proto/afrp/v1/annotations.proto"
+      - "proto/afrp/v1/envelope.proto"
+      - "proto/afrp/v1/cio.proto"
+
+  - id: "protobuf_compatibility_oracle"
+    owner: "09-validation/contracts/afrp_v1.snapshot.json"
+    depends_on: ["wire_contract"]
+    subordinate: []
+
+  - id: "engineering_os_behavior"
+    owner: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+    depends_on:
+      - "constitutional_governance"
+      - "product_architecture_nfr_fitness_edr"
+    subordinate:
+      - "04-ai-framework/ORCHESTRATOR.md"
+
+  - id: "historical_bootstrap_guidance"
+    owner: "03-engineering/300_IMPLEMENTATION_GUIDE.md"
+    depends_on: ["engineering_os_behavior", "repository_topology"]
+    subordinate: []
+
+  - id: "repository_topology"
+    owner: "REPOSITORY_MANIFEST.yaml"
+    depends_on: ["constitutional_governance"]
+    subordinate: []
+
+  - id: "document_canonical_paths"
+    owner: "REPOSITORY_MANIFEST.yaml#document_index"
+    depends_on: ["repository_topology"]
+    subordinate: []
+
+  - id: "build_toolchain_and_quality_commands"
+    owner: "03-engineering/BUILD_PROFILE.yaml"
+    depends_on: ["product_architecture_nfr_fitness_edr"]
+    subordinate:
+      - "pyproject.toml"
+      - "Cargo.toml"
+      - ".github/workflows/quality.yml"
+
+  - id: "testing_policy"
+    owner: "03-engineering/BUILD_PROFILE.yaml#quality_gates"
+    depends_on: ["build_toolchain_and_quality_commands"]
+    subordinate:
+      - "05-work-packages/WP-*.yaml#quality_gates"
+
+  - id: "capability_lifecycle"
+    owner: "03-engineering/CAPABILITY_REGISTRY.yaml"
+    depends_on: ["engineering_os_behavior"]
+    subordinate: []
+
+  - id: "requirement_traceability"
+    owner: "03-engineering/TRACEABILITY_MATRIX.yaml"
+    depends_on:
+      - "product_architecture_nfr_fitness_edr"
+      - "capability_lifecycle"
+    subordinate: []
+
+  - id: "deprecation_lifecycle"
+    owner: "03-engineering/DEPRECATION_POLICY.yaml"
+    depends_on: ["product_architecture_nfr_fitness_edr"]
+    subordinate: []
+
+  - id: "work_package_contract"
+    owner: "09-validation/schemas/wps-1.0.schema.json"
+    depends_on: ["engineering_os_behavior", "capability_lifecycle"]
+    subordinate:
+      - "05-work-packages/WP-*.yaml"
+
+  - id: "execution_evidence_contract"
+    owner: "09-validation/schemas/ers-1.0.schema.json"
+    depends_on: ["work_package_contract"]
+    subordinate:
+      - "05-work-packages/WP-*/evidence/EXEC-*.yaml"
+
+  - id: "ai_engineer_execution_procedure"
+    owner: "04-ai-framework/AI_ENGINEER_PLAYBOOK.md"
+    depends_on:
+      - "constitutional_governance"
+      - "work_package_contract"
+      - "execution_evidence_contract"
+    subordinate: []
+
+  - id: "architecture_decisions"
+    owner: "02-architecture/adr/"
+    depends_on: ["constitutional_governance", "architecture_baseline_membership"]
+    subordinate:
+      - "02-architecture/adr/ADR-0001-adopt-baseline.md"
+      - "02-architecture/adr/ADR-0002-genesis-normalizations.md"
+      - "02-architecture/adr/ADR-0003-contract-enforcement.md"
+      - "02-architecture/adr/ADR-TEMPLATE.md"
+
+  - id: "baseline_freeze_membership"
+    owner: "docs/governance/BASELINE_MANIFEST.md"
+    depends_on:
+      - "constitutional_governance"
+      - "architecture_baseline_membership"
+      - "repository_topology"
+    subordinate:
+      - "docs/governance/ARCHITECTURE_BASELINE_FINGERPRINT.yaml"
+
+  - id: "baseline_change_control"
+    owner: "docs/governance/BASELINE_FREEZE_POLICY.md"
+    depends_on:
+      - "constitutional_governance"
+      - "architecture_decisions"
+      - "baseline_freeze_membership"
+    subordinate: []
+
+  - id: "pull_request_architecture_review"
+    owner: "docs/governance/ARCHITECTURE_REVIEW_CHECKLIST.md"
+    depends_on:
+      - "baseline_change_control"
+      - "product_architecture_nfr_fitness_edr"
+    subordinate: []
+
+  - id: "repository_definition_of_done"
+    owner: "docs/governance/DEFINITION_OF_DONE.md"
+    depends_on:
+      - "work_package_contract"
+      - "execution_evidence_contract"
+      - "requirement_traceability"
+    subordinate: []
+
+rules:
+  - "Each concern id has exactly one owner."
+  - "Subordinate artifacts implement, index, instantiate, or verify their owner."
+  - "A subordinate artifact cannot override its owner."
+  - "Source code never becomes an architecture authority."

@@ -1,0 +1,73 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-022"
+work_package_id: "WP-IMP-0024"
+capability:
+  id: "L3-WRM"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (Claude Fable 5)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T20:50:00+06:00"
+  finished_at: "2026-07-31T21:30:00+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-07-31T21:30:00+06:00"
+      note: "Autopilot governed self-review per ADR-0002"
+preconditions:
+  - predicate: "capability.complete('L2-MAC')"
+    result: "PASS"
+  - predicate: "capability.complete('L2-MIC')"
+    result: "PASS"
+  - predicate: "capability.complete('L2-LIQ')"
+    result: "PASS"
+  - predicate: "capability.complete('L2-REG')"
+    result: "PASS"
+  - predicate: "capability.complete('L2-FOR')"
+    result: "PASS"
+  - predicate: "capability.complete('L2-BEH')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer3/dsmt.py"
+    - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+    - "tests/unit/test_layer3.py"
+  files_modified:
+    - "06-runtime/afrp_runtime/layer3/dsmt.py"
+    - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+    - "tests/unit/test_layer3.py"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check 06-runtime/ tests/"
+    result: "PASS"
+    detail: "All checks passed"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict 06-runtime/ tests/unit/test_layer3.py"
+    result: "PASS"
+    detail: "no issues in 18 source files"
+  - gate: "pytest_units"
+    command: "uv run pytest tests/unit/test_layer3.py -v"
+    result: "PASS"
+    detail: "40 passed (265 total suite-wide)"
+artifacts:
+  source_files:
+    - "06-runtime/afrp_runtime/layer3/dsmt.py"
+    - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+  test_files:
+    - "tests/unit/test_layer3.py"
+unlocked_capabilities:
+  - id: "L3-SIM"
+    version: "1.0"
+  - id: "L4-FUS"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    PCR5 reproduced three hand-worked oracles to 1e-9 (direction-vs-range k=0.42 case, union-vs-range k=0.40 case, paradox consensus case); properties proven: non-negativity, unit sum, two-source commutativity, vacuous neutrality; WRM quorum padding and full-discount collapse verified.

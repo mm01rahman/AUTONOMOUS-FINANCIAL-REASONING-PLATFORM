@@ -1,0 +1,139 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0033"
+capability_id:
+  id: "SYSTEM-VALIDATION"
+  version: "1.0"
+title: "Implement deterministic replay, degradation chaos, and latency fitness"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "VALIDATION"
+  traceability:
+    implements_req: ["NFR-001", "NFR-003", "NFR-004", "FIT-008", "EDR-007", "EDR-012"]
+    trace_sls: "ARCH-001"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('L5-EXE')"
+
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/system_gate.py"
+      - "tools/ops_gate.py"
+      - "09-validation/fixtures/"
+      - "tests/integration/"
+      - "tests/chaos/"
+      - "tests/performance/"
+      - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+      - "tests/unit/test_layer3.py"
+      - "03-engineering/DEPRECATION_POLICY.yaml"
+      - ".github/workflows/quality.yml"
+      - "pyproject.toml"
+      - ".gitignore"
+      - "05-work-packages/WP-IMP-0033/evidence/"
+    read:
+      - "06-runtime/"
+      - "02-architecture/"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "medium"
+  estimated_duration: "2h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+    - "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+
+outputs:
+  expected_source_files:
+    - "tools/system_gate.py"
+    - "09-validation/fixtures/mp04_ticks.yaml"
+    - "09-validation/fixtures/mp04_expected.sha256"
+    - "tests/integration/test_system_replay.py"
+    - "tests/chaos/test_degradation.py"
+    - "tests/performance/test_latency.py"
+    - "03-engineering/DEPRECATION_POLICY.yaml"
+    - "pyproject.toml"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0033/evidence/EXEC-031.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/system_gate.py"
+    - "tools/ops_gate.py"
+    - "09-validation/fixtures/mp04_ticks.yaml"
+    - "09-validation/fixtures/mp04_expected.sha256"
+    - "tests/integration/test_system_replay.py"
+    - "tests/chaos/test_degradation.py"
+    - "tests/performance/test_latency.py"
+    - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+    - "tests/unit/test_layer3.py"
+    - "03-engineering/DEPRECATION_POLICY.yaml"
+    - ".github/workflows/quality.yml"
+    - "pyproject.toml"
+    - ".gitignore"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0033/evidence/EXEC-031.yaml"
+
+produces:
+  capability: {id: "SYSTEM-VALIDATION", version: "1.0"}
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/system_gate.py"
+    - "tools/ops_gate.py"
+    - "09-validation/fixtures/"
+    - "tests/integration/"
+    - "tests/chaos/"
+    - "tests/performance/"
+    - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+    - "tests/unit/test_layer3.py"
+    - "03-engineering/DEPRECATION_POLICY.yaml"
+    - ".github/workflows/quality.yml"
+    - "pyproject.toml"
+    - ".gitignore"
+  non_goals:
+    - "No live broker or external market feed."
+
+requirements:
+  system_gate:
+    module: "tools/system_gate.py"
+    rules:
+      - "FIT-008: MP-04 replay matches a frozen semantic SHA256 oracle."
+      - "NFR-003: total feed loss returns vacuous m(THETA)=1, quorum=0, DEGRADED, trading false."
+      - "NFR-001/EDR-007: combined Layer 4/5 P99 <= 50ms over at least 100 samples."
+      - "EDR-012: one-minor-version grace and governed deprecation removal."
+      - "CI executes the full system gate with an ephemeral environment HMAC key."
+
+quality_gates:
+  system_validation: {required: true, command: "uv run python -m tools.system_gate"}
+  ruff_lint: {required: true, command: "uv run ruff check ."}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict tools 06-runtime 07-research tests"}
+  pytest_system: {required: true, command: "uv run pytest tests/integration tests/chaos tests/performance -v"}
+
+completion:
+  success_requires:
+    - "Replay, chaos, latency, and deprecation gates all pass."
+
+failure_modes:
+  ERR-REPLAY-DRIFT: "Semantic replay checksum differs."
+  ERR-DEGRADATION: "Feed loss fails to become vacuous DEGRADED."
+  ERR-LATENCY: "P99 exceeds 50ms."
+  ERR-DEPRECATION: "Grace/removal policy weakened."
+
+execution_prompt: |
+  Execute WP-IMP-0033 strictly within bounded_files.

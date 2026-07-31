@@ -1,0 +1,84 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-005"
+work_package_id: "WP-IMP-0007"
+capability:
+  id: "EOS-HEALTH"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (Claude Fable 5)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T17:20:00+06:00"
+  finished_at: "2026-07-31T17:40:00+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "BASELINE_VERIFIED"
+      at: "2026-07-31T17:20:00+06:00"
+    - state: "WORK_PACKAGE_LOADED"
+      at: "2026-07-31T17:20:20+06:00"
+    - state: "PRECONDITIONS_VERIFIED"
+      at: "2026-07-31T17:20:30+06:00"
+    - state: "EXECUTION_AUTHORIZED"
+      at: "2026-07-31T17:20:40+06:00"
+    - state: "EXECUTING"
+      at: "2026-07-31T17:21:00+06:00"
+    - state: "VALIDATING"
+      at: "2026-07-31T17:35:00+06:00"
+    - state: "EVIDENCE_GENERATED"
+      at: "2026-07-31T17:40:00+06:00"
+    - state: "REVIEW_PENDING"
+      at: "2026-07-31T17:40:00+06:00"
+      note: "Autopilot governed self-review per ADR-0002; disposition in verdict"
+preconditions:
+  - predicate: "capability.complete('EOS-EVIDENCE')"
+    result: "PASS"
+  - predicate: "file.exists('03-engineering/TRACEABILITY_MATRIX.yaml')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "tools/afrp-cli/afrp/core/traceability.py"
+    - "tools/afrp-cli/afrp/commands/health.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_health.py"
+  files_modified:
+    - "tools/afrp-cli/afrp/core/traceability.py"
+    - "tools/afrp-cli/afrp/commands/health.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_health.py"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check tools/afrp-cli/ tests/"
+    result: "PASS"
+    detail: "All checks passed"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools/afrp-cli/ tests/"
+    result: "PASS"
+    detail: "Success: no issues found in 19 source files"
+  - gate: "pytest_units"
+    command: "uv run pytest tests/unit/test_health.py -v"
+    result: "PASS"
+    detail: "15 passed (98 total suite-wide)"
+artifacts:
+  source_files:
+    - "tools/afrp-cli/afrp/core/traceability.py"
+    - "tools/afrp-cli/afrp/commands/health.py"
+    - "tools/afrp-cli/afrp/cli.py"
+  test_files:
+    - "tests/unit/test_health.py"
+unlocked_capabilities:
+  - id: "EOS-ORCHESTRATOR"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    Governed self-review: afrp health verified live (traceability 10/47 =
+    21.3%, capabilities 6/33 complete, fit_007 gap reporting). Drift guard
+    rejects implemented-without-evidence rows; --assert-full gates on FIT-007
+    with named gaps; coverage.json ingestion covered by fixtures including
+    malformed totals.

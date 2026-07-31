@@ -1,0 +1,129 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0004"
+capability_id:
+  id: "EOS-GRAPH"
+  version: "1.0"
+title: "Implement afrp plan command & Capability DAG Engine"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "EOS-CLI"
+  traceability:
+    implements_req: ["FR-002", "FIT-001"]
+    trace_sls: "ROS-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-CONTEXT')"
+  - predicate: "file.exists('03-engineering/CAPABILITY_REGISTRY.yaml')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/afrp-cli/afrp/"
+      - "tests/unit/"
+      - "05-work-packages/WP-IMP-0004/evidence/"
+    read:
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+
+execution:
+  priority: "high"
+  estimated_complexity: "small"
+  estimated_duration: "1h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/afrp-cli/afrp/core/registry.py"
+    - "tools/afrp-cli/afrp/commands/plan.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_graph.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0004/evidence/EXEC-002.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/afrp-cli/afrp/core/registry.py"
+    - "tools/afrp-cli/afrp/commands/plan.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_graph.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0004/evidence/EXEC-002.yaml"
+
+produces:
+  capability:
+    id: "EOS-GRAPH"
+    version: "1.0"
+  unlocks:
+    - id: "EOS-VALIDATOR"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "tools/afrp-cli/afrp/core/registry.py"
+    - "tools/afrp-cli/afrp/commands/plan.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_graph.py"
+  non_goals:
+    - "Do not implement AST validation (deferred to IMP-0005)."
+    - "Do not implement evidence emission (deferred to IMP-0006)."
+
+requirements:
+  registry_parser:
+    module: "tools/afrp-cli/afrp/core/registry.py"
+    rules:
+      - "Parse CAPABILITY_REGISTRY.yaml into Pydantic model CapabilityRegistry."
+      - "Validate schema_version == '1.0' and unique capability ids."
+      - "Reject depends_on references to unknown capabilities."
+  dag_engine:
+    module: "tools/afrp-cli/afrp/core/registry.py"
+    rules:
+      - "Build in-memory execution DAG from depends_on edges."
+      - "FIT-001: detect cycles via Kahn topological sort; report cycle members."
+      - "Compute next executable targets: LOCKED/AVAILABLE capabilities whose deps are all COMPLETE."
+  plan_command:
+    module: "tools/afrp-cli/afrp/commands/plan.py"
+    rules:
+      - "Render DAG summary, FIT-001 verdict, and next executable targets."
+      - "Exit non-zero with typed error if the registry is cyclic or invalid."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/afrp-cli/ tests/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/afrp-cli/ tests/unit/test_graph.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_graph.py -v"
+
+completion:
+  success_requires:
+    - "'afrp plan' command registered and executable."
+    - "FIT-001 cycle detection proven by tests on cyclic fixtures."
+    - "Quality gates pass with zero errors."
+
+failure_modes:
+  ERR-CONTRACT-REFERENCE: "Missing CAPABILITY_REGISTRY.yaml."
+  ERR-REGISTRY-CYCLE: "Capability graph contains a dependency cycle."
+  ERR-EXEC-BOUNDARY: "Touched files outside bounded_files."
+
+execution_prompt: |
+  You are an autonomous AI Software Engineer executing Work Package WP-IMP-0004 in role AEF-02.
+  Implement afrp plan command and the capability DAG engine strictly within bounded_files.
+  Run quality gates and generate EXEC-002.yaml evidence record upon completion.
