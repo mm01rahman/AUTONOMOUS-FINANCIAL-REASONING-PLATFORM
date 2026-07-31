@@ -1,0 +1,84 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-002"
+work_package_id: "WP-IMP-0004"
+capability:
+  id: "EOS-GRAPH"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (Claude Fable 5)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T16:10:00+06:00"
+  finished_at: "2026-07-31T16:25:00+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "BASELINE_VERIFIED"
+      at: "2026-07-31T16:10:00+06:00"
+    - state: "WORK_PACKAGE_LOADED"
+      at: "2026-07-31T16:10:30+06:00"
+    - state: "PRECONDITIONS_VERIFIED"
+      at: "2026-07-31T16:10:40+06:00"
+    - state: "EXECUTION_AUTHORIZED"
+      at: "2026-07-31T16:10:50+06:00"
+    - state: "EXECUTING"
+      at: "2026-07-31T16:11:00+06:00"
+    - state: "VALIDATING"
+      at: "2026-07-31T16:22:00+06:00"
+    - state: "EVIDENCE_GENERATED"
+      at: "2026-07-31T16:25:00+06:00"
+    - state: "REVIEW_PENDING"
+      at: "2026-07-31T16:25:00+06:00"
+      note: "Autopilot governed self-review per ADR-0002; disposition in verdict"
+preconditions:
+  - predicate: "capability.complete('EOS-CONTEXT')"
+    result: "PASS"
+  - predicate: "file.exists('03-engineering/CAPABILITY_REGISTRY.yaml')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "tools/afrp-cli/afrp/core/registry.py"
+    - "tools/afrp-cli/afrp/commands/plan.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_graph.py"
+  files_modified:
+    - "tools/afrp-cli/afrp/core/registry.py"
+    - "tools/afrp-cli/afrp/commands/plan.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_graph.py"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check tools/afrp-cli/ tests/"
+    result: "PASS"
+    detail: "All checks passed"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools/afrp-cli/ tests/unit/test_graph.py"
+    result: "PASS"
+    detail: "Success: no issues found in 8 source files"
+  - gate: "pytest_units"
+    command: "uv run pytest tests/unit/test_graph.py -v"
+    result: "PASS"
+    detail: "17 passed (39 total suite-wide)"
+artifacts:
+  source_files:
+    - "tools/afrp-cli/afrp/core/registry.py"
+    - "tools/afrp-cli/afrp/commands/plan.py"
+    - "tools/afrp-cli/afrp/cli.py"
+  test_files:
+    - "tests/unit/test_graph.py"
+unlocked_capabilities:
+  - id: "EOS-VALIDATOR"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    Governed self-review: afrp plan verified live on the real registry
+    (33 capabilities, FIT-001 PASS, correct topological order, EOS-GRAPH
+    reported as next target). Cycle fixtures (2-cycle, self-loop, 3-cycle
+    with innocent bystander) all detected with member reporting; dangling
+    deps and duplicate ids rejected; deterministic ordering proven.

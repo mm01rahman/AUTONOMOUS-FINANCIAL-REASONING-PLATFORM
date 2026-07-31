@@ -32,14 +32,14 @@ capabilities:
     version: "1.0"
     title: "afrp plan: capability DAG engine, cycle detection (FIT-001)"
     owner: "EOS-CLI"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     depends_on: ["EOS-CONTEXT"]
     work_package: "WP-IMP-0004"
   - id: "EOS-VALIDATOR"
     version: "1.0"
     title: "afrp validate: AST invariant checker (FIT-002, FIT-004, FIT-006)"
     owner: "EOS-CLI"
-    status: "LOCKED"
+    status: "AVAILABLE"
     depends_on: ["EOS-GRAPH"]
     work_package: "WP-IMP-0005"
   - id: "EOS-EVIDENCE"

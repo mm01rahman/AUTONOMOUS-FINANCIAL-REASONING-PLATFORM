@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import click
 from afrp.commands.boot import boot_command
+from afrp.commands.plan import plan_command
 
 
 @click.group(name="afrp")
@@ -17,6 +18,7 @@ def cli() -> None:
 
 
 cli.add_command(boot_command)
+cli.add_command(plan_command)
 
 
 def main() -> None:
