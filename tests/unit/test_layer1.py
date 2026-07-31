@@ -7,13 +7,13 @@ from pathlib import Path
 import pytest
 from afrp_runtime.common.errors import ContractViolationError
 from afrp_runtime.contracts.cio import ObservationKind
-from afrp_runtime.layer1.features import (
+from afrp_runtime.contracts.features import (
     FEATURE_EWM_VOL,
     FEATURE_LOG_RETURN,
     FEATURE_MID,
     FEATURE_SPREAD_BPS,
-    FeatureStore,
 )
+from afrp_runtime.layer1.features import FeatureStore
 from afrp_runtime.layer1.ingest import RawEvent, TickIngestor
 from afrp_runtime.layer1.memory import MemoryRecord, VectorMemory, cosine_similarity
 from afrp_runtime.layer1.persistence import RelationalStore

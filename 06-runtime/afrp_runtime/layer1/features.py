@@ -15,13 +15,14 @@ from dataclasses import dataclass, field
 from afrp_runtime.common.errors import ContractViolationError
 from afrp_runtime.contracts.cio import ObservationKind, RawObservation, StandardFeature
 from afrp_runtime.contracts.envelope import make_envelope
+from afrp_runtime.contracts.features import (
+    FEATURE_EWM_VOL,
+    FEATURE_LOG_RETURN,
+    FEATURE_MID,
+    FEATURE_SPREAD_BPS,
+)
 
 SUBSYSTEM_ID = "L1-FST"
-
-FEATURE_MID = "mid_price"
-FEATURE_SPREAD_BPS = "spread_bps"
-FEATURE_LOG_RETURN = "log_return"
-FEATURE_EWM_VOL = "ewm_volatility"
 
 _EWM_ALPHA = 0.2
 

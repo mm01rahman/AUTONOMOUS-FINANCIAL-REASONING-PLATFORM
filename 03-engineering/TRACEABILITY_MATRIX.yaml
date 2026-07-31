@@ -120,9 +120,13 @@ requirements:
     title: "Layer 2 specialized belief agents emitting DSmT masses"
     source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
     capability: "L2-BASE"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer2/base.py"
+      - "06-runtime/afrp_runtime/layer2/agents.py"
+    verified_by:
+      - "tests/unit/test_layer2.py"
+      - "05-work-packages/WP-IMP-0017/evidence/EXEC-015.yaml"
   - id: "FR-011"
     title: "Layer 3 world model kernel PCR5 fusion and scenario simulation"
     source: "02-architecture/130_MATHEMATICAL_FOUNDATION.md#2"
@@ -195,9 +199,12 @@ requirements:
     title: "Graceful degradation via m(Theta) padding on feed loss"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
     capability: "L2-BASE"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer2/base.py"
+    verified_by:
+      - "tests/unit/test_layer2.py"
+      - "05-work-packages/WP-IMP-0017/evidence/EXEC-015.yaml"
   - id: "NFR-004"
     title: "Deterministic math under identical inputs and seed 42"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
