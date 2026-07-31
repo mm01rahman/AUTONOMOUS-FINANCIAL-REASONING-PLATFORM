@@ -1,0 +1,88 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-110"
+work_package_id: "WP-RT-1010"
+capability:
+  id: "L2-FOR"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (GPT-5.3-Codex)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-01T04:55:00+06:00"
+  finished_at: "2026-08-01T04:57:00+06:00"
+  final_state: "COMPLETED"
+preconditions:
+  - predicate: "capability.complete('L2-BASE')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer2/agents.py"
+    - "tests/unit/test_layer2_forward.py"
+    - "tests/integration/test_layer2_forward_integration.py"
+    - "docs/runtime/layer2-forward.md"
+    - "05-work-packages/WP-RT-1010.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "05-work-packages/WP-RT-1010/evidence/EXEC-110.yaml"
+  files_modified:
+    - "tests/unit/test_layer2_forward.py"
+    - "tests/integration/test_layer2_forward_integration.py"
+    - "docs/runtime/layer2-forward.md"
+    - "05-work-packages/WP-RT-1010.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check 06-runtime/ tests/"
+    result: "PASS"
+    detail: "All checks passed"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict 06-runtime/ tests/"
+    result: "PASS"
+    detail: "Success: no issues found in 59 source files"
+  - gate: "pytest_units"
+    command: "uv run pytest tests/unit/test_layer2_forward.py -v"
+    result: "PASS"
+    detail: "3 passed"
+  - gate: "pytest_integration"
+    command: "uv run pytest tests/integration/test_layer2_forward_integration.py -v"
+    result: "PASS"
+    detail: "1 passed"
+  - gate: "coverage"
+    command: "uv run pytest tests --cov --cov-report=term"
+    result: "PASS"
+    detail: "524 passed; coverage 87.2%"
+  - gate: "fit_004"
+    command: "uv run afrp validate"
+    result: "PASS"
+    detail: "fit_006 PASS; fit_002 PASS; fit_004 PASS; violations 0"
+  - gate: "fit_007"
+    command: "uv run afrp health"
+    result: "PASS"
+    detail: "traceability 47/47; coverage gate PASS"
+  - gate: "dependency_validation"
+    command: "uv run afrp plan"
+    result: "PASS"
+    detail: "fit_001 PASS; DAG acyclic"
+  - gate: "boundary_validation"
+    command: "uv run afrp evidence --wp WP-RT-1010"
+    result: "PASS"
+    detail: "fit_005 PASS with zero boundary violations"
+artifacts:
+  source_files:
+    - "06-runtime/afrp_runtime/layer2/agents.py"
+    - "tests/unit/test_layer2_forward.py"
+    - "tests/integration/test_layer2_forward_integration.py"
+    - "docs/runtime/layer2-forward.md"
+    - "05-work-packages/WP-RT-1010.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    L2-FOR acceptance criteria satisfied with deterministic slope-to-direction
+    mapping and schema-valid CIO-03 emissions under contract constraints.

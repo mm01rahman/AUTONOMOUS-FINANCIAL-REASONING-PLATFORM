@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 3 world model kernel (PCR5 fusion)"
 layer: "Layer 3"
 description: "Fuse multi-agent CIO-03 masses into CIO-04 world state."
 objective: "Deliver deterministic DSmT PCR5 fusion and conflict handling."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -35,6 +35,8 @@ resources:
       - "tests/integration/test_layer3_worldmodel_integration.py"
       - "docs/runtime/layer3-worldmodel.md"
       - "05-work-packages/WP-RT-1012/evidence/"
+    - "05-work-packages/WP-RT-1012.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
 execution:
   priority: "critical"
   estimated_complexity: "large"
@@ -64,6 +66,19 @@ scope:
     - "tests/unit/test_layer3_worldmodel.py"
     - "tests/integration/test_layer3_worldmodel_integration.py"
     - "docs/runtime/layer3-worldmodel.md"
+    - "05-work-packages/WP-RT-1012.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+execution_results:
+  final_state: "COMPLETED"
+  gates_passed:
+    - {gate: "ruff", result: "PASS"}
+    - {gate: "mypy_strict", result: "PASS"}
+    - {gate: "pytest_unit", result: "PASS", tests: 20}
+    - {gate: "pytest_integration", result: "PASS", tests: 6}
+    - {gate: "afrp_validate", result: "PASS"}
+    - {gate: "afrp_health", result: "PASS"}
+    - {gate: "evidence", result: "PASS"}
+  evidence_record: "05-work-packages/WP-RT-1012/evidence/EXEC-112.yaml"
 requirements:
   acceptance_criteria:
     - "PCR5 fusion is deterministic and numerically stable."

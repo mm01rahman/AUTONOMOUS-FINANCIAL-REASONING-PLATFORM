@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 1 vector memory"
 layer: "Layer 1"
 description: "Store and retrieve regime vectors deterministically for downstream adaptation."
 objective: "Provide bounded, deterministic vector memory operations."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -28,6 +28,8 @@ resources:
       - "tests/unit/test_layer1_memory.py"
       - "tests/integration/test_layer1_memory_integration.py"
       - "docs/runtime/layer1-memory.md"
+      - "05-work-packages/WP-RT-1004.yaml"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
       - "05-work-packages/WP-RT-1004/evidence/"
     read:
       - "06-runtime/afrp_runtime/contracts/"
@@ -47,6 +49,8 @@ outputs:
     - "tests/unit/test_layer1_memory.py"
     - "tests/integration/test_layer1_memory_integration.py"
     - "docs/runtime/layer1-memory.md"
+    - "05-work-packages/WP-RT-1004.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   expected_evidence:
     - "05-work-packages/WP-RT-1004/evidence/EXEC-104.yaml"
 produces:
@@ -59,6 +63,8 @@ scope:
     - "tests/unit/test_layer1_memory.py"
     - "tests/integration/test_layer1_memory_integration.py"
     - "docs/runtime/layer1-memory.md"
+    - "05-work-packages/WP-RT-1004.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   non_goals:
     - "No feature computation or persistence schema changes."
 requirements:
@@ -90,3 +96,13 @@ architecture_references:
 traceability_links: ["FR-009", "FIT-004", "FIT-005", "SLS-100"]
 execution_prompt: |
   Execute WP-RT-1004 strictly within bounded_files and non_goals.
+
+execution_results:
+  source_files_modified:
+    - "tests/unit/test_layer1_memory.py"
+    - "tests/integration/test_layer1_memory_integration.py"
+    - "docs/runtime/layer1-memory.md"
+    - "05-work-packages/WP-RT-1004.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-RT-1004/evidence/EXEC-104.yaml"

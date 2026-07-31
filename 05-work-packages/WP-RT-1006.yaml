@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 2 macro belief agent"
 layer: "Layer 2"
 description: "Generate macro-domain CIO-03 belief masses from normalized features."
 objective: "Deliver deterministic macro signal-to-belief transformation."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -28,6 +28,8 @@ resources:
       - "tests/unit/test_layer2_macro.py"
       - "tests/integration/test_layer2_macro_integration.py"
       - "docs/runtime/layer2-macro.md"
+      - "05-work-packages/WP-RT-1006.yaml"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
       - "05-work-packages/WP-RT-1006/evidence/"
     read:
       - "06-runtime/afrp_runtime/layer2/base.py"
@@ -47,6 +49,8 @@ outputs:
     - "tests/unit/test_layer2_macro.py"
     - "tests/integration/test_layer2_macro_integration.py"
     - "docs/runtime/layer2-macro.md"
+    - "05-work-packages/WP-RT-1006.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   expected_evidence:
     - "05-work-packages/WP-RT-1006/evidence/EXEC-106.yaml"
 produces:
@@ -57,6 +61,8 @@ scope:
     - "tests/unit/test_layer2_macro.py"
     - "tests/integration/test_layer2_macro_integration.py"
     - "docs/runtime/layer2-macro.md"
+    - "05-work-packages/WP-RT-1006.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   non_goals:
     - "No Layer 3 fusion implementation."
 requirements:
@@ -85,3 +91,13 @@ architecture_references:
 traceability_links: ["FR-010", "FIT-004", "FIT-005", "SLS-200"]
 execution_prompt: |
   Execute WP-RT-1006 strictly within bounded_files and non_goals.
+
+execution_results:
+  source_files_modified:
+    - "tests/unit/test_layer2_macro.py"
+    - "tests/integration/test_layer2_macro_integration.py"
+    - "docs/runtime/layer2-macro.md"
+    - "05-work-packages/WP-RT-1006.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-RT-1006/evidence/EXEC-106.yaml"

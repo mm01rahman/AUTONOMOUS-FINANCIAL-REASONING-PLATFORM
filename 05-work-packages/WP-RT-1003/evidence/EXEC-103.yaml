@@ -1,0 +1,100 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-103"
+work_package_id: "WP-RT-1003"
+capability:
+  id: "L1-RDB"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (GPT-5.3-Codex)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-01T04:37:10+06:00"
+  finished_at: "2026-08-01T04:44:30+06:00"
+  final_state: "COMPLETED"
+  state_transitions:
+    - state: "WORK_PACKAGE_LOADED"
+      at: "2026-08-01T04:38:00+06:00"
+      note: "Selected READY high-priority Layer 1 persistence package."
+    - state: "EXECUTING"
+      at: "2026-08-01T04:40:00+06:00"
+      note: "Added bounded persistence unit/integration tests and runtime docs."
+    - state: "VALIDATING"
+      at: "2026-08-01T04:42:00+06:00"
+      note: "All mandatory quality gates and runtime checks passed."
+    - state: "EVIDENCE_GENERATED"
+      at: "2026-08-01T04:44:00+06:00"
+      note: "Boundary audit PASS and ERS record finalized."
+    - state: "COMPLETED"
+      at: "2026-08-01T04:44:30+06:00"
+      note: "WP-RT-1003 lifecycle closure complete."
+preconditions:
+  - predicate: "capability.complete('L1-ING')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer1/persistence.py"
+    - "tests/unit/test_layer1_persistence.py"
+    - "tests/integration/test_layer1_persistence_integration.py"
+    - "docs/runtime/layer1-persistence.md"
+    - "05-work-packages/WP-RT-1003.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "05-work-packages/WP-RT-1003/evidence/EXEC-103.yaml"
+  files_modified:
+    - "tests/unit/test_layer1_persistence.py"
+    - "tests/integration/test_layer1_persistence_integration.py"
+    - "docs/runtime/layer1-persistence.md"
+    - "05-work-packages/WP-RT-1003.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check 06-runtime/ tests/"
+    result: "PASS"
+    detail: "All checks passed"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict 06-runtime/ tests/"
+    result: "PASS"
+    detail: "Success: no issues found in 51 source files"
+  - gate: "pytest_units"
+    command: "uv run pytest tests/unit/test_layer1_persistence.py -v"
+    result: "PASS"
+    detail: "4 passed"
+  - gate: "pytest_integration"
+    command: "uv run pytest tests/integration/test_layer1_persistence_integration.py -v"
+    result: "PASS"
+    detail: "1 passed"
+  - gate: "coverage"
+    command: "uv run pytest tests --cov --cov-report=term"
+    result: "PASS"
+    detail: "501 passed; coverage collection succeeded"
+  - gate: "fit_004"
+    command: "uv run afrp validate"
+    result: "PASS"
+    detail: "fit_006 PASS; fit_002 PASS; fit_004 PASS; violations 0"
+  - gate: "boundary_validation"
+    command: "uv run afrp evidence --wp WP-RT-1003"
+    result: "PASS"
+    detail: "fit_005 PASS with zero boundary violations"
+artifacts:
+  source_files:
+    - "06-runtime/afrp_runtime/layer1/persistence.py"
+    - "tests/unit/test_layer1_persistence.py"
+    - "tests/integration/test_layer1_persistence_integration.py"
+    - "docs/runtime/layer1-persistence.md"
+    - "05-work-packages/WP-RT-1003.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+unlocked_capabilities:
+  - id: "L5-EXE"
+    version: "1.0"
+  - id: "L6-OPT"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    L1-RDB acceptance criteria satisfied: append/replay durability, deterministic
+    audit query ordering, and explicit duplicate-sequence contract failure paths.

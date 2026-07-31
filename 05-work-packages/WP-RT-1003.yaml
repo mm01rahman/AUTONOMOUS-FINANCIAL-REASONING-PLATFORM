@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 1 relational persistence"
 layer: "Layer 1"
 description: "Persist CIO-01 and execution-adjacent records in deterministic relational storage."
 objective: "Provide append/replay durability and auditable history guarantees."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -28,6 +28,8 @@ resources:
       - "tests/unit/test_layer1_persistence.py"
       - "tests/integration/test_layer1_persistence_integration.py"
       - "docs/runtime/layer1-persistence.md"
+      - "05-work-packages/WP-RT-1003.yaml"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
       - "05-work-packages/WP-RT-1003/evidence/"
     read:
       - "06-runtime/afrp_runtime/contracts/"
@@ -47,6 +49,8 @@ outputs:
     - "tests/unit/test_layer1_persistence.py"
     - "tests/integration/test_layer1_persistence_integration.py"
     - "docs/runtime/layer1-persistence.md"
+    - "05-work-packages/WP-RT-1003.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   expected_evidence:
     - "05-work-packages/WP-RT-1003/evidence/EXEC-103.yaml"
 produces:
@@ -60,6 +64,8 @@ scope:
     - "tests/unit/test_layer1_persistence.py"
     - "tests/integration/test_layer1_persistence_integration.py"
     - "docs/runtime/layer1-persistence.md"
+    - "05-work-packages/WP-RT-1003.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   non_goals:
     - "No feature derivation or vector similarity logic."
 requirements:
@@ -91,3 +97,13 @@ architecture_references:
 traceability_links: ["FR-009", "NFR-005", "FIT-004", "FIT-005", "SLS-100"]
 execution_prompt: |
   Execute WP-RT-1003 strictly within bounded_files and non_goals.
+
+execution_results:
+  source_files_modified:
+    - "tests/unit/test_layer1_persistence.py"
+    - "tests/integration/test_layer1_persistence_integration.py"
+    - "docs/runtime/layer1-persistence.md"
+    - "05-work-packages/WP-RT-1003.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-RT-1003/evidence/EXEC-103.yaml"

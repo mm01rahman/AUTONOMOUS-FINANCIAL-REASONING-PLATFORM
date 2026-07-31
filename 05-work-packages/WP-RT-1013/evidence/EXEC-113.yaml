@@ -1,0 +1,68 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-113"
+work_package_id: "WP-RT-1013"
+capability_id:
+  id: "L3-SIM"
+  version: "1.0"
+title: "WP-RT-1013 Sigma_EWM Scenario Simulator - Execution Evidence"
+layer: "Layer 3"
+
+gate_outcomes:
+  - gate: "ruff"
+    status: "PASS"
+    command: "python -m ruff check tests/unit/test_layer3_simulator.py tests/integration/test_layer3_simulator_integration.py"
+    notes: "No lint issues found"
+  - gate: "mypy_strict"
+    status: "PASS"
+    command: "python -m mypy tests/unit/test_layer3_simulator.py tests/integration/test_layer3_simulator_integration.py --strict"
+    notes: "No type errors in 2 source files"
+  - gate: "pytest_unit"
+    status: "PASS"
+    command: "python -m pytest tests/unit/test_layer3_simulator.py -p no:anyio"
+    tests_collected: 9
+    tests_passed: 9
+    notes: "scenario set, probability normalization, terminal prices, entropy, determinism, contract enforcement"
+  - gate: "pytest_integration"
+    status: "PASS"
+    command: "python -m pytest tests/integration/test_layer3_simulator_integration.py -p no:anyio"
+    tests_collected: 3
+    tests_passed: 3
+    notes: "Full CIO-03→CIO-04→CIO-05A pipeline; envelope provenance; bull/bear drift differentiation"
+  - gate: "total_test_suite"
+    status: "PASS"
+    tests_passed: 244
+    notes: "Layer 1+2+3 tests all green (244 tests)"
+  - gate: "afrp_validate"
+    status: "PASS"
+    notes: "Repository governance constraints satisfied"
+  - gate: "afrp_health"
+    status: "PASS"
+    notes: "Platform health GREEN"
+  - gate: "evidence"
+    status: "PASS"
+    notes: "ERS schema valid, bounded_files governance satisfied"
+
+all_gates_passed: true
+final_state: "COMPLETED"
+review_status: "APPROVED"
+
+acceptance_criteria:
+  - criterion: "CIO-05A scenario sets are deterministic for fixed input/seed."
+    met: true
+    evidence: "test_simulate_is_deterministic_same_cycle: r1==r2 for same cycle=0"
+  - criterion: "Trajectory distributions include required metadata and bounds."
+    met: true
+    evidence: "test_simulate_returns_scenario_set, test_pipeline_scenario_envelope_is_valid"
+
+artifacts_created:
+  - "tests/unit/test_layer3_simulator.py"
+  - "tests/integration/test_layer3_simulator_integration.py"
+  - "docs/runtime/layer3-simulator.md"
+  - "05-work-packages/WP-RT-1013/evidence/EXEC-113.yaml"
+
+governance_updates:
+  - "05-work-packages/WP-RT-1013.yaml: status Completed"
+  - "03-engineering/CAPABILITY_REGISTRY.yaml: L3-SIM COMPLETE, L4-FUS AVAILABLE"
+
+unlocked_capabilities:
+  - {id: "L4-FUS", version: "1.0"}

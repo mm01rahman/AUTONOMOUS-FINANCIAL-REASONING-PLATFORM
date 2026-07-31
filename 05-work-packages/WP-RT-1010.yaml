@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 2 forward/expectations belief agent"
 layer: "Layer 2"
 description: "Generate forward-expectations CIO-03 belief masses."
 objective: "Deliver deterministic expectations belief generation."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -27,6 +27,8 @@ resources:
       - "tests/unit/test_layer2_forward.py"
       - "tests/integration/test_layer2_forward_integration.py"
       - "docs/runtime/layer2-forward.md"
+      - "05-work-packages/WP-RT-1010.yaml"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
       - "05-work-packages/WP-RT-1010/evidence/"
 execution:
   priority: "high"
@@ -42,6 +44,8 @@ outputs:
     - "tests/unit/test_layer2_forward.py"
     - "tests/integration/test_layer2_forward_integration.py"
     - "docs/runtime/layer2-forward.md"
+    - "05-work-packages/WP-RT-1010.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   expected_evidence: ["05-work-packages/WP-RT-1010/evidence/EXEC-110.yaml"]
 produces:
   capability: {id: "L2-FOR", version: "1.0"}
@@ -51,6 +55,8 @@ scope:
     - "tests/unit/test_layer2_forward.py"
     - "tests/integration/test_layer2_forward_integration.py"
     - "docs/runtime/layer2-forward.md"
+    - "05-work-packages/WP-RT-1010.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
 requirements:
   acceptance_criteria:
     - "Forward/expectations agent emits schema-valid CIO-03 beliefs."
@@ -74,3 +80,13 @@ architecture_references: ["02-architecture/110_RUNTIME_ARCHITECTURE.md#1"]
 traceability_links: ["FR-010", "FIT-004", "FIT-005", "SLS-200"]
 execution_prompt: |
   Execute WP-RT-1010 strictly within bounded_files.
+
+execution_results:
+  source_files_modified:
+    - "tests/unit/test_layer2_forward.py"
+    - "tests/integration/test_layer2_forward_integration.py"
+    - "docs/runtime/layer2-forward.md"
+    - "05-work-packages/WP-RT-1010.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-RT-1010/evidence/EXEC-110.yaml"
