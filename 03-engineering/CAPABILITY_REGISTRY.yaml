@@ -169,8 +169,8 @@ capabilities:
     version: "1.0"
     title: "Macro agent emitting CIO-03"
     owner: "SLS-200"
-    status: "AVAILABLE"
-    planning_status: "READY"
+    status: "COMPLETE"
+    planning_status: "COMPLETE"
     layer: "Layer 2"
     depends_on: ["L2-BASE"]
     work_package: "WP-RT-1006"
