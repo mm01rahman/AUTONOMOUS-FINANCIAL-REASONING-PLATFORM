@@ -9,6 +9,7 @@ from __future__ import annotations
 import click
 from afrp.commands.boot import boot_command
 from afrp.commands.evidence import evidence_command
+from afrp.commands.health import health_command
 from afrp.commands.plan import plan_command
 from afrp.commands.validate import validate_command
 
@@ -23,6 +24,7 @@ cli.add_command(boot_command)
 cli.add_command(plan_command)
 cli.add_command(validate_command)
 cli.add_command(evidence_command)
+cli.add_command(health_command)
 
 
 def main() -> None:

@@ -58,9 +58,13 @@ requirements:
     title: "afrp health coverage and traceability analyzer"
     source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#1"
     capability: "EOS-HEALTH"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/traceability.py"
+      - "tools/afrp-cli/afrp/commands/health.py"
+    verified_by:
+      - "tests/unit/test_health.py"
+      - "05-work-packages/WP-IMP-0007/evidence/EXEC-005.yaml"
   - id: "FR-006"
     title: "afrp run orchestrator control plane under EGP-2.0"
     source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#2"
@@ -280,9 +284,12 @@ requirements:
     title: "100% requirement coverage in traceability matrix"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
     capability: "EOS-HEALTH"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/traceability.py"
+    verified_by:
+      - "tests/unit/test_health.py"
+      - "05-work-packages/WP-IMP-0007/evidence/EXEC-005.yaml"
   - id: "FIT-008"
     title: "Deterministic replay of historical ticks reproduces state"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"

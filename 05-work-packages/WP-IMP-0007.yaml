@@ -1,0 +1,125 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0007"
+capability_id:
+  id: "EOS-HEALTH"
+  version: "1.0"
+title: "Implement afrp health command & Traceability/Coverage Analyzer"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "EOS-CLI"
+  traceability:
+    implements_req: ["FR-005", "FIT-007"]
+    trace_sls: "ROS-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-EVIDENCE')"
+  - predicate: "file.exists('03-engineering/TRACEABILITY_MATRIX.yaml')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/afrp-cli/afrp/"
+      - "tests/unit/"
+      - "05-work-packages/WP-IMP-0007/evidence/"
+    read:
+      - "03-engineering/"
+      - "coverage.json"
+
+execution:
+  priority: "high"
+  estimated_complexity: "small"
+  estimated_duration: "1h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/afrp-cli/afrp/core/traceability.py"
+    - "tools/afrp-cli/afrp/commands/health.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_health.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0007/evidence/EXEC-005.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/afrp-cli/afrp/core/traceability.py"
+    - "tools/afrp-cli/afrp/commands/health.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_health.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0007/evidence/EXEC-005.yaml"
+
+produces:
+  capability:
+    id: "EOS-HEALTH"
+    version: "1.0"
+  unlocks:
+    - id: "EOS-ORCHESTRATOR"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "tools/afrp-cli/afrp/core/traceability.py"
+    - "tools/afrp-cli/afrp/commands/health.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_health.py"
+  non_goals:
+    - "Do not implement the orchestrator control loop (deferred to IMP-0008)."
+
+requirements:
+  tvm_parser:
+    module: "tools/afrp-cli/afrp/core/traceability.py"
+    rules:
+      - "Parse TRACEABILITY_MATRIX.yaml into typed models; reject unknown status values."
+      - "A requirement is covered iff it has >=1 artifact and >=1 verified_by entry."
+      - "Reject entries marked implemented without artifacts/verification (drift guard)."
+      - "FIT-007: compute coverage ratio; expose an assertion helper for 100%."
+  health_command:
+    module: "tools/afrp-cli/afrp/commands/health.py"
+    rules:
+      - "Report TVM coverage, registry completion, and test line coverage."
+      - "Test coverage read from coverage.json (pytest-cov artifact) when present."
+      - "--assert-full flag turns any gap (TVM < 100%) into a non-zero exit."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/afrp-cli/ tests/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/afrp-cli/ tests/unit/test_health.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_health.py -v"
+
+completion:
+  success_requires:
+    - "'afrp health' command registered and executable."
+    - "FIT-007 coverage math proven on full/partial fixtures."
+    - "Quality gates pass with zero errors."
+
+failure_modes:
+  ERR-CONTRACT-REFERENCE: "Missing TRACEABILITY_MATRIX.yaml."
+  ERR-TVM-DRIFT: "Requirement marked implemented without artifacts or verification."
+  ERR-EXEC-BOUNDARY: "Touched files outside bounded_files."
+
+execution_prompt: |
+  You are an autonomous AI Software Engineer executing Work Package WP-IMP-0007 in role AEF-02.
+  Implement afrp health and the traceability analyzer strictly within bounded_files.
+  Run quality gates and generate EXEC-005.yaml evidence record upon completion.
