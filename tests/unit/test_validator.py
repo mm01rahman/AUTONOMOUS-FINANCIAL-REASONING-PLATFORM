@@ -8,6 +8,7 @@ from pathlib import Path
 import pytest
 from afrp.cli import cli
 from afrp.core.astcheck import Violation, check_source, scan_paths
+from afrp.core.exceptions import ContractReferenceError
 from click.testing import CliRunner
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -55,6 +56,96 @@ class TestFit002Excepts:
         )
         assert not [v for v in findings if "re-raise" in v.message]
 
+    @pytest.mark.parametrize(
+        "body",
+        [
+            "if condition:\n    raise",
+            "def nested() -> None:\n    raise\nnested()",
+            "return\nraise",
+            "if condition:\n    return\nelse:\n    return\nraise",
+        ],
+    )
+    def test_non_final_or_unreachable_reraise_rejected(self, body: str) -> None:
+        code = (
+            "def f(condition: bool) -> None:\n"
+            "    try:\n"
+            "        pass\n"
+            "    except Exception:\n"
+            f"{textwrap.indent(body, '        ')}\n"
+        )
+        findings = check(code)
+        assert any("without re-raise" in v.message for v in findings)
+
+    def test_tuple_generic_exception_is_checked(self) -> None:
+        findings = check(
+            """
+            def f() -> None:
+                try:
+                    pass
+                except (Exception, ValueError):
+                    pass
+            """
+        )
+        assert any("without re-raise" in finding.message for finding in findings)
+
+    def test_raise_after_infinite_loop_is_unreachable(self) -> None:
+        findings = check(
+            """
+            def f() -> None:
+                try:
+                    pass
+                except Exception:
+                    while True:
+                        pass
+                    raise
+            """
+        )
+        assert any("without re-raise" in finding.message for finding in findings)
+
+    def test_raise_after_truthy_constant_loop_is_unreachable(self) -> None:
+        findings = check(
+            """
+            def f() -> None:
+                try:
+                    pass
+                except Exception:
+                    while 1:
+                        pass
+                    raise
+            """
+        )
+        assert any("without re-raise" in finding.message for finding in findings)
+
+    def test_conditional_return_before_raise_is_rejected(self) -> None:
+        findings = check(
+            """
+            def f(condition: bool) -> None:
+                try:
+                    pass
+                except Exception:
+                    if condition:
+                        return
+                    raise
+            """
+        )
+        assert any("without re-raise" in finding.message for finding in findings)
+
+    @pytest.mark.parametrize("terminal", ["assert False", "assert 0"])
+    def test_raise_after_terminating_assert_is_unreachable(
+        self, terminal: str
+    ) -> None:
+        findings = check(
+            f"""
+            def f() -> None:
+                try:
+                    pass
+                except Exception:
+                    {terminal}
+                    raise
+            """
+        )
+        assert any("without re-raise" in finding.message for finding in findings)
+
     def test_typed_except_allowed(self) -> None:
         findings = check(
             """
@@ -66,6 +157,28 @@ class TestFit002Excepts:
             """
         )
         assert findings == []
+
+    @pytest.mark.parametrize(
+        "imports, handler",
+        [
+            ("from builtins import Exception as E", "E"),
+            ("import builtins as b", "b.Exception"),
+        ],
+    )
+    def test_builtin_exception_alias_is_checked(
+        self, imports: str, handler: str
+    ) -> None:
+        findings = check(
+            f"""
+            {imports}
+            def f() -> None:
+                try:
+                    pass
+                except {handler}:
+                    pass
+            """
+        )
+        assert any("without re-raise" in finding.message for finding in findings)
 
 
 class TestFit002Annotations:
@@ -134,6 +247,28 @@ class TestFit004CrossLayer:
         findings = check("import afrp_runtime.layer1.ingest\n", path)
         assert any("common must not import layer" in v.message for v in findings)
 
+    @pytest.mark.parametrize(
+        "statement",
+        [
+            "from ..layer3 import sim",
+            "from .. import layer3",
+        ],
+    )
+    def test_relative_sibling_import_flagged(self, statement: str) -> None:
+        path = Path("06-runtime") / "afrp_runtime" / "layer2" / "agent.py"
+        findings = check(statement + "\n", path)
+        assert any(v.rule == "FIT-004" for v in findings)
+
+    def test_relative_own_layer_import_allowed(self) -> None:
+        path = (
+            Path("06-runtime")
+            / "afrp_runtime"
+            / "layer2"
+            / "subsystem"
+            / "agent.py"
+        )
+        assert check("from ..base import BaseAgent\n", path) == []
+
     def test_outside_runtime_not_checked(self) -> None:
         findings = check("import afrp_runtime.layer1.ingest\n", Path("tools") / "x.py")
         assert findings == []
@@ -148,8 +283,9 @@ class TestScanPaths:
         assert findings
         assert all(v.rule == "FIT-002" for v in findings)
 
-    def test_scan_ignores_missing_roots(self, tmp_path: Path) -> None:
-        assert scan_paths([tmp_path / "ghost"]) == []
+    def test_scan_rejects_missing_required_roots(self, tmp_path: Path) -> None:
+        with pytest.raises(ContractReferenceError):
+            scan_paths([tmp_path / "ghost"])
 
     def test_syntax_error_propagates(self, tmp_path: Path) -> None:
         (tmp_path / "broken.py").write_text("def (:\n", encoding="utf-8")
@@ -180,6 +316,9 @@ class TestValidateCommand:
         (gov / "KERNEL.md").write_text("# K\nsmall kernel\n", encoding="utf-8")
         src = tmp_path / "tests"
         src.mkdir()
+        (tmp_path / "tools" / "afrp-cli").mkdir(parents=True)
+        (tmp_path / "06-runtime").mkdir()
+        (tmp_path / "07-research").mkdir()
         (src / "bad.py").write_text(
             "def f():\n    try:\n        pass\n    except:\n        pass\n",
             encoding="utf-8",

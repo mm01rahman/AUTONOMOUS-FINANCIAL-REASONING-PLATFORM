@@ -1,0 +1,152 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-FIX-0001"
+capability_id:
+  id: "EOS-ORCHESTRATOR"
+  version: "1.0"
+title: "Correct ARB-001 Engineering OS control findings"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "ENGINEERING_OS"
+  traceability:
+    implements_req: ["FR-001", "FR-003", "FR-004", "FR-005", "FR-006", "FIT-002", "FIT-004", "FIT-005", "FIT-007"]
+    trace_sls: "ARCH-001"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-ORCHESTRATOR')"
+
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/afrp-cli/afrp/commands/boot.py"
+      - "tools/afrp-cli/afrp/core/astcheck.py"
+      - "tools/afrp-cli/afrp/core/evidence.py"
+      - "tools/afrp-cli/afrp/core/orchestrator.py"
+      - "tests/unit/test_bootloader.py"
+      - "tests/unit/test_validator.py"
+      - "tests/unit/test_evidence.py"
+      - "tests/unit/test_orchestrator.py"
+      - "05-work-packages/WP-FIX-0001.yaml"
+      - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
+    read:
+      - "00-governance/BASELINE_FINGERPRINT.yaml"
+      - "09-validation/schemas/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "large"
+  estimated_duration: "6h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "00-governance/BASELINE_FINGERPRINT.yaml"
+    - "09-validation/schemas/wps-1.0.schema.json"
+    - "09-validation/schemas/ers-1.0.schema.json"
+
+outputs:
+  expected_source_files:
+    - "tools/afrp-cli/afrp/commands/boot.py"
+    - "tools/afrp-cli/afrp/core/astcheck.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tests/unit/test_bootloader.py"
+    - "tests/unit/test_validator.py"
+    - "tests/unit/test_evidence.py"
+    - "tests/unit/test_orchestrator.py"
+  expected_evidence:
+    - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/afrp-cli/afrp/commands/boot.py"
+    - "tools/afrp-cli/afrp/core/astcheck.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tests/unit/test_bootloader.py"
+    - "tests/unit/test_validator.py"
+    - "tests/unit/test_evidence.py"
+    - "tests/unit/test_orchestrator.py"
+  evidence_generated:
+    - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
+
+produces:
+  capability: {id: "EOS-ORCHESTRATOR", version: "1.0"}
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/afrp-cli/afrp/commands/boot.py"
+    - "tools/afrp-cli/afrp/core/astcheck.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tests/unit/test_bootloader.py"
+    - "tests/unit/test_validator.py"
+    - "tests/unit/test_evidence.py"
+    - "tests/unit/test_orchestrator.py"
+    - "05-work-packages/WP-FIX-0001.yaml"
+    - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
+  non_goals:
+    - "No runtime, research, or trading behavior changes."
+    - "No protected architecture, schema, protocol, or fingerprint changes."
+    - "No public API removals or signature changes."
+
+requirements:
+  arb_001:
+    affected_capabilities:
+      - "EOS-CONTEXT"
+      - "EOS-VALIDATOR"
+      - "EOS-EVIDENCE"
+      - "EOS-ORCHESTRATOR"
+    corrections:
+      - "Strictly validate the genesis fingerprint ledger."
+      - "Close generic-exception AST validator bypasses."
+      - "Enforce ERS semantic consistency and truthful evidence."
+      - "Precisely roll back governed task and Git metadata changes."
+      - "Generate truthful ERS records on execution failure paths."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/afrp-cli/afrp/commands/boot.py tools/afrp-cli/afrp/core/astcheck.py tools/afrp-cli/afrp/core/evidence.py tools/afrp-cli/afrp/core/orchestrator.py tests/unit/test_bootloader.py tests/unit/test_evidence.py tests/unit/test_orchestrator.py tests/unit/test_validator.py"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/afrp-cli/afrp/commands/boot.py tools/afrp-cli/afrp/core/astcheck.py tools/afrp-cli/afrp/core/evidence.py tools/afrp-cli/afrp/core/orchestrator.py tests/unit/test_bootloader.py tests/unit/test_evidence.py tests/unit/test_orchestrator.py tests/unit/test_validator.py"
+  pytest_scoped:
+    required: true
+    command: "uv run pytest tests/unit/test_bootloader.py tests/unit/test_evidence.py tests/unit/test_orchestrator.py tests/unit/test_validator.py -q"
+  architecture_validation:
+    required: true
+    command: "uv run afrp validate"
+  capability_registry:
+    required: true
+    command: "uv run afrp plan"
+
+completion:
+  success_requires:
+    - "All approved PR-2 Architecture Review findings are corrected."
+    - "Scoped quality gates pass."
+    - "EXEC-033 validates as ERS-1.0 and is approved by ARB."
+
+failure_modes:
+  ERR-LEDGER-VALIDATION: "Malformed or unsafe fingerprint ledger is accepted."
+  ERR-VALIDATOR-BYPASS: "Relative imports or conditional re-raises evade FIT checks."
+  ERR-EVIDENCE-RACE: "Evidence can be overwritten or partially published."
+  ERR-HEALTH-INCOMPLETE: "Assert-full accepts missing health inputs."
+  ERR-ORCHESTRATOR-CONTROL: "Execution bypasses locking, gates, rollback, or evidence."
+
+execution_prompt: |
+  Implement WP-FIX-0001 strictly within bounded_files and preserve all frozen baseline artifacts.

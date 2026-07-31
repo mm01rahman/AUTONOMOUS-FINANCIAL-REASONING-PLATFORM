@@ -1,26 +1,39 @@
-"""EOS orchestrator engine (WP-IMP-0008, EOS-003).
-
-Drives a Work Package through the RSM-1.0 lifecycle under EGP-2.0 controls:
-baseline verification, contract load, precondition evaluation, gate
-execution, boundary audit, and rollback on failure.
-"""
+"""EOS orchestrator engine (WP-IMP-0008, EOS-003)."""
 
 from __future__ import annotations
 
+import os
 import re
+import shlex
+import shutil
+import stat
 import subprocess
+import time
+from collections.abc import Iterator, Sequence
+from contextlib import contextmanager
 from dataclasses import dataclass
-from pathlib import Path
+from datetime import UTC, datetime
+from pathlib import Path, PurePosixPath, PureWindowsPath
 
 from afrp.commands.boot import verify_baseline
-from afrp.core.evidence import audit_boundaries, modified_files
-from afrp.core.exceptions import AfrpError, InvariantError
+from afrp.core.evidence import (
+    audit_boundaries,
+    compose_boundary_evidence,
+    is_tooling_artifact,
+    load_evidence,
+    resolve_evidence_target,
+    validate_existing_evidence,
+    write_evidence,
+)
+from afrp.core.exceptions import AfrpError, InvariantError, ManifestValidationError
 from afrp.core.lifecycle import LifecycleMachine, LifecycleState
 from afrp.core.registry import CapabilityStatus, load_registry
 from afrp.core.workpackage import WorkPackage, load_work_package
 
 LEDGER_RELPATH = Path("00-governance") / "BASELINE_FINGERPRINT.yaml"
 REGISTRY_RELPATH = Path("03-engineering") / "CAPABILITY_REGISTRY.yaml"
+_LOCK_NAME = "afrp-orchestrator.lock"
+_OUTPUT_LIMIT = 4000
 
 _TAG_PREDICATE = re.compile(r"^git\.tag\s*==\s*'([^']+)'$")
 _FILE_PREDICATE = re.compile(r"^file\.exists\('([^']+)'\)$")
@@ -44,6 +57,7 @@ class GateResult:
     command: str
     passed: bool
     detail: str
+    duration_seconds: float = 0.0
 
 
 @dataclass(frozen=True)
@@ -59,6 +73,38 @@ class RunReport:
     halted_reason: str | None
 
 
+@dataclass(frozen=True)
+class _FileState:
+    contents: bytes
+    mode: int
+    symlink_target: str | None
+
+
+@dataclass(frozen=True)
+class _WorkspaceSnapshot:
+    files: dict[str, _FileState | None]
+
+    def changed(self, current: _WorkspaceSnapshot) -> tuple[str, ...]:
+        names = set(self.files) | set(current.files)
+        return tuple(
+            sorted(name for name in names if self.files.get(name) != current.files.get(name))
+        )
+
+
+@dataclass(frozen=True)
+class _GitControlSnapshot:
+    roots: tuple[Path, ...]
+    files: dict[Path, _FileState]
+    directories: dict[Path, int]
+    lock_path: Path
+    index_path: Path
+    index_state: bytes
+    head: str
+    symbolic_head: str
+    refs: bytes
+    status: bytes
+
+
 def _git_tag_exists(repo_root: Path, tag: str) -> bool:
     result = subprocess.run(
         ["git", "tag", "--list", tag],
@@ -71,11 +117,7 @@ def _git_tag_exists(repo_root: Path, tag: str) -> bool:
 
 
 def evaluate_precondition(repo_root: Path, predicate: str) -> PreconditionResult:
-    """Evaluate one WPS-1.0 precondition predicate.
-
-    Raises:
-        InvariantError: the predicate grammar is not recognized.
-    """
+    """Evaluate one WPS-1.0 precondition predicate."""
     if match := _TAG_PREDICATE.match(predicate):
         tag = match.group(1)
         ok = _git_tag_exists(repo_root, tag)
@@ -95,34 +137,593 @@ def evaluate_precondition(repo_root: Path, predicate: str) -> PreconditionResult
     raise InvariantError("WPS-1.0", f"unrecognized precondition grammar: {predicate!r}")
 
 
-def run_gate(repo_root: Path, gate: str, command: str) -> GateResult:
-    """Execute one quality gate command via the shell."""
+def _command_argv(command: str | Sequence[str]) -> list[str]:
+    if isinstance(command, str):
+        try:
+            argv = shlex.split(command, posix=True)
+        except ValueError as exc:
+            raise InvariantError("EGP-2.0", f"invalid command quoting: {exc}") from exc
+    elif isinstance(command, Sequence):
+        argv = list(command)
+        if not all(isinstance(argument, str) for argument in argv):
+            raise InvariantError("EGP-2.0", "command argv must contain only strings")
+    else:
+        raise InvariantError("EGP-2.0", "command must be a string or argv list")
+    if not argv or not argv[0]:
+        raise InvariantError("EGP-2.0", "command must not be empty")
+    if any("\x00" in argument for argument in argv):
+        raise InvariantError("EGP-2.0", "command arguments must not contain NUL")
+    return argv
+
+
+def _bounded_output(stdout: str, stderr: str) -> str:
+    combined = "\n".join(part.strip() for part in (stdout, stderr) if part.strip())
+    if not combined:
+        return "no output"
+    return combined[-_OUTPUT_LIMIT:]
+
+
+def _execute_command(
+    repo_root: Path, command: str | Sequence[str]
+) -> tuple[bool, str, float]:
+    argv = _command_argv(command)
+    return _execute_argv(repo_root, argv)
+
+
+def _execute_argv(repo_root: Path, argv: Sequence[str]) -> tuple[bool, str, float]:
+    started = time.monotonic()
     try:
         proc = subprocess.run(
-            command,
+            argv,
             cwd=repo_root,
             capture_output=True,
             text=True,
-            shell=True,
+            shell=False,
             check=False,
         )
+    except (OSError, ValueError) as exc:
+        elapsed = time.monotonic() - started
+        return False, f"spawn failure: {exc}", elapsed
+    elapsed = time.monotonic() - started
+    return proc.returncode == 0, _bounded_output(proc.stdout, proc.stderr), elapsed
+
+
+def run_gate(repo_root: Path, gate: str, command: str) -> GateResult:
+    """Execute one quality gate as an argv vector, never through a shell."""
+    try:
+        passed, detail, elapsed = _execute_command(repo_root, command)
+    except InvariantError as exc:
+        return GateResult(gate, command, False, str(exc))
+    return GateResult(gate, command, passed, detail, elapsed)
+
+
+def _git_file_names(repo_root: Path) -> set[str]:
+    names: set[str] = set()
+    for arguments in (
+        ["git", "ls-files", "-z"],
+        ["git", "ls-files", "--others", "--exclude-standard", "-z"],
+        ["git", "ls-files", "--others", "--ignored", "--exclude-standard", "-z"],
+    ):
+        try:
+            result = subprocess.run(
+                arguments,
+                cwd=repo_root,
+                capture_output=True,
+                check=True,
+            )
+        except (OSError, subprocess.CalledProcessError) as exc:
+            raise ManifestValidationError(f"git workspace query failed: {exc}") from exc
+        for name in result.stdout.decode(
+            "utf-8", errors="surrogateescape"
+        ).split("\0"):
+            if name:
+                names.add(name)
+    return names
+
+
+def _read_file_state(path: Path) -> _FileState | None:
+    if path.is_symlink():
+        return _FileState(b"", stat.S_IMODE(path.lstat().st_mode), os.readlink(path))
+    if not path.is_file():
+        return None
+    return _FileState(path.read_bytes(), stat.S_IMODE(path.stat().st_mode), None)
+
+
+def _snapshot_workspace(repo_root: Path) -> _WorkspaceSnapshot:
+    return _WorkspaceSnapshot(
+        {name: _read_file_state(repo_root / name) for name in _git_file_names(repo_root)}
+    )
+
+
+def _git_output(repo_root: Path, arguments: list[str]) -> bytes:
+    environment = os.environ.copy()
+    environment["GIT_OPTIONAL_LOCKS"] = "0"
+    try:
+        result = subprocess.run(
+            ["git", *arguments],
+            cwd=repo_root,
+            capture_output=True,
+            check=True,
+            env=environment,
+        )
+    except (OSError, subprocess.CalledProcessError) as exc:
+        raise ManifestValidationError(
+            f"git control query failed ({' '.join(arguments)}): {exc}"
+        ) from exc
+    return result.stdout
+
+
+def _git_optional_output(repo_root: Path, arguments: list[str]) -> bytes:
+    environment = os.environ.copy()
+    environment["GIT_OPTIONAL_LOCKS"] = "0"
+    try:
+        result = subprocess.run(
+            ["git", *arguments],
+            cwd=repo_root,
+            capture_output=True,
+            check=False,
+            env=environment,
+        )
     except OSError as exc:
-        return GateResult(gate, command, False, f"spawn failure: {exc}")
-    tail = (proc.stdout + proc.stderr).strip().splitlines()[-1:] or [""]
-    return GateResult(gate, command, proc.returncode == 0, tail[0])
+        raise ManifestValidationError(
+            f"git control query failed ({' '.join(arguments)}): {exc}"
+        ) from exc
+    if result.returncode not in (0, 1):
+        raise ManifestValidationError(
+            f"git control query failed ({' '.join(arguments)}): "
+            f"{result.stderr.decode(errors='replace').strip()}"
+        )
+    return result.stdout
+
+
+def _git_path(repo_root: Path, name: str) -> Path:
+    raw = _git_output(repo_root, ["rev-parse", "--git-path", name]).decode(
+        "utf-8", errors="strict"
+    ).strip()
+    if not raw:
+        raise ManifestValidationError(f"git returned an empty path for {name}")
+    path = Path(raw)
+    return path.resolve() if path.is_absolute() else (repo_root / path).resolve()
+
+
+def _git_directory(repo_root: Path, argument: str) -> Path:
+    raw = _git_output(repo_root, ["rev-parse", argument]).decode(
+        "utf-8", errors="strict"
+    ).strip()
+    if not raw:
+        raise ManifestValidationError(f"git returned an empty path for {argument}")
+    path = Path(raw)
+    return path.resolve() if path.is_absolute() else (repo_root / path).resolve()
+
+
+def _metadata_files(
+    roots: Sequence[Path], excluded_path: Path | None = None
+) -> dict[Path, _FileState]:
+    files: dict[Path, _FileState] = {}
+    for root in roots:
+        if root == excluded_path:
+            continue
+        if root.is_symlink() or root.is_file():
+            state = _read_file_state(root)
+            if state is not None:
+                files[root] = state
+        elif root.is_dir():
+            for path in root.rglob("*"):
+                if path == excluded_path:
+                    continue
+                if path.is_symlink() or path.is_file():
+                    state = _read_file_state(path)
+                    if state is not None:
+                        files[path] = state
+    return files
+
+
+def _metadata_directories(roots: Sequence[Path]) -> dict[Path, int]:
+    directories: dict[Path, int] = {}
+    for root in roots:
+        if root.is_dir():
+            directories[root] = stat.S_IMODE(root.stat().st_mode)
+            directories.update(
+                {
+                    path: stat.S_IMODE(path.stat().st_mode)
+                    for path in root.rglob("*")
+                    if path.is_dir()
+                }
+            )
+    return directories
+
+
+def _snapshot_git_control(repo_root: Path) -> _GitControlSnapshot:
+    index_path = _git_path(repo_root, "index")
+    common_dir = _git_directory(repo_root, "--git-common-dir")
+    git_dir = _git_directory(repo_root, "--git-dir")
+    lock_path = common_dir / _LOCK_NAME
+    roots = tuple(
+        dict.fromkeys(
+            (
+                common_dir,
+                git_dir,
+                index_path,
+            )
+        )
+    )
+    head = _git_output(repo_root, ["rev-parse", "HEAD"]).decode().strip()
+    symbolic_head = _git_optional_output(
+        repo_root, ["symbolic-ref", "-q", "HEAD"]
+    ).decode().strip()
+    refs = _git_output(
+        repo_root,
+        ["for-each-ref", "--format=%(refname)%00%(objectname)%00"],
+    )
+    index_state = _git_output(repo_root, ["ls-files", "--stage", "-z"])
+    status = _git_output(
+        repo_root,
+        [
+            "status",
+            "--porcelain=v2",
+            "-z",
+            "--untracked-files=all",
+            "--ignored=matching",
+        ],
+    )
+    return _GitControlSnapshot(
+        roots=roots,
+        files=_metadata_files(roots, lock_path),
+        directories=_metadata_directories(roots),
+        lock_path=lock_path,
+        index_path=index_path,
+        index_state=index_state,
+        head=head,
+        symbolic_head=symbolic_head,
+        refs=refs,
+        status=status,
+    )
+
+
+def _git_control_changes(
+    repo_root: Path, snapshot: _GitControlSnapshot
+) -> tuple[str, ...]:
+    current = _snapshot_git_control(repo_root)
+    changed: list[str] = []
+    if current.head != snapshot.head:
+        changed.append("HEAD")
+    if current.symbolic_head != snapshot.symbolic_head:
+        changed.append("symbolic HEAD")
+    if current.refs != snapshot.refs:
+        changed.append("refs")
+    if current.index_state != snapshot.index_state:
+        changed.append("index")
+    if current.files != snapshot.files or current.directories != snapshot.directories:
+        changed.append("complete Git metadata tree")
+    return tuple(changed)
+
+
+def _restore_git_control(
+    repo_root: Path, snapshot: _GitControlSnapshot
+) -> None:
+    current = _metadata_files(snapshot.roots, snapshot.lock_path)
+    for path in sorted(
+        set(current) - set(snapshot.files),
+        key=lambda item: len(item.parts),
+        reverse=True,
+    ):
+        _remove_path(path)
+    for path, original in snapshot.files.items():
+        if _read_file_state(path) == original:
+            continue
+        if path.exists() or path.is_symlink():
+            _remove_path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if original.symlink_target is not None:
+            path.symlink_to(original.symlink_target)
+        else:
+            path.write_bytes(original.contents)
+            path.chmod(original.mode)
+    for directory, mode in sorted(
+        snapshot.directories.items(), key=lambda item: len(item[0].parts)
+    ):
+        directory.mkdir(parents=True, exist_ok=True)
+        directory.chmod(mode)
+    current_directories = _metadata_directories(snapshot.roots)
+    for directory in sorted(
+        set(current_directories) - set(snapshot.directories),
+        key=lambda item: len(item.parts),
+        reverse=True,
+    ):
+        try:
+            directory.rmdir()
+        except OSError:
+            pass
+
+
+def _verify_restored_state(
+    repo_root: Path,
+    workspace: _WorkspaceSnapshot,
+    git_control: _GitControlSnapshot,
+) -> None:
+    current_workspace = _snapshot_workspace(repo_root)
+    workspace_changes = workspace.changed(current_workspace)
+    current_git = _snapshot_git_control(repo_root)
+    git_changes: list[str] = []
+    if current_git.head != git_control.head:
+        git_changes.append("HEAD")
+    if current_git.symbolic_head != git_control.symbolic_head:
+        git_changes.append("symbolic HEAD")
+    if current_git.refs != git_control.refs:
+        git_changes.append("refs")
+    if current_git.index_state != git_control.index_state:
+        git_changes.append("index")
+    if (
+        current_git.files != git_control.files
+        or current_git.directories != git_control.directories
+    ):
+        changed_files = sorted(
+            str(path)
+            for path in set(current_git.files) | set(git_control.files)
+            if current_git.files.get(path) != git_control.files.get(path)
+        )
+        changed_directories = sorted(
+            str(path)
+            for path in set(current_git.directories) | set(git_control.directories)
+            if current_git.directories.get(path) != git_control.directories.get(path)
+        )
+        git_changes.append(
+            "complete Git metadata tree"
+            + (
+                f" files={changed_files}, directories={changed_directories}"
+                if changed_files or changed_directories
+                else ""
+            )
+        )
+    if current_git.status != git_control.status:
+        git_changes.append("index/worktree status")
+    if workspace_changes or git_changes:
+        detail = [*workspace_changes, *git_changes]
+        raise InvariantError(
+            "EGP-2.0", f"rollback verification failed: {', '.join(detail)}"
+        )
+
+
+def _remove_path(path: Path) -> None:
+    if path.is_symlink() or path.is_file():
+        try:
+            path.unlink()
+        except PermissionError:
+            path.chmod(stat.S_IMODE(path.stat().st_mode) | stat.S_IWRITE)
+            path.unlink()
+    elif path.is_dir():
+        shutil.rmtree(path)
+
+
+def _restore_workspace(repo_root: Path, snapshot: _WorkspaceSnapshot) -> None:
+    current = _snapshot_workspace(repo_root)
+    changed_names = set(snapshot.changed(current))
+    new_names = changed_names - set(snapshot.files)
+    parent_candidates: set[Path] = set()
+    for name in sorted(new_names, key=lambda item: len(Path(item).parts), reverse=True):
+        target = repo_root / name
+        parent_candidates.add(target.parent)
+        _remove_path(target)
+
+    for name in changed_names & set(snapshot.files):
+        original = snapshot.files[name]
+        target = repo_root / name
+        if original is None:
+            _remove_path(target)
+            continue
+        if target.exists() or target.is_symlink():
+            _remove_path(target)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if original.symlink_target is not None:
+            target.symlink_to(original.symlink_target)
+        else:
+            target.write_bytes(original.contents)
+            target.chmod(original.mode)
+
+    for parent in sorted(parent_candidates, key=lambda item: len(item.parts), reverse=True):
+        current_parent = parent
+        while current_parent != repo_root:
+            try:
+                current_parent.rmdir()
+            except OSError:
+                break
+            current_parent = current_parent.parent
+
+    after = _snapshot_workspace(repo_root)
+    remaining = snapshot.changed(after)
+    if remaining:
+        raise InvariantError(
+            "EGP-2.0", f"rollback verification failed: {', '.join(remaining)}"
+        )
 
 
 def rollback_bounded_files(repo_root: Path, bounded: tuple[str, ...], ref: str) -> None:
-    """Restore bounded files to ``ref`` (WPS rollback strategy)."""
-    tracked = [b for b in bounded if not b.endswith("/")]
-    if tracked:
-        subprocess.run(
-            ["git", "checkout", ref, "--", *tracked],
+    """Compatibility helper restoring tracked bounded paths without a hard reset."""
+    tracked = [path for path in bounded if not path.endswith("/")]
+    if not tracked:
+        return
+    result = subprocess.run(
+        ["git", "checkout", ref, "--", *tracked],
+        cwd=repo_root,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        raise InvariantError("EGP-2.0", f"bounded rollback failed: {result.stderr.strip()}")
+
+
+@contextmanager
+def _workspace_lock(repo_root: Path) -> Iterator[None]:
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "--git-common-dir"],
             cwd=repo_root,
             capture_output=True,
             text=True,
-            check=False,
+            check=True,
         )
+    except (OSError, subprocess.CalledProcessError) as exc:
+        raise ManifestValidationError(f"cannot resolve workspace lock path: {exc}") from exc
+    raw_common_dir = result.stdout.strip()
+    if not raw_common_dir:
+        raise ManifestValidationError("git returned an empty workspace lock path")
+    candidate = Path(raw_common_dir)
+    common_dir = candidate if candidate.is_absolute() else repo_root / candidate
+    target = common_dir.resolve() / _LOCK_NAME
+    target.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        descriptor = os.open(target, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    except FileExistsError as exc:
+        raise InvariantError("EGP-2.0", f"workspace lock is already held: {target}") from exc
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8") as stream:
+            stream.write(f"pid={os.getpid()}\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+        yield
+    finally:
+        target.unlink(missing_ok=True)
+
+
+def _safe_evidence_target(repo_root: Path, wp: WorkPackage) -> tuple[str, Path]:
+    if not wp.expected_evidence:
+        raise ManifestValidationError(f"{wp.work_package_id} has no expected evidence path")
+    relative = wp.expected_evidence[0]
+    target = resolve_evidence_target(
+        repo_root,
+        wp.bounded_files,
+        relative,
+        allow_existing_unbounded=wp.status == "Completed",
+    )
+    return relative, target
+
+
+def _validate_expected_outputs(
+    repo_root: Path, wp: WorkPackage, changed: tuple[str, ...]
+) -> None:
+    raw_outputs = wp.raw.get("outputs", {}).get("expected_source_files", [])
+    if not isinstance(raw_outputs, list) or not raw_outputs:
+        raise InvariantError(
+            "WPS-1.0", "outputs.expected_source_files must be non-empty for execution"
+        )
+    changed_set = set(changed)
+    missing: list[str] = []
+    unchanged: list[str] = []
+    unsafe: list[str] = []
+    for raw in raw_outputs:
+        if not isinstance(raw, str) or not raw.strip():
+            unsafe.append(repr(raw))
+            continue
+        relative = raw.strip()
+        posix = PurePosixPath(relative)
+        windows = PureWindowsPath(relative)
+        if (
+            posix.is_absolute()
+            or windows.is_absolute()
+            or windows.drive
+            or ".." in posix.parts
+            or ".." in windows.parts
+        ):
+            unsafe.append(relative)
+            continue
+        normalized = posix.as_posix()
+        target = (repo_root / Path(*posix.parts)).resolve()
+        try:
+            target.relative_to(repo_root)
+        except ValueError:
+            unsafe.append(relative)
+            continue
+        if not audit_boundaries(wp.bounded_files, (normalized,)).compliant:
+            unsafe.append(relative)
+        elif not target.is_file():
+            missing.append(normalized)
+        elif normalized not in changed_set:
+            unchanged.append(normalized)
+    failures: list[str] = []
+    if unsafe:
+        failures.append(f"unsafe/out-of-bounds: {', '.join(unsafe)}")
+    if missing:
+        failures.append(f"missing: {', '.join(missing)}")
+    if unchanged:
+        failures.append(f"not changed by task: {', '.join(unchanged)}")
+    if failures:
+        raise InvariantError(
+            "WPS-1.0",
+            "expected source output validation failed (" + "; ".join(failures) + ")",
+        )
+
+
+def _gate_evidence(gates: Sequence[GateResult]) -> list[dict[str, object]]:
+    return [
+        {
+            "gate": gate.gate,
+            "command": gate.command,
+            "result": "PASS" if gate.passed else "FAIL",
+            "detail": (
+                f"{gate.detail} (duration={gate.duration_seconds:.3f}s)"
+            )[-_OUTPUT_LIMIT:],
+        }
+        for gate in gates
+    ]
+
+
+def _precondition_evidence(
+    preconditions: Sequence[PreconditionResult],
+) -> list[dict[str, object]]:
+    return [
+        {
+            "predicate": precondition.predicate,
+            "result": "PASS" if precondition.passed else "FAIL",
+        }
+        for precondition in preconditions
+    ]
+
+
+def _halt_with_evidence(
+    machine: LifecycleMachine,
+    repo_root: Path,
+    wp: WorkPackage,
+    evidence_target: Path,
+    snapshot: _WorkspaceSnapshot,
+    git_control: _GitControlSnapshot,
+    preconditions: Sequence[PreconditionResult],
+    gates: Sequence[GateResult],
+    started_at: datetime,
+    reason: str,
+) -> tuple[str, tuple[str, ...]]:
+    attempted = snapshot.changed(_snapshot_workspace(repo_root))
+    audit = audit_boundaries(wp.bounded_files, attempted)
+    rollback_error: str | None = None
+    try:
+        _restore_git_control(repo_root, git_control)
+        _restore_workspace(repo_root, snapshot)
+        _verify_restored_state(repo_root, snapshot, git_control)
+    except (AfrpError, OSError, ValueError, UnicodeError) as exc:
+        rollback_error = str(exc)
+    rollback_detail = (
+        "task-introduced changes rolled back and verified"
+        if rollback_error is None
+        else f"rollback FAILED: {rollback_error}"
+    )
+    full_reason = f"{reason}; {rollback_detail}"
+    record = compose_boundary_evidence(
+        wp,
+        audit,
+        _gate_evidence(gates),
+        started_at=started_at,
+        finished_at=datetime.now(UTC),
+        final_state="HALTED",
+        preconditions=_precondition_evidence(preconditions),
+    )
+    record["verdict"]["review_note"] = full_reason
+    write_evidence(record, repo_root, evidence_target)
+    full_reason = (
+        f"{full_reason}; HALTED evidence emitted to "
+        f"{evidence_target.relative_to(repo_root)}"
+    )
+    machine.halt(full_reason)
+    return full_reason, audit.violations
 
 
 def orchestrate(
@@ -133,77 +734,345 @@ def orchestrate(
     skip_gates: bool = False,
     base_ref: str = "HEAD",
 ) -> RunReport:
-    """Drive ``wp_id`` through the RSM-1.0 lifecycle.
-
-    ``dry_run`` evaluates baseline, contract, and preconditions but executes
-    no gates and never rolls back. ``skip_gates`` (used when gates already ran
-    externally) records gates as skipped-pass.
-    """
+    """Drive ``wp_id`` through RSM-1.0 with locked execution and precise rollback."""
+    del base_ref  # retained for public API compatibility
+    root = repo_root.resolve()
     machine = LifecycleMachine()
     preconditions: list[PreconditionResult] = []
     gates: list[GateResult] = []
     violations: tuple[str, ...] = ()
     halted_reason: str | None = None
+    snapshot: _WorkspaceSnapshot | None = None
+    git_control: _GitControlSnapshot | None = None
     wp: WorkPackage | None = None
+    evidence_target: Path | None = None
+    execution_started_at: datetime | None = None
+
+    if skip_gates:
+        reason = "skip_gates is prohibited; required gates must execute"
+        machine.halt(reason)
+        return _report(wp_id, machine, preconditions, gates, violations, reason)
 
     try:
-        verify_baseline(repo_root, repo_root / LEDGER_RELPATH)
+        verify_baseline(root, root / LEDGER_RELPATH)
         machine.advance(LifecycleState.BASELINE_VERIFIED, "SHA256 ledger PASS")
-
-        wp = load_work_package(repo_root, wp_id)
+        wp = load_work_package(root, wp_id)
         machine.advance(LifecycleState.WORK_PACKAGE_LOADED, wp.title)
 
         for raw in wp.raw.get("preconditions", []):
-            pre_outcome = evaluate_precondition(repo_root, str(raw["predicate"]))
-            preconditions.append(pre_outcome)
-        failed = [p for p in preconditions if not p.passed]
+            outcome = evaluate_precondition(root, str(raw["predicate"]))
+            preconditions.append(outcome)
+        failed = [result for result in preconditions if not result.passed]
         if failed:
-            machine.halt(f"precondition failed: {failed[0].predicate}")
-            return _report(wp_id, machine, preconditions, gates, violations,
-                           machine.history[-1][1])
-        machine.advance(LifecycleState.PRECONDITIONS_VERIFIED,
-                        f"{len(preconditions)} predicate(s) PASS")
-
-        machine.advance(LifecycleState.EXECUTION_AUTHORIZED,
-                        f"write lock: {len(wp.bounded_files)} bounded file(s)")
+            reason = f"precondition failed: {failed[0].predicate}"
+            machine.halt(reason)
+            return _report(wp_id, machine, preconditions, gates, violations, reason)
+        machine.advance(
+            LifecycleState.PRECONDITIONS_VERIFIED,
+            f"{len(preconditions)} predicate(s) PASS",
+        )
         if dry_run:
-            machine.halt("dry-run complete (no execution attempted)")
-            return _report(wp_id, machine, preconditions, gates, violations,
-                           "dry-run complete (no execution attempted)")
-
-        machine.advance(LifecycleState.EXECUTING, "delegated to AEF-02 engineer")
-        machine.advance(LifecycleState.VALIDATING, "running quality gates")
-
-        if skip_gates:
-            gates.extend(
-                GateResult(g, cmd, True, "recorded as externally executed")
-                for g, cmd, _req in wp.quality_gates
+            machine.advance(
+                LifecycleState.EXECUTION_AUTHORIZED,
+                f"dry-run authorization: {len(wp.bounded_files)} bounded file(s)",
             )
-        else:
-            for gate, command, required in wp.quality_gates:
-                gate_outcome = run_gate(repo_root, gate, command)
+            reason = "dry-run complete (no execution attempted)"
+            machine.halt(reason)
+            return _report(wp_id, machine, preconditions, gates, violations, reason)
+
+        with _workspace_lock(root):
+            machine.advance(
+                LifecycleState.EXECUTION_AUTHORIZED,
+                f"exclusive workspace lock: {len(wp.bounded_files)} bounded file(s)",
+            )
+            relative_evidence, evidence_target = _safe_evidence_target(root, wp)
+            if evidence_target.exists():
+                record = load_evidence(root, evidence_target)
+                validate_existing_evidence(record, wp, evidence_target)
+                reason = (
+                    f"validated existing evidence {relative_evidence}; refusing overwrite"
+                )
+                machine.halt(reason)
+                return _report(
+                    wp_id, machine, preconditions, gates, violations, reason
+                )
+            snapshot = _snapshot_workspace(root)
+            git_control = _snapshot_git_control(root)
+            execution_started_at = datetime.now(UTC)
+            command = wp.raw.get("execution", {}).get("command")
+            if command is None:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    "non-dry-run execution requires execution.command",
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
+            try:
+                task_argv = _command_argv(command)
+            except InvariantError as exc:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    str(exc),
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
+            machine.advance(LifecycleState.EXECUTING, "executing WPS execution.command")
+            passed, detail, duration = _execute_argv(root, task_argv)
+            if not passed:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    f"task command failed after {duration:.3f}s: {detail}",
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
+
+            task_changed = snapshot.changed(_snapshot_workspace(root))
+            git_changes = _git_control_changes(root, git_control)
+            if git_changes:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    "task command mutated prohibited Git state: "
+                    + ", ".join(git_changes),
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
+            task_audit = audit_boundaries(wp.bounded_files, task_changed)
+            violations = task_audit.violations
+            if not task_audit.compliant:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    f"FIT-005 violation: {len(violations)} file(s) out of bounds",
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
+            try:
+                _validate_expected_outputs(root, wp, task_changed)
+            except InvariantError as exc:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    str(exc),
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
+
+            post_task_snapshot = _snapshot_workspace(root)
+            machine.advance(LifecycleState.VALIDATING, "running required quality gates")
+            for gate, gate_command, required in wp.quality_gates:
+                gate_outcome = run_gate(root, gate, gate_command)
                 gates.append(gate_outcome)
+                git_changes = _git_control_changes(root, git_control)
+                if git_changes:
+                    reason, violations = _halt_with_evidence(
+                        machine,
+                        root,
+                        wp,
+                        evidence_target,
+                        snapshot,
+                        git_control,
+                        preconditions,
+                        gates,
+                        execution_started_at,
+                        f"gate {gate} mutated prohibited Git state: "
+                        + ", ".join(git_changes),
+                    )
+                    return _report(
+                        wp_id, machine, preconditions, gates, violations, reason
+                    )
                 if required and not gate_outcome.passed:
-                    rollback_bounded_files(repo_root, wp.bounded_files, base_ref)
-                    machine.halt(f"gate {gate} failed; bounded files rolled back")
-                    return _report(wp_id, machine, preconditions, gates, violations,
-                                   machine.history[-1][1])
+                    reason, violations = _halt_with_evidence(
+                        machine,
+                        root,
+                        wp,
+                        evidence_target,
+                        snapshot,
+                        git_control,
+                        preconditions,
+                        gates,
+                        execution_started_at,
+                        f"gate {gate} failed",
+                    )
+                    return _report(
+                        wp_id, machine, preconditions, gates, violations, reason
+                    )
+                current_workspace = _snapshot_workspace(root)
+                final_changed = snapshot.changed(current_workspace)
+                try:
+                    _validate_expected_outputs(root, wp, final_changed)
+                except InvariantError as exc:
+                    reason, violations = _halt_with_evidence(
+                        machine,
+                        root,
+                        wp,
+                        evidence_target,
+                        snapshot,
+                        git_control,
+                        preconditions,
+                        gates,
+                        execution_started_at,
+                        str(exc),
+                    )
+                    return _report(
+                        wp_id, machine, preconditions, gates, violations, reason
+                    )
+                gate_changes = post_task_snapshot.changed(current_workspace)
+                substantive_gate_changes = tuple(
+                    path for path in gate_changes if not is_tooling_artifact(path)
+                )
+                if substantive_gate_changes:
+                    reason, violations = _halt_with_evidence(
+                        machine,
+                        root,
+                        wp,
+                        evidence_target,
+                        snapshot,
+                        git_control,
+                        preconditions,
+                        gates,
+                        execution_started_at,
+                        f"gate {gate} mutated non-tooling workspace files: "
+                        + ", ".join(substantive_gate_changes),
+                    )
+                    return _report(
+                        wp_id, machine, preconditions, gates, violations, reason
+                    )
+                _restore_workspace(root, post_task_snapshot)
 
-        audit = audit_boundaries(wp.bounded_files, modified_files(repo_root, base_ref))
-        violations = audit.violations
-        if not audit.compliant:
-            machine.halt(f"FIT-005 violation: {len(violations)} file(s) out of bounds")
-            return _report(wp_id, machine, preconditions, gates, violations,
-                           machine.history[-1][1])
+            task_changed = snapshot.changed(_snapshot_workspace(root))
+            audit = audit_boundaries(wp.bounded_files, task_changed)
+            violations = audit.violations
+            if not audit.compliant:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    f"FIT-005 violation: {len(violations)} file(s) out of bounds",
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
+            try:
+                _validate_expected_outputs(root, wp, task_changed)
+            except InvariantError as exc:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    str(exc),
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
 
-        machine.advance(LifecycleState.EVIDENCE_GENERATED, "evidence composition delegated")
-        machine.advance(LifecycleState.REVIEW_PENDING, "awaiting ARB disposition")
-    except AfrpError as exc:
-        if not machine.terminal:
-            machine.halt(str(exc))
+            record = compose_boundary_evidence(
+                wp,
+                audit,
+                _gate_evidence(gates),
+                started_at=execution_started_at,
+                finished_at=datetime.now(UTC),
+                preconditions=_precondition_evidence(preconditions),
+            )
+            write_evidence(record, root, evidence_target)
+            evidence_note = f"atomically emitted {relative_evidence}"
+            machine.advance(LifecycleState.EVIDENCE_GENERATED, evidence_note)
+            machine.advance(LifecycleState.REVIEW_PENDING, "awaiting ARB disposition")
+    except (AfrpError, OSError, ValueError, UnicodeError) as exc:
         halted_reason = str(exc)
+        if (
+            snapshot is not None
+            and git_control is not None
+            and wp is not None
+            and evidence_target is not None
+            and execution_started_at is not None
+            and not machine.terminal
+        ):
+            try:
+                halted_reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    halted_reason,
+                )
+            except (AfrpError, OSError, ValueError, UnicodeError) as rollback_error:
+                try:
+                    _restore_git_control(root, git_control)
+                    _restore_workspace(root, snapshot)
+                    _verify_restored_state(root, snapshot, git_control)
+                    halted_reason += (
+                        "; HALTED evidence publication failed: "
+                        f"{rollback_error}; rollback verified"
+                    )
+                except (
+                    AfrpError,
+                    OSError,
+                    ValueError,
+                    UnicodeError,
+                ) as final_rollback_error:
+                    halted_reason += (
+                        f"; HALTED evidence failed: {rollback_error}; "
+                        f"rollback failed: {final_rollback_error}"
+                    )
+        if not machine.terminal:
+            machine.halt(halted_reason)
 
-    return _report(wp_id, machine, preconditions, gates, violations, halted_reason)
+    return _report(
+        wp_id, machine, preconditions, gates, violations, halted_reason
+    )
 
 
 def _report(
@@ -217,7 +1086,7 @@ def _report(
     return RunReport(
         work_package_id=wp_id,
         final_state=machine.state,
-        transitions=tuple((s.value, note) for s, note in machine.history),
+        transitions=tuple((state.value, note) for state, note in machine.history),
         preconditions=tuple(preconditions),
         gates=tuple(gates),
         boundary_violations=violations,

@@ -14,7 +14,7 @@ from afrp.core.orchestrator import orchestrate
 @click.option("--dry-run", is_flag=True, default=False,
               help="Evaluate baseline/contract/preconditions only; never execute.")
 @click.option("--skip-gates", is_flag=True, default=False,
-              help="Record gates as externally executed (post-hoc audit mode).")
+              help="Prohibited compatibility flag; supplying it halts execution.")
 @click.option("--base-ref", default="HEAD", show_default=True,
               help="Git ref used for FIT-005 diff and rollback.")
 @click.option(
@@ -46,5 +46,5 @@ def run_command(
     for name in report.boundary_violations:
         click.echo(f"OUT-OF-BOUNDS {name}")
     click.echo(f"final_state: {report.final_state}")
-    if report.final_state is LifecycleState.HALTED and not dry_run:
+    if report.final_state is LifecycleState.HALTED and (not dry_run or skip_gates):
         raise SystemExit(3)
