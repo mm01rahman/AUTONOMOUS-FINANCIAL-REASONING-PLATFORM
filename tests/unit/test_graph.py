@@ -173,8 +173,16 @@ class TestNextExecutable:
 
     def test_real_registry_next_targets(self) -> None:
         registry = load_registry(REPO_ROOT / "03-engineering" / "CAPABILITY_REGISTRY.yaml")
-        ready_ids = {c.id for c in next_executable(registry)}
-        assert "EOS-GRAPH" in ready_ids
+        ready = next_executable(registry)
+        nodes = registry.by_id()
+        # Stable invariant: every ready target is not COMPLETE and has only
+        # COMPLETE dependencies, regardless of build progress.
+        for capability in ready:
+            assert capability.status is not CapabilityStatus.COMPLETE
+            for dep in capability.depends_on:
+                assert nodes[dep].status is CapabilityStatus.COMPLETE
+        incomplete = [c for c in registry.capabilities if c.status is not CapabilityStatus.COMPLETE]
+        assert bool(ready) == bool(incomplete)
 
 
 class TestPlanCommand:

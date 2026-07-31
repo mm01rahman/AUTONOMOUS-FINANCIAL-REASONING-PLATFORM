@@ -1,0 +1,126 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0005"
+capability_id:
+  id: "EOS-VALIDATOR"
+  version: "1.0"
+title: "Implement afrp validate command & AST Invariant Checker"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "EOS-CLI"
+  traceability:
+    implements_req: ["FR-003", "FIT-002", "FIT-004", "EDR-002", "EDR-004"]
+    trace_sls: "ROS-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-GRAPH')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/afrp-cli/afrp/"
+      - "tests/unit/"
+      - "05-work-packages/WP-IMP-0005/evidence/"
+    read:
+      - "tools/afrp-cli/"
+      - "06-runtime/"
+      - "00-governance/KERNEL.md"
+
+execution:
+  priority: "high"
+  estimated_complexity: "small"
+  estimated_duration: "1h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "00-governance/KERNEL.md"
+
+outputs:
+  expected_source_files:
+    - "tools/afrp-cli/afrp/core/astcheck.py"
+    - "tools/afrp-cli/afrp/commands/validate.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_validator.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0005/evidence/EXEC-003.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/afrp-cli/afrp/core/astcheck.py"
+    - "tools/afrp-cli/afrp/commands/validate.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_validator.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0005/evidence/EXEC-003.yaml"
+
+produces:
+  capability:
+    id: "EOS-VALIDATOR"
+    version: "1.0"
+  unlocks:
+    - id: "EOS-EVIDENCE"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "tools/afrp-cli/afrp/core/astcheck.py"
+    - "tools/afrp-cli/afrp/commands/validate.py"
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tests/unit/test_validator.py"
+  non_goals:
+    - "Do not implement evidence emission (deferred to IMP-0006)."
+    - "Do not implement health metrics (deferred to IMP-0007)."
+
+requirements:
+  ast_checker:
+    module: "tools/afrp-cli/afrp/core/astcheck.py"
+    rules:
+      - "FIT-002: flag bare 'except:' handlers and 'except Exception' without re-raise."
+      - "FIT-002: flag function definitions missing parameter or return annotations."
+      - "FIT-004/EDR-002: flag imports of afrp_runtime.layerN from a different layer package, and layer imports from common."
+      - "Report findings as structured Violation records with file, line, rule."
+  validate_command:
+    module: "tools/afrp-cli/afrp/commands/validate.py"
+    rules:
+      - "Scan configured source roots (tools/afrp-cli, 06-runtime, 07-research, tests)."
+      - "Re-assert FIT-006 kernel budget via existing kernel parser."
+      - "Exit non-zero when violations exist; render each violation."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/afrp-cli/ tests/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/afrp-cli/ tests/unit/test_validator.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_validator.py -v"
+
+completion:
+  success_requires:
+    - "'afrp validate' command registered and executable."
+    - "FIT-002 and FIT-004 proven by positive and negative fixtures."
+    - "Quality gates pass with zero errors."
+
+failure_modes:
+  ERR-CONTRACT-REFERENCE: "Missing KERNEL.md or scan root."
+  ERR-INVARIANT-VIOLATION: "AST violations present in scanned sources."
+  ERR-EXEC-BOUNDARY: "Touched files outside bounded_files."
+
+execution_prompt: |
+  You are an autonomous AI Software Engineer executing Work Package WP-IMP-0005 in role AEF-02.
+  Implement afrp validate and the AST invariant checker strictly within bounded_files.
+  Run quality gates and generate EXEC-003.yaml evidence record upon completion.

@@ -1,4 +1,4 @@
-﻿"""Unit tests for WP-IMP-0003: afrp boot, manifest parser, kernel parser."""
+"""Unit tests for WP-IMP-0003: afrp boot, manifest parser, kernel parser."""
 
 from __future__ import annotations
 
