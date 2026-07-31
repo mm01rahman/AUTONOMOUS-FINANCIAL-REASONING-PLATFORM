@@ -46,6 +46,45 @@ def write_matrix(path: Path, doc: dict[str, object]) -> None:
     path.write_text(yaml.safe_dump(doc, sort_keys=False), encoding="utf-8")
 
 
+def write_full_health_contracts(repo_root: Path) -> None:
+    engineering = repo_root / "03-engineering"
+    engineering.mkdir(parents=True, exist_ok=True)
+    write_matrix(
+        engineering / "TRACEABILITY_MATRIX.yaml",
+        matrix_doc(
+            [
+                req(
+                    "R-1",
+                    "implemented",
+                    ["src/a.py"],
+                    ["tests/test_a.py"],
+                )
+            ]
+        ),
+    )
+    (engineering / "CAPABILITY_REGISTRY.yaml").write_text(
+        yaml.safe_dump(
+            {
+                "schema_version": "1.0",
+                "registry_id": "TCR-HEALTH",
+                "capabilities": [
+                    {
+                        "id": "TEST-CAP",
+                        "version": "1.0.0",
+                        "title": "Test Capability",
+                        "owner": "qa",
+                        "status": "COMPLETE",
+                        "depends_on": [],
+                        "work_package": None,
+                    }
+                ],
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+
+
 class TestMatrixParser:
     def test_parses_real_matrix(self) -> None:
         matrix = load_matrix(REPO_ROOT / "03-engineering" / "TRACEABILITY_MATRIX.yaml")
@@ -186,8 +225,9 @@ class TestHealthCommand:
         assert "fit_007:" in outcome.output
 
     def test_assert_full_uses_fresh_collection(
-        self, monkeypatch: pytest.MonkeyPatch
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
     ) -> None:
+        write_full_health_contracts(tmp_path)
         calls: list[Path] = []
 
         def fake_collect(root: Path) -> float:
@@ -197,10 +237,10 @@ class TestHealthCommand:
         monkeypatch.setattr("afrp.commands.health.collect_coverage", fake_collect)
         runner = CliRunner()
         outcome = runner.invoke(
-            cli, ["health", "--repo-root", str(REPO_ROOT), "--assert-full"]
+            cli, ["health", "--repo-root", str(tmp_path), "--assert-full"]
         )
         assert outcome.exit_code == 0, outcome.output
-        assert calls == [REPO_ROOT.resolve()]
+        assert calls == [tmp_path.resolve()]
         assert "test_coverage: 87.5%" in outcome.output
 
     def test_health_halts_without_matrix(self, tmp_path: Path) -> None:
@@ -212,13 +252,7 @@ class TestHealthCommand:
     def test_absent_coverage_is_collected_in_normal_cli(
         self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
     ) -> None:
-        engineering = tmp_path / "03-engineering"
-        engineering.mkdir()
-        for name in ("TRACEABILITY_MATRIX.yaml", "CAPABILITY_REGISTRY.yaml"):
-            (engineering / name).write_text(
-                (REPO_ROOT / "03-engineering" / name).read_text(encoding="utf-8"),
-                encoding="utf-8",
-            )
+        write_full_health_contracts(tmp_path)
         calls: list[Path] = []
 
         def fake_collect(root: Path) -> float:
