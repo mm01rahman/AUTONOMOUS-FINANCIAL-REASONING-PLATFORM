@@ -93,9 +93,16 @@ requirements:
     title: "Runtime common services: config, logging, exceptions, FSM, seeds"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "RT-COMMON"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/config.py"
+      - "06-runtime/afrp_runtime/common/obslog.py"
+      - "06-runtime/afrp_runtime/common/errors.py"
+      - "06-runtime/afrp_runtime/common/statemachine.py"
+      - "06-runtime/afrp_runtime/common/seeds.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
   - id: "FR-009"
     title: "Layer 1 data platform: ingress, features, persistence, memory"
     source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
@@ -156,9 +163,12 @@ requirements:
     title: "Structured JSON logging and trace propagation schema"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "RT-COMMON"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/obslog.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
 
   # ── Non-functional requirements (ARCH-001 §2) ───────────────────────
   - id: "NFR-001"
@@ -186,9 +196,12 @@ requirements:
     title: "Deterministic math under identical inputs and seed 42"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
     capability: "RT-COMMON"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/seeds.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
   - id: "NFR-005"
     title: "RPO = 0 lost trades; RTO < 60s"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
@@ -324,9 +337,13 @@ requirements:
     title: "Business logic depends on abstract interfaces"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "RT-COMMON"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/contracts/cio.py"
+      - "06-runtime/afrp_runtime/contracts/envelope.py"
+    verified_by:
+      - "tests/unit/test_runtime_contracts.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
   - id: "EDR-002"
     title: "No direct cross-layer Python imports in 06-runtime"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
@@ -348,23 +365,32 @@ requirements:
     title: "No bare except or swallowed generic Exception"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "RT-COMMON"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/errors.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
   - id: "EDR-005"
     title: "Config precedence: Emergency > Mission Profile > Policy > Subsystem"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "RT-COMMON"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/config.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
   - id: "EDR-006"
     title: "Structured JSON logging conforming to OBS-01"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "RT-COMMON"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/obslog.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
   - id: "EDR-007"
     title: "Live decision path P99 <= 50ms"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
@@ -376,16 +402,22 @@ requirements:
     title: "Zero hardcoded secrets"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "RT-COMMON"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/config.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
   - id: "EDR-009"
     title: "Offline math testable under deterministic seed 42"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "RT-COMMON"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/common/seeds.py"
+    verified_by:
+      - "tests/unit/test_runtime_common.py"
+      - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
   - id: "EDR-010"
     title: "No protobuf breaking wire changes without major version bump"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"

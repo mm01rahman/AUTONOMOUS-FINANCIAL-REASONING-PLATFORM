@@ -27,7 +27,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["tools/afrp-cli/afrp"]
+packages = ["tools/afrp-cli/afrp", "06-runtime/afrp_runtime"]
 
 [tool.ruff]
 line-length = 100
@@ -39,7 +39,7 @@ select = ["E", "F", "W", "I", "N", "UP", "B", "ANN"]
 [tool.mypy]
 strict = true
 python_version = "3.11"
-mypy_path = ["tools/afrp-cli"]
+mypy_path = ["tools/afrp-cli", "06-runtime"]
 explicit_package_bases = true
 
 [tool.pytest.ini_options]

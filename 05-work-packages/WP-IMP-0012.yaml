@@ -1,0 +1,160 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0012"
+capability_id:
+  id: "RT-COMMON"
+  version: "1.0"
+title: "Implement runtime common services and typed contract bindings"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "RT-COMMON"
+  traceability:
+    implements_req: ["FR-008", "OBS-01", "NFR-004", "EDR-001", "EDR-004", "EDR-005", "EDR-006", "EDR-008", "EDR-009"]
+    trace_sls: "SYS-03"
+    trace_adr: ["ADR-0001", "ADR-0003"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-ORCHESTRATOR')"
+  - predicate: "capability.complete('RT-PROTO-CIO')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/"
+      - "tests/unit/"
+      - "05-work-packages/WP-IMP-0012/evidence/"
+    read:
+      - "02-architecture/"
+      - "proto/afrp/v1/"
+
+execution:
+  priority: "high"
+  estimated_complexity: "medium"
+  estimated_duration: "2h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "proto/afrp/v1/cio.proto"
+    - "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/common/config.py"
+    - "06-runtime/afrp_runtime/common/obslog.py"
+    - "06-runtime/afrp_runtime/common/errors.py"
+    - "06-runtime/afrp_runtime/common/statemachine.py"
+    - "06-runtime/afrp_runtime/common/seeds.py"
+    - "06-runtime/afrp_runtime/contracts/envelope.py"
+    - "06-runtime/afrp_runtime/contracts/cio.py"
+    - "tests/unit/test_runtime_common.py"
+    - "tests/unit/test_runtime_contracts.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+
+execution_results:
+  source_files_modified:
+    - "06-runtime/afrp_runtime/common/config.py"
+    - "06-runtime/afrp_runtime/common/obslog.py"
+    - "06-runtime/afrp_runtime/common/errors.py"
+    - "06-runtime/afrp_runtime/common/statemachine.py"
+    - "06-runtime/afrp_runtime/common/seeds.py"
+    - "06-runtime/afrp_runtime/contracts/envelope.py"
+    - "06-runtime/afrp_runtime/contracts/cio.py"
+    - "tests/unit/test_runtime_common.py"
+    - "tests/unit/test_runtime_contracts.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0012/evidence/EXEC-010.yaml"
+
+produces:
+  capability:
+    id: "RT-COMMON"
+    version: "1.0"
+  unlocks:
+    - id: "L1-ING"
+      version: "1.0"
+    - id: "OPS-DEPLOY"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/common/config.py"
+    - "06-runtime/afrp_runtime/common/obslog.py"
+    - "06-runtime/afrp_runtime/common/errors.py"
+    - "06-runtime/afrp_runtime/common/statemachine.py"
+    - "06-runtime/afrp_runtime/common/seeds.py"
+    - "06-runtime/afrp_runtime/contracts/envelope.py"
+    - "06-runtime/afrp_runtime/contracts/cio.py"
+    - "tests/unit/test_runtime_common.py"
+    - "tests/unit/test_runtime_contracts.py"
+  non_goals:
+    - "No layer implementations (Stage D)."
+    - "No network transport; in-process contracts only (ADR-0003)."
+
+requirements:
+  config:
+    module: "06-runtime/afrp_runtime/common/config.py"
+    rules:
+      - "EDR-005 precedence: Emergency Overrides > Mission Profile > Policy Bundle > Subsystem Config."
+      - "Mission Profiles MP-01..MP-05 defined with risk tolerance, spread limit, quorum, allow_trading."
+      - "EDR-008: reject configuration values that look like embedded secrets."
+  obslog:
+    module: "06-runtime/afrp_runtime/common/obslog.py"
+    rules:
+      - "EDR-006: structured JSON records conforming to OBS-01 (ts_ns, level, subsystem, event, trace_id, span_id, cycle_id, data)."
+  errors:
+    module: "06-runtime/afrp_runtime/common/errors.py"
+    rules:
+      - "EDR-004: typed taxonomy; no silent swallowing anywhere in runtime."
+  statemachine:
+    module: "06-runtime/afrp_runtime/common/statemachine.py"
+    rules:
+      - "SYS-03 FSM exactly per RUN-001 §2 including EMERGENCY_STOP manual reset only."
+  seeds:
+    module: "06-runtime/afrp_runtime/common/seeds.py"
+    rules:
+      - "EDR-009/NFR-004: global seed 42; deterministic per-component substream derivation."
+  contracts:
+    module: "06-runtime/afrp_runtime/contracts/"
+    rules:
+      - "Frozen dataclasses mirroring afrp.v1 messages field-for-field (ADR-0003)."
+      - "Envelope factory computes sha256 payload_hash and provenance chain."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check 06-runtime/ tests/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict 06-runtime/ tests/"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_runtime_common.py tests/unit/test_runtime_contracts.py -v"
+  fit_004_check:
+    required: true
+    command: "uv run afrp validate"
+
+completion:
+  success_requires:
+    - "SYS-03 transitions exhaustively tested including illegal ones."
+    - "EDR-005 precedence proven at every level."
+    - "Quality gates pass with zero errors."
+
+failure_modes:
+  ERR-CONFIG-SECRET: "Embedded secret detected in configuration."
+  ERR-FSM-ILLEGAL: "Illegal SYS-03 transition requested."
+  ERR-EXEC-BOUNDARY: "Touched files outside bounded_files."
+
+execution_prompt: |
+  Execute WP-IMP-0012: implement runtime common services and typed contract
+  bindings strictly within bounded_files.
