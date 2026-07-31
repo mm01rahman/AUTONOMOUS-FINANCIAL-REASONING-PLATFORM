@@ -4,7 +4,7 @@ capability_id:
   id: "EOS-BOOT"
   version: "1.0"
 title: "Formalize EOS-BOOT workspace setup, toolchain verification, and milestone tag"
-status: "Assigned"
+status: "Completed"
 is_immutable: true
 
 governance:
@@ -61,8 +61,13 @@ outputs:
     - "05-work-packages/WP-IMP-0001/evidence/EXEC-032.yaml"
 
 execution_results:
-  source_files_modified: []
-  evidence_generated: []
+  source_files_modified:
+    - "bootstrap_m1.sh"
+    - "tools/afrp-cli/afrp/core/workspace.py"
+    - "tests/unit/test_workspace_bootstrap.py"
+    - "README.md"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0001/evidence/EXEC-032.yaml"
 
 produces:
   capability:
