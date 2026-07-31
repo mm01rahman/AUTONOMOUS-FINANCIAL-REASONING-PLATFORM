@@ -113,7 +113,7 @@ capabilities:
     version: "1.0"
     title: "Layer 1 feature store: normalized features emitting CIO-02"
     owner: "SLS-100"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     planning_status: "READY"
     layer: "Layer 1"
     depends_on: ["L1-ING"]
@@ -141,7 +141,7 @@ capabilities:
     version: "1.0"
     title: "Layer 1 vector memory"
     owner: "SLS-100"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 1"
     depends_on: ["L1-FST"]
@@ -155,7 +155,7 @@ capabilities:
     version: "1.0"
     title: "Layer 2 agent base + DSmT mass library over D^Theta"
     owner: "SLS-200"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 2"
     depends_on: ["L1-FST"]
