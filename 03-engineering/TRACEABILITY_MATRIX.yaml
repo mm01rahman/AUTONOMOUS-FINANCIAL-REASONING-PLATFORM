@@ -155,9 +155,12 @@ requirements:
     title: "Layer 5 execution gateway: order FSM, fills, portfolio reconciliation"
     source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
     capability: "L5-EXE"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer5/execution.py"
+    verified_by:
+      - "tests/unit/test_layer5.py"
+      - "05-work-packages/WP-IMP-0029/evidence/EXEC-027.yaml"
   - id: "FR-014"
     title: "Layer 6 out-of-band learning: Brier scoring, discounting, embeddings"
     source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
@@ -229,9 +232,14 @@ requirements:
     title: "RPO = 0 lost trades; RTO < 60s"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
     capability: "L5-EXE"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer1/persistence.py"
+      - "06-runtime/afrp_runtime/layer5/execution.py"
+    verified_by:
+      - "tests/unit/test_layer1.py"
+      - "tests/unit/test_layer5.py"
+      - "05-work-packages/WP-IMP-0029/evidence/EXEC-027.yaml"
   - id: "NFR-006"
     title: "Zero-trust mTLS with SPIFFE identities on internal calls"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
@@ -243,9 +251,14 @@ requirements:
     title: "HMAC-signed audit log and OTel trace on every order"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
     capability: "L5-EXE"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer4/policy.py"
+      - "06-runtime/afrp_runtime/layer5/execution.py"
+    verified_by:
+      - "tests/unit/test_layer4.py"
+      - "tests/unit/test_layer5.py"
+      - "05-work-packages/WP-IMP-0029/evidence/EXEC-027.yaml"
   - id: "NFR-008"
     title: "Pre-allocated or pooled memory in live execution path"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"

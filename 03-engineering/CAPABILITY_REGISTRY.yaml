@@ -211,7 +211,7 @@ capabilities:
     version: "1.0"
     title: "Order gateway: state machine CIO-08, fills CIO-09, portfolio CIO-10"
     owner: "SLS-500"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     depends_on: ["L4-VAL", "L1-RDB"]
     work_package: "WP-IMP-0029"
 
@@ -220,14 +220,14 @@ capabilities:
     version: "1.0"
     title: "Learning loop: Brier scoring, CIO-11 weights, CIO-12 embeddings"
     owner: "SLS-600"
-    status: "LOCKED"
+    status: "AVAILABLE"
     depends_on: ["L5-EXE", "L1-RDB", "L1-MEM"]
     work_package: "WP-IMP-0030"
   - id: "RESEARCH-HARNESS"
     version: "1.0"
     title: "Offline backtest harness under deterministic seeds"
     owner: "RESEARCH"
-    status: "LOCKED"
+    status: "AVAILABLE"
     depends_on: ["L5-EXE"]
     work_package: "WP-IMP-0031"
   - id: "OPS-DEPLOY"
