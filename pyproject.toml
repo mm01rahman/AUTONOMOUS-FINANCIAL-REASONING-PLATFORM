@@ -1,6 +1,6 @@
 [project]
 name = "afrp-platform"
-version = "0.1.0"
+version = "1.0.0"
 description = "Autonomous Financial Reasoning Platform"
 requires-python = ">=3.11,<3.13"
 dependencies = ["click>=8.1.0", "pydantic>=2.0.0", "pyyaml>=6.0.0"]

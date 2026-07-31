@@ -179,6 +179,12 @@ class TestBaselineVerification:
 
 
 class TestBootCommand:
+    def test_cli_reports_release_version(self) -> None:
+        runner = CliRunner()
+        outcome = runner.invoke(cli, ["--version"])
+        assert outcome.exit_code == 0
+        assert outcome.output.strip() == "afrp, version 1.0.0"
+
     def test_run_boot_reaches_baseline_verified(self) -> None:
         result = run_boot(REPO_ROOT)
         assert result.kernel.word_count <= KERNEL_MAX_WORDS

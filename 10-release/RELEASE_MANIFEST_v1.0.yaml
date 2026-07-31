@@ -1,0 +1,60 @@
+schema_version: "1.0"
+release_id: "AFRP-1.0.0"
+version: "1.0.0"
+release_date: "2026-07-31"
+source_ref: "v1.0.0"
+baseline_id: "AFRP-BASELINE-1.0.0"
+governance_protocol: "EGP-2.0"
+
+decision:
+  core_platform_release: "GO"
+  live_money_activation: "CONDITIONAL_NO_GO"
+  rationale: >-
+    All repository implementation and quality gates pass. Live activation
+    additionally requires environment-specific SPIRE/Vault, replicated
+    active-passive persistence/lease, venue certification, and target-host drills.
+
+artifacts:
+  architecture_review: "10-release/ARCHITECTURE_REVIEW_REPORT_v1.0.md"
+  repository_health: "03-engineering/REPOSITORY_HEALTH.yaml"
+  capability_registry: "03-engineering/CAPABILITY_REGISTRY.yaml"
+  traceability_matrix: "03-engineering/TRACEABILITY_MATRIX.yaml"
+  proto_snapshot: "09-validation/contracts/afrp_v1.snapshot.json"
+  replay_fixture: "09-validation/fixtures/mp04_ticks.yaml"
+  replay_oracle: "09-validation/fixtures/mp04_expected.sha256"
+
+metrics:
+  capabilities: {complete: 33, total: 33}
+  requirements: {covered: 47, total: 47}
+  work_packages: {executed: 31, evidence_records: 31}
+  tests: {passed: 372, failed: 0}
+  coverage_percent: 90.7613
+  decision_execution_p99_ms: 0.207
+  decision_execution_budget_ms: 50.0
+  proto_messages: 20
+  executable_targets_remaining: 0
+
+quality_gates:
+  ruff: "PASS"
+  mypy_strict: "PASS"
+  pytest: "PASS"
+  wps_validation: "PASS"
+  ers_validation: "PASS"
+  proto_gate: "PASS"
+  operations_gate: "PASS"
+  system_gate: "PASS"
+  traceability: "PASS"
+
+evidence:
+  first: "EXEC-001"
+  last: "EXEC-031"
+  count: 31
+  paths: "05-work-packages/WP-IMP-*/evidence/EXEC-*.yaml"
+
+known_waivers:
+  - id: "W-001"
+    disposition: "Accepted for v1.0 core release"
+    replacement: "grpcio-tools compilation + descriptor compatibility snapshot"
+  - id: "W-002"
+    disposition: "Accepted for v1.0 core release"
+    replacement: "deterministic Python/process path; Cargo extension boundary retained"

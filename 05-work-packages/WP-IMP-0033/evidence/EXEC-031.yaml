@@ -46,10 +46,10 @@ boundary_compliance:
   violations: []
   compliant: true
 quality_gates:
-  - {gate: "system_validation", command: "uv run python -m tools.system_gate", result: "PASS", detail: "Replay 9742f494...; total feed loss vacuous DEGRADED; decision P99 0.180ms"}
+  - {gate: "system_validation", command: "uv run python -m tools.system_gate", result: "PASS", detail: "Replay 9742f494...; total feed loss vacuous DEGRADED; decision P99 0.207ms"}
   - {gate: "ruff_lint", command: "uv run ruff check .", result: "PASS"}
   - {gate: "mypy_typecheck", command: "uv run mypy --strict tools 06-runtime 07-research tests", result: "PASS"}
-  - {gate: "pytest_system", command: "uv run pytest tests/integration tests/chaos tests/performance -v", result: "PASS", detail: "6 passed; full suite 371 passed with 91% branch-aware coverage"}
+  - {gate: "pytest_system", command: "uv run pytest tests/integration tests/chaos tests/performance -v", result: "PASS", detail: "6 passed; full suite 372 passed with 90.7613% branch-aware coverage"}
 artifacts:
   source_files:
     - "tools/system_gate.py"
@@ -70,5 +70,5 @@ verdict:
     9742f494fdfc3515e8b0e323af38d4ed73ecb039f6eeb671be7903a99ca8e079.
     Total feed loss formerly raised QuorumError; review corrected the kernel
     to emit vacuous CIO-04 (m(THETA)=1, quorum=0), transition SYS-03 to
-    DEGRADED, and prohibit trading. Combined L4/L5 P99 measured 0.180ms,
+    DEGRADED, and prohibit trading. Combined L4/L5 P99 measured 0.207ms,
     277x below 50ms. EDR-012 is machine checked.

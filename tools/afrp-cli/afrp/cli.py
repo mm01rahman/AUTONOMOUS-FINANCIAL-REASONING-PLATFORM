@@ -6,6 +6,8 @@ their Work Packages complete (EOS-002 toolchain order).
 
 from __future__ import annotations
 
+from importlib.metadata import version
+
 import click
 from afrp.commands.boot import boot_command
 from afrp.commands.evidence import evidence_command
@@ -16,7 +18,7 @@ from afrp.commands.validate import validate_command
 
 
 @click.group(name="afrp")
-@click.version_option(version="0.1.0", prog_name="afrp")
+@click.version_option(version=version("afrp-platform"), prog_name="afrp")
 def cli() -> None:
     """AFRP Engineering Operating System toolchain."""
 
