@@ -1,0 +1,47 @@
+schema_version: "LAYER-EVIDENCE-1.0"
+layer: "Layer 1"
+milestone: "v2.0.0-layer1"
+generated_at: "2026-08-01T04:53:30+06:00"
+status: "APPROVED"
+work_packages:
+  - id: "WP-RT-1001"
+    capability: "L1-ING"
+    status: "Completed"
+    evidence: "05-work-packages/WP-RT-1001/evidence/EXEC-101.yaml"
+    commit: "0b35d23"
+  - id: "WP-RT-1002"
+    capability: "L1-FST"
+    status: "Completed"
+    evidence: "05-work-packages/WP-RT-1002/evidence/EXEC-102.yaml"
+    commit: "f042db4"
+  - id: "WP-RT-1003"
+    capability: "L1-RDB"
+    status: "Completed"
+    evidence: "05-work-packages/WP-RT-1003/evidence/EXEC-103.yaml"
+    commit: "36bcee2"
+  - id: "WP-RT-1004"
+    capability: "L1-MEM"
+    status: "Completed"
+    evidence: "05-work-packages/WP-RT-1004/evidence/EXEC-104.yaml"
+    commit: "c128e34"
+layer_validation:
+  unit_tests:
+    command: "uv run pytest tests/unit/test_layer1.py tests/unit/test_layer1_features.py tests/unit/test_layer1_persistence.py tests/unit/test_layer1_memory.py -q"
+    result: "PASS"
+  integration_tests:
+    command: "uv run pytest tests/integration/test_layer1_ingest_integration.py tests/integration/test_layer1_features_integration.py tests/integration/test_layer1_persistence_integration.py tests/integration/test_layer1_memory_integration.py -q"
+    result: "PASS"
+  architecture_validation:
+    command: "uv run afrp validate"
+    result: "PASS"
+  health_validation:
+    command: "uv run afrp health"
+    result: "PASS"
+  dependency_validation:
+    command: "uv run afrp plan"
+    result: "PASS"
+governance:
+  capability_registry_layer1_complete: true
+  dependency_dag_acyclic: true
+  architecture_review: "APPROVED"
+next_layer_ready: "Layer 2"
