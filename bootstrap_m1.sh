@@ -19,4 +19,4 @@ if [[ -z "${PYTHON}" ]]; then
 fi
 
 export PYTHONPATH="${ROOT}/tools/afrp-cli${PYTHONPATH:+:${PYTHONPATH}}"
-exec "${PYTHON}" -B -m afrp.core.workspace --root "${ROOT}" "$@"
+exec "${PYTHON}" -B -m afrp.core.bootstrap "$@"
