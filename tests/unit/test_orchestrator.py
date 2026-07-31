@@ -527,7 +527,8 @@ class TestOrchestrator:
         assert lock.exists()
 
     def test_lock_supports_current_git_worktree(self) -> None:
-        assert (REPO_ROOT / ".git").is_file()
+        if not (REPO_ROOT / ".git").is_file():
+            pytest.skip("not running inside a git worktree")
         with _workspace_lock(REPO_ROOT):
             common_dir = Path(
                 subprocess.run(
