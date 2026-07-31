@@ -1,0 +1,107 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0025"
+capability_id:
+  id: "L3-SIM"
+  version: "1.0"
+title: "Implement equilibrium scenario simulator (Sigma_EWM)"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "SLS-301"
+  traceability:
+    implements_req: ["FR-011", "NFR-004"]
+    trace_sls: "SLS-301"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('L3-WRM')"
+
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/layer3/simulator.py"
+      - "tests/unit/test_layer3.py"
+      - "05-work-packages/WP-IMP-0025/evidence/"
+    read:
+      - "06-runtime/afrp_runtime/contracts/"
+      - "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "medium"
+  estimated_duration: "2h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/layer3/simulator.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0025/evidence/EXEC-023.yaml"
+
+execution_results:
+  source_files_modified:
+    - "06-runtime/afrp_runtime/layer3/simulator.py"
+    - "tests/unit/test_layer3.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0025/evidence/EXEC-023.yaml"
+
+produces:
+  capability:
+    id: "L3-SIM"
+    version: "1.0"
+  unlocks:
+    - id: "L4-FUS"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer3/simulator.py"
+    - "tests/unit/test_layer3.py"
+  non_goals:
+    - "No decision optimization (Layer 4)."
+
+requirements:
+  implementation:
+    module: "06-runtime/afrp_runtime/layer3/simulator.py"
+    rules:
+      - "Seeded GBM trajectories under belief-conditioned drift; seed-42 substream (EDR-009)."
+      - "Equilibrium manifold: paths breaching |log move| bound get measure zero; admitted renormalized (MATH-001 section 3)."
+      - "Differential Shannon entropy via Gaussian closure of admitted terminals."
+      - "Emits validated CIO-05A with recorded random_seed."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check 06-runtime/ tests/"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict 06-runtime/ tests/unit/test_layer3.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_layer3.py -v"
+
+completion:
+  success_requires:
+    - "Hand-worked numeric oracles reproduced exactly."
+    - "Mass non-negativity and unit-sum preserved under all fixtures."
+
+failure_modes:
+  ERR-MATH-DIVERGENCE: "Fusion output violates BBA axioms."
+
+execution_prompt: |
+  Execute WP-IMP-0025 strictly within bounded_files. Article I applies: the
+  mathematics of MATH-001 outranks any implementation convenience.

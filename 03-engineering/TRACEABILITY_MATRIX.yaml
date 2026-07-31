@@ -131,9 +131,14 @@ requirements:
     title: "Layer 3 world model kernel PCR5 fusion and scenario simulation"
     source: "02-architecture/130_MATHEMATICAL_FOUNDATION.md#2"
     capability: "L3-WRM"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer3/dsmt.py"
+      - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+      - "06-runtime/afrp_runtime/layer3/simulator.py"
+    verified_by:
+      - "tests/unit/test_layer3.py"
+      - "05-work-packages/WP-IMP-0024/evidence/EXEC-022.yaml"
   - id: "FR-012"
     title: "Layer 4 decision engine: synthesis, optimization, policy validation"
     source: "02-architecture/130_MATHEMATICAL_FOUNDATION.md#4"
@@ -371,9 +376,12 @@ requirements:
     title: "asyncio for I/O-bound; process pools/Rust for CPU-bound"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
     capability: "L3-WRM"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer3/dsmt.py"
+    verified_by:
+      - "tests/unit/test_layer3.py"
+      - "05-work-packages/WP-IMP-0024/evidence/EXEC-022.yaml"
   - id: "EDR-004"
     title: "No bare except or swallowed generic Exception"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
