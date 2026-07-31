@@ -4,7 +4,7 @@ capability_id:
   id: "EOS-ORCHESTRATOR"
   version: "1.0"
 title: "Correct ARB-001 Engineering OS control findings"
-status: "Assigned"
+status: "Completed"
 is_immutable: true
 
 governance:
@@ -77,6 +77,23 @@ outputs:
     - "tests/unit/test_health.py"
     - "tests/unit/test_orchestrator.py"
   expected_evidence:
+    - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/afrp-cli/afrp/commands/boot.py"
+    - "tools/afrp-cli/afrp/commands/evidence.py"
+    - "tools/afrp-cli/afrp/commands/health.py"
+    - "tools/afrp-cli/afrp/commands/run.py"
+    - "tools/afrp-cli/afrp/core/astcheck.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tests/unit/test_bootloader.py"
+    - "tests/unit/test_validator.py"
+    - "tests/unit/test_evidence.py"
+    - "tests/unit/test_health.py"
+    - "tests/unit/test_orchestrator.py"
+  evidence_generated:
     - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
 
 produces:

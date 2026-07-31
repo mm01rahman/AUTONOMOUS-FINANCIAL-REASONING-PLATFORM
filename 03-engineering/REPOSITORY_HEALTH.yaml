@@ -1,6 +1,6 @@
 schema_version: "1.0"
 health_id: "AFRP-HEALTH-1.0.0"
-generated_at: "2026-07-31T23:54:59+06:00"
+generated_at: "2026-08-01T01:17:11+06:00"
 source_ref: "v1.0.0-baseline"
 status: "GREEN"
 
@@ -16,14 +16,14 @@ completion:
   capabilities_total: 33
   requirements_covered: 47
   requirements_total: 47
-  work_packages_executed: 32
-  evidence_records_valid: 32
+  work_packages_executed: 33
+  evidence_records_valid: 33
   executable_targets_remaining: 0
 
 eos:
   capabilities_complete: 7
   capabilities_total: 7
-  tests_passed: 139
+  tests_passed: 182
   work_packages_valid: 7
   evidence_records_approved: 7
   bootstrap_health: "PASS"
@@ -44,13 +44,13 @@ architecture_baseline:
   exact_duplicate_groups: 0
 
 quality:
-  tests_passed: 406
+  tests_passed: 449
   tests_failed: 0
-  statements: 3294
-  covered_lines: 3005
-  line_and_branch_coverage_percent: 88.7506
-  branches: 884
-  covered_branches: 703
+  statements: 3723
+  covered_lines: 3365
+  line_and_branch_coverage_percent: 87.7075
+  branches: 1036
+  covered_branches: 809
   ruff: "PASS"
   mypy_strict: "PASS"
   pytest: "PASS"
@@ -73,7 +73,7 @@ fitness:
   FIT-008: "PASS"
 
 performance:
-  decision_execution_p99_ms_observed: 0.170
+  decision_execution_p99_ms_observed: 0.293
   decision_execution_p99_budget_ms: 50.0
   margin_status: "PASS"
 

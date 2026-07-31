@@ -1,0 +1,106 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-033"
+work_package_id: "WP-FIX-0001"
+capability: {id: "EOS-ORCHESTRATOR", version: "1.0"}
+supersedes: "ARB-001"
+affected_capabilities:
+  - "EOS-CONTEXT"
+  - "EOS-VALIDATOR"
+  - "EOS-EVIDENCE"
+  - "EOS-HEALTH"
+  - "EOS-ORCHESTRATOR"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (GPT-5.6 Sol)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-01T00:41:16+06:00"
+  finished_at: "2026-08-01T01:17:11+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - {state: "BASELINE_VERIFIED", at: "2026-08-01T00:42:00+06:00", note: "Genesis SHA256 ledger verified"}
+    - {state: "WORK_PACKAGE_LOADED", at: "2026-08-01T00:44:00+06:00", note: "WP-FIX-0001 assigned"}
+    - {state: "EXECUTION_AUTHORIZED", at: "2026-08-01T00:45:00+06:00", note: "Bounded corrective scope authorized"}
+    - {state: "EXECUTING", at: "2026-08-01T00:46:00+06:00", note: "ARB-001 corrections implemented"}
+    - {state: "VALIDATING", at: "2026-08-01T01:13:00+06:00", note: "Targeted, full, and fitness gates executed"}
+    - {state: "EVIDENCE_GENERATED", at: "2026-08-01T01:17:11+06:00", note: "EXEC-033 emitted exclusively"}
+    - {state: "REVIEW_PENDING", at: "2026-08-01T01:17:11+06:00", note: "Awaiting ARB disposition"}
+preconditions:
+  - {predicate: "capability.complete('EOS-ORCHESTRATOR')", result: "PASS"}
+boundary_compliance:
+  bounded_files:
+    - "tools/afrp-cli/afrp/commands/boot.py"
+    - "tools/afrp-cli/afrp/commands/evidence.py"
+    - "tools/afrp-cli/afrp/commands/health.py"
+    - "tools/afrp-cli/afrp/commands/run.py"
+    - "tools/afrp-cli/afrp/core/astcheck.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tests/unit/test_bootloader.py"
+    - "tests/unit/test_validator.py"
+    - "tests/unit/test_evidence.py"
+    - "tests/unit/test_health.py"
+    - "tests/unit/test_orchestrator.py"
+    - "05-work-packages/WP-FIX-0001.yaml"
+    - "05-work-packages/WP-FIX-0001/evidence/"
+    - "03-engineering/REPOSITORY_HEALTH.yaml"
+  files_modified:
+    - "tools/afrp-cli/afrp/commands/boot.py"
+    - "tools/afrp-cli/afrp/commands/evidence.py"
+    - "tools/afrp-cli/afrp/commands/health.py"
+    - "tools/afrp-cli/afrp/commands/run.py"
+    - "tools/afrp-cli/afrp/core/astcheck.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+    - "tests/unit/test_bootloader.py"
+    - "tests/unit/test_validator.py"
+    - "tests/unit/test_evidence.py"
+    - "tests/unit/test_health.py"
+    - "tests/unit/test_orchestrator.py"
+    - "05-work-packages/WP-FIX-0001.yaml"
+    - "05-work-packages/WP-FIX-0001/evidence/EXEC-033.yaml"
+    - "03-engineering/REPOSITORY_HEALTH.yaml"
+  violations: []
+  compliant: true
+quality_gates:
+  - {gate: "ruff_lint", command: "uv run ruff check .", result: "PASS", detail: "All checks passed"}
+  - {gate: "mypy_typecheck", command: "uv run mypy --strict tools 06-runtime 07-research tests", result: "PASS", detail: "67 source files clean"}
+  - {gate: "pytest_full", command: "uv run pytest", result: "PASS", detail: "449 passed"}
+  - {gate: "baseline_validation", command: "uv run python -m tools.baseline_gate", result: "PASS", detail: "36 protected artifacts; 35 genesis fingerprints"}
+  - {gate: "proto_validation", command: "uv run python -m tools.proto_gate", result: "PASS", detail: "Compile, FIT-003, and NFR-010 passed"}
+  - {gate: "operations_validation", command: "uv run python -m tools.ops_gate", result: "PASS", detail: "NFR-002/005/006/007, container, and CI posture passed"}
+  - {gate: "system_validation", command: "uv run python -m tools.system_gate", result: "PASS", detail: "Replay exact; DEGRADED safety exact; decision P99 0.293ms"}
+  - {gate: "afrp_validation", command: "uv run afrp validate", result: "PASS", detail: "AST validation passed; boot and health adjunct gates also passed"}
+artifacts:
+  source_files:
+    - "tools/afrp-cli/afrp/commands/boot.py"
+    - "tools/afrp-cli/afrp/commands/evidence.py"
+    - "tools/afrp-cli/afrp/commands/health.py"
+    - "tools/afrp-cli/afrp/commands/run.py"
+    - "tools/afrp-cli/afrp/core/astcheck.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tools/afrp-cli/afrp/core/orchestrator.py"
+  test_files:
+    - "tests/unit/test_bootloader.py"
+    - "tests/unit/test_validator.py"
+    - "tests/unit/test_evidence.py"
+    - "tests/unit/test_health.py"
+    - "tests/unit/test_orchestrator.py"
+  documentation:
+    - "05-work-packages/WP-FIX-0001.yaml"
+    - "03-engineering/REPOSITORY_HEALTH.yaml"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "PENDING_ARB"
+  review_note: >-
+    EXEC-033 supersedes and corrects ARB-001 for EOS-CONTEXT, EOS-VALIDATOR,
+    EOS-EVIDENCE, EOS-HEALTH, and EOS-ORCHESTRATOR. The genesis ledger is
+    strict and path-safe; AST checks close relative-import and re-raise
+    bypasses; evidence is exclusive, atomic, truthful, and no-overwrite;
+    health requires complete TVM/capability/coverage inputs; and orchestration
+    now locks worktrees, executes argv without a shell, rejects skipped gates,
+    precisely restores task deltas, and emits ERS records. ARB approval remains
+    pending; no registry or unlock state was changed.
