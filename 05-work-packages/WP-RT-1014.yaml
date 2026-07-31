@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 4 decision synthesizer"
 layer: "Layer 4"
 description: "Synthesize CIO-04 and CIO-05A into CIO-05B decision context."
 objective: "Deliver deterministic decision-context assembly and provenance."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -30,6 +30,8 @@ resources:
       - "tests/integration/test_layer4_synthesizer_integration.py"
       - "docs/runtime/layer4-synthesizer.md"
       - "05-work-packages/WP-RT-1014/evidence/"
+    - "05-work-packages/WP-RT-1014.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
 execution:
   priority: "high"
   estimated_complexity: "medium"
@@ -57,6 +59,19 @@ scope:
     - "tests/unit/test_layer4_synthesizer.py"
     - "tests/integration/test_layer4_synthesizer_integration.py"
     - "docs/runtime/layer4-synthesizer.md"
+    - "05-work-packages/WP-RT-1014.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+execution_results:
+  final_state: "COMPLETED"
+  gates_passed:
+    - {gate: "ruff", result: "PASS"}
+    - {gate: "mypy_strict", result: "PASS"}
+    - {gate: "pytest_unit", result: "PASS", tests: 9}
+    - {gate: "pytest_integration", result: "PASS", tests: 2}
+    - {gate: "afrp_validate", result: "PASS"}
+    - {gate: "afrp_health", result: "PASS"}
+    - {gate: "evidence", result: "PASS"}
+  evidence_record: "05-work-packages/WP-RT-1014/evidence/EXEC-114.yaml"
 requirements:
   acceptance_criteria:
     - "CIO-05B includes required fields from CIO-04 and CIO-05A."
