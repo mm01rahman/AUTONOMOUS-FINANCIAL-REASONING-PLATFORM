@@ -211,8 +211,8 @@ capabilities:
     version: "1.0"
     title: "Regime agent emitting CIO-03"
     owner: "SLS-200"
-    status: "AVAILABLE"
-    planning_status: "READY"
+    status: "COMPLETE"
+    planning_status: "COMPLETE"
     layer: "Layer 2"
     depends_on: ["L2-BASE"]
     work_package: "WP-RT-1009"
@@ -253,7 +253,7 @@ capabilities:
     version: "1.0"
     title: "World Model Kernel: DSmT PCR5 fusion emitting CIO-04"
     owner: "SLS-300"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 3"
     depends_on: ["L2-MAC", "L2-MIC", "L2-LIQ", "L2-REG", "L2-FOR", "L2-BEH"]
