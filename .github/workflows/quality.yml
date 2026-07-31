@@ -32,7 +32,11 @@ jobs:
       - run: uv run pytest tests --cov --cov-report=term --cov-report=json
       - run: uv run python -m tools.proto_gate
       - run: uv run python -m tools.ops_gate
+      - name: System fitness gate
+        run: |
+          AFRP_AUDIT_HMAC_KEY="$(python -c 'import secrets; print(secrets.token_hex(32))')" \
+            uv run python -m tools.system_gate
       - run: uv run afrp boot
       - run: uv run afrp plan
       - run: uv run afrp validate
-      - run: uv run afrp health
+      - run: uv run afrp health --assert-full

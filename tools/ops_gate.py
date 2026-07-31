@@ -141,6 +141,7 @@ def validate_ci(workflow: str) -> list[str]:
         "uv run pytest tests",
         "uv run python -m tools.proto_gate",
         "uv run python -m tools.ops_gate",
+        "uv run python -m tools.system_gate",
         "uv run afrp boot",
         "uv run afrp plan",
         "uv run afrp validate",

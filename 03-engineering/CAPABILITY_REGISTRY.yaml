@@ -241,6 +241,6 @@ capabilities:
     version: "1.0"
     title: "FIT-008 deterministic replay, degradation chaos, latency benchmark"
     owner: "VALIDATION"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     depends_on: ["L5-EXE"]
     work_package: "WP-IMP-0033"

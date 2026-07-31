@@ -1,0 +1,14 @@
+schema_version: "1.0"
+policy_id: "AFRP-DEPRECATION"
+deprecation:
+  minimum_grace_minor_versions: 1
+  required_stages:
+    - "announce"
+    - "warn"
+    - "remove"
+  warning_log_schema: "OBS-01"
+  removal_requires:
+    requirement_update: true
+    traceability_update: true
+    level_1_adr: true
+    protobuf_major_version_for_breaking_wire_change: true

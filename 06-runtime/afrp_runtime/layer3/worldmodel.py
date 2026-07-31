@@ -10,7 +10,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from afrp_runtime.common.errors import QuorumError
 from afrp_runtime.contracts.cio import (
     THETA,
     CalibrationWeights,
@@ -50,8 +49,8 @@ class WorldModelKernel:
         Missing expected agents are padded with vacuous beliefs (m(Θ) = 1)
         and counted out of the healthy quorum (NFR-003).
 
-        Raises:
-            QuorumError: zero healthy (non-degraded) sources are available.
+        With zero healthy sources the result is the vacuous world state
+        m(Θ)=1, quorum=0. L4-VAL then authorizes a_null (NFR-003/Article VIII).
         """
         by_agent = {belief.agent_id: belief for belief in beliefs}
         trace: list[str] = []
@@ -79,20 +78,20 @@ class WorldModelKernel:
                 healthy += 1
                 trace.append(f"{agent_id}: OK (weight {weight:.3f})")
 
-        if healthy == 0:
-            raise QuorumError(0, 1)
-
         fused, conflict = combine_all(sources)
         trace.append(f"pcr5: fused {len(sources)} sources, conflict={conflict:.6f}")
 
-        betp = pignistic(fused)
-        hypotheses = tuple(
-            singleton
-            for singleton, probability in sorted(
-                betp.items(), key=lambda item: (-item[1], item[0])
+        if fused.get(THETA, 0.0) >= 1.0 - 1e-9:
+            hypotheses: tuple[str, ...] = ()
+        else:
+            betp = pignistic(fused)
+            hypotheses = tuple(
+                singleton
+                for singleton, probability in sorted(
+                    betp.items(), key=lambda item: (-item[1], item[0])
+                )
+                if probability > 0.15
             )
-            if probability > 0.15
-        )
 
         envelope = make_envelope(
             producer_subsystem_id=SUBSYSTEM_ID,

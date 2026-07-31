@@ -51,4 +51,13 @@ testpaths = ["tests"]
 addopts = "-q"
 
 [tool.coverage.run]
-source = ["tools/afrp-cli/afrp"]
+branch = true
+source = [
+    "tools/afrp-cli/afrp",
+    "06-runtime/afrp_runtime",
+    "07-research/afrp_research",
+    "tools",
+]
+
+[tool.coverage.report]
+show_missing = true

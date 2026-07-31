@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import pytest
-from afrp_runtime.common.errors import ContractViolationError, QuorumError
+from afrp_runtime.common.errors import ContractViolationError
 from afrp_runtime.contracts.cio import (
     THETA,
     CalibrationWeights,
@@ -219,14 +219,17 @@ class TestWorldModelKernel:
         padded = [line for line in state.fusion_trace if "MISSING" in line]
         assert len(padded) == 4
 
-    def test_zero_healthy_sources_raises_quorum_error(self) -> None:
+    def test_zero_healthy_sources_returns_vacuous_degraded_state(self) -> None:
         kernel = WorldModelKernel("MP-04")
         degraded = [
             belief(agent_id, {THETA: 1.0}, degraded=True)
             for agent_id in EXPECTED_AGENTS
         ]
-        with pytest.raises(QuorumError):
-            kernel.fuse("XAUUSD", degraded)
+        state = kernel.fuse("XAUUSD", degraded)
+        assert state.agent_quorum == 0
+        assert state.fused_masses == {THETA: pytest.approx(1.0)}
+        assert state.regime_context == THETA
+        assert state.active_hypotheses == ()
 
     def test_calibration_weights_discount_sources(self) -> None:
         kernel = WorldModelKernel("MP-04")

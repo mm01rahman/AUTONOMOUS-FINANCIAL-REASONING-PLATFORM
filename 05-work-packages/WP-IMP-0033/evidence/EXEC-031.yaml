@@ -1,0 +1,74 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-031"
+work_package_id: "WP-IMP-0033"
+capability: {id: "SYSTEM-VALIDATION", version: "1.0"}
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (GPT-5.6 Sol)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T23:03:58+06:00"
+  finished_at: "2026-07-31T23:03:58+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - {state: "REVIEW_PENDING", at: "2026-07-31T23:03:58+06:00", note: "Autopilot governed self-review"}
+preconditions:
+  - {predicate: "capability.complete('L5-EXE')", result: "PASS"}
+boundary_compliance:
+  bounded_files:
+    - "tools/system_gate.py"
+    - "tools/ops_gate.py"
+    - "09-validation/fixtures/"
+    - "tests/integration/"
+    - "tests/chaos/"
+    - "tests/performance/"
+    - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+    - "tests/unit/test_layer3.py"
+    - "03-engineering/DEPRECATION_POLICY.yaml"
+    - ".github/workflows/quality.yml"
+    - "pyproject.toml"
+    - ".gitignore"
+  files_modified:
+    - "tools/system_gate.py"
+    - "tools/ops_gate.py"
+    - "09-validation/fixtures/mp04_ticks.yaml"
+    - "09-validation/fixtures/mp04_expected.sha256"
+    - "tests/integration/test_system_replay.py"
+    - "tests/chaos/test_degradation.py"
+    - "tests/performance/test_latency.py"
+    - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+    - "tests/unit/test_layer3.py"
+    - "03-engineering/DEPRECATION_POLICY.yaml"
+    - ".github/workflows/quality.yml"
+    - "pyproject.toml"
+    - ".gitignore"
+  violations: []
+  compliant: true
+quality_gates:
+  - {gate: "system_validation", command: "uv run python -m tools.system_gate", result: "PASS", detail: "Replay 9742f494...; total feed loss vacuous DEGRADED; decision P99 0.180ms"}
+  - {gate: "ruff_lint", command: "uv run ruff check .", result: "PASS"}
+  - {gate: "mypy_typecheck", command: "uv run mypy --strict tools 06-runtime 07-research tests", result: "PASS"}
+  - {gate: "pytest_system", command: "uv run pytest tests/integration tests/chaos tests/performance -v", result: "PASS", detail: "6 passed; full suite 371 passed with 91% branch-aware coverage"}
+artifacts:
+  source_files:
+    - "tools/system_gate.py"
+    - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+  test_files:
+    - "tests/integration/test_system_replay.py"
+    - "tests/chaos/test_degradation.py"
+    - "tests/performance/test_latency.py"
+  documentation:
+    - "03-engineering/DEPRECATION_POLICY.yaml"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    Canonical MP-04 replay is bit-exact and matches frozen checksum
+    9742f494fdfc3515e8b0e323af38d4ed73ecb039f6eeb671be7903a99ca8e079.
+    Total feed loss formerly raised QuorumError; review corrected the kernel
+    to emit vacuous CIO-04 (m(THETA)=1, quorum=0), transition SYS-03 to
+    DEGRADED, and prohibit trading. Combined L4/L5 P99 measured 0.180ms,
+    277x below 50ms. EDR-012 is machine checked.
