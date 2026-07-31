@@ -107,9 +107,15 @@ requirements:
     title: "Layer 1 data platform: ingress, features, persistence, memory"
     source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
     capability: "L1-ING"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer1/ingest.py"
+      - "06-runtime/afrp_runtime/layer1/features.py"
+      - "06-runtime/afrp_runtime/layer1/persistence.py"
+      - "06-runtime/afrp_runtime/layer1/memory.py"
+    verified_by:
+      - "tests/unit/test_layer1.py"
+      - "05-work-packages/WP-IMP-0013/evidence/EXEC-011.yaml"
   - id: "FR-010"
     title: "Layer 2 specialized belief agents emitting DSmT masses"
     source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"

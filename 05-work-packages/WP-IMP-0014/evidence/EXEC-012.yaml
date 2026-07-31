@@ -1,0 +1,60 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-012"
+work_package_id: "WP-IMP-0014"
+capability:
+  id: "L1-FST"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (Claude Fable 5)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T19:40:00+06:00"
+  finished_at: "2026-07-31T20:10:00+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-07-31T20:10:00+06:00"
+      note: "Autopilot governed self-review per ADR-0002"
+preconditions:
+  - predicate: "capability.complete('L1-ING')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer1/features.py"
+    - "tests/unit/test_layer1.py"
+  files_modified:
+    - "06-runtime/afrp_runtime/layer1/features.py"
+    - "tests/unit/test_layer1.py"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check 06-runtime/ tests/"
+    result: "PASS"
+    detail: "All checks passed"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict 06-runtime/ tests/unit/test_layer1.py"
+    result: "PASS"
+    detail: "no issues in 12 source files"
+  - gate: "pytest_units"
+    command: "uv run pytest tests/unit/test_layer1.py -v"
+    result: "PASS"
+    detail: "25 passed (200 total suite-wide)"
+artifacts:
+  source_files:
+    - "06-runtime/afrp_runtime/layer1/features.py"
+  test_files:
+    - "tests/unit/test_layer1.py"
+unlocked_capabilities:
+  - id: "L1-MEM"
+    version: "1.0"
+  - id: "L2-BASE"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    Feature math verified against hand-computed oracles; replay idempotence defect found in review and fixed with processed-set short-circuit; provenance chain asserted.
