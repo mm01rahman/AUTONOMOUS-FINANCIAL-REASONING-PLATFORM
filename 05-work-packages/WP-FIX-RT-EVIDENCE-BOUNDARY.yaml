@@ -1,0 +1,101 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-FIX-RT-EVIDENCE-BOUNDARY"
+capability_id:
+  id: "EOS-EVIDENCE"
+  version: "1.0"
+title: "Support WP-RT evidence boundary validation and emission"
+status: "Assigned"
+is_immutable: false
+
+governance:
+  target_subsystem: "ENGINEERING_OS"
+  traceability:
+    implements_req: ["FR-004", "FIT-005"]
+    trace_sls: "ARCH-001"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-EVIDENCE')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/afrp-cli/afrp/commands/evidence.py"
+      - "tests/unit/test_evidence.py"
+      - "05-work-packages/WP-FIX-RT-EVIDENCE-BOUNDARY.yaml"
+      - "05-work-packages/WP-FIX-RT-EVIDENCE-BOUNDARY/evidence/EXEC-902.yaml"
+    read:
+      - "tools/afrp-cli/afrp/core/evidence.py"
+      - "09-validation/schemas/"
+
+execution:
+  priority: "high"
+  estimated_complexity: "small"
+  estimated_duration: "2h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "tools/afrp-cli/afrp/commands/evidence.py"
+    - "tools/afrp-cli/afrp/core/evidence.py"
+    - "tests/unit/test_evidence.py"
+
+outputs:
+  expected_source_files:
+    - "tools/afrp-cli/afrp/commands/evidence.py"
+    - "tests/unit/test_evidence.py"
+  expected_evidence:
+    - "05-work-packages/WP-FIX-RT-EVIDENCE-BOUNDARY/evidence/EXEC-902.yaml"
+
+produces:
+  capability: {id: "EOS-EVIDENCE", version: "1.0"}
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/afrp-cli/afrp/commands/evidence.py"
+    - "tests/unit/test_evidence.py"
+    - "05-work-packages/WP-FIX-RT-EVIDENCE-BOUNDARY.yaml"
+    - "05-work-packages/WP-FIX-RT-EVIDENCE-BOUNDARY/evidence/EXEC-902.yaml"
+  non_goals:
+    - "No Runtime layer implementation changes."
+    - "No weakening of FIT-005 boundary checks."
+
+requirements:
+  acceptance_criteria:
+    - "afrp evidence supports WP-RT contracts whose expected evidence file is omitted from scope.bounded_files."
+    - "Evidence generation and validation remain deterministic and safe against path traversal."
+    - "FIT-005 still rejects true out-of-bounds modified files."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/afrp-cli/afrp/commands/evidence.py tests/unit/test_evidence.py"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/afrp-cli/afrp/commands/evidence.py tests/unit/test_evidence.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_evidence.py -v"
+  eos_validation:
+    required: true
+    command: "uv run afrp validate"
+
+completion:
+  success_requires:
+    - "WP-RT evidence generation no longer halts on false boundary rejection."
+
+failure_modes:
+  ERR-FALSE-BOUNDARY: "Expected evidence target rejected despite governed contract."
+
+execution_prompt: |
+  Implement WP-FIX-RT-EVIDENCE-BOUNDARY strictly within bounded_files.

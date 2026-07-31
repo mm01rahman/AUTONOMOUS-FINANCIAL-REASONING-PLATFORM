@@ -40,8 +40,11 @@ def evidence_command(wp_id: str, base_ref: str, repo_root: Path) -> None:
     try:
         with _workspace_lock(root):
             wp = load_work_package(root, wp_id)
+            bounded_with_evidence = tuple(
+                dict.fromkeys((*wp.bounded_files, *wp.expected_evidence))
+            )
             changed = modified_files(root, base_ref)
-            audit = audit_boundaries(wp.bounded_files, changed)
+            audit = audit_boundaries(bounded_with_evidence, changed)
             if audit.compliant:
                 if not wp.expected_evidence:
                     raise ManifestValidationError(
@@ -49,7 +52,7 @@ def evidence_command(wp_id: str, base_ref: str, repo_root: Path) -> None:
                     )
                 target = resolve_evidence_target(
                     root,
-                    wp.bounded_files,
+                    bounded_with_evidence,
                     wp.expected_evidence[0],
                     allow_existing_unbounded=wp.status == "Completed",
                 )
