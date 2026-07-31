@@ -267,8 +267,8 @@ capabilities:
     version: "1.0"
     title: "Scenario simulator: Sigma_EWM trajectories emitting CIO-05A"
     owner: "SLS-301"
-    status: "AVAILABLE"
-    planning_status: "READY"
+    status: "COMPLETE"
+    planning_status: "COMPLETE"
     layer: "Layer 3"
     depends_on: ["L3-WRM"]
     work_package: "WP-RT-1013"
@@ -281,7 +281,7 @@ capabilities:
     version: "1.0"
     title: "Decision synthesizer emitting CIO-05B"
     owner: "SLS-400"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 4"
     depends_on: ["L3-WRM", "L3-SIM"]
