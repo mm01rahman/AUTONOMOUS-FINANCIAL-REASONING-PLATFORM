@@ -40,8 +40,15 @@ def read_line_coverage(path: Path) -> float | None:
 def collect_coverage(
     repo_root: Path,
     runner: Callable[..., subprocess.CompletedProcess[str]] = subprocess.run,
-) -> None:
-    """Collect coverage in normal CLI use without invoking a shell."""
+) -> float:
+    """Collect and return fresh coverage without invoking a shell."""
+    coverage_path = repo_root / COVERAGE_RELPATH
+    try:
+        coverage_path.unlink(missing_ok=True)
+    except OSError as exc:
+        raise InvariantError(
+            "EOS-HEALTH", f"cannot remove stale coverage artifact: {exc}"
+        ) from exc
     try:
         result = runner(
             [
@@ -63,6 +70,12 @@ def collect_coverage(
     if result.returncode != 0:
         detail = (result.stdout + result.stderr).strip()[-2000:]
         raise InvariantError("EOS-HEALTH", f"coverage collection failed: {detail}")
+    fresh = read_line_coverage(coverage_path)
+    if fresh is None:
+        raise InvariantError(
+            "EOS-HEALTH", "coverage collector did not produce coverage.json"
+        )
+    return fresh
 
 
 def _running_under_pytest() -> bool:
@@ -90,9 +103,13 @@ def health_command(repo_root: Path, assert_full: bool) -> None:
         matrix = load_matrix(root / TVM_RELPATH)
         registry = load_registry(root / REGISTRY_RELPATH)
         coverage_path = root / COVERAGE_RELPATH
-        if not coverage_path.is_file() and not _running_under_pytest():
-            collect_coverage(root)
-        line_cov = read_line_coverage(coverage_path)
+        line_cov: float | None
+        if assert_full:
+            line_cov = collect_coverage(root)
+        elif not coverage_path.is_file() and not _running_under_pytest():
+            line_cov = collect_coverage(root)
+        else:
+            line_cov = read_line_coverage(coverage_path)
     except AfrpError as exc:
         click.echo(f"HALTED: {exc}", err=True)
         raise SystemExit(exc.exit_code) from exc

@@ -13,12 +13,13 @@ from collections.abc import Iterator, Sequence
 from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import UTC, datetime
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 
 from afrp.commands.boot import verify_baseline
 from afrp.core.evidence import (
     audit_boundaries,
     compose_boundary_evidence,
+    is_tooling_artifact,
     load_evidence,
     resolve_evidence_target,
     validate_existing_evidence,
@@ -88,6 +89,18 @@ class _WorkspaceSnapshot:
         return tuple(
             sorted(name for name in names if self.files.get(name) != current.files.get(name))
         )
+
+
+@dataclass(frozen=True)
+class _GitControlSnapshot:
+    roots: tuple[Path, ...]
+    files: dict[Path, _FileState]
+    index_path: Path
+    index_state: bytes
+    head: str
+    symbolic_head: str
+    refs: bytes
+    status: bytes
 
 
 def _git_tag_exists(repo_root: Path, tag: str) -> bool:
@@ -195,21 +208,9 @@ def _git_file_names(repo_root: Path) -> set[str]:
         for name in result.stdout.decode(
             "utf-8", errors="surrogateescape"
         ).split("\0"):
-            if name and not _is_environment_artifact(name):
+            if name:
                 names.add(name)
     return names
-
-
-def _is_environment_artifact(name: str) -> bool:
-    parts = Path(name).parts
-    excluded_directories = {
-        ".venv",
-        ".pytest_cache",
-        ".mypy_cache",
-        ".ruff_cache",
-        "__pycache__",
-    }
-    return any(part in excluded_directories for part in parts)
 
 
 def _read_file_state(path: Path) -> _FileState | None:
@@ -224,6 +225,220 @@ def _snapshot_workspace(repo_root: Path) -> _WorkspaceSnapshot:
     return _WorkspaceSnapshot(
         {name: _read_file_state(repo_root / name) for name in _git_file_names(repo_root)}
     )
+
+
+def _git_output(repo_root: Path, arguments: list[str]) -> bytes:
+    try:
+        result = subprocess.run(
+            ["git", *arguments],
+            cwd=repo_root,
+            capture_output=True,
+            check=True,
+        )
+    except (OSError, subprocess.CalledProcessError) as exc:
+        raise ManifestValidationError(
+            f"git control query failed ({' '.join(arguments)}): {exc}"
+        ) from exc
+    return result.stdout
+
+
+def _git_optional_output(repo_root: Path, arguments: list[str]) -> bytes:
+    try:
+        result = subprocess.run(
+            ["git", *arguments],
+            cwd=repo_root,
+            capture_output=True,
+            check=False,
+        )
+    except OSError as exc:
+        raise ManifestValidationError(
+            f"git control query failed ({' '.join(arguments)}): {exc}"
+        ) from exc
+    if result.returncode not in (0, 1):
+        raise ManifestValidationError(
+            f"git control query failed ({' '.join(arguments)}): "
+            f"{result.stderr.decode(errors='replace').strip()}"
+        )
+    return result.stdout
+
+
+def _git_path(repo_root: Path, name: str) -> Path:
+    raw = _git_output(repo_root, ["rev-parse", "--git-path", name]).decode(
+        "utf-8", errors="strict"
+    ).strip()
+    if not raw:
+        raise ManifestValidationError(f"git returned an empty path for {name}")
+    path = Path(raw)
+    return path.resolve() if path.is_absolute() else (repo_root / path).resolve()
+
+
+def _metadata_files(roots: Sequence[Path]) -> dict[Path, _FileState]:
+    files: dict[Path, _FileState] = {}
+    for root in roots:
+        if root.is_symlink() or root.is_file():
+            state = _read_file_state(root)
+            if state is not None:
+                files[root] = state
+        elif root.is_dir():
+            for path in root.rglob("*"):
+                if path.is_symlink() or path.is_file():
+                    state = _read_file_state(path)
+                    if state is not None:
+                        files[path] = state
+    return files
+
+
+def _snapshot_git_control(repo_root: Path) -> _GitControlSnapshot:
+    index_path = _git_path(repo_root, "index")
+    roots = tuple(
+        dict.fromkeys(
+            _git_path(repo_root, name)
+            for name in (
+                "HEAD",
+                "index",
+                "config",
+                "config.worktree",
+                "packed-refs",
+                "refs",
+                "logs/refs",
+                "logs/HEAD",
+                "hooks",
+                "ORIG_HEAD",
+                "MERGE_HEAD",
+                "CHERRY_PICK_HEAD",
+                "REVERT_HEAD",
+            )
+        )
+    )
+    head = _git_output(repo_root, ["rev-parse", "HEAD"]).decode().strip()
+    symbolic_head = _git_optional_output(
+        repo_root, ["symbolic-ref", "-q", "HEAD"]
+    ).decode().strip()
+    refs = _git_output(
+        repo_root,
+        ["for-each-ref", "--format=%(refname)%00%(objectname)%00"],
+    )
+    index_state = _git_output(repo_root, ["ls-files", "--stage", "-z"])
+    status = _git_output(
+        repo_root,
+        [
+            "status",
+            "--porcelain=v2",
+            "-z",
+            "--untracked-files=all",
+            "--ignored=matching",
+        ],
+    )
+    return _GitControlSnapshot(
+        roots=roots,
+        files=_metadata_files(roots),
+        index_path=index_path,
+        index_state=index_state,
+        head=head,
+        symbolic_head=symbolic_head,
+        refs=refs,
+        status=status,
+    )
+
+
+def _git_control_changes(
+    repo_root: Path, snapshot: _GitControlSnapshot
+) -> tuple[str, ...]:
+    current = _snapshot_git_control(repo_root)
+    changed: list[str] = []
+    if current.head != snapshot.head:
+        changed.append("HEAD")
+    if current.symbolic_head != snapshot.symbolic_head:
+        changed.append("symbolic HEAD")
+    if current.refs != snapshot.refs:
+        changed.append("refs")
+    if current.index_state != snapshot.index_state:
+        changed.append("index")
+    current_metadata = {
+        path: state
+        for path, state in current.files.items()
+        if path != current.index_path
+    }
+    original_metadata = {
+        path: state
+        for path, state in snapshot.files.items()
+        if path != snapshot.index_path
+    }
+    if current_metadata != original_metadata:
+        changed.append("config/hooks/ref metadata")
+    return tuple(changed)
+
+
+def _restore_git_control(
+    repo_root: Path, snapshot: _GitControlSnapshot
+) -> None:
+    current = _metadata_files(snapshot.roots)
+    for path in sorted(
+        set(current) - set(snapshot.files),
+        key=lambda item: len(item.parts),
+        reverse=True,
+    ):
+        _remove_path(path)
+    for path, original in snapshot.files.items():
+        if _read_file_state(path) == original:
+            continue
+        if path.exists() or path.is_symlink():
+            _remove_path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if original.symlink_target is not None:
+            path.symlink_to(original.symlink_target)
+        else:
+            path.write_bytes(original.contents)
+            path.chmod(original.mode)
+    for root in sorted(snapshot.roots, key=lambda item: len(item.parts), reverse=True):
+        if root.is_dir():
+            for directory in sorted(
+                (path for path in root.rglob("*") if path.is_dir()),
+                key=lambda item: len(item.parts),
+                reverse=True,
+            ):
+                try:
+                    directory.rmdir()
+                except OSError:
+                    pass
+
+
+def _verify_restored_state(
+    repo_root: Path,
+    workspace: _WorkspaceSnapshot,
+    git_control: _GitControlSnapshot,
+) -> None:
+    current_workspace = _snapshot_workspace(repo_root)
+    workspace_changes = workspace.changed(current_workspace)
+    current_git = _snapshot_git_control(repo_root)
+    git_changes: list[str] = []
+    if current_git.head != git_control.head:
+        git_changes.append("HEAD")
+    if current_git.symbolic_head != git_control.symbolic_head:
+        git_changes.append("symbolic HEAD")
+    if current_git.refs != git_control.refs:
+        git_changes.append("refs")
+    if current_git.index_state != git_control.index_state:
+        git_changes.append("index")
+    current_metadata = {
+        path: state
+        for path, state in current_git.files.items()
+        if path != current_git.index_path
+    }
+    original_metadata = {
+        path: state
+        for path, state in git_control.files.items()
+        if path != git_control.index_path
+    }
+    if current_metadata != original_metadata:
+        git_changes.append("config/hooks/ref metadata")
+    if current_git.status != git_control.status:
+        git_changes.append("index/worktree status")
+    if workspace_changes or git_changes:
+        detail = [*workspace_changes, *git_changes]
+        raise InvariantError(
+            "EGP-2.0", f"rollback verification failed: {', '.join(detail)}"
+        )
 
 
 def _remove_path(path: Path) -> None:
@@ -295,7 +510,7 @@ def rollback_bounded_files(repo_root: Path, bounded: tuple[str, ...], ref: str) 
 def _workspace_lock(repo_root: Path) -> Iterator[None]:
     try:
         result = subprocess.run(
-            ["git", "rev-parse", "--git-path", _LOCK_NAME],
+            ["git", "rev-parse", "--git-common-dir"],
             cwd=repo_root,
             capture_output=True,
             text=True,
@@ -303,11 +518,12 @@ def _workspace_lock(repo_root: Path) -> Iterator[None]:
         )
     except (OSError, subprocess.CalledProcessError) as exc:
         raise ManifestValidationError(f"cannot resolve workspace lock path: {exc}") from exc
-    raw_target = result.stdout.strip()
-    if not raw_target:
+    raw_common_dir = result.stdout.strip()
+    if not raw_common_dir:
         raise ManifestValidationError("git returned an empty workspace lock path")
-    candidate = Path(raw_target)
-    target = candidate if candidate.is_absolute() else repo_root / candidate
+    candidate = Path(raw_common_dir)
+    common_dir = candidate if candidate.is_absolute() else repo_root / candidate
+    target = common_dir.resolve() / _LOCK_NAME
     target.parent.mkdir(parents=True, exist_ok=True)
     try:
         descriptor = os.open(target, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
@@ -334,6 +550,61 @@ def _safe_evidence_target(repo_root: Path, wp: WorkPackage) -> tuple[str, Path]:
         allow_existing_unbounded=wp.status == "Completed",
     )
     return relative, target
+
+
+def _validate_expected_outputs(
+    repo_root: Path, wp: WorkPackage, changed: tuple[str, ...]
+) -> None:
+    raw_outputs = wp.raw.get("outputs", {}).get("expected_source_files", [])
+    if not isinstance(raw_outputs, list) or not raw_outputs:
+        raise InvariantError(
+            "WPS-1.0", "outputs.expected_source_files must be non-empty for execution"
+        )
+    changed_set = set(changed)
+    missing: list[str] = []
+    unchanged: list[str] = []
+    unsafe: list[str] = []
+    for raw in raw_outputs:
+        if not isinstance(raw, str) or not raw.strip():
+            unsafe.append(repr(raw))
+            continue
+        relative = raw.strip()
+        posix = PurePosixPath(relative)
+        windows = PureWindowsPath(relative)
+        if (
+            posix.is_absolute()
+            or windows.is_absolute()
+            or windows.drive
+            or ".." in posix.parts
+            or ".." in windows.parts
+        ):
+            unsafe.append(relative)
+            continue
+        normalized = posix.as_posix()
+        target = (repo_root / Path(*posix.parts)).resolve()
+        try:
+            target.relative_to(repo_root)
+        except ValueError:
+            unsafe.append(relative)
+            continue
+        if not audit_boundaries(wp.bounded_files, (normalized,)).compliant:
+            unsafe.append(relative)
+        elif not target.is_file():
+            missing.append(normalized)
+        elif normalized not in changed_set:
+            unchanged.append(normalized)
+    failures: list[str] = []
+    if unsafe:
+        failures.append(f"unsafe/out-of-bounds: {', '.join(unsafe)}")
+    if missing:
+        failures.append(f"missing: {', '.join(missing)}")
+    if unchanged:
+        failures.append(f"not changed by task: {', '.join(unchanged)}")
+    if failures:
+        raise InvariantError(
+            "WPS-1.0",
+            "expected source output validation failed (" + "; ".join(failures) + ")",
+        )
 
 
 def _gate_evidence(gates: Sequence[GateResult]) -> list[dict[str, object]]:
@@ -368,6 +639,7 @@ def _halt_with_evidence(
     wp: WorkPackage,
     evidence_target: Path,
     snapshot: _WorkspaceSnapshot,
+    git_control: _GitControlSnapshot,
     preconditions: Sequence[PreconditionResult],
     gates: Sequence[GateResult],
     started_at: datetime,
@@ -375,7 +647,9 @@ def _halt_with_evidence(
 ) -> tuple[str, tuple[str, ...]]:
     attempted = snapshot.changed(_snapshot_workspace(repo_root))
     audit = audit_boundaries(wp.bounded_files, attempted)
+    _restore_git_control(repo_root, git_control)
     _restore_workspace(repo_root, snapshot)
+    _verify_restored_state(repo_root, snapshot, git_control)
     record = compose_boundary_evidence(
         wp,
         audit,
@@ -411,6 +685,7 @@ def orchestrate(
     violations: tuple[str, ...] = ()
     halted_reason: str | None = None
     snapshot: _WorkspaceSnapshot | None = None
+    git_control: _GitControlSnapshot | None = None
 
     if skip_gates:
         reason = "skip_gates is prohibited; required gates must execute"
@@ -467,6 +742,7 @@ def orchestrate(
                 return _report(wp_id, machine, preconditions, gates, violations, reason)
 
             snapshot = _snapshot_workspace(root)
+            git_control = _snapshot_git_control(root)
             execution_started_at = datetime.now(UTC)
             machine.advance(LifecycleState.EXECUTING, "executing WPS execution.command")
             passed, detail, duration = _execute_command(root, command)
@@ -477,6 +753,7 @@ def orchestrate(
                     wp,
                     evidence_target,
                     snapshot,
+                    git_control,
                     preconditions,
                     gates,
                     execution_started_at,
@@ -485,6 +762,22 @@ def orchestrate(
                 return _report(wp_id, machine, preconditions, gates, violations, reason)
 
             task_changed = snapshot.changed(_snapshot_workspace(root))
+            git_changes = _git_control_changes(root, git_control)
+            if git_changes:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    "task command mutated prohibited Git state: "
+                    + ", ".join(git_changes),
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
             task_audit = audit_boundaries(wp.bounded_files, task_changed)
             violations = task_audit.violations
             if not task_audit.compliant:
@@ -494,17 +787,53 @@ def orchestrate(
                     wp,
                     evidence_target,
                     snapshot,
+                    git_control,
                     preconditions,
                     gates,
                     execution_started_at,
                     f"FIT-005 violation: {len(violations)} file(s) out of bounds",
                 )
                 return _report(wp_id, machine, preconditions, gates, violations, reason)
+            try:
+                _validate_expected_outputs(root, wp, task_changed)
+            except InvariantError as exc:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    str(exc),
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
 
+            post_task_snapshot = _snapshot_workspace(root)
             machine.advance(LifecycleState.VALIDATING, "running required quality gates")
             for gate, gate_command, required in wp.quality_gates:
                 gate_outcome = run_gate(root, gate, gate_command)
                 gates.append(gate_outcome)
+                git_changes = _git_control_changes(root, git_control)
+                if git_changes:
+                    reason, violations = _halt_with_evidence(
+                        machine,
+                        root,
+                        wp,
+                        evidence_target,
+                        snapshot,
+                        git_control,
+                        preconditions,
+                        gates,
+                        execution_started_at,
+                        f"gate {gate} mutated prohibited Git state: "
+                        + ", ".join(git_changes),
+                    )
+                    return _report(
+                        wp_id, machine, preconditions, gates, violations, reason
+                    )
                 if required and not gate_outcome.passed:
                     reason, violations = _halt_with_evidence(
                         machine,
@@ -512,6 +841,7 @@ def orchestrate(
                         wp,
                         evidence_target,
                         snapshot,
+                        git_control,
                         preconditions,
                         gates,
                         execution_started_at,
@@ -520,6 +850,48 @@ def orchestrate(
                     return _report(
                         wp_id, machine, preconditions, gates, violations, reason
                     )
+                current_workspace = _snapshot_workspace(root)
+                final_changed = snapshot.changed(current_workspace)
+                try:
+                    _validate_expected_outputs(root, wp, final_changed)
+                except InvariantError as exc:
+                    reason, violations = _halt_with_evidence(
+                        machine,
+                        root,
+                        wp,
+                        evidence_target,
+                        snapshot,
+                        git_control,
+                        preconditions,
+                        gates,
+                        execution_started_at,
+                        str(exc),
+                    )
+                    return _report(
+                        wp_id, machine, preconditions, gates, violations, reason
+                    )
+                gate_changes = post_task_snapshot.changed(current_workspace)
+                substantive_gate_changes = tuple(
+                    path for path in gate_changes if not is_tooling_artifact(path)
+                )
+                if substantive_gate_changes:
+                    reason, violations = _halt_with_evidence(
+                        machine,
+                        root,
+                        wp,
+                        evidence_target,
+                        snapshot,
+                        git_control,
+                        preconditions,
+                        gates,
+                        execution_started_at,
+                        f"gate {gate} mutated non-tooling workspace files: "
+                        + ", ".join(substantive_gate_changes),
+                    )
+                    return _report(
+                        wp_id, machine, preconditions, gates, violations, reason
+                    )
+                _restore_workspace(root, post_task_snapshot)
 
             task_changed = snapshot.changed(_snapshot_workspace(root))
             audit = audit_boundaries(wp.bounded_files, task_changed)
@@ -531,10 +903,27 @@ def orchestrate(
                     wp,
                     evidence_target,
                     snapshot,
+                    git_control,
                     preconditions,
                     gates,
                     execution_started_at,
                     f"FIT-005 violation: {len(violations)} file(s) out of bounds",
+                )
+                return _report(wp_id, machine, preconditions, gates, violations, reason)
+            try:
+                _validate_expected_outputs(root, wp, task_changed)
+            except InvariantError as exc:
+                reason, violations = _halt_with_evidence(
+                    machine,
+                    root,
+                    wp,
+                    evidence_target,
+                    snapshot,
+                    git_control,
+                    preconditions,
+                    gates,
+                    execution_started_at,
+                    str(exc),
                 )
                 return _report(wp_id, machine, preconditions, gates, violations, reason)
 
@@ -552,9 +941,11 @@ def orchestrate(
             machine.advance(LifecycleState.REVIEW_PENDING, "awaiting ARB disposition")
     except AfrpError as exc:
         halted_reason = str(exc)
-        if snapshot is not None and not machine.terminal:
+        if snapshot is not None and git_control is not None and not machine.terminal:
             try:
+                _restore_git_control(root, git_control)
                 _restore_workspace(root, snapshot)
+                _verify_restored_state(root, snapshot, git_control)
                 halted_reason += "; task-introduced changes rolled back and verified"
             except AfrpError as rollback_error:
                 halted_reason += f"; rollback failed: {rollback_error}"

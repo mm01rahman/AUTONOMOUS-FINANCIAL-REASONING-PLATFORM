@@ -157,9 +157,13 @@ class TestLineCoverage:
         ) -> subprocess.CompletedProcess[str]:
             captured["argv"] = argv
             captured.update(kwargs)
+            (tmp_path / "coverage.json").write_text(
+                json.dumps({"totals": {"percent_covered": 88.0}}),
+                encoding="utf-8",
+            )
             return subprocess.CompletedProcess(argv, 0, "", "")
 
-        collect_coverage(tmp_path, runner)
+        assert collect_coverage(tmp_path, runner) == 88.0
         assert captured["argv"] == [
             "uv",
             "run",
@@ -181,18 +185,23 @@ class TestHealthCommand:
         assert "capabilities:" in outcome.output
         assert "fit_007:" in outcome.output
 
-    def test_assert_full_fails_while_build_incomplete(self) -> None:
+    def test_assert_full_uses_fresh_collection(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        calls: list[Path] = []
+
+        def fake_collect(root: Path) -> float:
+            calls.append(root)
+            return 87.5
+
+        monkeypatch.setattr("afrp.commands.health.collect_coverage", fake_collect)
         runner = CliRunner()
         outcome = runner.invoke(
             cli, ["health", "--repo-root", str(REPO_ROOT), "--assert-full"]
         )
-        matrix = load_matrix(REPO_ROOT / "03-engineering" / "TRACEABILITY_MATRIX.yaml")
-        coverage_present = (REPO_ROOT / "coverage.json").is_file()
-        if matrix.coverage_ratio == 1.0 and coverage_present:
-            assert outcome.exit_code == 0
-        else:
-            assert outcome.exit_code == 3
-            assert "FIT-007" in outcome.output
+        assert outcome.exit_code == 0, outcome.output
+        assert calls == [REPO_ROOT.resolve()]
+        assert "test_coverage: 87.5%" in outcome.output
 
     def test_health_halts_without_matrix(self, tmp_path: Path) -> None:
         runner = CliRunner()
@@ -212,12 +221,13 @@ class TestHealthCommand:
             )
         calls: list[Path] = []
 
-        def fake_collect(root: Path) -> None:
+        def fake_collect(root: Path) -> float:
             calls.append(root)
             (root / "coverage.json").write_text(
                 json.dumps({"totals": {"percent_covered": 91.25}}),
                 encoding="utf-8",
             )
+            return 91.25
 
         monkeypatch.setattr("afrp.commands.health._running_under_pytest", lambda: False)
         monkeypatch.setattr("afrp.commands.health.collect_coverage", fake_collect)
@@ -228,8 +238,8 @@ class TestHealthCommand:
         assert calls == [tmp_path.resolve()]
         assert "test_coverage: 91.2%" in outcome.output
 
-    def test_assert_full_rejects_missing_coverage_during_pytest(
-        self, tmp_path: Path
+    def test_assert_full_rejects_failed_fresh_collection(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
     ) -> None:
         engineering = tmp_path / "03-engineering"
         engineering.mkdir()
@@ -238,8 +248,38 @@ class TestHealthCommand:
                 (REPO_ROOT / "03-engineering" / name).read_text(encoding="utf-8"),
                 encoding="utf-8",
             )
+
+        def fail_collection(root: Path) -> float:
+            raise InvariantError("EOS-HEALTH", f"fresh collection failed in {root}")
+
+        monkeypatch.setattr("afrp.commands.health.collect_coverage", fail_collection)
         outcome = CliRunner().invoke(
             cli, ["health", "--repo-root", str(tmp_path), "--assert-full"]
         )
         assert outcome.exit_code == 3
-        assert "coverage.json is required" in outcome.output
+        assert "fresh collection failed" in outcome.output
+
+    def test_assert_full_does_not_reuse_stale_artifact(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        engineering = tmp_path / "03-engineering"
+        engineering.mkdir()
+        for name in ("TRACEABILITY_MATRIX.yaml", "CAPABILITY_REGISTRY.yaml"):
+            (engineering / name).write_text(
+                (REPO_ROOT / "03-engineering" / name).read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+        (tmp_path / "coverage.json").write_text(
+            json.dumps({"totals": {"percent_covered": 100.0}}),
+            encoding="utf-8",
+        )
+
+        def fail_collection(root: Path) -> float:
+            raise InvariantError("EOS-HEALTH", f"collector unavailable in {root}")
+
+        monkeypatch.setattr("afrp.commands.health.collect_coverage", fail_collection)
+        outcome = CliRunner().invoke(
+            cli, ["health", "--repo-root", str(tmp_path), "--assert-full"]
+        )
+        assert outcome.exit_code == 3
+        assert "collector unavailable" in outcome.output

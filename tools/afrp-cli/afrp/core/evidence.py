@@ -26,6 +26,10 @@ if TYPE_CHECKING:
     from afrp.core.workpackage import WorkPackage
 
 ERS_SCHEMA_RELPATH = Path("09-validation") / "schemas" / "ers-1.0.schema.json"
+_TOOLING_DIRECTORIES = frozenset(
+    {".venv", ".pytest_cache", ".mypy_cache", ".ruff_cache", "__pycache__"}
+)
+_TOOLING_FILES = frozenset({".coverage", "coverage.json"})
 
 
 @dataclass(frozen=True)
@@ -63,15 +67,32 @@ def modified_files(repo_root: Path, base_ref: str = "HEAD") -> tuple[str, ...]:
             text=True,
             check=True,
         )
+        ignored = subprocess.run(
+            ["git", "ls-files", "--others", "--ignored", "--exclude-standard"],
+            cwd=repo_root,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
     except (subprocess.CalledProcessError, OSError) as exc:
         raise ManifestValidationError(f"git query failed: {exc}") from exc
     names = {
         line.strip()
-        for out in (diff.stdout, untracked.stdout)
+        for out in (diff.stdout, untracked.stdout, ignored.stdout)
         for line in out.splitlines()
-        if line.strip()
+        if line.strip() and not is_tooling_artifact(line.strip())
     }
     return tuple(sorted(names))
+
+
+def is_tooling_artifact(relative: str) -> bool:
+    """Return whether a path is transient output from approved local tooling."""
+    parts = Path(relative).parts
+    return (
+        any(part in _TOOLING_DIRECTORIES for part in parts)
+        or bool(parts)
+        and parts[-1] in _TOOLING_FILES
+    )
 
 
 def audit_boundaries(

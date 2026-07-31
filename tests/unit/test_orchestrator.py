@@ -97,7 +97,7 @@ def fixture_repo(tmp_path: Path) -> Path:
         )
 
     (tmp_path / "README.md").write_text("fixture\n", encoding="utf-8")
-    (tmp_path / ".gitignore").write_text("*.ignored\n", encoding="utf-8")
+    (tmp_path / ".gitignore").write_text("*.ignored\n.venv/\n", encoding="utf-8")
     readme_digest = hashlib.sha256((tmp_path / "README.md").read_bytes()).hexdigest()
     gov = tmp_path / "00-governance"
     gov.mkdir()
@@ -236,7 +236,7 @@ class TestGateExecution:
 class TestOrchestrator:
     def test_happy_path_reaches_review_pending(self, fixture_repo: Path) -> None:
         report = orchestrate(fixture_repo, "WP-TST-0001")
-        assert report.final_state is LifecycleState.REVIEW_PENDING
+        assert report.final_state is LifecycleState.REVIEW_PENDING, report.halted_reason
         assert all(p.passed for p in report.preconditions)
         assert all(g.passed for g in report.gates)
         assert report.boundary_violations == ()
@@ -286,6 +286,23 @@ class TestOrchestrator:
         assert record["lifecycle"]["final_state"] == "HALTED"
         assert record["quality_gates"][0]["result"] == "FAIL"
         assert record["verdict"]["all_gates_passed"] is False
+
+    def test_gate_cannot_remove_expected_output(self, fixture_repo: Path) -> None:
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        wp_path.write_text(
+            yaml.safe_dump(
+                synthetic_wp(
+                    "python -c \"from pathlib import Path; "
+                    "Path('src/mod.py').unlink()\""
+                ),
+                sort_keys=False,
+            ),
+            encoding="utf-8",
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.HALTED
+        assert "missing: src/mod.py" in (report.halted_reason or "")
+        assert (fixture_repo / "src" / "mod.py").read_text(encoding="utf-8") == "VALUE = 1\n"
 
     def test_task_failure_rolls_back_and_emits_halted_evidence(
         self, fixture_repo: Path
@@ -377,6 +394,36 @@ class TestOrchestrator:
         assert "EXECUTING" not in [state for state, _ in report.transitions]
         assert (fixture_repo / "src" / "mod.py").read_text(encoding="utf-8") == "VALUE = 1\n"
 
+    def test_noop_command_cannot_satisfy_expected_outputs(
+        self, fixture_repo: Path
+    ) -> None:
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        wp_path.write_text(
+            yaml.safe_dump(
+                synthetic_wp('python -c "pass"', ["python", "-c", "pass"]),
+                sort_keys=False,
+            ),
+            encoding="utf-8",
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.HALTED
+        assert "not changed by task: src/mod.py" in (report.halted_reason or "")
+
+    def test_missing_expected_output_halts_and_rolls_back(
+        self, fixture_repo: Path
+    ) -> None:
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        document = synthetic_wp('python -c "pass"')
+        document["outputs"]["expected_source_files"] = ["src/missing.py"]
+        document["scope"]["bounded_files"].append("src/missing.py")
+        wp_path.write_text(
+            yaml.safe_dump(document, sort_keys=False), encoding="utf-8"
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.HALTED
+        assert "missing: src/missing.py" in (report.halted_reason or "")
+        assert (fixture_repo / "src" / "mod.py").read_text(encoding="utf-8") == "VALUE = 1\n"
+
     def test_lock_contention_halts(self, fixture_repo: Path) -> None:
         lock = fixture_repo / ".git" / "afrp-orchestrator.lock"
         lock.write_text("held\n", encoding="utf-8")
@@ -388,15 +435,28 @@ class TestOrchestrator:
     def test_lock_supports_current_git_worktree(self) -> None:
         assert (REPO_ROOT / ".git").is_file()
         with _workspace_lock(REPO_ROOT):
-            lock_path = subprocess.run(
+            common_dir = Path(
+                subprocess.run(
+                    ["git", "rev-parse", "--git-common-dir"],
+                    cwd=REPO_ROOT,
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                ).stdout.strip()
+            )
+            if not common_dir.is_absolute():
+                common_dir = REPO_ROOT / common_dir
+            lock_path = common_dir.resolve() / "afrp-orchestrator.lock"
+            assert lock_path.is_file()
+            worktree_lock = subprocess.run(
                 ["git", "rev-parse", "--git-path", "afrp-orchestrator.lock"],
                 cwd=REPO_ROOT,
                 check=True,
                 capture_output=True,
                 text=True,
             ).stdout.strip()
-            assert Path(lock_path).is_file()
-        assert not Path(lock_path).exists()
+            assert lock_path != Path(worktree_lock)
+        assert not lock_path.exists()
 
     def test_lock_is_held_during_gate_execution(self, fixture_repo: Path) -> None:
         wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
@@ -413,6 +473,28 @@ class TestOrchestrator:
         report = orchestrate(fixture_repo, "WP-TST-0001")
         assert report.final_state is LifecycleState.REVIEW_PENDING
         assert not (fixture_repo / ".git" / "afrp-orchestrator.lock").exists()
+
+    def test_gate_tooling_artifacts_are_cleaned_without_false_fit_failure(
+        self, fixture_repo: Path
+    ) -> None:
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        wp_path.write_text(
+            yaml.safe_dump(
+                synthetic_wp(
+                    "python -c \"from pathlib import Path; "
+                    "Path('.pytest_cache').mkdir(); "
+                    "Path('.pytest_cache/state').write_text('gate'); "
+                    "Path('__pycache__').mkdir(); "
+                    "Path('__pycache__/mod.pyc').write_text('gate')\""
+                ),
+                sort_keys=False,
+            ),
+            encoding="utf-8",
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.REVIEW_PENDING, report.halted_reason
+        assert not (fixture_repo / ".pytest_cache").exists()
+        assert not (fixture_repo / "__pycache__").exists()
 
     def test_fit_failure_rolls_back_new_trees_and_preserves_preexisting(
         self, fixture_repo: Path
@@ -486,11 +568,157 @@ class TestOrchestrator:
         assert "rogue.ignored" in report.boundary_violations
         assert not (fixture_repo / "rogue.ignored").exists()
 
+    def test_task_created_ignored_environment_is_removed(
+        self, fixture_repo: Path
+    ) -> None:
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        command = [
+            "python",
+            "-c",
+            (
+                "from pathlib import Path; "
+                "Path('src/mod.py').write_text('VALUE = 2\\n'); "
+                "Path('.venv/bin').mkdir(parents=True); "
+                "Path('.venv/bin/tool').write_text('task-created')"
+            ),
+        ]
+        wp_path.write_text(
+            yaml.safe_dump(
+                synthetic_wp('python -c "pass"', command), sort_keys=False
+            ),
+            encoding="utf-8",
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.HALTED
+        assert ".venv/bin/tool" in report.boundary_violations
+        assert not (fixture_repo / ".venv").exists()
+
+    def test_index_config_and_hook_mutation_is_prohibited_and_restored(
+        self, fixture_repo: Path
+    ) -> None:
+        target = fixture_repo / "src" / "mod.py"
+        target.write_text("VALUE = 7  # preexisting staged\n", encoding="utf-8")
+        subprocess.run(["git", "add", "src/mod.py"], cwd=fixture_repo, check=True)
+        original_index = subprocess.run(
+            ["git", "show", ":src/mod.py"],
+            cwd=fixture_repo,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        command = [
+            "python",
+            "-c",
+            (
+                "from pathlib import Path; import subprocess; "
+                "Path('src/mod.py').write_text('VALUE = 8\\n'); "
+                "subprocess.run(['git','add','src/mod.py'],check=True); "
+                "subprocess.run(['git','config','arb.task','mutated'],check=True); "
+                "Path('.git/hooks/task-hook').write_text('mutated')"
+            ),
+        ]
+        wp_path.write_text(
+            yaml.safe_dump(
+                synthetic_wp('python -c "pass"', command), sort_keys=False
+            ),
+            encoding="utf-8",
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.HALTED
+        assert "prohibited Git state" in (report.halted_reason or "")
+        assert target.read_text(encoding="utf-8") == "VALUE = 7  # preexisting staged\n"
+        restored_index = subprocess.run(
+            ["git", "show", ":src/mod.py"],
+            cwd=fixture_repo,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout
+        assert restored_index == original_index
+        config = subprocess.run(
+            ["git", "config", "--get", "arb.task"],
+            cwd=fixture_repo,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        assert config.returncode == 1
+        assert not (fixture_repo / ".git" / "hooks" / "task-hook").exists()
+
+    def test_head_and_refs_mutation_is_prohibited_and_restored(
+        self, fixture_repo: Path
+    ) -> None:
+        original_head = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=fixture_repo,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+        original_refs = subprocess.run(
+            ["git", "show-ref"],
+            cwd=fixture_repo,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout
+        head_log_path = Path(
+            subprocess.run(
+                ["git", "rev-parse", "--git-path", "logs/HEAD"],
+                cwd=fixture_repo,
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.strip()
+        )
+        if not head_log_path.is_absolute():
+            head_log_path = fixture_repo / head_log_path
+        original_head_log = head_log_path.read_bytes()
+        wp_path = fixture_repo / "05-work-packages" / "WP-TST-0001.yaml"
+        command = [
+            "python",
+            "-c",
+            (
+                "from pathlib import Path; import subprocess; "
+                "Path('src/mod.py').write_text('VALUE = 9\\n'); "
+                "subprocess.run(['git','add','src/mod.py'],check=True); "
+                "subprocess.run(['git','-c','user.email=t@t','-c','user.name=t',"
+                "'commit','-q','-m','forbidden'],check=True); "
+                "subprocess.run(['git','tag','task-created'],check=True)"
+            ),
+        ]
+        wp_path.write_text(
+            yaml.safe_dump(
+                synthetic_wp('python -c "pass"', command), sort_keys=False
+            ),
+            encoding="utf-8",
+        )
+        report = orchestrate(fixture_repo, "WP-TST-0001")
+        assert report.final_state is LifecycleState.HALTED
+        assert "prohibited Git state" in (report.halted_reason or "")
+        assert subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=fixture_repo,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip() == original_head
+        assert subprocess.run(
+            ["git", "show-ref"],
+            cwd=fixture_repo,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout == original_refs
+        assert head_log_path.read_bytes() == original_head_log
+        assert (fixture_repo / "src" / "mod.py").read_text(encoding="utf-8") == "VALUE = 1\n"
+
     def test_existing_evidence_is_validated_without_overwrite(
         self, fixture_repo: Path
     ) -> None:
         first = orchestrate(fixture_repo, "WP-TST-0001")
-        assert first.final_state is LifecycleState.REVIEW_PENDING
+        assert first.final_state is LifecycleState.REVIEW_PENDING, first.halted_reason
         target = (
             fixture_repo
             / "05-work-packages"

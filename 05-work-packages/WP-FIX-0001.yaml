@@ -4,7 +4,7 @@ capability_id:
   id: "EOS-ORCHESTRATOR"
   version: "1.0"
 title: "Correct ARB-001 Engineering OS control findings"
-status: "Completed"
+status: "Assigned"
 is_immutable: true
 
 governance:

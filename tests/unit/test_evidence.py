@@ -159,6 +159,36 @@ class TestModifiedFiles:
         (tmp_path / "f.py").write_text("x = 2\n", encoding="utf-8")
         assert modified_files(tmp_path) == ("f.py",)
 
+    def test_detects_ignored_file(self, tmp_path: Path) -> None:
+        subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+        (tmp_path / ".gitignore").write_text(
+            "*.ignored\n.venv/\n.pytest_cache/\n", encoding="utf-8"
+        )
+        subprocess.run(["git", "add", ".gitignore"], cwd=tmp_path, check=True)
+        subprocess.run(
+            [
+                "git",
+                "-c",
+                "user.email=t@t",
+                "-c",
+                "user.name=t",
+                "commit",
+                "-q",
+                "-m",
+                "root",
+            ],
+            cwd=tmp_path,
+            check=True,
+        )
+        environment = tmp_path / ".venv" / "bin"
+        environment.mkdir(parents=True)
+        (environment / "python").write_text("preexisting\n", encoding="utf-8")
+        cache = tmp_path / ".pytest_cache"
+        cache.mkdir()
+        (cache / "state").write_text("preexisting\n", encoding="utf-8")
+        (tmp_path / "rogue.ignored").write_text("hidden\n", encoding="utf-8")
+        assert modified_files(tmp_path) == ("rogue.ignored",)
+
     def test_git_failure_raises_typed_error(self, tmp_path: Path) -> None:
         with pytest.raises(ManifestValidationError):
             modified_files(tmp_path)  # not a git repository

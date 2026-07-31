@@ -142,6 +142,28 @@ class TestFit002Excepts:
         )
         assert findings == []
 
+    @pytest.mark.parametrize(
+        "imports, handler",
+        [
+            ("from builtins import Exception as E", "E"),
+            ("import builtins as b", "b.Exception"),
+        ],
+    )
+    def test_builtin_exception_alias_is_checked(
+        self, imports: str, handler: str
+    ) -> None:
+        findings = check(
+            f"""
+            {imports}
+            def f() -> None:
+                try:
+                    pass
+                except {handler}:
+                    pass
+            """
+        )
+        assert any("without re-raise" in finding.message for finding in findings)
+
 
 class TestFit002Annotations:
     def test_unannotated_params_flagged(self) -> None:

@@ -87,22 +87,47 @@ def _statement_reaches_next(statement: ast.stmt) -> bool:
     return True
 
 
-def _catches_generic_exception(node: ast.expr | None) -> bool:
+def _exception_aliases(tree: ast.AST) -> tuple[set[str], set[str]]:
+    names = {"Exception"}
+    modules = {"builtins"}
+    for node in ast.walk(tree):
+        if isinstance(node, ast.ImportFrom) and node.module == "builtins":
+            names.update(
+                alias.asname or alias.name
+                for alias in node.names
+                if alias.name == "Exception"
+            )
+        elif isinstance(node, ast.Import):
+            modules.update(
+                alias.asname or alias.name
+                for alias in node.names
+                if alias.name == "builtins"
+            )
+    return names, modules
+
+
+def _catches_generic_exception(
+    node: ast.expr | None, names: set[str], modules: set[str]
+) -> bool:
     if isinstance(node, ast.Name):
-        return node.id == "Exception"
+        return node.id in names
     if isinstance(node, ast.Attribute):
         return (
             isinstance(node.value, ast.Name)
-            and node.value.id == "builtins"
+            and node.value.id in modules
             and node.attr == "Exception"
         )
     if isinstance(node, ast.Tuple):
-        return any(_catches_generic_exception(element) for element in node.elts)
+        return any(
+            _catches_generic_exception(element, names, modules)
+            for element in node.elts
+        )
     return False
 
 
 def _check_excepts(tree: ast.AST, path: Path) -> list[Violation]:
     findings: list[Violation] = []
+    exception_names, builtins_modules = _exception_aliases(tree)
     for node in ast.walk(tree):
         if not isinstance(node, ast.ExceptHandler):
             continue
@@ -110,7 +135,9 @@ def _check_excepts(tree: ast.AST, path: Path) -> list[Violation]:
             findings.append(
                 Violation("FIT-002", path, node.lineno, "bare 'except:' handler (EDR-004)")
             )
-        elif _catches_generic_exception(node.type) and not _handler_reraises(node):
+        elif _catches_generic_exception(
+            node.type, exception_names, builtins_modules
+        ) and not _handler_reraises(node):
             findings.append(
                 Violation(
                     "FIT-002",
