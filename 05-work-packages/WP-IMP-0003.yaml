@@ -4,7 +4,7 @@ capability_id:
   id: "EOS-CONTEXT"
   version: "1.0"
 title: "Implement afrp boot command & Manifest/Kernel Parsers"
-status: "Assigned"
+status: "Completed"
 is_immutable: true
 
 governance:
@@ -61,8 +61,15 @@ outputs:
     - "05-work-packages/WP-IMP-0003/evidence/EXEC-001.yaml"
 
 execution_results:
-  source_files_modified: []
-  evidence_generated: []
+  source_files_modified:
+    - "tools/afrp-cli/afrp/cli.py"
+    - "tools/afrp-cli/afrp/commands/boot.py"
+    - "tools/afrp-cli/afrp/core/manifest.py"
+    - "tools/afrp-cli/afrp/core/kernel.py"
+    - "tools/afrp-cli/afrp/core/exceptions.py"
+    - "tests/unit/test_bootloader.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0003/evidence/EXEC-001.yaml"
 
 produces:
   capability:

@@ -44,6 +44,15 @@ compatibility (NFR-010/EDR-010) is enforced by contract snapshot comparison unde
 with zero members; the EDR-003 CPU-bound branch is satisfied with process pools.
 Rust extension slots can be adopted later without architectural change.
 
+### N-4 Baseline ledger scope
+
+`00-governance/BASELINE_FINGERPRINT.yaml` freezes the immutable governance corpus
+only. Work Package contracts (`05-work-packages/WP-*.yaml`) carry mutable lifecycle
+fields (`status`, `execution_results`) by WPS-1.0 design and are therefore
+integrity-tracked by git history plus ERS-1.0 evidence, not by the baseline ledger.
+`is_immutable: true` in a WP binds its *contract terms* (scope, requirements,
+gates), which never change after assignment.
+
 ## Consequences
 
 Recorded in `03-engineering/BUILD_PROFILE.yaml` (`toolchain_waivers`). All other

@@ -10,9 +10,16 @@ requirements:
     title: "afrp boot command with manifest and kernel parsers"
     source: "03-engineering/300_IMPLEMENTATION_GUIDE.md#3"
     capability: "EOS-CONTEXT"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/cli.py"
+      - "tools/afrp-cli/afrp/commands/boot.py"
+      - "tools/afrp-cli/afrp/core/manifest.py"
+      - "tools/afrp-cli/afrp/core/kernel.py"
+      - "tools/afrp-cli/afrp/core/exceptions.py"
+    verified_by:
+      - "tests/unit/test_bootloader.py"
+      - "05-work-packages/WP-IMP-0003/evidence/EXEC-001.yaml"
   - id: "FR-002"
     title: "afrp plan capability DAG engine with cycle detection"
     source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md#1"
@@ -238,9 +245,12 @@ requirements:
     title: "KERNEL.md length <= 400 words"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
     capability: "EOS-CONTEXT"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "tools/afrp-cli/afrp/core/kernel.py"
+    verified_by:
+      - "tests/unit/test_bootloader.py"
+      - "05-work-packages/WP-IMP-0003/evidence/EXEC-001.yaml"
   - id: "FIT-007"
     title: "100% requirement coverage in traceability matrix"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#3"
