@@ -1,0 +1,102 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-032"
+work_package_id: "WP-IMP-0001"
+capability:
+  id: "EOS-BOOT"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (GPT-5.6 Sol)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-07-31T23:54:59+06:00"
+  finished_at: "2026-07-31T23:54:59+06:00"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "BASELINE_VERIFIED"
+      at: "2026-07-31T23:54:59+06:00"
+      note: "Genesis and Architecture Baseline v1.0.0 fingerprints PASS"
+    - state: "WORK_PACKAGE_LOADED"
+      at: "2026-07-31T23:54:59+06:00"
+      note: "WP-IMP-0001 assigned in governance commit aff982a"
+    - state: "PRECONDITIONS_VERIFIED"
+      at: "2026-07-31T23:54:59+06:00"
+    - state: "EXECUTION_AUTHORIZED"
+      at: "2026-07-31T23:54:59+06:00"
+      note: "Five bounded paths including evidence directory"
+    - state: "EXECUTING"
+      at: "2026-07-31T23:54:59+06:00"
+    - state: "VALIDATING"
+      at: "2026-07-31T23:54:59+06:00"
+    - state: "EVIDENCE_GENERATED"
+      at: "2026-07-31T23:54:59+06:00"
+    - state: "REVIEW_PENDING"
+      at: "2026-07-31T23:54:59+06:00"
+      note: "Two focused code-review passes completed; all findings resolved"
+preconditions:
+  - predicate: "capability.complete('GOV-BASELINE')"
+    result: "PASS"
+  - predicate: "file.exists('03-engineering/BUILD_PROFILE.yaml')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "bootstrap_m1.sh"
+    - "tools/afrp-cli/afrp/core/workspace.py"
+    - "tests/unit/test_workspace_bootstrap.py"
+    - "README.md"
+    - "05-work-packages/WP-IMP-0001/evidence/"
+  files_modified:
+    - "bootstrap_m1.sh"
+    - "tools/afrp-cli/afrp/core/workspace.py"
+    - "tests/unit/test_workspace_bootstrap.py"
+    - "README.md"
+    - "05-work-packages/WP-IMP-0001/evidence/EXEC-032.yaml"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check tools/afrp-cli/ tests/unit/test_workspace_bootstrap.py"
+    result: "PASS"
+    detail: "All checks passed"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools/afrp-cli/ tests/unit/test_workspace_bootstrap.py"
+    result: "PASS"
+    detail: "Success: no issues found in 19 source files"
+  - gate: "pytest_units"
+    command: "uv run pytest tests/unit/test_workspace_bootstrap.py -v"
+    result: "PASS"
+    detail: "19 passed"
+  - gate: "repository_validation"
+    command: "uv run afrp validate"
+    result: "PASS"
+    detail: "FIT-002, FIT-004, FIT-006 PASS; zero violations"
+  - gate: "boundary_audit"
+    command: "uv run afrp evidence --wp WP-IMP-0001 --base-ref aff982a"
+    result: "PASS"
+    detail: "All implementation changes within five bounded paths"
+  - gate: "fresh_workspace_smoke"
+    command: "bootstrap module against temporary Git repository; uv sync --group dev"
+    result: "PASS"
+    detail: "Skeleton/config/tag created; 30 dependencies installed; imports passed"
+artifacts:
+  source_files:
+    - "bootstrap_m1.sh"
+    - "tools/afrp-cli/afrp/core/workspace.py"
+  test_files:
+    - "tests/unit/test_workspace_bootstrap.py"
+  documentation:
+    - "README.md"
+unlocked_capabilities:
+  - id: "EOS-CONTEXT"
+    version: "1.0"
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "APPROVED"
+  review_note: >-
+    Review verified strict ADR-0002 waivers, normalized M1.1 configuration,
+    zero-write tool/Git preconditions, tag preflight and rollback, exclusive
+    config creation with partial-write cleanup, idempotence, executable shell
+    entrypoint, Python 3.11 selection before import, logging, health, metrics,
+    evidence hooks, and fresh uv synchronization.
