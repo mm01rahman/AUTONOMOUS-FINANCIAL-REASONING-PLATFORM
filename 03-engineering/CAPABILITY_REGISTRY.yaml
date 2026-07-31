@@ -18,7 +18,7 @@ capabilities:
     owner: "EOS-CLI"
     status: "COMPLETE"
     depends_on: ["GOV-BASELINE"]
-    work_package: null
+    work_package: "WP-IMP-0001"
 
   # ── Stage B — Engineering Operating System ──────────────────────────
   - id: "EOS-CONTEXT"

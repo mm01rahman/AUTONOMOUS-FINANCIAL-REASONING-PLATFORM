@@ -17,6 +17,8 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
+from afrp.core.exceptions import ContractReferenceError
+
 _LAYER_PATTERN = re.compile(r"^afrp_runtime\.(layer[1-6]|common)(?:\.|$)")
 _DUNDER_EXEMPT = frozenset({"__init__", "__new__", "__post_init__"})
 
@@ -36,14 +38,98 @@ class Violation:
 
 
 def _handler_reraises(handler: ast.ExceptHandler) -> bool:
-    for node in ast.walk(handler):
-        if isinstance(node, ast.Raise):
-            return True
+    if not handler.body or not isinstance(handler.body[-1], ast.Raise):
+        return False
+    return _block_reaches_next(handler.body[:-1])
+
+
+def _block_reaches_next(statements: list[ast.stmt]) -> bool:
+    for statement in statements:
+        if not _statement_reaches_next(statement):
+            return False
+    return True
+
+
+def _statement_reaches_next(statement: ast.stmt) -> bool:
+    if isinstance(statement, ast.Return | ast.Raise | ast.Break | ast.Continue):
+        return False
+    if isinstance(statement, ast.Assert) and isinstance(statement.test, ast.Constant):
+        return bool(statement.test.value)
+    if isinstance(statement, ast.If):
+        if isinstance(statement.test, ast.Constant):
+            selected = statement.body if statement.test.value else statement.orelse
+            return _block_reaches_next(selected)
+        return _block_reaches_next(statement.body) and _block_reaches_next(
+            statement.orelse
+        )
+    if isinstance(statement, ast.While | ast.For | ast.AsyncFor):
+        if (
+            isinstance(statement, ast.While)
+            and isinstance(statement.test, ast.Constant)
+            and bool(statement.test.value)
+        ):
+            return False
+        return _block_reaches_next(statement.body) and _block_reaches_next(
+            statement.orelse
+        )
+    if isinstance(statement, ast.Try):
+        if statement.finalbody and not _block_reaches_next(statement.finalbody):
+            return False
+        return (
+            _block_reaches_next(statement.body)
+            and _block_reaches_next(statement.orelse)
+            and all(
+                _block_reaches_next(handler.body) for handler in statement.handlers
+            )
+        )
+    if isinstance(statement, ast.With | ast.AsyncWith):
+        return _block_reaches_next(statement.body)
+    if isinstance(statement, ast.Match):
+        return all(_block_reaches_next(case.body) for case in statement.cases)
+    return True
+
+
+def _exception_aliases(tree: ast.AST) -> tuple[set[str], set[str]]:
+    names = {"Exception"}
+    modules = {"builtins"}
+    for node in ast.walk(tree):
+        if isinstance(node, ast.ImportFrom) and node.module == "builtins":
+            names.update(
+                alias.asname or alias.name
+                for alias in node.names
+                if alias.name == "Exception"
+            )
+        elif isinstance(node, ast.Import):
+            modules.update(
+                alias.asname or alias.name
+                for alias in node.names
+                if alias.name == "builtins"
+            )
+    return names, modules
+
+
+def _catches_generic_exception(
+    node: ast.expr | None, names: set[str], modules: set[str]
+) -> bool:
+    if isinstance(node, ast.Name):
+        return node.id in names
+    if isinstance(node, ast.Attribute):
+        return (
+            isinstance(node.value, ast.Name)
+            and node.value.id in modules
+            and node.attr == "Exception"
+        )
+    if isinstance(node, ast.Tuple):
+        return any(
+            _catches_generic_exception(element, names, modules)
+            for element in node.elts
+        )
     return False
 
 
 def _check_excepts(tree: ast.AST, path: Path) -> list[Violation]:
     findings: list[Violation] = []
+    exception_names, builtins_modules = _exception_aliases(tree)
     for node in ast.walk(tree):
         if not isinstance(node, ast.ExceptHandler):
             continue
@@ -51,11 +137,9 @@ def _check_excepts(tree: ast.AST, path: Path) -> list[Violation]:
             findings.append(
                 Violation("FIT-002", path, node.lineno, "bare 'except:' handler (EDR-004)")
             )
-        elif (
-            isinstance(node.type, ast.Name)
-            and node.type.id == "Exception"
-            and not _handler_reraises(node)
-        ):
+        elif _catches_generic_exception(
+            node.type, exception_names, builtins_modules
+        ) and not _handler_reraises(node):
             findings.append(
                 Violation(
                     "FIT-002",
@@ -122,13 +206,36 @@ def _module_layer(path: Path) -> str | None:
     return None
 
 
-def _imported_modules(tree: ast.AST) -> list[tuple[str, int]]:
+def _resolve_relative_import(node: ast.ImportFrom, path: Path) -> list[str]:
+    parts = path.parts
+    runtime_index = parts.index("afrp_runtime")
+    package = list(parts[runtime_index + 1 : -1])
+    levels_up = node.level - 1
+    if levels_up > len(package):
+        return []
+    prefix = package[: len(package) - levels_up]
+    if node.module:
+        return ["afrp_runtime." + ".".join([*prefix, *node.module.split(".")])]
+    return [
+        "afrp_runtime." + ".".join([*prefix, alias.name])
+        for alias in node.names
+        if alias.name != "*"
+    ]
+
+
+def _imported_modules(tree: ast.AST, path: Path) -> list[tuple[str, int]]:
     modules: list[tuple[str, int]] = []
     for node in ast.walk(tree):
         if isinstance(node, ast.Import):
             modules.extend((alias.name, node.lineno) for alias in node.names)
-        elif isinstance(node, ast.ImportFrom) and node.module and node.level == 0:
-            modules.append((node.module, node.lineno))
+        elif isinstance(node, ast.ImportFrom):
+            if node.level == 0 and node.module:
+                modules.append((node.module, node.lineno))
+            elif node.level > 0:
+                modules.extend(
+                    (module, node.lineno)
+                    for module in _resolve_relative_import(node, path)
+                )
     return modules
 
 
@@ -137,7 +244,7 @@ def _check_cross_layer(tree: ast.AST, path: Path) -> list[Violation]:
     if own is None:
         return []
     findings: list[Violation] = []
-    for module, line in _imported_modules(tree):
+    for module, line in _imported_modules(tree, path):
         match = _LAYER_PATTERN.match(module)
         if not match:
             continue
@@ -181,11 +288,11 @@ def check_source(source: str, path: Path) -> list[Violation]:
 
 
 def scan_paths(roots: list[Path]) -> list[Violation]:
-    """Scan every ``*.py`` file under each existing root."""
+    """Scan every ``*.py`` file under each required root."""
     findings: list[Violation] = []
     for root in roots:
         if not root.exists():
-            continue
+            raise ContractReferenceError(str(root))
         for file in sorted(root.rglob("*.py")):
             # utf-8-sig mirrors CPython's own BOM tolerance for source files.
             source = file.read_text(encoding="utf-8-sig")

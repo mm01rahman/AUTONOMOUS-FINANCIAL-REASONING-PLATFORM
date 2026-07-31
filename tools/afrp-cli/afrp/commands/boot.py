@@ -8,8 +8,10 @@ diagnostic block, terminating in ``BASELINE_VERIFIED``.
 from __future__ import annotations
 
 import hashlib
+import re
 from dataclasses import dataclass
-from pathlib import Path
+from datetime import datetime
+from pathlib import Path, PurePosixPath, PureWindowsPath
 
 import click
 import yaml
@@ -17,6 +19,7 @@ from afrp.core.exceptions import (
     AfrpError,
     BaselineIntegrityError,
     ContractReferenceError,
+    ManifestValidationError,
 )
 from afrp.core.kernel import KernelDocument, load_kernel
 from afrp.core.manifest import RepositoryManifest, load_manifest
@@ -26,6 +29,41 @@ _AGENT_IDENTITY = {
     "agent_vendor": "Vendor-Neutral",
     "agent_name": "AFRP Engineering OS",
 }
+_LEDGER_SCHEMA_VERSION = "1.0"
+_LEDGER_ID = "BASELINE_FINGERPRINT"
+_BASELINE_ID = "AFRP-BASELINE-1.0.0"
+_HASH_ALGORITHM = "sha256"
+_SHA256_PATTERN = re.compile(r"^[0-9a-fA-F]{64}$")
+_LEDGER_KEYS = frozenset(
+    {
+        "schema_version",
+        "ledger_id",
+        "baseline_id",
+        "hash_algorithm",
+        "generated_at",
+        "artifacts",
+    }
+)
+_ARTIFACT_KEYS = frozenset({"path", "sha256"})
+
+
+@dataclass(frozen=True)
+class FingerprintArtifact:
+    """One validated genesis-ledger artifact."""
+
+    path: str
+    sha256: str
+
+
+@dataclass(frozen=True)
+class FingerprintLedger:
+    """Strictly validated genesis fingerprint ledger."""
+
+    schema_version: str
+    ledger_id: str
+    baseline_id: str
+    hash_algorithm: str
+    artifacts: tuple[FingerprintArtifact, ...]
 
 
 @dataclass(frozen=True)
@@ -37,6 +75,105 @@ class BootResult:
     verified_artifacts: int
 
 
+def _ledger_error(reason: str) -> ManifestValidationError:
+    return ManifestValidationError(f"fingerprint ledger invalid: {reason}")
+
+
+def _safe_artifact_path(repo_root: Path, raw_path: object) -> str:
+    if not isinstance(raw_path, str) or not raw_path.strip():
+        raise _ledger_error("artifact path must be a non-empty string")
+    rel = raw_path.strip()
+    posix = PurePosixPath(rel)
+    windows = PureWindowsPath(rel)
+    if posix.is_absolute() or windows.is_absolute() or windows.drive:
+        raise _ledger_error(f"artifact path must be repository-relative: {rel!r}")
+    if ".." in posix.parts or ".." in windows.parts:
+        raise _ledger_error(f"artifact path contains traversal: {rel!r}")
+    root = repo_root.resolve()
+    target = (root / Path(*posix.parts)).resolve()
+    try:
+        target.relative_to(root)
+    except ValueError as exc:
+        raise _ledger_error(f"artifact path escapes repository: {rel!r}") from exc
+    return posix.as_posix()
+
+
+def _load_fingerprint_ledger(repo_root: Path, ledger_path: Path) -> FingerprintLedger:
+    try:
+        loaded = yaml.safe_load(ledger_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, yaml.YAMLError) as exc:
+        raise _ledger_error(f"YAML parse failure: {exc}") from exc
+    if not isinstance(loaded, dict):
+        raise _ledger_error("root must be a mapping")
+    if not all(isinstance(key, str) for key in loaded):
+        raise _ledger_error("all top-level keys must be strings")
+    unknown_keys = set(loaded) - _LEDGER_KEYS
+    missing_keys = _LEDGER_KEYS - set(loaded)
+    if unknown_keys or missing_keys:
+        detail: list[str] = []
+        if missing_keys:
+            detail.append(f"missing keys: {', '.join(sorted(missing_keys))}")
+        if unknown_keys:
+            detail.append(f"unknown keys: {', '.join(sorted(unknown_keys))}")
+        raise _ledger_error("; ".join(detail))
+
+    identities = {
+        "schema_version": _LEDGER_SCHEMA_VERSION,
+        "ledger_id": _LEDGER_ID,
+        "baseline_id": _BASELINE_ID,
+        "hash_algorithm": _HASH_ALGORITHM,
+    }
+    for field, expected in identities.items():
+        if loaded.get(field) != expected:
+            raise _ledger_error(f"{field} must be {expected!r}")
+    generated_at = loaded["generated_at"]
+    if not isinstance(generated_at, str) or not generated_at.strip():
+        raise _ledger_error("generated_at must be a non-empty ISO datetime string")
+    try:
+        parsed_generated_at = datetime.fromisoformat(
+            generated_at.replace("Z", "+00:00")
+        )
+    except ValueError as exc:
+        raise _ledger_error("generated_at must be an ISO datetime string") from exc
+    if parsed_generated_at.tzinfo is None:
+        raise _ledger_error("generated_at must include a timezone")
+
+    raw_artifacts = loaded.get("artifacts")
+    if not isinstance(raw_artifacts, list) or not raw_artifacts:
+        raise _ledger_error("artifacts must be a non-empty list")
+    artifacts: list[FingerprintArtifact] = []
+    seen: set[str] = set()
+    for index, entry in enumerate(raw_artifacts):
+        if not isinstance(entry, dict):
+            raise _ledger_error(f"artifact {index} must be a mapping")
+        if not all(isinstance(key, str) for key in entry):
+            raise _ledger_error(f"artifact {index} keys must be strings")
+        if set(entry) != _ARTIFACT_KEYS:
+            unknown = set(entry) - _ARTIFACT_KEYS
+            missing = _ARTIFACT_KEYS - set(entry)
+            detail = []
+            if missing:
+                detail.append(f"missing keys: {', '.join(sorted(missing))}")
+            if unknown:
+                detail.append(f"unknown keys: {', '.join(sorted(unknown))}")
+            raise _ledger_error(f"artifact {index} {'; '.join(detail)}")
+        rel = _safe_artifact_path(repo_root, entry.get("path"))
+        if rel in seen:
+            raise _ledger_error(f"duplicate artifact path: {rel}")
+        seen.add(rel)
+        digest = entry.get("sha256")
+        if not isinstance(digest, str) or _SHA256_PATTERN.fullmatch(digest) is None:
+            raise _ledger_error(f"artifact {rel!r} has invalid SHA256")
+        artifacts.append(FingerprintArtifact(rel, digest.lower()))
+    return FingerprintLedger(
+        schema_version=_LEDGER_SCHEMA_VERSION,
+        ledger_id=_LEDGER_ID,
+        baseline_id=_BASELINE_ID,
+        hash_algorithm=_HASH_ALGORITHM,
+        artifacts=tuple(artifacts),
+    )
+
+
 def verify_baseline(repo_root: Path, ledger_path: Path) -> int:
     """Verify every ledger entry's SHA256 digest; return the count verified.
 
@@ -46,23 +183,19 @@ def verify_baseline(repo_root: Path, ledger_path: Path) -> int:
     """
     if not ledger_path.is_file():
         raise ContractReferenceError(str(ledger_path))
-    ledger = yaml.safe_load(ledger_path.read_text(encoding="utf-8"))
-    entries = ledger.get("artifacts", []) if isinstance(ledger, dict) else []
+    root = repo_root.resolve()
+    ledger = _load_fingerprint_ledger(root, ledger_path)
     mismatches: list[str] = []
-    for entry in entries:
-        if not isinstance(entry, dict) or "path" not in entry or "sha256" not in entry:
-            raise BaselineIntegrityError([f"malformed ledger entry: {entry!r}"])
-        rel = str(entry["path"])
-        expected = str(entry["sha256"])
-        target = repo_root / rel
+    for entry in ledger.artifacts:
+        target = root / entry.path
         if not target.is_file():
-            raise ContractReferenceError(rel)
+            raise ContractReferenceError(entry.path)
         actual = hashlib.sha256(target.read_bytes()).hexdigest()
-        if actual != expected:
-            mismatches.append(rel)
+        if actual != entry.sha256:
+            mismatches.append(entry.path)
     if mismatches:
         raise BaselineIntegrityError(mismatches)
-    return len(entries)
+    return len(ledger.artifacts)
 
 
 def run_boot(repo_root: Path) -> BootResult:

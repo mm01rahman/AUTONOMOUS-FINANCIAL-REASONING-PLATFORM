@@ -25,6 +25,7 @@ machine-verifiable evidence (AFRP-BASELINE-1.0.0, EGP-2.0).
 ## Quickstart
 
 ```bash
+./bootstrap_m1.sh --check-only  # verify EOS-BOOT prerequisites without writes
 uv sync --group dev
 uv run afrp boot      # EGP-2.0 zero-write handshake
 uv run afrp plan      # next executable work packages

@@ -1,0 +1,144 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0001"
+capability_id:
+  id: "EOS-BOOT"
+  version: "1.0"
+title: "Formalize EOS-BOOT workspace setup, toolchain verification, and milestone tag"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "EOS-CLI"
+  traceability:
+    implements_req: ["EOS-002"]
+    trace_sls: "ROS-1.0.0"
+    trace_adr: ["ADR-0001", "ADR-0002"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('GOV-BASELINE')"
+  - predicate: "file.exists('03-engineering/BUILD_PROFILE.yaml')"
+
+resources:
+  cpu: "low"
+  memory: "256MB"
+  network: false
+  filesystem:
+    write:
+      - "bootstrap_m1.sh"
+      - "tools/afrp-cli/afrp/core/workspace.py"
+      - "tests/unit/test_workspace_bootstrap.py"
+      - "README.md"
+      - "05-work-packages/WP-IMP-0001/evidence/"
+    read:
+      - "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+      - "03-engineering/300_IMPLEMENTATION_GUIDE.md"
+      - "03-engineering/BUILD_PROFILE.yaml"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "small"
+  estimated_duration: "1h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "03-engineering/BUILD_PROFILE.yaml"
+    - "03-engineering/300_IMPLEMENTATION_GUIDE.md"
+
+outputs:
+  expected_source_files:
+    - "bootstrap_m1.sh"
+    - "tools/afrp-cli/afrp/core/workspace.py"
+    - "tests/unit/test_workspace_bootstrap.py"
+    - "README.md"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0001/evidence/EXEC-032.yaml"
+
+execution_results:
+  source_files_modified:
+    - "bootstrap_m1.sh"
+    - "tools/afrp-cli/afrp/core/workspace.py"
+    - "tests/unit/test_workspace_bootstrap.py"
+    - "README.md"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0001/evidence/EXEC-032.yaml"
+
+produces:
+  capability:
+    id: "EOS-BOOT"
+    version: "1.0"
+  unlocks:
+    - id: "EOS-CONTEXT"
+      version: "1.0"
+
+scope:
+  bounded_files:
+    - "bootstrap_m1.sh"
+    - "tools/afrp-cli/afrp/core/workspace.py"
+    - "tests/unit/test_workspace_bootstrap.py"
+    - "README.md"
+    - "05-work-packages/WP-IMP-0001/evidence/"
+  non_goals:
+    - "Do not change architecture, runtime, research, or trading systems."
+    - "Do not change EOS-CONTEXT or later EOS component behavior."
+    - "Do not overwrite existing workspace configuration or move existing tags."
+
+requirements:
+  toolchain:
+    module: "tools/afrp-cli/afrp/core/workspace.py"
+    rules:
+      - "Verify git, Python 3.11+, cargo, buf, and uv."
+      - "Honor only BUILD_PROFILE waivers approved by ADR-0002."
+      - "Fail before writes when an unwaived prerequisite is unavailable."
+  workspace:
+    module: "tools/afrp-cli/afrp/core/workspace.py"
+    rules:
+      - "Create the exact IMP-001 M1.1 skeleton and initial workspace configs."
+      - "Preserve existing files and tags on repeated execution."
+      - "Create annotated m1.1-start only when absent."
+  hooks:
+    module: "tools/afrp-cli/afrp/core/workspace.py"
+    rules:
+      - "Expose dependency-injected ToolProbe and GitPort interfaces."
+      - "Expose health, metrics, JSON, evidence payload, and logging hooks."
+  entrypoint:
+    module: "bootstrap_m1.sh"
+    rules:
+      - "Run the standard-library module before environment synchronization."
+      - "Support check-only and no-tag arguments."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/afrp-cli/ tests/unit/test_workspace_bootstrap.py"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/afrp-cli/ tests/unit/test_workspace_bootstrap.py"
+  pytest_units:
+    required: true
+    command: "uv run pytest tests/unit/test_workspace_bootstrap.py -v"
+  repository_validation:
+    required: true
+    command: "uv run afrp validate"
+
+completion:
+  success_requires:
+    - "Toolchain verification is waiver-aware and zero-write on failure."
+    - "Workspace initialization is idempotent and preserves existing configuration."
+    - "Health, metrics, logging, evidence, and public entry point are tested."
+    - "Quality gates pass with zero errors."
+
+failure_modes:
+  ERR-TOOLCHAIN: "An unwaived dependency is missing or Python is below 3.11."
+  ERR-GIT: "Target is not a Git repository when tag creation is requested."
+  ERR-EXEC-BOUNDARY: "Touched files outside bounded_files."
+
+execution_prompt: |
+  Execute WP-IMP-0001 as AEF-02. Implement only EOS-BOOT exactly as specified
+  by EOS-002 and IMP-001. Halt on architecture ambiguity.
