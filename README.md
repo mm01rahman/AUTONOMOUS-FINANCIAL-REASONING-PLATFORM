@@ -11,6 +11,8 @@ machine-verifiable evidence (AFRP-BASELINE-1.0.0, EGP-2.0).
 - **Constitution:** [`00-governance/000_ENGINEERING_CONSTITUTION.md`](00-governance/000_ENGINEERING_CONSTITUTION.md)
 - **Topology & document index:** [`REPOSITORY_MANIFEST.yaml`](REPOSITORY_MANIFEST.yaml)
 - **Execution DAG:** [`03-engineering/CAPABILITY_REGISTRY.yaml`](03-engineering/CAPABILITY_REGISTRY.yaml)
+- **Architecture freeze:** [`docs/governance/BASELINE_MANIFEST.md`](docs/governance/BASELINE_MANIFEST.md)
+- **Definition of Done:** [`docs/governance/DEFINITION_OF_DONE.md`](docs/governance/DEFINITION_OF_DONE.md)
 
 ## Products
 

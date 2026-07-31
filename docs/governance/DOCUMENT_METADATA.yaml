@@ -1,0 +1,477 @@
+schema_version: "1.0"
+registry_id: "AFRP-DOCUMENT-METADATA-1.0.0"
+baseline_version: "1.0.0"
+status: "Approved"
+owner: "Architecture Review Board"
+
+required_fields:
+  - "document_id"
+  - "title"
+  - "version"
+  - "status"
+  - "owner"
+  - "authority"
+  - "approved_date"
+  - "last_modified"
+  - "change_policy"
+  - "dependencies"
+  - "referenced_by"
+  - "review_policy"
+
+defaults:
+  level_0: &level_0
+    status: "Frozen"
+    owner: "Architecture Review Board"
+    authority: "Level 0 - Constitutional"
+    approved_date: "2026-07-31"
+    last_modified: "2026-07-31"
+    change_policy: "Approved ADR, baseline version bump, unanimous ARB approval"
+    review_policy: "Review only during a constitutional baseline change"
+
+  level_1: &level_1
+    status: "Frozen"
+    owner: "Architecture Review Board"
+    authority: "Level 1 - Architecture"
+    approved_date: "2026-07-31"
+    last_modified: "2026-07-31"
+    change_policy: "Approved ADR and ARB review"
+    review_policy: "Review at every architecture baseline release"
+
+  level_2: &level_2
+    status: "Frozen"
+    owner: "Engineering OS Core"
+    authority: "Level 2 - Engineering Standard"
+    approved_date: "2026-07-31"
+    last_modified: "2026-07-31"
+    change_policy: "Reviewed pull request; ADR if architecture or ownership changes"
+    review_policy: "Review at least once per minor baseline"
+
+  contract: &contract
+    status: "Frozen"
+    owner: "Architecture Review Board"
+    authority: "Level 1 - Contract"
+    approved_date: "2026-07-31"
+    last_modified: "2026-07-31"
+    change_policy: "Approved ADR; breaking change requires major version"
+    review_policy: "Review every contract change and baseline release"
+
+  phase_1: &phase_1
+    status: "Frozen"
+    owner: "Architecture Review Board"
+    authority: "Level 2 - Baseline Governance"
+    approved_date: "2026-07-31"
+    last_modified: "2026-07-31"
+    change_policy: "Governed by BASELINE_FREEZE_POLICY.md"
+    review_policy: "Review at every architecture baseline release"
+
+documents:
+  - path: "00-governance/000_ENGINEERING_CONSTITUTION.md"
+    document_id: "CPG-00"
+    title: "AFRP Engineering Constitution"
+    version: "1.0.0"
+    <<: *level_0
+    dependencies: []
+    referenced_by:
+      - "00-governance/KERNEL.md"
+      - "02-architecture/AFRP_BASELINE_v1.md"
+      - "docs/governance/BASELINE_FREEZE_POLICY.md"
+
+  - path: "00-governance/KERNEL.md"
+    document_id: "AFRP-KERNEL-001"
+    title: "AFRP Repository Bootloader"
+    version: "1.0.0"
+    <<: *level_0
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+    referenced_by:
+      - "REPOSITORY_MANIFEST.yaml"
+      - "tools/afrp-cli/afrp/commands/boot.py"
+
+  - path: "00-governance/BASELINE_FINGERPRINT.yaml"
+    document_id: "AFRP-GENESIS-FINGERPRINT-001"
+    title: "Genesis Baseline Fingerprint Ledger"
+    version: "1.0"
+    <<: *level_0
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+      - "02-architecture/adr/ADR-0002-genesis-normalizations.md"
+    referenced_by:
+      - "REPOSITORY_MANIFEST.yaml"
+      - "tools/afrp-cli/afrp/commands/boot.py"
+
+  - path: "01-vision/CHARTER.md"
+    document_id: "AFRP-CHARTER-001"
+    title: "AFRP Vision and Product Mission"
+    version: "1.0.0"
+    <<: *level_1
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+    referenced_by:
+      - "REPOSITORY_MANIFEST.yaml"
+
+  - path: "02-architecture/050_FORMAL_SYSTEM_GLOSSARY.md"
+    document_id: "GLOSS-001"
+    title: "AFRP Formal System Glossary"
+    version: "1.0.0"
+    <<: *level_1
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+    referenced_by:
+      - "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+      - "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+      - "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+
+  - path: "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+    document_id: "ARCH-001"
+    title: "AFRP System Architecture"
+    version: "1.0.0"
+    <<: *level_1
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+      - "02-architecture/050_FORMAL_SYSTEM_GLOSSARY.md"
+    referenced_by:
+      - "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+      - "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+  - path: "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+    document_id: "RUN-001"
+    title: "AFRP Runtime Architecture"
+    version: "1.0.0"
+    <<: *level_1
+    dependencies:
+      - "02-architecture/050_FORMAL_SYSTEM_GLOSSARY.md"
+      - "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+    referenced_by:
+      - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+      - "proto/afrp/v1/cio.proto"
+
+  - path: "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+    document_id: "MATH-001"
+    title: "AFRP Mathematical Foundation"
+    version: "1.0.0"
+    <<: *level_1
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+      - "02-architecture/050_FORMAL_SYSTEM_GLOSSARY.md"
+    referenced_by:
+      - "06-runtime/afrp_runtime/layer3/dsmt.py"
+      - "06-runtime/afrp_runtime/layer4/optimizer.py"
+
+  - path: "02-architecture/200_REFERENCE_SPECIFICATION.md"
+    document_id: "REF-001"
+    title: "AFRP Reference Specification"
+    version: "1.0.0"
+    <<: *level_1
+    dependencies:
+      - "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+      - "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+    referenced_by:
+      - "proto/afrp/v1/envelope.proto"
+      - "proto/afrp/v1/cio.proto"
+      - "09-validation/schemas/wps-1.0.schema.json"
+      - "09-validation/schemas/ers-1.0.schema.json"
+
+  - path: "02-architecture/AFRP_BASELINE_v1.md"
+    document_id: "AFRP-ARCH-BASELINE-001"
+    title: "AFRP Platform Architecture Baseline Anchor"
+    version: "1.0.0"
+    <<: *level_1
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+    referenced_by:
+      - "REPOSITORY_MANIFEST.yaml"
+      - "docs/governance/BASELINE_MANIFEST.md"
+
+  - path: "02-architecture/adr/ADR-0001-adopt-baseline.md"
+    document_id: "ADR-0001"
+    title: "Adopt AFRP Baseline and EOS-First Build Order"
+    version: "1.0.0"
+    <<: *level_1
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+      - "02-architecture/AFRP_BASELINE_v1.md"
+    referenced_by:
+      - "05-work-packages/WP-IMP-*.yaml"
+
+  - path: "02-architecture/adr/ADR-0002-genesis-normalizations.md"
+    document_id: "ADR-0002"
+    title: "Genesis Normalizations and Toolchain Waivers"
+    version: "1.0.0"
+    <<: *level_1
+    dependencies:
+      - "02-architecture/adr/ADR-0001-adopt-baseline.md"
+    referenced_by:
+      - "03-engineering/BUILD_PROFILE.yaml"
+      - "00-governance/BASELINE_FINGERPRINT.yaml"
+
+  - path: "02-architecture/adr/ADR-0003-contract-enforcement.md"
+    document_id: "ADR-0003"
+    title: "Wire Contract Enforcement and Runtime Binding Strategy"
+    version: "1.0.0"
+    <<: *level_1
+    dependencies:
+      - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+      - "02-architecture/adr/ADR-0002-genesis-normalizations.md"
+    referenced_by:
+      - "proto/afrp/v1/"
+      - "tools/proto_gate.py"
+
+  - path: "02-architecture/adr/ADR-TEMPLATE.md"
+    document_id: "ADR-TEMPLATE"
+    title: "Architecture Decision Record Template"
+    version: "1.0.0"
+    <<: *level_1
+    status: "Controlled"
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+    referenced_by:
+      - "docs/governance/BASELINE_FREEZE_POLICY.md"
+
+  - path: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+    document_id: "EOS-001"
+    title: "AFRP Engineering Operating System"
+    version: "1.0.0"
+    <<: *level_2
+    dependencies:
+      - "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+    referenced_by:
+      - "04-ai-framework/ORCHESTRATOR.md"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+
+  - path: "03-engineering/300_IMPLEMENTATION_GUIDE.md"
+    document_id: "IMP-001"
+    title: "AFRP Historical Implementation Guide"
+    version: "1.0.0"
+    <<: *level_2
+    dependencies:
+      - "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+      - "REPOSITORY_MANIFEST.yaml"
+    referenced_by:
+      - "02-architecture/adr/ADR-0001-adopt-baseline.md"
+
+  - path: "03-engineering/BUILD_PROFILE.yaml"
+    document_id: "AFRP-BUILD-001"
+    title: "AFRP Build Profile"
+    version: "1.0"
+    <<: *level_2
+    dependencies:
+      - "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+      - "02-architecture/adr/ADR-0002-genesis-normalizations.md"
+    referenced_by:
+      - ".github/workflows/quality.yml"
+      - "docs/governance/DEFINITION_OF_DONE.md"
+
+  - path: "03-engineering/DEPRECATION_POLICY.yaml"
+    document_id: "AFRP-DEPRECATION-001"
+    title: "AFRP Deprecation Policy"
+    version: "1.0"
+    <<: *level_2
+    dependencies:
+      - "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+    referenced_by:
+      - "tools/system_gate.py"
+
+  - path: "04-ai-framework/AI_ENGINEER_PLAYBOOK.md"
+    document_id: "AEF-01"
+    title: "AFRP AI Engineer Playbook"
+    version: "1.0.0"
+    <<: *level_2
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+      - "09-validation/schemas/wps-1.0.schema.json"
+      - "09-validation/schemas/ers-1.0.schema.json"
+    referenced_by:
+      - "04-ai-framework/ORCHESTRATOR.md"
+
+  - path: "04-ai-framework/ORCHESTRATOR.md"
+    document_id: "AEF-ORCH-001"
+    title: "AFRP Orchestrator Runbook"
+    version: "1.0.0"
+    <<: *level_2
+    dependencies:
+      - "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+      - "04-ai-framework/AI_ENGINEER_PLAYBOOK.md"
+    referenced_by:
+      - "tools/afrp-cli/afrp/core/orchestrator.py"
+
+  - path: "09-validation/schemas/wps-1.0.schema.json"
+    document_id: "WPS-1.0"
+    title: "AFRP Work Package JSON Schema"
+    version: "1.0.0"
+    <<: *contract
+    dependencies:
+      - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+      - "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+    referenced_by:
+      - "05-work-packages/WP-IMP-*.yaml"
+
+  - path: "09-validation/schemas/ers-1.0.schema.json"
+    document_id: "ERS-1.0"
+    title: "AFRP Execution Evidence JSON Schema"
+    version: "1.0.0"
+    <<: *contract
+    dependencies:
+      - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+      - "09-validation/schemas/wps-1.0.schema.json"
+    referenced_by:
+      - "05-work-packages/WP-IMP-*/evidence/EXEC-*.yaml"
+
+  - path: "proto/afrp/v1/annotations.proto"
+    document_id: "AFRP-PROTO-ANNOTATIONS-001"
+    title: "AFRP Protobuf Governance Annotations"
+    version: "1.0.0"
+    <<: *contract
+    dependencies:
+      - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+    referenced_by:
+      - "proto/afrp/v1/envelope.proto"
+      - "proto/afrp/v1/cio.proto"
+
+  - path: "proto/afrp/v1/envelope.proto"
+    document_id: "ENVELOPE-v1"
+    title: "AFRP CognitiveEnvelope Contract"
+    version: "1.0.0"
+    <<: *contract
+    dependencies:
+      - "proto/afrp/v1/annotations.proto"
+      - "02-architecture/200_REFERENCE_SPECIFICATION.md"
+    referenced_by:
+      - "proto/afrp/v1/cio.proto"
+
+  - path: "proto/afrp/v1/cio.proto"
+    document_id: "AFRP-CIO-v1"
+    title: "AFRP CIO-01 through CIO-12 Contracts"
+    version: "1.0.0"
+    <<: *contract
+    dependencies:
+      - "proto/afrp/v1/annotations.proto"
+      - "proto/afrp/v1/envelope.proto"
+      - "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+    referenced_by:
+      - "09-validation/contracts/afrp_v1.snapshot.json"
+      - "06-runtime/afrp_runtime/contracts/cio.py"
+
+  - path: "09-validation/contracts/afrp_v1.snapshot.json"
+    document_id: "AFRP-PROTO-SNAPSHOT-001"
+    title: "AFRP v1 Wire Compatibility Snapshot"
+    version: "1.0.0"
+    <<: *contract
+    dependencies:
+      - "proto/afrp/v1/"
+      - "02-architecture/adr/ADR-0003-contract-enforcement.md"
+    referenced_by:
+      - "tools/proto_gate.py"
+
+  - path: "REPOSITORY_MANIFEST.yaml"
+    document_id: "REPOSITORY_MANIFEST"
+    title: "AFRP Repository Manifest"
+    version: "1.0"
+    <<: *level_1
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+    referenced_by:
+      - "00-governance/KERNEL.md"
+      - "tools/afrp-cli/afrp/core/manifest.py"
+      - "docs/governance/BASELINE_MANIFEST.md"
+
+  - path: "docs/governance/CANONICAL_SOURCE_MAP.yaml"
+    document_id: "AFRP-CANONICAL-SOURCES-001"
+    title: "AFRP Canonical Source Ownership Map"
+    version: "1.0.0"
+    <<: *phase_1
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+      - "REPOSITORY_MANIFEST.yaml"
+    referenced_by:
+      - "docs/governance/BASELINE_MANIFEST.md"
+      - "tools/baseline_gate.py"
+
+  - path: "docs/governance/CANONICAL_SOURCE_MAP.md"
+    document_id: "AFRP-GOV-MAP-001"
+    title: "AFRP Canonical Source and Dependency Map"
+    version: "1.0.0"
+    <<: *phase_1
+    dependencies:
+      - "docs/governance/CANONICAL_SOURCE_MAP.yaml"
+    referenced_by:
+      - "docs/governance/BASELINE_MANIFEST.md"
+
+  - path: "docs/governance/DOCUMENT_METADATA.yaml"
+    document_id: "AFRP-DOCUMENT-METADATA-001"
+    title: "AFRP Baseline Document Metadata Registry"
+    version: "1.0.0"
+    <<: *phase_1
+    dependencies:
+      - "docs/governance/CANONICAL_SOURCE_MAP.yaml"
+    referenced_by:
+      - "docs/governance/BASELINE_MANIFEST.md"
+      - "tools/baseline_gate.py"
+
+  - path: "docs/governance/DOCUMENT_METADATA.md"
+    document_id: "AFRP-DOCUMENT-METADATA-GUIDE-001"
+    title: "AFRP Document Metadata Standard"
+    version: "1.0.0"
+    <<: *phase_1
+    dependencies:
+      - "docs/governance/DOCUMENT_METADATA.yaml"
+    referenced_by:
+      - "docs/governance/BASELINE_MANIFEST.md"
+
+  - path: "docs/governance/BASELINE_MANIFEST.md"
+    document_id: "AFRP-BASELINE-MANIFEST-001"
+    title: "AFRP Architecture Baseline Manifest"
+    version: "1.0.0"
+    <<: *phase_1
+    dependencies:
+      - "02-architecture/AFRP_BASELINE_v1.md"
+      - "docs/governance/CANONICAL_SOURCE_MAP.yaml"
+      - "docs/governance/DOCUMENT_METADATA.yaml"
+    referenced_by:
+      - "docs/governance/BASELINE_FREEZE_POLICY.md"
+      - "tools/baseline_gate.py"
+
+  - path: "docs/governance/BASELINE_FREEZE_POLICY.md"
+    document_id: "AFRP-BASELINE-FREEZE-001"
+    title: "AFRP Architecture Baseline Freeze Policy"
+    version: "1.0.0"
+    <<: *phase_1
+    dependencies:
+      - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+      - "docs/governance/BASELINE_MANIFEST.md"
+    referenced_by:
+      - "docs/governance/ARCHITECTURE_REVIEW_CHECKLIST.md"
+      - "tools/baseline_gate.py"
+
+  - path: "docs/governance/ARCHITECTURE_REVIEW_CHECKLIST.md"
+    document_id: "AFRP-ARCH-REVIEW-CHECKLIST-001"
+    title: "AFRP Architecture Review Checklist"
+    version: "1.0.0"
+    <<: *phase_1
+    dependencies:
+      - "docs/governance/BASELINE_FREEZE_POLICY.md"
+      - "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+    referenced_by:
+      - ".github/PULL_REQUEST_TEMPLATE.md"
+
+  - path: "docs/governance/DEFINITION_OF_DONE.md"
+    document_id: "AFRP-DOD-001"
+    title: "AFRP Repository Definition of Done"
+    version: "1.0.0"
+    <<: *phase_1
+    dependencies:
+      - "09-validation/schemas/wps-1.0.schema.json"
+      - "09-validation/schemas/ers-1.0.schema.json"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    referenced_by:
+      - "docs/governance/ARCHITECTURE_REVIEW_CHECKLIST.md"
+
+  - path: "docs/governance/ARCHITECTURE_BASELINE_FINGERPRINT.yaml"
+    document_id: "AFRP-ARCH-FINGERPRINT-001"
+    title: "AFRP Architecture Baseline Fingerprint"
+    version: "1.0.0"
+    <<: *phase_1
+    dependencies:
+      - "docs/governance/BASELINE_MANIFEST.md"
+    referenced_by:
+      - "tools/baseline_gate.py"

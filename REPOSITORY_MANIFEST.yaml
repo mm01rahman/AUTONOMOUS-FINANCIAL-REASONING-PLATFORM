@@ -43,6 +43,8 @@ topology:
     purpose: "Test suites, chaos tests, JSON/YAML schemas"
   - path: "10-release/"
     purpose: "Release manifests, tagged deployment baselines"
+  - path: "docs/"
+    purpose: "Architecture baseline governance assurance and release notes"
   - path: "proto/"
     purpose: "Protobuf v3 wire contracts and custom annotations"
   - path: "tests/"
@@ -65,6 +67,13 @@ document_index:
   "TRACEABILITY_MATRIX.yaml": "03-engineering/TRACEABILITY_MATRIX.yaml"
   "BUILD_PROFILE.yaml": "03-engineering/BUILD_PROFILE.yaml"
   "BASELINE_FINGERPRINT.yaml": "00-governance/BASELINE_FINGERPRINT.yaml"
+  "BASELINE_MANIFEST.md": "docs/governance/BASELINE_MANIFEST.md"
+  "BASELINE_FREEZE_POLICY.md": "docs/governance/BASELINE_FREEZE_POLICY.md"
+  "ARCHITECTURE_REVIEW_CHECKLIST.md": "docs/governance/ARCHITECTURE_REVIEW_CHECKLIST.md"
+  "DEFINITION_OF_DONE.md": "docs/governance/DEFINITION_OF_DONE.md"
+  "DOCUMENT_METADATA.yaml": "docs/governance/DOCUMENT_METADATA.yaml"
+  "CANONICAL_SOURCE_MAP.yaml": "docs/governance/CANONICAL_SOURCE_MAP.yaml"
+  "ARCHITECTURE_BASELINE_FINGERPRINT.yaml": "docs/governance/ARCHITECTURE_BASELINE_FINGERPRINT.yaml"
 
 integrity:
   fingerprint_ledger: "00-governance/BASELINE_FINGERPRINT.yaml"
