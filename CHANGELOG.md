@@ -2,6 +2,30 @@
 
 All notable AFRP changes are recorded here. The project follows semantic versioning.
 
+## [1.2.0] — 2026-08-01
+
+### Added
+
+- Official Runtime implementation backlog:
+  - 18 Runtime Work Packages (`WP-RT-1001` .. `WP-RT-1018`) created under
+    `05-work-packages/` for Layer 1 through Layer 6 runtime capabilities.
+  - Planning-only package metadata added (objectives, acceptance criteria, tests,
+    evidence requirements, complexity, quality gates, architecture references).
+
+### Changed
+
+- Runtime capability entries in `03-engineering/CAPABILITY_REGISTRY.yaml` updated to:
+  - point to approved Runtime backlog work packages (`WP-RT-*`);
+  - reflect planning lifecycle (`AVAILABLE`/`LOCKED`) instead of completed runtime state;
+  - include planning status (`READY`), layer metadata, and traceability metadata.
+
+### Planning Milestone Artifacts
+
+- Runtime planning report:
+  - `10-release/RUNTIME_PLANNING_REPORT_v1.2.0.md`
+- Runtime backlog release notes:
+  - `docs/releases/v1.2.0-runtime-backlog.md`
+
 ## [1.0.0] — 2026-07-31
 
 ### Added

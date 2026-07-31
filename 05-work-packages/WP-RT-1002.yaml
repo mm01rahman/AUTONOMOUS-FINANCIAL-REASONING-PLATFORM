@@ -1,0 +1,96 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-RT-1002"
+capability_id: {id: "L1-FST", version: "1.0"}
+title: "Runtime backlog: Layer 1 feature store emission"
+layer: "Layer 1"
+description: "Transform CIO-01 observations into normalized immutable CIO-02 features."
+objective: "Deliver deterministic feature computation and immutable cache semantics."
+status: "Draft"
+planning_status: "READY"
+is_immutable: false
+owner: "Runtime Planning Board"
+
+governance:
+  target_subsystem: "SLS-100"
+  traceability:
+    implements_req: ["FR-009"]
+    trace_sls: "SLS-100"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+preconditions:
+  - {predicate: "capability.complete('L1-ING')"}
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/layer1/features.py"
+      - "tests/unit/test_layer1_features.py"
+      - "tests/integration/test_layer1_features_integration.py"
+      - "docs/runtime/layer1-features.md"
+      - "05-work-packages/WP-RT-1002/evidence/"
+    read:
+      - "06-runtime/afrp_runtime/contracts/"
+execution:
+  priority: "high"
+  estimated_complexity: "medium"
+  estimated_duration: "2d"
+  parallelizable: false
+  deterministic: true
+rollback: {strategy: "git_checkout_bounded_files", restore_tag: "HEAD"}
+inputs:
+  required_files:
+    - "06-runtime/afrp_runtime/contracts/features.py"
+    - "06-runtime/afrp_runtime/contracts/cio.py"
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/layer1/features.py"
+    - "tests/unit/test_layer1_features.py"
+    - "tests/integration/test_layer1_features_integration.py"
+    - "docs/runtime/layer1-features.md"
+  expected_evidence:
+    - "05-work-packages/WP-RT-1002/evidence/EXEC-102.yaml"
+produces:
+  capability: {id: "L1-FST", version: "1.0"}
+  unlocks:
+    - {id: "L1-MEM", version: "1.0"}
+    - {id: "L2-BASE", version: "1.0"}
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer1/features.py"
+    - "tests/unit/test_layer1_features.py"
+    - "tests/integration/test_layer1_features_integration.py"
+    - "docs/runtime/layer1-features.md"
+  non_goals:
+    - "No persistence, replay, or policy optimization logic."
+requirements:
+  acceptance_criteria:
+    - "CIO-02 outputs are deterministic and immutable by cache key."
+    - "Feature provenance links to source CIO-01 envelope identifiers."
+    - "Windowing/eviction logic is deterministic and bounded."
+  required_tests:
+    - "Unit: transform formulas, immutability, provenance, eviction."
+    - "Integration: CIO-01 stream to CIO-02 emissions across multiple event types."
+  evidence_requirements:
+    - "ERS-1.0 evidence with deterministic test traces and boundary compliance."
+quality_gates:
+  ruff_lint: {required: true, command: "uv run ruff check 06-runtime/ tests/"}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict 06-runtime/ tests/"}
+  pytest_units: {required: true, command: "uv run pytest tests/unit/test_layer1_features.py -v"}
+  pytest_integration: {required: true, command: "uv run pytest tests/integration/test_layer1_features_integration.py -v"}
+  coverage: {required: true, command: "uv run pytest tests --cov --cov-report=term"}
+  fit_004: {required: true, command: "uv run afrp validate"}
+  boundary_validation: {required: true, command: "uv run afrp evidence --wp WP-RT-1002"}
+completion:
+  success_requires:
+    - "All acceptance criteria and quality gates pass."
+failure_modes:
+  ERR-FEATURE-COMPUTE: "Feature function produced invalid or non-finite output."
+  ERR-PROVENANCE: "Missing or malformed parent CIO linkage."
+architecture_references:
+  - "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+  - "02-architecture/200_REFERENCE_SPECIFICATION.md#2"
+traceability_links: ["FR-009", "FIT-004", "FIT-005", "SLS-100"]
+execution_prompt: |
+  Execute WP-RT-1002 strictly within bounded_files and non_goals.

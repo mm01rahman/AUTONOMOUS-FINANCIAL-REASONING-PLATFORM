@@ -1,0 +1,86 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-RT-1017"
+capability_id: {id: "L5-EXE", version: "1.0"}
+title: "Runtime backlog: Layer 5 execution gateway and portfolio reconciliation"
+layer: "Layer 5"
+description: "Execute authorized actions through order FSM, fills, and portfolio reconciliation."
+objective: "Deliver deterministic order lifecycle and auditable state transitions."
+status: "Draft"
+planning_status: "READY"
+is_immutable: false
+owner: "Runtime Planning Board"
+governance:
+  target_subsystem: "SLS-500"
+  traceability:
+    implements_req: ["FR-013", "NFR-005", "NFR-007"]
+    trace_sls: "SLS-500"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+preconditions:
+  - {predicate: "capability.complete('L4-VAL')"}
+  - {predicate: "capability.complete('L1-RDB')"}
+resources:
+  cpu: "high"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/layer5/execution.py"
+      - "tests/unit/test_layer5.py"
+      - "tests/integration/test_layer5_execution_integration.py"
+      - "docs/runtime/layer5-execution.md"
+      - "05-work-packages/WP-RT-1017/evidence/"
+execution:
+  priority: "critical"
+  estimated_complexity: "large"
+  estimated_duration: "4d"
+  parallelizable: false
+  deterministic: true
+rollback: {strategy: "git_checkout_bounded_files", restore_tag: "HEAD"}
+inputs:
+  required_files:
+    - "06-runtime/afrp_runtime/layer4/policy.py"
+    - "06-runtime/afrp_runtime/layer1/persistence.py"
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/layer5/execution.py"
+    - "tests/unit/test_layer5.py"
+    - "tests/integration/test_layer5_execution_integration.py"
+    - "docs/runtime/layer5-execution.md"
+  expected_evidence: ["05-work-packages/WP-RT-1017/evidence/EXEC-117.yaml"]
+produces:
+  capability: {id: "L5-EXE", version: "1.0"}
+  unlocks: [{id: "L6-OPT", version: "1.0"}]
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer5/execution.py"
+    - "tests/unit/test_layer5.py"
+    - "tests/integration/test_layer5_execution_integration.py"
+    - "docs/runtime/layer5-execution.md"
+requirements:
+  acceptance_criteria:
+    - "Order FSM is exhaustive with explicit legal/illegal transitions."
+    - "CIO-08/CIO-09/CIO-10 contracts are emitted and reconciled deterministically."
+    - "Audit trail and trace metadata are present for each state transition."
+  required_tests:
+    - "Unit: transition matrix, fill accounting, error paths."
+    - "Integration: authorized action through fills to reconciled portfolio state."
+  evidence_requirements:
+    - "ERS-1.0 evidence with transition coverage and reconciliation parity."
+quality_gates:
+  ruff_lint: {required: true, command: "uv run ruff check 06-runtime/ tests/"}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict 06-runtime/ tests/"}
+  pytest_units: {required: true, command: "uv run pytest tests/unit/test_layer5.py -v"}
+  pytest_integration: {required: true, command: "uv run pytest tests/integration/test_layer5_execution_integration.py -v"}
+  coverage: {required: true, command: "uv run pytest tests --cov --cov-report=term"}
+  fit_004: {required: true, command: "uv run afrp validate"}
+  boundary_validation: {required: true, command: "uv run afrp evidence --wp WP-RT-1017"}
+completion:
+  success_requires: ["All acceptance criteria and quality gates pass."]
+failure_modes:
+  ERR-ORDER-STATE: "Illegal order state transition."
+  ERR-RECONCILIATION: "Portfolio reconciliation invariant violated."
+architecture_references: ["02-architecture/110_RUNTIME_ARCHITECTURE.md#1"]
+traceability_links: ["FR-013", "NFR-005", "NFR-007", "FIT-004", "FIT-005", "SLS-500"]
+execution_prompt: |
+  Execute WP-RT-1017 strictly within bounded_files.

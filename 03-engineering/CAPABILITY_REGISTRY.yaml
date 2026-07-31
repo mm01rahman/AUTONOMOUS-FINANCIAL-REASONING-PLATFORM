@@ -99,130 +99,256 @@ capabilities:
     version: "1.0"
     title: "Layer 1 ingress: telemetry ingestion emitting CIO-01"
     owner: "SLS-100"
-    status: "COMPLETE"
+    status: "AVAILABLE"
+    planning_status: "READY"
+    layer: "Layer 1"
     depends_on: ["RT-PROTO-CIO", "RT-COMMON"]
-    work_package: "WP-IMP-0013"
+    work_package: "WP-RT-1001"
+    traceability:
+      implements_req: ["FR-009"]
+      trace_sls: "SLS-100"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L1-FST"
     version: "1.0"
     title: "Layer 1 feature store: normalized features emitting CIO-02"
     owner: "SLS-100"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 1"
     depends_on: ["L1-ING"]
-    work_package: "WP-IMP-0014"
+    work_package: "WP-RT-1002"
+    traceability:
+      implements_req: ["FR-009"]
+      trace_sls: "SLS-100"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L1-RDB"
     version: "1.0"
     title: "Layer 1 relational persistence"
     owner: "SLS-100"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 1"
     depends_on: ["L1-ING"]
-    work_package: "WP-IMP-0015"
+    work_package: "WP-RT-1003"
+    traceability:
+      implements_req: ["FR-009", "NFR-005"]
+      trace_sls: "SLS-100"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L1-MEM"
     version: "1.0"
     title: "Layer 1 vector memory"
     owner: "SLS-100"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 1"
     depends_on: ["L1-FST"]
-    work_package: "WP-IMP-0016"
+    work_package: "WP-RT-1004"
+    traceability:
+      implements_req: ["FR-009"]
+      trace_sls: "SLS-100"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L2-BASE"
     version: "1.0"
     title: "Layer 2 agent base + DSmT mass library over D^Theta"
     owner: "SLS-200"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 2"
     depends_on: ["L1-FST"]
-    work_package: "WP-IMP-0017"
+    work_package: "WP-RT-1005"
+    traceability:
+      implements_req: ["FR-010", "NFR-003"]
+      trace_sls: "SLS-200"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L2-MAC"
     version: "1.0"
     title: "Macro agent emitting CIO-03"
     owner: "SLS-200"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 2"
     depends_on: ["L2-BASE"]
-    work_package: "WP-IMP-0018"
+    work_package: "WP-RT-1006"
+    traceability:
+      implements_req: ["FR-010"]
+      trace_sls: "SLS-200"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L2-MIC"
     version: "1.0"
     title: "Microstructure agent emitting CIO-03"
     owner: "SLS-200"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 2"
     depends_on: ["L2-BASE"]
-    work_package: "WP-IMP-0019"
+    work_package: "WP-RT-1007"
+    traceability:
+      implements_req: ["FR-010"]
+      trace_sls: "SLS-200"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L2-LIQ"
     version: "1.0"
     title: "Liquidity agent emitting CIO-03"
     owner: "SLS-200"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 2"
     depends_on: ["L2-BASE"]
-    work_package: "WP-IMP-0020"
+    work_package: "WP-RT-1008"
+    traceability:
+      implements_req: ["FR-010"]
+      trace_sls: "SLS-200"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L2-REG"
     version: "1.0"
     title: "Regime agent emitting CIO-03"
     owner: "SLS-200"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 2"
     depends_on: ["L2-BASE"]
-    work_package: "WP-IMP-0021"
+    work_package: "WP-RT-1009"
+    traceability:
+      implements_req: ["FR-010"]
+      trace_sls: "SLS-200"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L2-FOR"
     version: "1.0"
     title: "Forward/expectations agent emitting CIO-03"
     owner: "SLS-200"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 2"
     depends_on: ["L2-BASE"]
-    work_package: "WP-IMP-0022"
+    work_package: "WP-RT-1010"
+    traceability:
+      implements_req: ["FR-010"]
+      trace_sls: "SLS-200"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L2-BEH"
     version: "1.0"
     title: "Behavioral agent emitting CIO-03"
     owner: "SLS-200"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 2"
     depends_on: ["L2-BASE"]
-    work_package: "WP-IMP-0023"
+    work_package: "WP-RT-1011"
+    traceability:
+      implements_req: ["FR-010"]
+      trace_sls: "SLS-200"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L3-WRM"
     version: "1.0"
     title: "World Model Kernel: DSmT PCR5 fusion emitting CIO-04"
     owner: "SLS-300"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 3"
     depends_on: ["L2-MAC", "L2-MIC", "L2-LIQ", "L2-REG", "L2-FOR", "L2-BEH"]
-    work_package: "WP-IMP-0024"
+    work_package: "WP-RT-1012"
+    traceability:
+      implements_req: ["FR-011", "EDR-003"]
+      trace_sls: "SLS-300"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L3-SIM"
     version: "1.0"
     title: "Scenario simulator: Sigma_EWM trajectories emitting CIO-05A"
     owner: "SLS-301"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 3"
     depends_on: ["L3-WRM"]
-    work_package: "WP-IMP-0025"
+    work_package: "WP-RT-1013"
+    traceability:
+      implements_req: ["FR-011"]
+      trace_sls: "SLS-301"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L4-FUS"
     version: "1.0"
     title: "Decision synthesizer emitting CIO-05B"
     owner: "SLS-400"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 4"
     depends_on: ["L3-WRM", "L3-SIM"]
-    work_package: "WP-IMP-0026"
+    work_package: "WP-RT-1014"
+    traceability:
+      implements_req: ["FR-012"]
+      trace_sls: "SLS-400"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L4-DEC"
     version: "1.0"
     title: "Utility optimizer: argmax U_r emitting CIO-06"
     owner: "SLS-401"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 4"
     depends_on: ["L4-FUS"]
-    work_package: "WP-IMP-0027"
+    work_package: "WP-RT-1015"
+    traceability:
+      implements_req: ["FR-012", "NFR-008"]
+      trace_sls: "SLS-401"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L4-VAL"
     version: "1.0"
     title: "Policy engine: Pi_C projection, a_null fallback, MP-01..05, CIO-07"
     owner: "SLS-402"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 4"
     depends_on: ["L4-DEC"]
-    work_package: "WP-IMP-0028"
+    work_package: "WP-RT-1016"
+    traceability:
+      implements_req: ["FR-012"]
+      trace_sls: "SLS-402"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "L5-EXE"
     version: "1.0"
     title: "Order gateway: state machine CIO-08, fills CIO-09, portfolio CIO-10"
     owner: "SLS-500"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 5"
     depends_on: ["L4-VAL", "L1-RDB"]
-    work_package: "WP-IMP-0029"
+    work_package: "WP-RT-1017"
+    traceability:
+      implements_req: ["FR-013", "NFR-005", "NFR-007"]
+      trace_sls: "SLS-500"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
 
   # ── Stage E — Learning, research, operations, system validation ─────
   - id: "L6-OPT"
     version: "1.0"
     title: "Learning loop: Brier scoring, CIO-11 weights, CIO-12 embeddings"
     owner: "SLS-600"
-    status: "COMPLETE"
+    status: "LOCKED"
+    planning_status: "READY"
+    layer: "Layer 6"
     depends_on: ["L5-EXE", "L1-RDB", "L1-MEM"]
-    work_package: "WP-IMP-0030"
+    work_package: "WP-RT-1018"
+    traceability:
+      implements_req: ["FR-014", "NFR-004"]
+      trace_sls: "SLS-600"
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
   - id: "RESEARCH-HARNESS"
     version: "1.0"
     title: "Offline backtest harness under deterministic seeds"

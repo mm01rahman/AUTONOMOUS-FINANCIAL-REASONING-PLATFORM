@@ -1,0 +1,78 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-RT-1013"
+capability_id: {id: "L3-SIM", version: "1.0"}
+title: "Runtime backlog: Layer 3 scenario simulator"
+layer: "Layer 3"
+description: "Generate CIO-05A trajectory distributions from CIO-04 world states."
+objective: "Deliver deterministic Sigma_EWM scenario simulation."
+status: "Draft"
+planning_status: "READY"
+is_immutable: false
+owner: "Runtime Planning Board"
+governance:
+  target_subsystem: "SLS-301"
+  traceability:
+    implements_req: ["FR-011"]
+    trace_sls: "SLS-301"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+preconditions: [{predicate: "capability.complete('L3-WRM')"}]
+resources:
+  cpu: "high"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/layer3/simulator.py"
+      - "tests/unit/test_layer3_simulator.py"
+      - "tests/integration/test_layer3_simulator_integration.py"
+      - "docs/runtime/layer3-simulator.md"
+      - "05-work-packages/WP-RT-1013/evidence/"
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "2d"
+  parallelizable: true
+  deterministic: true
+rollback: {strategy: "git_checkout_bounded_files", restore_tag: "HEAD"}
+inputs: {required_files: ["06-runtime/afrp_runtime/layer3/worldmodel.py"]}
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/layer3/simulator.py"
+    - "tests/unit/test_layer3_simulator.py"
+    - "tests/integration/test_layer3_simulator_integration.py"
+    - "docs/runtime/layer3-simulator.md"
+  expected_evidence: ["05-work-packages/WP-RT-1013/evidence/EXEC-113.yaml"]
+produces:
+  capability: {id: "L3-SIM", version: "1.0"}
+  unlocks: [{id: "L4-FUS", version: "1.0"}]
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer3/simulator.py"
+    - "tests/unit/test_layer3_simulator.py"
+    - "tests/integration/test_layer3_simulator_integration.py"
+    - "docs/runtime/layer3-simulator.md"
+requirements:
+  acceptance_criteria:
+    - "CIO-05A scenario sets are deterministic for fixed input/seed."
+    - "Trajectory distributions include required metadata and bounds."
+  required_tests:
+    - "Unit: trajectory generation and distribution shape checks."
+    - "Integration: CIO-04 input to CIO-05A output contract path."
+  evidence_requirements:
+    - "ERS-1.0 evidence with deterministic replay snapshots."
+quality_gates:
+  ruff_lint: {required: true, command: "uv run ruff check 06-runtime/ tests/"}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict 06-runtime/ tests/"}
+  pytest_units: {required: true, command: "uv run pytest tests/unit/test_layer3_simulator.py -v"}
+  pytest_integration: {required: true, command: "uv run pytest tests/integration/test_layer3_simulator_integration.py -v"}
+  fit_004: {required: true, command: "uv run afrp validate"}
+  boundary_validation: {required: true, command: "uv run afrp evidence --wp WP-RT-1013"}
+completion:
+  success_requires: ["All acceptance criteria and quality gates pass."]
+failure_modes:
+  ERR-SCENARIO-GENERATION: "Scenario simulation produced invalid distribution output."
+architecture_references: ["02-architecture/110_RUNTIME_ARCHITECTURE.md#1"]
+traceability_links: ["FR-011", "FIT-004", "FIT-005", "SLS-301"]
+execution_prompt: |
+  Execute WP-RT-1013 strictly within bounded_files.

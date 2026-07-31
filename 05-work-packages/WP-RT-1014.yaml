@@ -1,0 +1,83 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-RT-1014"
+capability_id: {id: "L4-FUS", version: "1.0"}
+title: "Runtime backlog: Layer 4 decision synthesizer"
+layer: "Layer 4"
+description: "Synthesize CIO-04 and CIO-05A into CIO-05B decision context."
+objective: "Deliver deterministic decision-context assembly and provenance."
+status: "Draft"
+planning_status: "READY"
+is_immutable: false
+owner: "Runtime Planning Board"
+governance:
+  target_subsystem: "SLS-400"
+  traceability:
+    implements_req: ["FR-012"]
+    trace_sls: "SLS-400"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+preconditions:
+  - {predicate: "capability.complete('L3-WRM')"}
+  - {predicate: "capability.complete('L3-SIM')"}
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/layer4/synthesizer.py"
+      - "tests/unit/test_layer4_synthesizer.py"
+      - "tests/integration/test_layer4_synthesizer_integration.py"
+      - "docs/runtime/layer4-synthesizer.md"
+      - "05-work-packages/WP-RT-1014/evidence/"
+execution:
+  priority: "high"
+  estimated_complexity: "medium"
+  estimated_duration: "2d"
+  parallelizable: false
+  deterministic: true
+rollback: {strategy: "git_checkout_bounded_files", restore_tag: "HEAD"}
+inputs:
+  required_files:
+    - "06-runtime/afrp_runtime/layer3/worldmodel.py"
+    - "06-runtime/afrp_runtime/layer3/simulator.py"
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/layer4/synthesizer.py"
+    - "tests/unit/test_layer4_synthesizer.py"
+    - "tests/integration/test_layer4_synthesizer_integration.py"
+    - "docs/runtime/layer4-synthesizer.md"
+  expected_evidence: ["05-work-packages/WP-RT-1014/evidence/EXEC-114.yaml"]
+produces:
+  capability: {id: "L4-FUS", version: "1.0"}
+  unlocks: [{id: "L4-DEC", version: "1.0"}]
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer4/synthesizer.py"
+    - "tests/unit/test_layer4_synthesizer.py"
+    - "tests/integration/test_layer4_synthesizer_integration.py"
+    - "docs/runtime/layer4-synthesizer.md"
+requirements:
+  acceptance_criteria:
+    - "CIO-05B includes required fields from CIO-04 and CIO-05A."
+    - "Provenance and trace propagation are preserved."
+  required_tests:
+    - "Unit: context composition and field completeness."
+    - "Integration: world-model + scenarios to decision context."
+  evidence_requirements:
+    - "ERS-1.0 evidence with context completeness checks."
+quality_gates:
+  ruff_lint: {required: true, command: "uv run ruff check 06-runtime/ tests/"}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict 06-runtime/ tests/"}
+  pytest_units: {required: true, command: "uv run pytest tests/unit/test_layer4_synthesizer.py -v"}
+  pytest_integration: {required: true, command: "uv run pytest tests/integration/test_layer4_synthesizer_integration.py -v"}
+  fit_004: {required: true, command: "uv run afrp validate"}
+  boundary_validation: {required: true, command: "uv run afrp evidence --wp WP-RT-1014"}
+completion:
+  success_requires: ["All acceptance criteria and quality gates pass."]
+failure_modes:
+  ERR-CONTEXT-SYNTHESIS: "Decision context assembly violated contract requirements."
+architecture_references: ["02-architecture/110_RUNTIME_ARCHITECTURE.md#1"]
+traceability_links: ["FR-012", "FIT-004", "FIT-005", "SLS-400"]
+execution_prompt: |
+  Execute WP-RT-1014 strictly within bounded_files.
