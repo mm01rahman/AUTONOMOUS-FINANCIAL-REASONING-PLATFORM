@@ -1,0 +1,38 @@
+name: AFRP quality gates
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.0"
+          enable-cache: true
+      - run: uv sync --frozen --group dev
+      - run: uv run ruff check .
+      - run: uv run mypy --strict tools 06-runtime 07-research tests
+      - run: uv run pytest tests --cov --cov-report=term --cov-report=json
+      - run: uv run python -m tools.proto_gate
+      - run: uv run python -m tools.ops_gate
+      - run: uv run afrp boot
+      - run: uv run afrp plan
+      - run: uv run afrp validate
+      - run: uv run afrp health

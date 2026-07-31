@@ -185,9 +185,18 @@ requirements:
     title: "Operations deployment configuration and security posture"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
     capability: "OPS-DEPLOY"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "08-operations/policies/security.yaml"
+      - "08-operations/policies/high-availability.yaml"
+      - "08-operations/policies/recovery.yaml"
+      - "08-operations/policies/observability.yaml"
+      - "08-operations/docker/Dockerfile"
+      - ".github/workflows/quality.yml"
+      - "tools/ops_gate.py"
+    verified_by:
+      - "tests/unit/test_operations.py"
+      - "05-work-packages/WP-IMP-0032/evidence/EXEC-030.yaml"
   - id: "OBS-01"
     title: "Structured JSON logging and trace propagation schema"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#4"
@@ -211,9 +220,13 @@ requirements:
     title: "High-availability active-passive posture"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
     capability: "OPS-DEPLOY"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "08-operations/policies/high-availability.yaml"
+      - "tools/ops_gate.py"
+    verified_by:
+      - "tests/unit/test_operations.py"
+      - "05-work-packages/WP-IMP-0032/evidence/EXEC-030.yaml"
   - id: "NFR-003"
     title: "Graceful degradation via m(Theta) padding on feed loss"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
@@ -250,9 +263,13 @@ requirements:
     title: "Zero-trust mTLS with SPIFFE identities on internal calls"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
     capability: "OPS-DEPLOY"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "08-operations/policies/security.yaml"
+      - "tools/ops_gate.py"
+    verified_by:
+      - "tests/unit/test_operations.py"
+      - "05-work-packages/WP-IMP-0032/evidence/EXEC-030.yaml"
   - id: "NFR-007"
     title: "HMAC-signed audit log and OTel trace on every order"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"

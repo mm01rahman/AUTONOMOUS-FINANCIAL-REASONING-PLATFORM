@@ -1,0 +1,18 @@
+schema_version: "1.0"
+policy_id: "AFRP-HA"
+availability:
+  target_percent: 99.99
+  topology: "active-passive"
+  minimum_replicas: 2
+  anti_affinity_required: true
+  leader_election:
+    mechanism: "durable-lease"
+    lease_ttl_seconds: 15
+    heartbeat_seconds: 5
+    fencing_token_required: true
+  failover:
+    maximum_seconds: 30
+    readiness_validation_required: true
+    automatic_promotion: true
+  emergency_stop:
+    manual_reset_required: true

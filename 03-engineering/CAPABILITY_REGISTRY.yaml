@@ -234,7 +234,7 @@ capabilities:
     version: "1.0"
     title: "Deployment configuration and operational posture"
     owner: "OPS"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     depends_on: ["RT-COMMON"]
     work_package: "WP-IMP-0032"
   - id: "SYSTEM-VALIDATION"

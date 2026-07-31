@@ -8,11 +8,11 @@ agent_identity:
   agent_name: "Copilot CLI (GPT-5.6 Sol)"
 lifecycle:
   protocol_version: "EGP-2.0"
-  started_at: "2026-07-31T23:45:00+06:00"
-  finished_at: "2026-08-01T00:05:00+06:00"
+  started_at: "2026-07-31T22:57:00+06:00"
+  finished_at: "2026-07-31T23:02:00+06:00"
   final_state: "REVIEW_PENDING"
   state_transitions:
-    - {state: "REVIEW_PENDING", at: "2026-08-01T00:05:00+06:00", note: "Autopilot governed self-review"}
+    - {state: "REVIEW_PENDING", at: "2026-07-31T23:02:00+06:00", note: "Autopilot governed self-review"}
 preconditions:
   - {predicate: "capability.complete('L5-EXE')", result: "PASS"}
 boundary_compliance:
