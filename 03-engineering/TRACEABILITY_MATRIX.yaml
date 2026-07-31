@@ -165,9 +165,12 @@ requirements:
     title: "Layer 6 out-of-band learning: Brier scoring, discounting, embeddings"
     source: "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
     capability: "L6-OPT"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "06-runtime/afrp_runtime/layer6/learning.py"
+    verified_by:
+      - "tests/unit/test_layer6.py"
+      - "05-work-packages/WP-IMP-0030/evidence/EXEC-028.yaml"
   - id: "FR-015"
     title: "Research platform deterministic backtest harness"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#1"

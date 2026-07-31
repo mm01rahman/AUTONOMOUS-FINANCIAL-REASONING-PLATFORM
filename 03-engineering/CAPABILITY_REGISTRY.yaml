@@ -220,7 +220,7 @@ capabilities:
     version: "1.0"
     title: "Learning loop: Brier scoring, CIO-11 weights, CIO-12 embeddings"
     owner: "SLS-600"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     depends_on: ["L5-EXE", "L1-RDB", "L1-MEM"]
     work_package: "WP-IMP-0030"
   - id: "RESEARCH-HARNESS"
