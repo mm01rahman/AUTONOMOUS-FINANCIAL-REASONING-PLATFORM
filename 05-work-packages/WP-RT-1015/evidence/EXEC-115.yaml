@@ -1,0 +1,60 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-115"
+work_package_id: "WP-RT-1015"
+capability_id:
+  id: "L4-DEC"
+  version: "1.0"
+title: "WP-RT-1015 Utility Optimizer - Execution Evidence"
+layer: "Layer 4"
+
+gate_outcomes:
+  - gate: "ruff"
+    status: "PASS"
+    notes: "No lint issues found"
+  - gate: "mypy_strict"
+    status: "PASS"
+    notes: "No type errors"
+  - gate: "pytest_unit"
+    status: "PASS"
+    tests_collected: 8
+    tests_passed: 8
+    notes: "Returns candidate, direction validity, bullish/no-edge scenarios, determinism, utility fields, contract enforcement"
+  - gate: "pytest_integration"
+    status: "PASS"
+    tests_collected: 2
+    tests_passed: 2
+    notes: "Full pipeline to CIO-06; trace_id propagation"
+  - gate: "total_test_suite"
+    status: "PASS"
+    tests_passed: 278
+  - gate: "afrp_validate"
+    status: "PASS"
+  - gate: "afrp_health"
+    status: "PASS"
+  - gate: "evidence"
+    status: "PASS"
+
+all_gates_passed: true
+final_state: "COMPLETED"
+review_status: "APPROVED"
+
+acceptance_criteria:
+  - criterion: "Optimizer deterministically selects argmax U_r candidate under model constraints."
+    met: true
+    evidence: "test_optimizer_is_deterministic, test_optimizer_bullish_scenarios_prefer_long"
+  - criterion: "CIO-06 output is schema-valid and reproducible."
+    met: true
+    evidence: "test_optimizer_direction_is_valid_value, test_optimizer_utility_fields_are_finite"
+
+artifacts_created:
+  - "tests/unit/test_layer4_optimizer.py"
+  - "tests/integration/test_layer4_optimizer_integration.py"
+  - "docs/runtime/layer4-optimizer.md"
+  - "05-work-packages/WP-RT-1015/evidence/EXEC-115.yaml"
+
+governance_updates:
+  - "05-work-packages/WP-RT-1015.yaml: status Completed"
+  - "03-engineering/CAPABILITY_REGISTRY.yaml: L4-DEC COMPLETE (in batch)"
+
+unlocked_capabilities:
+  - {id: "L4-VAL", version: "1.0"}
