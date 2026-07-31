@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import pytest
-
 from afrp_runtime.common.errors import ContractViolationError
 from afrp_runtime.contracts.cio import THETA, ScenarioSet, WorldStateVector
 from afrp_runtime.contracts.envelope import make_envelope
