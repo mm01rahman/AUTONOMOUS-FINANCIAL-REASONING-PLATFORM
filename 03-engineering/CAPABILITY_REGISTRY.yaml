@@ -227,7 +227,7 @@ capabilities:
     version: "1.0"
     title: "Offline backtest harness under deterministic seeds"
     owner: "RESEARCH"
-    status: "AVAILABLE"
+    status: "COMPLETE"
     depends_on: ["L5-EXE"]
     work_package: "WP-IMP-0031"
   - id: "OPS-DEPLOY"

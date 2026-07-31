@@ -1,0 +1,101 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0031"
+capability_id:
+  id: "RESEARCH-HARNESS"
+  version: "1.0"
+title: "Implement deterministic research backtest harness"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["FR-015", "NFR-004"]
+    trace_sls: "ARCH-002"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('L5-EXE')"
+
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "07-research/afrp_research/backtest.py"
+      - "tests/unit/test_research.py"
+      - "pyproject.toml"
+      - "05-work-packages/WP-IMP-0031/evidence/"
+    read:
+      - "06-runtime/afrp_runtime/contracts/"
+
+execution:
+  priority: "medium"
+  estimated_complexity: "medium"
+  estimated_duration: "1h"
+  parallelizable: true
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "06-runtime/afrp_runtime/contracts/cio.py"
+
+outputs:
+  expected_source_files:
+    - "07-research/afrp_research/backtest.py"
+    - "tests/unit/test_research.py"
+    - "pyproject.toml"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0031/evidence/EXEC-029.yaml"
+
+execution_results:
+  source_files_modified:
+    - "07-research/afrp_research/backtest.py"
+    - "tests/unit/test_research.py"
+    - "pyproject.toml"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0031/evidence/EXEC-029.yaml"
+
+produces:
+  capability: {id: "RESEARCH-HARNESS", version: "1.0"}
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "07-research/afrp_research/backtest.py"
+    - "tests/unit/test_research.py"
+    - "pyproject.toml"
+  non_goals:
+    - "No live venue connectivity or production policy mutation."
+
+requirements:
+  harness:
+    module: "07-research/afrp_research/backtest.py"
+    rules:
+      - "Consume monotonic CIO-01 trade streams."
+      - "Replaceable Strategy protocol and deterministic position clipping."
+      - "Model slippage and fees; force liquidation at end."
+      - "Emit return, drawdown, annualized Sharpe, and SHA256 replay checksum."
+      - "Require seed 42."
+
+quality_gates:
+  ruff_lint: {required: true, command: "uv run ruff check 07-research/ tests/"}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict 07-research/ tests/unit/test_research.py"}
+  pytest_units: {required: true, command: "uv run pytest tests/unit/test_research.py -v"}
+
+completion:
+  success_requires:
+    - "Identical input/config/strategy produces a bit-exact result and checksum."
+
+failure_modes:
+  ERR-STREAM: "Input stream empty, non-trade, or out of order."
+  ERR-CONFIG: "Cost, position, annualization, or seed invariant invalid."
+
+execution_prompt: |
+  Execute WP-IMP-0031 strictly within bounded_files.

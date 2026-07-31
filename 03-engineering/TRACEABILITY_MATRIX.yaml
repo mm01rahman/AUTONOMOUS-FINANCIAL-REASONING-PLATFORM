@@ -175,9 +175,12 @@ requirements:
     title: "Research platform deterministic backtest harness"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#1"
     capability: "RESEARCH-HARNESS"
-    status: "planned"
-    artifacts: []
-    verified_by: []
+    status: "implemented"
+    artifacts:
+      - "07-research/afrp_research/backtest.py"
+    verified_by:
+      - "tests/unit/test_research.py"
+      - "05-work-packages/WP-IMP-0031/evidence/EXEC-029.yaml"
   - id: "FR-016"
     title: "Operations deployment configuration and security posture"
     source: "02-architecture/100_SYSTEM_ARCHITECTURE.md#2"
