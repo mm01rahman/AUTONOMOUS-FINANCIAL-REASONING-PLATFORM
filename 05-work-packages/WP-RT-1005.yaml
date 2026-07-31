@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 2 agent base and DSmT mass library"
 layer: "Layer 2"
 description: "Define shared interfaces and DSmT mass primitives for specialized agents."
 objective: "Provide deterministic belief-mass foundation over D^Theta."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -28,6 +28,8 @@ resources:
       - "tests/unit/test_layer2_base.py"
       - "tests/integration/test_layer2_base_integration.py"
       - "docs/runtime/layer2-base.md"
+      - "05-work-packages/WP-RT-1005.yaml"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
       - "05-work-packages/WP-RT-1005/evidence/"
     read:
       - "06-runtime/afrp_runtime/contracts/"
@@ -47,6 +49,8 @@ outputs:
     - "tests/unit/test_layer2_base.py"
     - "tests/integration/test_layer2_base_integration.py"
     - "docs/runtime/layer2-base.md"
+    - "05-work-packages/WP-RT-1005.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   expected_evidence:
     - "05-work-packages/WP-RT-1005/evidence/EXEC-105.yaml"
 produces:
@@ -64,6 +68,8 @@ scope:
     - "tests/unit/test_layer2_base.py"
     - "tests/integration/test_layer2_base_integration.py"
     - "docs/runtime/layer2-base.md"
+    - "05-work-packages/WP-RT-1005.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
   non_goals:
     - "No world-model fusion or scenario simulation."
 requirements:
@@ -96,3 +102,13 @@ architecture_references:
 traceability_links: ["FR-010", "NFR-003", "FIT-004", "FIT-005", "SLS-200"]
 execution_prompt: |
   Execute WP-RT-1005 strictly within bounded_files and non_goals.
+
+execution_results:
+  source_files_modified:
+    - "tests/unit/test_layer2_base.py"
+    - "tests/integration/test_layer2_base_integration.py"
+    - "docs/runtime/layer2-base.md"
+    - "05-work-packages/WP-RT-1005.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-RT-1005/evidence/EXEC-105.yaml"

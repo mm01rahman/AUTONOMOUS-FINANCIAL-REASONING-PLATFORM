@@ -155,8 +155,8 @@ capabilities:
     version: "1.0"
     title: "Layer 2 agent base + DSmT mass library over D^Theta"
     owner: "SLS-200"
-    status: "AVAILABLE"
-    planning_status: "READY"
+    status: "COMPLETE"
+    planning_status: "COMPLETE"
     layer: "Layer 2"
     depends_on: ["L1-FST"]
     work_package: "WP-RT-1005"
@@ -169,7 +169,7 @@ capabilities:
     version: "1.0"
     title: "Macro agent emitting CIO-03"
     owner: "SLS-200"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 2"
     depends_on: ["L2-BASE"]
@@ -183,7 +183,7 @@ capabilities:
     version: "1.0"
     title: "Microstructure agent emitting CIO-03"
     owner: "SLS-200"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 2"
     depends_on: ["L2-BASE"]
@@ -197,7 +197,7 @@ capabilities:
     version: "1.0"
     title: "Liquidity agent emitting CIO-03"
     owner: "SLS-200"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 2"
     depends_on: ["L2-BASE"]
@@ -211,7 +211,7 @@ capabilities:
     version: "1.0"
     title: "Regime agent emitting CIO-03"
     owner: "SLS-200"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 2"
     depends_on: ["L2-BASE"]
@@ -225,7 +225,7 @@ capabilities:
     version: "1.0"
     title: "Forward/expectations agent emitting CIO-03"
     owner: "SLS-200"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 2"
     depends_on: ["L2-BASE"]
@@ -239,7 +239,7 @@ capabilities:
     version: "1.0"
     title: "Behavioral agent emitting CIO-03"
     owner: "SLS-200"
-    status: "LOCKED"
+    status: "AVAILABLE"
     planning_status: "READY"
     layer: "Layer 2"
     depends_on: ["L2-BASE"]
