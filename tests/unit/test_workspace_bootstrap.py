@@ -326,4 +326,4 @@ class TestHooksAndEntryPoint:
         assert "for candidate in python3 python" in script
         assert '"${candidate}" -B -c' in script
         assert "sys.version_info < (3, 11)" in script
-        assert 'exec "${PYTHON}" -B -m afrp.core.workspace' in script
+        assert 'exec "${PYTHON}" -B -m afrp.core.bootstrap' in script
