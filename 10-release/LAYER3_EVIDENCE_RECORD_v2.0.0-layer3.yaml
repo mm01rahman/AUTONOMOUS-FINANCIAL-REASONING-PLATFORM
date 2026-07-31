@@ -1,0 +1,49 @@
+schema_version: "ERS-1.0"
+evidence_id: "LAYER3-EVR"
+title: "Runtime Layer 3 Evidence Record"
+layer: "Layer 3"
+version: "v2.0.0-layer3"
+
+completed_capabilities:
+  - id: "L3-WRM"
+    version: "1.0"
+    work_package: "WP-RT-1012"
+    evidence: "05-work-packages/WP-RT-1012/evidence/EXEC-112.yaml"
+    status: "COMPLETE"
+  - id: "L3-SIM"
+    version: "1.0"
+    work_package: "WP-RT-1013"
+    evidence: "05-work-packages/WP-RT-1013/evidence/EXEC-113.yaml"
+    status: "COMPLETE"
+
+test_summary:
+  layer3_unit_tests: 29
+  layer3_integration_tests: 9
+  layer3_total: 38
+  cumulative_layer_total: 244
+  result: "PASS"
+
+gate_outcomes:
+  - gate: "ruff"
+    result: "PASS"
+  - gate: "mypy_strict"
+    result: "PASS"
+  - gate: "pytest"
+    result: "PASS"
+    tests_passed: 244
+  - gate: "afrp_validate"
+    result: "PASS"
+  - gate: "afrp_health"
+    result: "PASS"
+  - gate: "architecture_validation"
+    result: "PASS"
+  - gate: "dependency_validation"
+    result: "PASS"
+    notes: "All L3 depends_on (L2-*) confirmed COMPLETE before execution"
+
+layer_review_status: "PENDING_ARB_APPROVAL"
+
+unlocked_next_layer:
+  - id: "L4-FUS"
+    version: "1.0"
+    status: "AVAILABLE"
