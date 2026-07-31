@@ -1,0 +1,4 @@
+# Preserve LF for fingerprint-stable baseline artifacts and all text files.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
