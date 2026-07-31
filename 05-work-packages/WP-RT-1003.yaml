@@ -1,0 +1,93 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-RT-1003"
+capability_id: {id: "L1-RDB", version: "1.0"}
+title: "Runtime backlog: Layer 1 relational persistence"
+layer: "Layer 1"
+description: "Persist CIO-01 and execution-adjacent records in deterministic relational storage."
+objective: "Provide append/replay durability and auditable history guarantees."
+status: "Draft"
+planning_status: "READY"
+is_immutable: false
+owner: "Runtime Planning Board"
+governance:
+  target_subsystem: "SLS-100"
+  traceability:
+    implements_req: ["FR-009", "NFR-005"]
+    trace_sls: "SLS-100"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+preconditions:
+  - {predicate: "capability.complete('L1-ING')"}
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/layer1/persistence.py"
+      - "tests/unit/test_layer1_persistence.py"
+      - "tests/integration/test_layer1_persistence_integration.py"
+      - "docs/runtime/layer1-persistence.md"
+      - "05-work-packages/WP-RT-1003/evidence/"
+    read:
+      - "06-runtime/afrp_runtime/contracts/"
+execution:
+  priority: "high"
+  estimated_complexity: "medium"
+  estimated_duration: "2d"
+  parallelizable: false
+  deterministic: true
+rollback: {strategy: "git_checkout_bounded_files", restore_tag: "HEAD"}
+inputs:
+  required_files:
+    - "06-runtime/afrp_runtime/contracts/cio.py"
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/layer1/persistence.py"
+    - "tests/unit/test_layer1_persistence.py"
+    - "tests/integration/test_layer1_persistence_integration.py"
+    - "docs/runtime/layer1-persistence.md"
+  expected_evidence:
+    - "05-work-packages/WP-RT-1003/evidence/EXEC-103.yaml"
+produces:
+  capability: {id: "L1-RDB", version: "1.0"}
+  unlocks:
+    - {id: "L5-EXE", version: "1.0"}
+    - {id: "L6-OPT", version: "1.0"}
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer1/persistence.py"
+    - "tests/unit/test_layer1_persistence.py"
+    - "tests/integration/test_layer1_persistence_integration.py"
+    - "docs/runtime/layer1-persistence.md"
+  non_goals:
+    - "No feature derivation or vector similarity logic."
+requirements:
+  acceptance_criteria:
+    - "Append and replay semantics preserve order and integrity."
+    - "Duplicate/constraint violations fail explicitly with contract errors."
+    - "Audit-query paths are deterministic and bounded."
+  required_tests:
+    - "Unit: append/replay/duplicate/error conditions."
+    - "Integration: end-to-end ingest persistence round-trip."
+  evidence_requirements:
+    - "ERS-1.0 evidence including durability and audit-path checks."
+quality_gates:
+  ruff_lint: {required: true, command: "uv run ruff check 06-runtime/ tests/"}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict 06-runtime/ tests/"}
+  pytest_units: {required: true, command: "uv run pytest tests/unit/test_layer1_persistence.py -v"}
+  pytest_integration: {required: true, command: "uv run pytest tests/integration/test_layer1_persistence_integration.py -v"}
+  coverage: {required: true, command: "uv run pytest tests --cov --cov-report=term"}
+  fit_004: {required: true, command: "uv run afrp validate"}
+  boundary_validation: {required: true, command: "uv run afrp evidence --wp WP-RT-1003"}
+completion:
+  success_requires:
+    - "All acceptance criteria and quality gates pass."
+failure_modes:
+  ERR-PERSISTENCE: "Relational write/read contract violation."
+  ERR-REPLAY: "Replay range or ordering invariant violated."
+architecture_references:
+  - "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+traceability_links: ["FR-009", "NFR-005", "FIT-004", "FIT-005", "SLS-100"]
+execution_prompt: |
+  Execute WP-RT-1003 strictly within bounded_files and non_goals.

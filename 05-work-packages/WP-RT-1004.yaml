@@ -1,0 +1,92 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-RT-1004"
+capability_id: {id: "L1-MEM", version: "1.0"}
+title: "Runtime backlog: Layer 1 vector memory"
+layer: "Layer 1"
+description: "Store and retrieve regime vectors deterministically for downstream adaptation."
+objective: "Provide bounded, deterministic vector memory operations."
+status: "Draft"
+planning_status: "READY"
+is_immutable: false
+owner: "Runtime Planning Board"
+governance:
+  target_subsystem: "SLS-100"
+  traceability:
+    implements_req: ["FR-009"]
+    trace_sls: "SLS-100"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+preconditions:
+  - {predicate: "capability.complete('L1-FST')"}
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/layer1/memory.py"
+      - "tests/unit/test_layer1_memory.py"
+      - "tests/integration/test_layer1_memory_integration.py"
+      - "docs/runtime/layer1-memory.md"
+      - "05-work-packages/WP-RT-1004/evidence/"
+    read:
+      - "06-runtime/afrp_runtime/contracts/"
+execution:
+  priority: "medium"
+  estimated_complexity: "medium"
+  estimated_duration: "2d"
+  parallelizable: true
+  deterministic: true
+rollback: {strategy: "git_checkout_bounded_files", restore_tag: "HEAD"}
+inputs:
+  required_files:
+    - "06-runtime/afrp_runtime/contracts/features.py"
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/layer1/memory.py"
+    - "tests/unit/test_layer1_memory.py"
+    - "tests/integration/test_layer1_memory_integration.py"
+    - "docs/runtime/layer1-memory.md"
+  expected_evidence:
+    - "05-work-packages/WP-RT-1004/evidence/EXEC-104.yaml"
+produces:
+  capability: {id: "L1-MEM", version: "1.0"}
+  unlocks:
+    - {id: "L6-OPT", version: "1.0"}
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer1/memory.py"
+    - "tests/unit/test_layer1_memory.py"
+    - "tests/integration/test_layer1_memory_integration.py"
+    - "docs/runtime/layer1-memory.md"
+  non_goals:
+    - "No feature computation or persistence schema changes."
+requirements:
+  acceptance_criteria:
+    - "Dimension validation enforced for all writes and queries."
+    - "Top-k query ordering is deterministic for ties."
+    - "Similarity calculation remains bounded and numerically stable."
+  required_tests:
+    - "Unit: dimension checks, tie-break behavior, similarity edge cases."
+    - "Integration: vector store/query lifecycle with realistic embeddings."
+  evidence_requirements:
+    - "ERS-1.0 evidence with deterministic retrieval traces."
+quality_gates:
+  ruff_lint: {required: true, command: "uv run ruff check 06-runtime/ tests/"}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict 06-runtime/ tests/"}
+  pytest_units: {required: true, command: "uv run pytest tests/unit/test_layer1_memory.py -v"}
+  pytest_integration: {required: true, command: "uv run pytest tests/integration/test_layer1_memory_integration.py -v"}
+  coverage: {required: true, command: "uv run pytest tests --cov --cov-report=term"}
+  fit_004: {required: true, command: "uv run afrp validate"}
+  boundary_validation: {required: true, command: "uv run afrp evidence --wp WP-RT-1004"}
+completion:
+  success_requires:
+    - "All acceptance criteria and quality gates pass."
+failure_modes:
+  ERR-VECTOR-DIMENSION: "Input vector dimensionality mismatch."
+  ERR-VECTOR-QUERY: "Query contract violation or invalid top_k."
+architecture_references:
+  - "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+traceability_links: ["FR-009", "FIT-004", "FIT-005", "SLS-100"]
+execution_prompt: |
+  Execute WP-RT-1004 strictly within bounded_files and non_goals.

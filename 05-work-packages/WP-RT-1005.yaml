@@ -1,0 +1,98 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-RT-1005"
+capability_id: {id: "L2-BASE", version: "1.0"}
+title: "Runtime backlog: Layer 2 agent base and DSmT mass library"
+layer: "Layer 2"
+description: "Define shared interfaces and DSmT mass primitives for specialized agents."
+objective: "Provide deterministic belief-mass foundation over D^Theta."
+status: "Draft"
+planning_status: "READY"
+is_immutable: false
+owner: "Runtime Planning Board"
+governance:
+  target_subsystem: "SLS-200"
+  traceability:
+    implements_req: ["FR-010", "NFR-003"]
+    trace_sls: "SLS-200"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+preconditions:
+  - {predicate: "capability.complete('L1-FST')"}
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "06-runtime/afrp_runtime/layer2/base.py"
+      - "tests/unit/test_layer2_base.py"
+      - "tests/integration/test_layer2_base_integration.py"
+      - "docs/runtime/layer2-base.md"
+      - "05-work-packages/WP-RT-1005/evidence/"
+    read:
+      - "06-runtime/afrp_runtime/contracts/"
+execution:
+  priority: "high"
+  estimated_complexity: "medium"
+  estimated_duration: "2d"
+  parallelizable: false
+  deterministic: true
+rollback: {strategy: "git_checkout_bounded_files", restore_tag: "HEAD"}
+inputs:
+  required_files:
+    - "06-runtime/afrp_runtime/contracts/cio.py"
+outputs:
+  expected_source_files:
+    - "06-runtime/afrp_runtime/layer2/base.py"
+    - "tests/unit/test_layer2_base.py"
+    - "tests/integration/test_layer2_base_integration.py"
+    - "docs/runtime/layer2-base.md"
+  expected_evidence:
+    - "05-work-packages/WP-RT-1005/evidence/EXEC-105.yaml"
+produces:
+  capability: {id: "L2-BASE", version: "1.0"}
+  unlocks:
+    - {id: "L2-MAC", version: "1.0"}
+    - {id: "L2-MIC", version: "1.0"}
+    - {id: "L2-LIQ", version: "1.0"}
+    - {id: "L2-REG", version: "1.0"}
+    - {id: "L2-FOR", version: "1.0"}
+    - {id: "L2-BEH", version: "1.0"}
+scope:
+  bounded_files:
+    - "06-runtime/afrp_runtime/layer2/base.py"
+    - "tests/unit/test_layer2_base.py"
+    - "tests/integration/test_layer2_base_integration.py"
+    - "docs/runtime/layer2-base.md"
+  non_goals:
+    - "No world-model fusion or scenario simulation."
+requirements:
+  acceptance_criteria:
+    - "Belief mass representation validates and normalizes over D^Theta."
+    - "Conflict handling and uncertainty mass pathways are explicit and deterministic."
+    - "Agent base interfaces enforce contract-driven outputs (CIO-03)."
+  required_tests:
+    - "Unit: mass validity, normalization, conflict operations."
+    - "Integration: reference agent emits schema-valid CIO-03."
+  evidence_requirements:
+    - "ERS-1.0 evidence including algebraic invariant checks."
+quality_gates:
+  ruff_lint: {required: true, command: "uv run ruff check 06-runtime/ tests/"}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict 06-runtime/ tests/"}
+  pytest_units: {required: true, command: "uv run pytest tests/unit/test_layer2_base.py -v"}
+  pytest_integration: {required: true, command: "uv run pytest tests/integration/test_layer2_base_integration.py -v"}
+  coverage: {required: true, command: "uv run pytest tests --cov --cov-report=term"}
+  fit_004: {required: true, command: "uv run afrp validate"}
+  boundary_validation: {required: true, command: "uv run afrp evidence --wp WP-RT-1005"}
+completion:
+  success_requires:
+    - "All acceptance criteria and quality gates pass."
+failure_modes:
+  ERR-MASS-INVALID: "Belief mass assignment is outside admissible bounds."
+  ERR-AGENT-BASE-CONTRACT: "Agent base API violates CIO-03 contract."
+architecture_references:
+  - "02-architecture/110_RUNTIME_ARCHITECTURE.md#1"
+  - "02-architecture/130_MATHEMATICAL_FOUNDATION.md#2"
+traceability_links: ["FR-010", "NFR-003", "FIT-004", "FIT-005", "SLS-200"]
+execution_prompt: |
+  Execute WP-RT-1005 strictly within bounded_files and non_goals.
