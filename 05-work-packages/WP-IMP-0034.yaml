@@ -1,0 +1,179 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0034"
+capability_id:
+  id: "ENG-AUTOMATION"
+  version: "1.0"
+title: "Engineering Automation Platform — CI/CD, Security, Release, Developer Tooling"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "DEVSECOPS"
+  traceability:
+    implements_req: ["NFR-013", "NFR-014", "NFR-015"]
+    trace_sls: "ENG-AUTO"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('EOS-ORCHESTRATOR')"
+  - predicate: "capability.complete('SYSTEM-VALIDATION')"
+
+resources:
+  cpu: "low"
+  memory: "256MB"
+  network: false
+  filesystem:
+    write:
+      - ".github/workflows/"
+      - ".github/dependabot.yml"
+      - ".github/codeql/"
+      - ".github/ISSUE_TEMPLATE/"
+      - ".github/PULL_REQUEST_TEMPLATE.md"
+      - ".pre-commit-config.yaml"
+      - ".yamllint.yml"
+      - "CONTRIBUTING.md"
+      - "SECURITY.md"
+      - "docs/devsecops/"
+      - "proto/buf.yaml"
+      - "tools/metrics.py"
+      - "tools/traceability_gate.py"
+      - "tools/evidence_archive.py"
+      - "tools/commit_msg_hook.py"
+      - "05-work-packages/WP-IMP-0034/"
+      - "10-release/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    read:
+      - ".github/"
+      - "03-engineering/"
+      - "05-work-packages/"
+      - "10-release/"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "4h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - ".github/workflows/quality.yml"
+
+outputs:
+  expected_source_files:
+    - ".github/workflows/quality.yml"
+    - ".github/workflows/security.yml"
+    - ".github/workflows/proto.yml"
+    - ".github/workflows/release.yml"
+    - ".github/workflows/maintenance.yml"
+    - ".github/dependabot.yml"
+    - ".github/codeql/codeql-config.yml"
+    - ".github/ISSUE_TEMPLATE/bug_report.yml"
+    - ".github/ISSUE_TEMPLATE/feature_request.yml"
+    - ".github/ISSUE_TEMPLATE/security_vulnerability.yml"
+    - ".github/ISSUE_TEMPLATE/regression.yml"
+    - ".github/PULL_REQUEST_TEMPLATE.md"
+    - ".pre-commit-config.yaml"
+    - ".yamllint.yml"
+    - "CONTRIBUTING.md"
+    - "SECURITY.md"
+    - "docs/devsecops/README.md"
+    - "docs/devsecops/CI_CD.md"
+    - "docs/devsecops/RELEASE_AUTOMATION.md"
+    - "docs/devsecops/DEVELOPER_ONBOARDING.md"
+    - "proto/buf.yaml"
+    - "tools/metrics.py"
+    - "tools/traceability_gate.py"
+    - "tools/evidence_archive.py"
+    - "tools/commit_msg_hook.py"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0034/evidence/EXEC-034.yaml"
+
+execution_results:
+  source_files_modified:
+    - ".github/workflows/quality.yml"
+    - ".github/PULL_REQUEST_TEMPLATE.md"
+  source_files_created:
+    - ".github/workflows/security.yml"
+    - ".github/workflows/proto.yml"
+    - ".github/workflows/release.yml"
+    - ".github/workflows/maintenance.yml"
+    - ".github/dependabot.yml"
+    - ".github/codeql/codeql-config.yml"
+    - ".github/ISSUE_TEMPLATE/bug_report.yml"
+    - ".github/ISSUE_TEMPLATE/feature_request.yml"
+    - ".github/ISSUE_TEMPLATE/security_vulnerability.yml"
+    - ".github/ISSUE_TEMPLATE/regression.yml"
+    - ".pre-commit-config.yaml"
+    - ".yamllint.yml"
+    - "CONTRIBUTING.md"
+    - "SECURITY.md"
+    - "docs/devsecops/README.md"
+    - "docs/devsecops/CI_CD.md"
+    - "docs/devsecops/RELEASE_AUTOMATION.md"
+    - "docs/devsecops/DEVELOPER_ONBOARDING.md"
+    - "proto/buf.yaml"
+    - "tools/metrics.py"
+    - "tools/traceability_gate.py"
+    - "tools/evidence_archive.py"
+    - "tools/commit_msg_hook.py"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0034/evidence/EXEC-034.yaml"
+
+produces:
+  capability: {id: "ENG-AUTOMATION", version: "1.0"}
+  unlocks: []
+
+scope:
+  bounded_files:
+    - ".github/workflows/"
+    - ".github/dependabot.yml"
+    - ".github/codeql/"
+    - ".github/ISSUE_TEMPLATE/"
+    - ".github/PULL_REQUEST_TEMPLATE.md"
+    - ".pre-commit-config.yaml"
+    - ".yamllint.yml"
+    - "CONTRIBUTING.md"
+    - "SECURITY.md"
+    - "docs/devsecops/"
+    - "proto/buf.yaml"
+    - "tools/metrics.py"
+    - "tools/traceability_gate.py"
+    - "tools/evidence_archive.py"
+    - "tools/commit_msg_hook.py"
+    - "05-work-packages/WP-IMP-0034/"
+    - "10-release/ENGINEERING_AUTOMATION_EVIDENCE_RECORD.yaml"
+    - "10-release/ENGINEERING_AUTOMATION_COMPLETION_REPORT.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  non_goals:
+    - "No modification of Runtime behavior."
+    - "No modification of EOS CLI implementation."
+    - "No weakening of quality gates."
+
+quality_gates:
+  ruff_lint: {required: true, command: "uv run ruff check ."}
+  mypy_typecheck: {required: true, command: "uv run mypy --strict tools 06-runtime 07-research tests"}
+  pytest: {required: true, command: "uv run pytest tests -q"}
+  afrp_validate: {required: true, command: "uv run afrp validate"}
+  traceability: {required: true, command: "uv run python -m tools.traceability_gate"}
+
+completion:
+  success_requires:
+    - "All 10 engineering automation objectives implemented."
+    - "All workflows validated syntactically."
+    - "Evidence record generated."
+    - "Completion report generated."
+
+failure_modes:
+  ERR-WORKFLOW-SYNTAX: "GitHub Actions YAML is invalid."
+  ERR-TOOL-IMPORT: "New Python tools fail to import cleanly."
+  ERR-GATE-BYPASS: "A quality gate is weakened or removed."

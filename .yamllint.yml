@@ -1,0 +1,15 @@
+---
+# yamllint configuration for AFRP
+# Relaxed rules for documentation and governance YAML files
+extends: default
+rules:
+  line-length:
+    max: 120
+    level: warning
+  truthy:
+    allowed-values: ["true", "false", "yes", "no"]
+    check-keys: false
+  comments:
+    min-spaces-from-content: 1
+  document-start: disable
+  new-line-at-end-of-file: enable

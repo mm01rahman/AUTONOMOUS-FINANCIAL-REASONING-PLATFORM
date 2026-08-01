@@ -1,0 +1,227 @@
+name: AFRP release automation
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+      - "v[0-9]+.[0-9]+.[0-9]+-*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v2.0.0)"
+        required: true
+
+permissions:
+  contents: write
+  packages: write
+  id-token: write
+
+jobs:
+  # ── Pre-release validation ──────────────────────────────────────────────
+  validate:
+    name: Pre-release validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.0"
+          enable-cache: true
+      - run: uv sync --frozen --group dev
+      - name: Full quality gates
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+          uv run mypy --strict tools 06-runtime 07-research tests
+      - name: Tests with coverage
+        run: |
+          uv run pytest tests \
+            --cov \
+            --cov-report=json \
+            --cov-report=xml \
+            --cov-fail-under=80 \
+            -v
+      - name: Architecture gates
+        run: |
+          uv run python -m tools.proto_gate
+          uv run python -m tools.baseline_gate
+          uv run python -m tools.ops_gate
+          AFRP_AUDIT_HMAC_KEY="$(python -c 'import secrets; print(secrets.token_hex(32))')" \
+            uv run python -m tools.system_gate
+      - name: EOS gates
+        run: |
+          uv run afrp boot
+          uv run afrp plan
+          uv run afrp validate
+          uv run afrp health --assert-full
+      - name: Traceability gate
+        run: uv run python -m tools.traceability_gate
+      - name: Repository metrics
+        run: uv run python -m tools.metrics --output metrics.json
+      - name: Upload pre-release artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pre-release-reports
+          path: |
+            coverage.json
+            coverage.xml
+            metrics.json
+          retention-days: 90
+
+  # ── Build artifacts ────────────────────────────────────────────────────
+  build:
+    name: Build release artifacts
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: [validate]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.0"
+          enable-cache: true
+      - run: uv sync --frozen --group dev
+      - name: Build Python wheel and sdist
+        run: uv build
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 90
+
+  # ── Archive evidence ──────────────────────────────────────────────────
+  archive-evidence:
+    name: Archive evidence records
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: [validate]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.0"
+          enable-cache: true
+      - run: uv sync --frozen --group dev
+      - name: Package evidence archive
+        run: |
+          TAG="${{ github.ref_name }}"
+          [ -z "$TAG" ] && TAG="${{ github.event.inputs.tag }}"
+          uv run python -m tools.evidence_archive \
+            --tag "$TAG" \
+            --output "evidence-archive-${TAG}.tar.gz"
+      - name: Upload evidence archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence-archive
+          path: evidence-archive-*.tar.gz
+          retention-days: 365
+
+  # ── Generate release notes ────────────────────────────────────────────
+  release-notes:
+    name: Generate release notes
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: [validate]
+    outputs:
+      notes: ${{ steps.gen.outputs.notes }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.0"
+          enable-cache: true
+      - run: uv sync --frozen --group dev
+      - name: Generate notes
+        id: gen
+        run: |
+          TAG="${{ github.ref_name }}"
+          [ -z "$TAG" ] && TAG="${{ github.event.inputs.tag }}"
+          # Get previous tag for comparison
+          PREV_TAG=$(git describe --abbrev=0 --tags "${TAG}^" 2>/dev/null || echo "")
+
+          {
+            echo "## AFRP Release ${TAG}"
+            echo ""
+            echo "### Quality Gate Status"
+            echo "- ✅ ruff: PASS"
+            echo "- ✅ mypy --strict: PASS"
+            echo "- ✅ pytest: PASS"
+            echo "- ✅ coverage ≥ 80%: PASS"
+            echo "- ✅ architecture gates: PASS"
+            echo "- ✅ EOS gates: PASS"
+            echo "- ✅ traceability: PASS"
+            echo ""
+            if [ -n "$PREV_TAG" ]; then
+              echo "### Changes since ${PREV_TAG}"
+              git log --oneline "${PREV_TAG}..${TAG}" | head -50
+            else
+              echo "### Initial release"
+              git log --oneline | head -50
+            fi
+            echo ""
+            echo "### Evidence"
+            echo "Evidence records are attached as \`evidence-archive-${TAG}.tar.gz\`."
+            echo ""
+            echo "### Artifacts"
+            echo "- Python wheel and sdist in \`dist/\`"
+            echo "- Completion reports in \`10-release/\`"
+          } > release-notes.md
+          echo "notes=$(cat release-notes.md | base64 -w 0)" >> "$GITHUB_OUTPUT"
+      - name: Upload release notes
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-notes
+          path: release-notes.md
+          retention-days: 365
+
+  # ── Publish GitHub Release ────────────────────────────────────────────
+  publish:
+    name: Publish GitHub Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: [build, archive-evidence, release-notes]
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts/
+      - name: Display artifacts
+        run: ls -R artifacts/
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "AFRP ${{ github.ref_name }}"
+          body_path: artifacts/release-notes/release-notes.md
+          draft: false
+          prerelease: ${{ contains(github.ref_name, '-') }}
+          files: |
+            artifacts/dist/*.whl
+            artifacts/dist/*.tar.gz
+            artifacts/evidence-archive/*.tar.gz
+            artifacts/pre-release-reports/metrics.json

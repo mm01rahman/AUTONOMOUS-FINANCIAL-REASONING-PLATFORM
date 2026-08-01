@@ -1,0 +1,11 @@
+version: v2
+lint:
+  use:
+    - DEFAULT
+  except:
+    - PACKAGE_DIRECTORY_MATCH  # AFRP uses versioned sub-packages (proto/afrp/v1)
+  ignore:
+    - proto/afrp/v1/annotations.proto  # Contains custom options
+breaking:
+  use:
+    - FILE
