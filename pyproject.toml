@@ -3,7 +3,14 @@ name = "afrp-platform"
 version = "1.0.0"
 description = "Autonomous Financial Reasoning Platform"
 requires-python = ">=3.11,<3.13"
-dependencies = ["click>=8.1.0", "pydantic>=2.0.0", "pyyaml>=6.0.0"]
+dependencies = [
+    "click>=8.1.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0.0",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "pyarrow>=15.0.0",
+]
 
 [project.scripts]
 afrp = "afrp.cli:main"
@@ -20,6 +27,7 @@ dev = [
     "types-protobuf>=4.25.0",
     "grpcio-tools>=1.62.0",
     "protobuf>=4.25.0",
+    "pandas-stubs>=2.2.0",
 ]
 
 [build-system]
@@ -45,6 +53,10 @@ strict = true
 python_version = "3.11"
 mypy_path = ["tools/afrp-cli", "06-runtime", "07-research"]
 explicit_package_bases = true
+
+[[tool.mypy.overrides]]
+module = ["pyarrow", "pyarrow.*"]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

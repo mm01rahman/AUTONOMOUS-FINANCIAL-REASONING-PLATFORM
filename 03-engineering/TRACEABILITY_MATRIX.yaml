@@ -516,6 +516,43 @@ requirements:
       - "tests/unit/test_phaseb_verification.py"
       - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
 
+  # ── Phase C — Quantitative Research & Backtesting ───────────────────────
+  - id: "NFR-022"
+    title: "Backtesting engine determinism: identical inputs produce identical checksums"
+    source: "AFRP-PHASE-C-1.0.0"
+    capability: "QUANT-BACKTEST"
+    status: "implemented"
+    artifacts:
+      - "tools/backtest/engine.py"
+      - "tools/backtest/metrics.py"
+    verified_by:
+      - "tests/unit/test_backtest_engine.py"
+      - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+  - id: "NFR-023"
+    title: "Full regime coverage: 8 historical market regimes evaluated"
+    source: "AFRP-PHASE-C-1.0.0"
+    capability: "QUANT-BACKTEST"
+    status: "implemented"
+    artifacts:
+      - "tools/backtest/regimes.py"
+      - "tools/backtest/campaign.py"
+      - "11-research/regime_analysis.md"
+    verified_by:
+      - "tests/unit/test_backtest_engine.py"
+      - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+  - id: "NFR-024"
+    title: "Benchmark comparison: AFRP evaluated against 6 classical strategies"
+    source: "AFRP-PHASE-C-1.0.0"
+    capability: "QUANT-BACKTEST"
+    status: "implemented"
+    artifacts:
+      - "tools/backtest/benchmarks.py"
+      - "11-research/benchmark_comparison.md"
+      - "11-research/results/afrp_vs_benchmarks.json"
+    verified_by:
+      - "tests/unit/test_backtest_benchmarks.py"
+      - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+
   # ── Engineering decision rules (ARCH-001 §4) ────────────────────────
   - id: "EDR-001"
     title: "Business logic depends on abstract interfaces"
