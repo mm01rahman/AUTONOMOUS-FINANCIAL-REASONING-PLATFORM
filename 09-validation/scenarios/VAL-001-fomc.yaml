@@ -1,0 +1,19 @@
+scenario_id: "VAL-001"
+title: "FOMC Rate Decision Day"
+description: "Validation on first 2022 hiking decision day."
+category: "macro_event"
+date_range: {start: "2022-03-16", end: "2022-03-17"}
+event_ref: "GEO-007"
+datasets:
+  - {dataset: "xauusd_1h", path: "processed/xauusd/xauusd_1h.parquet"}
+  - {dataset: "yields_daily", path: "processed/yields/yields_daily.parquet"}
+expected_runtime_behavior:
+  - "Elevated volatility around decision timestamp."
+acceptance_criteria:
+  - "Replay remains deterministic across two runs."
+expected_outputs:
+  - "CIO-04 world state"
+  - "CIO-07 authorized action"
+validation_notes:
+  - "Focus 14:00-15:00 UTC."
+tags: ["fomc", "rate-decision", "high-volatility"]

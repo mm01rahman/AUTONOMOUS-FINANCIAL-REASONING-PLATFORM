@@ -1,0 +1,14 @@
+scenario_id: "VAL-002"
+title: "CPI Shock Day"
+description: "US CPI surprise shock behavior."
+category: "macro_event"
+date_range: {start: "2022-06-10", end: "2022-06-11"}
+datasets:
+  - {dataset: "xauusd_1h", path: "processed/xauusd/xauusd_1h.parquet"}
+  - {dataset: "economic_calendar", path: "processed/economic_calendar/economic_events.parquet"}
+expected_runtime_behavior: ["Rapid regime adjustment and higher uncertainty."]
+acceptance_criteria: ["No policy breach during volatility spike."]
+expected_outputs: ["Decision context", "Execution candidate"]
+validation_notes: ["Check spread sensitivity."]
+tags: ["cpi", "inflation", "volatility"]
+

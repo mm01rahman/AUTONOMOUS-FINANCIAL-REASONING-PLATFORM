@@ -1,0 +1,14 @@
+scenario_id: "VAL-003"
+title: "Core CPI Release"
+description: "Core inflation release validation."
+category: "macro_event"
+date_range: {start: "2023-02-14", end: "2023-02-15"}
+datasets:
+  - {dataset: "xauusd_1h", path: "processed/xauusd/xauusd_1h.parquet"}
+  - {dataset: "economic_calendar", path: "processed/economic_calendar/economic_events.parquet"}
+expected_runtime_behavior: ["Measured regime transition with bounded utility."]
+acceptance_criteria: ["Deterministic replay checksum stability."]
+expected_outputs: ["World state", "Policy verdict"]
+validation_notes: ["Core CPI can diverge from headline."]
+tags: ["core-cpi", "macro"]
+

@@ -1,0 +1,13 @@
+scenario_id: "VAL-013"
+title: "High Volatility Regime"
+description: "Elevated volatility segment validation."
+category: "volatility_event"
+date_range: {start: "2022-09-20", end: "2022-09-30"}
+datasets:
+  - {dataset: "xauusd_1h", path: "processed/xauusd/xauusd_1h.parquet"}
+expected_runtime_behavior: ["Wider scenario dispersion and entropy rise."]
+acceptance_criteria: ["Deterministic entropy output."]
+expected_outputs: ["Scenario simulator metrics"]
+validation_notes: ["Check entropy monotonicity."]
+tags: ["high-volatility"]
+

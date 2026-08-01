@@ -396,3 +396,16 @@ capabilities:
       implements_req: ["NFR-016", "NFR-017", "NFR-018"]
       trace_adr: ["ADR-0001"]
       trace_vvc: "TVM-001"
+
+  # ── Stage H — System Verification & Validation ──────────────────────────
+  - id: "PHASEB-VV"
+    version: "1.0"
+    title: "Phase B Verification & Validation framework"
+    owner: "VALIDATION"
+    status: "COMPLETE"
+    depends_on: ["SYSTEM-VALIDATION", "REPO-OBSERVABILITY"]
+    work_package: "WP-IMP-0036"
+    traceability:
+      implements_req: ["NFR-019", "NFR-020", "NFR-021"]
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"

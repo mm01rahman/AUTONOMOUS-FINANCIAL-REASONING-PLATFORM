@@ -1,0 +1,13 @@
+scenario_id: "VAL-009"
+title: "Weekend Gap"
+description: "Low-liquidity reopen behavior."
+category: "liquidity_event"
+date_range: {start: "2023-04-14", end: "2023-04-17"}
+datasets:
+  - {dataset: "xauusd_1h", path: "processed/xauusd/xauusd_1h.parquet"}
+expected_runtime_behavior: ["Gap-aware risk controls."]
+acceptance_criteria: ["Policy caps remain enforced."]
+expected_outputs: ["Stress report"]
+validation_notes: ["Weekend open slippage approximation."]
+tags: ["weekend-gap", "liquidity"]
+

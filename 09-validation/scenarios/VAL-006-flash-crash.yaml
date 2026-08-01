@@ -1,0 +1,14 @@
+scenario_id: "VAL-006"
+title: "Flash Crash"
+description: "COVID liquidity crash replay."
+category: "stress_event"
+date_range: {start: "2020-03-09", end: "2020-03-20"}
+event_ref: "GEO-006"
+datasets:
+  - {dataset: "xauusd_1h", path: "processed/xauusd/xauusd_1h.parquet"}
+expected_runtime_behavior: ["High epistemic uncertainty and risk controls."]
+acceptance_criteria: ["No unauthorized trade under degraded confidence."]
+expected_outputs: ["Null trade when constraints breached"]
+validation_notes: ["Stress case for policy gating."]
+tags: ["flash-crash", "stress"]
+

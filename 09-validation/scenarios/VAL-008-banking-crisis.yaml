@@ -1,0 +1,15 @@
+scenario_id: "VAL-008"
+title: "Banking Crisis"
+description: "SVB collapse scenario."
+category: "geopolitical_event"
+date_range: {start: "2023-03-08", end: "2023-03-15"}
+event_ref: "GEO-004"
+datasets:
+  - {dataset: "xauusd_1h", path: "processed/xauusd/xauusd_1h.parquet"}
+  - {dataset: "yields_daily", path: "processed/yields/yields_daily.parquet"}
+expected_runtime_behavior: ["Risk-off signal and conservative policy output."]
+acceptance_criteria: ["Deterministic policy verdict sequence."]
+expected_outputs: ["Verification report"]
+validation_notes: ["Check treasury-driven macro feature impact."]
+tags: ["banking-crisis", "risk-off"]
+

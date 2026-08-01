@@ -1,0 +1,44 @@
+name: Phase B Validation
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  phaseb-vv:
+    name: Phase B V&V
+    runs-on: ubuntu-latest
+    env:
+      AFRP_AUDIT_HMAC_KEY: ci-phaseb-key
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --frozen --group dev
+
+      - name: Run Phase B validation
+        run: uv run python -m tools.phaseb_validation --github-summary
+
+      - name: Upload validation reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: phaseb-validation-reports
+          path: 09-validation/reports/
+          retention-days: 90

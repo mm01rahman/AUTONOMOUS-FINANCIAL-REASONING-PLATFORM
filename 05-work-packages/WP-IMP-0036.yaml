@@ -1,0 +1,159 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0036"
+capability_id:
+  id: "PHASEB-VV"
+  version: "1.0"
+title: "Implement Phase B Verification & Validation framework"
+status: "Completed"
+is_immutable: true
+
+governance:
+  target_subsystem: "VALIDATION"
+  traceability:
+    implements_req: ["NFR-019", "NFR-020", "NFR-021"]
+    trace_sls: "AFRP-PHASEB-VV-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('REPO-OBSERVABILITY')"
+
+resources:
+  cpu: "medium"
+  memory: "1GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/verification/"
+      - "tools/phaseb_validation.py"
+      - "09-validation/scenarios/"
+      - "09-validation/reports/"
+      - ".github/workflows/phaseb-validation.yml"
+      - "tests/unit/test_phaseb_verification.py"
+      - "docs/validation/PHASE_B_VV.md"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+      - "10-release/PHASE_B_VALIDATION_EVIDENCE_RECORD.yaml"
+      - "10-release/PHASE_B_VALIDATION_COMPLETION_REPORT.md"
+      - "05-work-packages/WP-IMP-0036.yaml"
+      - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
+    read:
+      - "06-runtime/"
+      - "09-validation/fixtures/"
+      - "03-engineering/"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "large"
+  estimated_duration: "4h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "tools/system_gate.py"
+    - "09-validation/fixtures/mp04_ticks.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/verification/replay.py"
+    - "tools/verification/scenarios.py"
+    - "tools/verification/verifier.py"
+    - "tools/verification/math_checks.py"
+    - "tools/verification/statistical.py"
+    - "tools/verification/stress.py"
+    - "tools/verification/performance.py"
+    - "tools/verification/regression.py"
+    - "tools/verification/dashboard.py"
+    - "tools/verification/cli.py"
+    - "tools/phaseb_validation.py"
+    - "tests/unit/test_phaseb_verification.py"
+    - ".github/workflows/phaseb-validation.yml"
+    - "docs/validation/PHASE_B_VV.md"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/verification/"
+    - "tools/phaseb_validation.py"
+    - "09-validation/scenarios/"
+    - "09-validation/reports/"
+    - "tests/unit/test_phaseb_verification.py"
+    - ".github/workflows/phaseb-validation.yml"
+    - "docs/validation/PHASE_B_VV.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "10-release/PHASE_B_VALIDATION_EVIDENCE_RECORD.yaml"
+    - "10-release/PHASE_B_VALIDATION_COMPLETION_REPORT.md"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
+
+produces:
+  capability:
+    id: "PHASEB-VV"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/verification/"
+    - "tools/phaseb_validation.py"
+    - "09-validation/scenarios/"
+    - "09-validation/reports/"
+    - "tests/unit/test_phaseb_verification.py"
+    - ".github/workflows/phaseb-validation.yml"
+    - "docs/validation/PHASE_B_VV.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "10-release/PHASE_B_VALIDATION_EVIDENCE_RECORD.yaml"
+    - "10-release/PHASE_B_VALIDATION_COMPLETION_REPORT.md"
+    - "05-work-packages/WP-IMP-0036.yaml"
+    - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
+  non_goals:
+    - "No paper trading."
+    - "No broker integration."
+    - "No live trading."
+
+requirements:
+  phaseb_vv:
+    module: "tools/verification"
+    rules:
+      - "Deterministic replay checks must be reproducible."
+      - "Scenario library must include the 14 mandated scenarios."
+      - "Regression suite must emit machine-readable reports."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  phaseb_runner:
+    required: true
+    command: "uv run python -m tools.phaseb_validation"
+
+completion:
+  success_requires:
+    - "All phase B checks pass and reports are generated."
+
+failure_modes:
+  ERR-REPLAY: "Replay is nondeterministic or checksum drifts."
+  ERR-SCENARIO: "Required scenario definitions are missing."
+  ERR-REGRESSION: "Regression suite reports failures."

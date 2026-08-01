@@ -1,0 +1,13 @@
+scenario_id: "VAL-010"
+title: "Liquidity Vacuum"
+description: "Synthetic thin-book stress case."
+category: "liquidity_event"
+date_range: {start: "2020-03-16", end: "2020-03-17"}
+datasets:
+  - {dataset: "xauusd_1m", path: "processed/xauusd/xauusd_1m.parquet"}
+expected_runtime_behavior: ["Higher uncertainty and null-trade bias."]
+acceptance_criteria: ["No breach of spread limits."]
+expected_outputs: ["Policy diagnostics"]
+validation_notes: ["Validate a_null preference."]
+tags: ["liquidity", "stress"]
+
