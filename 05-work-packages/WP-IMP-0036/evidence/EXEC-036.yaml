@@ -1,0 +1,103 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-036"
+work_package_id: "WP-IMP-0036"
+capability:
+  id: "PHASEB-VV"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (GPT-5.3-Codex)"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-01T09:20:00Z"
+  finished_at: "2026-08-01T10:10:00Z"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-08-01T10:10:00Z"
+      note: "Awaiting ARB review for Phase B package."
+preconditions:
+  - predicate: "capability.complete('REPO-OBSERVABILITY')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "tools/verification/"
+    - "tools/phaseb_validation.py"
+    - "09-validation/scenarios/"
+    - "09-validation/reports/"
+    - "tests/unit/test_phaseb_verification.py"
+    - ".github/workflows/phaseb-validation.yml"
+    - "docs/validation/PHASE_B_VV.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "10-release/PHASE_B_VALIDATION_EVIDENCE_RECORD.yaml"
+    - "10-release/PHASE_B_VALIDATION_COMPLETION_REPORT.md"
+    - "05-work-packages/WP-IMP-0036.yaml"
+    - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
+  files_modified:
+    - "tools/verification/"
+    - "tools/phaseb_validation.py"
+    - "09-validation/scenarios/"
+    - "09-validation/reports/"
+    - "tests/unit/test_phaseb_verification.py"
+    - ".github/workflows/phaseb-validation.yml"
+    - "docs/validation/PHASE_B_VV.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "10-release/PHASE_B_VALIDATION_EVIDENCE_RECORD.yaml"
+    - "10-release/PHASE_B_VALIDATION_COMPLETION_REPORT.md"
+    - "05-work-packages/WP-IMP-0036.yaml"
+    - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check ."
+    result: "PASS"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+    result: "PASS"
+  - gate: "pytest"
+    command: "uv run pytest -q"
+    result: "PASS"
+    detail: "660 passed"
+  - gate: "coverage"
+    command: "uv run pytest --cov --cov-report=json:coverage.json --cov-fail-under=80 -q"
+    result: "PASS"
+    detail: "82.33% total coverage"
+  - gate: "afrp_validate"
+    command: "uv run afrp validate"
+    result: "PASS"
+  - gate: "afrp_plan"
+    command: "uv run afrp plan"
+    result: "PASS"
+  - gate: "afrp_health"
+    command: "uv run afrp health --assert-full"
+    result: "PASS"
+  - gate: "phaseb_runner"
+    command: "uv run python -m tools.phaseb_validation"
+    result: "PASS"
+artifacts:
+  source_files:
+    - "tools/verification/replay.py"
+    - "tools/verification/scenarios.py"
+    - "tools/verification/verifier.py"
+    - "tools/verification/math_checks.py"
+    - "tools/verification/statistical.py"
+    - "tools/verification/stress.py"
+    - "tools/verification/performance.py"
+    - "tools/verification/regression.py"
+    - "tools/verification/dashboard.py"
+    - "tools/verification/cli.py"
+    - "tools/phaseb_validation.py"
+  test_files:
+    - "tests/unit/test_phaseb_verification.py"
+  documentation:
+    - "docs/validation/PHASE_B_VV.md"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "PENDING_ARB"
+  review_note: "Phase B framework implemented; pending ARB approval."

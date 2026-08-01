@@ -1,0 +1,14 @@
+scenario_id: "VAL-004"
+title: "PPI Release"
+description: "Producer inflation event validation."
+category: "macro_event"
+date_range: {start: "2022-10-12", end: "2022-10-13"}
+datasets:
+  - {dataset: "xauusd_1h", path: "processed/xauusd/xauusd_1h.parquet"}
+  - {dataset: "economic_calendar", path: "processed/economic_calendar/economic_events.parquet"}
+expected_runtime_behavior: ["Pricing pressure reflected in macro feature map."]
+acceptance_criteria: ["No contract violations in L2/L3 outputs."]
+expected_outputs: ["Domain beliefs", "World model trace"]
+validation_notes: ["Confirm feature normalization."]
+tags: ["ppi", "macro"]
+

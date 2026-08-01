@@ -1,0 +1,15 @@
+scenario_id: "VAL-007"
+title: "COVID Regime Shift"
+description: "Pandemic onset multi-day scenario."
+category: "geopolitical_event"
+date_range: {start: "2020-01-22", end: "2020-04-01"}
+event_ref: "GEO-001"
+datasets:
+  - {dataset: "xauusd_1d", path: "processed/xauusd/xauusd_1d.parquet"}
+  - {dataset: "dxy_1d", path: "processed/dxy/dxy_1d.parquet"}
+expected_runtime_behavior: ["Safe-haven behavior reflected in fused masses."]
+acceptance_criteria: ["Cross-layer traceability present."]
+expected_outputs: ["Replay report", "Statistical report"]
+validation_notes: ["Long horizon scenario."]
+tags: ["covid", "safe-haven"]
+

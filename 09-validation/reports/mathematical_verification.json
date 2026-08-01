@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "PCR5 mass conservation",
+      "passed": true,
+      "detail": "sum=1.000000000000, conflict=0.160000000000"
+    },
+    {
+      "name": "Reliability discounting bounds",
+      "passed": true,
+      "detail": "sum=1.000000000000"
+    },
+    {
+      "name": "Pignistic transform normalization",
+      "passed": true,
+      "detail": "sum=1.000000000000"
+    },
+    {
+      "name": "Brier score and calibration bounds",
+      "passed": true,
+      "detail": "brier=0.140000, weights={'L2-MAC': 0.9299999999999999}"
+    },
+    {
+      "name": "Replay world mass sum",
+      "passed": true,
+      "detail": "sum=0.999999999999"
+    }
+  ],
+  "failures": []
+}

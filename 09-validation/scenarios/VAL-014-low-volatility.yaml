@@ -1,0 +1,12 @@
+scenario_id: "VAL-014"
+title: "Low Volatility Regime"
+description: "Compressed range stability validation."
+category: "volatility_event"
+date_range: {start: "2021-11-01", end: "2021-11-30"}
+datasets:
+  - {dataset: "xauusd_1h", path: "processed/xauusd/xauusd_1h.parquet"}
+expected_runtime_behavior: ["Lower entropy and reduced utility variance."]
+acceptance_criteria: ["No nondeterministic branch divergence."]
+expected_outputs: ["Regression report"]
+validation_notes: ["Control case for volatility contrast."]
+tags: ["low-volatility"]

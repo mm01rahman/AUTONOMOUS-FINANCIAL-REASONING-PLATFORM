@@ -1,0 +1,13 @@
+scenario_id: "VAL-012"
+title: "Range Market"
+description: "Consolidation regime sample."
+category: "range_event"
+date_range: {start: "2019-01-01", end: "2019-03-31"}
+datasets:
+  - {dataset: "xauusd_1d", path: "processed/xauusd/xauusd_1d.parquet"}
+expected_runtime_behavior: ["RANGE mass dominates in uncertainty windows."]
+acceptance_criteria: ["No over-sized execution candidate."]
+expected_outputs: ["Math verification traces"]
+validation_notes: ["Flat volatility baseline."]
+tags: ["range", "consolidation"]
+

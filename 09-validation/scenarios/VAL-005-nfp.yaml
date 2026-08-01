@@ -1,0 +1,14 @@
+scenario_id: "VAL-005"
+title: "NFP Day"
+description: "US labor market release day validation."
+category: "macro_event"
+date_range: {start: "2023-04-07", end: "2023-04-08"}
+datasets:
+  - {dataset: "xauusd_1h", path: "processed/xauusd/xauusd_1h.parquet"}
+  - {dataset: "economic_calendar", path: "processed/economic_calendar/economic_events.parquet"}
+expected_runtime_behavior: ["Spike-and-revert microstructure profile."]
+acceptance_criteria: ["Policy engine keeps constraints satisfied."]
+expected_outputs: ["Authorized action", "Audit signature"]
+validation_notes: ["NFP revisions can alter context."]
+tags: ["nfp", "labor", "volatility"]
+

@@ -1,0 +1,31 @@
+schema_version: "ERS-1.0"
+evidence_id: "PHASEB-VV-EVIDENCE-001"
+work_package_id: "WP-IMP-0036"
+capability_id: "PHASEB-VV"
+title: "Phase B Verification & Validation release evidence"
+
+lifecycle:
+  final_state: "APPROVED"
+
+components:
+  - id: "tools/verification"
+    type: "python_package"
+    description: "Phase B replay, verification, stress, performance, regression, and dashboard suite."
+  - id: "09-validation/scenarios"
+    type: "scenario_library"
+    description: "14 permanent validation scenarios."
+  - id: "phaseb-validation-workflow"
+    type: "github_actions_workflow"
+    description: "Automated Phase B validation in CI."
+
+quality_gate_results:
+  ruff: "PASS"
+  mypy_strict: "PASS"
+  pytest_phaseb: "PASS"
+  afrp_validate: "PASS"
+  afrp_plan: "PASS"
+
+requirements_implemented:
+  - "NFR-019: Deterministic/reproducible replay framework."
+  - "NFR-020: Permanent scenario and regression framework."
+  - "NFR-021: Multi-format validation dashboards and reports."

@@ -1,0 +1,13 @@
+scenario_id: "VAL-011"
+title: "Strong Trend"
+description: "Gold uptrend regime sample."
+category: "trend_event"
+date_range: {start: "2020-04-01", end: "2020-08-07"}
+datasets:
+  - {dataset: "xauusd_1d", path: "processed/xauusd/xauusd_1d.parquet"}
+expected_runtime_behavior: ["Persistent directional hypothesis in L3."]
+acceptance_criteria: ["Stable utility ranking across replays."]
+expected_outputs: ["Statistical report"]
+validation_notes: ["Trend persistence validation."]
+tags: ["trend", "momentum"]
+

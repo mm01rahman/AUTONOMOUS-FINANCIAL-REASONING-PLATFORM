@@ -1,0 +1,15 @@
+{
+  "scenario_count": 14,
+  "runtime_failures": [],
+  "math_failures": [],
+  "stress_failures": [],
+  "performance_passed": true,
+  "deterministic_passed": true,
+  "statistical_snapshot": {
+    "sharpe_ratio": 0.22963979982068555,
+    "sortino_ratio": 0.4763321661268475,
+    "max_drawdown": 0.0010068281290916343,
+    "brier_score": 0.23914581014540603
+  },
+  "passed": true
+}

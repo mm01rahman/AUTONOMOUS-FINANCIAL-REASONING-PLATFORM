@@ -478,6 +478,43 @@ requirements:
     verified_by:
       - "tests/unit/test_observability.py"
       - "05-work-packages/WP-IMP-0035/evidence/EXEC-035.yaml"
+  - id: "NFR-019"
+    title: "Deterministic and reproducible historical replay framework for validation"
+    source: "AFRP-PHASEB-VV-1.0.0"
+    capability: "PHASEB-VV"
+    status: "implemented"
+    artifacts:
+      - "tools/verification/replay.py"
+      - "tools/verification/verifier.py"
+      - "tools/phaseb_validation.py"
+    verified_by:
+      - "tests/unit/test_phaseb_verification.py"
+      - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
+  - id: "NFR-020"
+    title: "Permanent scenario library and regression framework for Phase B V&V"
+    source: "AFRP-PHASEB-VV-1.0.0"
+    capability: "PHASEB-VV"
+    status: "implemented"
+    artifacts:
+      - "09-validation/scenarios/"
+      - "tools/verification/scenarios.py"
+      - "tools/verification/regression.py"
+    verified_by:
+      - "tests/unit/test_phaseb_verification.py"
+      - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
+  - id: "NFR-021"
+    title: "Comprehensive verification dashboards and machine-readable reports"
+    source: "AFRP-PHASEB-VV-1.0.0"
+    capability: "PHASEB-VV"
+    status: "implemented"
+    artifacts:
+      - "tools/verification/dashboard.py"
+      - "tools/verification/cli.py"
+      - ".github/workflows/phaseb-validation.yml"
+      - "docs/validation/PHASE_B_VV.md"
+    verified_by:
+      - "tests/unit/test_phaseb_verification.py"
+      - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
 
   # ── Engineering decision rules (ARCH-001 §4) ────────────────────────
   - id: "EDR-001"
