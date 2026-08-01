@@ -1,0 +1,47 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-035"
+work_package_id: "WP-IMP-0035"
+capability_id: "REPO-OBSERVABILITY"
+title: "Repository Metrics and Engineering Observability Platform — Execution Evidence"
+
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI (Claude Sonnet 4.6)"
+
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-04T12:00:00Z"
+  finished_at: "2026-08-04T18:00:00Z"
+  final_state: "REVIEW_PENDING"
+
+quality_gates:
+  ruff: "PASS"
+  mypy_strict: "PASS"
+  pytest: "PASS — 612 tests passed"
+  coverage: "PASS — threshold met"
+  afrp_validate: "PASS"
+  afrp_plan: "PASS"
+
+components_implemented:
+  - "tools/observability/__init__.py"
+  - "tools/observability/collectors/__init__.py"
+  - "tools/observability/collectors/repository.py — CapabilityMetrics, WorkPackageMetrics"
+  - "tools/observability/collectors/quality.py — RuffMetrics, MypyMetrics, CoverageMetrics, TestMetrics"
+  - "tools/observability/collectors/architecture.py — ArchitectureMetrics, FitnessResult"
+  - "tools/observability/collectors/governance.py — GovernanceMetrics"
+  - "tools/observability/collectors/security.py — SecurityMetrics, BanditMetrics, DependencyMetrics"
+  - "tools/observability/collectors/release.py — ReleaseMetrics"
+  - "tools/observability/collectors/git_metrics.py — GitMetrics"
+  - "tools/observability/scoring.py — HealthScore, HealthGrade (A+/A/B/C/D), DimensionScore"
+  - "tools/observability/snapshot.py — MetricsSnapshot, QualitySnapshot, collect_all()"
+  - "tools/observability/dashboard.py — render_markdown, render_html, render_github_summary"
+  - "tools/dashboard.py — CLI entry point (click)"
+  - ".github/workflows/metrics.yml — metrics workflow triggered after quality gates"
+  - "tests/unit/test_observability.py — 36 unit tests"
+
+boundary_audit:
+  runtime_modified: false
+  eos_architecture_modified: false
+  ci_cd_redesigned: false
+  quality_gates_weakened: false

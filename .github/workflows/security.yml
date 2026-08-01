@@ -68,7 +68,7 @@ jobs:
       - name: Install pip-audit
         run: pip install pip-audit
       - name: Export requirements from uv.lock
-        run: uv export --frozen --no-dev --format requirements-txt > /tmp/requirements.txt
+        run: uv export --frozen --no-dev --no-emit-project --format requirements-txt > /tmp/requirements.txt
       - name: Audit dependencies
         run: |
           pip-audit \

@@ -1,0 +1,112 @@
+name: Repository Metrics
+
+on:
+  workflow_run:
+    workflows: ["Quality Gates"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      fast:
+        description: "Skip slow subprocess checks"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  metrics:
+    name: Generate Repository Metrics
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --frozen --group dev
+
+      - name: Download coverage artifact (if available)
+        uses: dawidd6/action-download-artifact@v6
+        continue-on-error: true
+        with:
+          workflow: quality.yml
+          name: coverage-json
+          path: .
+
+      - name: Run test suite (for fresh coverage)
+        if: ${{ !inputs.fast }}
+        run: |
+          uv run pytest \
+            --cov --cov-report=json:coverage.json \
+            --cov-fail-under=0 \
+            -q
+        continue-on-error: true
+
+      - name: Create reports directory
+        run: mkdir -p reports
+
+      - name: Generate metrics (JSON)
+        run: |
+          FAST_FLAG=""
+          if [ "${{ inputs.fast }}" = "true" ]; then
+            FAST_FLAG="--fast"
+          fi
+          uv run python -m tools.dashboard \
+            --format json \
+            --output reports/metrics.json \
+            --github-summary \
+            $FAST_FLAG
+
+      - name: Generate Markdown dashboard
+        run: |
+          FAST_FLAG=""
+          if [ "${{ inputs.fast }}" = "true" ]; then
+            FAST_FLAG="--fast"
+          fi
+          uv run python -m tools.dashboard \
+            --format markdown \
+            --output reports/dashboard.md \
+            $FAST_FLAG
+
+      - name: Generate HTML dashboard
+        run: |
+          FAST_FLAG=""
+          if [ "${{ inputs.fast }}" = "true" ]; then
+            FAST_FLAG="--fast"
+          fi
+          uv run python -m tools.dashboard \
+            --format html \
+            --output reports/dashboard.html \
+            $FAST_FLAG
+
+      - name: Upload metrics artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: repository-metrics
+          path: reports/
+          retention-days: 90
+
+      - name: Upload coverage JSON
+        uses: actions/upload-artifact@v4
+        if: ${{ !inputs.fast }}
+        with:
+          name: coverage-json
+          path: coverage.json
+          retention-days: 90
