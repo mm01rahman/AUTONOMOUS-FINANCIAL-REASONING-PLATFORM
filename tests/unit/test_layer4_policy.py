@@ -2,20 +2,17 @@
 
 from __future__ import annotations
 
-import os
-
 import pytest
-
 from afrp_runtime.common.errors import ConfigurationError
+from afrp_runtime.common.statemachine import OperationalState
 from afrp_runtime.contracts.cio import (
+    THETA,
     AuthorizationVerdict,
     ExecutionCandidate,
     PortfolioState,
     WorldStateVector,
-    THETA,
 )
 from afrp_runtime.contracts.envelope import make_envelope
-from afrp_runtime.common.statemachine import OperationalState
 from afrp_runtime.layer4.policy import PolicyEngine
 
 _TEST_KEY = "test-hmac-key-for-unit-tests"
@@ -119,7 +116,9 @@ def test_flat_candidate_gives_null_trade(monkeypatch: pytest.MonkeyPatch) -> Non
     """Flat direction (a_null) must remain NULL_TRADE."""
     _set_key(monkeypatch)
     engine = PolicyEngine("MP-02")
-    result = engine.authorize(_candidate(direction=0.0, size=0.0, stop_price=0.0), _wsv(), _portfolio(), spread_bps=1.0)
+    result = engine.authorize(
+        _candidate(direction=0.0, size=0.0, stop_price=0.0), _wsv(), _portfolio(), spread_bps=1.0
+    )
     assert result.verdict is AuthorizationVerdict.NULL_TRADE
 
 

@@ -8,12 +8,10 @@ from afrp_runtime.contracts.cio import (
     AuthorizationVerdict,
     AuthorizedAction,
     ExecutionEventKind,
-    ExecutionIntent,
     OrderState,
 )
 from afrp_runtime.contracts.envelope import make_envelope
 from afrp_runtime.layer5.execution import (
-    AuditLedger,
     InMemoryOrderEventStore,
     OrderGateway,
     PortfolioReconciler,
@@ -251,7 +249,9 @@ class TestRecoveryIntegration:
             (ExecutionEventKind.ACK, 0.0, 0.0, 2_000),
             (ExecutionEventKind.FILL, 1.0, 2400.0, 3_000),
         ]:
-            env = make_envelope("VENUE", "c1", "MP-02", f"{event_kind.name}", trace_id="trace-audit")
+            env = make_envelope(
+                "VENUE", "c1", "MP-02", f"{event_kind.name}", trace_id="trace-audit"
+            )
             rpt = ExecutionReport(
                 envelope=env,
                 order_id=submitted.order_id,

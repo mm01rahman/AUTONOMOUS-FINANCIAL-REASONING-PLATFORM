@@ -3,17 +3,16 @@
 from __future__ import annotations
 
 import pytest
-
 from afrp_runtime.common.errors import ContractViolationError
 from afrp_runtime.contracts.cio import (
-    PortfolioState,
-    ScenarioSet,
-    Scenario,
-    WorldStateVector,
     THETA,
+    PortfolioState,
+    Scenario,
+    ScenarioSet,
+    WorldStateVector,
 )
 from afrp_runtime.contracts.envelope import make_envelope
-from afrp_runtime.layer4.synthesizer import DecisionSynthesizer, _BASE_LAMBDA
+from afrp_runtime.layer4.synthesizer import DecisionSynthesizer
 
 
 def _envelope(subsystem: str) -> object:

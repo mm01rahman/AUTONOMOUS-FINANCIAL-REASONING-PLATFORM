@@ -2,8 +2,7 @@
 
 from __future__ import annotations
 
-from afrp_runtime.contracts.cio import THETA, DomainBelief, PortfolioState
-from afrp_runtime.contracts.cio import ExecutionCandidate
+from afrp_runtime.contracts.cio import THETA, DomainBelief, ExecutionCandidate, PortfolioState
 from afrp_runtime.contracts.envelope import make_envelope
 from afrp_runtime.layer3.simulator import ScenarioSimulator
 from afrp_runtime.layer3.worldmodel import WorldModelKernel
