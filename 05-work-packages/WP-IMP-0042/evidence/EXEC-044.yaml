@@ -1,0 +1,110 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-044"
+work_package_id: "WP-IMP-0042"
+capability:
+  id: "IKROS-REGISTRIES"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-02T07:00:00Z"
+  finished_at: "2026-08-02T09:30:00Z"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-08-02T09:30:00Z"
+      note: "IKROS Core Registries implementation complete. 5 registries, 12 Python modules, 84 unit tests. All quality gates pass. No Runtime changes."
+preconditions:
+  - predicate: "capability.complete('IKROS-ARCH')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "tools/ikros/"
+    - "tests/unit/test_ikros_registries.py"
+    - "docs/ikros/"
+    - "data/ikros/"
+    - "05-work-packages/WP-IMP-0042.yaml"
+    - "05-work-packages/WP-IMP-0042/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  files_modified:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/models.py"
+    - "tools/ikros/identifiers.py"
+    - "tools/ikros/validation.py"
+    - "tools/ikros/persistence.py"
+    - "tools/ikros/registries/__init__.py"
+    - "tools/ikros/registries/base.py"
+    - "tools/ikros/registries/research.py"
+    - "tools/ikros/registries/hypothesis.py"
+    - "tools/ikros/registries/experiment.py"
+    - "tools/ikros/registries/feature.py"
+    - "tools/ikros/registries/alpha.py"
+    - "tests/unit/test_ikros_registries.py"
+    - "docs/ikros/REGISTRY_GUIDE.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check ."
+    result: "PASS"
+    detail: "All checks passed. Zero lint violations in tools/ikros/ and tests/."
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+    result: "PASS"
+    detail: "Success: no issues found in 12 source files under tools/ikros/."
+  - gate: "pytest"
+    command: "uv run pytest -q --tb=short"
+    result: "PASS"
+    detail: "84 new IKROS tests pass. Full suite passes. Zero failures."
+  - gate: "afrp_validate"
+    command: "uv run afrp validate"
+    result: "PASS"
+    detail: "violations: 0. All 6 fitness checks pass."
+  - gate: "afrp_plan"
+    command: "uv run afrp plan"
+    result: "PASS"
+    detail: "42 capabilities total; DAG acyclic; IKROS-REGISTRIES complete."
+  - gate: "afrp_health"
+    command: "uv run afrp health"
+    result: "PASS"
+    detail: "74/74 requirements covered (100.0%); test coverage maintained."
+  - gate: "afrp_evidence"
+    command: "uv run afrp evidence --wp WP-IMP-0042"
+    result: "PASS"
+    detail: "fit_005 PASS; boundary compliance verified."
+artifacts:
+  source_files:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/models.py"
+    - "tools/ikros/identifiers.py"
+    - "tools/ikros/validation.py"
+    - "tools/ikros/persistence.py"
+    - "tools/ikros/registries/__init__.py"
+    - "tools/ikros/registries/base.py"
+    - "tools/ikros/registries/research.py"
+    - "tools/ikros/registries/hypothesis.py"
+    - "tools/ikros/registries/experiment.py"
+    - "tools/ikros/registries/feature.py"
+    - "tools/ikros/registries/alpha.py"
+  test_files:
+    - "tests/unit/test_ikros_registries.py"
+  documentation:
+    - "docs/ikros/REGISTRY_GUIDE.md"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "PENDING_ARB"
+  review_note: >
+    IKROS Core Registries complete. All 5 institutional registries (Research, Hypothesis,
+    Experiment, Feature, Alpha) implemented with full CRUD, lifecycle state machine,
+    lineage provenance, confidence tracking, YAML persistence, and validation.
+    84 unit tests; 0 failures. Ruff, mypy --strict, pytest, and all afrp gates pass.
+    No Runtime or Engineering OS changes. STOP: Awaiting ARB approval before
+    WP-IMP-0043 (Knowledge Graph).

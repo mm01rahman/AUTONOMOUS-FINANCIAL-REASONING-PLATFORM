@@ -850,3 +850,41 @@ requirements:
       - "02-architecture/ikros/IKROS-REGISTRIES.md"
     verified_by:
       - "05-work-packages/WP-IMP-0041/evidence/EXEC-043.yaml"
+
+  - id: "NFR-039"
+    title: "IKROS core registries shall provide deterministic YAML serialization with version history and referential integrity"
+    source: "SPEC-060 §3 (AFRP-WP-IMP-0042)"
+    capability: "IKROS-REGISTRIES"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/registries/base.py"
+      - "tools/ikros/persistence.py"
+      - "tools/ikros/models.py"
+      - "tests/unit/test_ikros_registries.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0042/evidence/EXEC-044.yaml"
+
+  - id: "NFR-040"
+    title: "IKROS lifecycle state machines shall prevent invalid transitions and enforce governance rules LIN-001 through LIN-010"
+    source: "SPEC-060 §4 (AFRP-WP-IMP-0042)"
+    capability: "IKROS-REGISTRIES"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/identifiers.py"
+      - "tools/ikros/validation.py"
+      - "tools/ikros/registries/base.py"
+      - "tests/unit/test_ikros_registries.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0042/evidence/EXEC-044.yaml"
+
+  - id: "NFR-041"
+    title: "IKROS Alpha promotion shall require non-empty ERS evidence records (LIN-006) and permanent rejection documentation"
+    source: "SPEC-060 §5 (AFRP-WP-IMP-0042)"
+    capability: "IKROS-REGISTRIES"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/registries/alpha.py"
+      - "tools/ikros/validation.py"
+      - "tests/unit/test_ikros_registries.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0042/evidence/EXEC-044.yaml"

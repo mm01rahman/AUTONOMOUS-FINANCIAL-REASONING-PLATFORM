@@ -1,0 +1,188 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0042"
+capability_id:
+  id: "IKROS-REGISTRIES"
+  version: "1.0"
+title: "IKROS Foundation — Core Research Registries"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "KNOWLEDGE"
+  traceability:
+    implements_req: ["NFR-039", "NFR-040", "NFR-041"]
+    trace_sls: "AFRP-WP-IMP-0042-1.0.0"
+    trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('IKROS-ARCH')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/ikros/"
+      - "tests/unit/test_ikros_registries.py"
+      - "docs/ikros/"
+      - "data/ikros/"
+      - "05-work-packages/WP-IMP-0042.yaml"
+      - "05-work-packages/WP-IMP-0042/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    read:
+      - "02-architecture/ikros/"
+      - "03-engineering/"
+      - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+      - "05-work-packages/WP-IMP-0039.yaml"
+      - "05-work-packages/WP-IMP-0039/"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "8h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/ikros/IKROS-REGISTRIES.md"
+    - "02-architecture/ikros/IKROS-ARCH-SPEC.md"
+    - "02-architecture/ikros/IKROS-LINEAGE.md"
+    - "02-architecture/ikros/IKROS-CONFIDENCE.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/models.py"
+    - "tools/ikros/identifiers.py"
+    - "tools/ikros/validation.py"
+    - "tools/ikros/persistence.py"
+    - "tools/ikros/registries/__init__.py"
+    - "tools/ikros/registries/base.py"
+    - "tools/ikros/registries/research.py"
+    - "tools/ikros/registries/hypothesis.py"
+    - "tools/ikros/registries/experiment.py"
+    - "tools/ikros/registries/feature.py"
+    - "tools/ikros/registries/alpha.py"
+  expected_test_files:
+    - "tests/unit/test_ikros_registries.py"
+  expected_documentation:
+    - "docs/ikros/REGISTRY_GUIDE.md"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0042/evidence/EXEC-044.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/ikros/"
+    - "tests/unit/test_ikros_registries.py"
+    - "docs/ikros/REGISTRY_GUIDE.md"
+    - "data/ikros/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0042/evidence/EXEC-044.yaml"
+
+produces:
+  capability:
+    id: "IKROS-REGISTRIES"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/ikros/"
+    - "tests/unit/test_ikros_registries.py"
+    - "docs/ikros/"
+    - "data/ikros/"
+    - "05-work-packages/WP-IMP-0042.yaml"
+    - "05-work-packages/WP-IMP-0042/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  non_goals:
+    - "No Knowledge Graph implementation."
+    - "No Memory Engine implementation."
+    - "No Query Engine implementation."
+    - "No autonomous research implementation."
+    - "No GNN or graph neural network implementation."
+    - "No Runtime modification."
+    - "No Engineering OS modification."
+
+requirements:
+  research_registry:
+    module: "tools/ikros/registries/research.py"
+    rules:
+      - "Manages ResearchQuestion entities with CRUD, lifecycle, and persistence."
+      - "Validates per SPEC-060 and lineage rules LIN-001 through LIN-010."
+      - "Supports domain queries: by_instrument, by_campaign, active_questions."
+  hypothesis_registry:
+    module: "tools/ikros/registries/hypothesis.py"
+    rules:
+      - "Manages Hypothesis entities with state machine governance."
+      - "Enforces LIN-004: tested_in and validated_by non-empty for SUPPORTED/REFUTED."
+      - "Tracks posterior confidence updates over experimental evidence."
+  experiment_registry:
+    module: "tools/ikros/registries/experiment.py"
+    rules:
+      - "Manages Experiment entities with complete reproducibility tracking."
+      - "Enforces LIN-009: reproducibility_hash required when COMPLETE."
+      - "Provides deterministic replay via get_reproducible_inputs."
+  feature_registry:
+    module: "tools/ikros/registries/feature.py"
+    rules:
+      - "Manages Feature and FeatureFamily entities."
+      - "Supports feature supersession with lineage preservation."
+      - "Queries by information_content and stability_score thresholds."
+  alpha_registry:
+    module: "tools/ikros/registries/alpha.py"
+    rules:
+      - "Manages AlphaCandidate and Alpha entities."
+      - "Enforces LIN-006: ERS records required for PROMOTED state."
+      - "Rejection is permanent institutional memory with documented reasons."
+      - "Promotion eligibility filtered by Sharpe, drawdown, direction accuracy."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0042"
+
+completion:
+  success_requires:
+    - "All 5 core registries implemented with full CRUD, lifecycle, and persistence."
+    - "84 unit tests pass with 0 failures."
+    - "IKROS-REGISTRIES capability added to CAPABILITY_REGISTRY.yaml (42 total)."
+    - "NFR-039, NFR-040, NFR-041 added to TRACEABILITY_MATRIX.yaml."
+    - "All quality gates pass (ruff, mypy --strict, pytest, afrp validate/plan/health/evidence)."
+    - "No Runtime behaviour changed."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-SCHEMA: "WPS-1.0 schema violation in WP YAML structure."
+  ERR-LIFECYCLE: "Registry allows invalid lifecycle transitions — state machine must be enforced."
+  ERR-LIN-006: "Alpha promotion without ERS evidence record violates LIN-006."
