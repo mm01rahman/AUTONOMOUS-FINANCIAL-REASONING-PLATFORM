@@ -8,7 +8,6 @@ import pytest
 from afrp_runtime.contracts.cio import CalibrationWeights, EpisodicEmbedding
 from afrp_runtime.layer6.learning import BrierCalibrator, RegimeEmbedder
 
-
 _FEATURES = {
     "log_return": 0.003,
     "ewm_volatility": 0.0015,
@@ -161,7 +160,7 @@ class TestCrossLayerOutOfBand:
         assert not hasattr(cio11, "verdict")
         assert not hasattr(cio11, "authorized")
         # The CalibrationWeights type is distinct from AuthorizationVerdict values
-        assert not isinstance(cio11, AuthorizationVerdict.__class__)
+        assert not isinstance(cio11, AuthorizationVerdict)
 
     def test_embedding_does_not_carry_policy_approval(self) -> None:
         """CIO-12 carries no verdict — policy re-validation is always required."""

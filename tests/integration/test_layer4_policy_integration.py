@@ -2,12 +2,14 @@
 
 from __future__ import annotations
 
-import os
-
 import pytest
-
-from afrp_runtime.contracts.cio import THETA, AuthorizationVerdict, DomainBelief, PortfolioState
-from afrp_runtime.contracts.cio import AuthorizedAction
+from afrp_runtime.contracts.cio import (
+    THETA,
+    AuthorizationVerdict,
+    AuthorizedAction,
+    DomainBelief,
+    PortfolioState,
+)
 from afrp_runtime.contracts.envelope import make_envelope
 from afrp_runtime.layer3.simulator import ScenarioSimulator
 from afrp_runtime.layer3.worldmodel import WorldModelKernel
