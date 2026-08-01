@@ -1,0 +1,46 @@
+{
+  "phase": "D.5",
+  "objectives": {
+    "D5-001": "Operational Failure Analysis",
+    "D5-002": "Risk Analysis",
+    "D5-003": "World Model Assessment",
+    "D5-004": "Decision Engine Assessment",
+    "D5-005": "Execution Assessment",
+    "D5-006": "Strategy Performance Attribution",
+    "D5-007": "FIX Work Package Generation",
+    "D5-008": "Approved FIX Implementation",
+    "D5-009": "Regression Validation"
+  },
+  "root_causes": [
+    {
+      "id": "RC-001",
+      "classification": "Configuration Defect",
+      "description": "Single-instrument shadow books were always flagged as concentration=1.0 because concentration used abs(net)/gross instead of multi-position weight when position notionals were available.",
+      "baseline_evidence": [
+        "11-research/phase-d/d5-baseline/risk_alerts.json",
+        "11-research/phase-d/d5-baseline/decision_log.jsonl"
+      ],
+      "fix_wp": "WP-FIX-0002"
+    },
+    {
+      "id": "RC-002",
+      "classification": "Validation Defect",
+      "description": "Decision logs appended on rerun, making root artifacts stale and inconsistent with their digest metadata.",
+      "baseline_observation": {
+        "observed_at": "2026-08-01T19:17:00+06:00",
+        "decision_log_lines": 48,
+        "decision_log_unique_sequences": 24,
+        "decision_log_digest_records": 24,
+        "decision_log_file_sha256": "44d7850d25be5634e527037043d3f0b24e83a1dfdd674f72ea952b76ba156370",
+        "decision_log_digest_checksum": "9d4c65dcf8e1e1d3ba42ec28ef3634ce9551f939f45eedfea2c6f252b889123b"
+      },
+      "fix_wp": "WP-FIX-0003"
+    }
+  ],
+  "regression": {
+    "phase_b_validation_report": "09-validation/reports/phase-d5/validation_dashboard.json",
+    "phase_c_backtest_results": "11-research/results/afrp_vs_benchmarks.json",
+    "phase_d_before": "11-research/phase-d/d5-baseline/",
+    "phase_d_after": "11-research/phase-d/"
+  }
+}

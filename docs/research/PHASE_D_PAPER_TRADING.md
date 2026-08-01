@@ -16,12 +16,14 @@ route orders to any broker and does not perform real-money execution.
   spread/slippage/latency modeling.
 - `portfolio.py`: virtual portfolio state (cash, positions, exposure, leverage,
   drawdown, PnL).
-- `decision_log.py`: deterministic JSONL decision log with required fields and
-  reproducible SHA-256 checksums.
+- `decision_log.py`: deterministic JSONL decision log with required fields,
+  per-run file reset, and reproducible SHA-256 checksums.
 - `monitoring.py`: rolling and period metrics (daily/weekly/monthly, sharpe,
   sortino, calmar, win-rate, profit-factor, drawdown, exposure).
 - `risk.py`: risk limits and alert generation (position, concentration,
-  exposure, leverage, volatility, confidence drift).
+  exposure, leverage, volatility, confidence drift), with concentration
+  evaluated from multi-position weights when available so single-asset shadow
+  runs are not failed by structural 100% gross concentration.
 - `dashboard.py`: JSON/Markdown/HTML operational dashboard outputs.
 - `reporting.py`: daily/weekly/monthly reports plus runtime/learning/risk/log
   artifacts.

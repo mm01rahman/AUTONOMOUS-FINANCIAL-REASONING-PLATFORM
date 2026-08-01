@@ -116,6 +116,11 @@ class PaperTradingOrchestrator:
                 position_notional=abs(state_now.get("net_exposure", 0.0)),
                 confidence_values=confidence_history,
                 volatility=abs(momentum) / max(feed_price, 1.0),
+                position_notionals=[
+                    abs(position.market_price * position.quantity)
+                    for position in self.portfolio.positions.values()
+                    if abs(position.quantity) > 1e-12
+                ],
             )
             alert_dicts = alerts_to_dict(alerts)
             all_alerts.extend(alert_dicts)

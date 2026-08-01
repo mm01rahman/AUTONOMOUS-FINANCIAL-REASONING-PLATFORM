@@ -4,6 +4,14 @@ All notable AFRP changes are recorded here. The project follows semantic version
 
 ## [1.3.0] — 2026-08-01
 
+### Fixed
+
+- Phase D.5 risk monitoring now suppresses false-positive concentration alerts for
+  single-instrument shadow runs by using supplied per-position notionals when
+  available.
+- Phase D.5 decision-log generation now resets JSONL output per run so digests and
+  record counts remain truthful when reusing the same artifact directory.
+
 ### Added
 
 - Phase D paper-trading and live shadow execution platform (`tools/paper_trading/`):

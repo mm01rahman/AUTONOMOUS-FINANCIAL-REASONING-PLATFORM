@@ -61,6 +61,7 @@ class DecisionLogWriter:
     def __init__(self, path: Path) -> None:
         self.path = path
         self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_text("", encoding="utf-8")
         self._hasher = hashlib.sha256()
         self._count = 0
 

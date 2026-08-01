@@ -576,6 +576,7 @@ requirements:
       - "tests/unit/test_paper_trading_modules.py"
       - "tests/integration/test_paper_trading_orchestrator.py"
       - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+      - "05-work-packages/WP-FIX-0003/evidence/EXEC-040.yaml"
   - id: "NFR-027"
     title: "Performance/risk monitoring and operational dashboards emitted as JSON/MD/HTML"
     source: "AFRP-PHASE-D-1.0.0"
@@ -589,6 +590,7 @@ requirements:
     verified_by:
       - "tests/unit/test_paper_trading_modules.py"
       - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+      - "05-work-packages/WP-FIX-0002/evidence/EXEC-039.yaml"
   - id: "NFR-028"
     title: "Daily/weekly/monthly reporting with runtime, risk, performance, learning and log digests"
     source: "AFRP-PHASE-D-1.0.0"

@@ -269,6 +269,28 @@ def test_decision_log_deterministic_encoding(tmp_path: Path) -> None:
     assert lines[0] == lines[1]
 
 
+def test_decision_log_writer_truncates_existing_file(tmp_path: Path) -> None:
+    path = tmp_path / "log.jsonl"
+    path.write_text('{"stale":true}\n', encoding="utf-8")
+    writer = DecisionLogWriter(path)
+    record = DecisionRecord(
+        sequence=1,
+        timestamp=datetime(2026, 1, 1, tzinfo=UTC),
+        market_snapshot={"x": 1},
+        world_model={"a": 1},
+        decision_context={"b": 2},
+        utility={"c": 3},
+        policy_outcome={"d": 4},
+        execution_simulation={"e": 5},
+        portfolio_state={"f": 6},
+        learning_outputs={"g": 7},
+    )
+    writer.write(record)
+    lines = path.read_text(encoding="utf-8").strip().splitlines()
+    assert len(lines) == 1
+    assert "stale" not in lines[0]
+
+
 def test_compute_performance_for_rising_equity() -> None:
     perf = compute_performance([100, 102, 104], [1, 2, 3], [10, 12, 14])
     assert perf.total_return > 0
@@ -413,6 +435,44 @@ def test_risk_monitor_no_alerts_for_safe_state() -> None:
         volatility=0.0001,
     )
     assert alerts == []
+
+
+def test_risk_monitor_skips_single_position_concentration_when_notionals_supplied() -> None:
+    monitor = RiskMonitor(RiskLimits(max_concentration=0.7))
+    alerts = monitor.evaluate(
+        datetime(2026, 1, 1, tzinfo=UTC),
+        portfolio_state={
+            "equity": 100000.0,
+            "gross_exposure": 1000.0,
+            "net_exposure": 1000.0,
+            "leverage": 0.01,
+            "drawdown": 0.001,
+        },
+        position_notional=1000.0,
+        confidence_values=[0.5, 0.51],
+        volatility=0.0001,
+        position_notionals=[1000.0],
+    )
+    assert not any(alert.code == "RISK-CONCENTRATION" for alert in alerts)
+
+
+def test_risk_monitor_flags_multi_position_concentration_when_notionals_supplied() -> None:
+    monitor = RiskMonitor(RiskLimits(max_concentration=0.7))
+    alerts = monitor.evaluate(
+        datetime(2026, 1, 1, tzinfo=UTC),
+        portfolio_state={
+            "equity": 100000.0,
+            "gross_exposure": 1000.0,
+            "net_exposure": 900.0,
+            "leverage": 0.01,
+            "drawdown": 0.001,
+        },
+        position_notional=900.0,
+        confidence_values=[0.5, 0.51],
+        volatility=0.0001,
+        position_notionals=[800.0, 200.0],
+    )
+    assert any(alert.code == "RISK-CONCENTRATION" for alert in alerts)
 
 
 def test_dashboard_render_sets_status_healthy() -> None:

@@ -41,6 +41,7 @@ class RiskMonitor:
         position_notional: float,
         confidence_values: list[float],
         volatility: float,
+        position_notionals: list[float] | None = None,
     ) -> list[RiskAlert]:
         ts = when if when.tzinfo is not None else when.replace(tzinfo=UTC)
         alerts: list[RiskAlert] = []
@@ -92,7 +93,17 @@ class RiskMonitor:
             )
 
         concentration = net / gross if gross > 0 else 0.0
-        if concentration > self.limits.max_concentration:
+        active_position_notionals = (
+            [abs(notional) for notional in position_notionals if abs(notional) > 1e-9]
+            if position_notionals is not None
+            else []
+        )
+        if gross > 0 and active_position_notionals:
+            concentration = max(active_position_notionals) / gross
+        concentration_breached = concentration > self.limits.max_concentration
+        if position_notionals is not None and len(active_position_notionals) <= 1:
+            concentration_breached = False
+        if concentration_breached:
             add_alert(
                 "RISK-CONCENTRATION",
                 "Net concentration exceeds limit",

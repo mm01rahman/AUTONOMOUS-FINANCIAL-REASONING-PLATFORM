@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "case_id": "STRESS-001",
+      "passed": true,
+      "detail": "total feed loss -> DEGRADED + a_null"
+    },
+    {
+      "case_id": "STRESS-002",
+      "passed": true,
+      "detail": "scenario_paths=64"
+    },
+    {
+      "case_id": "STRESS-003",
+      "passed": true,
+      "detail": "decision_p99=0.1309ms"
+    },
+    {
+      "case_id": "STRESS-004",
+      "passed": true,
+      "detail": "long replay deterministic checksum"
+    }
+  ],
+  "failures": []
+}
