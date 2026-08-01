@@ -1,0 +1,55 @@
+schema_version: "ERS-1.0"
+evidence_id: "LAYER4-EVR"
+title: "Runtime Layer 4 Evidence Record"
+layer: "Layer 4"
+version: "v2.0.0-layer4"
+
+completed_capabilities:
+  - id: "L4-FUS"
+    version: "1.0"
+    work_package: "WP-RT-1014"
+    evidence: "05-work-packages/WP-RT-1014/evidence/EXEC-114.yaml"
+    status: "COMPLETE"
+  - id: "L4-DEC"
+    version: "1.0"
+    work_package: "WP-RT-1015"
+    evidence: "05-work-packages/WP-RT-1015/evidence/EXEC-115.yaml"
+    status: "COMPLETE"
+  - id: "L4-VAL"
+    version: "1.0"
+    work_package: "WP-RT-1016"
+    evidence: "05-work-packages/WP-RT-1016/evidence/EXEC-116.yaml"
+    status: "COMPLETE"
+
+test_summary:
+  layer4_unit_tests: 27
+  layer4_integration_tests: 7
+  layer4_total: 34
+  cumulative_layer_total: 278
+  result: "PASS"
+
+gate_outcomes:
+  - gate: "ruff"
+    result: "PASS"
+  - gate: "mypy_strict"
+    result: "PASS"
+  - gate: "pytest"
+    result: "PASS"
+    tests_passed: 278
+  - gate: "afrp_validate"
+    result: "PASS"
+  - gate: "afrp_health"
+    result: "PASS"
+  - gate: "architecture_validation"
+    result: "PASS"
+  - gate: "dependency_validation"
+    result: "PASS"
+    notes: "All L4 depends_on confirmed COMPLETE before execution"
+
+layer_review_status: "PENDING_ARB_APPROVAL"
+
+unlocked_next_layer:
+  - id: "L5-EXE"
+    version: "1.0"
+    status: "AVAILABLE"
+    notes: "L5-EXE depends on L4-VAL + L1-RDB (both COMPLETE)"

@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 6 learning and adaptation loop"
 layer: "Layer 6"
 description: "Compute calibration weights and episodic embeddings out-of-band."
 objective: "Deliver deterministic Brier-based discounting and embedding outputs."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -31,6 +31,8 @@ resources:
       - "tests/integration/test_layer6_learning_integration.py"
       - "docs/runtime/layer6-learning.md"
       - "05-work-packages/WP-RT-1018/evidence/"
+    - "05-work-packages/WP-RT-1018.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
 execution:
   priority: "high"
   estimated_complexity: "large"
@@ -58,6 +60,19 @@ scope:
     - "tests/unit/test_layer6.py"
     - "tests/integration/test_layer6_learning_integration.py"
     - "docs/runtime/layer6-learning.md"
+    - "05-work-packages/WP-RT-1018.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+execution_results:
+  final_state: "COMPLETED"
+  gates_passed:
+    - {gate: "ruff", result: "PASS"}
+    - {gate: "mypy_strict", result: "PASS"}
+    - {gate: "pytest_unit", result: "PASS", tests: 22}
+    - {gate: "pytest_integration", result: "PASS", tests: 10}
+    - {gate: "afrp_validate", result: "PASS"}
+    - {gate: "afrp_health", result: "PASS"}
+    - {gate: "evidence", result: "PASS"}
+  evidence_record: "05-work-packages/WP-RT-1018/evidence/EXEC-118.yaml"
 requirements:
   acceptance_criteria:
     - "Brier scoring and weight updates are deterministic and bounded."

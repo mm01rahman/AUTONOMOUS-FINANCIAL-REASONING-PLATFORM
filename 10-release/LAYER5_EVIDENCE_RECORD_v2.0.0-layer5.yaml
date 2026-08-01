@@ -1,0 +1,44 @@
+schema_version: "ERS-1.0"
+layer: "Layer 5"
+layer_id: "L5-EXE"
+release_tag: "v2.0.0-layer5"
+title: "AFRP Runtime Layer 5 — Evidence Record"
+generated_at: "2025-01-01T00:00:00Z"
+
+capabilities_completed:
+  - id: "L5-EXE"
+    version: "1.0"
+    title: "Order gateway: state machine CIO-08, fills CIO-09, portfolio CIO-10"
+    work_package: "WP-RT-1017"
+    evidence: "05-work-packages/WP-RT-1017/evidence/EXEC-117.yaml"
+    final_state: "COMPLETED"
+
+work_packages:
+  - id: "WP-RT-1017"
+    title: "Layer 5 execution gateway and portfolio reconciliation"
+    status: "COMPLETED"
+    gate_summary:
+      mypy_strict: "PASS"
+      pytest_unit: "PASS (26 tests)"
+      pytest_integration: "PASS (6 tests)"
+      total_tests_passing: 284
+
+integration_validation:
+  all_layer_tests_pass: true
+  total_tests: 284
+  new_tests_added: 32
+  mypy_clean: true
+
+architecture_validation:
+  no_layer_modifications: true
+  no_contract_changes: true
+  bounded_files_respected: true
+
+evidence_summary:
+  evidence_records:
+    - "05-work-packages/WP-RT-1017/evidence/EXEC-117.yaml"
+
+layer_status: "COMPLETE"
+unlocked_layers:
+  - "Layer 6 (L6-OPT)"
+arb_approval_required: true

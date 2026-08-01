@@ -1,0 +1,54 @@
+schema_version: "ERS-1.0"
+layer: "Layer 6"
+layer_id: "L6-OPT"
+release_tag: "v2.0.0-layer6"
+title: "AFRP Runtime Layer 6 — Evidence Record"
+generated_at: "2026-08-01T00:00:00Z"
+
+capabilities_completed:
+  - id: "L6-OPT"
+    version: "1.0"
+    title: "Learning loop: Brier scoring, CIO-11 weights, CIO-12 embeddings"
+    work_package: "WP-RT-1018"
+    evidence: "05-work-packages/WP-RT-1018/evidence/EXEC-118.yaml"
+    final_state: "COMPLETED"
+
+work_packages:
+  - id: "WP-RT-1018"
+    title: "Layer 6 learning and calibration loop"
+    status: "COMPLETED"
+    gate_summary:
+      mypy_strict: "PASS"
+      pytest_unit: "PASS (22 tests)"
+      pytest_integration: "PASS (10 tests)"
+      total_tests_passing: 294
+
+integration_validation:
+  all_layer_tests_pass: true
+  total_tests: 294
+  new_tests_added: 10
+  mypy_clean: true
+  no_frozen_layer_modifications: true
+
+cross_layer_validation:
+  L1_tests: 28
+  L2_tests: 49
+  L3_tests: 72
+  L4_tests: 45
+  L5_tests: 32
+  L6_tests: 32
+  all_pass: true
+
+architecture_validation:
+  no_layer_modifications: true
+  no_contract_changes: true
+  bounded_files_respected: true
+  out_of_band_guarantee: true
+
+evidence_summary:
+  evidence_records:
+    - "05-work-packages/WP-RT-1018/evidence/EXEC-118.yaml"
+
+layer_status: "COMPLETE"
+all_runtime_capabilities_complete: true
+arb_approval_required: true
