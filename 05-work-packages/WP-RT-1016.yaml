@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 4 policy validation engine"
 layer: "Layer 4"
 description: "Validate CIO-06 against policy constraints and emit CIO-07."
 objective: "Deliver deterministic policy projection with safe null-action fallback."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -28,6 +28,8 @@ resources:
       - "tests/integration/test_layer4_policy_integration.py"
       - "docs/runtime/layer4-policy.md"
       - "05-work-packages/WP-RT-1016/evidence/"
+    - "05-work-packages/WP-RT-1016.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
 execution:
   priority: "critical"
   estimated_complexity: "large"
@@ -55,6 +57,19 @@ scope:
     - "tests/unit/test_layer4_policy.py"
     - "tests/integration/test_layer4_policy_integration.py"
     - "docs/runtime/layer4-policy.md"
+    - "05-work-packages/WP-RT-1016.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+execution_results:
+  final_state: "COMPLETED"
+  gates_passed:
+    - {gate: "ruff", result: "PASS"}
+    - {gate: "mypy_strict", result: "PASS"}
+    - {gate: "pytest_unit", result: "PASS", tests: 10}
+    - {gate: "pytest_integration", result: "PASS", tests: 3}
+    - {gate: "afrp_validate", result: "PASS"}
+    - {gate: "afrp_health", result: "PASS"}
+    - {gate: "evidence", result: "PASS"}
+  evidence_record: "05-work-packages/WP-RT-1016/evidence/EXEC-116.yaml"
 requirements:
   acceptance_criteria:
     - "Policy engine enforces Pi_C projection and null-action fallback."

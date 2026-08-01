@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 5 execution gateway and portfolio reconciliation"
 layer: "Layer 5"
 description: "Execute authorized actions through order FSM, fills, and portfolio reconciliation."
 objective: "Deliver deterministic order lifecycle and auditable state transitions."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -30,6 +30,8 @@ resources:
       - "tests/integration/test_layer5_execution_integration.py"
       - "docs/runtime/layer5-execution.md"
       - "05-work-packages/WP-RT-1017/evidence/"
+    - "05-work-packages/WP-RT-1017.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
 execution:
   priority: "critical"
   estimated_complexity: "large"
@@ -57,6 +59,19 @@ scope:
     - "tests/unit/test_layer5.py"
     - "tests/integration/test_layer5_execution_integration.py"
     - "docs/runtime/layer5-execution.md"
+    - "05-work-packages/WP-RT-1017.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+execution_results:
+  final_state: "COMPLETED"
+  gates_passed:
+    - {gate: "ruff", result: "PASS"}
+    - {gate: "mypy_strict", result: "PASS"}
+    - {gate: "pytest_unit", result: "PASS", tests: 26}
+    - {gate: "pytest_integration", result: "PASS", tests: 6}
+    - {gate: "afrp_validate", result: "PASS"}
+    - {gate: "afrp_health", result: "PASS"}
+    - {gate: "evidence", result: "PASS"}
+  evidence_record: "05-work-packages/WP-RT-1017/evidence/EXEC-117.yaml"
 requirements:
   acceptance_criteria:
     - "Order FSM is exhaustive with explicit legal/illegal transitions."

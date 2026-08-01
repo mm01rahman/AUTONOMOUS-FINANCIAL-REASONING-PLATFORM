@@ -1,0 +1,61 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-114"
+work_package_id: "WP-RT-1014"
+capability_id:
+  id: "L4-FUS"
+  version: "1.0"
+title: "WP-RT-1014 Decision Context Synthesizer - Execution Evidence"
+layer: "Layer 4"
+
+gate_outcomes:
+  - gate: "ruff"
+    status: "PASS"
+    notes: "No lint issues found"
+  - gate: "mypy_strict"
+    status: "PASS"
+    notes: "No type errors (layer4/ + test files)"
+  - gate: "pytest_unit"
+    status: "PASS"
+    tests_collected: 9
+    tests_passed: 9
+    notes: "Context fields, risk lambda derivation, provenance, instrument mismatch"
+  - gate: "pytest_integration"
+    status: "PASS"
+    tests_collected: 2
+    tests_passed: 2
+    notes: "Full L3-WRM→L3-SIM→L4-FUS pipeline; trace_id propagation"
+  - gate: "total_test_suite"
+    status: "PASS"
+    tests_passed: 278
+    notes: "Cumulative L1+L2+L3+L4 layer tests all green"
+  - gate: "afrp_validate"
+    status: "PASS"
+  - gate: "afrp_health"
+    status: "PASS"
+  - gate: "evidence"
+    status: "PASS"
+
+all_gates_passed: true
+final_state: "COMPLETED"
+review_status: "APPROVED"
+
+acceptance_criteria:
+  - criterion: "CIO-05B includes required fields from CIO-04 and CIO-05A."
+    met: true
+    evidence: "test_synthesizer_returns_decision_context, test_synthesizer_links_all_parent_ids"
+  - criterion: "Provenance and trace propagation are preserved."
+    met: true
+    evidence: "test_synthesizer_propagates_trace_id, test_decision_context_envelope_links_to_world_state"
+
+artifacts_created:
+  - "tests/unit/test_layer4_synthesizer.py"
+  - "tests/integration/test_layer4_synthesizer_integration.py"
+  - "docs/runtime/layer4-synthesizer.md"
+  - "05-work-packages/WP-RT-1014/evidence/EXEC-114.yaml"
+
+governance_updates:
+  - "05-work-packages/WP-RT-1014.yaml: status Completed"
+  - "03-engineering/CAPABILITY_REGISTRY.yaml: L4-FUS COMPLETE, L4-DEC AVAILABLE (in batch)"
+
+unlocked_capabilities:
+  - {id: "L4-DEC", version: "1.0"}

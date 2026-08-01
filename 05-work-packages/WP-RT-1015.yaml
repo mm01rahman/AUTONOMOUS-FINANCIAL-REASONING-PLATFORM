@@ -5,8 +5,8 @@ title: "Runtime backlog: Layer 4 utility optimizer"
 layer: "Layer 4"
 description: "Optimize CIO-05B contexts into CIO-06 execution candidates."
 objective: "Deliver deterministic utility maximization under defined constraints."
-status: "Draft"
-planning_status: "READY"
+status: "Completed"
+planning_status: "COMPLETE"
 is_immutable: false
 owner: "Runtime Planning Board"
 governance:
@@ -28,6 +28,8 @@ resources:
       - "tests/integration/test_layer4_optimizer_integration.py"
       - "docs/runtime/layer4-optimizer.md"
       - "05-work-packages/WP-RT-1015/evidence/"
+    - "05-work-packages/WP-RT-1015.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
 execution:
   priority: "critical"
   estimated_complexity: "large"
@@ -52,6 +54,19 @@ scope:
     - "tests/unit/test_layer4_optimizer.py"
     - "tests/integration/test_layer4_optimizer_integration.py"
     - "docs/runtime/layer4-optimizer.md"
+    - "05-work-packages/WP-RT-1015.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+execution_results:
+  final_state: "COMPLETED"
+  gates_passed:
+    - {gate: "ruff", result: "PASS"}
+    - {gate: "mypy_strict", result: "PASS"}
+    - {gate: "pytest_unit", result: "PASS", tests: 8}
+    - {gate: "pytest_integration", result: "PASS", tests: 2}
+    - {gate: "afrp_validate", result: "PASS"}
+    - {gate: "afrp_health", result: "PASS"}
+    - {gate: "evidence", result: "PASS"}
+  evidence_record: "05-work-packages/WP-RT-1015/evidence/EXEC-115.yaml"
 requirements:
   acceptance_criteria:
     - "Optimizer deterministically selects argmax U_r candidate under model constraints."

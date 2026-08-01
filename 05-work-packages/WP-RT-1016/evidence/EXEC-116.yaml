@@ -1,0 +1,63 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-116"
+work_package_id: "WP-RT-1016"
+capability_id:
+  id: "L4-VAL"
+  version: "1.0"
+title: "WP-RT-1016 Policy Engine - Execution Evidence"
+layer: "Layer 4"
+
+gate_outcomes:
+  - gate: "ruff"
+    status: "PASS"
+    notes: "No lint issues found"
+  - gate: "mypy_strict"
+    status: "PASS"
+    notes: "No type errors"
+  - gate: "pytest_unit"
+    status: "PASS"
+    tests_collected: 10
+    tests_passed: 10
+    notes: "NULL_TRADE: MP-04/EMERGENCY_STOP/quorum/spread/flat/neg-utility; AUTHORIZED/PROJECTED; Pi_C; HMAC; missing key"
+  - gate: "pytest_integration"
+    status: "PASS"
+    tests_collected: 3
+    tests_passed: 3
+    notes: "Full pipeline to CIO-07; MP-04 forced NULL_TRADE; trace_id propagation"
+  - gate: "total_test_suite"
+    status: "PASS"
+    tests_passed: 278
+  - gate: "afrp_validate"
+    status: "PASS"
+  - gate: "afrp_health"
+    status: "PASS"
+  - gate: "evidence"
+    status: "PASS"
+
+all_gates_passed: true
+final_state: "COMPLETED"
+review_status: "APPROVED"
+
+acceptance_criteria:
+  - criterion: "Policy engine enforces Pi_C projection and null-action fallback."
+    met: true
+    evidence: "test_pi_c_projection_caps_size, test_mp04_no_trading_gives_null_trade"
+  - criterion: "Mission-profile constraints are explicit and auditable."
+    met: true
+    evidence: "test_insufficient_quorum_gives_null_trade (diagnostic in constraint_diagnostics)"
+  - criterion: "CIO-07 outputs include complete policy provenance."
+    met: true
+    evidence: "test_authorized_action_has_hmac_signature, test_cio07_envelope_traces_back_to_world_state"
+
+artifacts_created:
+  - "tests/unit/test_layer4_policy.py"
+  - "tests/integration/test_layer4_policy_integration.py"
+  - "docs/runtime/layer4-policy.md"
+  - "05-work-packages/WP-RT-1016/evidence/EXEC-116.yaml"
+
+governance_updates:
+  - "05-work-packages/WP-RT-1016.yaml: status Completed"
+  - "03-engineering/CAPABILITY_REGISTRY.yaml: L4-VAL COMPLETE, L5-EXE AVAILABLE"
+
+unlocked_capabilities:
+  - {id: "L5-EXE", version: "1.0"}
