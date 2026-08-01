@@ -160,7 +160,7 @@ class TestCrossLayerOutOfBand:
         assert not hasattr(cio11, "verdict")
         assert not hasattr(cio11, "authorized")
         # The CalibrationWeights type is distinct from AuthorizationVerdict values
-        assert not isinstance(cio11, type(AuthorizationVerdict))
+        assert not isinstance(cio11, AuthorizationVerdict)
 
     def test_embedding_does_not_carry_policy_approval(self) -> None:
         """CIO-12 carries no verdict — policy re-validation is always required."""
