@@ -1,0 +1,71 @@
+repos:
+  # ── Ruff: linting and formatting ──────────────────────────────────────
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  # ── Mypy: type checking ───────────────────────────────────────────────
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy --strict
+        entry: uv run mypy --strict
+        language: system
+        types: [python]
+        args: [tools, 06-runtime, 07-research, tests]
+        pass_filenames: false
+
+  # ── Commit message convention ─────────────────────────────────────────
+  - repo: local
+    hooks:
+      - id: commit-msg-convention
+        name: Commit message convention
+        language: system
+        entry: uv run python -m tools.commit_msg_hook
+        stages: [commit-msg]
+        pass_filenames: false
+        always_run: true
+
+  # ── General hygiene ───────────────────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: check-yaml
+        args: [--unsafe]  # allow YAML custom tags
+      - id: check-toml
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--maxkb=500]
+      - id: detect-private-key
+      - id: no-commit-to-branch
+        args: [--branch, main]
+      - id: mixed-line-ending
+        args: [--fix=lf]
+
+  # ── YAML linting ──────────────────────────────────────────────────────
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        args: [-c, .yamllint.yml]
+        exclude: |
+          (?x)^(
+            \.github/workflows/.*|
+            05-work-packages/.*|
+            10-release/.*
+          )$
+
+default_language_version:
+  python: python3.11
+
+ci:
+  autofix_commit_msg: "chore: pre-commit auto-fixes"
+  autoupdate_commit_msg: "chore(deps): pre-commit autoupdate"
+  autoupdate_schedule: weekly

@@ -370,3 +370,16 @@ capabilities:
     status: "COMPLETE"
     depends_on: ["L5-EXE"]
     work_package: "WP-IMP-0033"
+
+  # ── Stage F — Engineering Automation ────────────────────────────────────
+  - id: "ENG-AUTOMATION"
+    version: "1.0"
+    title: "Engineering Automation: CI/CD, security, release, developer tooling"
+    owner: "DEVSECOPS"
+    status: "COMPLETE"
+    depends_on: ["GOV-BASELINE", "EOS-ORCHESTRATOR", "SYSTEM-VALIDATION"]
+    work_package: "WP-IMP-0034"
+    traceability:
+      implements_req: ["NFR-013", "NFR-014", "NFR-015"]
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"

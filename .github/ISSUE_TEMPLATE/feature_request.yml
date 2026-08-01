@@ -1,0 +1,67 @@
+name: Feature request / capability proposal
+description: Propose a new capability or enhancement within AFRP governance
+title: "feat: "
+labels: ["enhancement", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Governance note**: New capabilities must align with the
+        [Architecture Baseline](../../02-architecture) and receive ARB approval
+        before implementation begins. Review ADR-0001 and the capability DAG first.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Request type
+      options:
+        - "New capability (requires ARB approval)"
+        - "Enhancement to existing capability"
+        - "Developer tooling / automation"
+        - "Documentation / observability"
+    validations:
+      required: true
+
+  - type: input
+    id: requirement
+    attributes:
+      label: Requirement ID (if known)
+      description: FR-xxx, NFR-xxx, or EDR-xxx from the architecture baseline
+      placeholder: "e.g. FR-015"
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem does this solve? What requirement does it address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed solution
+      description: High-level design. Must preserve canonical architecture.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches evaluated and why they were rejected
+
+  - type: checkboxes
+    id: governance
+    attributes:
+      label: Governance checklist
+      options:
+        - label: "Reviewed ADR-0001 and canonical architecture"
+          required: true
+        - label: "Identified affected capabilities in CAPABILITY_REGISTRY.yaml"
+          required: true
+        - label: "No existing capability already covers this requirement"
+          required: true
+        - label: "Proposed change is backward-compatible or has a migration path"
+          required: true

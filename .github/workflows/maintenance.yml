@@ -1,0 +1,123 @@
+name: AFRP scheduled maintenance
+
+on:
+  schedule:
+    # Every Sunday at 02:00 UTC
+    - cron: "0 2 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  # ── Dependency audit ──────────────────────────────────────────────────
+  dependency-audit:
+    name: Dependency vulnerability audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.0"
+          enable-cache: true
+      - name: Install pip-audit
+        run: pip install pip-audit
+      - name: Export all dependencies
+        run: uv export --frozen --format requirements-txt > /tmp/all-deps.txt
+      - name: Audit for vulnerabilities
+        run: |
+          pip-audit \
+            -r /tmp/all-deps.txt \
+            --format json \
+            --output dep-audit.json \
+            --progress-spinner off \
+            || true
+      - name: Check for outdated packages
+        run: |
+          uv sync --frozen --group dev
+          uv run python -m tools.metrics --output dep-metrics.json
+      - name: Upload dependency reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-reports-${{ github.run_number }}
+          path: |
+            dep-audit.json
+            dep-metrics.json
+          retention-days: 90
+
+  # ── Repository health report ───────────────────────────────────────────
+  repo-health:
+    name: Repository health report
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.0"
+          enable-cache: true
+      - run: uv sync --frozen --group dev
+      - name: Run tests for coverage baseline
+        run: |
+          uv run pytest tests --cov --cov-report=json -q
+      - name: Validate capability registry
+        run: uv run python -m tools.baseline_gate
+      - name: Validate EOS / architecture
+        run: |
+          uv run afrp boot
+          uv run afrp plan
+          uv run afrp validate
+          uv run afrp health --assert-full
+      - name: Traceability validation
+        run: uv run python -m tools.traceability_gate
+      - name: Generate full metrics report
+        run: uv run python -m tools.metrics --output health-metrics.json
+      - name: Upload health report
+        uses: actions/upload-artifact@v4
+        with:
+          name: health-report-${{ github.run_number }}
+          path: |
+            health-metrics.json
+            coverage.json
+          retention-days: 90
+
+  # ── Lock file validation ───────────────────────────────────────────────
+  lockfile-validation:
+    name: Lock file validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.0"
+          enable-cache: true
+      - name: Validate uv.lock is up to date
+        run: uv lock --check
+
+  # ── Dependency graph validation ────────────────────────────────────────
+  dep-graph:
+    name: Dependency graph validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.0"
+          enable-cache: true
+      - run: uv sync --frozen --group dev
+      - name: Validate capability DAG is acyclic (FIT-001)
+        run: uv run afrp plan
+      - name: Display dependency tree
+        run: uv tree

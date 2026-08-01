@@ -1,0 +1,23 @@
+name: "AFRP CodeQL Security Configuration"
+
+# Paths to analyze
+paths:
+  - tools/afrp-cli/afrp
+  - 06-runtime/afrp_runtime
+  - 07-research/afrp_research
+
+# Paths to exclude
+paths-ignore:
+  - tests/
+  - "**/*.md"
+  - "**/*.yaml"
+  - "**/*.yml"
+  - proto/
+
+# Query suites to use
+queries:
+  - uses: security-extended
+  - uses: security-and-quality
+
+# Threat model: this is a financial reasoning platform
+# Prioritize: injection, path traversal, crypto, authentication

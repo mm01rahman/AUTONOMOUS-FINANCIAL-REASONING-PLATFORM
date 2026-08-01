@@ -1,0 +1,93 @@
+name: AFRP protocol validation
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "proto/**"
+      - "tools/proto_gate.py"
+  pull_request:
+    paths:
+      - "proto/**"
+      - "tools/proto_gate.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: proto-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ── buf lint ───────────────────────────────────────────────────────────
+  buf-lint:
+    name: buf lint (proto style)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up buf
+        uses: bufbuild/buf-setup-action@v1
+        with:
+          github_token: ${{ github.token }}
+      - name: buf lint
+        working-directory: proto
+        run: buf lint
+
+  # ── buf breaking ──────────────────────────────────────────────────────
+  buf-breaking:
+    name: buf breaking (compatibility check)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up buf
+        uses: bufbuild/buf-setup-action@v1
+        with:
+          github_token: ${{ github.token }}
+      - name: buf breaking against main
+        working-directory: proto
+        run: |
+          buf breaking \
+            --against "https://github.com/${{ github.repository }}.git#branch=main,subdir=proto" \
+            || {
+              echo "❌ Protocol breaking changes detected — merge blocked"
+              exit 1
+            }
+        # Only run breaking check on PRs targeting main
+        if: github.event_name == 'pull_request'
+
+  # ── grpcio-tools compile validation (W-001 fallback) ──────────────────
+  proto-compile:
+    name: Proto compile validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.0"
+          enable-cache: true
+      - run: uv sync --frozen --group dev
+      - name: Compile protos via grpcio-tools
+        run: uv run python -m tools.proto_gate
+
+  # ── Protocol gate summary ──────────────────────────────────────────────
+  protocol-gate:
+    name: All protocol gates passed
+    runs-on: ubuntu-latest
+    needs: [buf-lint, buf-breaking, proto-compile]
+    if: always()
+    steps:
+      - name: Check all protocol gates
+        run: |
+          results="${{ join(needs.*.result, ',') }}"
+          if echo "$results" | grep -qE '(failure|cancelled)'; then
+            echo "❌ Protocol gate failed — merge blocked: $results"
+            exit 1
+          fi
+          echo "✅ All protocol gates passed"

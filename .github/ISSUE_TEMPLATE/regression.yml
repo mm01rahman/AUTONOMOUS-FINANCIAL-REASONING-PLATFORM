@@ -1,0 +1,67 @@
+name: Regression report
+description: Report a regression where previously passing behavior now fails
+title: "regression: "
+labels: ["regression", "bug", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A regression is a previously working behavior that now fails.
+        Include the commit or version where it last worked.
+
+  - type: input
+    id: last-good
+    attributes:
+      label: Last known good version / commit
+      placeholder: "e.g. v2.0.0-layer2 or abc1234"
+    validations:
+      required: true
+
+  - type: input
+    id: first-bad
+    attributes:
+      label: First bad version / commit
+      placeholder: "e.g. v2.0.0-layer3 or def5678"
+    validations:
+      required: true
+
+  - type: input
+    id: capability
+    attributes:
+      label: Affected capability
+      placeholder: "e.g. L2-MAC, EOS-HEALTH"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What broke? What previously worked?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Exact commands to reproduce the regression
+    validations:
+      required: true
+
+  - type: textarea
+    id: gate-output
+    attributes:
+      label: Quality gate output
+      description: Paste the failing gate output (ruff/mypy/pytest/afrp)
+      render: text
+
+  - type: checkboxes
+    id: bisect
+    attributes:
+      label: Investigation done
+      options:
+        - label: "Ran git bisect to narrow the introducing commit"
+        - label: "Checked if the regression appears in CI logs"
+        - label: "Verified the regression is not environment-specific"

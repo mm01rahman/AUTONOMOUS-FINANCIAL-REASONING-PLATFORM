@@ -405,6 +405,42 @@ requirements:
       - "tests/integration/test_system_replay.py"
       - "05-work-packages/WP-IMP-0033/evidence/EXEC-031.yaml"
 
+  # ── Engineering automation requirements ─────────────────────────────
+  - id: "NFR-013"
+    title: "Automated CI/CD quality gates on every pull request"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+    capability: "ENG-AUTOMATION"
+    status: "implemented"
+    artifacts:
+      - ".github/workflows/quality.yml"
+      - ".github/workflows/security.yml"
+      - ".github/workflows/proto.yml"
+    verified_by:
+      - "05-work-packages/WP-IMP-0034/evidence/EXEC-034.yaml"
+  - id: "NFR-014"
+    title: "Automated security scanning and dependency auditing"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+    capability: "ENG-AUTOMATION"
+    status: "implemented"
+    artifacts:
+      - ".github/workflows/security.yml"
+      - ".github/dependabot.yml"
+      - ".github/codeql/codeql-config.yml"
+    verified_by:
+      - "05-work-packages/WP-IMP-0034/evidence/EXEC-034.yaml"
+  - id: "NFR-015"
+    title: "Automated release artifacts and evidence archival on version tags"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+    capability: "ENG-AUTOMATION"
+    status: "implemented"
+    artifacts:
+      - ".github/workflows/release.yml"
+      - "tools/evidence_archive.py"
+      - "tools/metrics.py"
+      - "tools/traceability_gate.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0034/evidence/EXEC-034.yaml"
+
   # ── Engineering decision rules (ARCH-001 §4) ────────────────────────
   - id: "EDR-001"
     title: "Business logic depends on abstract interfaces"
