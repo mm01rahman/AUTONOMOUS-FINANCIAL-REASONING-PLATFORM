@@ -4,6 +4,16 @@ All notable AFRP changes are recorded here. The project follows semantic version
 
 ## [1.3.0] — 2026-08-01
 
+### Added
+
+- Phase E alpha research and strategy-evolution toolkit (`tools/alpha_research/`):
+  deterministic local dataset ingestion, feature engineering, governed strategy
+  research, anti-overfitting parameter search, walk-forward validation,
+  Monte Carlo robustness, regime adaptation, and promotion assessment outputs.
+- Phase E artifacts under `11-research/phase-e/`, documentation
+  `docs/research/PHASE_E_ALPHA_RESEARCH.md`, and governance package
+  `WP-IMP-0039` / evidence `EXEC-041`.
+
 ### Fixed
 
 - Phase D.5 risk monitoring now suppresses false-positive concentration alerts for

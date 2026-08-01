@@ -1,0 +1,38 @@
+{
+  "baseline_phase_c": {
+    "expectancy": -47.2393,
+    "max_drawdown": 0.900253,
+    "sharpe": -0.4611,
+    "sortino": -0.5561,
+    "total_return": -0.837081,
+    "total_trades": 1772
+  },
+  "phase_e_best_candidate": {
+    "avg_trade": -13.298,
+    "cagr": 0.00626,
+    "calmar": 0.0579,
+    "expectancy": -13.298,
+    "max_drawdown": 0.10805,
+    "profit_factor": 0.797,
+    "recovery_factor": 1.5511,
+    "sharpe": -1.1615,
+    "sortino": -1.3074,
+    "total_return": 0.167597,
+    "trade_count": 3699.0,
+    "win_rate": 0.4726
+  },
+  "walk_forward_best_candidate": {
+    "avg_trade": 0.0,
+    "cagr": 0.019475,
+    "calmar": 0.1041,
+    "expectancy": 0.0,
+    "max_drawdown": 0.187083,
+    "profit_factor": 0.0,
+    "recovery_factor": 2.5161,
+    "sharpe": -0.4131,
+    "sortino": -0.427,
+    "total_return": 0.470713,
+    "trade_count": 0.0,
+    "win_rate": 0.0
+  }
+}

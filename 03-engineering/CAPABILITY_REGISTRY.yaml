@@ -433,3 +433,16 @@ capabilities:
       implements_req: ["NFR-025", "NFR-026", "NFR-027", "NFR-028"]
       trace_adr: ["ADR-0001"]
       trace_vvc: "TVM-001"
+
+  # ── Stage J — Alpha Research & Strategy Evolution ─────────────────────────
+  - id: "ALPHA-RESEARCH"
+    version: "1.0"
+    title: "Phase E Alpha Research & Strategy Evolution Framework"
+    owner: "RESEARCH"
+    status: "COMPLETE"
+    depends_on: ["PAPER-SHADOW-EXEC"]
+    work_package: "WP-IMP-0039"
+    traceability:
+      implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"

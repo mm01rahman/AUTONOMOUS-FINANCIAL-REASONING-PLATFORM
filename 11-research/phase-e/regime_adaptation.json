@@ -1,0 +1,62 @@
+{
+  "baseline_metrics": {
+    "avg_trade": -13.298,
+    "cagr": 0.00626,
+    "calmar": 0.0579,
+    "expectancy": -13.298,
+    "max_drawdown": 0.10805,
+    "profit_factor": 0.797,
+    "recovery_factor": 1.5511,
+    "sharpe": -1.1615,
+    "sortino": -1.3074,
+    "total_return": 0.167597,
+    "trade_count": 3699.0,
+    "win_rate": 0.4726
+  },
+  "regimes": {
+    "bear": {
+      "max_drawdown": 0.017074,
+      "parameter_delta_score": 0.6133746,
+      "sharpe": 0.0715,
+      "sortino": 0.0969,
+      "total_return": 0.164097
+    },
+    "bull": {
+      "max_drawdown": 0.030871,
+      "parameter_delta_score": 0.65873882,
+      "sharpe": 0.1551,
+      "sortino": 0.1829,
+      "total_return": 0.513019
+    },
+    "high_vol": {
+      "max_drawdown": 0.067768,
+      "parameter_delta_score": 0.8761357099999998,
+      "sharpe": -2.9333,
+      "sortino": -3.3451,
+      "total_return": -0.060921
+    },
+    "low_vol": {
+      "max_drawdown": 0.113706,
+      "parameter_delta_score": 0.17475157000000008,
+      "sharpe": -0.334,
+      "sortino": -0.343,
+      "total_return": 0.412378
+    },
+    "macro_event": {
+      "max_drawdown": 0.078513,
+      "parameter_delta_score": 0.08410949000000001,
+      "sharpe": -0.879,
+      "sortino": -0.9858,
+      "total_return": 0.107948
+    },
+    "sideways": {
+      "max_drawdown": 0.365238,
+      "parameter_delta_score": 0.09455863000000031,
+      "sharpe": -2.7116,
+      "sortino": -2.7744,
+      "total_return": -0.343799
+    }
+  },
+  "requires_regime_specific_parameterization": true,
+  "strategy_name": "technical_only"
+}

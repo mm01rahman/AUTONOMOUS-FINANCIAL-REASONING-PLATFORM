@@ -1,0 +1,292 @@
+[
+  {
+    "classification": "redundant",
+    "correlation_mean": -0.03678144389474664,
+    "correlation_stability": 0.1161344540751886,
+    "drift_score": 0.028074450206057814,
+    "feature": "macro_pressure",
+    "mutual_information": 0.0009339130923007592,
+    "permutation_importance": 0.4390118700000003,
+    "redundancy_score": 0.9899017267882578
+  },
+  {
+    "classification": "useful",
+    "correlation_mean": -0.04073713570875076,
+    "correlation_stability": 0.105190824447033,
+    "drift_score": 0.4186483937313256,
+    "feature": "regime_vol_20",
+    "mutual_information": 0.0012918800072169011,
+    "permutation_importance": 0.4300128499999998,
+    "redundancy_score": 0.442182848210541
+  },
+  {
+    "classification": "redundant",
+    "correlation_mean": -0.011157062002922697,
+    "correlation_stability": 0.058394164190304146,
+    "drift_score": 0.021311642560382694,
+    "feature": "micro_momentum",
+    "mutual_information": 0.0006399310099301312,
+    "permutation_importance": 0.12626557000000016,
+    "redundancy_score": 0.920958634570642
+  },
+  {
+    "classification": "redundant",
+    "correlation_mean": -0.04612443691927304,
+    "correlation_stability": 0.11183457107469223,
+    "drift_score": 0.16951917236545969,
+    "feature": "forward_expectation",
+    "mutual_information": 0.0004989859362527732,
+    "permutation_importance": 0.05155599000000022,
+    "redundancy_score": 1.0
+  },
+  {
+    "classification": "redundant",
+    "correlation_mean": -0.015696037589160616,
+    "correlation_stability": 0.06255475022964134,
+    "drift_score": 0.013007708267711958,
+    "feature": "xau_return_1",
+    "mutual_information": 0.00023129008674971984,
+    "permutation_importance": 0.021866249999999976,
+    "redundancy_score": 0.9209586345706421
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.15370762323594944,
+    "correlation_stability": 0.10185057390825357,
+    "drift_score": 0.07473184534636085,
+    "feature": "regime_return_60",
+    "mutual_information": 0.0009410362174382021,
+    "permutation_importance": 0.007642619999999933,
+    "redundancy_score": 0.8537845585202206
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.04935561047524939,
+    "correlation_stability": 0.11347059180694967,
+    "drift_score": 0.02854952024827843,
+    "feature": "xau_return_5",
+    "mutual_information": 0.0005385022632128063,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.7332819144813301
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.1059606399443933,
+    "correlation_stability": 0.09526083531386721,
+    "drift_score": 0.05870785418537851,
+    "feature": "xau_return_20",
+    "mutual_information": 0.0019166286482633433,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.7929971582469999
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.16691982108096404,
+    "correlation_stability": 0.10443972013594016,
+    "drift_score": 0.12829057464624136,
+    "feature": "trend_gap_20_120",
+    "mutual_information": 0.0006739944196060281,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.9617095585118345
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.027349670143844946,
+    "correlation_stability": 0.09484870721080327,
+    "drift_score": 0.0032806176098928498,
+    "feature": "range_pct",
+    "mutual_information": 0.000865890134799261,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.7087432976199153
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.013261477261963616,
+    "correlation_stability": 0.08558116698370928,
+    "drift_score": 0.01722145497430564,
+    "feature": "range_zscore_20",
+    "mutual_information": 0.0008931558371995689,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.7087432976199152
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.08389773077832663,
+    "correlation_stability": 0.08330380954591621,
+    "drift_score": 0.12114428473355641,
+    "feature": "zscore_60",
+    "mutual_information": 0.0013860539217997632,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.813026542843376
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.09932314933840436,
+    "correlation_stability": 0.10908084309879143,
+    "drift_score": 0.15591602591803383,
+    "feature": "breakout_60",
+    "mutual_information": 0.001351628687455293,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.8130265428433759
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.07534049059958693,
+    "correlation_stability": 0.09342132009903036,
+    "drift_score": 0.24551796228163383,
+    "feature": "breakdown_20",
+    "mutual_information": 0.0003438355045882902,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.792997158247
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.005148107466195707,
+    "correlation_stability": 0.06563167087385789,
+    "drift_score": 0.037540474777445355,
+    "feature": "dxy_return_1",
+    "mutual_information": 0.0005310575565311494,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.4480166657522076
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": 0.03695913249136015,
+    "correlation_stability": 0.11599657648778254,
+    "drift_score": 0.0845627783804675,
+    "feature": "dxy_return_5",
+    "mutual_information": 0.001016676285227146,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.9899017267882578
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": 0.04612443691927307,
+    "correlation_stability": 0.11183457107469223,
+    "drift_score": 0.16951917236545966,
+    "feature": "dxy_return_20",
+    "mutual_information": 0.0004989859362527734,
+    "permutation_importance": 0.0,
+    "redundancy_score": 1.0
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": 0.0,
+    "correlation_stability": 0.0,
+    "drift_score": 0.0,
+    "feature": "yield_curve_10y_3m",
+    "mutual_information": 0.0,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.0
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": 0.0,
+    "correlation_stability": 0.0,
+    "drift_score": 0.0,
+    "feature": "yield_10y_change_5",
+    "mutual_information": 0.0,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.0
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": 0.0,
+    "correlation_stability": 0.0,
+    "drift_score": 0.0,
+    "feature": "yield_30y_change_20",
+    "mutual_information": 0.0,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.0
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": 0.0,
+    "correlation_stability": 0.0,
+    "drift_score": 0.0,
+    "feature": "fed_surprise",
+    "mutual_information": 0.0,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.0
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": 0.0,
+    "correlation_stability": 0.0,
+    "drift_score": 0.0,
+    "feature": "fed_change_5",
+    "mutual_information": 0.0,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.0
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": 0.003743606041712687,
+    "correlation_stability": 0.08333724068993016,
+    "drift_score": 0.03008807543519189,
+    "feature": "behavioral_stretch",
+    "mutual_information": 0.0004608805769289715,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.1632434011600571
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": 0.008118351204469264,
+    "correlation_stability": 0.10692088445736776,
+    "drift_score": 0.3958882119273996,
+    "feature": "geo_severity",
+    "mutual_information": 1.0153077073702668e-05,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.9597983685101051
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.025635753995853747,
+    "correlation_stability": 0.09039544266926533,
+    "drift_score": 0.43013369212553487,
+    "feature": "geo_active",
+    "mutual_information": 0.0,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.959798368510105
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.05645168411512173,
+    "correlation_stability": 0.07028886121187457,
+    "drift_score": 0.5025713286031163,
+    "feature": "geo_event_count",
+    "mutual_information": 0.0011130136651331369,
+    "permutation_importance": 0.0,
+    "redundancy_score": 0.9221555349292788
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.05243503721588521,
+    "correlation_stability": 0.08571992801667112,
+    "drift_score": 0.07325598334746836,
+    "feature": "zscore_20",
+    "mutual_information": 0.0006822142345689828,
+    "permutation_importance": -0.05857639999999975,
+    "redundancy_score": 0.7833509780228025
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.17107680307771553,
+    "correlation_stability": 0.10820234220402879,
+    "drift_score": 0.19297455038972242,
+    "feature": "trend_gap_30_180",
+    "mutual_information": 0.0008306389801387027,
+    "permutation_importance": -0.16700508999999975,
+    "redundancy_score": 0.9617095585118345
+  },
+  {
+    "classification": "useless",
+    "correlation_mean": -0.07335900231718792,
+    "correlation_stability": 0.10812870684440667,
+    "drift_score": 0.13569881255404745,
+    "feature": "breakout_20",
+    "mutual_information": 0.0017565052224590085,
+    "permutation_importance": -0.18003447999999977,
+    "redundancy_score": 0.7871008739857177
+  }
+]

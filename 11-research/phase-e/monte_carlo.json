@@ -1,0 +1,58 @@
+{
+  "baseline_afrp": {
+    "median_max_drawdown": 0.09159665497214102,
+    "median_total_return": 0.25584828682074345,
+    "p05_total_return": -0.006271384864209108,
+    "p95_total_return": 0.5563823755894066,
+    "paths": 400.0,
+    "ruin_probability": 0.005
+  },
+  "hybrid": {
+    "median_max_drawdown": 0.08643212807481918,
+    "median_total_return": 0.09236948363537034,
+    "p05_total_return": -0.07170767826998936,
+    "p95_total_return": 0.2939794068631398,
+    "paths": 400.0,
+    "ruin_probability": 0.0075
+  },
+  "liquidity_sweep": {
+    "median_max_drawdown": 0.02513404516568058,
+    "median_total_return": -0.016426286248671984,
+    "p05_total_return": -0.03857077309777838,
+    "p95_total_return": 0.008176307265354447,
+    "paths": 400.0,
+    "ruin_probability": 0.0
+  },
+  "macro_only": {
+    "median_max_drawdown": 0.08536633123416873,
+    "median_total_return": 0.019529489622909124,
+    "p05_total_return": -0.11229504869178239,
+    "p95_total_return": 0.1691277170989908,
+    "paths": 400.0,
+    "ruin_probability": 0.0125
+  },
+  "mean_reversion": {
+    "median_max_drawdown": 0.10383293722527652,
+    "median_total_return": -0.07227715915424254,
+    "p05_total_return": -0.1643885954450582,
+    "p95_total_return": 0.013606567742302664,
+    "paths": 400.0,
+    "ruin_probability": 0.08
+  },
+  "technical_only": {
+    "median_max_drawdown": 0.13915543159287194,
+    "median_total_return": 0.45418357045165847,
+    "p05_total_return": 0.014288931220922283,
+    "p95_total_return": 1.0318460034361536,
+    "paths": 400.0,
+    "ruin_probability": 0.0075
+  },
+  "trend_following": {
+    "median_max_drawdown": 0.08756079133435873,
+    "median_total_return": 0.3195886487882894,
+    "p05_total_return": 0.0605974953262763,
+    "p95_total_return": 0.6421847477077669,
+    "paths": 400.0,
+    "ruin_probability": 0.0
+  }
+}

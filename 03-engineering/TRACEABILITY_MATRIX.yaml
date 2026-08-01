@@ -605,6 +605,61 @@ requirements:
       - "tests/integration/test_paper_trading_orchestrator.py"
       - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
 
+  # ── Phase E — Alpha Research & Strategy Evolution ────────────────────────
+  - id: "NFR-029"
+    title: "Deterministic alpha attribution and feature-importance analytics emitted with drift and redundancy diagnostics"
+    source: "AFRP-PHASE-E-1.0.0"
+    capability: "ALPHA-RESEARCH"
+    status: "implemented"
+    artifacts:
+      - "tools/alpha_research/analysis.py"
+      - "tools/alpha_research/features.py"
+      - "11-research/phase-e/alpha_attribution_report.md"
+      - "11-research/phase-e/feature_importance_report.md"
+    verified_by:
+      - "tests/unit/test_alpha_research.py"
+      - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+  - id: "NFR-030"
+    title: "Phase E evaluates baseline plus six governed strategy hypotheses with anti-overfitting parameter search"
+    source: "AFRP-PHASE-E-1.0.0"
+    capability: "ALPHA-RESEARCH"
+    status: "implemented"
+    artifacts:
+      - "tools/alpha_research/strategies.py"
+      - "tools/alpha_research/optimization.py"
+      - "11-research/phase-e/strategy_research_report.md"
+      - "11-research/phase-e/parameter_optimization_report.md"
+    verified_by:
+      - "tests/unit/test_alpha_research.py"
+      - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+  - id: "NFR-031"
+    title: "Walk-forward validation, Monte Carlo robustness, and regime-adaptation assessment govern promotion decisions"
+    source: "AFRP-PHASE-E-1.0.0"
+    capability: "ALPHA-RESEARCH"
+    status: "implemented"
+    artifacts:
+      - "tools/alpha_research/optimization.py"
+      - "tools/alpha_research/analysis.py"
+      - "11-research/phase-e/walk_forward_validation_report.md"
+      - "11-research/phase-e/monte_carlo_report.md"
+      - "11-research/phase-e/regime_adaptation_report.md"
+    verified_by:
+      - "tests/unit/test_alpha_research.py"
+      - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+  - id: "NFR-032"
+    title: "Promotion assessments remain research-only and reproducibly linked to governed evidence"
+    source: "AFRP-PHASE-E-1.0.0"
+    capability: "ALPHA-RESEARCH"
+    status: "implemented"
+    artifacts:
+      - "tools/alpha_research/cli.py"
+      - "docs/research/PHASE_E_ALPHA_RESEARCH.md"
+      - "11-research/phase-e/promotion_assessment.md"
+      - "11-research/phase-e/phase_e_final_report.md"
+    verified_by:
+      - "tests/unit/test_alpha_research.py"
+      - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+
   # ── Engineering decision rules (ARCH-001 §4) ────────────────────────
   - id: "EDR-001"
     title: "Business logic depends on abstract interfaces"
