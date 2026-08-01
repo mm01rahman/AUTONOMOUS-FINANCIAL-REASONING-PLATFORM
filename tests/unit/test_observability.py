@@ -6,6 +6,7 @@ without running slow subprocess-based checks.
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from unittest.mock import patch
 
@@ -435,3 +436,553 @@ class TestDashboardRenderers:
         with patch.dict("os.environ", {"GITHUB_STEP_SUMMARY": str(summary_file)}):
             publish_to_github_summary("## Test")
         assert summary_file.read_text() == "## Test\n"
+
+
+# ── Quality collector (subprocess paths) ──────────────────────────────────
+
+
+class TestQualityCollectorSubprocess:
+    def test_collect_ruff_pass(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.quality import collect_ruff
+
+        with patch(
+            "tools.observability.collectors.quality._run", return_value=(0, "")
+        ):
+            m = collect_ruff(tmp_path)
+        assert m.status == "PASS"
+        assert m.violations == 0
+
+    def test_collect_ruff_fail_with_json(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.quality import collect_ruff
+
+        findings = [
+            {"code": "E501", "fix": None},
+            {"code": "F401", "fix": {"message": "Remove import"}},
+        ]
+        with patch(
+            "tools.observability.collectors.quality._run",
+            return_value=(1, json.dumps(findings)),
+        ):
+            m = collect_ruff(tmp_path)
+        assert m.status == "FAIL"
+        assert m.violations == 2
+        assert m.fixable == 1
+        assert len(m.error_types) > 0
+
+    def test_collect_ruff_fail_non_json(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.quality import collect_ruff
+
+        # Output starts with "[" so JSON parse is attempted, but is malformed
+        # → triggers the regex fallback line-counter
+        out = (
+            "[\nnot valid json\n"
+            "tools/foo.py:10:1: E501 line too long\n"
+            "tools/bar.py:5:1: F401 unused"
+        )
+        with patch(
+            "tools.observability.collectors.quality._run", return_value=(1, out)
+        ):
+            m = collect_ruff(tmp_path)
+        assert m.status == "FAIL"
+        assert m.violations == 2
+
+    def test_collect_mypy_pass(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.quality import collect_mypy
+
+        out = "Success: no issues found in 42 source files"
+        with patch(
+            "tools.observability.collectors.quality._run", return_value=(0, out)
+        ):
+            m = collect_mypy(tmp_path)
+        assert m.status == "PASS"
+        assert m.files_checked == 42
+
+    def test_collect_mypy_fail(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.quality import collect_mypy
+
+        out = (
+            "tools/foo.py:1: error: oops\n"
+            "tools/foo.py:2: warning: note\n"
+            "tools/foo.py:3: note: suggestion\n"
+            "Found 1 error in 1 file (checked 10 source files)\n"
+        )
+        with patch(
+            "tools.observability.collectors.quality._run", return_value=(1, out)
+        ):
+            m = collect_mypy(tmp_path)
+        assert m.status == "FAIL"
+        assert m.errors == 1
+        assert m.warnings == 1
+        assert m.notes == 1
+        assert m.files_checked == 1  # regex captures file count from "in 1 file"
+
+    def test_collect_coverage_invalid_json(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.quality import collect_coverage
+
+        (tmp_path / "coverage.json").write_text("{invalid}")
+        m = collect_coverage(tmp_path)
+        assert not m.available
+
+    def test_collect_coverage_branch_pct(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.quality import collect_coverage
+
+        data = {
+            "totals": {
+                "percent_covered": 82.0,
+                "covered_lines": 820,
+                "num_statements": 1000,
+                "covered_branches": 200,
+                "num_branches": 250,
+            },
+            "files": {"a.py": {}, "b.py": {}},
+        }
+        (tmp_path / "coverage.json").write_text(json.dumps(data))
+        m = collect_coverage(tmp_path)
+        assert m.available
+        assert m.branch_pct == 80.0
+
+    def test_collect_tests_pass(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.quality import collect_tests
+
+        out = "462 passed, 1 failed, 3 skipped in 8.21s"
+        with patch(
+            "tools.observability.collectors.quality._run", return_value=(0, out)
+        ):
+            m = collect_tests(tmp_path)
+        assert m.status == "PASS"
+        assert m.passed == 462
+        assert m.failed == 1
+        assert m.skipped == 3
+        assert m.collected == 466
+
+    def test_collect_tests_with_errors(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.quality import collect_tests
+
+        out = "10 passed, 2 errors in 1.23s"
+        with patch(
+            "tools.observability.collectors.quality._run", return_value=(1, out)
+        ):
+            m = collect_tests(tmp_path)
+        assert m.status == "FAIL"
+        assert m.errors == 2
+
+    def test_run_oserror(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.quality import _run
+
+        with patch("subprocess.run", side_effect=OSError("no such file")):
+            rc, out = _run(["nonexistent-command"], tmp_path)
+        assert rc == 1
+        assert "no such file" in out
+
+
+# ── Security collector (extended paths) ──────────────────────────────────
+
+
+class TestSecurityCollectorExtended:
+    def test_load_pip_audit_no_vulns(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import _load_pip_audit_report
+
+        data = [{"name": "requests", "version": "2.28.0", "vulns": []}]
+        p = tmp_path / "pip-audit.json"
+        p.write_text(json.dumps(data))
+        m = _load_pip_audit_report(p)
+        assert m.available
+        assert m.status == "PASS"
+        assert m.total_vulnerabilities == 0
+
+    def test_load_pip_audit_with_vulns(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import _load_pip_audit_report
+
+        data = [
+            {
+                "name": "vulnerable-pkg",
+                "version": "1.0.0",
+                "vulns": [{"id": "CVE-2024-0001"}, {"id": "CVE-2024-0002"}],
+            }
+        ]
+        p = tmp_path / "pip-audit.json"
+        p.write_text(json.dumps(data))
+        m = _load_pip_audit_report(p)
+        assert m.status == "FAIL"
+        assert m.total_vulnerabilities == 2
+        assert "vulnerable-pkg" in m.affected_packages
+
+    def test_load_pip_audit_dict_format(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import _load_pip_audit_report
+
+        data = {
+            "dependencies": [
+                {"name": "pkg-a", "version": "0.1", "vulns": []},
+            ]
+        }
+        p = tmp_path / "pip-audit.json"
+        p.write_text(json.dumps(data))
+        m = _load_pip_audit_report(p)
+        assert m.status == "PASS"
+
+    def test_load_pip_audit_invalid(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import _load_pip_audit_report
+
+        p = tmp_path / "pip-audit.json"
+        p.write_text("{invalid json}")
+        m = _load_pip_audit_report(p)
+        assert not m.available
+        assert m.status == "UNAVAILABLE"
+
+    def test_collect_security_with_bandit_file(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import collect_security
+
+        (tmp_path / "bandit-report.json").write_text(json.dumps({"results": []}))
+        m = collect_security(tmp_path)
+        assert m.bandit.status == "PASS"
+
+    def test_collect_security_with_audit_file(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import collect_security
+
+        (tmp_path / "pip-audit-report.json").write_text(json.dumps([]))
+        m = collect_security(tmp_path)
+        assert m.dependencies.status == "PASS"
+
+    def test_collect_security_partial_precommit(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import collect_security
+
+        (tmp_path / ".pre-commit-config.yaml").write_text("repos: []")
+        m = collect_security(tmp_path)
+        assert m.secret_scan_status == "PARTIAL"
+
+    def test_collect_security_configured_codeql(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import collect_security
+
+        wf_dir = tmp_path / ".github" / "workflows"
+        wf_dir.mkdir(parents=True)
+        (wf_dir / "security.yml").write_text("name: security")
+        codeql_dir = tmp_path / ".github" / "codeql"
+        codeql_dir.mkdir()
+        (codeql_dir / "codeql-config.yml").write_text("name: codeql")
+        m = collect_security(tmp_path)
+        assert m.codeql_status == "CONFIGURED"
+
+    def test_collect_security_overall_fail(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import collect_security
+
+        report = {
+            "results": [{"issue_severity": "HIGH", "issue_text": "bad"}]
+        }
+        (tmp_path / "bandit-report.json").write_text(json.dumps(report))
+        m = collect_security(tmp_path)
+        assert m.overall_status == "FAIL"
+
+    def test_collect_security_overall_pass(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import collect_security
+
+        (tmp_path / "bandit-report.json").write_text(json.dumps({"results": []}))
+        m = collect_security(tmp_path)
+        assert m.overall_status == "PASS"
+
+    def test_load_bandit_error_handling(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.security import _load_bandit_report
+
+        p = tmp_path / "bandit.json"
+        p.write_text("{not valid}")
+        m = _load_bandit_report(p)
+        assert not m.available
+        assert m.status == "UNAVAILABLE"
+
+
+# ── Architecture collector ─────────────────────────────────────────────────
+
+
+class TestArchitectureCollector:
+    def test_parse_fit_result_pass(self) -> None:
+        from tools.observability.collectors.architecture import _parse_fit_result
+
+        result = _parse_fit_result("FIT-002 PASS: no violations found", "FIT-002")
+        assert result.status == "PASS"
+
+    def test_parse_fit_result_fail(self) -> None:
+        from tools.observability.collectors.architecture import _parse_fit_result
+
+        result = _parse_fit_result("FIT-002 FAIL: 3 violations", "FIT-002")
+        assert result.status == "FAIL"
+
+    def test_parse_fit_result_unknown(self) -> None:
+        from tools.observability.collectors.architecture import _parse_fit_result
+
+        result = _parse_fit_result("no relevant output", "FIT-002")
+        assert result.status == "UNKNOWN"
+
+    def test_collect_architecture_all_pass(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.architecture import collect_architecture
+
+        outputs = [
+            (0, "FIT-002 PASS\nFIT-004 PASS\nFIT-006 PASS"),
+            (0, ""),
+            (0, "FIT-003 PASS"),
+            (0, "violations: 0"),
+            (0, "FIT-001 PASS dag ok"),
+        ]
+        with patch(
+            "tools.observability.collectors.architecture._run", side_effect=outputs
+        ):
+            m = collect_architecture(tmp_path)
+        assert m.baseline_gate_status == "PASS"
+        assert m.ops_gate_status == "PASS"
+        assert m.proto_gate_status == "PASS"
+        assert m.validate_status == "PASS"
+        assert m.plan_status == "PASS"
+        assert m.dag_acyclic is True
+        assert m.violations == 0
+        assert m.fit_pass >= 4
+
+    def test_collect_architecture_failures(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.architecture import collect_architecture
+
+        outputs = [
+            (1, "FIT-002 FAIL: import cycle\nFIT-004 PASS\nFIT-006 FAIL"),
+            (1, "ops gate failed"),
+            (1, "FIT-003 FAIL"),
+            (1, "found 2 violations in layer boundary"),
+            (1, "FIT-001 FAIL: cycle detected"),
+        ]
+        with patch(
+            "tools.observability.collectors.architecture._run", side_effect=outputs
+        ):
+            m = collect_architecture(tmp_path)
+        assert m.baseline_gate_status == "FAIL"
+        assert m.plan_status == "FAIL"
+        assert m.dag_acyclic is False
+        assert m.fit_fail >= 3
+        assert m.violations >= 1
+
+    def test_collect_architecture_violation_count(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.architecture import collect_architecture
+
+        outputs = [
+            (0, "FIT-002 PASS\nFIT-004 PASS\nFIT-006 PASS"),
+            (0, ""),
+            (0, "FIT-003 PASS"),
+            (0, "found 5 violations in boundary check"),
+            (0, "FIT-001 PASS"),
+        ]
+        with patch(
+            "tools.observability.collectors.architecture._run", side_effect=outputs
+        ):
+            m = collect_architecture(tmp_path)
+        assert m.layer_violations == 5
+
+    def test_architecture_run_oserror(self, tmp_path: Path) -> None:
+        from tools.observability.collectors.architecture import _run
+
+        with patch("subprocess.run", side_effect=OSError("not found")):
+            rc, out = _run(["bad-cmd"], tmp_path)
+        assert rc == 1
+        assert "not found" in out
+
+    def test_architecture_metrics_overall_status(self) -> None:
+        from tools.observability.collectors.architecture import ArchitectureMetrics
+
+        m = ArchitectureMetrics(fit_pass=3, fit_fail=0, violations=0)
+        assert m.overall_status == "PASS"
+        m2 = ArchitectureMetrics(fit_pass=0, fit_fail=1, violations=1)
+        assert m2.overall_status == "FAIL"
+        m3 = ArchitectureMetrics()
+        assert m3.overall_status == "UNKNOWN"
+
+
+# ── Dashboard CLI ──────────────────────────────────────────────────────────
+
+
+class TestDashboardCLI:
+    def test_cli_help(self) -> None:
+        from click.testing import CliRunner
+
+        from tools.dashboard import main
+
+        runner = CliRunner()
+        result = runner.invoke(main, ["--help"])
+        assert result.exit_code == 0
+        assert "dashboard" in result.output.lower() or "format" in result.output.lower()
+
+    def test_cli_fast_markdown_stdout(self) -> None:
+        from click.testing import CliRunner
+
+        from tools.dashboard import main
+
+        runner = CliRunner()
+        result = runner.invoke(
+            main,
+            [
+                "--format",
+                "markdown",
+                "--fast",
+                "--repo-root",
+                str(_REPO_ROOT),
+            ],
+        )
+        assert result.exit_code == 0
+        assert "Repository" in result.output or "Health" in result.output
+
+    def test_cli_fast_json_stdout(self) -> None:
+        from click.testing import CliRunner
+
+        from tools.dashboard import main
+
+        runner = CliRunner()
+        result = runner.invoke(
+            main,
+            [
+                "--format",
+                "json",
+                "--fast",
+                "--repo-root",
+                str(_REPO_ROOT),
+            ],
+        )
+        assert result.exit_code == 0
+        # Verify JSON content is present in output
+        assert '"metrics"' in result.output
+        assert '"health"' in result.output
+
+    def test_cli_fast_summary_stdout(self) -> None:
+        from click.testing import CliRunner
+
+        from tools.dashboard import main
+
+        runner = CliRunner()
+        result = runner.invoke(
+            main,
+            [
+                "--format",
+                "summary",
+                "--fast",
+                "--repo-root",
+                str(_REPO_ROOT),
+            ],
+        )
+        assert result.exit_code == 0
+
+    def test_cli_fast_html_stdout(self) -> None:
+        from click.testing import CliRunner
+
+        from tools.dashboard import main
+
+        runner = CliRunner()
+        result = runner.invoke(
+            main,
+            [
+                "--format",
+                "html",
+                "--fast",
+                "--repo-root",
+                str(_REPO_ROOT),
+            ],
+        )
+        assert result.exit_code == 0
+        assert "<!DOCTYPE html>" in result.output
+
+    def test_cli_fast_all_output_dir(self, tmp_path: Path) -> None:
+        from click.testing import CliRunner
+
+        from tools.dashboard import main
+
+        runner = CliRunner()
+        result = runner.invoke(
+            main,
+            [
+                "--format",
+                "all",
+                "--fast",
+                "--repo-root",
+                str(_REPO_ROOT),
+                "--output-dir",
+                str(tmp_path / "reports"),
+            ],
+        )
+        assert result.exit_code == 0
+        assert (tmp_path / "reports" / "dashboard.md").exists()
+        assert (tmp_path / "reports" / "metrics.json").exists()
+
+    def test_cli_threshold_pass(self) -> None:
+        from click.testing import CliRunner
+
+        from tools.dashboard import main
+
+        runner = CliRunner()
+        result = runner.invoke(
+            main,
+            [
+                "--format",
+                "json",
+                "--fast",
+                "--repo-root",
+                str(_REPO_ROOT),
+                "--threshold",
+                "0.0",
+            ],
+        )
+        assert result.exit_code == 0
+
+    def test_cli_github_summary_flag(self, tmp_path: Path) -> None:
+        from click.testing import CliRunner
+
+        from tools.dashboard import main
+
+        summary_file = tmp_path / "summary.md"
+        runner = CliRunner(env={"GITHUB_STEP_SUMMARY": str(summary_file)})
+        result = runner.invoke(
+            main,
+            [
+                "--format",
+                "json",
+                "--fast",
+                "--repo-root",
+                str(_REPO_ROOT),
+                "--github-summary",
+            ],
+        )
+        assert result.exit_code == 0
+        assert summary_file.exists()
+
+    def test_cli_markdown_to_file(self, tmp_path: Path) -> None:
+        from click.testing import CliRunner
+
+        from tools.dashboard import main
+
+        out_file = tmp_path / "dashboard.md"
+        runner = CliRunner()
+        result = runner.invoke(
+            main,
+            [
+                "--format",
+                "markdown",
+                "--fast",
+                "--repo-root",
+                str(_REPO_ROOT),
+                "--output",
+                str(out_file),
+            ],
+        )
+        assert result.exit_code == 0
+        assert out_file.exists()
+
+    def test_cli_html_to_file(self, tmp_path: Path) -> None:
+        from click.testing import CliRunner
+
+        from tools.dashboard import main
+
+        out_file = tmp_path / "dashboard.html"
+        runner = CliRunner()
+        result = runner.invoke(
+            main,
+            [
+                "--format",
+                "html",
+                "--fast",
+                "--repo-root",
+                str(_REPO_ROOT),
+                "--output",
+                str(out_file),
+            ],
+        )
+        assert result.exit_code == 0
+        assert out_file.exists()
