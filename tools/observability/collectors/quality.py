@@ -1,0 +1,223 @@
+"""Code quality metric collector.
+
+Runs ruff, mypy, and reads coverage.json. Optionally runs pytest
+to collect test results. All subprocess calls time out after 120s.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import subprocess
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any
+
+
+def _run(cmd: list[str], cwd: Path, timeout: int = 120) -> tuple[int, str]:
+    try:
+        r = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            cwd=cwd,
+            check=False,
+            timeout=timeout,
+        )
+        return r.returncode, (r.stdout + r.stderr).strip()
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        return 1, str(exc)
+
+
+@dataclass
+class RuffMetrics:
+    status: str = "UNKNOWN"  # PASS | FAIL | SKIPPED
+    violations: int = 0
+    fixable: int = 0
+    error_types: list[str] = field(default_factory=list)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "status": self.status,
+            "violations": self.violations,
+            "fixable": self.fixable,
+            "top_error_types": self.error_types[:10],
+        }
+
+
+@dataclass
+class MypyMetrics:
+    status: str = "UNKNOWN"
+    errors: int = 0
+    warnings: int = 0
+    notes: int = 0
+    files_checked: int = 0
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "status": self.status,
+            "errors": self.errors,
+            "warnings": self.warnings,
+            "notes": self.notes,
+            "files_checked": self.files_checked,
+        }
+
+
+@dataclass
+class CoverageMetrics:
+    available: bool = False
+    line_pct: float = 0.0
+    branch_pct: float = 0.0
+    lines_covered: int = 0
+    lines_total: int = 0
+    branches_covered: int = 0
+    branches_total: int = 0
+    files_measured: int = 0
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "available": self.available,
+            "line_pct": self.line_pct,
+            "branch_pct": self.branch_pct,
+            "lines_covered": self.lines_covered,
+            "lines_total": self.lines_total,
+            "branches_covered": self.branches_covered,
+            "branches_total": self.branches_total,
+            "files_measured": self.files_measured,
+        }
+
+
+@dataclass
+class TestMetrics:
+    status: str = "UNKNOWN"
+    collected: int = 0
+    passed: int = 0
+    failed: int = 0
+    errors: int = 0
+    skipped: int = 0
+    duration_s: float = 0.0
+
+    @property
+    def pass_rate(self) -> float:
+        if self.collected == 0:
+            return 0.0
+        return round(self.passed / self.collected * 100, 2)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "status": self.status,
+            "collected": self.collected,
+            "passed": self.passed,
+            "failed": self.failed,
+            "errors": self.errors,
+            "skipped": self.skipped,
+            "pass_rate_pct": self.pass_rate,
+            "duration_s": self.duration_s,
+        }
+
+
+def collect_ruff(root: Path) -> RuffMetrics:
+    """Run ruff check and parse violation counts."""
+    rc, out = _run(["uv", "run", "ruff", "check", ".", "--output-format=json"], root)
+    m = RuffMetrics()
+    if rc == 0:
+        m.status = "PASS"
+        return m
+    m.status = "FAIL"
+    try:
+        findings: list[dict[str, Any]] = json.loads(out) if out.startswith("[") else []
+        m.violations = len(findings)
+        m.fixable = sum(1 for f in findings if f.get("fix"))
+        # Count by rule code prefix
+        from collections import Counter
+
+        code_counts: Counter[str] = Counter(
+            f.get("code", "?")[:1] for f in findings
+        )
+        m.error_types = [f"{k}xx ({v})" for k, v in code_counts.most_common(5)]
+    except (json.JSONDecodeError, TypeError):
+        # Fall back to line-counting
+        m.violations = sum(1 for line in out.splitlines() if re.match(r"^\S+\.py:\d+", line))
+    return m
+
+
+def collect_mypy(root: Path) -> MypyMetrics:
+    """Run mypy --strict and parse error counts."""
+    rc, out = _run(
+        ["uv", "run", "mypy", "--strict", "tools", "06-runtime", "07-research", "tests"],
+        root,
+    )
+    m = MypyMetrics()
+    m.status = "PASS" if rc == 0 else "FAIL"
+    for line in out.splitlines():
+        if ": error:" in line:
+            m.errors += 1
+        elif ": warning:" in line:
+            m.warnings += 1
+        elif ": note:" in line:
+            m.notes += 1
+    # Parse "Found N errors in M files" or "Success: no issues found in N source files"
+    found = re.search(r"no issues found in (\d+) source files", out)
+    if found:
+        m.files_checked = int(found.group(1))
+    else:
+        found2 = re.search(r"Found \d+ errors? in (\d+) files?", out)
+        if found2:
+            m.files_checked = int(found2.group(1))
+    return m
+
+
+def collect_coverage(root: Path) -> CoverageMetrics:
+    """Read coverage.json (generated by pytest-cov) if present."""
+    m = CoverageMetrics()
+    cov_file = root / "coverage.json"
+    if not cov_file.exists():
+        return m
+    try:
+        data: dict[str, Any] = json.loads(cov_file.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return m
+    totals = data.get("totals", {})
+    m.available = True
+    m.line_pct = round(float(totals.get("percent_covered", 0.0)), 2)
+    m.lines_covered = int(totals.get("covered_lines", 0))
+    m.lines_total = int(totals.get("num_statements", 0))
+    m.branches_covered = int(totals.get("covered_branches", 0))
+    m.branches_total = int(totals.get("num_branches", 0))
+    if m.branches_total:
+        m.branch_pct = round(m.branches_covered / m.branches_total * 100, 2)
+    m.files_measured = len(data.get("files", {}))
+    return m
+
+
+def collect_tests(root: Path) -> TestMetrics:
+    """Run pytest and collect pass/fail counts."""
+    import time
+
+    m = TestMetrics()
+    start = time.monotonic()
+    rc, out = _run(
+        ["uv", "run", "pytest", "tests", "-q", "--tb=no", "--no-header"],
+        root,
+    )
+    m.duration_s = round(time.monotonic() - start, 2)
+    m.status = "PASS" if rc == 0 else "FAIL"
+
+    # Parse "X passed, Y failed, Z error" summary line
+    for line in out.splitlines():
+        # e.g. "460 passed in 12.34s"
+        passed = re.search(r"(\d+) passed", line)
+        if passed:
+            m.passed = int(passed.group(1))
+        failed = re.search(r"(\d+) failed", line)
+        if failed:
+            m.failed = int(failed.group(1))
+        errors = re.search(r"(\d+) error", line)
+        if errors:
+            m.errors = int(errors.group(1))
+        skipped = re.search(r"(\d+) skipped", line)
+        if skipped:
+            m.skipped = int(skipped.group(1))
+
+    m.collected = m.passed + m.failed + m.errors + m.skipped
+    return m

@@ -383,3 +383,16 @@ capabilities:
       implements_req: ["NFR-013", "NFR-014", "NFR-015"]
       trace_adr: ["ADR-0001"]
       trace_vvc: "TVM-001"
+
+  # ── Stage G — Repository Observability ──────────────────────────────────
+  - id: "REPO-OBSERVABILITY"
+    version: "1.0"
+    title: "Repository Metrics and Engineering Observability Platform"
+    owner: "DEVSECOPS"
+    status: "COMPLETE"
+    depends_on: ["ENG-AUTOMATION"]
+    work_package: "WP-IMP-0035"
+    traceability:
+      implements_req: ["NFR-016", "NFR-017", "NFR-018"]
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"

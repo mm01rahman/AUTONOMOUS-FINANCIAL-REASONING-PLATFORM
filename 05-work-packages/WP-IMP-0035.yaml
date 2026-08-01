@@ -1,0 +1,53 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0035"
+capability_id: "REPO-OBSERVABILITY"
+title: "Repository Metrics and Engineering Observability Platform"
+status: "Completed"
+
+governance:
+  eos_compliance: true
+  evidence_required: true
+  review_required: false
+
+resources:
+  engineer: "AEF-02 (Software Engineer)"
+  agent: "Copilot CLI"
+
+execution:
+  started_at: "2026-08-04T12:00:00Z"
+  finished_at: "2026-08-04T18:00:00Z"
+  method: "Engineering Automation"
+
+outputs:
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0035/evidence/EXEC-035.yaml"
+  deliverables:
+    - "tools/observability/__init__.py"
+    - "tools/observability/collectors/__init__.py"
+    - "tools/observability/collectors/repository.py"
+    - "tools/observability/collectors/quality.py"
+    - "tools/observability/collectors/architecture.py"
+    - "tools/observability/collectors/governance.py"
+    - "tools/observability/collectors/security.py"
+    - "tools/observability/collectors/release.py"
+    - "tools/observability/collectors/git_metrics.py"
+    - "tools/observability/scoring.py"
+    - "tools/observability/snapshot.py"
+    - "tools/observability/dashboard.py"
+    - "tools/dashboard.py"
+    - ".github/workflows/metrics.yml"
+    - "tests/unit/test_observability.py"
+    - "docs/observability/README.md"
+    - "10-release/REPOSITORY_OBSERVABILITY_EVIDENCE_RECORD.yaml"
+    - "10-release/REPOSITORY_OBSERVABILITY_COMPLETION_REPORT.md"
+
+scope:
+  bounded_files:
+    - "tools/observability/"
+    - "tools/dashboard.py"
+    - ".github/workflows/metrics.yml"
+    - "tests/unit/test_observability.py"
+    - "docs/observability/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "pyproject.toml"

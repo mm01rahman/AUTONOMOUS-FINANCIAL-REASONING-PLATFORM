@@ -440,6 +440,44 @@ requirements:
       - "tools/traceability_gate.py"
     verified_by:
       - "05-work-packages/WP-IMP-0034/evidence/EXEC-034.yaml"
+  - id: "NFR-016"
+    title: "Automated repository metrics with HealthGrade A+/A/B/C/D scoring"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+    capability: "REPO-OBSERVABILITY"
+    status: "implemented"
+    artifacts:
+      - "tools/observability/scoring.py"
+      - "tools/observability/snapshot.py"
+      - "tools/dashboard.py"
+      - ".github/workflows/metrics.yml"
+    verified_by:
+      - "05-work-packages/WP-IMP-0035/evidence/EXEC-035.yaml"
+  - id: "NFR-017"
+    title: "Multi-format engineering dashboards (Markdown, HTML, JSON, GitHub Summary)"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+    capability: "REPO-OBSERVABILITY"
+    status: "implemented"
+    artifacts:
+      - "tools/observability/dashboard.py"
+      - "tools/dashboard.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0035/evidence/EXEC-035.yaml"
+  - id: "NFR-018"
+    title: "Observability collectors for all engineering dimensions (quality, arch, gov, security)"
+    source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+    capability: "REPO-OBSERVABILITY"
+    status: "implemented"
+    artifacts:
+      - "tools/observability/collectors/repository.py"
+      - "tools/observability/collectors/quality.py"
+      - "tools/observability/collectors/architecture.py"
+      - "tools/observability/collectors/governance.py"
+      - "tools/observability/collectors/security.py"
+      - "tools/observability/collectors/release.py"
+      - "tools/observability/collectors/git_metrics.py"
+    verified_by:
+      - "tests/unit/test_observability.py"
+      - "05-work-packages/WP-IMP-0035/evidence/EXEC-035.yaml"
 
   # ── Engineering decision rules (ARCH-001 §4) ────────────────────────
   - id: "EDR-001"
