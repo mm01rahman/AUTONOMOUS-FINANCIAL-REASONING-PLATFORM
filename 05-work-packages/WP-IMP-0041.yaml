@@ -1,0 +1,148 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0041"
+capability_id:
+  id: "IKROS-ARCH"
+  version: "1.0"
+title: "Institutional Knowledge & Research Operating System (IKROS) Architecture"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "KNOWLEDGE"
+  traceability:
+    implements_req: ["NFR-036", "NFR-037", "NFR-038"]
+    trace_sls: "AFRP-WP-IMP-0041-1.0.0"
+    trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('SPEC-LIBRARY')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "02-architecture/ikros/"
+      - "05-work-packages/WP-IMP-0041.yaml"
+      - "05-work-packages/WP-IMP-0041/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    read:
+      - "00-governance/"
+      - "02-architecture/"
+      - "03-engineering/"
+      - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+      - "11-research/phase-e/"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "6h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "11-research/phase-e/"
+
+outputs:
+  expected_source_files:
+    - "02-architecture/ikros/IKROS-ARCH-SPEC.md"
+    - "02-architecture/ikros/IKROS-ONTOLOGY.md"
+    - "02-architecture/ikros/IKROS-KNOWLEDGE-GRAPH.md"
+    - "02-architecture/ikros/IKROS-REGISTRIES.md"
+    - "02-architecture/ikros/IKROS-MEMORY.md"
+    - "02-architecture/ikros/IKROS-LINEAGE.md"
+    - "02-architecture/ikros/IKROS-CONFIDENCE.md"
+    - "02-architecture/ikros/IKROS-GOVERNANCE.md"
+    - "02-architecture/ikros/IKROS-INTEGRATION.md"
+    - "02-architecture/ikros/IKROS-QUERY.md"
+    - "02-architecture/ikros/IKROS-FUTURE.md"
+    - "02-architecture/ikros/ADR-IKROS-001-005.md"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0041/evidence/EXEC-043.yaml"
+
+execution_results:
+  source_files_modified:
+    - "02-architecture/ikros/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0041/evidence/EXEC-043.yaml"
+
+produces:
+  capability:
+    id: "IKROS-ARCH"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "02-architecture/ikros/"
+    - "05-work-packages/WP-IMP-0041.yaml"
+    - "05-work-packages/WP-IMP-0041/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  non_goals:
+    - "No Python implementation of IKROS."
+    - "No Runtime modification."
+    - "No Engineering OS modification."
+    - "No trading logic changes."
+
+requirements:
+  ikros_architecture_design:
+    module: "02-architecture/ikros/"
+    rules:
+      - "All 12 IKROS architecture sections from WP spec must be documented."
+      - "27 ontology entities must be defined with attributes, relationships, and lifecycle."
+      - "13 institutional registries must be specified with schema and governance."
+      - "6 memory tiers must be designed with consolidation rules."
+      - "5 Architecture Decision Records must be produced."
+      - "No Python source files may be created."
+      - "Runtime must remain unchanged."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0041"
+
+completion:
+  success_requires:
+    - "All 11 IKROS architecture documents created under 02-architecture/ikros/."
+    - "5 Architecture Decision Records created."
+    - "IKROS-ARCH capability added to CAPABILITY_REGISTRY.yaml (41 total)."
+    - "NFR-036, NFR-037, NFR-038 added to TRACEABILITY_MATRIX.yaml."
+    - "All quality gates pass."
+    - "No runtime behaviour changed."
+
+failure_modes:
+  ERR-RUNTIME: "Architecture-only WP — any runtime change is an automatic failure."
+  ERR-SCHEMA: "WPS-1.0 schema violation in WP YAML structure."
+  ERR-TVM-DUPE: "TVM duplicate IDs: verify NFR-036/037/038 are unique before inserting."

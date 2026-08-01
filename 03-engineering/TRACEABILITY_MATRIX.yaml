@@ -818,3 +818,35 @@ requirements:
       - "specs/registry/SPECIFICATION_HIERARCHY.md"
     verified_by:
       - "05-work-packages/WP-IMP-0040/evidence/EXEC-042.yaml"
+  - id: "NFR-036"
+    title: "AFRP shall maintain a governed institutional knowledge graph linking all research artifacts"
+    source: "SPEC-060 (AFRP-WP-IMP-0041)"
+    capability: "IKROS-ARCH"
+    status: "implemented"
+    artifacts:
+      - "02-architecture/ikros/IKROS-ARCH-SPEC.md"
+      - "02-architecture/ikros/IKROS-KNOWLEDGE-GRAPH.md"
+      - "02-architecture/ikros/IKROS-ONTOLOGY.md"
+    verified_by:
+      - "05-work-packages/WP-IMP-0041/evidence/EXEC-043.yaml"
+  - id: "NFR-037"
+    title: "Every IKROS research object shall carry complete provenance lineage from origin to retirement"
+    source: "SPEC-060 (AFRP-WP-IMP-0041)"
+    capability: "IKROS-ARCH"
+    status: "implemented"
+    artifacts:
+      - "02-architecture/ikros/IKROS-LINEAGE.md"
+      - "02-architecture/ikros/IKROS-REGISTRIES.md"
+    verified_by:
+      - "05-work-packages/WP-IMP-0041/evidence/EXEC-043.yaml"
+  - id: "NFR-038"
+    title: "IKROS shall maintain permanent immutable failure records as institutional memory per Constitutional Article IX"
+    source: "SPEC-060 (AFRP-WP-IMP-0041)"
+    capability: "IKROS-ARCH"
+    status: "implemented"
+    artifacts:
+      - "02-architecture/ikros/IKROS-MEMORY.md"
+      - "02-architecture/ikros/IKROS-GOVERNANCE.md"
+      - "02-architecture/ikros/IKROS-REGISTRIES.md"
+    verified_by:
+      - "05-work-packages/WP-IMP-0041/evidence/EXEC-043.yaml"

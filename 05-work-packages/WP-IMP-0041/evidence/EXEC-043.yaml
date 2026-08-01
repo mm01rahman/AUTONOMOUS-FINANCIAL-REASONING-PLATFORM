@@ -1,0 +1,88 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-043"
+work_package_id: "WP-IMP-0041"
+capability:
+  id: "IKROS-ARCH"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-02T04:55:00Z"
+  finished_at: "2026-08-02T06:30:00Z"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-08-02T06:30:00Z"
+      note: "IKROS Architecture design complete. 11 documents + 5 ADRs created. Architecture-only WP. No runtime changes. All quality gates pass."
+preconditions:
+  - predicate: "capability.complete('SPEC-LIBRARY')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "02-architecture/ikros/"
+    - "05-work-packages/WP-IMP-0041.yaml"
+    - "05-work-packages/WP-IMP-0041/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  files_modified:
+    - "02-architecture/ikros/"
+    - "05-work-packages/WP-IMP-0041.yaml"
+    - "05-work-packages/WP-IMP-0041/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check ."
+    result: "PASS"
+    detail: "No Python files created; architecture documentation only. Exit 0."
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+    result: "PASS"
+    detail: "No Python code modified; all type checks pass."
+  - gate: "pytest"
+    command: "uv run pytest -q --tb=short"
+    result: "PASS"
+    detail: "All existing tests pass; no code changes."
+  - gate: "afrp_validate"
+    command: "uv run afrp validate"
+    result: "PASS"
+    detail: "violations: 0"
+  - gate: "afrp_plan"
+    command: "uv run afrp plan"
+    result: "PASS"
+    detail: "41 capabilities total; graph acyclic; IKROS-ARCH complete as terminal node."
+  - gate: "afrp_health"
+    command: "uv run afrp health"
+    result: "PASS"
+    detail: "73/73 requirements covered (100.0%); test coverage 82.3%."
+  - gate: "afrp_evidence"
+    command: "uv run afrp evidence --wp WP-IMP-0041"
+    result: "PASS"
+    detail: "fit_005 PASS; boundary compliance verified."
+artifacts:
+  source_files: []
+  test_files: []
+  documentation:
+    - "02-architecture/ikros/IKROS-ARCH-SPEC.md"
+    - "02-architecture/ikros/IKROS-ONTOLOGY.md"
+    - "02-architecture/ikros/IKROS-KNOWLEDGE-GRAPH.md"
+    - "02-architecture/ikros/IKROS-REGISTRIES.md"
+    - "02-architecture/ikros/IKROS-MEMORY.md"
+    - "02-architecture/ikros/IKROS-LINEAGE.md"
+    - "02-architecture/ikros/IKROS-CONFIDENCE.md"
+    - "02-architecture/ikros/IKROS-GOVERNANCE.md"
+    - "02-architecture/ikros/IKROS-INTEGRATION.md"
+    - "02-architecture/ikros/IKROS-QUERY.md"
+    - "02-architecture/ikros/IKROS-FUTURE.md"
+    - "02-architecture/ikros/ADR-IKROS-001-005.md"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "PENDING_ARB"
+  review_note: "IKROS Architecture Design complete. 27 ontology entities, 13 registries, 6 memory tiers, 5 ADRs, full lineage model, confidence model, governance model, integration architecture, and future roadmap. No Python implementation code written. Runtime unchanged. STOP: Awaiting ARB approval before WP-IMP-0042 (IKROS Core Registries)."
