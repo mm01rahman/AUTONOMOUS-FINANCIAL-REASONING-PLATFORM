@@ -783,3 +783,38 @@ requirements:
     verified_by:
       - "tests/integration/test_system_replay.py"
       - "05-work-packages/WP-IMP-0033/evidence/EXEC-031.yaml"
+
+  # ── Specification Library (WP-IMP-0040) ──────────────────────────────────
+  - id: "NFR-033"
+    title: "Repository shall be the canonical home of every AFRP institutional specification"
+    source: "AFRP-WP-IMP-0040"
+    capability: "SPEC-LIBRARY"
+    status: "implemented"
+    artifacts:
+      - "specs/registry/SPECIFICATION_REGISTRY.yaml"
+      - "specs/README.md"
+      - "specs/registry/CONFORMANCE_MATRIX.md"
+    verified_by:
+      - "05-work-packages/WP-IMP-0040/evidence/EXEC-042.yaml"
+  - id: "NFR-034"
+    title: "Every AFRP capability shall trace back to at least one approved specification"
+    source: "AFRP-WP-IMP-0040"
+    capability: "SPEC-LIBRARY"
+    status: "implemented"
+    artifacts:
+      - "specs/registry/SPECIFICATION_REGISTRY.yaml"
+      - "specs/registry/CONFORMANCE_MATRIX.md"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    verified_by:
+      - "05-work-packages/WP-IMP-0040/evidence/EXEC-042.yaml"
+  - id: "NFR-035"
+    title: "Specifications shall have governed lifecycle management with versioning and approval workflow"
+    source: "AFRP-WP-IMP-0040"
+    capability: "SPEC-LIBRARY"
+    status: "implemented"
+    artifacts:
+      - "specs/policies/VERSIONING_POLICY.md"
+      - "specs/policies/REPOSITORY_ORGANIZATION_STANDARD.md"
+      - "specs/registry/SPECIFICATION_HIERARCHY.md"
+    verified_by:
+      - "05-work-packages/WP-IMP-0040/evidence/EXEC-042.yaml"

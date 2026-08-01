@@ -446,3 +446,16 @@ capabilities:
       implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
       trace_adr: ["ADR-0001"]
       trace_vvc: "TVM-001"
+
+  # ── Stage K — Canonical Specification Library ────────────────────────────
+  - id: "SPEC-LIBRARY"
+    version: "1.0"
+    title: "Institutional Specification Intake & Canonical Specification Library"
+    owner: "ARB"
+    status: "COMPLETE"
+    depends_on: ["ALPHA-RESEARCH"]
+    work_package: "WP-IMP-0040"
+    traceability:
+      implements_req: ["NFR-033", "NFR-034", "NFR-035"]
+      trace_adr: ["ADR-0001"]
+      trace_vvc: "TVM-001"
