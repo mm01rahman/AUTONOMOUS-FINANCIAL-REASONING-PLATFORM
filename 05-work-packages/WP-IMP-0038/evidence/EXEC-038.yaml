@@ -1,0 +1,106 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-038"
+work_package_id: "WP-IMP-0038"
+capability:
+  id: "PAPER-SHADOW-EXEC"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-01T14:17:02Z"
+  finished_at: "2026-08-01T15:10:00Z"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-08-01T15:10:00Z"
+      note: "Phase D implementation completed and quality gates executed."
+preconditions:
+  - predicate: "capability.complete('QUANT-BACKTEST')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "tools/paper_trading/"
+    - "tools/paper_trading_run.py"
+    - "tests/unit/test_paper_trading_modules.py"
+    - "tests/integration/test_paper_trading_orchestrator.py"
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - ".github/workflows/quality.yml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "CHANGELOG.md"
+    - "05-work-packages/WP-IMP-0038.yaml"
+    - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+    - "11-research/phase-d/"
+  files_modified:
+    - ".github/workflows/quality.yml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "CHANGELOG.md"
+    - "05-work-packages/WP-IMP-0038.yaml"
+    - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - "tests/integration/test_paper_trading_orchestrator.py"
+    - "tests/unit/test_paper_trading_modules.py"
+    - "tools/paper_trading/__init__.py"
+    - "tools/paper_trading/cli.py"
+    - "tools/paper_trading/dashboard.py"
+    - "tools/paper_trading/decision_log.py"
+    - "tools/paper_trading/gateway.py"
+    - "tools/paper_trading/monitoring.py"
+    - "tools/paper_trading/orchestrator.py"
+    - "tools/paper_trading/portfolio.py"
+    - "tools/paper_trading/reporting.py"
+    - "tools/paper_trading/risk.py"
+    - "tools/paper_trading/shadow_execution.py"
+    - "tools/paper_trading_run.py"
+    - "11-research/phase-d/"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check ."
+    result: "PASS"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+    result: "PASS"
+    detail: "Success: no issues found in 159 source files"
+  - gate: "pytest"
+    command: "uv run pytest -q"
+    result: "PASS"
+    detail: "Full test suite passed"
+  - gate: "afrp_validate"
+    command: "uv run afrp validate"
+    result: "PASS"
+    detail: "violations: 0"
+  - gate: "afrp_plan"
+    command: "uv run afrp plan"
+    result: "PASS"
+    detail: "38 capabilities, graph acyclic"
+  - gate: "afrp_health"
+    command: "uv run afrp health"
+    result: "PASS"
+    detail: "63/63 requirements covered (100.0%)"
+  - gate: "afrp_evidence"
+    command: "uv run afrp evidence --wp WP-IMP-0038"
+    result: "PASS"
+    detail: "fit_005 PASS"
+artifacts:
+  source_files:
+    - "tools/paper_trading/"
+    - "tools/paper_trading_run.py"
+  test_files:
+    - "tests/unit/test_paper_trading_modules.py"
+    - "tests/integration/test_paper_trading_orchestrator.py"
+  documentation:
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+  runtime_outputs:
+    - "11-research/phase-d/"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "PENDING_ARB"
+  review_note: "Phase D paper trading implementation complete. Quality gates PASS; runtime readiness FAIL due risk alerts."

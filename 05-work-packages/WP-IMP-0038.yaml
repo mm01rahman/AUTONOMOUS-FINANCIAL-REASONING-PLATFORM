@@ -1,0 +1,160 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0038"
+capability_id:
+  id: "PAPER-SHADOW-EXEC"
+  version: "1.0"
+title: "Implement Phase D Paper Trading & Live Shadow Execution Platform"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-025", "NFR-026", "NFR-027", "NFR-028"]
+    trace_sls: "AFRP-PHASE-D-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('QUANT-BACKTEST')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/paper_trading/"
+      - "tools/paper_trading_run.py"
+      - "tests/unit/test_paper_trading_modules.py"
+      - "tests/integration/test_paper_trading_orchestrator.py"
+      - "docs/research/PHASE_D_PAPER_TRADING.md"
+      - ".github/workflows/quality.yml"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+      - "CHANGELOG.md"
+      - "05-work-packages/WP-IMP-0038.yaml"
+      - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+      - "11-research/phase-d/"
+    read:
+      - "06-runtime/"
+      - "07-research/"
+      - "03-engineering/"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "large"
+  estimated_duration: "8h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "tools/backtest/"
+
+outputs:
+  expected_source_files:
+    - "tools/paper_trading/__init__.py"
+    - "tools/paper_trading/gateway.py"
+    - "tools/paper_trading/shadow_execution.py"
+    - "tools/paper_trading/portfolio.py"
+    - "tools/paper_trading/decision_log.py"
+    - "tools/paper_trading/monitoring.py"
+    - "tools/paper_trading/risk.py"
+    - "tools/paper_trading/dashboard.py"
+    - "tools/paper_trading/reporting.py"
+    - "tools/paper_trading/orchestrator.py"
+    - "tools/paper_trading/cli.py"
+    - "tools/paper_trading_run.py"
+    - "tests/unit/test_paper_trading_modules.py"
+    - "tests/integration/test_paper_trading_orchestrator.py"
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - "CHANGELOG.md"
+    - "11-research/phase-d/"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/paper_trading/"
+    - "tools/paper_trading_run.py"
+    - "tests/unit/test_paper_trading_modules.py"
+    - "tests/integration/test_paper_trading_orchestrator.py"
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - "CHANGELOG.md"
+    - ".github/workflows/quality.yml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+
+produces:
+  capability:
+    id: "PAPER-SHADOW-EXEC"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/paper_trading/"
+    - "tools/paper_trading_run.py"
+    - "tests/unit/test_paper_trading_modules.py"
+    - "tests/integration/test_paper_trading_orchestrator.py"
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - "CHANGELOG.md"
+    - ".github/workflows/quality.yml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "05-work-packages/WP-IMP-0038.yaml"
+    - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+    - "11-research/phase-d/"
+  non_goals:
+    - "No broker integration."
+    - "No live order routing."
+    - "No real-money execution."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+
+requirements:
+  phase_d_paper_trading:
+    module: "tools/paper_trading"
+    rules:
+      - "Gateway must provide provider interfaces and deterministic live-sim fallbacks."
+      - "Shadow execution must support filled/partial/failed paths without broker APIs."
+      - "Decision log records must include required schema fields and checksum reproducibility."
+      - "Monitoring/risk/dashboard/reporting artifacts must be generated in machine-readable forms."
+
+completion:
+  success_requires:
+    - "All quality gates pass."
+    - "Paper-trading and shadow execution outputs generated."
+    - "Deterministic decision log checksum emitted."
+
+failure_modes:
+  ERR-FEED: "Live feed unavailable — deterministic live-sim adapters used."
+  ERR-EXEC: "Simulated execution failure rate too high."
+  ERR-RISK: "Risk threshold violations produce readiness FAIL."

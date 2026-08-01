@@ -2,6 +2,23 @@
 
 All notable AFRP changes are recorded here. The project follows semantic versioning.
 
+## [1.3.0] — 2026-08-01
+
+### Added
+
+- Phase D paper-trading and live shadow execution platform (`tools/paper_trading/`):
+  - live market data gateway with provider interfaces and deterministic live-sim feeds;
+  - shadow execution engine (fills, partial fills, simulated failures, spread/slippage/latency);
+  - virtual portfolio, decision logs, risk/performance monitors, dashboard and reporting outputs.
+- Phase D governance package `WP-IMP-0038` and evidence `EXEC-038`.
+- Phase D unit/integration tests and deterministic artifact generation under `11-research/phase-d/`.
+
+### Changed
+
+- `03-engineering/CAPABILITY_REGISTRY.yaml` adds `PAPER-SHADOW-EXEC` (depends on `QUANT-BACKTEST`).
+- `03-engineering/TRACEABILITY_MATRIX.yaml` adds NFR-025..NFR-028 for Phase D.
+- `.github/workflows/quality.yml` now runs Phase D report generation and uploads artifacts.
+
 ## [1.2.0] — 2026-08-01
 
 ### Added

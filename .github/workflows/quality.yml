@@ -159,6 +159,15 @@ jobs:
         run: uv run afrp validate
       - name: afrp health --assert-full
         run: uv run afrp health --assert-full
+      - name: Phase D paper trading reports
+        run: uv run python -m tools.paper_trading.cli --iterations 24 --output-dir 11-research/phase-d
+      - name: Upload Phase D artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase-d-paper-trading
+          path: 11-research/phase-d/
+          retention-days: 30
 
   # ── Summary: All gates must pass ─────────────────────────────────────────
   quality:

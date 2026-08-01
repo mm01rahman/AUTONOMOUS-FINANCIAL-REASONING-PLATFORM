@@ -552,6 +552,56 @@ requirements:
     verified_by:
       - "tests/unit/test_backtest_benchmarks.py"
       - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+  - id: "NFR-025"
+    title: "Live market gateway supports provider interfaces with deterministic live-sim fallback"
+    source: "AFRP-PHASE-D-1.0.0"
+    capability: "PAPER-SHADOW-EXEC"
+    status: "implemented"
+    artifacts:
+      - "tools/paper_trading/gateway.py"
+      - "tools/paper_trading/orchestrator.py"
+    verified_by:
+      - "tests/unit/test_paper_trading_modules.py"
+      - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+  - id: "NFR-026"
+    title: "Shadow execution and virtual portfolio remain simulation-only with deterministic replay"
+    source: "AFRP-PHASE-D-1.0.0"
+    capability: "PAPER-SHADOW-EXEC"
+    status: "implemented"
+    artifacts:
+      - "tools/paper_trading/shadow_execution.py"
+      - "tools/paper_trading/portfolio.py"
+      - "tools/paper_trading/decision_log.py"
+    verified_by:
+      - "tests/unit/test_paper_trading_modules.py"
+      - "tests/integration/test_paper_trading_orchestrator.py"
+      - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+  - id: "NFR-027"
+    title: "Performance/risk monitoring and operational dashboards emitted as JSON/MD/HTML"
+    source: "AFRP-PHASE-D-1.0.0"
+    capability: "PAPER-SHADOW-EXEC"
+    status: "implemented"
+    artifacts:
+      - "tools/paper_trading/monitoring.py"
+      - "tools/paper_trading/risk.py"
+      - "tools/paper_trading/dashboard.py"
+      - ".github/workflows/quality.yml"
+    verified_by:
+      - "tests/unit/test_paper_trading_modules.py"
+      - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+  - id: "NFR-028"
+    title: "Daily/weekly/monthly reporting with runtime, risk, performance, learning and log digests"
+    source: "AFRP-PHASE-D-1.0.0"
+    capability: "PAPER-SHADOW-EXEC"
+    status: "implemented"
+    artifacts:
+      - "tools/paper_trading/reporting.py"
+      - "tools/paper_trading/cli.py"
+      - "docs/research/PHASE_D_PAPER_TRADING.md"
+      - "11-research/phase-d/"
+    verified_by:
+      - "tests/integration/test_paper_trading_orchestrator.py"
+      - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
 
   # ── Engineering decision rules (ARCH-001 §4) ────────────────────────
   - id: "EDR-001"
