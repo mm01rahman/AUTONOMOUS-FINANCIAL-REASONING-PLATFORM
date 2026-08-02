@@ -1,0 +1,195 @@
+assessed_at: '2026-08-02T01:51:32.151486+00:00'
+assessed_confidence:
+  data: 0.7084503078276166
+  economic: 0.5599999999999999
+  experimental: 0.607750219876869
+  last_updated: '2026-08-02T01:51:32.119978+00:00'
+  operational: 0.504
+  overall: 0.2267749515409686
+  prior: 0.51
+  replication: 0.2267749515409686
+  statistical: 0.7120000000000001
+  validation: 0.6381002638522428
+assessment_id: ICA-20260802-0004
+audit_id: ICAUD-20260802-0004
+contradiction_resolution:
+  contradiction_multiplier: 0.8
+  recommended_action: PEER_REVIEW
+  requires_review: false
+  severity_counts:
+    MODERATE: 1
+evidence:
+- confidence_weight: 0.67
+  contradiction_severity: null
+  evidence_id: PHASEG-FEATURE-EVID-001
+  evidence_type: SPECIFICATION
+  independent_source: campaign-0003-governance
+  metrics:
+    data_confidence: 0.83
+    economic_confidence: 0.7
+    experimental_confidence: 0.72
+    validation_confidence: 0.75
+  notes: Campaign 0003 uses only the frozen AFRP feature matrix and the accepted six-state
+    taxonomy.
+  observed_at: '2026-08-02T00:00:00Z'
+  references:
+    backtest_ids: []
+    capability_ids:
+    - ALPHA-RESEARCH
+    - IKROS-CONFIDENCE
+    - IKROS-ORCHESTRATOR
+    dataset_ids:
+    - IKROS-DSV-20260802-0003
+    evidence_record_ids: []
+    experiment_ids: []
+    feature_ids:
+    - IKROS-FEAT-20260802-0301
+    - IKROS-FEAT-20260802-0302
+    - IKROS-FEAT-20260802-0303
+    - IKROS-FEAT-20260802-0305
+    - IKROS-FEAT-20260802-0307
+    - IKROS-FEAT-20260802-0311
+    monte_carlo_ids: []
+    research_report_ids: []
+    specification_ids:
+    - SPEC-012
+    - SPEC-060
+    stress_test_ids: []
+    validation_ids: []
+    walk_forward_ids: []
+    work_package_ids: []
+  relation: SUPPORTS
+  temporal_bucket: 2026Q3
+- confidence_weight: 0.95
+  contradiction_severity: null
+  evidence_id: PHASEG-FEATURE-EVID-002
+  evidence_type: VALIDATION
+  independent_source: campaign-0003-validation
+  metrics:
+    data_quality_grade: A
+    experimental_confidence: 0.77
+    mean_bootstrap_consistency: 0.871094
+    promotion_rate: 0.352941
+    statistical_confidence: 0.89
+    validation_confidence: 0.81
+  notes: The approved catalogue is materially smaller than the candidate set and preserves
+    a stable cross-regime anchor layer.
+  observed_at: '2026-08-02T00:00:00Z'
+  references:
+    backtest_ids: []
+    capability_ids: []
+    dataset_ids:
+    - IKROS-DSV-20260802-0003
+    evidence_record_ids: []
+    experiment_ids: []
+    feature_ids:
+    - IKROS-FEAT-20260802-0301
+    - IKROS-FEAT-20260802-0302
+    - IKROS-FEAT-20260802-0305
+    - IKROS-FEAT-20260802-0307
+    monte_carlo_ids: []
+    research_report_ids:
+    - 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+    specification_ids: []
+    stress_test_ids: []
+    validation_ids:
+    - IKROS-VAL-20260802-0003
+    walk_forward_ids: []
+    work_package_ids: []
+  relation: SUPPORTS
+  temporal_bucket: 2026Q3
+- confidence_weight: 0.44
+  contradiction_severity: MODERATE
+  evidence_id: PHASEG-FEATURE-EVID-003
+  evidence_type: VALIDATION
+  independent_source: campaign-0003-contradictions
+  metrics:
+    interaction_complexity_penalty: 0.24
+    macro_pressure_rejection: 1.0
+    sparse_event_coverage: 0.27887
+  notes: Several intuitive macro and event features did not survive promotion as standalone
+    predictors.
+  observed_at: '2026-08-02T00:00:00Z'
+  references:
+    backtest_ids: []
+    capability_ids: []
+    dataset_ids: []
+    evidence_record_ids: []
+    experiment_ids: []
+    feature_ids: []
+    monte_carlo_ids: []
+    research_report_ids:
+    - 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+    specification_ids: []
+    stress_test_ids: []
+    validation_ids:
+    - IKROS-VAL-20260802-0003
+    walk_forward_ids: []
+    work_package_ids: []
+  relation: CONTRADICTS
+  temporal_bucket: 2026Q3
+memory_record_id: IKMEM-T1-20260802-0041
+operator: ikros-confidence-engine
+previous_confidence:
+  data: 0.77
+  economic: 0.65
+  experimental: 0.57
+  last_updated: '2026-08-02T00:00:00Z'
+  operational: 0.63
+  overall: 0.0
+  prior: 0.51
+  replication: 0.0
+  statistical: 0.45
+  validation: 0.42
+propagation: []
+quality:
+  contradiction_count: 1
+  contradiction_score: 0.8
+  dataset_diversity: 1
+  dataset_diversity_score: 0.25
+  evidence_freshness: 1.0
+  independent_validations: 1
+  independent_validations_score: 0.3333333333333333
+  out_of_sample_confirmations: 0
+  out_of_sample_score: 0.0
+  overall_quality: 0.4250135356092878
+  regime_diversity: 0
+  regime_diversity_score: 0.0
+  replication_count: 1
+  replication_score: 0.28346868942621073
+  research_maturity: 0.3333333333333333
+  temporal_diversity: 1
+  temporal_diversity_score: 0.25
+  validation_completeness: 1.0
+reason: Campaign 0003 regime-conditioned feature discovery
+references:
+  backtest_ids: []
+  capability_ids:
+  - ALPHA-RESEARCH
+  - IKROS-CONFIDENCE
+  - IKROS-ORCHESTRATOR
+  dataset_ids:
+  - IKROS-DSV-20260802-0003
+  evidence_record_ids: []
+  experiment_ids: []
+  feature_ids:
+  - IKROS-FEAT-20260802-0301
+  - IKROS-FEAT-20260802-0302
+  - IKROS-FEAT-20260802-0303
+  - IKROS-FEAT-20260802-0305
+  - IKROS-FEAT-20260802-0307
+  - IKROS-FEAT-20260802-0311
+  monte_carlo_ids: []
+  research_report_ids:
+  - 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+  specification_ids:
+  - SPEC-012
+  - SPEC-060
+  stress_test_ids: []
+  validation_ids:
+  - IKROS-VAL-20260802-0003
+  walk_forward_ids: []
+  work_package_ids: []
+source_assessment_id: null
+target_id: IKROS-HYP-20260802-0003
+target_type: Hypothesis

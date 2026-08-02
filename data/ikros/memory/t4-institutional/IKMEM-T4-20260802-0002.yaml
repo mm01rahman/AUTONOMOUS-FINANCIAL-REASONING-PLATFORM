@@ -1,0 +1,60 @@
+archived_at: null
+capability_refs: []
+confidence: 0.33
+created_at: '2026-08-02T01:27:42.840118+00:00'
+dependency_ids: []
+entity_type: AlphaCandidate
+evidence_refs:
+- 11-research/phase-e/phase_e_summary.json
+- EXEC-041
+graph_node_ids:
+- IKROS-ALPHACAND-20260802-0001
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260802-0002
+payload:
+  attributes:
+    backtests:
+    - phase-e-macro-only
+    direction_accuracy: 0.0
+    implements_hypotheses:
+    - IKROS-HYP-20260802-0001
+    max_drawdown: 0.04441
+    monte_carlos:
+    - phase-e-mc-macro-only
+    name: macro_only_baseline
+    promotion_score: 0.0
+    promotion_status: CANDIDATE
+    rejection_reasons: []
+    sharpe_oos: -1.9781
+    strategy_type: MACRO
+    walk_forwards:
+    - phase-e-wf-macro-only
+    win_rate: 0.0
+  lifecycle_state: CANDIDATE
+  source_format: JSON
+  source_kind: VALIDATION_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_validation_report.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-ALPHACAND-20260802-0001
+- IKROS-EXP-20260802-0001
+- IKROS-HYP-20260802-0001
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: Phase E macro-only baseline imported for Phase G governance review.
+tags:
+- alphacandidate
+- validation_report
+- ingested
+tier: T4_INSTITUTIONAL
+title: Macro-only XAU/USD alpha candidate
+updated_at: '2026-08-02T01:27:42.840118+00:00'
+valid_from: '2026-08-02T01:27:42.840118+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

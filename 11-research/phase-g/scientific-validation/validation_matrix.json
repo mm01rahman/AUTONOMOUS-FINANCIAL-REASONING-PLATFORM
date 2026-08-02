@@ -1,0 +1,52 @@
+[
+  {
+    "bootstrap_probability_positive": 0.833,
+    "event_count": 24,
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "mean_return": 0.0051,
+    "outcome": "REQUIRES_FURTHER_RESEARCH",
+    "psr": 0.8266,
+    "title": "Expectation-relief bull continuation",
+    "walk_forward_positive_fold_ratio": 0.75
+  },
+  {
+    "bootstrap_probability_positive": 0.42,
+    "event_count": 43,
+    "hypothesis_id": "IKROS-HYP-20260802-0402",
+    "mean_return": -0.0007,
+    "outcome": "REJECTED",
+    "psr": 0.4196,
+    "title": "Liquidation-pressure bear continuation",
+    "walk_forward_positive_fold_ratio": 0.25
+  },
+  {
+    "bootstrap_probability_positive": 0.374,
+    "event_count": 5,
+    "hypothesis_id": "IKROS-HYP-20260802-0404",
+    "mean_return": -0.0029,
+    "outcome": "REJECTED",
+    "psr": 0.3832,
+    "title": "Crisis safe-haven breakout convexity",
+    "walk_forward_positive_fold_ratio": 0.5
+  },
+  {
+    "bootstrap_probability_positive": 0.835,
+    "event_count": 99,
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "mean_return": 0.0017,
+    "outcome": "REQUIRES_FURTHER_RESEARCH",
+    "psr": 0.8197,
+    "title": "Policy-shock repricing continuation",
+    "walk_forward_positive_fold_ratio": 0.5
+  },
+  {
+    "bootstrap_probability_positive": 0.705,
+    "event_count": 7,
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "mean_return": 0.0074,
+    "outcome": "REQUIRES_FURTHER_RESEARCH",
+    "psr": 0.6408,
+    "title": "Transition-to-trend handoff",
+    "walk_forward_positive_fold_ratio": 0.75
+  }
+]

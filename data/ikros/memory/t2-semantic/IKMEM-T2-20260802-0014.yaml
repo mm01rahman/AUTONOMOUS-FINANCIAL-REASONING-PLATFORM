@@ -1,0 +1,51 @@
+archived_at: null
+capability_refs: []
+confidence: 0.79
+created_at: '2026-08-02T01:43:01.845909+00:00'
+dependency_ids: []
+entity_type: FeatureFamily
+evidence_refs:
+- 11-research/phase-e/feature_importance.json
+graph_node_ids:
+- IKROS-FF-20260802-0201
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0014
+payload:
+  attributes:
+    description: Core state variables required by the deterministic regime overlay
+      taxonomy.
+    member_features:
+    - IKROS-FEAT-20260802-0201
+    - IKROS-FEAT-20260802-0202
+    - IKROS-FEAT-20260802-0203
+    - IKROS-FEAT-20260802-0204
+    - IKROS-FEAT-20260802-0205
+    - IKROS-FEAT-20260802-0206
+    - IKROS-FEAT-20260802-0207
+    name: regime_state_variables
+  lifecycle_state: VALIDATED
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-FF-20260802-0201
+- IKROS-DSV-20260802-0002
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Feature family used to define the accepted institutional state model.
+tags:
+- featurefamily
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Regime discovery state variables
+updated_at: '2026-08-02T01:43:01.845909+00:00'
+valid_from: '2026-08-02T01:43:01.845909+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

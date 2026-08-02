@@ -1,0 +1,287 @@
+{
+  "campaign": {
+    "title": "Campaign 0007 Institutional Diagnostic Experiment Program",
+    "objective": "Execute the six governed diagnostic experiments from Campaign 0006, reduce uncertainty around the retained hypotheses, and produce the next-step ARB recommendation without modifying any hypothesis definition.",
+    "campaign_type": "RESEARCH_AUDIT",
+    "failure_policy": "FAIL_FAST",
+    "specification_refs": ["SPEC-012", "SPEC-060"],
+    "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-INGESTION"],
+    "work_package_refs": [],
+    "evidence_refs": [
+      "11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json",
+      "11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_PROGRAM.md",
+      "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+      "11-research/phase-g/scientific-validation/scientific_validation_analysis.json"
+    ]
+  },
+  "ids": {
+    "research_question_id": "IKROS-RQ-20260802-0007",
+    "hypothesis_id": "IKROS-HYP-20260802-0007",
+    "experiment_id": "IKROS-EXP-20260802-0007",
+    "evidence_bundle_id": "IKROS-EVIDENCE-20260802-0007",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0007",
+    "research_conclusion_id": "IKROS-CONCL-20260802-0007"
+  },
+  "entities": {
+    "research_question": {
+      "ikros_id": "IKROS-RQ-20260802-0007",
+      "entity_type": "ResearchQuestion",
+      "version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "confidence": {
+        "prior": 0.57,
+        "statistical": 0.0,
+        "economic": 0.7,
+        "data": 0.82,
+        "model": 0.0,
+        "validation": 0.0,
+        "replication": 0.0,
+        "operational": 0.73,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0007-diagnostic-experiments",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0007 diagnostic experiment program",
+          "motivation": "Reduce scientific uncertainty around the retained hypotheses by executing only the six diagnostic experiments authorized by Campaign 0006."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-RQ-20260802-0006"],
+          "datasets": ["IKROS-DSV-20260802-0007"],
+          "features": [
+            "IKROS-FEAT-20260802-0301",
+            "IKROS-FEAT-20260802-0302",
+            "IKROS-FEAT-20260802-0303",
+            "IKROS-FEAT-20260802-0304",
+            "IKROS-FEAT-20260802-0305",
+            "IKROS-FEAT-20260802-0306",
+            "IKROS-FEAT-20260802-0308",
+            "IKROS-FEAT-20260802-0309",
+            "IKROS-FEAT-20260802-0310",
+            "IKROS-FEAT-20260802-0311",
+            "IKROS-FEAT-20260802-0312"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": [
+            "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+            "11-research/phase-g/scientific-validation/scientific_validation_analysis.json"
+          ]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Do the six governed diagnostic experiments reduce uncertainty enough to determine the next scientific step for the retained hypotheses?",
+      "motivation": "Campaign 0006 left three retained hypotheses unresolved and authorized only six follow-up diagnostic experiments.",
+      "scope": "DIAGNOSTIC_EXPERIMENT_PROGRAM",
+      "instrument": "XAU/USD",
+      "time_horizon": "1D-15D",
+      "campaign_tag": "PHASE-G-DIAGNOSTIC-007",
+      "linked_hypotheses": [],
+      "linked_conclusions": []
+    },
+    "hypothesis": {
+      "ikros_id": "IKROS-HYP-20260802-0007",
+      "entity_type": "Hypothesis",
+      "version": "1.0.0",
+      "lifecycle_state": "APPROVED_FOR_TESTING",
+      "confidence": {
+        "prior": 0.56,
+        "statistical": 0.0,
+        "economic": 0.69,
+        "data": 0.82,
+        "model": 0.0,
+        "validation": 0.0,
+        "replication": 0.0,
+        "operational": 0.72,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0007-diagnostic-experiments",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0007 diagnostic experiment program",
+          "motivation": "Represent the governed claim that the authorized diagnostic experiments can materially reduce uncertainty and determine the next scientific step for the retained hypotheses."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-RQ-20260802-0007"],
+          "datasets": ["IKROS-DSV-20260802-0007"],
+          "features": [
+            "IKROS-FEAT-20260802-0301",
+            "IKROS-FEAT-20260802-0302",
+            "IKROS-FEAT-20260802-0303",
+            "IKROS-FEAT-20260802-0304",
+            "IKROS-FEAT-20260802-0305",
+            "IKROS-FEAT-20260802-0306",
+            "IKROS-FEAT-20260802-0308",
+            "IKROS-FEAT-20260802-0309",
+            "IKROS-FEAT-20260802-0310",
+            "IKROS-FEAT-20260802-0311",
+            "IKROS-FEAT-20260802-0312"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": ["11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json"]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-INGESTION"],
+      "work_package_refs": [],
+      "version_history": [],
+      "statement": "The six Campaign 0006 diagnostic experiments can reduce uncertainty enough to determine whether each retained hypothesis should remain in testing, return for validation, or be rejected.",
+      "null_hypothesis": "H0: The authorized diagnostic experiments do not materially reduce uncertainty around the retained hypotheses.",
+      "alternative_hypothesis": "H1: The authorized diagnostic experiments materially reduce uncertainty and support a governed next-step recommendation for each retained hypothesis.",
+      "significance_level": 0.05,
+      "power": 0.8,
+      "prior_confidence": 0.56,
+      "posterior_confidence": 0.0,
+      "source_rq": "IKROS-RQ-20260802-0007",
+      "motivating_theses": [],
+      "experiments": [],
+      "validations": [],
+      "contradictions": []
+    },
+    "experiment": {
+      "ikros_id": "IKROS-EXP-20260802-0007",
+      "entity_type": "Experiment",
+      "version": "1.0.0",
+      "lifecycle_state": "RUNNING",
+      "confidence": {
+        "prior": 0.57,
+        "statistical": 0.0,
+        "economic": 0.69,
+        "data": 0.83,
+        "model": 0.0,
+        "validation": 0.0,
+        "replication": 0.0,
+        "operational": 0.73,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0007-diagnostic-experiments",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0007 diagnostic experiment program",
+          "motivation": "Execute only the six governed diagnostic experiments authorized by Campaign 0006."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-HYP-20260802-0007"],
+          "datasets": ["IKROS-DSV-20260802-0007"],
+          "features": [
+            "IKROS-FEAT-20260802-0301",
+            "IKROS-FEAT-20260802-0302",
+            "IKROS-FEAT-20260802-0303",
+            "IKROS-FEAT-20260802-0304",
+            "IKROS-FEAT-20260802-0305",
+            "IKROS-FEAT-20260802-0306",
+            "IKROS-FEAT-20260802-0308",
+            "IKROS-FEAT-20260802-0309",
+            "IKROS-FEAT-20260802-0310",
+            "IKROS-FEAT-20260802-0311",
+            "IKROS-FEAT-20260802-0312"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": [
+            "11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json",
+            "11-research/phase-g/failure-analysis/failure_analysis_analysis.json"
+          ]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-INGESTION"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Campaign 0007 institutional diagnostic experiment program",
+      "hypotheses": [
+        "IKROS-HYP-20260802-0401",
+        "IKROS-HYP-20260802-0405",
+        "IKROS-HYP-20260802-0408"
+      ],
+      "protocol": "Execute the six governed diagnostic experiments from Campaign 0006 using the frozen validation frame and retained-hypothesis evidence stack.",
+      "dataset_versions": ["IKROS-DSV-20260802-0007"],
+      "feature_versions": [
+        "IKROS-FEAT-20260802-0301",
+        "IKROS-FEAT-20260802-0302",
+        "IKROS-FEAT-20260802-0303",
+        "IKROS-FEAT-20260802-0304",
+        "IKROS-FEAT-20260802-0305",
+        "IKROS-FEAT-20260802-0306",
+        "IKROS-FEAT-20260802-0308",
+        "IKROS-FEAT-20260802-0309",
+        "IKROS-FEAT-20260802-0310",
+        "IKROS-FEAT-20260802-0311",
+        "IKROS-FEAT-20260802-0312"
+      ],
+      "parameters": {
+        "authorized_experiments": [
+          "IKROS-EXP-20260802-0601",
+          "IKROS-EXP-20260802-0602",
+          "IKROS-EXP-20260802-0603",
+          "IKROS-EXP-20260802-0604",
+          "IKROS-EXP-20260802-0605",
+          "IKROS-EXP-20260802-0606"
+        ],
+        "governance_constraints": [
+          "no runtime changes",
+          "no infrastructure changes",
+          "no new hypotheses",
+          "no parameter optimization",
+          "no promotion"
+        ]
+      },
+      "random_seed": 42,
+      "in_sample_start": "",
+      "in_sample_end": "",
+      "out_of_sample_start": "",
+      "out_of_sample_end": "",
+      "reproducibility_hash": "",
+      "git_commit": "",
+      "completed_at": null,
+      "validations_produced": [],
+      "failures_produced": []
+    }
+  },
+  "task_payloads": {
+    "RESEARCH_QUESTION": {},
+    "KNOWLEDGE_REGISTRATION": {
+      "source_path": "11-research/phase-g/diagnostic-experiments/diagnostic_experiment_knowledge.json"
+    },
+    "HYPOTHESIS_REGISTRATION": {},
+    "EXPERIMENT_REGISTRATION": {},
+    "FINAL_REPORT": {}
+  },
+  "post_run": {
+    "research_question_state": "ANSWERED",
+    "hypothesis_states": ["INCONCLUSIVE"],
+    "experiment_states": ["COMPLETE", "REVIEWED"],
+    "arb_recommendation": "Return IKROS-HYP-20260802-0401 and IKROS-HYP-20260802-0405 to governed validation with explicit persistence, branch, and contamination panels; keep IKROS-HYP-20260802-0408 in testing until broader episode coverage and richer sequencing evidence are available; reject none at this stage."
+  }
+}

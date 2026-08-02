@@ -1,0 +1,18 @@
+attributes:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0002
+  entity_type: ResearchTask
+  kind: FEATURE_SELECTION
+  status: COMPLETED
+confidence: 1.0
+created_at: '2026-08-02T01:43:04.039764+00:00'
+ikros_id: IKROS-RESEARCHTASK-20260802-0018
+label: Feature Selection
+node_id: IKROS-RESEARCHTASK-20260802-0018
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

@@ -1,0 +1,18 @@
+attributes:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0001
+  entity_type: ResearchTask
+  kind: STATISTICAL_EVALUATION
+  status: COMPLETED
+confidence: 1.0
+created_at: '2026-08-02T01:27:43.175760+00:00'
+ikros_id: IKROS-RESEARCHTASK-20260802-0009
+label: Statistical Evaluation
+node_id: IKROS-RESEARCHTASK-20260802-0009
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

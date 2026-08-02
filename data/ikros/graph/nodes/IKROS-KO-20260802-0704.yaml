@@ -1,0 +1,20 @@
+attributes:
+  hypothesis_id: IKROS-HYP-20260802-0405
+  recommendation: RETURN_FOR_VALIDATION
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+  summary: Narrow-range macro-transition events returned +0.56% on average with a
+    60% win rate across 50 events.
+  support_classification: SUPPORTS_CURRENT_HYPOTHESIS
+confidence: 0.78
+created_at: '2026-08-02T02:37:46.459254+00:00'
+ikros_id: IKROS-KO-20260802-0704
+label: IKROS-EXP-20260802-0604 diagnostic finding
+node_id: IKROS-KO-20260802-0704
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T02:37:46.459254+00:00'
+valid_to: null
+wp_refs: []

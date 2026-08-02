@@ -1,0 +1,96 @@
+archived_at: null
+capability_refs: []
+confidence: 0.45
+created_at: '2026-08-02T01:59:35.072679+00:00'
+dependency_ids: []
+entity_type: Hypothesis
+evidence_refs:
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-HYP-20260802-0408
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0080
+payload:
+  attributes:
+    acceptance_criteria:
+    - handoff cases separate cleanly from failed transitions
+    - medium-horizon anchor adds incremental value over event-only continuation
+    - cross-state mechanism remains economically coherent
+    advance_to_campaign_0005: true
+    alternative_hypothesis: Some policy and event shocks are not isolated bursts but
+      regime-change catalysts that seed a broader trend followed by slower capital.
+    contradictions: []
+    expected_direction: UP_IF_TRANSITION_RESOLVES_CONSTRUCTIVELY
+    expected_holding_period: 5-10D
+    expected_horizon: 5-15D
+    experiments: []
+    feature_ids:
+    - IKROS-FEAT-20260802-0310
+    - IKROS-FEAT-20260802-0311
+    - IKROS-FEAT-20260802-0301
+    feature_set:
+    - xau_return_1
+    - trend_breakout_interaction
+    - regime_return_60
+    knowledge_links:
+    - IKROS-FEAT-20260802-0310
+    - IKROS-FEAT-20260802-0311
+    - IKROS-FEAT-20260802-0301
+    - IKROS-KO-20260802-0408
+    motivating_theses: []
+    null_hypothesis: The described mechanism does not produce a persistent regime-conditioned
+      predictive relationship.
+    posterior_confidence: 0.0
+    power: 0.8
+    prior_confidence: 0.45
+    priority_tier: P2
+    regime_scope:
+    - macro_transition
+    - bull_trend
+    rejection_criteria:
+    - handoff cases are too rare for institutional follow-up
+    - signal is redundant with H0401 or H0405
+    - transition ordering uncertainty collapses reproducibility
+    required_evidence:
+    - transition-handoff event log
+    - cross-state redundancy review
+    - sequence-sensitivity report
+    research_question: Do macro_transition shocks that align with directional breakout
+      structure hand off into later bull_trend continuation rather than fading out?
+    significance_level: 0.05
+    source_rq: IKROS-RQ-20260802-0408
+    statement: Do macro_transition shocks that align with directional breakout structure
+      hand off into later bull_trend continuation rather than fading out?
+    validation_plan:
+    - state-transition walk_forward validation
+    - CPCV preserving transition-to-bull handoff sequences
+    - sensitivity to the duration of the handoff window
+    - Monte Carlo over transition ordering
+    validations: []
+  lifecycle_state: APPROVED_FOR_TESTING
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-HYP-20260802-0408
+- IKROS-RQ-20260802-0408
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Some policy and event shocks are not isolated bursts but regime-change catalysts
+  that seed a broader trend followed by slower capital.
+tags:
+- hypothesis
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Transition-to-trend handoff
+updated_at: '2026-08-02T01:59:35.072679+00:00'
+valid_from: '2026-08-02T01:59:35.072679+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

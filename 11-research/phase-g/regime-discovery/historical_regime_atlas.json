@@ -1,0 +1,58 @@
+[
+  {
+    "avg_future_return": 0.001049,
+    "dominant_regime": "range_compression",
+    "dominant_share": 0.5,
+    "label": "2008 Financial Crisis",
+    "window_id": "gfc_2008"
+  },
+  {
+    "avg_future_return": 0.003478,
+    "dominant_regime": "crisis_dislocation",
+    "dominant_share": 0.3651,
+    "label": "2011 Gold Bull Market",
+    "window_id": "gold_bull_2011"
+  },
+  {
+    "avg_future_return": -0.005599,
+    "dominant_regime": "bear_unwind",
+    "dominant_share": 0.4821,
+    "label": "2013 Gold Collapse",
+    "window_id": "gold_collapse_2013"
+  },
+  {
+    "avg_future_return": 0.004681,
+    "dominant_regime": "crisis_dislocation",
+    "dominant_share": 0.3532,
+    "label": "2020 COVID",
+    "window_id": "covid_2020"
+  },
+  {
+    "avg_future_return": 0.000748,
+    "dominant_regime": "range_compression",
+    "dominant_share": 0.4382,
+    "label": "2022 Inflation Cycle",
+    "window_id": "inflation_2022"
+  },
+  {
+    "avg_future_return": 0.005373,
+    "dominant_regime": "range_compression",
+    "dominant_share": 0.6892,
+    "label": "2024 Rate Cycle",
+    "window_id": "rate_cycle_2024"
+  },
+  {
+    "avg_future_return": 0.010473,
+    "dominant_regime": "range_compression",
+    "dominant_share": 0.6733,
+    "label": "2025 Historical",
+    "window_id": "historical_2025"
+  },
+  {
+    "avg_future_return": -0.002099,
+    "dominant_regime": "range_compression",
+    "dominant_share": 0.7929,
+    "label": "2026 Available",
+    "window_id": "available_2026"
+  }
+]

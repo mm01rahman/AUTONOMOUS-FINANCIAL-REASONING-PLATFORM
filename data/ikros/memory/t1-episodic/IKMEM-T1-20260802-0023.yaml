@@ -1,0 +1,57 @@
+archived_at: null
+capability_refs: []
+confidence: 0.82
+created_at: '2026-08-02T01:43:04.728735+00:00'
+dependency_ids:
+- IKROS-HYP-20260802-0002
+entity_type: Validation
+evidence_refs:
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+graph_node_ids:
+- IKROS-VAL-20260802-0002
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0023
+payload:
+  attributes:
+    accepted_method_id: IKROS-KO-20260802-0209
+    rejected_method_ids:
+    - IKROS-KO-20260802-0202
+    - IKROS-KO-20260802-0203
+    - IKROS-KO-20260802-0205
+    - IKROS-KO-20260802-0207
+    - IKROS-KO-20260802-0208
+    utility_metrics:
+      accepted_hit_rate_spread: 0.1422228565085708
+      accepted_return_spread: 0.004942385609214154
+      accepted_stability: 0.7800863033402589
+      trend_volatility_return_spread: 0.0024014028145167335
+      volatility_baseline_return_spread: 0.0012110299879640569
+    validation_type: regime_taxonomy_utility_test
+    verdict: PASS
+  lifecycle_state: COMPLETE
+  source_format: JSON
+  source_kind: VALIDATION_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-VAL-20260802-0002
+- IKROS-EXP-20260802-0002
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: Validation synthesis for the accepted six-state regime taxonomy.
+tags:
+- validation
+- validation_report
+- ingested
+tier: T1_EPISODIC
+title: Campaign 0002 regime utility validation
+updated_at: '2026-08-02T01:43:04.728735+00:00'
+valid_from: '2026-08-02T01:43:04.728735+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

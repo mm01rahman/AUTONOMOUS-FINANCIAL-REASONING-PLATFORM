@@ -1,0 +1,95 @@
+archived_at: null
+capability_refs: []
+confidence: 0.5
+created_at: '2026-08-02T01:59:35.072679+00:00'
+dependency_ids: []
+entity_type: Hypothesis
+evidence_refs:
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-HYP-20260802-0402
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0079
+payload:
+  attributes:
+    acceptance_criteria:
+    - consistent downside sign in unwind folds
+    - effect survives volatility decile perturbations
+    - trend persistence remains explanatory after redundancy controls
+    advance_to_campaign_0005: true
+    alternative_hypothesis: Forced deleveraging and inventory reduction can sustain
+      downside pressure before value-sensitive buyers re-enter the market.
+    contradictions: []
+    expected_direction: DOWN
+    expected_holding_period: 3-5D
+    expected_horizon: 5D
+    experiments: []
+    feature_ids:
+    - IKROS-FEAT-20260802-0302
+    - IKROS-FEAT-20260802-0305
+    - IKROS-FEAT-20260802-0306
+    feature_set:
+    - xau_return_20
+    - regime_vol_20
+    - trend_gap_30_180
+    knowledge_links:
+    - IKROS-FEAT-20260802-0302
+    - IKROS-FEAT-20260802-0305
+    - IKROS-FEAT-20260802-0306
+    - IKROS-KO-20260802-0402
+    motivating_theses: []
+    null_hypothesis: The described mechanism does not produce a persistent regime-conditioned
+      predictive relationship.
+    posterior_confidence: 0.0
+    power: 0.8
+    prior_confidence: 0.5
+    priority_tier: P2
+    regime_scope:
+    - bear_unwind
+    rejection_criteria:
+    - continuation fails once crisis overlap is excluded
+    - trend_gap_30_180 behaves as a weak bystander rather than a mechanism variable
+    - volatility contribution is unstable across folds
+    required_evidence:
+    - unwind-segment validation panel
+    - volatility-decile stress report
+    - transition-overlap contradiction log
+    research_question: Inside bear_unwind states, do persistent downside path pressure
+      and elevated volatility continue to dominate the next five trading days?
+    significance_level: 0.05
+    source_rq: IKROS-RQ-20260802-0402
+    statement: Inside bear_unwind states, do persistent downside path pressure and
+      elevated volatility continue to dominate the next five trading days?
+    validation_plan:
+    - walk_forward validation restricted to bear_unwind segments
+    - CPCV across non-overlapping unwind episodes
+    - stress testing around major macro announcements and shock dates
+    - sensitivity to volatility deceleration
+    validations: []
+  lifecycle_state: APPROVED_FOR_TESTING
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-HYP-20260802-0402
+- IKROS-RQ-20260802-0402
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Forced deleveraging and inventory reduction can sustain downside pressure
+  before value-sensitive buyers re-enter the market.
+tags:
+- hypothesis
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Liquidation-pressure bear continuation
+updated_at: '2026-08-02T01:59:35.072679+00:00'
+valid_from: '2026-08-02T01:59:35.072679+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

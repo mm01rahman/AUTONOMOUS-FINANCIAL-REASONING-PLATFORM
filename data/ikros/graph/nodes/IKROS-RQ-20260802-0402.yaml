@@ -1,0 +1,78 @@
+attributes:
+  campaign_tag: PHASE-G-HYPOTHESIS-004
+  capability_refs: []
+  confidence:
+    data: 0.5
+    economic: 0.5
+    last_updated: '2026-08-02T01:59:35.136722+00:00'
+    model: 0.0
+    operational: 0.0
+    overall: 0.5
+    prior: 0.5
+    replication: 0.5
+    statistical: 0.5
+    validation: 0.5
+  entity_type: ResearchQuestion
+  ikros_id: IKROS-RQ-20260802-0402
+  instrument: XAU/USD
+  lifecycle_state: ACTIVE
+  lineage:
+    dependencies:
+      datasets: []
+      external_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+      features: []
+      inputs:
+      - IKROS-HYP-20260802-0402
+      models: []
+    evidence:
+      contradicting: []
+      ers_records:
+      - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T01:59:35.071678+00:00'
+      created_by: ikros-ingestion-engine
+      creation_context: INTERNAL_RESEARCH_REPORT
+      motivation: Forced deleveraging and inventory reduction can sustain downside
+        pressure before value-sensitive buyers re-enter the market.
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  linked_conclusions: []
+  linked_hypotheses:
+  - IKROS-HYP-20260802-0402
+  motivation: Forced deleveraging and inventory reduction can sustain downside pressure
+    before value-sensitive buyers re-enter the market.
+  scope: HYPOTHESIS_DISCOVERY
+  spec_refs:
+  - SPEC-012
+  - SPEC-060
+  time_horizon: 5D
+  title: Inside bear_unwind states, do persistent downside path pressure and elevated
+    volatility continue to dominate the next five trading days?
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.5
+created_at: '2026-08-02T01:59:35.071678+00:00'
+ikros_id: IKROS-RQ-20260802-0402
+label: Inside bear_unwind states, do persistent downside path pressure and elevated
+  volatility continue to dominate the next five trading days?
+node_id: IKROS-RQ-20260802-0402
+node_type: RESEARCH_QUESTION
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:59:35.071678+00:00'
+valid_to: null
+wp_refs: []

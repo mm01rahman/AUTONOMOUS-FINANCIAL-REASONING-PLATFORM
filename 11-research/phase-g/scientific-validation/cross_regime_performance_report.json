@@ -1,0 +1,47 @@
+[
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "persistent_event_count": 7,
+    "persistent_mean_return": 0.0298,
+    "scope_regime": "Bull Trend",
+    "transition_event_count": 17,
+    "transition_fragility": "HIGH",
+    "transition_mean_return": -0.005
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0402",
+    "persistent_event_count": 17,
+    "persistent_mean_return": 0.011,
+    "scope_regime": "Bear Unwind",
+    "transition_event_count": 26,
+    "transition_fragility": "HIGH",
+    "transition_mean_return": -0.0084
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0404",
+    "persistent_event_count": 3,
+    "persistent_mean_return": -0.0127,
+    "scope_regime": "Crisis Dislocation",
+    "transition_event_count": 2,
+    "transition_fragility": "LOW",
+    "transition_mean_return": 0.0117
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "persistent_event_count": 20,
+    "persistent_mean_return": 0.0146,
+    "scope_regime": "Macro Transition",
+    "transition_event_count": 79,
+    "transition_fragility": "HIGH",
+    "transition_mean_return": -0.0016
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "persistent_event_count": 0,
+    "persistent_mean_return": 0.0,
+    "scope_regime": "Macro Transition",
+    "transition_event_count": 7,
+    "transition_fragility": "ELEVATED",
+    "transition_mean_return": 0.0074
+  }
+]

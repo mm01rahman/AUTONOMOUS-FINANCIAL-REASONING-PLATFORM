@@ -1,0 +1,42 @@
+archived_at: null
+capability_refs: []
+confidence: 0.78
+created_at: '2026-08-02T02:37:46.459254+00:00'
+dependency_ids: []
+entity_type: KnowledgeObject
+evidence_refs:
+- 11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md
+graph_node_ids:
+- IKROS-KO-20260802-0702
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0106
+payload:
+  attributes:
+    hypothesis_id: IKROS-HYP-20260802-0401
+    recommendation: RETURN_FOR_VALIDATION
+    support_classification: SUPPORTS_CURRENT_HYPOTHESIS
+  lifecycle_state: ACTIVE
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-KO-20260802-0702
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Low-DXY-spillover H0401 events returned +1.36% on average across 12 events.
+tags:
+- knowledgeobject
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: IKROS-EXP-20260802-0602 diagnostic finding
+updated_at: '2026-08-02T02:37:46.459254+00:00'
+valid_from: '2026-08-02T02:37:46.459254+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

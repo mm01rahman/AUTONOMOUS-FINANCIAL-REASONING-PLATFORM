@@ -1,0 +1,18 @@
+attributes:
+  regime_label: macro_transition
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+  summary: Policy and cross-asset transition state that changes the ranking of research
+    hypotheses.
+confidence: 0.82
+created_at: '2026-08-02T01:43:01.847413+00:00'
+ikros_id: IKROS-REGIME-20260802-0205
+label: Macro Policy Transition
+node_id: IKROS-REGIME-20260802-0205
+node_type: REGIME
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:43:01.847413+00:00'
+valid_to: null
+wp_refs: []

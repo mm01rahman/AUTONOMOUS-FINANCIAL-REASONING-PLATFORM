@@ -1,0 +1,131 @@
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-ORCHESTRATOR
+- IKROS-CONFIDENCE
+completed_at: null
+confidence:
+  data: 0.78
+  economic: 0.63
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.61
+  operational: 0.66
+  overall: 0.5871015289164317
+  prior: 0.52
+  replication: 0.0
+  statistical: 0.46
+  validation: 0.45
+dataset_versions:
+- IKROS-DSV-20260802-0002
+entity_type: Experiment
+failures_produced: []
+feature_versions:
+- IKROS-FEAT-20260802-0201
+- IKROS-FEAT-20260802-0202
+- IKROS-FEAT-20260802-0203
+- IKROS-FEAT-20260802-0204
+- IKROS-FEAT-20260802-0205
+- IKROS-FEAT-20260802-0206
+- IKROS-FEAT-20260802-0207
+git_commit: 752f35c
+hypotheses:
+- IKROS-HYP-20260802-0002
+ikros_id: IKROS-EXP-20260802-0002
+in_sample_end: ''
+in_sample_start: ''
+lifecycle_state: REVIEWED
+lineage:
+  dependencies:
+    datasets:
+    - IKROS-DSV-20260802-0002
+    external_refs:
+    - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+    - 11-research/phase-e/regime_adaptation.json
+    features:
+    - IKROS-FEAT-20260802-0201
+    - IKROS-FEAT-20260802-0202
+    - IKROS-FEAT-20260802-0203
+    - IKROS-FEAT-20260802-0204
+    - IKROS-FEAT-20260802-0205
+    - IKROS-FEAT-20260802-0206
+    - IKROS-FEAT-20260802-0207
+    inputs:
+    - IKROS-HYP-20260802-0002
+    models:
+    - hidden_markov_models
+    - gaussian_mixture_models
+    - hierarchical_clustering
+    - spectral_clustering
+    - bayesian_change_point_detection
+    - density_based_clustering
+    - volatility_state_baseline
+    - deterministic_macro_event_overlay
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: campaign-0002-regime-discovery
+    creation_context: Campaign 0002 regime discovery
+    motivation: Run a governed comparison of candidate regime taxonomies on the frozen
+      AFRP research stack.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+out_of_sample_end: ''
+out_of_sample_start: ''
+parameters:
+  candidate_methods:
+  - hidden_markov_models
+  - gaussian_mixture_models
+  - hierarchical_clustering
+  - spectral_clustering
+  - bayesian_change_point_detection
+  - density_based_clustering
+  - volatility_state_baseline
+  - deterministic_macro_event_overlay
+  validation_floor:
+  - walk_forward
+  - cpcv
+  - monte_carlo
+  - sensitivity
+  - bootstrap
+  - stress
+  - out_of_sample_replay
+  - temporal_stability
+  - historical_event_validation
+protocol: Governed method comparison over deterministic and latent regime-taxonomy
+  candidates using existing Phase E and historical regime evidence.
+random_seed: 42
+reproducibility_hash: 63ab5b6ca9eb71291b24d45d5f2fcb6c3d13a0df51f82ea9f5738d3a6b06ea66
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+title: Campaign 0002 regime taxonomy method comparison
+validations_produced:
+- IKROS-VAL-20260802-0002
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T01:43:08.159948+00:00'
+  confidence_at_time: 0.5871015289164317
+  version: 1.0.0
+- change_summary: State → COMPLETE.
+  changed_at: '2026-08-02T01:43:08.163947+00:00'
+  confidence_at_time: 0.5871015289164317
+  version: 1.0.0
+- change_summary: State → REVIEWED.
+  changed_at: '2026-08-02T01:43:08.167947+00:00'
+  confidence_at_time: 0.5871015289164317
+  version: 1.0.0
+work_package_refs: []

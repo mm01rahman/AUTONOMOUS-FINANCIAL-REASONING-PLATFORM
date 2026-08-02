@@ -1,0 +1,36 @@
+{
+  "ikros_objects": [
+    {
+      "attributes": {
+        "further_research_count": 3,
+        "promoted_count": 0,
+        "rejected_count": 2
+      },
+      "confidence": 0.81,
+      "evidence_refs": [
+        "11-research/phase-g/scientific-validation/scientific_validation_analysis.json"
+      ],
+      "identifier": "IKROS-VAL-20260802-0005",
+      "lifecycle_state": "COMPLETE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Institutional scientific validation summary for the approved Campaign 0005 hypothesis set.",
+      "title": "Campaign 0005 umbrella validation",
+      "type": "Validation"
+    }
+  ],
+  "metadata": {
+    "evidence_refs": [
+      "11-research/phase-g/scientific-validation/scientific_validation_analysis.json",
+      "11-research/phase-g/scientific-validation/SCIENTIFIC_VALIDATION_CAMPAIGN.md"
+    ],
+    "source_kind": "VALIDATION_REPORT",
+    "specification_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "title": "Campaign 0005 scientific validation report"
+  }
+}

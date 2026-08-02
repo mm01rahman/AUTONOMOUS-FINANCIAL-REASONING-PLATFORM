@@ -1,0 +1,61 @@
+archived_at: null
+capability_refs: []
+confidence: 0.84
+created_at: '2026-08-02T02:18:14.160058+00:00'
+dependency_ids: []
+entity_type: KnowledgeObject
+evidence_refs:
+- 11-research/phase-g/scientific-validation/SCIENTIFIC_VALIDATION_CAMPAIGN.md
+graph_node_ids:
+- IKROS-KO-20260802-0500
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0091
+payload:
+  attributes:
+    validated_hypotheses:
+    - IKROS-HYP-20260802-0401
+    - IKROS-HYP-20260802-0402
+    - IKROS-HYP-20260802-0404
+    - IKROS-HYP-20260802-0405
+    - IKROS-HYP-20260802-0408
+    validation_protocol:
+      bootstrap: 1,000 event-return bootstrap means
+      concept_drift: Early-vs-late event mean drift
+      cpcv: Six contiguous time blocks with two-block held-out combinations and a
+        holding-period embargo approximation
+      monte_carlo: Event-return bootstrap path simulation
+      probability_of_backtest_overfitting: Not applicable because no parameter search
+        or model ranking occurred
+      sensitivity: Conservative, base, and permissive threshold variants
+      stress_testing:
+      - global_financial_crisis
+      - gold_liquidation_2013
+      - pandemic_2020
+      - inflation_repricing_2022
+      walk_forward: Four chronological event folds
+  lifecycle_state: ACTIVE
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-KO-20260802-0500
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Deterministic event-based validation methodology for governed regime-conditioned
+  AFRP hypotheses.
+tags:
+- knowledgeobject
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Campaign 0005 scientific validation methodology
+updated_at: '2026-08-02T02:18:14.160058+00:00'
+valid_from: '2026-08-02T02:18:14.160058+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

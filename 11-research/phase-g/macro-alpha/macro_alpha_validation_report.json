@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "source_kind": "VALIDATION_REPORT",
+    "title": "Phase G Macro Alpha validation synthesis",
+    "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+    "evidence_refs": [
+      "EXEC-041",
+      "11-research/phase-e/phase_e_summary.json",
+      "11-research/phase-e/promotion_assessment.json",
+      "11-research/phase-e/phase_e_final_report.md"
+    ]
+  },
+  "ikros_objects": [
+    {
+      "identifier": "IKROS-VAL-20260802-0001",
+      "type": "Validation",
+      "title": "Macro-only Phase E validation artifact",
+      "summary": "Validation synthesis for the Phase E macro-only candidate imported into IKROS.",
+      "lifecycle_state": "COMPLETE",
+      "confidence": 0.72,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["EXEC-041", "11-research/phase-e/promotion_assessment.json"],
+      "source_ids": ["IKROS-EXP-20260802-0001"],
+      "dependency_ids": ["IKROS-HYP-20260802-0001"],
+      "attributes": {
+        "validation_type": "baseline_audit",
+        "verdict": "FAIL",
+        "full_sample_sharpe": -2.127,
+        "walk_forward_sharpe": -1.9781,
+        "positive_fold_ratio": 0.0,
+        "ruin_probability": 0.0125,
+        "full_sample_expectancy_positive": false,
+        "required_tests_missing": [
+          "CPCV",
+          "DeflatedSharpeRatio",
+          "ProbabilisticSharpeRatio",
+          "WhitesRealityCheck",
+          "ProbabilityOfBacktestOverfitting"
+        ],
+        "failure_reasons": [
+          "full-sample expectancy not positive",
+          "full-sample sharpe not positive enough",
+          "full-sample sortino below governance bar",
+          "walk-forward out-of-sample edge not positive",
+          "insufficient positive walk-forward fold ratio"
+        ]
+      }
+    },
+    {
+      "identifier": "IKROS-EVIDENCE-20260802-0001",
+      "type": "Evidence",
+      "title": "Phase E Macro Alpha evidence bundle",
+      "summary": "Evidence bundle carrying the validated Phase E macro-only artifacts forward into Phase G.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.89,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["EXEC-041"],
+      "source_ids": ["IKROS-VAL-20260802-0001"],
+      "attributes": {
+        "evidence_bundle": [
+          "EXEC-041",
+          "11-research/phase-e/phase_e_summary.json",
+          "11-research/phase-e/phase_e_final_report.md"
+        ],
+        "quality_gates_passed": true
+      }
+    },
+    {
+      "identifier": "IKROS-ALPHACAND-20260802-0001",
+      "type": "AlphaCandidate",
+      "title": "Macro-only XAU/USD alpha candidate",
+      "summary": "Phase E macro-only baseline imported for Phase G governance review.",
+      "lifecycle_state": "CANDIDATE",
+      "confidence": 0.33,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["EXEC-041", "11-research/phase-e/phase_e_summary.json"],
+      "source_ids": ["IKROS-EXP-20260802-0001", "IKROS-HYP-20260802-0001"],
+      "attributes": {
+        "name": "macro_only_baseline",
+        "strategy_type": "MACRO",
+        "sharpe_oos": -1.9781,
+        "max_drawdown": 0.04441,
+        "direction_accuracy": 0.0,
+        "win_rate": 0.0,
+        "promotion_score": 0.0,
+        "promotion_status": "CANDIDATE",
+        "rejection_reasons": [],
+        "backtests": ["phase-e-macro-only"],
+        "walk_forwards": ["phase-e-wf-macro-only"],
+        "monte_carlos": ["phase-e-mc-macro-only"],
+        "implements_hypotheses": ["IKROS-HYP-20260802-0001"]
+      }
+    },
+    {
+      "identifier": "IKROS-CONTRA-20260802-0001",
+      "type": "ContradictoryEvidence",
+      "title": "Macro-only baseline contradiction",
+      "summary": "Phase E macro-only validation contradicts the expectation of durable XAU/USD macro edge.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.84,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["EXEC-041", "11-research/phase-e/promotion_assessment.json"],
+      "source_ids": ["IKROS-VAL-20260802-0001", "IKROS-EXP-20260802-0001"],
+      "attributes": {
+        "contradicts": [
+          "IKROS-HYP-20260802-0001",
+          "IKROS-ALPHACAND-20260802-0001"
+        ],
+        "severity": "MAJOR",
+        "reasons": [
+          "negative walk-forward Sharpe",
+          "zero positive fold ratio",
+          "candidate failed every promotion bar",
+          "required Phase G validation tests remain incomplete"
+        ]
+      }
+    },
+    {
+      "identifier": "IKROS-CONCL-20260802-0001",
+      "type": "ResearchConclusion",
+      "title": "Reject macro-only baseline advancement",
+      "summary": "The current macro-only XAU/USD baseline is preserved as institutional learning but not advanced for further promotion work.",
+      "lifecycle_state": "PUBLISHED",
+      "confidence": 0.78,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["EXEC-041", "11-research/phase-e/phase_e_final_report.md"],
+      "source_ids": [
+        "IKROS-HYP-20260802-0001",
+        "IKROS-VAL-20260802-0001",
+        "IKROS-CONTRA-20260802-0001"
+      ],
+      "dependency_ids": ["IKROS-RQ-20260802-0001"],
+      "attributes": {
+        "decision": "REJECT_BASELINE_ADVANCEMENT",
+        "recommendation": "Do not promote the macro-only baseline. Use it as a contradiction-rich starting point for regime-conditional and feature-discovery work.",
+        "next_programs": ["Regime Discovery", "Feature Discovery", "Causal Alpha"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "campaign": {
+    "title": "Campaign 0006 Institutional Alpha Failure Analysis",
+    "objective": "Explain why the retained Campaign 0005 institutional alpha hypotheses failed promotion and register governed refinement guidance without changing any hypothesis definition.",
+    "campaign_type": "RESEARCH_AUDIT",
+    "failure_policy": "FAIL_FAST",
+    "specification_refs": ["SPEC-012", "SPEC-060"],
+    "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-INGESTION"],
+    "work_package_refs": [],
+    "evidence_refs": [
+      "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+      "11-research/phase-g/failure-analysis/FAILURE_ANALYSIS_CAMPAIGN.md",
+      "11-research/phase-g/scientific-validation/scientific_validation_analysis.json",
+      "11-research/phase-g/scientific-validation/SCIENTIFIC_VALIDATION_FINAL_CAMPAIGN_REPORT.md"
+    ]
+  },
+  "ids": {
+    "research_question_id": "IKROS-RQ-20260802-0006",
+    "hypothesis_id": "IKROS-HYP-20260802-0006",
+    "experiment_id": "IKROS-EXP-20260802-0006",
+    "evidence_bundle_id": "IKROS-EVIDENCE-20260802-0006",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0006",
+    "research_conclusion_id": "IKROS-CONCL-20260802-0006"
+  },
+  "entities": {
+    "research_question": {
+      "ikros_id": "IKROS-RQ-20260802-0006",
+      "entity_type": "ResearchQuestion",
+      "version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "confidence": {
+        "prior": 0.56,
+        "statistical": 0.0,
+        "economic": 0.69,
+        "data": 0.81,
+        "model": 0.0,
+        "validation": 0.0,
+        "replication": 0.0,
+        "operational": 0.72,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0006-failure-analysis",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0006 failure analysis",
+          "motivation": "Determine why retained institutional hypotheses failed alpha-candidate promotion and what governed evidence gaps remain."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-RQ-20260802-0005"],
+          "datasets": ["IKROS-DSV-20260802-0006"],
+          "features": [
+            "IKROS-FEAT-20260802-0301",
+            "IKROS-FEAT-20260802-0302",
+            "IKROS-FEAT-20260802-0303",
+            "IKROS-FEAT-20260802-0304",
+            "IKROS-FEAT-20260802-0305",
+            "IKROS-FEAT-20260802-0306",
+            "IKROS-FEAT-20260802-0308",
+            "IKROS-FEAT-20260802-0309",
+            "IKROS-FEAT-20260802-0310",
+            "IKROS-FEAT-20260802-0311",
+            "IKROS-FEAT-20260802-0312"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": [
+            "11-research/phase-g/scientific-validation/scientific_validation_analysis.json"
+          ]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Why did the retained institutional alpha hypotheses fail promotion after Campaign 0005 scientific validation?",
+      "motivation": "Campaign 0005 retained three hypotheses for further research but promoted none; Campaign 0006 must explain the failure without changing the hypotheses.",
+      "scope": "FAILURE_ANALYSIS",
+      "instrument": "XAU/USD",
+      "time_horizon": "1D-10D",
+      "campaign_tag": "PHASE-G-FAILURE-006",
+      "linked_hypotheses": [],
+      "linked_conclusions": []
+    },
+    "hypothesis": {
+      "ikros_id": "IKROS-HYP-20260802-0006",
+      "entity_type": "Hypothesis",
+      "version": "1.0.0",
+      "lifecycle_state": "APPROVED_FOR_TESTING",
+      "confidence": {
+        "prior": 0.55,
+        "statistical": 0.0,
+        "economic": 0.68,
+        "data": 0.81,
+        "model": 0.0,
+        "validation": 0.0,
+        "replication": 0.0,
+        "operational": 0.71,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0006-failure-analysis",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0006 failure analysis",
+          "motivation": "Represent the governed claim that the retained hypotheses' promotion failures can be explained through deterministic root-cause analysis."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-RQ-20260802-0006"],
+          "datasets": ["IKROS-DSV-20260802-0006"],
+          "features": [
+            "IKROS-FEAT-20260802-0301",
+            "IKROS-FEAT-20260802-0302",
+            "IKROS-FEAT-20260802-0303",
+            "IKROS-FEAT-20260802-0304",
+            "IKROS-FEAT-20260802-0305",
+            "IKROS-FEAT-20260802-0306",
+            "IKROS-FEAT-20260802-0308",
+            "IKROS-FEAT-20260802-0309",
+            "IKROS-FEAT-20260802-0310",
+            "IKROS-FEAT-20260802-0311",
+            "IKROS-FEAT-20260802-0312"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": ["11-research/phase-g/failure-analysis/failure_analysis_analysis.json"]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-INGESTION"],
+      "work_package_refs": [],
+      "version_history": [],
+      "statement": "A governed failure-analysis pass can identify the dominant non-promotion drivers for the retained institutional hypotheses without changing the hypotheses themselves.",
+      "null_hypothesis": "H0: The retained hypotheses' non-promotion cannot be explained in a governed, reproducible way.",
+      "alternative_hypothesis": "H1: The retained hypotheses' non-promotion can be explained through deterministic root-cause analysis and evidence-gap assessment.",
+      "significance_level": 0.05,
+      "power": 0.8,
+      "prior_confidence": 0.55,
+      "posterior_confidence": 0.0,
+      "source_rq": "IKROS-RQ-20260802-0006",
+      "motivating_theses": [],
+      "experiments": [],
+      "validations": [],
+      "contradictions": []
+    },
+    "experiment": {
+      "ikros_id": "IKROS-EXP-20260802-0006",
+      "entity_type": "Experiment",
+      "version": "1.0.0",
+      "lifecycle_state": "RUNNING",
+      "confidence": {
+        "prior": 0.56,
+        "statistical": 0.0,
+        "economic": 0.68,
+        "data": 0.82,
+        "model": 0.0,
+        "validation": 0.0,
+        "replication": 0.0,
+        "operational": 0.72,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0006-failure-analysis",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0006 failure analysis",
+          "motivation": "Execute the governed root-cause analysis for the retained Campaign 0005 hypotheses."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-HYP-20260802-0006"],
+          "datasets": ["IKROS-DSV-20260802-0006"],
+          "features": [
+            "IKROS-FEAT-20260802-0301",
+            "IKROS-FEAT-20260802-0302",
+            "IKROS-FEAT-20260802-0303",
+            "IKROS-FEAT-20260802-0304",
+            "IKROS-FEAT-20260802-0305",
+            "IKROS-FEAT-20260802-0306",
+            "IKROS-FEAT-20260802-0308",
+            "IKROS-FEAT-20260802-0309",
+            "IKROS-FEAT-20260802-0310",
+            "IKROS-FEAT-20260802-0311",
+            "IKROS-FEAT-20260802-0312"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": [
+            "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+            "11-research/phase-g/scientific-validation/scientific_validation_analysis.json"
+          ]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-INGESTION"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Campaign 0006 institutional alpha failure analysis",
+      "hypotheses": [
+        "IKROS-HYP-20260802-0401",
+        "IKROS-HYP-20260802-0405",
+        "IKROS-HYP-20260802-0408"
+      ],
+      "protocol": "Reuse the frozen validation frame and Campaign 0005 outputs to analyse regime fragility, temporal degradation, feature redundancy, evidence gaps, and recommended governed follow-up experiments.",
+      "dataset_versions": ["IKROS-DSV-20260802-0006"],
+      "feature_versions": [
+        "IKROS-FEAT-20260802-0301",
+        "IKROS-FEAT-20260802-0302",
+        "IKROS-FEAT-20260802-0303",
+        "IKROS-FEAT-20260802-0304",
+        "IKROS-FEAT-20260802-0305",
+        "IKROS-FEAT-20260802-0306",
+        "IKROS-FEAT-20260802-0308",
+        "IKROS-FEAT-20260802-0309",
+        "IKROS-FEAT-20260802-0310",
+        "IKROS-FEAT-20260802-0311",
+        "IKROS-FEAT-20260802-0312"
+      ],
+      "parameters": {
+        "retained_hypotheses": [
+          "IKROS-HYP-20260802-0401",
+          "IKROS-HYP-20260802-0405",
+          "IKROS-HYP-20260802-0408"
+        ],
+        "governance_constraints": [
+          "no runtime changes",
+          "no infrastructure changes",
+          "no hypothesis mutation",
+          "no parameter optimization",
+          "no promotion"
+        ]
+      },
+      "random_seed": 42,
+      "in_sample_start": "",
+      "in_sample_end": "",
+      "out_of_sample_start": "",
+      "out_of_sample_end": "",
+      "reproducibility_hash": "",
+      "git_commit": "",
+      "completed_at": null,
+      "validations_produced": [],
+      "failures_produced": []
+    }
+  },
+  "task_payloads": {
+    "RESEARCH_QUESTION": {},
+    "KNOWLEDGE_REGISTRATION": {
+      "source_path": "11-research/phase-g/failure-analysis/failure_analysis_knowledge.json"
+    },
+    "HYPOTHESIS_REGISTRATION": {},
+    "EXPERIMENT_REGISTRATION": {},
+    "FINAL_REPORT": {}
+  },
+  "post_run": {
+    "research_question_state": "ANSWERED",
+    "hypothesis_states": ["INCONCLUSIVE"],
+    "experiment_states": ["COMPLETE", "REVIEWED"],
+    "arb_recommendation": "Preserve the retained hypotheses unchanged, treat IKROS-HYP-20260802-0401 and IKROS-HYP-20260802-0405 as transition-fragility refinement cases, treat IKROS-HYP-20260802-0408 as a sparse-episode coverage case, and run only the governed diagnostic backlog before any later promotion review."
+  }
+}

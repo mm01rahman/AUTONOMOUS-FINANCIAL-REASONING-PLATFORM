@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: FEATURE_EVALUATION
+  entity_type: ResearchCampaign
+  objective: Discover which features preserve explanatory and predictive value inside
+    the accepted six-state taxonomy, register the approved catalogue, and reject redundant
+    or unstable candidates.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0003
+confidence: 0.0
+created_at: '2026-08-02T01:51:22.474213+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0003
+label: Campaign 0003 Feature Discovery
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0003
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

@@ -1,0 +1,78 @@
+attributes:
+  capability_refs: []
+  computation: 10Y minus 3M yield spread proxy.
+  confidence:
+    data: 0.62
+    economic: 0.62
+    last_updated: '2026-08-02T01:27:41.721621+00:00'
+    model: 0.0
+    operational: 0.0
+    overall: 0.62
+    prior: 0.62
+    replication: 0.62
+    statistical: 0.62
+    validation: 0.62
+  entity_type: Feature
+  family_id: IKROS-FF-20260802-0001
+  ikros_id: IKROS-FEAT-20260802-0003
+  information_content: 0.29
+  inputs:
+  - us10y
+  - us3m
+  lifecycle_state: VALIDATED
+  lineage:
+    dependencies:
+      datasets: []
+      external_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_knowledge.json
+      features: []
+      inputs:
+      - IKROS-DSV-20260802-0001
+      models: []
+    evidence:
+      contradicting: []
+      ers_records:
+      - 11-research/phase-e/feature_importance.json
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T01:27:41.710581+00:00'
+      created_by: ikros-ingestion-engine
+      creation_context: INTERNAL_RESEARCH_REPORT
+      motivation: Ingested from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_knowledge.json
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  lookback: spot
+  name: yield_curve_10y_3m
+  normalization: level
+  spec_refs:
+  - SPEC-012
+  - SPEC-060
+  stability_score: 0.46
+  stationarity: UNKNOWN
+  superseded_by: null
+  used_in_experiments: []
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.62
+created_at: '2026-08-02T01:27:41.710581+00:00'
+ikros_id: IKROS-FEAT-20260802-0003
+label: Yield curve 10Y-3M spread
+node_id: IKROS-FEAT-20260802-0003
+node_type: FEATURE
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:27:41.710581+00:00'
+valid_to: null
+wp_refs: []

@@ -1,0 +1,38 @@
+assessment_id: ICA-20260802-0002
+capability_refs:
+- ALPHA-RESEARCH
+history_id: ICH-20260802-0002
+new_confidence:
+  data: 0.198
+  economic: 0.198
+  experimental: 0.51
+  last_updated: '2026-08-02T01:27:44.593889+00:00'
+  operational: 0.46799999999999997
+  overall: 0.0
+  prior: 0.33
+  replication: 0.0
+  statistical: 0.198
+  validation: 0.54
+operator: ikros-confidence-engine
+previous_confidence:
+  data: 0.33
+  economic: 0.33
+  experimental: 0.0
+  last_updated: '2026-08-02T01:27:42.848115+00:00'
+  operational: 0.0
+  overall: 0.0
+  prior: 0.33
+  replication: 0.33
+  statistical: 0.33
+  validation: 0.33
+reason: Phase G Macro Alpha candidate review
+specification_refs:
+- SPEC-060
+supporting_evidence:
+- PHASEG-MACRO-EVID-002
+- PHASEG-MACRO-EVID-003
+target_id: IKROS-ALPHACAND-20260802-0001
+target_type: AlphaCandidate
+timestamp: '2026-08-02T01:27:44.603890+00:00'
+work_package_refs:
+- WP-IMP-0039

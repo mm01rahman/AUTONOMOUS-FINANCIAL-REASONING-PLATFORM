@@ -1,0 +1,30 @@
+attributes:
+  recommended_experiments:
+  - IKROS-EXP-20260802-0605
+  - IKROS-EXP-20260802-0606
+  - IKROS-EXP-20260802-0603
+  - IKROS-EXP-20260802-0604
+  - IKROS-EXP-20260802-0601
+  - IKROS-EXP-20260802-0602
+  retained_hypotheses:
+  - IKROS-HYP-20260802-0401
+  - IKROS-HYP-20260802-0405
+  - IKROS-HYP-20260802-0408
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_knowledge.json
+  summary: 'ARB recommendation: preserve the retained hypothesis set unchanged, treat
+    IKROS-HYP-20260802-0401 and IKROS-HYP-20260802-0405 as transition-fragility refinement
+    cases, treat IKROS-HYP-20260802-0408 as a sparse-episode coverage case, and execute
+    only the recommended diagnostic experiments before Campaign 0007.'
+confidence: 0.8
+created_at: '2026-08-02T02:28:53.148775+00:00'
+ikros_id: IKROS-KO-20260802-0606
+label: Campaign 0006 final conclusion
+node_id: IKROS-KO-20260802-0606
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T02:28:53.148775+00:00'
+valid_to: null
+wp_refs: []

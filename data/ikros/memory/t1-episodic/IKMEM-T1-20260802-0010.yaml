@@ -1,0 +1,194 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:27:42.951165+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0007
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/phase_e_final_report.md
+- 11-research/phase-e/phase_e_summary.json
+- EXEC-041
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0001
+- IKROS-RESEARCHTASK-20260802-0008
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0010
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0001
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0007
+    finished_at: '2026-08-02T01:27:42.951165+00:00'
+    kind: VALIDATION_REQUEST
+    max_attempts: 1
+    payload:
+      source_path: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_validation_report.json
+    planned_order: 8
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0008
+      memory_record_id: null
+      metrics:
+        graph_node_ids:
+        - IKROS-VAL-20260802-0001
+        - IKROS-EVIDENCE-20260802-0001
+        - IKROS-ALPHACAND-20260802-0001
+        - IKROS-CONTRA-20260802-0001
+        - IKROS-CONCL-20260802-0001
+        ingestion_status: INGESTED
+        memory_ids:
+        - IKMEM-T1-20260802-0008
+        - IKMEM-T1-20260802-0009
+        - IKMEM-T4-20260802-0002
+        - IKMEM-T2-20260802-0009
+        - IKMEM-T4-20260802-0003
+      output_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_validation_report.json
+      - IKROS-ALPHACAND-20260802-0001
+      - IKROS-CONCL-20260802-0001
+      - IKROS-CONTRA-20260802-0001
+      - IKROS-EVIDENCE-20260802-0001
+      - IKROS-VAL-20260802-0001
+      - macro_alpha_validation_report
+      payload:
+        graph_node_ids:
+        - IKROS-VAL-20260802-0001
+        - IKROS-EVIDENCE-20260802-0001
+        - IKROS-ALPHACAND-20260802-0001
+        - IKROS-CONTRA-20260802-0001
+        - IKROS-CONCL-20260802-0001
+        ingested_at: '2026-08-02T01:27:42.945164+00:00'
+        ingestion_id: IKING-20260802-0003
+        memory_ids:
+        - IKMEM-T1-20260802-0008
+        - IKMEM-T1-20260802-0009
+        - IKMEM-T4-20260802-0002
+        - IKMEM-T2-20260802-0009
+        - IKMEM-T4-20260802-0003
+        object_fingerprints:
+        - '{"attributes": {"failure_reasons": ["full-sample expectancy not positive",
+          "full-sample sharpe not positive enough", "full-sample sortino below governance
+          bar", "walk-forward out-of-sample edge not positive", "insufficient positive
+          walk-forward fold ratio"], "full_sample_expectancy_positive": false, "full_sample_sharpe":
+          -2.127, "positive_fold_ratio": 0.0, "required_tests_missing": ["CPCV", "DeflatedSharpeRatio",
+          "ProbabilisticSharpeRatio", "WhitesRealityCheck", "ProbabilityOfBacktestOverfitting"],
+          "ruin_probability": 0.0125, "validation_type": "baseline_audit", "verdict":
+          "FAIL", "walk_forward_sharpe": -1.9781}, "capability_refs": [], "confidence":
+          0.72, "created_at": "2026-08-02T01:27:42.840118+00:00", "dependency_ids":
+          ["IKROS-HYP-20260802-0001"], "evidence_refs": ["11-research/phase-e/promotion_assessment.json",
+          "EXEC-041"], "identifier": "IKROS-VAL-20260802-0001", "lifecycle_state":
+          "COMPLETE", "memory_tier": null, "object_type": "Validation", "relationships":
+          [], "source_format": "JSON", "source_ids": ["IKROS-EXP-20260802-0001"],
+          "source_kind": "VALIDATION_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_validation_report.json",
+          "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Validation
+          synthesis for the Phase E macro-only candidate imported into IKROS.", "title":
+          "Macro-only Phase E validation artifact", "version": "1.0.0", "work_package_refs":
+          []}'
+        - '{"attributes": {"evidence_bundle": ["EXEC-041", "11-research/phase-e/phase_e_summary.json",
+          "11-research/phase-e/phase_e_final_report.md"], "quality_gates_passed":
+          true}, "capability_refs": [], "confidence": 0.89, "created_at": "2026-08-02T01:27:42.840118+00:00",
+          "dependency_ids": [], "evidence_refs": ["EXEC-041"], "identifier": "IKROS-EVIDENCE-20260802-0001",
+          "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type": "Evidence",
+          "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-VAL-20260802-0001"],
+          "source_kind": "VALIDATION_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_validation_report.json",
+          "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Evidence
+          bundle carrying the validated Phase E macro-only artifacts forward into
+          Phase G.", "title": "Phase E Macro Alpha evidence bundle", "version": "1.0.0",
+          "work_package_refs": []}'
+        - '{"attributes": {"backtests": ["phase-e-macro-only"], "direction_accuracy":
+          0.0, "implements_hypotheses": ["IKROS-HYP-20260802-0001"], "max_drawdown":
+          0.04441, "monte_carlos": ["phase-e-mc-macro-only"], "name": "macro_only_baseline",
+          "promotion_score": 0.0, "promotion_status": "CANDIDATE", "rejection_reasons":
+          [], "sharpe_oos": -1.9781, "strategy_type": "MACRO", "walk_forwards": ["phase-e-wf-macro-only"],
+          "win_rate": 0.0}, "capability_refs": [], "confidence": 0.33, "created_at":
+          "2026-08-02T01:27:42.840118+00:00", "dependency_ids": [], "evidence_refs":
+          ["11-research/phase-e/phase_e_summary.json", "EXEC-041"], "identifier":
+          "IKROS-ALPHACAND-20260802-0001", "lifecycle_state": "CANDIDATE", "memory_tier":
+          null, "object_type": "AlphaCandidate", "relationships": [], "source_format":
+          "JSON", "source_ids": ["IKROS-EXP-20260802-0001", "IKROS-HYP-20260802-0001"],
+          "source_kind": "VALIDATION_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_validation_report.json",
+          "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Phase
+          E macro-only baseline imported for Phase G governance review.", "title":
+          "Macro-only XAU/USD alpha candidate", "version": "1.0.0", "work_package_refs":
+          []}'
+        - '{"attributes": {"contradicts": ["IKROS-HYP-20260802-0001", "IKROS-ALPHACAND-20260802-0001"],
+          "reasons": ["negative walk-forward Sharpe", "zero positive fold ratio",
+          "candidate failed every promotion bar", "required Phase G validation tests
+          remain incomplete"], "severity": "MAJOR"}, "capability_refs": [], "confidence":
+          0.84, "created_at": "2026-08-02T01:27:42.840118+00:00", "dependency_ids":
+          [], "evidence_refs": ["11-research/phase-e/promotion_assessment.json", "EXEC-041"],
+          "identifier": "IKROS-CONTRA-20260802-0001", "lifecycle_state": "ACTIVE",
+          "memory_tier": null, "object_type": "ContradictoryEvidence", "relationships":
+          [], "source_format": "JSON", "source_ids": ["IKROS-EXP-20260802-0001", "IKROS-VAL-20260802-0001"],
+          "source_kind": "VALIDATION_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_validation_report.json",
+          "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Phase
+          E macro-only validation contradicts the expectation of durable XAU/USD macro
+          edge.", "title": "Macro-only baseline contradiction", "version": "1.0.0",
+          "work_package_refs": []}'
+        - '{"attributes": {"decision": "REJECT_BASELINE_ADVANCEMENT", "next_programs":
+          ["Regime Discovery", "Feature Discovery", "Causal Alpha"], "recommendation":
+          "Do not promote the macro-only baseline. Use it as a contradiction-rich
+          starting point for regime-conditional and feature-discovery work."}, "capability_refs":
+          [], "confidence": 0.78, "created_at": "2026-08-02T01:27:42.840118+00:00",
+          "dependency_ids": ["IKROS-RQ-20260802-0001"], "evidence_refs": ["11-research/phase-e/phase_e_final_report.md",
+          "EXEC-041"], "identifier": "IKROS-CONCL-20260802-0001", "lifecycle_state":
+          "PUBLISHED", "memory_tier": null, "object_type": "ResearchConclusion", "relationships":
+          [], "source_format": "JSON", "source_ids": ["IKROS-CONTRA-20260802-0001",
+          "IKROS-HYP-20260802-0001", "IKROS-VAL-20260802-0001"], "source_kind": "VALIDATION_REPORT",
+          "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_validation_report.json",
+          "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "The
+          current macro-only XAU/USD baseline is preserved as institutional learning
+          but not advanced for further promotion work.", "title": "Reject macro-only
+          baseline advancement", "version": "1.0.0", "work_package_refs": []}'
+        object_ids:
+        - IKROS-VAL-20260802-0001
+        - IKROS-EVIDENCE-20260802-0001
+        - IKROS-ALPHACAND-20260802-0001
+        - IKROS-CONTRA-20260802-0001
+        - IKROS-CONCL-20260802-0001
+        source_format: JSON
+        source_hash: 74b9754c95bfda838366fdd9ee0c3c2d715bf6834be3b0cbb65ef2b8e3e6cca1
+        source_kind: VALIDATION_REPORT
+        source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_validation_report.json
+        source_version: 1.0.0
+        status: INGESTED
+        warnings: []
+      selected_ids: []
+    started_at: '2026-08-02T01:27:42.766075+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0008
+    title: Validation Request
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0001
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_validation_report.json
+- IKROS-ALPHACAND-20260802-0001
+- IKROS-CONCL-20260802-0001
+- IKROS-CONTRA-20260802-0001
+- IKROS-EVIDENCE-20260802-0001
+- IKROS-VAL-20260802-0001
+- macro_alpha_validation_report
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: VALIDATION_REQUEST COMPLETED
+tags:
+- research-orchestrator
+- validation_request
+tier: T1_EPISODIC
+title: 'Phase G Macro Alpha baseline audit :: Validation Request'
+updated_at: '2026-08-02T01:27:42.951165+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

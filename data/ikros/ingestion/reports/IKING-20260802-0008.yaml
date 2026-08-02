@@ -1,0 +1,367 @@
+graph_node_ids:
+- IKROS-DS-20260802-0003
+- IKROS-DSV-20260802-0003
+- IKROS-KO-20260802-0301
+- IKROS-FF-20260802-0301
+- IKROS-FEAT-20260802-0301
+- IKROS-FEAT-20260802-0302
+- IKROS-FEAT-20260802-0303
+- IKROS-FEAT-20260802-0304
+- IKROS-FEAT-20260802-0305
+- IKROS-FEAT-20260802-0306
+- IKROS-FEAT-20260802-0307
+- IKROS-FEAT-20260802-0308
+- IKROS-FEAT-20260802-0309
+- IKROS-FEAT-20260802-0310
+- IKROS-FEAT-20260802-0311
+- IKROS-FEAT-20260802-0312
+- IKROS-KO-20260802-0321
+- IKROS-KO-20260802-0322
+- IKROS-KO-20260802-0323
+- IKROS-KO-20260802-0324
+- IKROS-KO-20260802-0325
+- IKROS-KO-20260802-0326
+- IKROS-KO-20260802-0327
+ingested_at: '2026-08-02T01:51:25.523916+00:00'
+ingestion_id: IKING-20260802-0008
+memory_ids:
+- IKMEM-T2-20260802-0040
+- IKMEM-T2-20260802-0041
+- IKMEM-T2-20260802-0042
+- IKMEM-T2-20260802-0043
+- IKMEM-T2-20260802-0044
+- IKMEM-T2-20260802-0045
+- IKMEM-T2-20260802-0046
+- IKMEM-T2-20260802-0047
+- IKMEM-T2-20260802-0048
+- IKMEM-T2-20260802-0049
+- IKMEM-T2-20260802-0050
+- IKMEM-T2-20260802-0051
+- IKMEM-T2-20260802-0052
+- IKMEM-T2-20260802-0053
+- IKMEM-T2-20260802-0054
+- IKMEM-T2-20260802-0055
+- IKMEM-T2-20260802-0056
+- IKMEM-T2-20260802-0057
+- IKMEM-T2-20260802-0058
+- IKMEM-T2-20260802-0059
+- IKMEM-T2-20260802-0060
+- IKMEM-T2-20260802-0061
+- IKMEM-T2-20260802-0062
+object_fingerprints:
+- '{"attributes": {"candidate_feature_count": 34, "coverage_rows": 6257, "granularity":
+  "1D", "instrument": "XAU/USD"}, "capability_refs": [], "confidence": 0.9, "created_at":
+  "2026-08-02T01:51:25.063258+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-DS-20260802-0003", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "Dataset", "relationships": [], "source_format": "JSON", "source_ids":
+  [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Governed XAU/USD feature
+  matrix conditioned on the accepted six-state taxonomy.", "title": "Campaign 0003
+  governed feature-discovery dataset", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_feature_count": 12, "feature_count": 34, "version_label":
+  "campaign-0003-feature-discovery"}, "capability_refs": [], "confidence": 0.88, "created_at":
+  "2026-08-02T01:51:25.063258+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-DSV-20260802-0003", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "DatasetVersion", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-DS-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Snapshot used for regime-conditioned
+  feature discovery under the accepted six-state taxonomy.", "title": "Campaign 0003
+  feature discovery dataset snapshot", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"excluded_methods": ["recursive_feature_elimination", "shap"],
+  "selected_methods": ["mutual_information", "conditional_mutual_information_proxy",
+  "correlation_stability", "bootstrap_sign_consistency", "redundancy_pruning", "interaction_review"]},
+  "capability_refs": [], "confidence": 0.83, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/FEATURE_DISCOVERY_CAMPAIGN.md"],
+  "identifier": "IKROS-KO-20260802-0301", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Institutional review
+  of feature selection, redundancy control, and regime-conditioned explanatory variables.",
+  "title": "Campaign 0003 literature and methodology review", "version": "1.0.0",
+  "work_package_refs": []}'
+- '{"attributes": {"member_features": ["IKROS-FEAT-20260802-0301", "IKROS-FEAT-20260802-0302",
+  "IKROS-FEAT-20260802-0303", "IKROS-FEAT-20260802-0304", "IKROS-FEAT-20260802-0305",
+  "IKROS-FEAT-20260802-0306", "IKROS-FEAT-20260802-0307", "IKROS-FEAT-20260802-0308",
+  "IKROS-FEAT-20260802-0309", "IKROS-FEAT-20260802-0310", "IKROS-FEAT-20260802-0311",
+  "IKROS-FEAT-20260802-0312"], "name": "institutional_regime_conditioned_feature_catalogue_v1"},
+  "capability_refs": [], "confidence": 0.84, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FF-20260802-0301", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "FeatureFamily", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Institutional feature
+  family approved by Campaign 0003 for future hypothesis generation.", "title": "Regime-conditioned
+  approved feature catalogue", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["bull_trend", "calm_carry"], "classification":
+  "cross_regime_anchor", "economic_rationale": "Medium-horizon path dependence remains
+  informative once the institutional regime is known.", "family_id": "IKROS-FF-20260802-0301",
+  "max_score": 5.804079, "mean_score": 2.266615, "name": "regime_return_60", "robust_regime_count":
+  6}, "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0301", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Cross-regime anchor
+  summarizing medium-horizon gold context after conditioning on the six-state taxonomy.",
+  "title": "60-bar regime return anchor", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"approved_regimes": ["bull_trend", "bear_unwind"], "classification":
+  "cross_regime_anchor", "economic_rationale": "Twenty-bar return pressure captures
+  the direction and exhaustion of the current gold move.", "family_id": "IKROS-FF-20260802-0301",
+  "max_score": 5.735729, "mean_score": 2.420681, "name": "xau_return_20", "robust_regime_count":
+  6}, "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0302", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Cross-regime return
+  anchor identifying whether the current state is extended or resetting.", "title":
+  "20-bar XAU/USD return context", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["bull_trend", "crisis_dislocation"], "classification":
+  "cross_regime_anchor", "economic_rationale": "Short downside stress continues to
+  separate fragile rallies from durable ones.", "family_id": "IKROS-FF-20260802-0301",
+  "max_score": 5.252243, "mean_score": 1.595132, "name": "breakdown_20", "robust_regime_count":
+  5}, "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0303", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Drawdown and liquidation
+  diagnostic that remains informative in bull, crisis, and compression states.", "title":
+  "20-bar breakdown persistence", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["bull_trend", "range_compression"], "classification":
+  "regime_specific", "economic_rationale": "Expectation repricing is informative when
+  macro states dominate cross-asset capital rotation.", "family_id": "IKROS-FF-20260802-0301",
+  "max_score": 4.421733, "mean_score": 1.206005, "name": "forward_expectation", "robust_regime_count":
+  5}, "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0304", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Expectation proxy used
+  where USD and rate repricing matter more than pure gold momentum.", "title": "Forward
+  expectation spread", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["bear_unwind", "calm_carry", "range_compression"],
+  "classification": "cross_regime_anchor", "economic_rationale": "Risk transfer speed
+  remains one of the few universally informative state variables.", "family_id": "IKROS-FF-20260802-0301",
+  "max_score": 3.588049, "mean_score": 1.288821, "name": "regime_vol_20", "robust_regime_count":
+  4}, "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0305", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Volatility anchor preserved
+  in every regime, even when its directional sign changes.", "title": "20-bar regime
+  volatility", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["bear_unwind"], "classification": "regime_specific",
+  "economic_rationale": "Long-horizon trend persistence matters most when a downside
+  unwind must be distinguished from noise.", "family_id": "IKROS-FF-20260802-0301",
+  "max_score": 2.268214, "mean_score": 1.453452, "name": "trend_gap_30_180", "robust_regime_count":
+  5}, "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0306", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Long/short trend separation
+  approved primarily for unwind diagnostics.", "title": "30/180 trend persistence
+  gap", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["calm_carry", "range_compression"], "classification":
+  "cross_regime_anchor", "economic_rationale": "Macro pressure only becomes economically
+  useful once paired with the prevailing directional trend.", "family_id": "IKROS-FF-20260802-0301",
+  "max_score": 3.754065, "mean_score": 1.235388, "name": "macro_trend_interaction",
+  "robust_regime_count": 5}, "capability_refs": [], "confidence": 0.8, "created_at":
+  "2026-08-02T01:51:25.063258+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0307", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Interaction term combining
+  macro pressure with trend persistence to suppress misleading standalone macro signals.",
+  "title": "Macro/trend interaction", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["crisis_dislocation"], "classification": "regime_specific",
+  "economic_rationale": "Breakout distance becomes critical only when crisis liquidity
+  shocks stretch the tape.", "family_id": "IKROS-FF-20260802-0301", "max_score": 7.139034,
+  "mean_score": 1.928689, "name": "breakout_60", "robust_regime_count": 5}, "capability_refs":
+  [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0308", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Crisis-state expansion
+  feature used to distinguish continuation from dislocation exhaustion.", "title":
+  "60-bar breakout expansion", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["crisis_dislocation"], "classification": "cross_regime_anchor",
+  "economic_rationale": "Intermediate trend slope helps distinguish shock continuation
+  from rapid mean reversion.", "family_id": "IKROS-FF-20260802-0301", "max_score":
+  4.10289, "mean_score": 1.695724, "name": "trend_gap_20_120", "robust_regime_count":
+  5}, "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0309", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Intermediate trend anchor
+  promoted for crisis and unwind contexts with high path dependence.", "title": "20/120
+  trend slope gap", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["macro_transition"], "classification": "regime_specific",
+  "economic_rationale": "Immediate gold response is most informative when policy or
+  event transitions reset positioning.", "family_id": "IKROS-FF-20260802-0301", "max_score":
+  1.491782, "mean_score": 0.70773, "name": "xau_return_1", "robust_regime_count":
+  5}, "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0310", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Short-horizon reaction
+  feature approved only for transition states.", "title": "1-bar XAU/USD reaction",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["macro_transition"], "classification": "regime_specific",
+  "economic_rationale": "Breakout information is only investable when aligned with
+  a broader directional structure.", "family_id": "IKROS-FF-20260802-0301", "max_score":
+  2.486626, "mean_score": 1.155253, "name": "trend_breakout_interaction", "robust_regime_count":
+  5}, "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0311", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Regime-specific interaction
+  term that isolates event-driven continuation from ordinary trend following.", "title":
+  "Trend/breakout interaction", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"approved_regimes": ["macro_transition"], "classification": "regime_specific",
+  "economic_rationale": "Event counts matter only when they amplify an already material
+  macro-pressure shift.", "family_id": "IKROS-FF-20260802-0301", "max_score": 2.386009,
+  "mean_score": 0.970465, "name": "sessionless_event_pressure", "robust_regime_count":
+  5}, "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0312", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0003"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Sparse event-pressure
+  interaction reserved for macro-transition campaigns.", "title": "Event pressure
+  interaction", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"best_regime": "bull_trend", "decision": "REJECT", "feature_name":
+  "macro_pressure", "max_score": 3.219999, "reason": "Retained as a regime-defining
+  context variable, but rejected as a standalone predictive feature."}, "capability_refs":
+  [], "confidence": 0.71, "created_at": "2026-08-02T01:51:25.063258+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0321", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-KO-20260802-0301"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Rejected from the approved
+  regime-conditioned catalogue.", "title": "Standalone macro pressure review", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"best_regime": "macro_transition", "decision": "REJECT", "feature_name":
+  "micro_momentum", "max_score": 1.132776, "reason": "Too redundant with one-bar gold
+  reaction during transitions and too weak elsewhere."}, "capability_refs": [], "confidence":
+  0.71, "created_at": "2026-08-02T01:51:25.063258+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"], "identifier":
+  "IKROS-KO-20260802-0322", "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type":
+  "KnowledgeObject", "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-KO-20260802-0301"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Rejected from the approved
+  regime-conditioned catalogue.", "title": "Standalone micro momentum review", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"best_regime": "bull_trend", "decision": "REJECT", "feature_name":
+  "dxy_return_20", "max_score": 4.356993, "reason": "Rejected because its utility
+  is absorbed by forward expectation once regime is conditioned."}, "capability_refs":
+  [], "confidence": 0.71, "created_at": "2026-08-02T01:51:25.063258+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0323", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-KO-20260802-0301"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Rejected from the approved
+  regime-conditioned catalogue.", "title": "20-bar DXY return review", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"best_regime": "bull_trend", "decision": "REJECT", "feature_name":
+  "vol_macro_interaction", "max_score": 2.525046, "reason": "Interaction complexity
+  did not add enough stability over regime volatility and macro/trend interaction."},
+  "capability_refs": [], "confidence": 0.71, "created_at": "2026-08-02T01:51:25.063258+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0324", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-KO-20260802-0301"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Rejected from the approved
+  regime-conditioned catalogue.", "title": "Volatility/macro interaction review",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"best_regime": "bull_trend", "decision": "REJECT", "feature_name":
+  "stress_momentum_interaction", "max_score": 0.414607, "reason": "Sparse crisis-only
+  coverage prevented institutional promotion."}, "capability_refs": [], "confidence":
+  0.71, "created_at": "2026-08-02T01:51:25.063258+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"], "identifier":
+  "IKROS-KO-20260802-0325", "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type":
+  "KnowledgeObject", "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-KO-20260802-0301"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Rejected from the approved
+  regime-conditioned catalogue.", "title": "Stress/momentum interaction review", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"best_regime": "calm_carry", "decision": "REJECT", "feature_name":
+  "geo_severity", "max_score": 1.429165, "reason": "Useful for taxonomy context, but
+  too sparse and unstable as a direct predictive feature."}, "capability_refs": [],
+  "confidence": 0.71, "created_at": "2026-08-02T01:51:25.063258+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0326", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-KO-20260802-0301"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Rejected from the approved
+  regime-conditioned catalogue.", "title": "Standalone geopolitical severity review",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"best_regime": "crisis_dislocation", "decision": "REJECT", "feature_name":
+  "xau_return_5", "max_score": 3.825059, "reason": "Rejected because the 20-bar return
+  and breakout family dominated it across the approved states."}, "capability_refs":
+  [], "confidence": 0.71, "created_at": "2026-08-02T01:51:25.063258+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0327", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-KO-20260802-0301"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Rejected from the approved
+  regime-conditioned catalogue.", "title": "5-bar XAU/USD return review", "version":
+  "1.0.0", "work_package_refs": []}'
+object_ids:
+- IKROS-DS-20260802-0003
+- IKROS-DSV-20260802-0003
+- IKROS-KO-20260802-0301
+- IKROS-FF-20260802-0301
+- IKROS-FEAT-20260802-0301
+- IKROS-FEAT-20260802-0302
+- IKROS-FEAT-20260802-0303
+- IKROS-FEAT-20260802-0304
+- IKROS-FEAT-20260802-0305
+- IKROS-FEAT-20260802-0306
+- IKROS-FEAT-20260802-0307
+- IKROS-FEAT-20260802-0308
+- IKROS-FEAT-20260802-0309
+- IKROS-FEAT-20260802-0310
+- IKROS-FEAT-20260802-0311
+- IKROS-FEAT-20260802-0312
+- IKROS-KO-20260802-0321
+- IKROS-KO-20260802-0322
+- IKROS-KO-20260802-0323
+- IKROS-KO-20260802-0324
+- IKROS-KO-20260802-0325
+- IKROS-KO-20260802-0326
+- IKROS-KO-20260802-0327
+source_format: JSON
+source_hash: 22a113dbc393813f6520758eaf6be3cd99ee2df90f320b594ea50e976b348e64
+source_kind: INTERNAL_RESEARCH_REPORT
+source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\feature_discovery_knowledge.json
+source_version: 1.0.0
+status: INGESTED
+warnings: []

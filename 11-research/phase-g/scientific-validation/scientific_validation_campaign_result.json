@@ -1,0 +1,519 @@
+{
+  "assessment_ids": {
+    "IKROS-HYP-20260802-0401": "IKROS-VAL-20260802-0401",
+    "IKROS-HYP-20260802-0402": "IKROS-VAL-20260802-0402",
+    "IKROS-HYP-20260802-0404": "IKROS-VAL-20260802-0404",
+    "IKROS-HYP-20260802-0405": "IKROS-VAL-20260802-0405",
+    "IKROS-HYP-20260802-0408": "IKROS-VAL-20260802-0408"
+  },
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0008",
+  "experiment": {
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-ORCHESTRATOR",
+      "IKROS-CONFIDENCE"
+    ],
+    "completed_at": null,
+    "confidence": {
+      "data": 0.84,
+      "economic": 0.66,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.0,
+      "operational": 0.73,
+      "overall": 0.7396882056314796,
+      "prior": 0.57,
+      "replication": 0.0,
+      "statistical": 0.0,
+      "validation": 0.0
+    },
+    "dataset_versions": [
+      "IKROS-DSV-20260802-0005"
+    ],
+    "entity_type": "Experiment",
+    "failures_produced": [],
+    "feature_versions": [
+      "IKROS-FEAT-20260802-0301",
+      "IKROS-FEAT-20260802-0302",
+      "IKROS-FEAT-20260802-0303",
+      "IKROS-FEAT-20260802-0304",
+      "IKROS-FEAT-20260802-0305",
+      "IKROS-FEAT-20260802-0306",
+      "IKROS-FEAT-20260802-0308",
+      "IKROS-FEAT-20260802-0309",
+      "IKROS-FEAT-20260802-0310",
+      "IKROS-FEAT-20260802-0311",
+      "IKROS-FEAT-20260802-0312"
+    ],
+    "git_commit": "",
+    "hypotheses": [
+      "IKROS-HYP-20260802-0401",
+      "IKROS-HYP-20260802-0402",
+      "IKROS-HYP-20260802-0404",
+      "IKROS-HYP-20260802-0405",
+      "IKROS-HYP-20260802-0408"
+    ],
+    "ikros_id": "IKROS-EXP-20260802-0005",
+    "in_sample_end": "",
+    "in_sample_start": "",
+    "lifecycle_state": "REVIEWED",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0005"
+        ],
+        "external_refs": [
+          "11-research/phase-g/scientific-validation/scientific_validation_analysis.json",
+          "11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "inputs": [
+          "IKROS-HYP-20260802-0005"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0005-scientific-validation",
+        "creation_context": "Campaign 0005 scientific validation",
+        "motivation": "Execute the governed validation protocol on the approved Phase G hypothesis subset."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "out_of_sample_end": "",
+    "out_of_sample_start": "",
+    "parameters": {
+      "authorized_hypotheses": [
+        "IKROS-HYP-20260802-0401",
+        "IKROS-HYP-20260802-0402",
+        "IKROS-HYP-20260802-0404",
+        "IKROS-HYP-20260802-0405",
+        "IKROS-HYP-20260802-0408"
+      ],
+      "governance_constraints": [
+        "no runtime changes",
+        "no infrastructure changes",
+        "no parameter optimization",
+        "fixed deterministic validation rules only"
+      ]
+    },
+    "protocol": "Evaluate each approved hypothesis with deterministic event rules, walk-forward folds, CPCV, Monte Carlo, bootstrap, sensitivity, stress, temporal drift, and contradiction review without optimization.",
+    "random_seed": 42,
+    "reproducibility_hash": "fddb1d98a29602421ffaff14ae157fbe5587d6abd5170ee12b20690d6e360948",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "title": "Campaign 0005 institutional scientific validation",
+    "validations_produced": [
+      "IKROS-VAL-20260802-0005"
+    ],
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:18:22.591558+00:00",
+        "confidence_at_time": 0.7396882056314796,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 COMPLETE.",
+        "changed_at": "2026-08-02T02:18:22.595555+00:00",
+        "confidence_at_time": 0.7396882056314796,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 REVIEWED.",
+        "changed_at": "2026-08-02T02:18:22.599555+00:00",
+        "confidence_at_time": 0.7396882056314796,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  },
+  "hypothesis": {
+    "alternative_hypothesis": "H1: The approved hypothesis set can be scientifically partitioned into rejected, further-research, and promotable outcomes under the governed validation stack.",
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-CONFIDENCE"
+    ],
+    "confidence": {
+      "data": 0.82,
+      "economic": 0.65,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.0,
+      "operational": 0.71,
+      "overall": 0.7233167449788394,
+      "prior": 0.56,
+      "replication": 0.0,
+      "statistical": 0.0,
+      "validation": 0.0
+    },
+    "contradictions": [],
+    "entity_type": "Hypothesis",
+    "experiments": [
+      "IKROS-EXP-20260802-0005"
+    ],
+    "ikros_id": "IKROS-HYP-20260802-0005",
+    "lifecycle_state": "SUPPORTED",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0005"
+        ],
+        "external_refs": [
+          "11-research/phase-g/scientific-validation/scientific_validation_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "inputs": [
+          "IKROS-RQ-20260802-0005"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [
+          "IKROS-EXP-20260802-0005"
+        ],
+        "validated_by": [
+          "IKROS-VAL-20260802-0005"
+        ]
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0005-scientific-validation",
+        "creation_context": "Campaign 0005 scientific validation",
+        "motivation": "Represent the governed claim that the approved hypothesis set can be scientifically partitioned into rejected, inconclusive, and promotable states."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "motivating_theses": [],
+    "null_hypothesis": "H0: The approved hypothesis set cannot be scientifically partitioned in a reproducible and governed way.",
+    "posterior_confidence": 0.7233167449788394,
+    "power": 0.8,
+    "prior_confidence": 0.56,
+    "significance_level": 0.05,
+    "source_rq": "IKROS-RQ-20260802-0005",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "statement": "A governed scientific validation stack can discriminate the approved institutional alpha hypotheses into rejected, inconclusive, and alpha-candidate states without optimization.",
+    "validations": [
+      "IKROS-VAL-20260802-0005"
+    ],
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:18:22.565032+00:00",
+        "confidence_at_time": 0.7233167449788394,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:18:22.568032+00:00",
+        "confidence_at_time": 0.7233167449788394,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:18:22.571038+00:00",
+        "confidence_at_time": 0.7233167449788394,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:18:22.575039+00:00",
+        "confidence_at_time": 0.7233167449788394,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 TESTING. Campaign 0005 entered governed scientific validation.",
+        "changed_at": "2026-08-02T02:18:22.579038+00:00",
+        "confidence_at_time": 0.7233167449788394,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 SUPPORTED. Campaign 0005 completed the governed validation partition.",
+        "changed_at": "2026-08-02T02:18:22.583038+00:00",
+        "confidence_at_time": 0.7233167449788394,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:18:22.586554+00:00",
+        "confidence_at_time": 0.7233167449788394,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:19:46.208875+00:00",
+        "confidence_at_time": 0.7233167449788394,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  },
+  "progress": {
+    "blocked": 0,
+    "completed": 0,
+    "failed": 1,
+    "percent_complete": 0.0,
+    "skipped": 0,
+    "total": 6
+  },
+  "report": {
+    "audit_ids": [
+      "IKROS-CAMPAIGNAUDIT-20260802-0176",
+      "IKROS-CAMPAIGNAUDIT-20260802-0177",
+      "IKROS-CAMPAIGNAUDIT-20260802-0178",
+      "IKROS-CAMPAIGNAUDIT-20260802-0179",
+      "IKROS-CAMPAIGNAUDIT-20260802-0180"
+    ],
+    "blocked_task_ids": [],
+    "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0008",
+    "campaign_type": "HYPOTHESIS_VALIDATION",
+    "completed_task_ids": [],
+    "failed_task_ids": [
+      "IKROS-RESEARCHTASK-20260802-0060"
+    ],
+    "finished_at": "2026-08-02T02:19:45.074032+00:00",
+    "lifecycle_state": "FAILED",
+    "memory_record_ids": [
+      "IKMEM-T4-20260802-0014"
+    ],
+    "output_refs": [],
+    "progress": {
+      "blocked": 0,
+      "completed": 0,
+      "failed": 1,
+      "percent_complete": 0.0,
+      "skipped": 0,
+      "total": 6
+    },
+    "report_id": "IKROS-CAMPAIGNREPORT-20260802-0008",
+    "skipped_task_ids": [],
+    "started_at": "2026-08-02T02:19:43.320064+00:00",
+    "summary": "Campaign 0005 Scientific Alpha Validation failed after 1 task failures."
+  },
+  "report_paths": {
+    "alpha_candidate_registry_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\alpha_candidate_registry.json",
+    "alpha_candidate_registry_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\ALPHA_CANDIDATE_REGISTRY.md",
+    "confidence_update_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\confidence_update_report.json",
+    "confidence_update_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\CONFIDENCE_UPDATE_REPORT.md",
+    "contradictory_evidence_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\contradictory_evidence_report.json",
+    "contradictory_evidence_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\CONTRADICTORY_EVIDENCE_REPORT.md",
+    "cpcv_report_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\cpcv_report.json",
+    "cpcv_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\CPCV_REPORT.md",
+    "cross_regime_report_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\cross_regime_performance_report.json",
+    "cross_regime_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\CROSS_REGIME_PERFORMANCE_REPORT.md",
+    "failure_analysis_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\failure_analysis.json",
+    "failure_analysis_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\FAILURE_ANALYSIS.md",
+    "final_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\SCIENTIFIC_VALIDATION_FINAL_CAMPAIGN_REPORT.md",
+    "monte_carlo_report_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\monte_carlo_report.json",
+    "monte_carlo_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\MONTE_CARLO_REPORT.md",
+    "rejected_hypothesis_registry_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\rejected_hypothesis_registry.json",
+    "rejected_hypothesis_registry_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\REJECTED_HYPOTHESIS_REGISTRY.md",
+    "scientific_validation_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\SCIENTIFIC_VALIDATION_REPORT.md",
+    "sensitivity_report_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\sensitivity_report.json",
+    "sensitivity_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\SENSITIVITY_REPORT.md",
+    "validation_matrix_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\validation_matrix.json",
+    "validation_matrix_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\VALIDATION_MATRIX.md",
+    "walk_forward_report_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\walk_forward_report.json",
+    "walk_forward_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\WALK_FORWARD_REPORT.md"
+  },
+  "research_question": {
+    "campaign_tag": "PHASE-G-VALIDATION-005",
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-ORCHESTRATOR"
+    ],
+    "confidence": {
+      "data": 0.82,
+      "economic": 0.68,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.0,
+      "operational": 0.72,
+      "overall": 0.737709009036208,
+      "prior": 0.58,
+      "replication": 0.0,
+      "statistical": 0.0,
+      "validation": 0.0
+    },
+    "entity_type": "ResearchQuestion",
+    "ikros_id": "IKROS-RQ-20260802-0005",
+    "instrument": "XAU/USD",
+    "lifecycle_state": "ANSWERED",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0005"
+        ],
+        "external_refs": [
+          "11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json",
+          "11-research/phase-g/feature-discovery/feature_discovery_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "inputs": [
+          "IKROS-RQ-20260802-0004"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0005-scientific-validation",
+        "creation_context": "Campaign 0005 scientific validation",
+        "motivation": "Determine which approved institutional hypotheses survive governed scientific validation and which should be rejected or refined."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "linked_conclusions": [
+      "IKROS-CONCL-20260802-0005"
+    ],
+    "linked_hypotheses": [
+      "IKROS-HYP-20260802-0005"
+    ],
+    "motivation": "Campaign 0004 approved the hypothesis catalogue. Campaign 0005 now validates the authorized subset without strategy optimization.",
+    "scope": "SCIENTIFIC_VALIDATION",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "time_horizon": "1D-10D",
+    "title": "Which approved regime-conditioned alpha hypotheses survive institutional scientific validation?",
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:18:22.555036+00:00",
+        "confidence_at_time": 0.737709009036208,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:18:22.558033+00:00",
+        "confidence_at_time": 0.737709009036208,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 ANSWERED. Campaign 0005 scientific validation completed.",
+        "changed_at": "2026-08-02T02:18:22.562037+00:00",
+        "confidence_at_time": 0.737709009036208,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  },
+  "validation_summary": {
+    "alpha_candidates": [],
+    "arb_recommendation": "Reject hypothesis IKROS-HYP-20260802-0402, reject hypothesis IKROS-HYP-20260802-0404, retain IKROS-HYP-20260802-0401, IKROS-HYP-20260802-0405, and IKROS-HYP-20260802-0408 for further governed research, and do not promote any hypothesis to Alpha Candidate status until a future campaign resolves the remaining contradictions.",
+    "conclusion_id": "IKROS-CONCL-20260802-0005",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0005",
+    "evidence_id": "IKROS-EVIDENCE-20260802-0005",
+    "further_research_hypotheses": [
+      "IKROS-HYP-20260802-0401",
+      "IKROS-HYP-20260802-0405",
+      "IKROS-HYP-20260802-0408"
+    ],
+    "promoted_hypotheses": [],
+    "rejected_hypotheses": [
+      "IKROS-HYP-20260802-0402",
+      "IKROS-HYP-20260802-0404"
+    ],
+    "validation_id": "IKROS-VAL-20260802-0005"
+  }
+}

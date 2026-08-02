@@ -1,0 +1,365 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:27:43.640436+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0009
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/phase_e_final_report.md
+- 11-research/phase-e/phase_e_summary.json
+- EXEC-041
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0001
+- IKROS-RESEARCHTASK-20260802-0010
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0013
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0001
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0009
+    finished_at: '2026-08-02T01:27:43.640436+00:00'
+    kind: CONFIDENCE_UPDATE
+    max_attempts: 1
+    payload:
+      evidence:
+      - confidence_weight: 0.6
+        evidence_id: PHASEG-MACRO-EVID-001
+        evidence_type: SPECIFICATION
+        independent_source: phase-g-governance
+        metrics:
+          data_confidence: 0.7
+          economic_confidence: 0.58
+          experimental_confidence: 0.62
+          validation_confidence: 0.65
+        notes: Governed research design is sound even though the baseline may fail.
+        observed_at: '2026-08-02T00:00:00Z'
+        references:
+          capability_ids:
+          - ALPHA-RESEARCH
+          - IKROS-ORCHESTRATOR
+          - IKROS-CONFIDENCE
+          dataset_ids:
+          - IKROS-DSV-20260802-0001
+          feature_ids:
+          - IKROS-FEAT-20260802-0001
+          - IKROS-FEAT-20260802-0002
+          - IKROS-FEAT-20260802-0003
+          specification_ids:
+          - SPEC-010
+          - SPEC-012
+          - SPEC-060
+        relation: SUPPORTS
+        temporal_bucket: 2026Q3
+      - confidence_weight: 0.8
+        evidence_id: PHASEG-MACRO-EVID-002
+        evidence_type: EVIDENCE_RECORD
+        independent_source: phase-e-governance
+        metrics:
+          experimental_confidence: 0.85
+          operational_confidence: 0.78
+          validation_confidence: 0.9
+          verdict: PASS
+        notes: Phase E execution quality gates passed and the evidence is valid.
+        observed_at: '2026-08-01T13:52:03Z'
+        references:
+          capability_ids:
+          - ALPHA-RESEARCH
+          evidence_record_ids:
+          - EXEC-041
+          research_report_ids:
+          - 11-research/phase-e/phase_e_final_report.md
+          work_package_ids:
+          - WP-IMP-0039
+        relation: SUPPORTS
+        temporal_bucket: 2026Q3
+      - confidence_weight: 1.0
+        contradiction_severity: MAJOR
+        evidence_id: PHASEG-MACRO-EVID-003
+        evidence_type: BACKTEST
+        independent_source: phase-e-results
+        metrics:
+          consistency_score: 0.05
+          data_quality_grade: A
+          economic_score: 0.25
+          oos_confirmed: false
+          positive_fold_ratio: 0.0
+          ruin_probability: 0.0125
+          sharpe_degradation: 0.8
+          statistical_confidence: 0.05
+          validation_confidence: 0.15
+          walk_forward_sharpe: -1.9781
+        notes: Negative walk-forward Sharpe and failed promotion bars contradict a
+          durable macro-only edge.
+        observed_at: '2026-08-01T13:52:03Z'
+        references:
+          backtest_ids:
+          - phase-e-macro-only
+          dataset_ids:
+          - IKROS-DSV-20260802-0001
+          experiment_ids:
+          - IKROS-EXP-20260802-0001
+          feature_ids:
+          - IKROS-FEAT-20260802-0001
+          monte_carlo_ids:
+          - phase-e-mc-macro-only
+          research_report_ids:
+          - 11-research/phase-e/phase_e_summary.json
+          validation_ids:
+          - IKROS-VAL-20260802-0001
+          walk_forward_ids:
+          - phase-e-wf-macro-only
+        relation: CONTRADICTS
+        temporal_bucket: 2026Q3
+      reason: Phase G Macro Alpha baseline audit
+      target_id: IKROS-HYP-20260802-0001
+    planned_order: 10
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0010
+      memory_record_id: null
+      metrics:
+        audit_id: ICAUD-20260802-0001
+        memory_record_id: IKMEM-T1-20260802-0012
+        new_overall: 0.0
+        previous_overall: 0.0
+      output_refs:
+      - ICA-20260802-0001
+      payload:
+        assessed_at: '2026-08-02T01:27:43.539398+00:00'
+        assessed_confidence:
+          data: 0.42
+          economic: 0.348
+          experimental: 0.46799999999999997
+          last_updated: '2026-08-02T01:27:43.539398+00:00'
+          operational: 0.46799999999999997
+          overall: 0.0
+          prior: 0.38
+          replication: 0.0
+          statistical: 0.192
+          validation: 0.4943478260869565
+        assessment_id: ICA-20260802-0001
+        audit_id: ICAUD-20260802-0001
+        contradiction_resolution:
+          contradiction_multiplier: 0.6
+          recommended_action: ARB_REVIEW
+          requires_review: true
+          severity_counts:
+            MAJOR: 1
+        evidence:
+        - confidence_weight: 0.6
+          contradiction_severity: null
+          evidence_id: PHASEG-MACRO-EVID-001
+          evidence_type: SPECIFICATION
+          independent_source: phase-g-governance
+          metrics:
+            data_confidence: 0.7
+            economic_confidence: 0.58
+            experimental_confidence: 0.62
+            validation_confidence: 0.65
+          notes: Governed research design is sound even though the baseline may fail.
+          observed_at: '2026-08-02T00:00:00Z'
+          references:
+            backtest_ids: []
+            capability_ids:
+            - ALPHA-RESEARCH
+            - IKROS-CONFIDENCE
+            - IKROS-ORCHESTRATOR
+            dataset_ids:
+            - IKROS-DSV-20260802-0001
+            evidence_record_ids: []
+            experiment_ids: []
+            feature_ids:
+            - IKROS-FEAT-20260802-0001
+            - IKROS-FEAT-20260802-0002
+            - IKROS-FEAT-20260802-0003
+            monte_carlo_ids: []
+            research_report_ids: []
+            specification_ids:
+            - SPEC-010
+            - SPEC-012
+            - SPEC-060
+            stress_test_ids: []
+            validation_ids: []
+            walk_forward_ids: []
+            work_package_ids: []
+          relation: SUPPORTS
+          temporal_bucket: 2026Q3
+        - confidence_weight: 0.8
+          contradiction_severity: null
+          evidence_id: PHASEG-MACRO-EVID-002
+          evidence_type: EVIDENCE_RECORD
+          independent_source: phase-e-governance
+          metrics:
+            experimental_confidence: 0.85
+            operational_confidence: 0.78
+            validation_confidence: 0.9
+            verdict: PASS
+          notes: Phase E execution quality gates passed and the evidence is valid.
+          observed_at: '2026-08-01T13:52:03Z'
+          references:
+            backtest_ids: []
+            capability_ids:
+            - ALPHA-RESEARCH
+            dataset_ids: []
+            evidence_record_ids:
+            - EXEC-041
+            experiment_ids: []
+            feature_ids: []
+            monte_carlo_ids: []
+            research_report_ids:
+            - 11-research/phase-e/phase_e_final_report.md
+            specification_ids: []
+            stress_test_ids: []
+            validation_ids: []
+            walk_forward_ids: []
+            work_package_ids:
+            - WP-IMP-0039
+          relation: SUPPORTS
+          temporal_bucket: 2026Q3
+        - confidence_weight: 1.0
+          contradiction_severity: MAJOR
+          evidence_id: PHASEG-MACRO-EVID-003
+          evidence_type: BACKTEST
+          independent_source: phase-e-results
+          metrics:
+            consistency_score: 0.05
+            data_quality_grade: A
+            economic_score: 0.25
+            oos_confirmed: false
+            positive_fold_ratio: 0.0
+            ruin_probability: 0.0125
+            sharpe_degradation: 0.8
+            statistical_confidence: 0.05
+            validation_confidence: 0.15
+            walk_forward_sharpe: -1.9781
+          notes: Negative walk-forward Sharpe and failed promotion bars contradict
+            a durable macro-only edge.
+          observed_at: '2026-08-01T13:52:03Z'
+          references:
+            backtest_ids:
+            - phase-e-macro-only
+            capability_ids: []
+            dataset_ids:
+            - IKROS-DSV-20260802-0001
+            evidence_record_ids: []
+            experiment_ids:
+            - IKROS-EXP-20260802-0001
+            feature_ids:
+            - IKROS-FEAT-20260802-0001
+            monte_carlo_ids:
+            - phase-e-mc-macro-only
+            research_report_ids:
+            - 11-research/phase-e/phase_e_summary.json
+            specification_ids: []
+            stress_test_ids: []
+            validation_ids:
+            - IKROS-VAL-20260802-0001
+            walk_forward_ids:
+            - phase-e-wf-macro-only
+            work_package_ids: []
+          relation: CONTRADICTS
+          temporal_bucket: 2026Q3
+        memory_record_id: IKMEM-T1-20260802-0012
+        operator: ikros-confidence-engine
+        previous_confidence:
+          data: 0.66
+          economic: 0.58
+          experimental: 0.46
+          last_updated: '2026-08-02T00:00:00Z'
+          operational: 0.5
+          overall: 0.0
+          prior: 0.38
+          replication: 0.0
+          statistical: 0.32
+          validation: 0.3
+        propagation: []
+        quality:
+          contradiction_count: 1
+          contradiction_score: 0.8
+          dataset_diversity: 1
+          dataset_diversity_score: 0.25
+          evidence_freshness: 1.0
+          independent_validations: 0
+          independent_validations_score: 0.0
+          out_of_sample_confirmations: 0
+          out_of_sample_score: 0.0
+          overall_quality: 0.2633333333333333
+          regime_diversity: 0
+          regime_diversity_score: 0.0
+          replication_count: 0
+          replication_score: 0.0
+          research_maturity: 0.3333333333333333
+          temporal_diversity: 1
+          temporal_diversity_score: 0.25
+          validation_completeness: 0.0
+        reason: Phase G Macro Alpha baseline audit
+        references:
+          backtest_ids:
+          - phase-e-macro-only
+          capability_ids:
+          - ALPHA-RESEARCH
+          - IKROS-CONFIDENCE
+          - IKROS-ORCHESTRATOR
+          dataset_ids:
+          - IKROS-DSV-20260802-0001
+          evidence_record_ids:
+          - EXEC-041
+          experiment_ids:
+          - IKROS-EXP-20260802-0001
+          feature_ids:
+          - IKROS-FEAT-20260802-0001
+          - IKROS-FEAT-20260802-0002
+          - IKROS-FEAT-20260802-0003
+          monte_carlo_ids:
+          - phase-e-mc-macro-only
+          research_report_ids:
+          - 11-research/phase-e/phase_e_final_report.md
+          - 11-research/phase-e/phase_e_summary.json
+          specification_ids:
+          - SPEC-010
+          - SPEC-012
+          - SPEC-060
+          stress_test_ids: []
+          validation_ids:
+          - IKROS-VAL-20260802-0001
+          walk_forward_ids:
+          - phase-e-wf-macro-only
+          work_package_ids:
+          - WP-IMP-0039
+        source_assessment_id: null
+        target_id: IKROS-HYP-20260802-0001
+        target_type: Hypothesis
+      selected_ids: []
+    started_at: '2026-08-02T01:27:43.475372+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0010
+    title: Confidence Update
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0001
+- ICA-20260802-0001
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: CONFIDENCE_UPDATE COMPLETED
+tags:
+- research-orchestrator
+- confidence_update
+tier: T1_EPISODIC
+title: 'Phase G Macro Alpha baseline audit :: Confidence Update'
+updated_at: '2026-08-02T01:27:43.641438+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

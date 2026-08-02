@@ -1,0 +1,58 @@
+archived_at: null
+capability_refs: []
+confidence: 0.45
+created_at: '2026-08-02T01:59:35.071678+00:00'
+dependency_ids: []
+entity_type: ResearchQuestion
+evidence_refs:
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-RQ-20260802-0408
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0072
+payload:
+  attributes:
+    campaign_tag: PHASE-G-HYPOTHESIS-004
+    expected_holding_period: 5-10D
+    feature_set:
+    - xau_return_1
+    - trend_breakout_interaction
+    - regime_return_60
+    instrument: XAU/USD
+    linked_conclusions: []
+    linked_hypotheses:
+    - IKROS-HYP-20260802-0408
+    motivation: Some policy and event shocks are not isolated bursts but regime-change
+      catalysts that seed a broader trend followed by slower capital.
+    regime_scope:
+    - macro_transition
+    - bull_trend
+    scope: HYPOTHESIS_DISCOVERY
+    time_horizon: 5-15D
+  lifecycle_state: ACTIVE
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-RQ-20260802-0408
+- IKROS-HYP-20260802-0408
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Transition-to-trend handoff
+tags:
+- researchquestion
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Do macro_transition shocks that align with directional breakout structure hand
+  off into later bull_trend continuation rather than fading out?
+updated_at: '2026-08-02T01:59:35.071678+00:00'
+valid_from: '2026-08-02T01:59:35.071678+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

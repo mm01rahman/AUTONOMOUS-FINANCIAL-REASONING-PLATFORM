@@ -1,0 +1,12 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0007
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0001
+detail: Task LITERATURE_INTAKE started
+entry_hash: eed7156949ebd0bcb5d66367540e811bddc7e0b9a2ed9f96ef2c53cae5ab77c2
+event_type: TASK_STARTED
+new_state: RUNNING
+output_refs: []
+previous_hash: 9cb96d3c12addaa4c94f7c9360b3178506b1cefbf69d742cf8fbe48d4a0129ee
+previous_state: READY
+task_id: IKROS-RESEARCHTASK-20260802-0002
+timestamp: '2026-08-02T01:27:41.579537+00:00'

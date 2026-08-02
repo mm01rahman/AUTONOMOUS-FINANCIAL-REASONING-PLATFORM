@@ -1,0 +1,42 @@
+[
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "median_total_return": 0.1333,
+    "p05_total_return": -0.0759,
+    "p95_total_return": 0.3782,
+    "paths": 500.0,
+    "ruin_probability": 0.026
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0402",
+    "median_total_return": -0.0411,
+    "p05_total_return": -0.2543,
+    "p95_total_return": 0.2529,
+    "paths": 500.0,
+    "ruin_probability": 0.348
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0404",
+    "median_total_return": -0.0152,
+    "p05_total_return": -0.0823,
+    "p95_total_return": 0.045,
+    "paths": 500.0,
+    "ruin_probability": 0.014
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "median_total_return": 0.1787,
+    "p05_total_return": -0.1338,
+    "p95_total_return": 0.5961,
+    "paths": 500.0,
+    "ruin_probability": 0.08
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "median_total_return": 0.0666,
+    "p05_total_return": -0.1435,
+    "p95_total_return": 0.2603,
+    "paths": 500.0,
+    "ruin_probability": 0.082
+  }
+]

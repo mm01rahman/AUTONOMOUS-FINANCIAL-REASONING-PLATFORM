@@ -1,0 +1,56 @@
+[
+  {
+    "approved_features": "regime_return_60, xau_return_20, breakdown_20, forward_expectation",
+    "highest_scoring_feature": "regime_return_60",
+    "institutional_name": "Bull Trend",
+    "mean_score": 5.303446,
+    "rationale": "Persistent upside phases reward carry-aware pullback and expectation features.",
+    "regime": "bull_trend",
+    "sample_count": 286
+  },
+  {
+    "approved_features": "xau_return_20, regime_vol_20, trend_gap_30_180",
+    "highest_scoring_feature": "xau_return_20",
+    "institutional_name": "Bear Unwind",
+    "mean_score": 2.405613,
+    "rationale": "Downside liquidation phases reward volatility control and trend persistence filters.",
+    "regime": "bear_unwind",
+    "sample_count": 854
+  },
+  {
+    "approved_features": "regime_return_60, macro_trend_interaction, regime_vol_20",
+    "highest_scoring_feature": "regime_return_60",
+    "institutional_name": "Calm Carry",
+    "mean_score": 2.15413,
+    "rationale": "Compressed risk-premium phases reward slow-moving regime anchors over fast noise.",
+    "regime": "calm_carry",
+    "sample_count": 752
+  },
+  {
+    "approved_features": "breakout_60, breakdown_20, trend_gap_20_120",
+    "highest_scoring_feature": "breakout_60",
+    "institutional_name": "Crisis Dislocation",
+    "mean_score": 4.687241,
+    "rationale": "Shock states reward exhaustion and breakout diagnostics that separate panic from persistence.",
+    "regime": "crisis_dislocation",
+    "sample_count": 441
+  },
+  {
+    "approved_features": "xau_return_1, trend_breakout_interaction, sessionless_event_pressure",
+    "highest_scoring_feature": "xau_return_1",
+    "institutional_name": "Macro Transition",
+    "mean_score": 1.112511,
+    "rationale": "Policy and event transitions reward short-horizon response features and event-conditioned trend interactions.",
+    "regime": "macro_transition",
+    "sample_count": 814
+  },
+  {
+    "approved_features": "macro_trend_interaction, regime_vol_20, forward_expectation",
+    "highest_scoring_feature": "macro_trend_interaction",
+    "institutional_name": "Range Compression",
+    "mean_score": 0.306777,
+    "rationale": "Sideways states reward context filters that suppress redundant trend and shock features.",
+    "regime": "range_compression",
+    "sample_count": 3110
+  }
+]

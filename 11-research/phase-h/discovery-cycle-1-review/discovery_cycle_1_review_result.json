@@ -1,0 +1,604 @@
+{
+  "analysis": {
+    "campaign_summary": [
+      {
+        "campaign_id": "0001",
+        "institutional_result": "Macro-only alpha rejected.",
+        "status": "Completed",
+        "title": "Macro Alpha Baseline"
+      },
+      {
+        "campaign_id": "0002",
+        "institutional_result": "Canonical six-state taxonomy accepted.",
+        "status": "Completed",
+        "title": "Institutional Six-State Overlay Taxonomy"
+      },
+      {
+        "campaign_id": "0003",
+        "institutional_result": "12 features promoted, 7 rejected, 34 candidates reviewed.",
+        "status": "Completed",
+        "title": "Institutional Feature Discovery"
+      },
+      {
+        "campaign_id": "0004",
+        "institutional_result": "Five hypotheses advanced to scientific validation.",
+        "status": "Completed",
+        "title": "Institutional Alpha Hypothesis Discovery"
+      },
+      {
+        "campaign_id": "0005",
+        "institutional_result": "2 hypotheses rejected, 3 retained, none promoted.",
+        "status": "Completed",
+        "title": "Institutional Scientific Alpha Validation"
+      },
+      {
+        "campaign_id": "0006",
+        "institutional_result": "Three retained hypotheses diagnosed and six governed experiments authorized.",
+        "status": "Completed",
+        "title": "Institutional Alpha Failure Analysis"
+      },
+      {
+        "campaign_id": "0007",
+        "institutional_result": "IKROS-HYP-20260802-0401, IKROS-HYP-20260802-0405 returned for validation; IKROS-HYP-20260802-0408 remains in testing.",
+        "status": "Completed",
+        "title": "Institutional Diagnostic Experiment Program"
+      }
+    ],
+    "confidence_evolution_report": [
+      {
+        "interpretation": "Confidence-engine update persisted in IKROS confidence history.",
+        "new_confidence": 0.0,
+        "previous_confidence": 0.0,
+        "stage": "Phase G Macro Alpha baseline audit",
+        "target": "IKROS-HYP-20260802-0001"
+      },
+      {
+        "interpretation": "Confidence-engine update persisted in IKROS confidence history.",
+        "new_confidence": 0.0,
+        "previous_confidence": 0.0,
+        "stage": "Phase G Macro Alpha candidate review",
+        "target": "IKROS-ALPHACAND-20260802-0001"
+      },
+      {
+        "interpretation": "Confidence-engine update persisted in IKROS confidence history.",
+        "new_confidence": 0.2268,
+        "previous_confidence": 0.0,
+        "stage": "Campaign 0002 regime taxonomy review",
+        "target": "IKROS-HYP-20260802-0002"
+      },
+      {
+        "interpretation": "Confidence-engine update persisted in IKROS confidence history.",
+        "new_confidence": 0.2268,
+        "previous_confidence": 0.0,
+        "stage": "Campaign 0003 regime-conditioned feature discovery",
+        "target": "IKROS-HYP-20260802-0003"
+      },
+      {
+        "interpretation": "REQUIRES_FURTHER_RESEARCH",
+        "new_confidence": 0.5433,
+        "previous_confidence": 0.53,
+        "stage": "Campaign 0005 scientific validation",
+        "target": "IKROS-HYP-20260802-0401"
+      },
+      {
+        "interpretation": "Confidence reduced while failure drivers remained unresolved.",
+        "new_confidence": 0.4633,
+        "previous_confidence": 0.5433,
+        "stage": "Campaign 0006 failure analysis",
+        "target": "IKROS-HYP-20260802-0401"
+      },
+      {
+        "interpretation": "RETURN_FOR_VALIDATION",
+        "new_confidence": 0.5133,
+        "previous_confidence": 0.4633,
+        "stage": "Campaign 0007 diagnostic experiments",
+        "target": "IKROS-HYP-20260802-0401"
+      },
+      {
+        "interpretation": "REJECTED",
+        "new_confidence": 0.08,
+        "previous_confidence": 0.5,
+        "stage": "Campaign 0005 scientific validation",
+        "target": "IKROS-HYP-20260802-0402"
+      },
+      {
+        "interpretation": "REJECTED",
+        "new_confidence": 0.098,
+        "previous_confidence": 0.49,
+        "stage": "Campaign 0005 scientific validation",
+        "target": "IKROS-HYP-20260802-0404"
+      },
+      {
+        "interpretation": "REQUIRES_FURTHER_RESEARCH",
+        "new_confidence": 0.4934,
+        "previous_confidence": 0.48,
+        "stage": "Campaign 0005 scientific validation",
+        "target": "IKROS-HYP-20260802-0405"
+      },
+      {
+        "interpretation": "Confidence reduced while failure drivers remained unresolved.",
+        "new_confidence": 0.4134,
+        "previous_confidence": 0.4934,
+        "stage": "Campaign 0006 failure analysis",
+        "target": "IKROS-HYP-20260802-0405"
+      },
+      {
+        "interpretation": "RETURN_FOR_VALIDATION",
+        "new_confidence": 0.4534,
+        "previous_confidence": 0.4134,
+        "stage": "Campaign 0007 diagnostic experiments",
+        "target": "IKROS-HYP-20260802-0405"
+      },
+      {
+        "interpretation": "REQUIRES_FURTHER_RESEARCH",
+        "new_confidence": 0.4582,
+        "previous_confidence": 0.45,
+        "stage": "Campaign 0005 scientific validation",
+        "target": "IKROS-HYP-20260802-0408"
+      },
+      {
+        "interpretation": "Confidence reduced while failure drivers remained unresolved.",
+        "new_confidence": 0.2582,
+        "previous_confidence": 0.4582,
+        "stage": "Campaign 0006 failure analysis",
+        "target": "IKROS-HYP-20260802-0408"
+      },
+      {
+        "interpretation": "REMAIN_IN_TESTING",
+        "new_confidence": 0.2682,
+        "previous_confidence": 0.2582,
+        "stage": "Campaign 0007 diagnostic experiments",
+        "target": "IKROS-HYP-20260802-0408"
+      }
+    ],
+    "consistent_features": [
+      {
+        "feature": "regime_return_60",
+        "identifier": "IKROS-FEAT-20260802-0301",
+        "robust_regime_count": 6,
+        "title": "60-bar regime return anchor"
+      },
+      {
+        "feature": "xau_return_20",
+        "identifier": "IKROS-FEAT-20260802-0302",
+        "robust_regime_count": 6,
+        "title": "20-bar XAU/USD return context"
+      },
+      {
+        "feature": "breakdown_20",
+        "identifier": "IKROS-FEAT-20260802-0303",
+        "robust_regime_count": 5,
+        "title": "20-bar breakdown persistence"
+      },
+      {
+        "feature": "forward_expectation",
+        "identifier": "IKROS-FEAT-20260802-0304",
+        "robust_regime_count": 5,
+        "title": "Forward expectation spread"
+      },
+      {
+        "feature": "regime_vol_20",
+        "identifier": "IKROS-FEAT-20260802-0305",
+        "robust_regime_count": 4,
+        "title": "20-bar regime volatility"
+      },
+      {
+        "feature": "trend_gap_30_180",
+        "identifier": "IKROS-FEAT-20260802-0306",
+        "robust_regime_count": 5,
+        "title": "30/180 trend persistence gap"
+      },
+      {
+        "feature": "macro_trend_interaction",
+        "identifier": "IKROS-FEAT-20260802-0307",
+        "robust_regime_count": 5,
+        "title": "Macro/trend interaction"
+      },
+      {
+        "feature": "breakout_60",
+        "identifier": "IKROS-FEAT-20260802-0308",
+        "robust_regime_count": 5,
+        "title": "60-bar breakout expansion"
+      },
+      {
+        "feature": "trend_gap_20_120",
+        "identifier": "IKROS-FEAT-20260802-0309",
+        "robust_regime_count": 5,
+        "title": "20/120 trend slope gap"
+      },
+      {
+        "feature": "xau_return_1",
+        "identifier": "IKROS-FEAT-20260802-0310",
+        "robust_regime_count": 5,
+        "title": "1-bar XAU/USD reaction"
+      },
+      {
+        "feature": "trend_breakout_interaction",
+        "identifier": "IKROS-FEAT-20260802-0311",
+        "robust_regime_count": 5,
+        "title": "Trend/breakout interaction"
+      },
+      {
+        "feature": "sessionless_event_pressure",
+        "identifier": "IKROS-FEAT-20260802-0312",
+        "robust_regime_count": 5,
+        "title": "Event pressure interaction"
+      }
+    ],
+    "contradiction_map": [
+      {
+        "contradiction": "Macro pressure matters, but macro-only alpha fails.",
+        "resolution_status": "RESOLVED",
+        "review_conclusion": "Macro pressure is informative as a regime/context variable, not as a standalone predictive edge.",
+        "source_campaigns": "0001, 0002, 0003"
+      },
+      {
+        "contradiction": "Crisis episodes look economically important, but crisis-specific alpha did not survive validation.",
+        "resolution_status": "RESOLVED",
+        "review_conclusion": "Crisis_dislocation is institutionally important for taxonomy and risk framing, but too unstable for direct continuation alpha in Cycle 1.",
+        "source_campaigns": "0002, 0004, 0005"
+      },
+      {
+        "contradiction": "H0408 stayed positive in sign, but still did not justify re-validation.",
+        "resolution_status": "OPEN",
+        "review_conclusion": "The handoff thesis may be real, but sparse episode coverage and missing intraday sequencing still block institutional confidence.",
+        "source_campaigns": "0005, 0006, 0007"
+      },
+      {
+        "contradiction": "DXY and rates spillovers appear important, but DXY return was rejected as a standalone feature.",
+        "resolution_status": "PARTIALLY_RESOLVED",
+        "review_conclusion": "Cross-asset variables matter most as conditioning and sequencing variables rather than as isolated predictors.",
+        "source_campaigns": "0003, 0006, 0007"
+      },
+      {
+        "contradiction": "Macro_transition is highly informative, but pooled event windows degrade signal quality.",
+        "resolution_status": "OPEN",
+        "review_conclusion": "The regime is valuable, but its internal event ecology needs finer decomposition before stronger alpha conclusions can be drawn.",
+        "source_campaigns": "0002, 0005, 0006, 0007"
+      }
+    ],
+    "cycle_title": "Phase H Institutional Research Review \u2014 Discovery Cycle 1",
+    "disproven_findings": [
+      "Macro-only next-day gold drift is not an institutional alpha candidate.",
+      "Liquidation-pressure bear continuation did not survive scientific validation.",
+      "Crisis safe-haven breakout convexity did not survive scientific validation.",
+      "Standalone macro_pressure and dxy_return_20 do not survive as direct predictive features after regime conditioning."
+    ],
+    "evidence_synthesis": {
+      "campaign_count": 7,
+      "confidence": {
+        "assessment_count": 4
+      },
+      "diagnostic_experiment_count": 6,
+      "graph": {
+        "edge_count": 260,
+        "node_count": 224,
+        "node_types": {
+          "ALPHA_CANDIDATE": 1,
+          "DATASET": 3,
+          "DATASET_VERSION": 7,
+          "ECONOMIC_THESIS": 1,
+          "EVIDENCE": 14,
+          "EXPERIMENT": 7,
+          "FEATURE": 22,
+          "FEATURE_FAMILY": 3,
+          "HYPOTHESIS": 15,
+          "KNOWLEDGE_OBJECT": 121,
+          "REGIME": 7,
+          "RESEARCH_CONCLUSION": 4,
+          "RESEARCH_QUESTION": 15,
+          "VALIDATION": 4
+        }
+      },
+      "memory": {
+        "tiers": {
+          "t1_episodic": 72,
+          "t2_semantic": 110,
+          "t4_institutional": 16
+        },
+        "total_records": 198
+      },
+      "promoted_feature_count": 12,
+      "registry_counts": {
+        "alpha_candidates": 1,
+        "experiments": 13,
+        "features": 25,
+        "hypotheses": 15,
+        "research_questions": 15
+      },
+      "rejected_feature_count": 7,
+      "validated_hypothesis_count": 5
+    },
+    "failure_catalogue": [
+      {
+        "campaign": "0001",
+        "evidence": "Alpha candidate rejected with negative walk-forward Sharpe, zero positive fold ratio, and no promotable edge.",
+        "finding": "Macro-only alpha baseline",
+        "status": "DISPROVEN"
+      },
+      {
+        "campaign": "0005",
+        "evidence": "Rejected after governed validation because the expected sign did not hold out-of-sample.",
+        "finding": "Liquidation-pressure bear continuation (H0402)",
+        "status": "DISPROVEN"
+      },
+      {
+        "campaign": "0005",
+        "evidence": "Rejected after governed validation because crisis continuation did not preserve expected direction.",
+        "finding": "Crisis safe-haven breakout convexity (H0404)",
+        "status": "DISPROVEN"
+      },
+      {
+        "campaign": "0003",
+        "evidence": "Rejected as a direct predictive feature and retained only as regime-defining context.",
+        "finding": "Standalone macro_pressure as a predictive feature",
+        "status": "DISPROVEN"
+      },
+      {
+        "campaign": "0002-0005",
+        "evidence": "Crisis_dislocation is real as a state label but poor as a direct alpha environment because volatility dominates signal reliability.",
+        "finding": "Unsegmented crisis alpha",
+        "status": "FAILED_MECHANISM"
+      }
+    ],
+    "informative_regimes": [
+      {
+        "count": 286,
+        "hit_rate": 0.643357,
+        "institutional_name": "Bull Trend Expansion",
+        "label": "bull_trend",
+        "review_view": "Most informative positive state; strongest signal persistence and cleanest continuation logic."
+      },
+      {
+        "count": 814,
+        "hit_rate": 0.565111,
+        "institutional_name": "Macro Policy Transition",
+        "label": "macro_transition",
+        "review_view": "Most informative event-driven state; strongest link to surviving hypotheses and diagnostic experiments."
+      },
+      {
+        "count": 854,
+        "hit_rate": 0.562061,
+        "institutional_name": "Bear Trend Unwind",
+        "label": "bear_unwind",
+        "review_view": "Informative for failure analysis, but bearish continuation did not survive validation."
+      },
+      {
+        "count": 3110,
+        "hit_rate": 0.554984,
+        "institutional_name": "Range Compression",
+        "label": "range_compression",
+        "review_view": "Useful baseline/default state, but more important as a comparison regime than as a direct alpha engine."
+      },
+      {
+        "count": 752,
+        "hit_rate": 0.546543,
+        "institutional_name": "Calm Carry Accumulation",
+        "label": "calm_carry",
+        "review_view": "Moderately informative context, but not yet central to the strongest validated narratives."
+      },
+      {
+        "count": 441,
+        "hit_rate": 0.501134,
+        "institutional_name": "Crisis Dislocation",
+        "label": "crisis_dislocation",
+        "review_view": "Important for taxonomy and risk framing, but poor direct alpha reliability in Cycle 1."
+      }
+    ],
+    "institutional_knowledge_review": [
+      {
+        "finding": "Institutional Six-State Overlay Taxonomy v1 is now the canonical AFRP market-state model.",
+        "institutional_status": "INSTITUTIONAL_KNOWLEDGE",
+        "supporting_evidence": "Campaign 0002 accepted six regimes with 0.7801 stability and persistent transition structure.",
+        "theme": "Canonical regime taxonomy"
+      },
+      {
+        "finding": "Campaign 0003 promoted 12 regime-conditioned features and identified 12 cross-regime anchors that survive conditioning.",
+        "institutional_status": "INSTITUTIONAL_KNOWLEDGE",
+        "supporting_evidence": "The promoted set is dominated by return anchors, volatility/trend context, and bounded interaction terms.",
+        "theme": "Governed feature catalogue"
+      },
+      {
+        "finding": "Campaign 0004 narrowed the institutional hypothesis catalogue to five validation-worthy hypotheses out of eight generated candidates.",
+        "institutional_status": "INSTITUTIONAL_KNOWLEDGE",
+        "supporting_evidence": "Three lower-priority hypotheses were held back before costly validation, preserving governance discipline.",
+        "theme": "Hypothesis generation discipline"
+      },
+      {
+        "finding": "Campaigns 0006 and 0007 reduced uncertainty materially without changing any hypothesis definition or resorting to optimization.",
+        "institutional_status": "INSTITUTIONAL_KNOWLEDGE",
+        "supporting_evidence": "Two retained hypotheses returned to validation readiness, while one remained in testing due to unresolved data gaps.",
+        "theme": "Diagnostic value of governed follow-up"
+      },
+      {
+        "finding": "The most durable signals in Discovery Cycle 1 live in bull_trend and macro_transition rather than in macro-only or crisis-only framing.",
+        "institutional_status": "INSTITUTIONAL_KNOWLEDGE",
+        "supporting_evidence": "H0401 and H0405 survived scientific validation and improved under diagnostic segmentation; H0408 stayed directionally positive but underpowered.",
+        "theme": "Bull-trend persistence and macro-transition follow-through"
+      }
+    ],
+    "knowledge_gaps": [
+      {
+        "affected_hypotheses": "IKROS-HYP-20260802-0405",
+        "evidence": "Campaign 0007 improved branch and range diagnostics, but still could not tell whether gold led or followed broader repricing.",
+        "severity": "HIGH",
+        "theme": "Cross-asset sequencing"
+      },
+      {
+        "affected_hypotheses": "IKROS-HYP-20260802-0401",
+        "evidence": "Bull continuation remains plausible, but the repository lacks governed positioning proxies to distinguish healthy continuation from exhaustion.",
+        "severity": "HIGH",
+        "theme": "Participant crowding and positioning"
+      },
+      {
+        "affected_hypotheses": "IKROS-HYP-20260802-0408",
+        "evidence": "Daily handoff replay improved path accounting, but intraday event ordering remains absent from the governed dataset stack.",
+        "severity": "HIGH",
+        "theme": "Intraday transition structure"
+      },
+      {
+        "affected_hypotheses": "IKROS-HYP-20260802-0405",
+        "evidence": "Macro-transition windows still pool scheduled policy decisions, macro prints, and noisy headlines.",
+        "severity": "HIGH",
+        "theme": "Event taxonomy granularity"
+      },
+      {
+        "affected_hypotheses": "IKROS-HYP-20260802-0408",
+        "evidence": "Campaign 0007 expanded handoff coverage from 7 to 18 episodes, but coverage remains too thin for decisive validation.",
+        "severity": "HIGH",
+        "theme": "Episode coverage"
+      },
+      {
+        "affected_hypotheses": "IKROS-HYP-20260802-0405",
+        "evidence": "Wide-range contamination is now visible, but liquidity quality is still inferred from crude range/event-pressure proxies.",
+        "severity": "MEDIUM",
+        "theme": "Liquidity and event-quality proxies"
+      }
+    ],
+    "research_lessons_learned": [
+      "Governed regime conditioning adds more scientific value than raw macro drift tests.",
+      "Return anchors, volatility context, and bounded interaction terms outperform raw single-variable narratives after conditioning on regime.",
+      "Scientific validation and failure analysis are both productive: rejected hypotheses created lasting institutional knowledge by clarifying what does not survive.",
+      "Diagnostic segmentation is most useful when it isolates contamination sources such as transition overlap, DXY spillovers, branch imbalance, and wide-range event noise.",
+      "Alpha discovery in gold is constrained more by explanatory data sufficiency than by lack of candidate ideas."
+    ],
+    "research_maturity_assessment": [
+      {
+        "domain": "Regime taxonomy",
+        "evidence": "Campaign 0002 accepted a canonical six-state model that remained the reference through Campaign 0007.",
+        "implication": "Cycle 2 should build on the taxonomy rather than revisit regime discovery fundamentals.",
+        "maturity_level": "ESTABLISHED"
+      },
+      {
+        "domain": "Feature catalogue",
+        "evidence": "12 promoted features now anchor the governed explanatory library.",
+        "implication": "New work should extend explanatory conditioning around the promoted set instead of restarting feature discovery from scratch.",
+        "maturity_level": "ESTABLISHED"
+      },
+      {
+        "domain": "Hypothesis generation",
+        "evidence": "5 authorized hypotheses survived into formal validation, with governed triage before testing.",
+        "implication": "The hypothesis process is strong enough to support a second cycle, but candidate promotion remains highly selective.",
+        "maturity_level": "MANAGED"
+      },
+      {
+        "domain": "Scientific validation",
+        "evidence": "Campaign 0005 produced zero promoted alpha candidates and two hard rejections.",
+        "implication": "Validation discipline is strong, but evidentiary sufficiency is the current bottleneck.",
+        "maturity_level": "EMERGING"
+      },
+      {
+        "domain": "Diagnostic experimentation",
+        "evidence": "6 governed experiments reduced uncertainty and clarified next steps without changing hypotheses.",
+        "implication": "AFRP can now use diagnostics as a standard bridge between failed validation and next-cycle design.",
+        "maturity_level": "MANAGED"
+      },
+      {
+        "domain": "Institutional memory and governance",
+        "evidence": "15 research questions, 15 hypotheses, and 13 reviewed experiments are persisted in IKROS.",
+        "implication": "Cycle 2 can rely on strong traceability, memory, and graph coverage from day one.",
+        "maturity_level": "ESTABLISHED"
+      },
+      {
+        "domain": "Alpha candidate production",
+        "evidence": "The only alpha candidate in Cycle 1 was rejected, and no new alpha candidate survived later campaigns.",
+        "implication": "Cycle 2 should optimize learning rate and mechanism clarity, not candidate count.",
+        "maturity_level": "INITIAL"
+      }
+    ],
+    "research_roadmap_v2": [
+      {
+        "classification": "Another direction",
+        "direction": "Cross-Asset Transition Ecology",
+        "expected_information_gain": 4.9,
+        "justification": "Cycle 1 repeatedly showed that DXY spillovers, policy/rates sequencing, participant adoption, and event-quality segmentation explain both surviving and failing hypotheses better than standalone macro drift. This direction unifies the strongest open evidence from H0401, H0405, and H0408 while staying closest to the actual unresolved uncertainties.",
+        "priority": "P1"
+      },
+      {
+        "classification": "Listed direction",
+        "direction": "Market Ecology",
+        "expected_information_gain": 4.6,
+        "justification": "Participant crowding, adoption, and event ecology are the largest remaining non-price gaps behind the retained hypotheses.",
+        "priority": "P2"
+      },
+      {
+        "classification": "Listed direction",
+        "direction": "Causal Alpha",
+        "expected_information_gain": 4.3,
+        "justification": "Once cross-asset and ecology gaps are narrowed, causal framing can separate true mechanism from correlated context.",
+        "priority": "P3"
+      },
+      {
+        "classification": "Listed direction",
+        "direction": "Liquidity",
+        "expected_information_gain": 3.8,
+        "justification": "Liquidity quality mattered in H0405 contamination studies, but the current evidence points to sequencing and event ecology first.",
+        "priority": "P4"
+      },
+      {
+        "classification": "Listed direction",
+        "direction": "Macro",
+        "expected_information_gain": 3.1,
+        "justification": "Macro remains important as context, but macro-only alpha was already disproven in Cycle 1.",
+        "priority": "P5"
+      }
+    ],
+    "review_recommendation": {
+      "classification": "Another direction",
+      "direction": "Cross-Asset Transition Ecology",
+      "expected_information_gain": 4.9,
+      "justification": "Cycle 1 repeatedly showed that DXY spillovers, policy/rates sequencing, participant adoption, and event-quality segmentation explain both surviving and failing hypotheses better than standalone macro drift. This direction unifies the strongest open evidence from H0401, H0405, and H0408 while staying closest to the actual unresolved uncertainties.",
+      "priority": "P1"
+    },
+    "success_catalogue": [
+      {
+        "finding": "Institutional Six-State Overlay Taxonomy v1 is now the canonical AFRP market-state model.",
+        "institutional_status": "INSTITUTIONAL_KNOWLEDGE",
+        "supporting_evidence": "Campaign 0002 accepted six regimes with 0.7801 stability and persistent transition structure.",
+        "theme": "Canonical regime taxonomy"
+      },
+      {
+        "finding": "Campaign 0003 promoted 12 regime-conditioned features and identified 12 cross-regime anchors that survive conditioning.",
+        "institutional_status": "INSTITUTIONAL_KNOWLEDGE",
+        "supporting_evidence": "The promoted set is dominated by return anchors, volatility/trend context, and bounded interaction terms.",
+        "theme": "Governed feature catalogue"
+      },
+      {
+        "finding": "Campaign 0004 narrowed the institutional hypothesis catalogue to five validation-worthy hypotheses out of eight generated candidates.",
+        "institutional_status": "INSTITUTIONAL_KNOWLEDGE",
+        "supporting_evidence": "Three lower-priority hypotheses were held back before costly validation, preserving governance discipline.",
+        "theme": "Hypothesis generation discipline"
+      },
+      {
+        "finding": "Campaigns 0006 and 0007 reduced uncertainty materially without changing any hypothesis definition or resorting to optimization.",
+        "institutional_status": "INSTITUTIONAL_KNOWLEDGE",
+        "supporting_evidence": "Two retained hypotheses returned to validation readiness, while one remained in testing due to unresolved data gaps.",
+        "theme": "Diagnostic value of governed follow-up"
+      },
+      {
+        "finding": "The most durable signals in Discovery Cycle 1 live in bull_trend and macro_transition rather than in macro-only or crisis-only framing.",
+        "institutional_status": "INSTITUTIONAL_KNOWLEDGE",
+        "supporting_evidence": "H0401 and H0405 survived scientific validation and improved under diagnostic segmentation; H0408 stayed directionally positive but underpowered.",
+        "theme": "Bull-trend persistence and macro-transition follow-through"
+      }
+    ],
+    "uncertain_findings": [
+      "IKROS-HYP-20260802-0401 needs re-validation with explicit persistence and DXY conditioning panels.",
+      "IKROS-HYP-20260802-0405 needs re-validation with branch and event-quality segmentation.",
+      "IKROS-HYP-20260802-0408 remains plausible but cannot advance until sequencing and episode-depth gaps close."
+    ]
+  },
+  "report_paths": {
+    "confidence_evolution_report": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\CONFIDENCE_EVOLUTION_REPORT.md",
+    "contradiction_map": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\CONTRADICTION_MAP.md",
+    "evidence_synthesis": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\EVIDENCE_SYNTHESIS.md",
+    "failure_catalogue": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\FAILURE_CATALOGUE.md",
+    "final_review": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\DISCOVERY_CYCLE_1_FINAL_REVIEW.md",
+    "institutional_knowledge_review": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\INSTITUTIONAL_KNOWLEDGE_REVIEW.md",
+    "knowledge_gaps": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\KNOWLEDGE_GAPS.md",
+    "research_lessons_learned": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\RESEARCH_LESSONS_LEARNED.md",
+    "research_maturity_assessment": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\RESEARCH_MATURITY_ASSESSMENT.md",
+    "research_roadmap_v2": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\RESEARCH_ROADMAP_V2.md",
+    "success_catalogue": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-h\\discovery-cycle-1-review\\SUCCESS_CATALOGUE.md"
+  }
+}

@@ -1,0 +1,17 @@
+attributes:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0010
+  entity_type: ResearchTask
+  kind: KNOWLEDGE_REGISTRATION
+  status: COMPLETED
+confidence: 1.0
+created_at: '2026-08-02T02:37:45.996582+00:00'
+ikros_id: IKROS-RESEARCHTASK-20260802-0073
+label: Knowledge Registration
+node_id: IKROS-RESEARCHTASK-20260802-0073
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

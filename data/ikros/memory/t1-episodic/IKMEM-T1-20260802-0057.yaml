@@ -1,0 +1,298 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:18:17.339205+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0045
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+- 11-research/phase-g/scientific-validation/SCIENTIFIC_VALIDATION_CAMPAIGN.md
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0005
+- IKROS-RESEARCHTASK-20260802-0046
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0057
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0005
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0045
+    finished_at: '2026-08-02T02:18:17.339205+00:00'
+    kind: EXPERIMENT_REGISTRATION
+    max_attempts: 1
+    payload:
+      entity:
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        - IKROS-CONFIDENCE
+        completed_at: null
+        confidence:
+          data: 0.84
+          economic: 0.66
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.73
+          overall: 0.7396882056314796
+          prior: 0.57
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        dataset_versions:
+        - IKROS-DSV-20260802-0005
+        entity_type: Experiment
+        failures_produced: []
+        feature_versions:
+        - IKROS-FEAT-20260802-0301
+        - IKROS-FEAT-20260802-0302
+        - IKROS-FEAT-20260802-0303
+        - IKROS-FEAT-20260802-0304
+        - IKROS-FEAT-20260802-0305
+        - IKROS-FEAT-20260802-0306
+        - IKROS-FEAT-20260802-0308
+        - IKROS-FEAT-20260802-0309
+        - IKROS-FEAT-20260802-0310
+        - IKROS-FEAT-20260802-0311
+        - IKROS-FEAT-20260802-0312
+        git_commit: ''
+        hypotheses:
+        - IKROS-HYP-20260802-0401
+        - IKROS-HYP-20260802-0402
+        - IKROS-HYP-20260802-0404
+        - IKROS-HYP-20260802-0405
+        - IKROS-HYP-20260802-0408
+        ikros_id: IKROS-EXP-20260802-0005
+        in_sample_end: ''
+        in_sample_start: ''
+        lifecycle_state: RUNNING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0005
+            external_refs:
+            - 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+            - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-HYP-20260802-0005
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0005-scientific-validation
+            creation_context: Campaign 0005 scientific validation
+            motivation: Execute the governed validation protocol on the approved Phase
+              G hypothesis subset.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        out_of_sample_end: ''
+        out_of_sample_start: ''
+        parameters:
+          authorized_hypotheses:
+          - IKROS-HYP-20260802-0401
+          - IKROS-HYP-20260802-0402
+          - IKROS-HYP-20260802-0404
+          - IKROS-HYP-20260802-0405
+          - IKROS-HYP-20260802-0408
+          governance_constraints:
+          - no runtime changes
+          - no infrastructure changes
+          - no parameter optimization
+          - fixed deterministic validation rules only
+        protocol: Evaluate each approved hypothesis with deterministic event rules,
+          walk-forward folds, CPCV, Monte Carlo, bootstrap, sensitivity, stress, temporal
+          drift, and contradiction review without optimization.
+        random_seed: 42
+        reproducibility_hash: fddb1d98a29602421ffaff14ae157fbe5587d6abd5170ee12b20690d6e360948
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        title: Campaign 0005 institutional scientific validation
+        validations_produced: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: Experiment
+    planned_order: 4
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0046
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-EXP-20260802-0005
+      payload:
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        - IKROS-CONFIDENCE
+        completed_at: null
+        confidence:
+          data: 0.84
+          economic: 0.66
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.73
+          overall: 0.7396882056314796
+          prior: 0.57
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        dataset_versions:
+        - IKROS-DSV-20260802-0005
+        entity_type: Experiment
+        failures_produced: []
+        feature_versions:
+        - IKROS-FEAT-20260802-0301
+        - IKROS-FEAT-20260802-0302
+        - IKROS-FEAT-20260802-0303
+        - IKROS-FEAT-20260802-0304
+        - IKROS-FEAT-20260802-0305
+        - IKROS-FEAT-20260802-0306
+        - IKROS-FEAT-20260802-0308
+        - IKROS-FEAT-20260802-0309
+        - IKROS-FEAT-20260802-0310
+        - IKROS-FEAT-20260802-0311
+        - IKROS-FEAT-20260802-0312
+        git_commit: ''
+        hypotheses:
+        - IKROS-HYP-20260802-0401
+        - IKROS-HYP-20260802-0402
+        - IKROS-HYP-20260802-0404
+        - IKROS-HYP-20260802-0405
+        - IKROS-HYP-20260802-0408
+        ikros_id: IKROS-EXP-20260802-0005
+        in_sample_end: ''
+        in_sample_start: ''
+        lifecycle_state: RUNNING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0005
+            external_refs:
+            - 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+            - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-HYP-20260802-0005
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0005-scientific-validation
+            creation_context: Campaign 0005 scientific validation
+            motivation: Execute the governed validation protocol on the approved Phase
+              G hypothesis subset.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        out_of_sample_end: ''
+        out_of_sample_start: ''
+        parameters:
+          authorized_hypotheses:
+          - IKROS-HYP-20260802-0401
+          - IKROS-HYP-20260802-0402
+          - IKROS-HYP-20260802-0404
+          - IKROS-HYP-20260802-0405
+          - IKROS-HYP-20260802-0408
+          governance_constraints:
+          - no runtime changes
+          - no infrastructure changes
+          - no parameter optimization
+          - fixed deterministic validation rules only
+        protocol: Evaluate each approved hypothesis with deterministic event rules,
+          walk-forward folds, CPCV, Monte Carlo, bootstrap, sensitivity, stress, temporal
+          drift, and contradiction review without optimization.
+        random_seed: 42
+        reproducibility_hash: fddb1d98a29602421ffaff14ae157fbe5587d6abd5170ee12b20690d6e360948
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        title: Campaign 0005 institutional scientific validation
+        validations_produced: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T02:18:17.050089+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0046
+    title: Experiment Registration
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0005
+- IKROS-EXP-20260802-0005
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: EXPERIMENT_REGISTRATION COMPLETED
+tags:
+- research-orchestrator
+- experiment_registration
+tier: T1_EPISODIC
+title: 'Campaign 0005 Scientific Alpha Validation :: Experiment Registration'
+updated_at: '2026-08-02T02:18:17.339205+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

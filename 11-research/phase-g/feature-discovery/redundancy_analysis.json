@@ -1,0 +1,39 @@
+{
+  "pruned_pairs": [
+    {
+      "absolute_correlation": 0.108436,
+      "pruned_feature": "dxy_return_20",
+      "reason": "Forward expectation retained the cross-asset information with clearer economic interpretation.",
+      "regime": "bull_trend",
+      "retained_feature": "xau_return_20"
+    },
+    {
+      "absolute_correlation": 0.826085,
+      "pruned_feature": "trend_gap_20_120",
+      "reason": "Longer regime return anchor dominated the overlapping medium-horizon trend signal.",
+      "regime": "bull_trend",
+      "retained_feature": "regime_return_60"
+    },
+    {
+      "absolute_correlation": 0.380937,
+      "pruned_feature": "xau_return_5",
+      "reason": "Breakout expansion dominated short-horizon return echo during crisis states.",
+      "regime": "crisis_dislocation",
+      "retained_feature": "breakout_60"
+    },
+    {
+      "absolute_correlation": 0.94002,
+      "pruned_feature": "micro_momentum",
+      "reason": "One-bar gold reaction subsumed standalone micro momentum during transitions.",
+      "regime": "macro_transition",
+      "retained_feature": "xau_return_1"
+    },
+    {
+      "absolute_correlation": 1.0,
+      "pruned_feature": "dxy_return_20",
+      "reason": "Forward expectation captured the same cross-asset channel with cleaner semantics.",
+      "regime": "range_compression",
+      "retained_feature": "forward_expectation"
+    }
+  ]
+}

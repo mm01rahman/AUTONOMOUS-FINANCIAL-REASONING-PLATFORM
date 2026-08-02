@@ -1,0 +1,58 @@
+capability_refs: []
+confidence:
+  data: 0.58
+  economic: 0.58
+  last_updated: '2026-08-02T01:27:41.712621+00:00'
+  model: 0.0
+  operational: 0.0
+  overall: 0.58
+  prior: 0.58
+  replication: 0.58
+  statistical: 0.58
+  validation: 0.58
+description: Macro proxy features used by the Phase E macro-only baseline.
+entity_type: FeatureFamily
+ikros_id: IKROS-FF-20260802-0001
+lifecycle_state: VALIDATED
+lineage:
+  dependencies:
+    datasets: []
+    external_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_knowledge.json
+    features: []
+    inputs:
+    - IKROS-THESIS-20260802-0001
+    models: []
+  evidence:
+    contradicting: []
+    ers_records:
+    - 11-research/phase-e/feature_importance.json
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T01:27:41.710581+00:00'
+    created_by: ikros-ingestion-engine
+    creation_context: INTERNAL_RESEARCH_REPORT
+    motivation: Ingested from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_knowledge.json
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+member_features:
+- IKROS-FEAT-20260802-0001
+- IKROS-FEAT-20260802-0002
+- IKROS-FEAT-20260802-0003
+name: macro_pressure_family
+spec_refs:
+- SPEC-012
+- SPEC-060
+version: 1.0.0
+version_history: []
+work_package_refs: []

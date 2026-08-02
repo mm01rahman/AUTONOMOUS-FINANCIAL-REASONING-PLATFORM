@@ -1,0 +1,138 @@
+alternative_hypothesis: Reserve diversification, real-yield relief, and trend-following
+  capital can reinforce each other once the tape is already trending higher.
+capability_refs: []
+confidence:
+  data: 0.53
+  economic: 0.53
+  last_updated: '2026-08-02T01:59:35.149718+00:00'
+  model: 0.0
+  operational: 0.0
+  overall: 0.53
+  prior: 0.53
+  replication: 0.53
+  statistical: 0.53
+  validation: 0.53
+contradictions: []
+entity_type: Hypothesis
+experiments:
+- IKROS-EXP-20260802-0005
+- IKROS-EXP-20260802-0006
+- IKROS-EXP-20260802-0601
+- IKROS-EXP-20260802-0602
+ikros_id: IKROS-HYP-20260802-0401
+lifecycle_state: INCONCLUSIVE
+lineage:
+  dependencies:
+    datasets: []
+    external_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+    features: []
+    inputs:
+    - IKROS-RQ-20260802-0401
+    models: []
+  evidence:
+    contradicting: []
+    ers_records:
+    - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+    supporting: []
+  experiments:
+    tested_in:
+    - IKROS-EXP-20260802-0005
+    - IKROS-EXP-20260802-0006
+    - IKROS-EXP-20260802-0601
+    - IKROS-EXP-20260802-0602
+    validated_by:
+    - IKROS-VAL-20260802-0401
+  origin:
+    created_at: '2026-08-02T01:59:35.071678+00:00'
+    created_by: ikros-ingestion-engine
+    creation_context: INTERNAL_RESEARCH_REPORT
+    motivation: Ingested from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+motivating_theses: []
+null_hypothesis: The described mechanism does not produce a persistent regime-conditioned
+  predictive relationship.
+posterior_confidence: 0.5133
+power: 0.8
+prior_confidence: 0.53
+significance_level: 0.05
+source_rq: IKROS-RQ-20260802-0401
+spec_refs:
+- SPEC-012
+- SPEC-060
+statement: When bull_trend is already active, does a constructive expectation reset
+  allow XAU/USD continuation rather than exhaustion?
+validations:
+- IKROS-VAL-20260802-0401
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T02:18:22.603554+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:18:22.606557+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:18:22.609556+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:18:22.613555+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: State → TESTING. Campaign 0005 began subordinate hypothesis validation.
+  changed_at: '2026-08-02T02:18:22.616554+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: State → INCONCLUSIVE. Campaign 0005 kept the hypothesis in further-research
+    status.
+  changed_at: '2026-08-02T02:18:22.620557+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.214886+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.747002+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.752004+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.756006+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.853519+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.858532+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.874029+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.879035+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.978610+00:00'
+  confidence_at_time: 0.53
+  version: 1.0.0
+work_package_refs: []

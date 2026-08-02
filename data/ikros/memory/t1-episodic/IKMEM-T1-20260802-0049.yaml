@@ -1,0 +1,289 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:59:38.092496+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0037
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+- 11-research/phase-g/hypothesis-discovery/HYPOTHESIS_DISCOVERY_CAMPAIGN.md
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0004
+- IKROS-RESEARCHTASK-20260802-0038
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0049
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0004
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0037
+    finished_at: '2026-08-02T01:59:38.092496+00:00'
+    kind: EXPERIMENT_REGISTRATION
+    max_attempts: 1
+    payload:
+      entity:
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        completed_at: null
+        confidence:
+          data: 0.81
+          economic: 0.65
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.71
+          overall: 0.7203643988764685
+          prior: 0.54
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        dataset_versions:
+        - IKROS-DSV-20260802-0004
+        entity_type: Experiment
+        failures_produced: []
+        feature_versions:
+        - IKROS-FEAT-20260802-0301
+        - IKROS-FEAT-20260802-0302
+        - IKROS-FEAT-20260802-0303
+        - IKROS-FEAT-20260802-0304
+        - IKROS-FEAT-20260802-0305
+        - IKROS-FEAT-20260802-0306
+        - IKROS-FEAT-20260802-0307
+        - IKROS-FEAT-20260802-0308
+        - IKROS-FEAT-20260802-0309
+        - IKROS-FEAT-20260802-0310
+        - IKROS-FEAT-20260802-0311
+        - IKROS-FEAT-20260802-0312
+        git_commit: 752f35c
+        hypotheses:
+        - IKROS-HYP-20260802-0004
+        ikros_id: IKROS-EXP-20260802-0004
+        in_sample_end: ''
+        in_sample_start: ''
+        lifecycle_state: RUNNING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0004
+            external_refs:
+            - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0307
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-HYP-20260802-0004
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0004-hypothesis-discovery
+            creation_context: Campaign 0004 hypothesis discovery
+            motivation: Synthesize and register the institutional hypothesis catalogue
+              plus future validation designs.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        out_of_sample_end: ''
+        out_of_sample_start: ''
+        parameters:
+          deliverables:
+          - institutional_hypothesis_catalogue
+          - hypothesis_cards
+          - mechanism_atlas
+          - priority_matrix
+          - validation_matrix
+          generation_constraints:
+          - no backtesting
+          - no validation
+          - no parameter tuning
+          - use only approved taxonomy and approved feature catalogue
+        protocol: Catalogue approved feature combinations, map them to economic mechanisms
+          and regimes, define future validation plans, and rank them for Campaign
+          0005 without performing validation or optimization.
+        random_seed: 42
+        reproducibility_hash: 389e7f0e8fa0f70b0f365d65d989705d7b0646797f718ec23a24f30996b78d7c
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        title: Campaign 0004 institutional hypothesis synthesis
+        validations_produced: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: Experiment
+    planned_order: 5
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0038
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-EXP-20260802-0004
+      payload:
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        completed_at: null
+        confidence:
+          data: 0.81
+          economic: 0.65
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.71
+          overall: 0.7203643988764685
+          prior: 0.54
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        dataset_versions:
+        - IKROS-DSV-20260802-0004
+        entity_type: Experiment
+        failures_produced: []
+        feature_versions:
+        - IKROS-FEAT-20260802-0301
+        - IKROS-FEAT-20260802-0302
+        - IKROS-FEAT-20260802-0303
+        - IKROS-FEAT-20260802-0304
+        - IKROS-FEAT-20260802-0305
+        - IKROS-FEAT-20260802-0306
+        - IKROS-FEAT-20260802-0307
+        - IKROS-FEAT-20260802-0308
+        - IKROS-FEAT-20260802-0309
+        - IKROS-FEAT-20260802-0310
+        - IKROS-FEAT-20260802-0311
+        - IKROS-FEAT-20260802-0312
+        git_commit: 752f35c
+        hypotheses:
+        - IKROS-HYP-20260802-0004
+        ikros_id: IKROS-EXP-20260802-0004
+        in_sample_end: ''
+        in_sample_start: ''
+        lifecycle_state: RUNNING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0004
+            external_refs:
+            - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0307
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-HYP-20260802-0004
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0004-hypothesis-discovery
+            creation_context: Campaign 0004 hypothesis discovery
+            motivation: Synthesize and register the institutional hypothesis catalogue
+              plus future validation designs.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        out_of_sample_end: ''
+        out_of_sample_start: ''
+        parameters:
+          deliverables:
+          - institutional_hypothesis_catalogue
+          - hypothesis_cards
+          - mechanism_atlas
+          - priority_matrix
+          - validation_matrix
+          generation_constraints:
+          - no backtesting
+          - no validation
+          - no parameter tuning
+          - use only approved taxonomy and approved feature catalogue
+        protocol: Catalogue approved feature combinations, map them to economic mechanisms
+          and regimes, define future validation plans, and rank them for Campaign
+          0005 without performing validation or optimization.
+        random_seed: 42
+        reproducibility_hash: 389e7f0e8fa0f70b0f365d65d989705d7b0646797f718ec23a24f30996b78d7c
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        title: Campaign 0004 institutional hypothesis synthesis
+        validations_produced: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T01:59:37.815893+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0038
+    title: Experiment Registration
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0004
+- IKROS-EXP-20260802-0004
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: EXPERIMENT_REGISTRATION COMPLETED
+tags:
+- research-orchestrator
+- experiment_registration
+tier: T1_EPISODIC
+title: 'Campaign 0004 Hypothesis Discovery :: Experiment Registration'
+updated_at: '2026-08-02T01:59:38.092496+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

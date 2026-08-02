@@ -1,0 +1,2001 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0038
+- IKROS-CAMPAIGNAUDIT-20260802-0039
+- IKROS-CAMPAIGNAUDIT-20260802-0040
+- IKROS-CAMPAIGNAUDIT-20260802-0041
+- IKROS-CAMPAIGNAUDIT-20260802-0042
+- IKROS-CAMPAIGNAUDIT-20260802-0043
+- IKROS-CAMPAIGNAUDIT-20260802-0044
+- IKROS-CAMPAIGNAUDIT-20260802-0045
+- IKROS-CAMPAIGNAUDIT-20260802-0046
+- IKROS-CAMPAIGNAUDIT-20260802-0047
+- IKROS-CAMPAIGNAUDIT-20260802-0048
+- IKROS-CAMPAIGNAUDIT-20260802-0049
+- IKROS-CAMPAIGNAUDIT-20260802-0050
+- IKROS-CAMPAIGNAUDIT-20260802-0051
+- IKROS-CAMPAIGNAUDIT-20260802-0052
+- IKROS-CAMPAIGNAUDIT-20260802-0053
+- IKROS-CAMPAIGNAUDIT-20260802-0054
+- IKROS-CAMPAIGNAUDIT-20260802-0055
+- IKROS-CAMPAIGNAUDIT-20260802-0056
+- IKROS-CAMPAIGNAUDIT-20260802-0057
+- IKROS-CAMPAIGNAUDIT-20260802-0058
+- IKROS-CAMPAIGNAUDIT-20260802-0059
+- IKROS-CAMPAIGNAUDIT-20260802-0060
+- IKROS-CAMPAIGNAUDIT-20260802-0061
+- IKROS-CAMPAIGNAUDIT-20260802-0062
+- IKROS-CAMPAIGNAUDIT-20260802-0063
+- IKROS-CAMPAIGNAUDIT-20260802-0064
+- IKROS-CAMPAIGNAUDIT-20260802-0065
+- IKROS-CAMPAIGNAUDIT-20260802-0066
+- IKROS-CAMPAIGNAUDIT-20260802-0067
+- IKROS-CAMPAIGNAUDIT-20260802-0068
+- IKROS-CAMPAIGNAUDIT-20260802-0069
+- IKROS-CAMPAIGNAUDIT-20260802-0070
+- IKROS-CAMPAIGNAUDIT-20260802-0071
+- IKROS-CAMPAIGNAUDIT-20260802-0072
+- IKROS-CAMPAIGNAUDIT-20260802-0073
+- IKROS-CAMPAIGNAUDIT-20260802-0074
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0002
+campaign_type: RESEARCH_AUDIT
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0002
+created_at: '2026-08-02T01:43:00.563302+00:00'
+evidence_refs:
+- 11-research/phase-e/feature_importance.json
+- 11-research/phase-e/regime_adaptation.json
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- 11-research/regime_analysis.md
+failure_policy: FAIL_FAST
+finished_at: '2026-08-02T01:43:07.499198+00:00'
+lifecycle_state: COMPLETED
+objective: Compare governed regime-taxonomy candidates, accept the minimum institutional
+  state model that improves research quality, and register the result into IKROS.
+pipeline:
+  deterministic: true
+  name: RESEARCH_AUDIT pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0002
+  stages:
+  - RESEARCH_QUESTION
+  - LITERATURE_INTAKE
+  - KNOWLEDGE_REGISTRATION
+  - HYPOTHESIS_REGISTRATION
+  - EXPERIMENT_REGISTRATION
+  - DATASET_SELECTION
+  - FEATURE_SELECTION
+  - VALIDATION_REQUEST
+  - STATISTICAL_EVALUATION
+  - CONFIDENCE_UPDATE
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0012
+  - IKROS-RESEARCHTASK-20260802-0013
+  - IKROS-RESEARCHTASK-20260802-0014
+  - IKROS-RESEARCHTASK-20260802-0015
+  - IKROS-RESEARCHTASK-20260802-0016
+  - IKROS-RESEARCHTASK-20260802-0017
+  - IKROS-RESEARCHTASK-20260802-0018
+  - IKROS-RESEARCHTASK-20260802-0019
+  - IKROS-RESEARCHTASK-20260802-0020
+  - IKROS-RESEARCHTASK-20260802-0021
+  - IKROS-RESEARCHTASK-20260802-0022
+research_question_id: IKROS-RQ-20260802-0002
+specification_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+started_at: '2026-08-02T01:43:00.770807+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T01:43:01.002011+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: PHASE-G-REGIME-002
+      capability_refs:
+      - ALPHA-RESEARCH
+      - IKROS-ORCHESTRATOR
+      confidence:
+        data: 0.74
+        economic: 0.62
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.56
+        operational: 0.63
+        overall: 0.5549213316882219
+        prior: 0.51
+        replication: 0.0
+        statistical: 0.44
+        validation: 0.41
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260802-0002
+      instrument: XAU/USD
+      lifecycle_state: ACTIVE
+      lineage:
+        dependencies:
+          datasets:
+          - IKROS-DSV-20260802-0002
+          external_refs:
+          - 11-research/phase-g/macro-alpha/MACRO_ALPHA_COMPLETION_REPORT.md
+          - 11-research/phase-e/regime_adaptation.json
+          features:
+          - IKROS-FEAT-20260802-0201
+          - IKROS-FEAT-20260802-0202
+          - IKROS-FEAT-20260802-0203
+          - IKROS-FEAT-20260802-0204
+          - IKROS-FEAT-20260802-0205
+          - IKROS-FEAT-20260802-0206
+          - IKROS-FEAT-20260802-0207
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: campaign-0002-regime-discovery
+          creation_context: Campaign 0002 regime discovery
+          motivation: Determine the institutional state model required to evaluate
+            future XAU/USD hypotheses.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: Campaign 0001 rejected the macro-only baseline and showed that future
+        research must answer when an alpha works before asking what alpha works.
+      scope: REGIME_DISCOVERY
+      spec_refs:
+      - SPEC-010
+      - SPEC-012
+      - SPEC-060
+      time_horizon: 5D
+      title: Which deterministic regime taxonomy best explains the success and failure
+        of XAU/USD alpha hypotheses?
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0012
+    memory_record_id: IKMEM-T1-20260802-0016
+    metrics: {}
+    output_refs:
+    - IKROS-RQ-20260802-0002
+    payload:
+      campaign_tag: PHASE-G-REGIME-002
+      capability_refs:
+      - ALPHA-RESEARCH
+      - IKROS-ORCHESTRATOR
+      confidence:
+        data: 0.74
+        economic: 0.62
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.56
+        operational: 0.63
+        overall: 0.5549213316882219
+        prior: 0.51
+        replication: 0.0
+        statistical: 0.44
+        validation: 0.41
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260802-0002
+      instrument: XAU/USD
+      lifecycle_state: ACTIVE
+      lineage:
+        dependencies:
+          datasets:
+          - IKROS-DSV-20260802-0002
+          external_refs:
+          - 11-research/phase-g/macro-alpha/MACRO_ALPHA_COMPLETION_REPORT.md
+          - 11-research/phase-e/regime_adaptation.json
+          features:
+          - IKROS-FEAT-20260802-0201
+          - IKROS-FEAT-20260802-0202
+          - IKROS-FEAT-20260802-0203
+          - IKROS-FEAT-20260802-0204
+          - IKROS-FEAT-20260802-0205
+          - IKROS-FEAT-20260802-0206
+          - IKROS-FEAT-20260802-0207
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: campaign-0002-regime-discovery
+          creation_context: Campaign 0002 regime discovery
+          motivation: Determine the institutional state model required to evaluate
+            future XAU/USD hypotheses.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: Campaign 0001 rejected the macro-only baseline and showed that future
+        research must answer when an alpha works before asking what alpha works.
+      scope: REGIME_DISCOVERY
+      spec_refs:
+      - SPEC-010
+      - SPEC-012
+      - SPEC-060
+      time_horizon: 5D
+      title: Which deterministic regime taxonomy best explains the success and failure
+        of XAU/USD alpha hypotheses?
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    selected_ids: []
+  started_at: '2026-08-02T01:43:00.920590+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0012
+  title: Research Question
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0012
+  finished_at: '2026-08-02T01:43:01.468067+00:00'
+  kind: LITERATURE_INTAKE
+  max_attempts: 1
+  payload:
+    source_path: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\REGIME_DISCOVERY_CAMPAIGN.md
+  planned_order: 2
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0013
+    memory_record_id: IKMEM-T1-20260802-0017
+    metrics:
+      graph_node_ids:
+      - IKROS-KO-20260802-0002
+      ingestion_status: INGESTED
+      memory_ids:
+      - IKMEM-T2-20260802-0010
+    output_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\REGIME_DISCOVERY_CAMPAIGN.md
+    - IKROS-KO-20260802-0002
+    - REGIME_DISCOVERY_CAMPAIGN
+    payload:
+      graph_node_ids:
+      - IKROS-KO-20260802-0002
+      ingested_at: '2026-08-02T01:43:01.466067+00:00'
+      ingestion_id: IKING-20260802-0004
+      memory_ids:
+      - IKMEM-T2-20260802-0010
+      object_fingerprints:
+      - '{"attributes": {"document_metadata": {}, "section_names": ["Acceptance criteria",
+        "Campaign 0002 \u2014 Regime Discovery for XAU/USD", "Expected deliverables",
+        "Governed inputs", "Hypothesis", "Method comparison floor", "Mission", "Research
+        question"]}, "capability_refs": [], "confidence": 0.6, "created_at": "2026-08-02T01:43:01.361409+00:00",
+        "dependency_ids": [], "evidence_refs": [], "identifier": "IKROS-KO-20260802-0002",
+        "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type": "KnowledgeObject",
+        "relationships": [], "source_format": "MARKDOWN", "source_ids": [], "source_kind":
+        "MARKDOWN", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\REGIME_DISCOVERY_CAMPAIGN.md",
+        "specification_refs": ["SPEC-060"], "summary": "Determine the minimum institutional
+        market-state representation that improves XAU/USD\nresearch quality without
+        modifying the frozen Runtime or IKROS architecture.", "title": "Campaign 0002
+        \u2014 Regime Discovery for XAU/USD", "version": "1.0.0", "work_package_refs":
+        []}'
+      object_ids:
+      - IKROS-KO-20260802-0002
+      source_format: MARKDOWN
+      source_hash: 89108b0b6b146e382fa255c24075234c1f146862417acd0fd5daa7296c6d5d50
+      source_kind: MARKDOWN
+      source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\REGIME_DISCOVERY_CAMPAIGN.md
+      source_version: 1.0.0
+      status: INGESTED
+      warnings: []
+    selected_ids: []
+  started_at: '2026-08-02T01:43:01.264841+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0013
+  title: Literature Intake
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0013
+  finished_at: '2026-08-02T01:43:02.125179+00:00'
+  kind: KNOWLEDGE_REGISTRATION
+  max_attempts: 1
+  payload:
+    source_path: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+  planned_order: 3
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0014
+    memory_record_id: IKMEM-T1-20260802-0018
+    metrics:
+      graph_node_ids:
+      - IKROS-DS-20260802-0002
+      - IKROS-DSV-20260802-0002
+      - IKROS-KO-20260802-0201
+      - IKROS-FF-20260802-0201
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+      - IKROS-FEAT-20260802-0207
+      - IKROS-KO-20260802-0202
+      - IKROS-KO-20260802-0203
+      - IKROS-KO-20260802-0204
+      - IKROS-KO-20260802-0205
+      - IKROS-KO-20260802-0206
+      - IKROS-KO-20260802-0207
+      - IKROS-KO-20260802-0208
+      - IKROS-KO-20260802-0209
+      - IKROS-REGIME-20260802-0201
+      - IKROS-REGIME-20260802-0202
+      - IKROS-REGIME-20260802-0203
+      - IKROS-REGIME-20260802-0204
+      - IKROS-REGIME-20260802-0205
+      - IKROS-REGIME-20260802-0206
+      - IKROS-KO-20260802-0210
+      - IKROS-KO-20260802-0211
+      ingestion_status: INGESTED
+      memory_ids:
+      - IKMEM-T2-20260802-0011
+      - IKMEM-T2-20260802-0012
+      - IKMEM-T2-20260802-0013
+      - IKMEM-T2-20260802-0014
+      - IKMEM-T2-20260802-0015
+      - IKMEM-T2-20260802-0016
+      - IKMEM-T2-20260802-0017
+      - IKMEM-T2-20260802-0018
+      - IKMEM-T2-20260802-0019
+      - IKMEM-T2-20260802-0020
+      - IKMEM-T2-20260802-0021
+      - IKMEM-T2-20260802-0022
+      - IKMEM-T2-20260802-0023
+      - IKMEM-T2-20260802-0024
+      - IKMEM-T2-20260802-0025
+      - IKMEM-T2-20260802-0026
+      - IKMEM-T2-20260802-0027
+      - IKMEM-T2-20260802-0028
+      - IKMEM-T2-20260802-0029
+      - IKMEM-T2-20260802-0030
+      - IKMEM-T2-20260802-0031
+      - IKMEM-T2-20260802-0032
+      - IKMEM-T2-20260802-0033
+      - IKMEM-T2-20260802-0034
+      - IKMEM-T2-20260802-0035
+      - IKMEM-T2-20260802-0036
+      - IKMEM-T2-20260802-0037
+    output_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+    - IKROS-DS-20260802-0002
+    - IKROS-DSV-20260802-0002
+    - IKROS-FEAT-20260802-0201
+    - IKROS-FEAT-20260802-0202
+    - IKROS-FEAT-20260802-0203
+    - IKROS-FEAT-20260802-0204
+    - IKROS-FEAT-20260802-0205
+    - IKROS-FEAT-20260802-0206
+    - IKROS-FEAT-20260802-0207
+    - IKROS-FF-20260802-0201
+    - IKROS-KO-20260802-0201
+    - IKROS-KO-20260802-0202
+    - IKROS-KO-20260802-0203
+    - IKROS-KO-20260802-0204
+    - IKROS-KO-20260802-0205
+    - IKROS-KO-20260802-0206
+    - IKROS-KO-20260802-0207
+    - IKROS-KO-20260802-0208
+    - IKROS-KO-20260802-0209
+    - IKROS-KO-20260802-0210
+    - IKROS-KO-20260802-0211
+    - IKROS-REGIME-20260802-0201
+    - IKROS-REGIME-20260802-0202
+    - IKROS-REGIME-20260802-0203
+    - IKROS-REGIME-20260802-0204
+    - IKROS-REGIME-20260802-0205
+    - IKROS-REGIME-20260802-0206
+    - regime_discovery_knowledge
+    payload:
+      graph_node_ids:
+      - IKROS-DS-20260802-0002
+      - IKROS-DSV-20260802-0002
+      - IKROS-KO-20260802-0201
+      - IKROS-FF-20260802-0201
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+      - IKROS-FEAT-20260802-0207
+      - IKROS-KO-20260802-0202
+      - IKROS-KO-20260802-0203
+      - IKROS-KO-20260802-0204
+      - IKROS-KO-20260802-0205
+      - IKROS-KO-20260802-0206
+      - IKROS-KO-20260802-0207
+      - IKROS-KO-20260802-0208
+      - IKROS-KO-20260802-0209
+      - IKROS-REGIME-20260802-0201
+      - IKROS-REGIME-20260802-0202
+      - IKROS-REGIME-20260802-0203
+      - IKROS-REGIME-20260802-0204
+      - IKROS-REGIME-20260802-0205
+      - IKROS-REGIME-20260802-0206
+      - IKROS-KO-20260802-0210
+      - IKROS-KO-20260802-0211
+      ingested_at: '2026-08-02T01:43:02.109179+00:00'
+      ingestion_id: IKING-20260802-0005
+      memory_ids:
+      - IKMEM-T2-20260802-0011
+      - IKMEM-T2-20260802-0012
+      - IKMEM-T2-20260802-0013
+      - IKMEM-T2-20260802-0014
+      - IKMEM-T2-20260802-0015
+      - IKMEM-T2-20260802-0016
+      - IKMEM-T2-20260802-0017
+      - IKMEM-T2-20260802-0018
+      - IKMEM-T2-20260802-0019
+      - IKMEM-T2-20260802-0020
+      - IKMEM-T2-20260802-0021
+      - IKMEM-T2-20260802-0022
+      - IKMEM-T2-20260802-0023
+      - IKMEM-T2-20260802-0024
+      - IKMEM-T2-20260802-0025
+      - IKMEM-T2-20260802-0026
+      - IKMEM-T2-20260802-0027
+      - IKMEM-T2-20260802-0028
+      - IKMEM-T2-20260802-0029
+      - IKMEM-T2-20260802-0030
+      - IKMEM-T2-20260802-0031
+      - IKMEM-T2-20260802-0032
+      - IKMEM-T2-20260802-0033
+      - IKMEM-T2-20260802-0034
+      - IKMEM-T2-20260802-0035
+      - IKMEM-T2-20260802-0036
+      - IKMEM-T2-20260802-0037
+      object_fingerprints:
+      - '{"attributes": {"coverage_rows": 6257, "granularity": "1D", "instrument":
+        "XAU/USD", "provenance_note": "Derived from the frozen Phase E governed data
+        foundation."}, "capability_refs": [], "confidence": 0.9, "created_at": "2026-08-02T01:43:01.845909+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-e/phase_e_summary.json"],
+        "identifier": "IKROS-DS-20260802-0002", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "Dataset", "relationships": [], "source_format": "JSON",
+        "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+        "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Governed
+        daily XAU/USD research dataset used for regime discovery synthesis.", "title":
+        "Campaign 0002 governed XAU/USD regime dataset", "version": "1.0.0", "work_package_refs":
+        []}'
+      - '{"attributes": {"coverage_rows": 6257, "feature_count": 7, "version_label":
+        "campaign-0002-regime-discovery"}, "capability_refs": [], "confidence": 0.88,
+        "created_at": "2026-08-02T01:43:01.845909+00:00", "dependency_ids": [], "evidence_refs":
+        ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+        "IKROS-DSV-20260802-0002", "lifecycle_state": "VALIDATED", "memory_tier":
+        null, "object_type": "DatasetVersion", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-DS-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Dataset
+        snapshot used by the regime discovery synthesis and taxonomy utility test.",
+        "title": "Campaign 0002 regime discovery dataset snapshot", "version": "1.0.0",
+        "work_package_refs": []}'
+      - '{"attributes": {"references": ["Hamilton regime switching", "Hidden Markov
+        Models", "Gaussian Mixture Models", "Bayesian change point detection", "Adaptive
+        Markets Hypothesis", "Commodity and safe-haven regime literature"]}, "capability_refs":
+        [], "confidence": 0.81, "created_at": "2026-08-02T01:43:01.845909+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/REGIME_DISCOVERY_CAMPAIGN.md"],
+        "identifier": "IKROS-KO-20260802-0201", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+        "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+        "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Institutional
+        literature review spanning state-space, clustering, change-point, and adaptive-market
+        approaches.", "title": "Campaign 0002 literature review", "version": "1.0.0",
+        "work_package_refs": []}'
+      - '{"attributes": {"description": "Core state variables required by the deterministic
+        regime overlay taxonomy.", "member_features": ["IKROS-FEAT-20260802-0201",
+        "IKROS-FEAT-20260802-0202", "IKROS-FEAT-20260802-0203", "IKROS-FEAT-20260802-0204",
+        "IKROS-FEAT-20260802-0205", "IKROS-FEAT-20260802-0206", "IKROS-FEAT-20260802-0207"],
+        "name": "regime_state_variables"}, "capability_refs": [], "confidence": 0.79,
+        "created_at": "2026-08-02T01:43:01.845909+00:00", "dependency_ids": [], "evidence_refs":
+        ["11-research/phase-e/feature_importance.json"], "identifier": "IKROS-FF-20260802-0201",
+        "lifecycle_state": "VALIDATED", "memory_tier": null, "object_type": "FeatureFamily",
+        "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-DSV-20260802-0002"],
+        "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Feature family
+        used to define the accepted institutional state model.", "title": "Regime
+        discovery state variables", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"classification": "useful", "family_id": "IKROS-FF-20260802-0201",
+        "information_content": 0.43001285, "name": "regime_vol_20", "stability_score":
+        0.4421828482}, "capability_refs": [], "confidence": 0.84, "created_at": "2026-08-02T01:43:01.845909+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+        "identifier": "IKROS-FEAT-20260802-0201", "lifecycle_state": "VALIDATED",
+        "memory_tier": null, "object_type": "Feature", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Primary volatility
+        state variable for regime partitioning.", "title": "20-bar realized volatility",
+        "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"classification": "state_variable", "family_id": "IKROS-FF-20260802-0201",
+        "name": "trend_gap_30_180"}, "capability_refs": [], "confidence": 0.78, "created_at":
+        "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+        ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+        "IKROS-FEAT-20260802-0202", "lifecycle_state": "VALIDATED", "memory_tier":
+        null, "object_type": "Feature", "relationships": [], "source_format": "JSON",
+        "source_ids": ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Trend persistence
+        state variable for bull and bear regime separation.", "title": "30/180 trend
+        gap", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"classification": "context_variable", "family_id": "IKROS-FF-20260802-0201",
+        "information_content": 0.43901187, "name": "macro_pressure", "redundancy_note":
+        "Redundant as a standalone alpha feature but useful as a regime-defining context
+        variable."}, "capability_refs": [], "confidence": 0.72, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+        "identifier": "IKROS-FEAT-20260802-0203", "lifecycle_state": "VALIDATED",
+        "memory_tier": null, "object_type": "Feature", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Macro transition
+        state variable that contextualizes policy and USD pressure.", "title": "Macro
+        pressure composite", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"classification": "state_variable", "family_id": "IKROS-FF-20260802-0201",
+        "name": "behavioral_stretch"}, "capability_refs": [], "confidence": 0.71,
+        "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+        ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+        "IKROS-FEAT-20260802-0204", "lifecycle_state": "VALIDATED", "memory_tier":
+        null, "object_type": "Feature", "relationships": [], "source_format": "JSON",
+        "source_ids": ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Stretch score
+        used to identify dislocation and exhaustion conditions.", "title": "Behavioral
+        stretch", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"family_id": "IKROS-FF-20260802-0201", "name": "breakout_60"},
+        "capability_refs": [], "confidence": 0.69, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-FEAT-20260802-0205", "lifecycle_state": "VALIDATED",
+        "memory_tier": null, "object_type": "Feature", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Breakout state
+        variable confirming bull trend expansion.", "title": "60-bar breakout", "version":
+        "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"family_id": "IKROS-FF-20260802-0201", "name": "breakdown_20"},
+        "capability_refs": [], "confidence": 0.69, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-FEAT-20260802-0206", "lifecycle_state": "VALIDATED",
+        "memory_tier": null, "object_type": "Feature", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Breakdown state
+        variable confirming bear trend unwind.", "title": "20-bar breakdown", "version":
+        "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"family_id": "IKROS-FF-20260802-0201", "name": "geo_active"},
+        "capability_refs": [], "confidence": 0.74, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-FEAT-20260802-0207", "lifecycle_state": "VALIDATED",
+        "memory_tier": null, "object_type": "Feature", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Binary event overlay
+        used to identify crisis dislocation.", "title": "Geopolitical activation flag",
+        "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"decision": "REJECT", "reason": "Latent-state inference is
+        harder to govern and did not justify additional complexity."}, "capability_refs":
+        [], "confidence": 0.56, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-KO-20260802-0202", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-KO-20260802-0201"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-060"], "summary": "Rejected as the institutional
+        state model for Campaign 0002.", "title": "Hidden Markov Model method review",
+        "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"decision": "REJECT", "reason": "No evidence that mixture
+        complexity improves institutional utility beyond deterministic overlays."},
+        "capability_refs": [], "confidence": 0.55, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-KO-20260802-0203", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-KO-20260802-0201"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-060"], "summary": "Rejected as the institutional
+        state model for Campaign 0002.", "title": "Gaussian Mixture Model method review",
+        "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"decision": "DEFER", "reason": "Promising for later refinement,
+        but not required for Campaign 0002 acceptance."}, "capability_refs": [], "confidence":
+        0.61, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+        [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-KO-20260802-0204", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-KO-20260802-0201"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-060"], "summary": "Deferred for future refinement
+        once the institutional baseline taxonomy is established.", "title": "Hierarchical
+        clustering method review", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"decision": "REJECT", "reason": "The abstraction cost is
+        not justified for the current research objective."}, "capability_refs": [],
+        "confidence": 0.54, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+        [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-KO-20260802-0205", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-KO-20260802-0201"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-060"], "summary": "Rejected as the institutional
+        state model for Campaign 0002.", "title": "Spectral clustering method review",
+        "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"decision": "DEFER", "reason": "Useful for future transition
+        refinement, but incomplete as the sole institutional taxonomy."}, "capability_refs":
+        [], "confidence": 0.64, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-KO-20260802-0206", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-KO-20260802-0201"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-060"], "summary": "Deferred for later transition-refinement
+        studies.", "title": "Bayesian change point detection method review", "version":
+        "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"decision": "REJECT", "reason": "Outlier-sensitive clusters
+        did not improve interpretability enough for institutional use."}, "capability_refs":
+        [], "confidence": 0.53, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-KO-20260802-0207", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-KO-20260802-0201"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-060"], "summary": "Rejected as the institutional
+        state model for Campaign 0002.", "title": "Density-based clustering method
+        review", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"decision": "REJECT", "hit_rate_spread": 0.04837854955652099,
+        "return_spread": 0.0012110299879640569, "stability": 0.9354323158062969},
+        "capability_refs": [], "confidence": 0.77, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-KO-20260802-0208", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-FF-20260802-0201"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-060"], "summary": "Executed and rejected because
+        it under-separates research outcomes.", "title": "Volatility-state baseline
+        review", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"decision": "ACCEPT", "hit_rate_spread": 0.1422228565085708,
+        "return_spread": 0.004942385609214154, "stability": 0.7800863033402589, "taxonomy_name":
+        "Institutional Six-State Overlay Taxonomy v1"}, "capability_refs": [], "confidence":
+        0.86, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+        [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-KO-20260802-0209", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-FF-20260802-0201", "IKROS-KO-20260802-0201"],
+        "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Accepted as the
+        institutional state model for future AFRP research.", "title": "Accepted deterministic
+        macro-event overlay taxonomy", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"regime_label": "bull_trend"}, "capability_refs": [], "confidence":
+        0.84, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+        [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-REGIME-20260802-0201", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "Regime", "relationships": [], "source_format": "JSON",
+        "source_ids": ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Persistent upside
+        structure with supportive macro context.", "title": "Bull Trend Expansion",
+        "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"regime_label": "bear_unwind"}, "capability_refs": [], "confidence":
+        0.76, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+        [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-REGIME-20260802-0202", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "Regime", "relationships": [], "source_format": "JSON",
+        "source_ids": ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Persistent downside
+        structure without full crisis dislocation.", "title": "Bear Trend Unwind",
+        "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"regime_label": "calm_carry"}, "capability_refs": [], "confidence":
+        0.74, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+        [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-REGIME-20260802-0203", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "Regime", "relationships": [], "source_format": "JSON",
+        "source_ids": ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Low-volatility
+        accumulation state with slower information release.", "title": "Calm Carry
+        Accumulation", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"regime_label": "crisis_dislocation"}, "capability_refs":
+        [], "confidence": 0.81, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-REGIME-20260802-0204", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "Regime", "relationships": [], "source_format": "JSON",
+        "source_ids": ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "High-volatility
+        stress state where edge persistence degrades.", "title": "Crisis Dislocation",
+        "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"regime_label": "macro_transition"}, "capability_refs": [],
+        "confidence": 0.82, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+        [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-REGIME-20260802-0205", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "Regime", "relationships": [], "source_format": "JSON",
+        "source_ids": ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Policy and cross-asset
+        transition state that changes the ranking of research hypotheses.", "title":
+        "Macro Policy Transition", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"regime_label": "range_compression"}, "capability_refs":
+        [], "confidence": 0.78, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-REGIME-20260802-0206", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "Regime", "relationships": [], "source_format": "JSON",
+        "source_ids": ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Institutional
+        default state outside crisis and explicit transition regimes.", "title": "Range
+        Compression", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"stability": 0.7800863033402589, "taxonomy_name": "Institutional
+        Six-State Overlay Taxonomy v1"}, "capability_refs": [], "confidence": 0.79,
+        "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+        ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+        "IKROS-KO-20260802-0210", "lifecycle_state": "ACTIVE", "memory_tier": null,
+        "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+        "source_ids": ["IKROS-REGIME-20260802-0201", "IKROS-REGIME-20260802-0202",
+        "IKROS-REGIME-20260802-0203", "IKROS-REGIME-20260802-0204", "IKROS-REGIME-20260802-0205",
+        "IKROS-REGIME-20260802-0206"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-060"], "summary": "Transition probabilities for
+        the accepted six-state taxonomy.", "title": "Institutional transition matrix
+        v1", "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"atlas_windows": ["gfc_2008", "gold_bull_2011", "gold_collapse_2013",
+        "covid_2020", "inflation_2022", "rate_cycle_2024", "historical_2025", "available_2026"]},
+        "capability_refs": [], "confidence": 0.77, "created_at": "2026-08-02T01:43:01.847413+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-KO-20260802-0211", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+        "specification_refs": ["SPEC-060"], "summary": "Historical windows mapped
+        to the accepted taxonomy.", "title": "Historical regime atlas", "version":
+        "1.0.0", "work_package_refs": []}'
+      object_ids:
+      - IKROS-DS-20260802-0002
+      - IKROS-DSV-20260802-0002
+      - IKROS-KO-20260802-0201
+      - IKROS-FF-20260802-0201
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+      - IKROS-FEAT-20260802-0207
+      - IKROS-KO-20260802-0202
+      - IKROS-KO-20260802-0203
+      - IKROS-KO-20260802-0204
+      - IKROS-KO-20260802-0205
+      - IKROS-KO-20260802-0206
+      - IKROS-KO-20260802-0207
+      - IKROS-KO-20260802-0208
+      - IKROS-KO-20260802-0209
+      - IKROS-REGIME-20260802-0201
+      - IKROS-REGIME-20260802-0202
+      - IKROS-REGIME-20260802-0203
+      - IKROS-REGIME-20260802-0204
+      - IKROS-REGIME-20260802-0205
+      - IKROS-REGIME-20260802-0206
+      - IKROS-KO-20260802-0210
+      - IKROS-KO-20260802-0211
+      source_format: JSON
+      source_hash: 3e72fd0fec35787db87993063a4c541cbaa037b858ca878fbea0e162eb5c46d8
+      source_kind: INTERNAL_RESEARCH_REPORT
+      source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+      source_version: 1.0.0
+      status: INGESTED
+      warnings: []
+    selected_ids: []
+  started_at: '2026-08-02T01:43:01.737879+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0014
+  title: Knowledge Registration
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0014
+  finished_at: '2026-08-02T01:43:02.630341+00:00'
+  kind: HYPOTHESIS_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      alternative_hypothesis: 'H1: The accepted deterministic taxonomy improves validation
+        separation, confidence calibration, and hypothesis ranking utility.'
+      capability_refs:
+      - ALPHA-RESEARCH
+      - IKROS-CONFIDENCE
+      confidence:
+        data: 0.72
+        economic: 0.61
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.58
+        operational: 0.62
+        overall: 0.5482791661008908
+        prior: 0.48
+        replication: 0.0
+        statistical: 0.43
+        validation: 0.4
+      contradictions: []
+      entity_type: Hypothesis
+      experiments: []
+      ikros_id: IKROS-HYP-20260802-0002
+      lifecycle_state: APPROVED_FOR_TESTING
+      lineage:
+        dependencies:
+          datasets:
+          - IKROS-DSV-20260802-0002
+          external_refs:
+          - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+          features:
+          - IKROS-FEAT-20260802-0201
+          - IKROS-FEAT-20260802-0202
+          - IKROS-FEAT-20260802-0203
+          - IKROS-FEAT-20260802-0204
+          - IKROS-FEAT-20260802-0205
+          - IKROS-FEAT-20260802-0206
+          - IKROS-FEAT-20260802-0207
+          inputs:
+          - IKROS-RQ-20260802-0002
+          models:
+          - deterministic_macro_overlay_taxonomy
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: campaign-0002-regime-discovery
+          creation_context: Campaign 0002 regime discovery
+          motivation: Translate the regime-discovery program into a falsifiable institutional
+            hypothesis.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      motivating_theses: []
+      null_hypothesis: 'H0: A richer deterministic taxonomy does not improve XAU/USD
+        research quality relative to simpler baselines.'
+      posterior_confidence: 0.0
+      power: 0.8
+      prior_confidence: 0.48
+      significance_level: 0.05
+      source_rq: IKROS-RQ-20260802-0002
+      spec_refs:
+      - SPEC-010
+      - SPEC-012
+      - SPEC-060
+      statement: A deterministic six-state overlay taxonomy defined by volatility,
+        macro-transition pressure, and trend persistence improves XAU/USD research
+        quality relative to volatility-only baselines.
+      validations: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Hypothesis
+  planned_order: 4
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0015
+    memory_record_id: IKMEM-T1-20260802-0019
+    metrics: {}
+    output_refs:
+    - IKROS-HYP-20260802-0002
+    payload:
+      alternative_hypothesis: 'H1: The accepted deterministic taxonomy improves validation
+        separation, confidence calibration, and hypothesis ranking utility.'
+      capability_refs:
+      - ALPHA-RESEARCH
+      - IKROS-CONFIDENCE
+      confidence:
+        data: 0.72
+        economic: 0.61
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.58
+        operational: 0.62
+        overall: 0.5482791661008908
+        prior: 0.48
+        replication: 0.0
+        statistical: 0.43
+        validation: 0.4
+      contradictions: []
+      entity_type: Hypothesis
+      experiments: []
+      ikros_id: IKROS-HYP-20260802-0002
+      lifecycle_state: APPROVED_FOR_TESTING
+      lineage:
+        dependencies:
+          datasets:
+          - IKROS-DSV-20260802-0002
+          external_refs:
+          - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+          features:
+          - IKROS-FEAT-20260802-0201
+          - IKROS-FEAT-20260802-0202
+          - IKROS-FEAT-20260802-0203
+          - IKROS-FEAT-20260802-0204
+          - IKROS-FEAT-20260802-0205
+          - IKROS-FEAT-20260802-0206
+          - IKROS-FEAT-20260802-0207
+          inputs:
+          - IKROS-RQ-20260802-0002
+          models:
+          - deterministic_macro_overlay_taxonomy
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: campaign-0002-regime-discovery
+          creation_context: Campaign 0002 regime discovery
+          motivation: Translate the regime-discovery program into a falsifiable institutional
+            hypothesis.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      motivating_theses: []
+      null_hypothesis: 'H0: A richer deterministic taxonomy does not improve XAU/USD
+        research quality relative to simpler baselines.'
+      posterior_confidence: 0.0
+      power: 0.8
+      prior_confidence: 0.48
+      significance_level: 0.05
+      source_rq: IKROS-RQ-20260802-0002
+      spec_refs:
+      - SPEC-010
+      - SPEC-012
+      - SPEC-060
+      statement: A deterministic six-state overlay taxonomy defined by volatility,
+        macro-transition pressure, and trend persistence improves XAU/USD research
+        quality relative to volatility-only baselines.
+      validations: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    selected_ids: []
+  started_at: '2026-08-02T01:43:02.530307+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0015
+  title: Hypothesis Registration
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0015
+  finished_at: '2026-08-02T01:43:03.127523+00:00'
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs:
+      - ALPHA-RESEARCH
+      - IKROS-ORCHESTRATOR
+      - IKROS-CONFIDENCE
+      completed_at: null
+      confidence:
+        data: 0.78
+        economic: 0.63
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.61
+        operational: 0.66
+        overall: 0.5871015289164317
+        prior: 0.52
+        replication: 0.0
+        statistical: 0.46
+        validation: 0.45
+      dataset_versions:
+      - IKROS-DSV-20260802-0002
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions:
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+      - IKROS-FEAT-20260802-0207
+      git_commit: 752f35c
+      hypotheses:
+      - IKROS-HYP-20260802-0002
+      ikros_id: IKROS-EXP-20260802-0002
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: RUNNING
+      lineage:
+        dependencies:
+          datasets:
+          - IKROS-DSV-20260802-0002
+          external_refs:
+          - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+          - 11-research/phase-e/regime_adaptation.json
+          features:
+          - IKROS-FEAT-20260802-0201
+          - IKROS-FEAT-20260802-0202
+          - IKROS-FEAT-20260802-0203
+          - IKROS-FEAT-20260802-0204
+          - IKROS-FEAT-20260802-0205
+          - IKROS-FEAT-20260802-0206
+          - IKROS-FEAT-20260802-0207
+          inputs:
+          - IKROS-HYP-20260802-0002
+          models:
+          - hidden_markov_models
+          - gaussian_mixture_models
+          - hierarchical_clustering
+          - spectral_clustering
+          - bayesian_change_point_detection
+          - density_based_clustering
+          - volatility_state_baseline
+          - deterministic_macro_event_overlay
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: campaign-0002-regime-discovery
+          creation_context: Campaign 0002 regime discovery
+          motivation: Run a governed comparison of candidate regime taxonomies on
+            the frozen AFRP research stack.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters:
+        candidate_methods:
+        - hidden_markov_models
+        - gaussian_mixture_models
+        - hierarchical_clustering
+        - spectral_clustering
+        - bayesian_change_point_detection
+        - density_based_clustering
+        - volatility_state_baseline
+        - deterministic_macro_event_overlay
+        validation_floor:
+        - walk_forward
+        - cpcv
+        - monte_carlo
+        - sensitivity
+        - bootstrap
+        - stress
+        - out_of_sample_replay
+        - temporal_stability
+        - historical_event_validation
+      protocol: Governed method comparison over deterministic and latent regime-taxonomy
+        candidates using existing Phase E and historical regime evidence.
+      random_seed: 42
+      reproducibility_hash: 63ab5b6ca9eb71291b24d45d5f2fcb6c3d13a0df51f82ea9f5738d3a6b06ea66
+      spec_refs:
+      - SPEC-010
+      - SPEC-012
+      - SPEC-060
+      title: Campaign 0002 regime taxonomy method comparison
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0016
+    memory_record_id: IKMEM-T1-20260802-0020
+    metrics: {}
+    output_refs:
+    - IKROS-EXP-20260802-0002
+    payload:
+      capability_refs:
+      - ALPHA-RESEARCH
+      - IKROS-ORCHESTRATOR
+      - IKROS-CONFIDENCE
+      completed_at: null
+      confidence:
+        data: 0.78
+        economic: 0.63
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.61
+        operational: 0.66
+        overall: 0.5871015289164317
+        prior: 0.52
+        replication: 0.0
+        statistical: 0.46
+        validation: 0.45
+      dataset_versions:
+      - IKROS-DSV-20260802-0002
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions:
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+      - IKROS-FEAT-20260802-0207
+      git_commit: 752f35c
+      hypotheses:
+      - IKROS-HYP-20260802-0002
+      ikros_id: IKROS-EXP-20260802-0002
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: RUNNING
+      lineage:
+        dependencies:
+          datasets:
+          - IKROS-DSV-20260802-0002
+          external_refs:
+          - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+          - 11-research/phase-e/regime_adaptation.json
+          features:
+          - IKROS-FEAT-20260802-0201
+          - IKROS-FEAT-20260802-0202
+          - IKROS-FEAT-20260802-0203
+          - IKROS-FEAT-20260802-0204
+          - IKROS-FEAT-20260802-0205
+          - IKROS-FEAT-20260802-0206
+          - IKROS-FEAT-20260802-0207
+          inputs:
+          - IKROS-HYP-20260802-0002
+          models:
+          - hidden_markov_models
+          - gaussian_mixture_models
+          - hierarchical_clustering
+          - spectral_clustering
+          - bayesian_change_point_detection
+          - density_based_clustering
+          - volatility_state_baseline
+          - deterministic_macro_event_overlay
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: campaign-0002-regime-discovery
+          creation_context: Campaign 0002 regime discovery
+          motivation: Run a governed comparison of candidate regime taxonomies on
+            the frozen AFRP research stack.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters:
+        candidate_methods:
+        - hidden_markov_models
+        - gaussian_mixture_models
+        - hierarchical_clustering
+        - spectral_clustering
+        - bayesian_change_point_detection
+        - density_based_clustering
+        - volatility_state_baseline
+        - deterministic_macro_event_overlay
+        validation_floor:
+        - walk_forward
+        - cpcv
+        - monte_carlo
+        - sensitivity
+        - bootstrap
+        - stress
+        - out_of_sample_replay
+        - temporal_stability
+        - historical_event_validation
+      protocol: Governed method comparison over deterministic and latent regime-taxonomy
+        candidates using existing Phase E and historical regime evidence.
+      random_seed: 42
+      reproducibility_hash: 63ab5b6ca9eb71291b24d45d5f2fcb6c3d13a0df51f82ea9f5738d3a6b06ea66
+      spec_refs:
+      - SPEC-010
+      - SPEC-012
+      - SPEC-060
+      title: Campaign 0002 regime taxonomy method comparison
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    selected_ids: []
+  started_at: '2026-08-02T01:43:03.023500+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0016
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0016
+  finished_at: '2026-08-02T01:43:03.631614+00:00'
+  kind: DATASET_SELECTION
+  max_attempts: 1
+  payload:
+    candidate_dataset_ids:
+    - IKROS-DSV-20260802-0002
+    top_k: 1
+  planned_order: 6
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0017
+    memory_record_id: IKMEM-T1-20260802-0021
+    metrics:
+      ranked_candidates:
+      - confidence: 0.88
+        identifier: IKROS-DSV-20260802-0002
+    output_refs: []
+    payload:
+      candidate_key: candidate_dataset_ids
+      selected_ids:
+      - IKROS-DSV-20260802-0002
+    selected_ids:
+    - IKROS-DSV-20260802-0002
+  started_at: '2026-08-02T01:43:03.527567+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0017
+  title: Dataset Selection
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0017
+  finished_at: '2026-08-02T01:43:04.151686+00:00'
+  kind: FEATURE_SELECTION
+  max_attempts: 1
+  payload:
+    candidate_feature_ids:
+    - IKROS-FEAT-20260802-0201
+    - IKROS-FEAT-20260802-0202
+    - IKROS-FEAT-20260802-0203
+    - IKROS-FEAT-20260802-0204
+    - IKROS-FEAT-20260802-0205
+    - IKROS-FEAT-20260802-0206
+    - IKROS-FEAT-20260802-0207
+    top_k: 7
+  planned_order: 7
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0018
+    memory_record_id: IKMEM-T1-20260802-0022
+    metrics:
+      ranked_candidates:
+      - confidence: 0.84
+        identifier: IKROS-FEAT-20260802-0201
+      - confidence: 0.78
+        identifier: IKROS-FEAT-20260802-0202
+      - confidence: 0.74
+        identifier: IKROS-FEAT-20260802-0207
+      - confidence: 0.72
+        identifier: IKROS-FEAT-20260802-0203
+      - confidence: 0.71
+        identifier: IKROS-FEAT-20260802-0204
+      - confidence: 0.69
+        identifier: IKROS-FEAT-20260802-0205
+      - confidence: 0.69
+        identifier: IKROS-FEAT-20260802-0206
+    output_refs: []
+    payload:
+      candidate_key: candidate_feature_ids
+      selected_ids:
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0207
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+    selected_ids:
+    - IKROS-FEAT-20260802-0201
+    - IKROS-FEAT-20260802-0202
+    - IKROS-FEAT-20260802-0207
+    - IKROS-FEAT-20260802-0203
+    - IKROS-FEAT-20260802-0204
+    - IKROS-FEAT-20260802-0205
+    - IKROS-FEAT-20260802-0206
+  started_at: '2026-08-02T01:43:04.039764+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0018
+  title: Feature Selection
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0018
+  finished_at: '2026-08-02T01:43:04.978765+00:00'
+  kind: VALIDATION_REQUEST
+  max_attempts: 1
+  payload:
+    source_path: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+  planned_order: 8
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0019
+    memory_record_id: IKMEM-T1-20260802-0025
+    metrics:
+      graph_node_ids:
+      - IKROS-VAL-20260802-0002
+      - IKROS-EVIDENCE-20260802-0002
+      - IKROS-CONTRA-20260802-0002
+      - IKROS-CONCL-20260802-0002
+      ingestion_status: INGESTED
+      memory_ids:
+      - IKMEM-T1-20260802-0023
+      - IKMEM-T1-20260802-0024
+      - IKMEM-T2-20260802-0038
+      - IKMEM-T4-20260802-0005
+    output_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+    - IKROS-CONCL-20260802-0002
+    - IKROS-CONTRA-20260802-0002
+    - IKROS-EVIDENCE-20260802-0002
+    - IKROS-VAL-20260802-0002
+    - regime_discovery_validation_report
+    payload:
+      graph_node_ids:
+      - IKROS-VAL-20260802-0002
+      - IKROS-EVIDENCE-20260802-0002
+      - IKROS-CONTRA-20260802-0002
+      - IKROS-CONCL-20260802-0002
+      ingested_at: '2026-08-02T01:43:04.974772+00:00'
+      ingestion_id: IKING-20260802-0006
+      memory_ids:
+      - IKMEM-T1-20260802-0023
+      - IKMEM-T1-20260802-0024
+      - IKMEM-T2-20260802-0038
+      - IKMEM-T4-20260802-0005
+      object_fingerprints:
+      - '{"attributes": {"accepted_method_id": "IKROS-KO-20260802-0209", "rejected_method_ids":
+        ["IKROS-KO-20260802-0202", "IKROS-KO-20260802-0203", "IKROS-KO-20260802-0205",
+        "IKROS-KO-20260802-0207", "IKROS-KO-20260802-0208"], "utility_metrics": {"accepted_hit_rate_spread":
+        0.1422228565085708, "accepted_return_spread": 0.004942385609214154, "accepted_stability":
+        0.7800863033402589, "trend_volatility_return_spread": 0.0024014028145167335,
+        "volatility_baseline_return_spread": 0.0012110299879640569}, "validation_type":
+        "regime_taxonomy_utility_test", "verdict": "PASS"}, "capability_refs": [],
+        "confidence": 0.82, "created_at": "2026-08-02T01:43:04.728735+00:00", "dependency_ids":
+        ["IKROS-HYP-20260802-0002"], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-VAL-20260802-0002", "lifecycle_state": "COMPLETE", "memory_tier":
+        null, "object_type": "Validation", "relationships": [], "source_format": "JSON",
+        "source_ids": ["IKROS-EXP-20260802-0002"], "source_kind": "VALIDATION_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_validation_report.json",
+        "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Validation
+        synthesis for the accepted six-state regime taxonomy.", "title": "Campaign
+        0002 regime utility validation", "version": "1.0.0", "work_package_refs":
+        []}'
+      - '{"attributes": {"evidence_bundle": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json",
+        "11-research/phase-e/regime_adaptation.json", "11-research/phase-e/feature_importance.json",
+        "11-research/regime_analysis.md"], "quality_gates_passed": true}, "capability_refs":
+        [], "confidence": 0.86, "created_at": "2026-08-02T01:43:04.728735+00:00",
+        "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-EVIDENCE-20260802-0002", "lifecycle_state": "ACTIVE",
+        "memory_tier": null, "object_type": "Evidence", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-VAL-20260802-0002"], "source_kind": "VALIDATION_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_validation_report.json",
+        "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Evidence
+        bundle carrying the method comparison, utility test, and historical atlas
+        into IKROS.", "title": "Campaign 0002 regime evidence bundle", "version":
+        "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"contradicts": ["IKROS-HYP-20260802-0002"], "reasons": ["volatility-only
+        baseline under-separated outcomes", "latent-state families did not justify
+        extra governance complexity", "crisis dislocation remains a weak-confidence
+        research state"], "severity": "MODERATE"}, "capability_refs": [], "confidence":
+        0.73, "created_at": "2026-08-02T01:43:04.728735+00:00", "dependency_ids":
+        [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-CONTRA-20260802-0002", "lifecycle_state": "ACTIVE", "memory_tier":
+        null, "object_type": "ContradictoryEvidence", "relationships": [], "source_format":
+        "JSON", "source_ids": ["IKROS-EXP-20260802-0002", "IKROS-VAL-20260802-0002"],
+        "source_kind": "VALIDATION_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_validation_report.json",
+        "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "The
+        simplest and most complex candidate methods both failed institutional acceptance
+        for Campaign 0002.", "title": "Volatility-only and latent-state method contradiction",
+        "version": "1.0.0", "work_package_refs": []}'
+      - '{"attributes": {"accepted_taxonomy": "Institutional Six-State Overlay Taxonomy
+        v1", "decision": "ACCEPT_TAXONOMY", "recommendation": "Adopt the accepted
+        taxonomy as the institutional state model for future AFRP research and use
+        Campaign 0003 to refine features inside this state space.", "rejected_methods":
+        ["Hidden Markov Models", "Gaussian Mixture Models", "Spectral Clustering",
+        "Density-based Clustering", "Volatility-State Baseline"]}, "capability_refs":
+        [], "confidence": 0.84, "created_at": "2026-08-02T01:43:04.728735+00:00",
+        "dependency_ids": ["IKROS-RQ-20260802-0002"], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+        "identifier": "IKROS-CONCL-20260802-0002", "lifecycle_state": "PUBLISHED",
+        "memory_tier": null, "object_type": "ResearchConclusion", "relationships":
+        [], "source_format": "JSON", "source_ids": ["IKROS-CONTRA-20260802-0002",
+        "IKROS-HYP-20260802-0002", "IKROS-VAL-20260802-0002"], "source_kind": "VALIDATION_REPORT",
+        "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_validation_report.json",
+        "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Campaign
+        0002 recommends the accepted six-state taxonomy as the institutional state
+        model for future AFRP research.", "title": "Adopt the institutional six-state
+        overlay taxonomy", "version": "1.0.0", "work_package_refs": []}'
+      object_ids:
+      - IKROS-VAL-20260802-0002
+      - IKROS-EVIDENCE-20260802-0002
+      - IKROS-CONTRA-20260802-0002
+      - IKROS-CONCL-20260802-0002
+      source_format: JSON
+      source_hash: 726b93b48abe5a6f8194f95d72f1d00ed7f7638f292f6be34970a6ee8d80221f
+      source_kind: VALIDATION_REPORT
+      source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+      source_version: 1.0.0
+      status: INGESTED
+      warnings: []
+    selected_ids: []
+  started_at: '2026-08-02T01:43:04.577180+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0019
+  title: Validation Request
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0019
+  finished_at: '2026-08-02T01:43:05.580462+00:00'
+  kind: STATISTICAL_EVALUATION
+  max_attempts: 1
+  payload:
+    consistency_score: 0.78
+    data_quality_grade: A
+    effect_size: 0.49
+    overfitting_index: 1.08
+    p_value: 0.08
+    sharpe_degradation: 0.22
+  planned_order: 9
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0020
+    memory_record_id: IKMEM-T1-20260802-0026
+    metrics: &id001
+      data_confidence: 0.9
+      effect_size: 0.49
+      experimental_confidence: 0.95
+      p_value: 0.08
+      statistical_confidence: 0.92
+      validation_confidence: 0.6942
+    output_refs: []
+    payload: *id001
+    selected_ids: []
+  started_at: '2026-08-02T01:43:05.454416+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0020
+  title: Statistical Evaluation
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0020
+  finished_at: '2026-08-02T01:43:06.459804+00:00'
+  kind: CONFIDENCE_UPDATE
+  max_attempts: 1
+  payload:
+    evidence:
+    - confidence_weight: 0.65
+      evidence_id: PHASEG-REGIME-EVID-001
+      evidence_type: SPECIFICATION
+      independent_source: campaign-0002-governance
+      metrics:
+        data_confidence: 0.82
+        economic_confidence: 0.68
+        experimental_confidence: 0.71
+        validation_confidence: 0.74
+      notes: The campaign design is governed, reproducible, and uses only frozen AFRP
+        research evidence.
+      observed_at: '2026-08-02T00:00:00Z'
+      references:
+        capability_ids:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        - IKROS-CONFIDENCE
+        dataset_ids:
+        - IKROS-DSV-20260802-0002
+        feature_ids:
+        - IKROS-FEAT-20260802-0201
+        - IKROS-FEAT-20260802-0202
+        - IKROS-FEAT-20260802-0203
+        - IKROS-FEAT-20260802-0204
+        - IKROS-FEAT-20260802-0205
+        - IKROS-FEAT-20260802-0206
+        - IKROS-FEAT-20260802-0207
+        specification_ids:
+        - SPEC-010
+        - SPEC-012
+        - SPEC-060
+      relation: SUPPORTS
+      temporal_bucket: 2026Q3
+    - confidence_weight: 0.95
+      evidence_id: PHASEG-REGIME-EVID-002
+      evidence_type: VALIDATION
+      independent_source: campaign-0002-validation
+      metrics:
+        accepted_hit_rate_spread: 0.1422228565085708
+        accepted_return_spread: 0.004942385609214154
+        data_quality_grade: A
+        experimental_confidence: 0.74
+        stability: 0.7800863033402589
+        statistical_confidence: 0.92
+        validation_confidence: 0.78
+      notes: The accepted taxonomy materially improves validation separation over
+        simpler baselines.
+      observed_at: '2026-08-02T00:00:00Z'
+      references:
+        dataset_ids:
+        - IKROS-DSV-20260802-0002
+        feature_ids:
+        - IKROS-FEAT-20260802-0201
+        - IKROS-FEAT-20260802-0202
+        - IKROS-FEAT-20260802-0203
+        research_report_ids:
+        - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+        validation_ids:
+        - IKROS-VAL-20260802-0002
+      relation: SUPPORTS
+      temporal_bucket: 2026Q3
+    - confidence_weight: 0.7
+      evidence_id: PHASEG-REGIME-EVID-003
+      evidence_type: RESEARCH_REPORT
+      independent_source: historical-regime-atlas
+      metrics:
+        economic_confidence: 0.69
+        historical_windows: 8
+        out_of_sample_confirmations: 8
+      notes: Historical windows remain economically interpretable under the accepted
+        taxonomy.
+      observed_at: '2026-08-02T00:00:00Z'
+      references:
+        dataset_ids:
+        - IKROS-DSV-20260802-0002
+        research_report_ids:
+        - 11-research/regime_analysis.md
+      relation: SUPPORTS
+      temporal_bucket: 2026Q3
+    - confidence_weight: 0.45
+      contradiction_severity: MODERATE
+      evidence_id: PHASEG-REGIME-EVID-004
+      evidence_type: VALIDATION
+      independent_source: campaign-0002-contradictions
+      metrics:
+        available_2026_avg_future_return: -0.002099
+        crisis_hit_rate: 0.501134
+        stability: 0.7800863033402589
+      notes: The accepted taxonomy improves research quality overall, but crisis and
+        recent windows remain lower-confidence states.
+      observed_at: '2026-08-02T00:00:00Z'
+      references:
+        research_report_ids:
+        - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+        validation_ids:
+        - IKROS-VAL-20260802-0002
+      relation: CONTRADICTS
+      temporal_bucket: 2026Q3
+    reason: Campaign 0002 regime taxonomy review
+    target_id: IKROS-HYP-20260802-0002
+  planned_order: 10
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0021
+    memory_record_id: IKMEM-T1-20260802-0028
+    metrics:
+      audit_id: ICAUD-20260802-0003
+      memory_record_id: IKMEM-T1-20260802-0027
+      new_overall: 0.2267749515409686
+      previous_overall: 0.0
+    output_refs:
+    - ICA-20260802-0003
+    payload:
+      assessed_at: '2026-08-02T01:43:06.235220+00:00'
+      assessed_confidence:
+        data: 0.7071150442477877
+        economic: 0.5490285714285714
+        experimental: 0.5871681415929204
+        last_updated: '2026-08-02T01:43:06.214218+00:00'
+        operational: 0.496
+        overall: 0.2267749515409686
+        prior: 0.48
+        replication: 0.2267749515409686
+        statistical: 0.7360000000000001
+        validation: 0.6175575221238939
+      assessment_id: ICA-20260802-0003
+      audit_id: ICAUD-20260802-0003
+      contradiction_resolution:
+        contradiction_multiplier: 0.8
+        recommended_action: PEER_REVIEW
+        requires_review: false
+        severity_counts:
+          MODERATE: 1
+      evidence:
+      - confidence_weight: 0.65
+        contradiction_severity: null
+        evidence_id: PHASEG-REGIME-EVID-001
+        evidence_type: SPECIFICATION
+        independent_source: campaign-0002-governance
+        metrics:
+          data_confidence: 0.82
+          economic_confidence: 0.68
+          experimental_confidence: 0.71
+          validation_confidence: 0.74
+        notes: The campaign design is governed, reproducible, and uses only frozen
+          AFRP research evidence.
+        observed_at: '2026-08-02T00:00:00Z'
+        references:
+          backtest_ids: []
+          capability_ids:
+          - ALPHA-RESEARCH
+          - IKROS-CONFIDENCE
+          - IKROS-ORCHESTRATOR
+          dataset_ids:
+          - IKROS-DSV-20260802-0002
+          evidence_record_ids: []
+          experiment_ids: []
+          feature_ids:
+          - IKROS-FEAT-20260802-0201
+          - IKROS-FEAT-20260802-0202
+          - IKROS-FEAT-20260802-0203
+          - IKROS-FEAT-20260802-0204
+          - IKROS-FEAT-20260802-0205
+          - IKROS-FEAT-20260802-0206
+          - IKROS-FEAT-20260802-0207
+          monte_carlo_ids: []
+          research_report_ids: []
+          specification_ids:
+          - SPEC-010
+          - SPEC-012
+          - SPEC-060
+          stress_test_ids: []
+          validation_ids: []
+          walk_forward_ids: []
+          work_package_ids: []
+        relation: SUPPORTS
+        temporal_bucket: 2026Q3
+      - confidence_weight: 0.95
+        contradiction_severity: null
+        evidence_id: PHASEG-REGIME-EVID-002
+        evidence_type: VALIDATION
+        independent_source: campaign-0002-validation
+        metrics:
+          accepted_hit_rate_spread: 0.1422228565085708
+          accepted_return_spread: 0.004942385609214154
+          data_quality_grade: A
+          experimental_confidence: 0.74
+          stability: 0.7800863033402589
+          statistical_confidence: 0.92
+          validation_confidence: 0.78
+        notes: The accepted taxonomy materially improves validation separation over
+          simpler baselines.
+        observed_at: '2026-08-02T00:00:00Z'
+        references:
+          backtest_ids: []
+          capability_ids: []
+          dataset_ids:
+          - IKROS-DSV-20260802-0002
+          evidence_record_ids: []
+          experiment_ids: []
+          feature_ids:
+          - IKROS-FEAT-20260802-0201
+          - IKROS-FEAT-20260802-0202
+          - IKROS-FEAT-20260802-0203
+          monte_carlo_ids: []
+          research_report_ids:
+          - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+          specification_ids: []
+          stress_test_ids: []
+          validation_ids:
+          - IKROS-VAL-20260802-0002
+          walk_forward_ids: []
+          work_package_ids: []
+        relation: SUPPORTS
+        temporal_bucket: 2026Q3
+      - confidence_weight: 0.7
+        contradiction_severity: null
+        evidence_id: PHASEG-REGIME-EVID-003
+        evidence_type: RESEARCH_REPORT
+        independent_source: historical-regime-atlas
+        metrics:
+          economic_confidence: 0.69
+          historical_windows: 8
+          out_of_sample_confirmations: 8
+        notes: Historical windows remain economically interpretable under the accepted
+          taxonomy.
+        observed_at: '2026-08-02T00:00:00Z'
+        references:
+          backtest_ids: []
+          capability_ids: []
+          dataset_ids:
+          - IKROS-DSV-20260802-0002
+          evidence_record_ids: []
+          experiment_ids: []
+          feature_ids: []
+          monte_carlo_ids: []
+          research_report_ids:
+          - 11-research/regime_analysis.md
+          specification_ids: []
+          stress_test_ids: []
+          validation_ids: []
+          walk_forward_ids: []
+          work_package_ids: []
+        relation: SUPPORTS
+        temporal_bucket: 2026Q3
+      - confidence_weight: 0.45
+        contradiction_severity: MODERATE
+        evidence_id: PHASEG-REGIME-EVID-004
+        evidence_type: VALIDATION
+        independent_source: campaign-0002-contradictions
+        metrics:
+          available_2026_avg_future_return: -0.002099
+          crisis_hit_rate: 0.501134
+          stability: 0.7800863033402589
+        notes: The accepted taxonomy improves research quality overall, but crisis
+          and recent windows remain lower-confidence states.
+        observed_at: '2026-08-02T00:00:00Z'
+        references:
+          backtest_ids: []
+          capability_ids: []
+          dataset_ids: []
+          evidence_record_ids: []
+          experiment_ids: []
+          feature_ids: []
+          monte_carlo_ids: []
+          research_report_ids:
+          - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+          specification_ids: []
+          stress_test_ids: []
+          validation_ids:
+          - IKROS-VAL-20260802-0002
+          walk_forward_ids: []
+          work_package_ids: []
+        relation: CONTRADICTS
+        temporal_bucket: 2026Q3
+      memory_record_id: IKMEM-T1-20260802-0027
+      operator: ikros-confidence-engine
+      previous_confidence:
+        data: 0.72
+        economic: 0.61
+        experimental: 0.58
+        last_updated: '2026-08-02T00:00:00Z'
+        operational: 0.62
+        overall: 0.0
+        prior: 0.48
+        replication: 0.0
+        statistical: 0.43
+        validation: 0.4
+      propagation: []
+      quality:
+        contradiction_count: 1
+        contradiction_score: 0.8
+        dataset_diversity: 1
+        dataset_diversity_score: 0.25
+        evidence_freshness: 1.0
+        independent_validations: 1
+        independent_validations_score: 0.3333333333333333
+        out_of_sample_confirmations: 0
+        out_of_sample_score: 0.0
+        overall_quality: 0.4416802022759544
+        regime_diversity: 0
+        regime_diversity_score: 0.0
+        replication_count: 1
+        replication_score: 0.28346868942621073
+        research_maturity: 0.5
+        temporal_diversity: 1
+        temporal_diversity_score: 0.25
+        validation_completeness: 1.0
+      reason: Campaign 0002 regime taxonomy review
+      references:
+        backtest_ids: []
+        capability_ids:
+        - ALPHA-RESEARCH
+        - IKROS-CONFIDENCE
+        - IKROS-ORCHESTRATOR
+        dataset_ids:
+        - IKROS-DSV-20260802-0002
+        evidence_record_ids: []
+        experiment_ids: []
+        feature_ids:
+        - IKROS-FEAT-20260802-0201
+        - IKROS-FEAT-20260802-0202
+        - IKROS-FEAT-20260802-0203
+        - IKROS-FEAT-20260802-0204
+        - IKROS-FEAT-20260802-0205
+        - IKROS-FEAT-20260802-0206
+        - IKROS-FEAT-20260802-0207
+        monte_carlo_ids: []
+        research_report_ids:
+        - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+        - 11-research/regime_analysis.md
+        specification_ids:
+        - SPEC-010
+        - SPEC-012
+        - SPEC-060
+        stress_test_ids: []
+        validation_ids:
+        - IKROS-VAL-20260802-0002
+        walk_forward_ids: []
+        work_package_ids: []
+      source_assessment_id: null
+      target_id: IKROS-HYP-20260802-0002
+      target_type: Hypothesis
+    selected_ids: []
+  started_at: '2026-08-02T01:43:06.060671+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0021
+  title: Confidence Update
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0021
+  finished_at: '2026-08-02T01:43:07.106048+00:00'
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0022
+    memory_record_id: IKMEM-T1-20260802-0029
+    metrics:
+      blocked_task_ids: []
+      completed_task_ids:
+      - IKROS-RESEARCHTASK-20260802-0012
+      - IKROS-RESEARCHTASK-20260802-0013
+      - IKROS-RESEARCHTASK-20260802-0014
+      - IKROS-RESEARCHTASK-20260802-0015
+      - IKROS-RESEARCHTASK-20260802-0016
+      - IKROS-RESEARCHTASK-20260802-0017
+      - IKROS-RESEARCHTASK-20260802-0018
+      - IKROS-RESEARCHTASK-20260802-0019
+      - IKROS-RESEARCHTASK-20260802-0020
+      - IKROS-RESEARCHTASK-20260802-0021
+      failed_task_ids: []
+      progress:
+        blocked: 0
+        completed: 10
+        failed: 0
+        percent_complete: 90.91
+        skipped: 0
+        total: 11
+    output_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\REGIME_DISCOVERY_CAMPAIGN.md
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+    - ICA-20260802-0003
+    - IKROS-CONCL-20260802-0002
+    - IKROS-CONTRA-20260802-0002
+    - IKROS-DS-20260802-0002
+    - IKROS-DSV-20260802-0002
+    - IKROS-EVIDENCE-20260802-0002
+    - IKROS-EXP-20260802-0002
+    - IKROS-FEAT-20260802-0201
+    - IKROS-FEAT-20260802-0202
+    - IKROS-FEAT-20260802-0203
+    - IKROS-FEAT-20260802-0204
+    - IKROS-FEAT-20260802-0205
+    - IKROS-FEAT-20260802-0206
+    - IKROS-FEAT-20260802-0207
+    - IKROS-FF-20260802-0201
+    - IKROS-HYP-20260802-0002
+    - IKROS-KO-20260802-0002
+    - IKROS-KO-20260802-0201
+    - IKROS-KO-20260802-0202
+    - IKROS-KO-20260802-0203
+    - IKROS-KO-20260802-0204
+    - IKROS-KO-20260802-0205
+    - IKROS-KO-20260802-0206
+    - IKROS-KO-20260802-0207
+    - IKROS-KO-20260802-0208
+    - IKROS-KO-20260802-0209
+    - IKROS-KO-20260802-0210
+    - IKROS-KO-20260802-0211
+    - IKROS-REGIME-20260802-0201
+    - IKROS-REGIME-20260802-0202
+    - IKROS-REGIME-20260802-0203
+    - IKROS-REGIME-20260802-0204
+    - IKROS-REGIME-20260802-0205
+    - IKROS-REGIME-20260802-0206
+    - IKROS-RQ-20260802-0002
+    - IKROS-VAL-20260802-0002
+    - REGIME_DISCOVERY_CAMPAIGN
+    - regime_discovery_knowledge
+    - regime_discovery_validation_report
+    payload:
+      campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0002
+      outputs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\REGIME_DISCOVERY_CAMPAIGN.md
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+      - ICA-20260802-0003
+      - IKROS-CONCL-20260802-0002
+      - IKROS-CONTRA-20260802-0002
+      - IKROS-DS-20260802-0002
+      - IKROS-DSV-20260802-0002
+      - IKROS-EVIDENCE-20260802-0002
+      - IKROS-EXP-20260802-0002
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+      - IKROS-FEAT-20260802-0207
+      - IKROS-FF-20260802-0201
+      - IKROS-HYP-20260802-0002
+      - IKROS-KO-20260802-0002
+      - IKROS-KO-20260802-0201
+      - IKROS-KO-20260802-0202
+      - IKROS-KO-20260802-0203
+      - IKROS-KO-20260802-0204
+      - IKROS-KO-20260802-0205
+      - IKROS-KO-20260802-0206
+      - IKROS-KO-20260802-0207
+      - IKROS-KO-20260802-0208
+      - IKROS-KO-20260802-0209
+      - IKROS-KO-20260802-0210
+      - IKROS-KO-20260802-0211
+      - IKROS-REGIME-20260802-0201
+      - IKROS-REGIME-20260802-0202
+      - IKROS-REGIME-20260802-0203
+      - IKROS-REGIME-20260802-0204
+      - IKROS-REGIME-20260802-0205
+      - IKROS-REGIME-20260802-0206
+      - IKROS-RQ-20260802-0002
+      - IKROS-VAL-20260802-0002
+      - REGIME_DISCOVERY_CAMPAIGN
+      - regime_discovery_knowledge
+      - regime_discovery_validation_report
+    selected_ids: []
+  started_at: '2026-08-02T01:43:06.971987+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0022
+  title: Final Report
+title: Campaign 0002 Regime Discovery
+updated_at: '2026-08-02T01:43:07.800321+00:00'
+work_package_refs: []

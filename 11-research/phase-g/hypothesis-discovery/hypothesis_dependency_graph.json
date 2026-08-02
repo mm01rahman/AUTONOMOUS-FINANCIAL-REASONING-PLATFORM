@@ -1,0 +1,71 @@
+{
+  "edges": [
+    {
+      "from": "IKROS-HYP-20260802-0405",
+      "reason": "event-driven repricing can seed a later trend handoff",
+      "to": "IKROS-HYP-20260802-0408"
+    },
+    {
+      "from": "IKROS-HYP-20260802-0408",
+      "reason": "successful transition handoff can mature into bull continuation",
+      "to": "IKROS-HYP-20260802-0401"
+    },
+    {
+      "from": "IKROS-HYP-20260802-0402",
+      "reason": "continued liquidation is the precursor state for an exhaustion rebound",
+      "to": "IKROS-HYP-20260802-0407"
+    },
+    {
+      "from": "IKROS-HYP-20260802-0406",
+      "reason": "range compression can break into macro transition when narrative shocks persist",
+      "to": "IKROS-HYP-20260802-0405"
+    },
+    {
+      "from": "IKROS-HYP-20260802-0404",
+      "reason": "crisis continuation and crisis exhaustion share the same shock domain but opposite outcomes",
+      "to": "IKROS-HYP-20260802-0407"
+    }
+  ],
+  "nodes": [
+    {
+      "identifier": "IKROS-HYP-20260802-0401",
+      "priority_tier": "P1",
+      "title": "Expectation-relief bull continuation"
+    },
+    {
+      "identifier": "IKROS-HYP-20260802-0404",
+      "priority_tier": "P2",
+      "title": "Crisis safe-haven breakout convexity"
+    },
+    {
+      "identifier": "IKROS-HYP-20260802-0405",
+      "priority_tier": "P2",
+      "title": "Policy-shock repricing continuation"
+    },
+    {
+      "identifier": "IKROS-HYP-20260802-0402",
+      "priority_tier": "P2",
+      "title": "Liquidation-pressure bear continuation"
+    },
+    {
+      "identifier": "IKROS-HYP-20260802-0408",
+      "priority_tier": "P2",
+      "title": "Transition-to-trend handoff"
+    },
+    {
+      "identifier": "IKROS-HYP-20260802-0407",
+      "priority_tier": "P3",
+      "title": "Liquidation-exhaustion rebound"
+    },
+    {
+      "identifier": "IKROS-HYP-20260802-0403",
+      "priority_tier": "P3",
+      "title": "Carry-state accumulation drift"
+    },
+    {
+      "identifier": "IKROS-HYP-20260802-0406",
+      "priority_tier": "P3",
+      "title": "Compression-state expectation fade"
+    }
+  ]
+}

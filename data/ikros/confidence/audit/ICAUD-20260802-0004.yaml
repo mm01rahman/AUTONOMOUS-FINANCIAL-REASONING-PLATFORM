@@ -1,0 +1,44 @@
+assessment_id: ICA-20260802-0004
+audit_id: ICAUD-20260802-0004
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-ORCHESTRATOR
+entry_hash: b11211e9311b72cef2dbefe3c73101c20d23c4ea5f401dbe3037069fab59ead3
+new_confidence:
+  data: 0.7084503078276166
+  economic: 0.5599999999999999
+  experimental: 0.607750219876869
+  last_updated: '2026-08-02T01:51:32.119978+00:00'
+  operational: 0.504
+  overall: 0.2267749515409686
+  prior: 0.51
+  replication: 0.2267749515409686
+  statistical: 0.7120000000000001
+  validation: 0.6381002638522428
+operator: ikros-confidence-engine
+previous_confidence:
+  data: 0.77
+  economic: 0.65
+  experimental: 0.57
+  last_updated: '2026-08-02T00:00:00Z'
+  operational: 0.63
+  overall: 0.0
+  prior: 0.51
+  replication: 0.0
+  statistical: 0.45
+  validation: 0.42
+previous_hash: 19ab2f33fcb7ed8f436728adf0252ec4c59d23c3bfdbfab0f83539ae32a9d483
+propagated_targets: []
+reason: Campaign 0003 regime-conditioned feature discovery
+specification_refs:
+- SPEC-012
+- SPEC-060
+supporting_evidence:
+- PHASEG-FEATURE-EVID-001
+- PHASEG-FEATURE-EVID-002
+- PHASEG-FEATURE-EVID-003
+target_id: IKROS-HYP-20260802-0003
+target_type: Hypothesis
+timestamp: '2026-08-02T01:51:32.151486+00:00'
+work_package_refs: []

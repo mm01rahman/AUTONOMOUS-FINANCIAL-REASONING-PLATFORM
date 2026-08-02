@@ -1,0 +1,68 @@
+alternative_hypothesis: Gold can initially be sold for liquidity during stress, then
+  rebound sharply once balance-sheet pressure eases and safe-haven demand returns.
+capability_refs: []
+confidence:
+  data: 0.44
+  economic: 0.44
+  last_updated: '2026-08-02T01:59:35.164721+00:00'
+  model: 0.0
+  operational: 0.0
+  overall: 0.44
+  prior: 0.44
+  replication: 0.44
+  statistical: 0.44
+  validation: 0.44
+contradictions: []
+entity_type: Hypothesis
+experiments: []
+ikros_id: IKROS-HYP-20260802-0407
+lifecycle_state: APPROVED_FOR_TESTING
+lineage:
+  dependencies:
+    datasets: []
+    external_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+    features: []
+    inputs:
+    - IKROS-RQ-20260802-0407
+    models: []
+  evidence:
+    contradicting: []
+    ers_records:
+    - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T01:59:35.072679+00:00'
+    created_by: ikros-ingestion-engine
+    creation_context: INTERNAL_RESEARCH_REPORT
+    motivation: Ingested from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+motivating_theses: []
+null_hypothesis: The described mechanism does not produce a persistent regime-conditioned
+  predictive relationship.
+posterior_confidence: 0.0
+power: 0.8
+prior_confidence: 0.44
+significance_level: 0.05
+source_rq: IKROS-RQ-20260802-0407
+spec_refs:
+- SPEC-012
+- SPEC-060
+statement: After extreme selloffs in bear_unwind or crisis_dislocation, do elevated
+  volatility and intermediate-trend stabilization identify rebound windows once forced
+  selling exhausts itself?
+validations: []
+version: 1.0.0
+version_history: []
+work_package_refs: []

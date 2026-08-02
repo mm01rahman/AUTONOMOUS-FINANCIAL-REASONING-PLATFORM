@@ -1,0 +1,88 @@
+campaign_tag: PHASE-G-FEATURE-003
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-ORCHESTRATOR
+confidence:
+  data: 0.78
+  economic: 0.67
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.58
+  operational: 0.64
+  overall: 0.5807652332945916
+  prior: 0.54
+  replication: 0.0
+  statistical: 0.46
+  validation: 0.43
+entity_type: ResearchQuestion
+ikros_id: IKROS-RQ-20260802-0003
+instrument: XAU/USD
+lifecycle_state: ANSWERED
+lineage:
+  dependencies:
+    datasets:
+    - IKROS-DSV-20260802-0002
+    external_refs:
+    - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+    - 11-research/phase-e/feature_importance.json
+    features:
+    - IKROS-FEAT-20260802-0201
+    - IKROS-FEAT-20260802-0202
+    - IKROS-FEAT-20260802-0203
+    - IKROS-FEAT-20260802-0204
+    - IKROS-FEAT-20260802-0205
+    - IKROS-FEAT-20260802-0206
+    - IKROS-FEAT-20260802-0207
+    inputs:
+    - IKROS-RQ-20260802-0002
+    models:
+    - institutional_six_state_overlay_taxonomy_v1
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: campaign-0003-feature-discovery
+    creation_context: Campaign 0003 feature discovery
+    motivation: Determine which institutional features remain useful after conditioning
+      on the accepted six-state taxonomy.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+linked_conclusions:
+- IKROS-CONCL-20260802-0003
+linked_hypotheses:
+- IKROS-HYP-20260802-0003
+motivation: Campaign 0002 accepted the state model. The next institutional question
+  is what information remains useful inside that state space.
+scope: FEATURE_DISCOVERY
+spec_refs:
+- SPEC-012
+- SPEC-060
+time_horizon: 5D
+title: Which features exhibit stable predictive power conditional on the Institutional
+  Six-State Overlay Taxonomy v1?
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T01:51:35.046503+00:00'
+  confidence_at_time: 0.5807652332945916
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:51:35.050503+00:00'
+  confidence_at_time: 0.5807652332945916
+  version: 1.0.0
+- change_summary: State → ANSWERED. Campaign 0003 feature catalogue review completed.
+  changed_at: '2026-08-02T01:51:35.053504+00:00'
+  confidence_at_time: 0.5807652332945916
+  version: 1.0.0
+work_package_refs: []

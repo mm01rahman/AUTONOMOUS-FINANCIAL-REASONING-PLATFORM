@@ -1,0 +1,50 @@
+{
+  "bear_unwind": {
+    "bear_unwind": 0.822014,
+    "bull_trend": 0.0,
+    "calm_carry": 0.023419,
+    "crisis_dislocation": 0.008197,
+    "macro_transition": 0.057377,
+    "range_compression": 0.088993
+  },
+  "bull_trend": {
+    "bear_unwind": 0.0,
+    "bull_trend": 0.506993,
+    "calm_carry": 0.048951,
+    "crisis_dislocation": 0.006993,
+    "macro_transition": 0.083916,
+    "range_compression": 0.353147
+  },
+  "calm_carry": {
+    "bear_unwind": 0.030585,
+    "bull_trend": 0.023936,
+    "calm_carry": 0.796543,
+    "crisis_dislocation": 0.0,
+    "macro_transition": 0.050532,
+    "range_compression": 0.098404
+  },
+  "crisis_dislocation": {
+    "bear_unwind": 0.002268,
+    "bull_trend": 0.0,
+    "calm_carry": 0.0,
+    "crisis_dislocation": 0.950113,
+    "macro_transition": 0.00907,
+    "range_compression": 0.038549
+  },
+  "macro_transition": {
+    "bear_unwind": 0.065111,
+    "bull_trend": 0.023342,
+    "calm_carry": 0.050369,
+    "crisis_dislocation": 0.003686,
+    "macro_transition": 0.535627,
+    "range_compression": 0.321867
+  },
+  "range_compression": {
+    "bear_unwind": 0.024124,
+    "bull_trend": 0.033451,
+    "calm_carry": 0.025088,
+    "crisis_dislocation": 0.003216,
+    "macro_transition": 0.084271,
+    "range_compression": 0.829849
+  }
+}

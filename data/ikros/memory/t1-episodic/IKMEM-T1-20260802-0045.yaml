@@ -1,0 +1,103 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:59:34.025222+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0034
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+- 11-research/phase-g/hypothesis-discovery/HYPOTHESIS_DISCOVERY_CAMPAIGN.md
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0004
+- IKROS-RESEARCHTASK-20260802-0035
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0045
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0004
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0034
+    finished_at: '2026-08-02T01:59:34.025222+00:00'
+    kind: LITERATURE_INTAKE
+    max_attempts: 1
+    payload:
+      source_path: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\HYPOTHESIS_DISCOVERY_CAMPAIGN.md
+    planned_order: 2
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0035
+      memory_record_id: null
+      metrics:
+        graph_node_ids:
+        - IKROS-KO-20260802-0004
+        ingestion_status: INGESTED
+        memory_ids:
+        - IKMEM-T2-20260802-0064
+      output_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\HYPOTHESIS_DISCOVERY_CAMPAIGN.md
+      - HYPOTHESIS_DISCOVERY_CAMPAIGN
+      - IKROS-KO-20260802-0004
+      payload:
+        graph_node_ids:
+        - IKROS-KO-20260802-0004
+        ingested_at: '2026-08-02T01:59:34.022212+00:00'
+        ingestion_id: IKING-20260802-0010
+        memory_ids:
+        - IKMEM-T2-20260802-0064
+        object_fingerprints:
+        - '{"attributes": {"document_metadata": {}, "section_names": ["Campaign 0004
+          - Institutional Alpha Hypothesis Discovery", "Deliverables", "Hypothesis
+          generation standard", "Inputs", "Primary research question", "Research mission",
+          "Scientific review dimensions", "Scope"]}, "capability_refs": [], "confidence":
+          0.6, "created_at": "2026-08-02T01:59:33.629595+00:00", "dependency_ids":
+          [], "evidence_refs": [], "identifier": "IKROS-KO-20260802-0004", "lifecycle_state":
+          "ACTIVE", "memory_tier": null, "object_type": "KnowledgeObject", "relationships":
+          [], "source_format": "MARKDOWN", "source_ids": [], "source_kind": "MARKDOWN",
+          "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\HYPOTHESIS_DISCOVERY_CAMPAIGN.md",
+          "specification_refs": ["SPEC-060"], "summary": "MARKDOWN imported from C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\HYPOTHESIS_DISCOVERY_CAMPAIGN.md",
+          "title": "Campaign 0004 - Institutional Alpha Hypothesis Discovery", "version":
+          "1.0.0", "work_package_refs": []}'
+        object_ids:
+        - IKROS-KO-20260802-0004
+        source_format: MARKDOWN
+        source_hash: 57fdccc742d576f812bbf061a78d72d70db9e68889ef9714421765aedb382082
+        source_kind: MARKDOWN
+        source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\HYPOTHESIS_DISCOVERY_CAMPAIGN.md
+        source_version: 1.0.0
+        status: INGESTED
+        warnings: []
+      selected_ids: []
+    started_at: '2026-08-02T01:59:33.362001+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0035
+    title: Literature Intake
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0004
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\HYPOTHESIS_DISCOVERY_CAMPAIGN.md
+- HYPOTHESIS_DISCOVERY_CAMPAIGN
+- IKROS-KO-20260802-0004
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: LITERATURE_INTAKE COMPLETED
+tags:
+- research-orchestrator
+- literature_intake
+tier: T1_EPISODIC
+title: 'Campaign 0004 Hypothesis Discovery :: Literature Intake'
+updated_at: '2026-08-02T01:59:34.025222+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

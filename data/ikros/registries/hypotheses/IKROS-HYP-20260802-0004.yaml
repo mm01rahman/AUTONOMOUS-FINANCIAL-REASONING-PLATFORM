@@ -1,0 +1,98 @@
+alternative_hypothesis: 'H1: The approved taxonomy and feature catalogue support a
+  reproducible, institutionally useful hypothesis backlog for Campaign 0005.'
+capability_refs:
+- ALPHA-RESEARCH
+confidence:
+  data: 0.79
+  economic: 0.64
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.0
+  operational: 0.69
+  overall: 0.7039665962112065
+  prior: 0.52
+  replication: 0.0
+  statistical: 0.0
+  validation: 0.0
+contradictions: []
+entity_type: Hypothesis
+experiments:
+- IKROS-EXP-20260802-0004
+ikros_id: IKROS-HYP-20260802-0004
+lifecycle_state: TESTING
+lineage:
+  dependencies:
+    datasets:
+    - IKROS-DSV-20260802-0004
+    external_refs:
+    - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+    features:
+    - IKROS-FEAT-20260802-0301
+    - IKROS-FEAT-20260802-0302
+    - IKROS-FEAT-20260802-0303
+    - IKROS-FEAT-20260802-0304
+    - IKROS-FEAT-20260802-0305
+    - IKROS-FEAT-20260802-0306
+    - IKROS-FEAT-20260802-0307
+    - IKROS-FEAT-20260802-0308
+    - IKROS-FEAT-20260802-0309
+    - IKROS-FEAT-20260802-0310
+    - IKROS-FEAT-20260802-0311
+    - IKROS-FEAT-20260802-0312
+    inputs:
+    - IKROS-RQ-20260802-0004
+    models:
+    - institutional_six_state_overlay_taxonomy_v1
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in:
+    - IKROS-EXP-20260802-0004
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: campaign-0004-hypothesis-discovery
+    creation_context: Campaign 0004 hypothesis discovery
+    motivation: Represent the governed claim that a bounded catalogue of institutional
+      hypotheses can be defined without performing validation prematurely.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+motivating_theses: []
+null_hypothesis: 'H0: The approved taxonomy and feature catalogue do not support a
+  meaningful institutional hypothesis backlog.'
+posterior_confidence: 0.0
+power: 0.8
+prior_confidence: 0.52
+significance_level: 0.05
+source_rq: IKROS-RQ-20260802-0004
+spec_refs:
+- SPEC-012
+- SPEC-060
+statement: A bounded, economically explainable set of regime-conditioned XAU/USD hypotheses
+  can be generated from the approved taxonomy and feature catalogue without tuning
+  or backtesting.
+validations: []
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T01:59:43.495475+00:00'
+  confidence_at_time: 0.7039665962112065
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:59:43.499476+00:00'
+  confidence_at_time: 0.7039665962112065
+  version: 1.0.0
+- change_summary: State → TESTING. Campaign 0004 produced a governed hypothesis catalogue
+    awaiting validation.
+  changed_at: '2026-08-02T01:59:43.502475+00:00'
+  confidence_at_time: 0.7039665962112065
+  version: 1.0.0
+work_package_refs: []

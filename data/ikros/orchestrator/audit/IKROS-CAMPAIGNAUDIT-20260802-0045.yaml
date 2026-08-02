@@ -1,0 +1,15 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0045
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0002
+detail: Task LITERATURE_INTAKE completed
+entry_hash: 71b6c9d09aec771216de52cadcf0510dd431a45d1c3a8384317583cb6893c8fa
+event_type: TASK_COMPLETED
+new_state: COMPLETED
+output_refs:
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\REGIME_DISCOVERY_CAMPAIGN.md
+- IKROS-KO-20260802-0002
+- REGIME_DISCOVERY_CAMPAIGN
+previous_hash: bf4549e47b6b14f62beb93118d6f82b7a741f82b7f470046b7a4bb1904d4e7ea
+previous_state: RUNNING
+task_id: IKROS-RESEARCHTASK-20260802-0013
+timestamp: '2026-08-02T01:43:01.554426+00:00'

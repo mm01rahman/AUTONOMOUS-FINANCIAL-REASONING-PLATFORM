@@ -1,0 +1,129 @@
+graph_node_ids:
+- IKROS-DS-20260802-0001
+- IKROS-DSV-20260802-0001
+- IKROS-THESIS-20260802-0001
+- IKROS-REGIME-20260802-0001
+- IKROS-FF-20260802-0001
+- IKROS-FEAT-20260802-0001
+- IKROS-FEAT-20260802-0002
+- IKROS-FEAT-20260802-0003
+ingested_at: '2026-08-02T01:27:41.782137+00:00'
+ingestion_id: IKING-20260802-0002
+memory_ids:
+- IKMEM-T2-20260802-0002
+- IKMEM-T2-20260802-0003
+- IKMEM-T4-20260802-0001
+- IKMEM-T2-20260802-0004
+- IKMEM-T2-20260802-0005
+- IKMEM-T2-20260802-0006
+- IKMEM-T2-20260802-0007
+- IKMEM-T2-20260802-0008
+object_fingerprints:
+- '{"attributes": {"coverage_rows": 6257, "granularity": "1D", "instrument": "XAU/USD",
+  "provenance_note": "Canonical data foundation path referenced by the Phase C/D/E
+  research stack.", "source_path_hint": "C:\\Users\\mm01r\\AFRP-Datasets\\processed\\xauusd\\xauusd_1d.parquet"},
+  "capability_refs": [], "confidence": 0.9, "created_at": "2026-08-02T01:27:41.710581+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-e/phase_e_summary.json"],
+  "identifier": "IKROS-DS-20260802-0001", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "Dataset", "relationships": [], "source_format": "JSON", "source_ids":
+  [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_knowledge.json",
+  "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Phase E
+  daily XAU/USD research dataset with macro proxy joins.", "title": "Canonical XAU/USD
+  daily research dataset", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"checksum_status": "upstream_dataset_checksum_not_embedded_in_repository",
+  "feature_count": 29, "phase_e_summary_sha256": "bba4276f52f51cf5e8d895159066219d79cb98f7cc1900f81cc7afcefe89c65d",
+  "version_label": "phase-e-baseline"}, "capability_refs": [], "confidence": 0.88,
+  "created_at": "2026-08-02T01:27:41.710581+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-e/phase_e_summary.json"], "identifier": "IKROS-DSV-20260802-0001",
+  "lifecycle_state": "VALIDATED", "memory_tier": null, "object_type": "DatasetVersion",
+  "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-DS-20260802-0001"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_knowledge.json",
+  "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Deterministic
+  dataset snapshot referenced by the Macro Alpha baseline audit.", "title": "Phase
+  E Macro Alpha dataset snapshot", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"horizon": "next_day", "mechanism": "Macro pressure lowers the
+  relative opportunity cost of gold and supports defensive demand."}, "capability_refs":
+  [], "confidence": 0.52, "created_at": "2026-08-02T01:27:41.710581+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-e/phase_e_final_report.md"], "identifier":
+  "IKROS-THESIS-20260802-0001", "lifecycle_state": "VALIDATED", "memory_tier": null,
+  "object_type": "EconomicThesis", "relationships": [{"attributes": {}, "confidence":
+  0.6, "direction": "out", "edge_type": "ASSOCIATED_WITH", "evidence_ref": "", "spec_ref":
+  "", "target_id": "IKROS-REGIME-20260802-0001", "work_package_ref": ""}], "source_format":
+  "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_knowledge.json",
+  "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "USD weakness,
+  falling rates, and dovish surprise should support next-day gold returns.", "title":
+  "Gold responds to macro pressure", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"regime_label": "macro_transition", "requires_regime_adaptation":
+  true}, "capability_refs": [], "confidence": 0.57, "created_at": "2026-08-02T01:27:41.710581+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-e/regime_adaptation.json"],
+  "identifier": "IKROS-REGIME-20260802-0001", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "Regime", "relationships": [], "source_format": "JSON", "source_ids":
+  [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "A regime defined by
+  rate compression, softer USD, and policy sensitivity.", "title": "Rate-sensitive
+  macro transition regime", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"description": "Macro proxy features used by the Phase E macro-only
+  baseline.", "member_features": ["IKROS-FEAT-20260802-0001", "IKROS-FEAT-20260802-0002",
+  "IKROS-FEAT-20260802-0003"], "name": "macro_pressure_family"}, "capability_refs":
+  [], "confidence": 0.58, "created_at": "2026-08-02T01:27:41.710581+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-e/feature_importance.json"], "identifier":
+  "IKROS-FF-20260802-0001", "lifecycle_state": "VALIDATED", "memory_tier": null, "object_type":
+  "FeatureFamily", "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-THESIS-20260802-0001"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Feature family combining
+  USD, rates, and policy-surprise inputs.", "title": "Macro pressure feature family",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"computation": "Composite score over DXY, rates, and policy surprise
+  proxies.", "family_id": "IKROS-FF-20260802-0001", "information_content": 0.44, "inputs":
+  ["dxy_return_20", "yield_curve_10y_3m", "fed_surprise"], "lookback": "20 bars",
+  "name": "macro_pressure", "normalization": "z-score", "stability_score": 0.39, "stationarity":
+  "UNKNOWN"}, "capability_refs": [], "confidence": 0.61, "created_at": "2026-08-02T01:27:41.710581+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+  "identifier": "IKROS-FEAT-20260802-0001", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0001", "IKROS-THESIS-20260802-0001"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Composite macro pressure
+  score used in the Phase E macro-only candidate.", "title": "Macro pressure composite",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"computation": "20-bar return of the DXY proxy series.", "family_id":
+  "IKROS-FF-20260802-0001", "information_content": 0.31, "inputs": ["dxy"], "lookback":
+  "20 bars", "name": "dxy_return_20", "normalization": "raw_return", "stability_score":
+  0.48, "stationarity": "UNKNOWN"}, "capability_refs": [], "confidence": 0.63, "created_at":
+  "2026-08-02T01:27:41.710581+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+  "identifier": "IKROS-FEAT-20260802-0002", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0001"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "USD proxy input used
+  by the macro pressure family.", "title": "DXY 20-bar return", "version": "1.0.0",
+  "work_package_refs": []}'
+- '{"attributes": {"computation": "10Y minus 3M yield spread proxy.", "family_id":
+  "IKROS-FF-20260802-0001", "information_content": 0.29, "inputs": ["us10y", "us3m"],
+  "lookback": "spot", "name": "yield_curve_10y_3m", "normalization": "level", "stability_score":
+  0.46, "stationarity": "UNKNOWN"}, "capability_refs": [], "confidence": 0.62, "created_at":
+  "2026-08-02T01:27:41.710581+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+  "identifier": "IKROS-FEAT-20260802-0003", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0001"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Rates proxy input used
+  by the macro pressure family.", "title": "Yield curve 10Y-3M spread", "version":
+  "1.0.0", "work_package_refs": []}'
+object_ids:
+- IKROS-DS-20260802-0001
+- IKROS-DSV-20260802-0001
+- IKROS-THESIS-20260802-0001
+- IKROS-REGIME-20260802-0001
+- IKROS-FF-20260802-0001
+- IKROS-FEAT-20260802-0001
+- IKROS-FEAT-20260802-0002
+- IKROS-FEAT-20260802-0003
+source_format: JSON
+source_hash: 38ad38506589e9282ac6df3fbe22c44e61f8abd7b31ec3bd80c7f41289f520cb
+source_kind: INTERNAL_RESEARCH_REPORT
+source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_knowledge.json
+source_version: 1.0.0
+status: INGESTED
+warnings: []

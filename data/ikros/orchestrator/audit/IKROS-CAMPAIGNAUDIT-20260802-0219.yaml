@@ -1,0 +1,28 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0219
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0010
+detail: Campaign completed successfully
+entry_hash: 94e5b264ef47ded143eda46cf4ba3c31cc49128f78f5438510e239b2575c9cab
+event_type: CAMPAIGN_COMPLETED
+new_state: COMPLETED
+output_refs:
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+- IKROS-CONTRA-20260802-0007
+- IKROS-DSV-20260802-0007
+- IKROS-EVIDENCE-20260802-0007
+- IKROS-EXP-20260802-0007
+- IKROS-HYP-20260802-0007
+- IKROS-KO-20260802-0700
+- IKROS-KO-20260802-0701
+- IKROS-KO-20260802-0702
+- IKROS-KO-20260802-0703
+- IKROS-KO-20260802-0704
+- IKROS-KO-20260802-0705
+- IKROS-KO-20260802-0706
+- IKROS-KO-20260802-0707
+- IKROS-RQ-20260802-0007
+- diagnostic_experiment_knowledge
+previous_hash: 4aeaf21ccfa1c9b8b5901e85cafc6c4fbb06a41e054d6b5de1b75d3b15522ea7
+previous_state: RUNNING
+task_id: null
+timestamp: '2026-08-02T02:37:53.773062+00:00'

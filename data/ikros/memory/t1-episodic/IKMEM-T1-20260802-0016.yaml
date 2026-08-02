@@ -1,0 +1,215 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:43:01.002011+00:00'
+dependency_ids: []
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/feature_importance.json
+- 11-research/phase-e/regime_adaptation.json
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- 11-research/regime_analysis.md
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0002
+- IKROS-RESEARCHTASK-20260802-0012
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0016
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0002
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on: []
+    finished_at: '2026-08-02T01:43:01.002011+00:00'
+    kind: RESEARCH_QUESTION
+    max_attempts: 1
+    payload:
+      entity:
+        campaign_tag: PHASE-G-REGIME-002
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        confidence:
+          data: 0.74
+          economic: 0.62
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.56
+          operational: 0.63
+          overall: 0.5549213316882219
+          prior: 0.51
+          replication: 0.0
+          statistical: 0.44
+          validation: 0.41
+        entity_type: ResearchQuestion
+        ikros_id: IKROS-RQ-20260802-0002
+        instrument: XAU/USD
+        lifecycle_state: ACTIVE
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0002
+            external_refs:
+            - 11-research/phase-g/macro-alpha/MACRO_ALPHA_COMPLETION_REPORT.md
+            - 11-research/phase-e/regime_adaptation.json
+            features:
+            - IKROS-FEAT-20260802-0201
+            - IKROS-FEAT-20260802-0202
+            - IKROS-FEAT-20260802-0203
+            - IKROS-FEAT-20260802-0204
+            - IKROS-FEAT-20260802-0205
+            - IKROS-FEAT-20260802-0206
+            - IKROS-FEAT-20260802-0207
+            inputs: []
+            models: []
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0002-regime-discovery
+            creation_context: Campaign 0002 regime discovery
+            motivation: Determine the institutional state model required to evaluate
+              future XAU/USD hypotheses.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        linked_conclusions: []
+        linked_hypotheses: []
+        motivation: Campaign 0001 rejected the macro-only baseline and showed that
+          future research must answer when an alpha works before asking what alpha
+          works.
+        scope: REGIME_DISCOVERY
+        spec_refs:
+        - SPEC-010
+        - SPEC-012
+        - SPEC-060
+        time_horizon: 5D
+        title: Which deterministic regime taxonomy best explains the success and failure
+          of XAU/USD alpha hypotheses?
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: ResearchQuestion
+    planned_order: 1
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0012
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-RQ-20260802-0002
+      payload:
+        campaign_tag: PHASE-G-REGIME-002
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        confidence:
+          data: 0.74
+          economic: 0.62
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.56
+          operational: 0.63
+          overall: 0.5549213316882219
+          prior: 0.51
+          replication: 0.0
+          statistical: 0.44
+          validation: 0.41
+        entity_type: ResearchQuestion
+        ikros_id: IKROS-RQ-20260802-0002
+        instrument: XAU/USD
+        lifecycle_state: ACTIVE
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0002
+            external_refs:
+            - 11-research/phase-g/macro-alpha/MACRO_ALPHA_COMPLETION_REPORT.md
+            - 11-research/phase-e/regime_adaptation.json
+            features:
+            - IKROS-FEAT-20260802-0201
+            - IKROS-FEAT-20260802-0202
+            - IKROS-FEAT-20260802-0203
+            - IKROS-FEAT-20260802-0204
+            - IKROS-FEAT-20260802-0205
+            - IKROS-FEAT-20260802-0206
+            - IKROS-FEAT-20260802-0207
+            inputs: []
+            models: []
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0002-regime-discovery
+            creation_context: Campaign 0002 regime discovery
+            motivation: Determine the institutional state model required to evaluate
+              future XAU/USD hypotheses.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        linked_conclusions: []
+        linked_hypotheses: []
+        motivation: Campaign 0001 rejected the macro-only baseline and showed that
+          future research must answer when an alpha works before asking what alpha
+          works.
+        scope: REGIME_DISCOVERY
+        spec_refs:
+        - SPEC-010
+        - SPEC-012
+        - SPEC-060
+        time_horizon: 5D
+        title: Which deterministic regime taxonomy best explains the success and failure
+          of XAU/USD alpha hypotheses?
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T01:43:00.920590+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0012
+    title: Research Question
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0002
+- IKROS-RQ-20260802-0002
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: RESEARCH_QUESTION COMPLETED
+tags:
+- research-orchestrator
+- research_question
+tier: T1_EPISODIC
+title: 'Campaign 0002 Regime Discovery :: Research Question'
+updated_at: '2026-08-02T01:43:01.002011+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

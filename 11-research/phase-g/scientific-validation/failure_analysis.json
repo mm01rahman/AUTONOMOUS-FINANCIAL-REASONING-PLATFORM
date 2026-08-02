@@ -1,0 +1,37 @@
+[
+  {
+    "dominant_failure_mode": "MODERATE",
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "key_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+    "outcome": "REQUIRES_FURTHER_RESEARCH",
+    "title": "Expectation-relief bull continuation"
+  },
+  {
+    "dominant_failure_mode": "MAJOR",
+    "hypothesis_id": "IKROS-HYP-20260802-0402",
+    "key_reason": "Observed mean return did not preserve the expected directional sign.",
+    "outcome": "REJECTED",
+    "title": "Liquidation-pressure bear continuation"
+  },
+  {
+    "dominant_failure_mode": "MAJOR",
+    "hypothesis_id": "IKROS-HYP-20260802-0404",
+    "key_reason": "Observed mean return did not preserve the expected directional sign.",
+    "outcome": "REJECTED",
+    "title": "Crisis safe-haven breakout convexity"
+  },
+  {
+    "dominant_failure_mode": "MODERATE",
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "key_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+    "outcome": "REQUIRES_FURTHER_RESEARCH",
+    "title": "Policy-shock repricing continuation"
+  },
+  {
+    "dominant_failure_mode": "MODERATE",
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "key_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+    "outcome": "REQUIRES_FURTHER_RESEARCH",
+    "title": "Transition-to-trend handoff"
+  }
+]

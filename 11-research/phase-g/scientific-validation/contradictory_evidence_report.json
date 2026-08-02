@@ -1,0 +1,27 @@
+[
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "severity": "MODERATE",
+    "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0402",
+    "severity": "MAJOR",
+    "summary": "Observed mean return did not preserve the expected directional sign."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0404",
+    "severity": "MAJOR",
+    "summary": "Observed mean return did not preserve the expected directional sign."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "severity": "MODERATE",
+    "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "severity": "MODERATE",
+    "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+  }
+]

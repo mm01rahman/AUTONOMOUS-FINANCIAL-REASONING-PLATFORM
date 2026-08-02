@@ -1,0 +1,98 @@
+archived_at: null
+capability_refs: []
+confidence: 0.42
+created_at: '2026-08-02T01:59:35.072679+00:00'
+dependency_ids: []
+entity_type: Hypothesis
+evidence_refs:
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-HYP-20260802-0406
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0083
+payload:
+  attributes:
+    acceptance_criteria:
+    - fade direction remains more stable than continuation direction
+    - range assumption survives transition diagnostics
+    - narrative shocks can be economically explained as inventory rebalancing rather
+      than trend starts
+    advance_to_campaign_0005: false
+    alternative_hypothesis: Range-bound markets often absorb macro narrative shocks
+      without broad participation; a low-volatility environment can cause initial
+      impulse to mean revert rather than expand.
+    contradictions: []
+    expected_direction: MEAN_REVERT_WITHIN_RANGE
+    expected_holding_period: 2-4D
+    expected_horizon: 3-5D
+    experiments: []
+    feature_ids:
+    - IKROS-FEAT-20260802-0307
+    - IKROS-FEAT-20260802-0304
+    - IKROS-FEAT-20260802-0305
+    feature_set:
+    - macro_trend_interaction
+    - forward_expectation
+    - regime_vol_20
+    knowledge_links:
+    - IKROS-FEAT-20260802-0307
+    - IKROS-FEAT-20260802-0304
+    - IKROS-FEAT-20260802-0305
+    - IKROS-KO-20260802-0406
+    motivating_theses: []
+    null_hypothesis: The described mechanism does not produce a persistent regime-conditioned
+      predictive relationship.
+    posterior_confidence: 0.0
+    power: 0.8
+    prior_confidence: 0.42
+    priority_tier: P3
+    regime_scope:
+    - range_compression
+    rejection_criteria:
+    - breakout contamination dominates the sample
+    - expected edge amplitude is too low for institutional usefulness
+    - forward_expectation adds no incremental explanatory value over volatility alone
+    required_evidence:
+    - compression-window replay set
+    - breakout contamination analysis
+    - transition contradiction memo
+    research_question: In range_compression, do expectation shocks and constructive
+      macro/trend context identify fade opportunities rather than trend continuation?
+    significance_level: 0.05
+    source_rq: IKROS-RQ-20260802-0406
+    statement: In range_compression, do expectation shocks and constructive macro/trend
+      context identify fade opportunities rather than trend continuation?
+    validation_plan:
+    - walk_forward validation on compression windows only
+    - sensitivity to breakout false-positive detection
+    - bootstrap on low-volatility subsamples
+    - transition audit into macro_transition and bull_trend states
+    validations: []
+  lifecycle_state: APPROVED_FOR_TESTING
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-HYP-20260802-0406
+- IKROS-RQ-20260802-0406
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Range-bound markets often absorb macro narrative shocks without broad participation;
+  a low-volatility environment can cause initial impulse to mean revert rather than
+  expand.
+tags:
+- hypothesis
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Compression-state expectation fade
+updated_at: '2026-08-02T01:59:35.072679+00:00'
+valid_from: '2026-08-02T01:59:35.072679+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

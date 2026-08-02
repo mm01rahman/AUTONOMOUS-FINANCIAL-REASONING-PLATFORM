@@ -1,0 +1,32 @@
+[
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "outcome": "REQUIRES_FURTHER_RESEARCH",
+    "prior_confidence": 0.53,
+    "suggested_posterior_confidence": 0.5433
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0402",
+    "outcome": "REJECTED",
+    "prior_confidence": 0.5,
+    "suggested_posterior_confidence": 0.08
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0404",
+    "outcome": "REJECTED",
+    "prior_confidence": 0.49,
+    "suggested_posterior_confidence": 0.098
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "outcome": "REQUIRES_FURTHER_RESEARCH",
+    "prior_confidence": 0.48,
+    "suggested_posterior_confidence": 0.4934
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "outcome": "REQUIRES_FURTHER_RESEARCH",
+    "prior_confidence": 0.45,
+    "suggested_posterior_confidence": 0.4582
+  }
+]

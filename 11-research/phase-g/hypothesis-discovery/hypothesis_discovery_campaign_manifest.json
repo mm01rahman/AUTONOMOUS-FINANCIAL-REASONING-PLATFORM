@@ -1,0 +1,298 @@
+{
+  "campaign": {
+    "title": "Campaign 0004 Hypothesis Discovery",
+    "objective": "Generate, prioritize, and register regime-conditioned institutional alpha hypotheses using only the approved taxonomy and approved feature catalogue.",
+    "campaign_type": "LITERATURE_REVIEW",
+    "failure_policy": "FAIL_FAST",
+    "specification_refs": ["SPEC-012", "SPEC-060"],
+    "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-INGESTION"],
+    "work_package_refs": [],
+    "evidence_refs": [
+      "11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json",
+      "11-research/phase-g/hypothesis-discovery/HYPOTHESIS_DISCOVERY_CAMPAIGN.md",
+      "11-research/phase-g/feature-discovery/feature_discovery_analysis.json",
+      "11-research/phase-g/regime-discovery/regime_discovery_analysis.json"
+    ]
+  },
+  "ids": {
+    "research_question_id": "IKROS-RQ-20260802-0004",
+    "hypothesis_id": "IKROS-HYP-20260802-0004",
+    "experiment_id": "IKROS-EXP-20260802-0004",
+    "evidence_bundle_id": "IKROS-EVIDENCE-20260802-0004",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0004",
+    "research_conclusion_id": "IKROS-CONCL-20260802-0004"
+  },
+  "entities": {
+    "research_question": {
+      "ikros_id": "IKROS-RQ-20260802-0004",
+      "entity_type": "ResearchQuestion",
+      "version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "confidence": {
+        "prior": 0.56,
+        "statistical": 0.0,
+        "economic": 0.66,
+        "data": 0.8,
+        "model": 0.0,
+        "validation": 0.0,
+        "replication": 0.0,
+        "operational": 0.7,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0004-hypothesis-discovery",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0004 hypothesis discovery",
+          "motivation": "Determine which approved feature combinations deserve formal scientific validation next."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-RQ-20260802-0002", "IKROS-RQ-20260802-0003"],
+          "datasets": ["IKROS-DSV-20260802-0003"],
+          "features": [
+            "IKROS-FEAT-20260802-0301",
+            "IKROS-FEAT-20260802-0302",
+            "IKROS-FEAT-20260802-0303",
+            "IKROS-FEAT-20260802-0304",
+            "IKROS-FEAT-20260802-0305",
+            "IKROS-FEAT-20260802-0306",
+            "IKROS-FEAT-20260802-0307",
+            "IKROS-FEAT-20260802-0308",
+            "IKROS-FEAT-20260802-0309",
+            "IKROS-FEAT-20260802-0310",
+            "IKROS-FEAT-20260802-0311",
+            "IKROS-FEAT-20260802-0312"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": [
+            "11-research/phase-g/feature-discovery/feature_discovery_analysis.json",
+            "11-research/phase-g/regime-discovery/regime_discovery_analysis.json"
+          ]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Which combinations of approved features form economically plausible, statistically testable, regime-conditioned alpha hypotheses?",
+      "motivation": "Campaign 0004 converts the approved feature catalogue into a governed research backlog without validating or optimizing candidates.",
+      "scope": "HYPOTHESIS_DISCOVERY",
+      "instrument": "XAU/USD",
+      "time_horizon": "5D",
+      "campaign_tag": "PHASE-G-HYPOTHESIS-004",
+      "linked_hypotheses": [],
+      "linked_conclusions": []
+    },
+    "hypothesis": {
+      "ikros_id": "IKROS-HYP-20260802-0004",
+      "entity_type": "Hypothesis",
+      "version": "1.0.0",
+      "lifecycle_state": "APPROVED_FOR_TESTING",
+      "confidence": {
+        "prior": 0.52,
+        "statistical": 0.0,
+        "economic": 0.64,
+        "data": 0.79,
+        "model": 0.0,
+        "validation": 0.0,
+        "replication": 0.0,
+        "operational": 0.69,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0004-hypothesis-discovery",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0004 hypothesis discovery",
+          "motivation": "Represent the governed claim that a bounded catalogue of institutional hypotheses can be defined without performing validation prematurely."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-RQ-20260802-0004"],
+          "datasets": ["IKROS-DSV-20260802-0004"],
+          "features": [
+            "IKROS-FEAT-20260802-0301",
+            "IKROS-FEAT-20260802-0302",
+            "IKROS-FEAT-20260802-0303",
+            "IKROS-FEAT-20260802-0304",
+            "IKROS-FEAT-20260802-0305",
+            "IKROS-FEAT-20260802-0306",
+            "IKROS-FEAT-20260802-0307",
+            "IKROS-FEAT-20260802-0308",
+            "IKROS-FEAT-20260802-0309",
+            "IKROS-FEAT-20260802-0310",
+            "IKROS-FEAT-20260802-0311",
+            "IKROS-FEAT-20260802-0312"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH"],
+      "work_package_refs": [],
+      "version_history": [],
+      "statement": "A bounded, economically explainable set of regime-conditioned XAU/USD hypotheses can be generated from the approved taxonomy and feature catalogue without tuning or backtesting.",
+      "null_hypothesis": "H0: The approved taxonomy and feature catalogue do not support a meaningful institutional hypothesis backlog.",
+      "alternative_hypothesis": "H1: The approved taxonomy and feature catalogue support a reproducible, institutionally useful hypothesis backlog for Campaign 0005.",
+      "significance_level": 0.05,
+      "power": 0.8,
+      "prior_confidence": 0.52,
+      "posterior_confidence": 0.0,
+      "source_rq": "IKROS-RQ-20260802-0004",
+      "motivating_theses": [],
+      "experiments": [],
+      "validations": [],
+      "contradictions": []
+    },
+    "experiment": {
+      "ikros_id": "IKROS-EXP-20260802-0004",
+      "entity_type": "Experiment",
+      "version": "1.0.0",
+      "lifecycle_state": "RUNNING",
+      "confidence": {
+        "prior": 0.54,
+        "statistical": 0.0,
+        "economic": 0.65,
+        "data": 0.81,
+        "model": 0.0,
+        "validation": 0.0,
+        "replication": 0.0,
+        "operational": 0.71,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0004-hypothesis-discovery",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0004 hypothesis discovery",
+          "motivation": "Synthesize and register the institutional hypothesis catalogue plus future validation designs."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-HYP-20260802-0004"],
+          "datasets": ["IKROS-DSV-20260802-0004"],
+          "features": [
+            "IKROS-FEAT-20260802-0301",
+            "IKROS-FEAT-20260802-0302",
+            "IKROS-FEAT-20260802-0303",
+            "IKROS-FEAT-20260802-0304",
+            "IKROS-FEAT-20260802-0305",
+            "IKROS-FEAT-20260802-0306",
+            "IKROS-FEAT-20260802-0307",
+            "IKROS-FEAT-20260802-0308",
+            "IKROS-FEAT-20260802-0309",
+            "IKROS-FEAT-20260802-0310",
+            "IKROS-FEAT-20260802-0311",
+            "IKROS-FEAT-20260802-0312"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Campaign 0004 institutional hypothesis synthesis",
+      "hypotheses": ["IKROS-HYP-20260802-0004"],
+      "protocol": "Catalogue approved feature combinations, map them to economic mechanisms and regimes, define future validation plans, and rank them for Campaign 0005 without performing validation or optimization.",
+      "dataset_versions": ["IKROS-DSV-20260802-0004"],
+      "feature_versions": [
+        "IKROS-FEAT-20260802-0301",
+        "IKROS-FEAT-20260802-0302",
+        "IKROS-FEAT-20260802-0303",
+        "IKROS-FEAT-20260802-0304",
+        "IKROS-FEAT-20260802-0305",
+        "IKROS-FEAT-20260802-0306",
+        "IKROS-FEAT-20260802-0307",
+        "IKROS-FEAT-20260802-0308",
+        "IKROS-FEAT-20260802-0309",
+        "IKROS-FEAT-20260802-0310",
+        "IKROS-FEAT-20260802-0311",
+        "IKROS-FEAT-20260802-0312"
+      ],
+      "parameters": {
+        "generation_constraints": [
+          "no backtesting",
+          "no validation",
+          "no parameter tuning",
+          "use only approved taxonomy and approved feature catalogue"
+        ],
+        "deliverables": [
+          "institutional_hypothesis_catalogue",
+          "hypothesis_cards",
+          "mechanism_atlas",
+          "priority_matrix",
+          "validation_matrix"
+        ]
+      },
+      "random_seed": 42,
+      "in_sample_start": "",
+      "in_sample_end": "",
+      "out_of_sample_start": "",
+      "out_of_sample_end": "",
+      "reproducibility_hash": "",
+      "git_commit": "752f35c",
+      "completed_at": null,
+      "validations_produced": [],
+      "failures_produced": []
+    }
+  },
+  "task_payloads": {
+    "LITERATURE_INTAKE": {
+      "source_path": "11-research/phase-g/hypothesis-discovery/HYPOTHESIS_DISCOVERY_CAMPAIGN.md"
+    },
+    "KNOWLEDGE_REGISTRATION": {
+      "source_path": "11-research/phase-g/hypothesis-discovery/hypothesis_discovery_knowledge.json"
+    },
+    "DATASET_SELECTION": {
+      "candidate_dataset_ids": ["IKROS-DSV-20260802-0004"],
+      "top_k": 1
+    },
+    "FEATURE_SELECTION": {
+      "candidate_feature_ids": [
+        "IKROS-HYP-20260802-0401",
+        "IKROS-HYP-20260802-0402",
+        "IKROS-HYP-20260802-0403",
+        "IKROS-HYP-20260802-0404",
+        "IKROS-HYP-20260802-0405",
+        "IKROS-HYP-20260802-0406",
+        "IKROS-HYP-20260802-0407",
+        "IKROS-HYP-20260802-0408"
+      ],
+      "top_k": 5
+    }
+  },
+  "post_run": {
+    "research_question_state": "ANSWERED",
+    "hypothesis_states": ["TESTING"],
+    "experiment_states": ["COMPLETE", "REVIEWED"],
+    "arb_recommendation": "Publish Institutional Alpha Hypothesis Catalogue v1 and advance only the highest-priority candidates into Campaign 0005 for scientific validation. Do not backtest or optimize within Campaign 0004."
+  }
+}

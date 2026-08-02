@@ -1,0 +1,129 @@
+[
+  {
+    "approved_regimes": [
+      "bull_trend",
+      "calm_carry"
+    ],
+    "feature": "regime_return_60",
+    "mean_bootstrap_consistency": 0.947917,
+    "mean_correlation_stability": 0.126844,
+    "mean_drift_score": 0.132985,
+    "robust_regime_count": 6
+  },
+  {
+    "approved_regimes": [
+      "bull_trend",
+      "bear_unwind"
+    ],
+    "feature": "xau_return_20",
+    "mean_bootstrap_consistency": 0.958333,
+    "mean_correlation_stability": 0.108923,
+    "mean_drift_score": 0.143004,
+    "robust_regime_count": 6
+  },
+  {
+    "approved_regimes": [
+      "bull_trend",
+      "crisis_dislocation"
+    ],
+    "feature": "breakdown_20",
+    "mean_bootstrap_consistency": 0.864583,
+    "mean_correlation_stability": 0.116389,
+    "mean_drift_score": 0.220666,
+    "robust_regime_count": 5
+  },
+  {
+    "approved_regimes": [
+      "bull_trend",
+      "range_compression"
+    ],
+    "feature": "forward_expectation",
+    "mean_bootstrap_consistency": 0.885417,
+    "mean_correlation_stability": 0.146412,
+    "mean_drift_score": 0.329614,
+    "robust_regime_count": 5
+  },
+  {
+    "approved_regimes": [
+      "bear_unwind",
+      "calm_carry",
+      "range_compression"
+    ],
+    "feature": "regime_vol_20",
+    "mean_bootstrap_consistency": 0.838542,
+    "mean_correlation_stability": 0.155614,
+    "mean_drift_score": 0.398361,
+    "robust_regime_count": 4
+  },
+  {
+    "approved_regimes": [
+      "bear_unwind"
+    ],
+    "feature": "trend_gap_30_180",
+    "mean_bootstrap_consistency": 0.802083,
+    "mean_correlation_stability": 0.139836,
+    "mean_drift_score": 0.311253,
+    "robust_regime_count": 5
+  },
+  {
+    "approved_regimes": [
+      "calm_carry",
+      "range_compression"
+    ],
+    "feature": "macro_trend_interaction",
+    "mean_bootstrap_consistency": 0.963542,
+    "mean_correlation_stability": 0.142867,
+    "mean_drift_score": 0.227613,
+    "robust_regime_count": 5
+  },
+  {
+    "approved_regimes": [
+      "crisis_dislocation"
+    ],
+    "feature": "breakout_60",
+    "mean_bootstrap_consistency": 0.760417,
+    "mean_correlation_stability": 0.091383,
+    "mean_drift_score": 0.18821,
+    "robust_regime_count": 5
+  },
+  {
+    "approved_regimes": [
+      "crisis_dislocation"
+    ],
+    "feature": "trend_gap_20_120",
+    "mean_bootstrap_consistency": 0.84375,
+    "mean_correlation_stability": 0.127353,
+    "mean_drift_score": 0.186052,
+    "robust_regime_count": 5
+  },
+  {
+    "approved_regimes": [
+      "macro_transition"
+    ],
+    "feature": "xau_return_1",
+    "mean_bootstrap_consistency": 0.755208,
+    "mean_correlation_stability": 0.069835,
+    "mean_drift_score": 0.075332,
+    "robust_regime_count": 5
+  },
+  {
+    "approved_regimes": [
+      "macro_transition"
+    ],
+    "feature": "trend_breakout_interaction",
+    "mean_bootstrap_consistency": 0.796875,
+    "mean_correlation_stability": 0.138908,
+    "mean_drift_score": 0.258511,
+    "robust_regime_count": 5
+  },
+  {
+    "approved_regimes": [
+      "macro_transition"
+    ],
+    "feature": "sessionless_event_pressure",
+    "mean_bootstrap_consistency": 0.963542,
+    "mean_correlation_stability": 0.117376,
+    "mean_drift_score": 0.191905,
+    "robust_regime_count": 5
+  }
+]

@@ -1,0 +1,1199 @@
+{
+  "arb_recommendation": "Advance the highest-priority regime-conditioned hypotheses into Campaign 0005 for scientific validation without adding new infrastructure or relaxing the approved taxonomy and feature-catalogue constraints.",
+  "campaign": {
+    "accepted_taxonomy": "Institutional Six-State Overlay Taxonomy v1",
+    "approved_catalogue": "Institutional Regime-Conditioned Feature Catalogue v1",
+    "hypothesis_catalogue": "Institutional Alpha Hypothesis Catalogue v1",
+    "hypothesis_count": 8,
+    "recommended_for_campaign_0005": 5,
+    "title": "Campaign 0004 Hypothesis Discovery"
+  },
+  "economic_mechanism_atlas": [
+    {
+      "description": "Persistent medium-horizon path dependence is reinforced by expectation relief and slower capital participation.",
+      "identifier": "IKROS-MECH-20260802-0401",
+      "name": "Trend-following continuation",
+      "participants": [
+        "trend followers",
+        "macro allocators",
+        "reserve managers"
+      ],
+      "supporting_hypotheses": [
+        "IKROS-HYP-20260802-0401",
+        "IKROS-HYP-20260802-0408"
+      ]
+    },
+    {
+      "description": "Forced deleveraging can create downside continuation before exhaustion and rebound dynamics appear.",
+      "identifier": "IKROS-MECH-20260802-0402",
+      "name": "Liquidation reflexivity",
+      "participants": [
+        "levered funds",
+        "risk desks",
+        "liquidity providers"
+      ],
+      "supporting_hypotheses": [
+        "IKROS-HYP-20260802-0402",
+        "IKROS-HYP-20260802-0407"
+      ]
+    },
+    {
+      "description": "Shock states selectively transform into durable safe-haven flow when breakout and trend structure align.",
+      "identifier": "IKROS-MECH-20260802-0403",
+      "name": "Safe-haven convexity",
+      "participants": [
+        "hedgers",
+        "safe-haven allocators",
+        "global macro desks"
+      ],
+      "supporting_hypotheses": [
+        "IKROS-HYP-20260802-0404",
+        "IKROS-HYP-20260802-0407"
+      ]
+    },
+    {
+      "description": "Macro-event repricing transitions from short-horizon response into broader directional participation.",
+      "identifier": "IKROS-MECH-20260802-0404",
+      "name": "Policy repricing handoff",
+      "participants": [
+        "event traders",
+        "CTAs",
+        "cross-asset discretionary desks"
+      ],
+      "supporting_hypotheses": [
+        "IKROS-HYP-20260802-0405",
+        "IKROS-HYP-20260802-0408"
+      ]
+    },
+    {
+      "description": "Quiet reserve and macro accumulation can generate drift before the crowd recognizes a new trend.",
+      "identifier": "IKROS-MECH-20260802-0405",
+      "name": "Low-volatility accumulation",
+      "participants": [
+        "reserve managers",
+        "slow-frequency macro capital"
+      ],
+      "supporting_hypotheses": [
+        "IKROS-HYP-20260802-0403"
+      ]
+    },
+    {
+      "description": "Narrative shocks can fade in compressed states when participation is too shallow to create expansion.",
+      "identifier": "IKROS-MECH-20260802-0406",
+      "name": "Compression-state mean reversion",
+      "participants": [
+        "range traders",
+        "options desks",
+        "inventory balancers"
+      ],
+      "supporting_hypotheses": [
+        "IKROS-HYP-20260802-0406"
+      ]
+    }
+  ],
+  "expected_validation_matrix": [
+    {
+      "acceptance_criteria": [
+        "directional consistency across bull_trend folds",
+        "stable effect sign after CPCV and Monte Carlo",
+        "economic narrative remains consistent with safe-haven and carry literature"
+      ],
+      "expected_horizon": "5D",
+      "identifier": "IKROS-HYP-20260802-0401",
+      "regime_scope": [
+        "bull_trend"
+      ],
+      "rejection_criteria": [
+        "effect vanishes outside a narrow sample segment",
+        "forward_expectation behaves as a redundant proxy with no incremental hypothesis value",
+        "evidence collapses once trend exhaustion controls are included"
+      ],
+      "title": "Expectation-relief bull continuation",
+      "validation_plan": [
+        "walk_forward validation inside bull_trend windows",
+        "CPCV with regime-preserving folds",
+        "Monte Carlo path reshuffling conditioned on bull_trend membership",
+        "sensitivity to expectation-shock sign changes"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "breakout-led continuation remains directional across crisis episodes",
+        "trend anchor improves separation of durable vs transient shocks",
+        "historical analogues align with safe-haven flow logic"
+      ],
+      "expected_horizon": "5D",
+      "identifier": "IKROS-HYP-20260802-0404",
+      "regime_scope": [
+        "crisis_dislocation"
+      ],
+      "rejection_criteria": [
+        "continuation fails after removing a small number of crisis windows",
+        "breakout signal proves indistinguishable from generic volatility spikes",
+        "liquidation whipsaw dominates more often than continuation"
+      ],
+      "title": "Crisis safe-haven breakout convexity",
+      "validation_plan": [
+        "event-window walk_forward validation around crisis episodes",
+        "bootstrap conditioned on crisis subtypes",
+        "Monte Carlo sequencing of crisis event order",
+        "stress testing versus immediate post-event reversals"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "continuation sign remains stable across macro-transition subsets",
+        "interaction terms add value beyond xau_return_1 alone",
+        "event-driven narrative remains consistent with policy repricing theory"
+      ],
+      "expected_horizon": "1-5D",
+      "identifier": "IKROS-HYP-20260802-0405",
+      "regime_scope": [
+        "macro_transition"
+      ],
+      "rejection_criteria": [
+        "edge collapses once sparse-event penalties are applied",
+        "continuation is just a proxy for generic short-horizon momentum",
+        "event pressure contributes no incremental explanatory power"
+      ],
+      "title": "Policy-shock repricing continuation",
+      "validation_plan": [
+        "event-synchronous walk_forward splits",
+        "CPCV around clustered macro-event windows",
+        "sensitivity to shock sign and immediate reversal risk",
+        "Monte Carlo resampling of event sequences"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "consistent downside sign in unwind folds",
+        "effect survives volatility decile perturbations",
+        "trend persistence remains explanatory after redundancy controls"
+      ],
+      "expected_horizon": "5D",
+      "identifier": "IKROS-HYP-20260802-0402",
+      "regime_scope": [
+        "bear_unwind"
+      ],
+      "rejection_criteria": [
+        "continuation fails once crisis overlap is excluded",
+        "trend_gap_30_180 behaves as a weak bystander rather than a mechanism variable",
+        "volatility contribution is unstable across folds"
+      ],
+      "title": "Liquidation-pressure bear continuation",
+      "validation_plan": [
+        "walk_forward validation restricted to bear_unwind segments",
+        "CPCV across non-overlapping unwind episodes",
+        "stress testing around major macro announcements and shock dates",
+        "sensitivity to volatility deceleration"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "handoff cases separate cleanly from failed transitions",
+        "medium-horizon anchor adds incremental value over event-only continuation",
+        "cross-state mechanism remains economically coherent"
+      ],
+      "expected_horizon": "5-15D",
+      "identifier": "IKROS-HYP-20260802-0408",
+      "regime_scope": [
+        "macro_transition",
+        "bull_trend"
+      ],
+      "rejection_criteria": [
+        "handoff cases are too rare for institutional follow-up",
+        "signal is redundant with H0401 or H0405",
+        "transition ordering uncertainty collapses reproducibility"
+      ],
+      "title": "Transition-to-trend handoff",
+      "validation_plan": [
+        "state-transition walk_forward validation",
+        "CPCV preserving transition-to-bull handoff sequences",
+        "sensitivity to the duration of the handoff window",
+        "Monte Carlo over transition ordering"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "rebound sign persists across multiple stress analogues",
+        "exhaustion controls improve signal quality over raw breakdown alone",
+        "rebound timing remains reproducible enough for scientific follow-up"
+      ],
+      "expected_horizon": "5-10D",
+      "identifier": "IKROS-HYP-20260802-0407",
+      "regime_scope": [
+        "bear_unwind",
+        "crisis_dislocation"
+      ],
+      "rejection_criteria": [
+        "rebound depends on a single crisis window",
+        "timing uncertainty overwhelms institutional usefulness",
+        "bear continuation dominates even after exhaustion controls"
+      ],
+      "title": "Liquidation-exhaustion rebound",
+      "validation_plan": [
+        "episode-based walk_forward validation around extreme selloffs",
+        "Monte Carlo sequencing of stress and rebound episodes",
+        "stress testing against extended liquidation paths",
+        "sensitivity to rebound timing lag"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "drift sign remains stable across calm_carry folds",
+        "interaction term contributes incremental explanatory value over regime_return_60 alone",
+        "calm_carry episodes remain economically interpretable"
+      ],
+      "expected_horizon": "5-10D",
+      "identifier": "IKROS-HYP-20260802-0403",
+      "regime_scope": [
+        "calm_carry"
+      ],
+      "rejection_criteria": [
+        "signal disappears after transition controls",
+        "volatility compression merely suppresses all directional information",
+        "macro_trend_interaction proves too weak outside a single historical window"
+      ],
+      "title": "Carry-state accumulation drift",
+      "validation_plan": [
+        "walk_forward tests on calm_carry windows",
+        "bootstrap around low-volatility subsamples",
+        "sensitivity to transition breakpoints into macro_transition",
+        "capacity and turnover diagnostics deferred to later campaigns"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "fade direction remains more stable than continuation direction",
+        "range assumption survives transition diagnostics",
+        "narrative shocks can be economically explained as inventory rebalancing rather than trend starts"
+      ],
+      "expected_horizon": "3-5D",
+      "identifier": "IKROS-HYP-20260802-0406",
+      "regime_scope": [
+        "range_compression"
+      ],
+      "rejection_criteria": [
+        "breakout contamination dominates the sample",
+        "expected edge amplitude is too low for institutional usefulness",
+        "forward_expectation adds no incremental explanatory value over volatility alone"
+      ],
+      "title": "Compression-state expectation fade",
+      "validation_plan": [
+        "walk_forward validation on compression windows only",
+        "sensitivity to breakout false-positive detection",
+        "bootstrap on low-volatility subsamples",
+        "transition audit into macro_transition and bull_trend states"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "acceptance_criteria": [
+        "directional consistency across bull_trend folds",
+        "stable effect sign after CPCV and Monte Carlo",
+        "economic narrative remains consistent with safe-haven and carry literature"
+      ],
+      "advance_to_campaign_0005": true,
+      "alpha_capacity": 4.2,
+      "confidence_prior": 0.53,
+      "contradictory_evidence": [
+        "Campaign 0001 rejected macro-only drift as a sufficient explanation.",
+        "Breakdown pressure can overwhelm expectation relief near trend exhaustion."
+      ],
+      "economic_plausibility": 4.5,
+      "economic_theory": "Reserve diversification, real-yield relief, and trend-following capital can reinforce each other once the tape is already trending higher.",
+      "expected_direction": "UP",
+      "expected_holding_period": "3-5D",
+      "expected_horizon": "5D",
+      "expected_information_gain": 4.2,
+      "explainability": 4.6,
+      "failure_modes": [
+        "late-cycle trend exhaustion",
+        "USD or rates re-acceleration",
+        "bull trend already overcrowded"
+      ],
+      "feature_ids": [
+        "IKROS-FEAT-20260802-0301",
+        "IKROS-FEAT-20260802-0302",
+        "IKROS-FEAT-20260802-0304"
+      ],
+      "feature_set": [
+        "regime_return_60",
+        "xau_return_20",
+        "forward_expectation"
+      ],
+      "historical_analogues": [],
+      "historical_regimes": [
+        "gold_bull_2011"
+      ],
+      "identifier": "IKROS-HYP-20260802-0401",
+      "institutional_usefulness": 4.5,
+      "knowledge_links": [
+        "IKROS-FEAT-20260802-0301",
+        "IKROS-FEAT-20260802-0302",
+        "IKROS-FEAT-20260802-0304",
+        "IKROS-KO-20260802-0401"
+      ],
+      "market_participants": [
+        "macro funds",
+        "trend followers",
+        "reserve managers"
+      ],
+      "mechanism_id": "IKROS-KO-20260802-0401",
+      "novelty": 3.7,
+      "priority_score": 4.2132,
+      "priority_tier": "P1",
+      "regime_scope": [
+        "bull_trend"
+      ],
+      "rejection_criteria": [
+        "effect vanishes outside a narrow sample segment",
+        "forward_expectation behaves as a redundant proxy with no incremental hypothesis value",
+        "evidence collapses once trend exhaustion controls are included"
+      ],
+      "required_evidence": [
+        "bull_trend fold attribution",
+        "expectation-shock conditioning report",
+        "counterexample review against Campaign 0001 rejection"
+      ],
+      "required_market_conditions": [
+        "bull_trend remains active",
+        "forward_expectation softens rather than shocks higher",
+        "no fresh crisis dislocation overrides the trend"
+      ],
+      "research_question": "When bull_trend is already active, does a constructive expectation reset allow XAU/USD continuation rather than exhaustion?",
+      "research_question_id": "IKROS-RQ-20260802-0401",
+      "slug": "expectation_relief_bull_continuation",
+      "support_score": 1.9644,
+      "title": "Expectation-relief bull continuation",
+      "validation_feasibility": 4.4,
+      "validation_plan": [
+        "walk_forward validation inside bull_trend windows",
+        "CPCV with regime-preserving folds",
+        "Monte Carlo path reshuffling conditioned on bull_trend membership",
+        "sensitivity to expectation-shock sign changes"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "breakout-led continuation remains directional across crisis episodes",
+        "trend anchor improves separation of durable vs transient shocks",
+        "historical analogues align with safe-haven flow logic"
+      ],
+      "advance_to_campaign_0005": true,
+      "alpha_capacity": 4.0,
+      "confidence_prior": 0.49,
+      "contradictory_evidence": [
+        "Campaign 0002 flagged crisis dislocation as a lower-confidence state than the calmer regimes.",
+        "Short-term liquidation can initially push gold lower before safe-haven flows arrive."
+      ],
+      "economic_plausibility": 4.4,
+      "economic_theory": "In crisis states, gold receives flow from investors seeking collateral resilience and macro hedging, but only some crises produce durable continuation rather than liquidation whipsaw.",
+      "expected_direction": "UP",
+      "expected_holding_period": "2-5D",
+      "expected_horizon": "5D",
+      "expected_information_gain": 4.6,
+      "explainability": 4.5,
+      "failure_modes": [
+        "liquidation for cash overwhelms safe-haven demand",
+        "crisis shock mean-reverts immediately",
+        "breakout is news-driven but not flow-supported"
+      ],
+      "feature_ids": [
+        "IKROS-FEAT-20260802-0308",
+        "IKROS-FEAT-20260802-0309",
+        "IKROS-FEAT-20260802-0303"
+      ],
+      "feature_set": [
+        "breakout_60",
+        "trend_gap_20_120",
+        "breakdown_20"
+      ],
+      "historical_analogues": [
+        "2011 Gold Bull Market",
+        "2020 COVID"
+      ],
+      "historical_regimes": [
+        "gold_bull_2011",
+        "covid_2020"
+      ],
+      "identifier": "IKROS-HYP-20260802-0404",
+      "institutional_usefulness": 4.5,
+      "knowledge_links": [
+        "IKROS-FEAT-20260802-0308",
+        "IKROS-FEAT-20260802-0309",
+        "IKROS-FEAT-20260802-0303",
+        "IKROS-KO-20260802-0404"
+      ],
+      "market_participants": [
+        "global macro hedgers",
+        "safe-haven allocators",
+        "systematic breakout strategies"
+      ],
+      "mechanism_id": "IKROS-KO-20260802-0404",
+      "novelty": 4.4,
+      "priority_score": 4.192,
+      "priority_tier": "P2",
+      "regime_scope": [
+        "crisis_dislocation"
+      ],
+      "rejection_criteria": [
+        "continuation fails after removing a small number of crisis windows",
+        "breakout signal proves indistinguishable from generic volatility spikes",
+        "liquidation whipsaw dominates more often than continuation"
+      ],
+      "required_evidence": [
+        "crisis event replay book",
+        "breakout vs volatility discrimination memo",
+        "counterexample log for liquidation whipsaws"
+      ],
+      "required_market_conditions": [
+        "crisis_dislocation confirmed by the taxonomy",
+        "upside breakout dominates immediate liquidation noise",
+        "intermediate trend remains supportive"
+      ],
+      "research_question": "Inside crisis_dislocation, do breakout expansion and intermediate trend persistence identify the subset of shocks that produce persistent safe-haven inflows rather than one-day panic noise?",
+      "research_question_id": "IKROS-RQ-20260802-0404",
+      "slug": "crisis_safe_haven_breakout_convexity",
+      "support_score": 1.7398,
+      "title": "Crisis safe-haven breakout convexity",
+      "validation_feasibility": 3.8,
+      "validation_plan": [
+        "event-window walk_forward validation around crisis episodes",
+        "bootstrap conditioned on crisis subtypes",
+        "Monte Carlo sequencing of crisis event order",
+        "stress testing versus immediate post-event reversals"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "continuation sign remains stable across macro-transition subsets",
+        "interaction terms add value beyond xau_return_1 alone",
+        "event-driven narrative remains consistent with policy repricing theory"
+      ],
+      "advance_to_campaign_0005": true,
+      "alpha_capacity": 3.9,
+      "confidence_prior": 0.48,
+      "contradictory_evidence": [
+        "Campaign 0003 rejected standalone macro_pressure as a direct predictor.",
+        "Sparse event-pressure coverage can create fragile-looking edges if not validated carefully."
+      ],
+      "economic_plausibility": 4.3,
+      "economic_theory": "Macro announcements can reset inflation, rate, and USD expectations quickly; when the first gold response is confirmed by event pressure and directional structure, follow-through may persist for several sessions.",
+      "expected_direction": "CONTINUATION_WITH_INITIAL_SHOCK",
+      "expected_holding_period": "1-3D",
+      "expected_horizon": "1-5D",
+      "expected_information_gain": 4.5,
+      "explainability": 4.4,
+      "failure_modes": [
+        "one-day overreaction immediately mean reverts",
+        "event pressure is noisy or low quality",
+        "transition fails to hand off into a persistent regime"
+      ],
+      "feature_ids": [
+        "IKROS-FEAT-20260802-0310",
+        "IKROS-FEAT-20260802-0311",
+        "IKROS-FEAT-20260802-0312"
+      ],
+      "feature_set": [
+        "xau_return_1",
+        "trend_breakout_interaction",
+        "sessionless_event_pressure"
+      ],
+      "historical_analogues": [],
+      "historical_regimes": [
+        "inflation_2022"
+      ],
+      "identifier": "IKROS-HYP-20260802-0405",
+      "institutional_usefulness": 4.4,
+      "knowledge_links": [
+        "IKROS-FEAT-20260802-0310",
+        "IKROS-FEAT-20260802-0311",
+        "IKROS-FEAT-20260802-0312",
+        "IKROS-KO-20260802-0405"
+      ],
+      "market_participants": [
+        "macro event traders",
+        "policy-sensitive CTAs",
+        "cross-asset discretionary desks"
+      ],
+      "mechanism_id": "IKROS-KO-20260802-0405",
+      "novelty": 4.6,
+      "priority_score": 4.1472,
+      "priority_tier": "P2",
+      "regime_scope": [
+        "macro_transition"
+      ],
+      "rejection_criteria": [
+        "edge collapses once sparse-event penalties are applied",
+        "continuation is just a proxy for generic short-horizon momentum",
+        "event pressure contributes no incremental explanatory power"
+      ],
+      "required_evidence": [
+        "event-synchronous validation book",
+        "interaction ablation report",
+        "sparse-coverage robustness review"
+      ],
+      "required_market_conditions": [
+        "macro_transition state confirmed",
+        "non-trivial event pressure is present",
+        "breakout interaction aligns with the initial shock direction"
+      ],
+      "research_question": "During macro_transition states, does the first-day gold reaction persist when event pressure and breakout alignment indicate a genuine regime handoff?",
+      "research_question_id": "IKROS-RQ-20260802-0405",
+      "slug": "policy_shock_repricing_continuation",
+      "support_score": 0.9445,
+      "title": "Policy-shock repricing continuation",
+      "validation_feasibility": 4.1,
+      "validation_plan": [
+        "event-synchronous walk_forward splits",
+        "CPCV around clustered macro-event windows",
+        "sensitivity to shock sign and immediate reversal risk",
+        "Monte Carlo resampling of event sequences"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "consistent downside sign in unwind folds",
+        "effect survives volatility decile perturbations",
+        "trend persistence remains explanatory after redundancy controls"
+      ],
+      "advance_to_campaign_0005": true,
+      "alpha_capacity": 4.1,
+      "confidence_prior": 0.5,
+      "contradictory_evidence": [
+        "Campaign 0002 showed regime transitions can quickly flip interpretation.",
+        "Liquidation exhaustion can reverse downside continuation under crisis overlap."
+      ],
+      "economic_plausibility": 4.3,
+      "economic_theory": "Forced deleveraging and inventory reduction can sustain downside pressure before value-sensitive buyers re-enter the market.",
+      "expected_direction": "DOWN",
+      "expected_holding_period": "3-5D",
+      "expected_horizon": "5D",
+      "expected_information_gain": 3.9,
+      "explainability": 4.5,
+      "failure_modes": [
+        "policy response or central-bank demand stabilizes gold abruptly",
+        "bear unwind transitions into crisis-safe-haven bid",
+        "trend gap compresses too quickly"
+      ],
+      "feature_ids": [
+        "IKROS-FEAT-20260802-0302",
+        "IKROS-FEAT-20260802-0305",
+        "IKROS-FEAT-20260802-0306"
+      ],
+      "feature_set": [
+        "xau_return_20",
+        "regime_vol_20",
+        "trend_gap_30_180"
+      ],
+      "historical_analogues": [
+        "2013 Gold Collapse"
+      ],
+      "historical_regimes": [
+        "gold_collapse_2013"
+      ],
+      "identifier": "IKROS-HYP-20260802-0402",
+      "institutional_usefulness": 4.2,
+      "knowledge_links": [
+        "IKROS-FEAT-20260802-0302",
+        "IKROS-FEAT-20260802-0305",
+        "IKROS-FEAT-20260802-0306",
+        "IKROS-KO-20260802-0402"
+      ],
+      "market_participants": [
+        "levered macro funds",
+        "commodity risk desks",
+        "liquidity providers reducing inventory"
+      ],
+      "mechanism_id": "IKROS-KO-20260802-0402",
+      "novelty": 3.3,
+      "priority_score": 4.011,
+      "priority_tier": "P2",
+      "regime_scope": [
+        "bear_unwind"
+      ],
+      "rejection_criteria": [
+        "continuation fails once crisis overlap is excluded",
+        "trend_gap_30_180 behaves as a weak bystander rather than a mechanism variable",
+        "volatility contribution is unstable across folds"
+      ],
+      "required_evidence": [
+        "unwind-segment validation panel",
+        "volatility-decile stress report",
+        "transition-overlap contradiction log"
+      ],
+      "required_market_conditions": [
+        "bear_unwind remains dominant",
+        "volatility remains elevated relative to calm_carry",
+        "no crisis-safe-haven reversal interrupts liquidation"
+      ],
+      "research_question": "Inside bear_unwind states, do persistent downside path pressure and elevated volatility continue to dominate the next five trading days?",
+      "research_question_id": "IKROS-RQ-20260802-0402",
+      "slug": "liquidation_pressure_bear_continuation",
+      "support_score": 1.721,
+      "title": "Liquidation-pressure bear continuation",
+      "validation_feasibility": 4.4,
+      "validation_plan": [
+        "walk_forward validation restricted to bear_unwind segments",
+        "CPCV across non-overlapping unwind episodes",
+        "stress testing around major macro announcements and shock dates",
+        "sensitivity to volatility deceleration"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "handoff cases separate cleanly from failed transitions",
+        "medium-horizon anchor adds incremental value over event-only continuation",
+        "cross-state mechanism remains economically coherent"
+      ],
+      "advance_to_campaign_0005": true,
+      "alpha_capacity": 4.0,
+      "confidence_prior": 0.45,
+      "contradictory_evidence": [
+        "Transition states are noisy and sparse in Campaign 0003.",
+        "Bull continuation may already be captured by H0401 without requiring a transition narrative."
+      ],
+      "economic_plausibility": 4.0,
+      "economic_theory": "Some policy and event shocks are not isolated bursts but regime-change catalysts that seed a broader trend followed by slower capital.",
+      "expected_direction": "UP_IF_TRANSITION_RESOLVES_CONSTRUCTIVELY",
+      "expected_holding_period": "5-10D",
+      "expected_horizon": "5-15D",
+      "expected_information_gain": 4.5,
+      "explainability": 4.3,
+      "failure_modes": [
+        "transition shock mean reverts",
+        "bull_trend never materializes",
+        "signal is redundant with expectation-relief bull continuation"
+      ],
+      "feature_ids": [
+        "IKROS-FEAT-20260802-0310",
+        "IKROS-FEAT-20260802-0311",
+        "IKROS-FEAT-20260802-0301"
+      ],
+      "feature_set": [
+        "xau_return_1",
+        "trend_breakout_interaction",
+        "regime_return_60"
+      ],
+      "historical_analogues": [],
+      "historical_regimes": [
+        "inflation_2022",
+        "gold_bull_2011"
+      ],
+      "identifier": "IKROS-HYP-20260802-0408",
+      "institutional_usefulness": 4.0,
+      "knowledge_links": [
+        "IKROS-FEAT-20260802-0310",
+        "IKROS-FEAT-20260802-0311",
+        "IKROS-FEAT-20260802-0301",
+        "IKROS-KO-20260802-0408"
+      ],
+      "market_participants": [
+        "event traders handing risk to trend followers",
+        "macro allocators",
+        "systematic medium-horizon strategies"
+      ],
+      "mechanism_id": "IKROS-KO-20260802-0408",
+      "novelty": 4.7,
+      "priority_score": 3.9988,
+      "priority_tier": "P2",
+      "regime_scope": [
+        "macro_transition",
+        "bull_trend"
+      ],
+      "rejection_criteria": [
+        "handoff cases are too rare for institutional follow-up",
+        "signal is redundant with H0401 or H0405",
+        "transition ordering uncertainty collapses reproducibility"
+      ],
+      "required_evidence": [
+        "transition-handoff event log",
+        "cross-state redundancy review",
+        "sequence-sensitivity report"
+      ],
+      "required_market_conditions": [
+        "macro_transition shock resolves into bull_trend rather than range_compression",
+        "first-day reaction remains aligned with breakout structure",
+        "medium-horizon return anchor turns supportive"
+      ],
+      "research_question": "Do macro_transition shocks that align with directional breakout structure hand off into later bull_trend continuation rather than fading out?",
+      "research_question_id": "IKROS-RQ-20260802-0408",
+      "slug": "transition_to_trend_handoff",
+      "support_score": 1.3765,
+      "title": "Transition-to-trend handoff",
+      "validation_feasibility": 3.7,
+      "validation_plan": [
+        "state-transition walk_forward validation",
+        "CPCV preserving transition-to-bull handoff sequences",
+        "sensitivity to the duration of the handoff window",
+        "Monte Carlo over transition ordering"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "rebound sign persists across multiple stress analogues",
+        "exhaustion controls improve signal quality over raw breakdown alone",
+        "rebound timing remains reproducible enough for scientific follow-up"
+      ],
+      "advance_to_campaign_0005": false,
+      "alpha_capacity": 3.6,
+      "confidence_prior": 0.44,
+      "contradictory_evidence": [
+        "Campaign 0002 noted crisis states remain lower-confidence research states.",
+        "Continuation and rebound can coexist, making false positives likely without strict regime controls."
+      ],
+      "economic_plausibility": 4.1,
+      "economic_theory": "Gold can initially be sold for liquidity during stress, then rebound sharply once balance-sheet pressure eases and safe-haven demand returns.",
+      "expected_direction": "UP_AFTER_EXTREME_STRESS",
+      "expected_holding_period": "3-7D",
+      "expected_horizon": "5-10D",
+      "expected_information_gain": 4.4,
+      "explainability": 4.3,
+      "failure_modes": [
+        "liquidation extends longer than expected",
+        "intermediate trend keeps deteriorating",
+        "rebound is only a one-day short covering move"
+      ],
+      "feature_ids": [
+        "IKROS-FEAT-20260802-0303",
+        "IKROS-FEAT-20260802-0309",
+        "IKROS-FEAT-20260802-0305"
+      ],
+      "feature_set": [
+        "breakdown_20",
+        "trend_gap_20_120",
+        "regime_vol_20"
+      ],
+      "historical_analogues": [
+        "2013 Gold Collapse",
+        "2011 Gold Bull Market",
+        "2020 COVID"
+      ],
+      "historical_regimes": [
+        "gfc_2008",
+        "covid_2020"
+      ],
+      "identifier": "IKROS-HYP-20260802-0407",
+      "institutional_usefulness": 3.8,
+      "knowledge_links": [
+        "IKROS-FEAT-20260802-0303",
+        "IKROS-FEAT-20260802-0309",
+        "IKROS-FEAT-20260802-0305",
+        "IKROS-KO-20260802-0407"
+      ],
+      "market_participants": [
+        "forced sellers transitioning to neutral",
+        "value-seeking discretionary macro desks",
+        "safe-haven allocators re-entering after liquidity shock"
+      ],
+      "mechanism_id": "IKROS-KO-20260802-0407",
+      "novelty": 4.5,
+      "priority_score": 3.8913,
+      "priority_tier": "P3",
+      "regime_scope": [
+        "bear_unwind",
+        "crisis_dislocation"
+      ],
+      "rejection_criteria": [
+        "rebound depends on a single crisis window",
+        "timing uncertainty overwhelms institutional usefulness",
+        "bear continuation dominates even after exhaustion controls"
+      ],
+      "required_evidence": [
+        "episode replay archive",
+        "rebound-timing sensitivity note",
+        "continuation-vs-reversal contradiction analysis"
+      ],
+      "required_market_conditions": [
+        "evidence of exhaustion rather than fresh breakdown acceleration",
+        "volatility remains elevated but directional panic starts to stabilize",
+        "state remains within bear_unwind or crisis_dislocation"
+      ],
+      "research_question": "After extreme selloffs in bear_unwind or crisis_dislocation, do elevated volatility and intermediate-trend stabilization identify rebound windows once forced selling exhausts itself?",
+      "research_question_id": "IKROS-RQ-20260802-0407",
+      "slug": "liquidation_exhaustion_rebound",
+      "support_score": 1.5266,
+      "title": "Liquidation-exhaustion rebound",
+      "validation_feasibility": 3.5,
+      "validation_plan": [
+        "episode-based walk_forward validation around extreme selloffs",
+        "Monte Carlo sequencing of stress and rebound episodes",
+        "stress testing against extended liquidation paths",
+        "sensitivity to rebound timing lag"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "drift sign remains stable across calm_carry folds",
+        "interaction term contributes incremental explanatory value over regime_return_60 alone",
+        "calm_carry episodes remain economically interpretable"
+      ],
+      "advance_to_campaign_0005": false,
+      "alpha_capacity": 3.7,
+      "confidence_prior": 0.47,
+      "contradictory_evidence": [
+        "Low-volatility states can exhibit negligible edge amplitude.",
+        "Campaign 0003 promoted macro_trend_interaction, not standalone macro pressure."
+      ],
+      "economic_plausibility": 4.0,
+      "economic_theory": "When volatility is compressed, gold can drift through reserve accumulation and low-urgency macro repricing rather than visible breakout behavior.",
+      "expected_direction": "UP",
+      "expected_holding_period": "5D",
+      "expected_horizon": "5-10D",
+      "expected_information_gain": 4.0,
+      "explainability": 4.4,
+      "failure_modes": [
+        "carry regime breaks into macro_transition",
+        "low-vol drift is too weak to survive execution costs later",
+        "trend anchor loses explanatory value when rates reprice abruptly"
+      ],
+      "feature_ids": [
+        "IKROS-FEAT-20260802-0301",
+        "IKROS-FEAT-20260802-0307",
+        "IKROS-FEAT-20260802-0305"
+      ],
+      "feature_set": [
+        "regime_return_60",
+        "macro_trend_interaction",
+        "regime_vol_20"
+      ],
+      "historical_analogues": [],
+      "historical_regimes": [
+        "rate_cycle_2024"
+      ],
+      "identifier": "IKROS-HYP-20260802-0403",
+      "institutional_usefulness": 3.9,
+      "knowledge_links": [
+        "IKROS-FEAT-20260802-0301",
+        "IKROS-FEAT-20260802-0307",
+        "IKROS-FEAT-20260802-0305",
+        "IKROS-KO-20260802-0403"
+      ],
+      "market_participants": [
+        "reserve managers",
+        "asset allocators",
+        "slower-frequency macro funds"
+      ],
+      "mechanism_id": "IKROS-KO-20260802-0403",
+      "novelty": 4.1,
+      "priority_score": 3.8848,
+      "priority_tier": "P3",
+      "regime_scope": [
+        "calm_carry"
+      ],
+      "rejection_criteria": [
+        "signal disappears after transition controls",
+        "volatility compression merely suppresses all directional information",
+        "macro_trend_interaction proves too weak outside a single historical window"
+      ],
+      "required_evidence": [
+        "calm_carry bootstrap report",
+        "interaction ablation note",
+        "transition-sensitivity contradiction review"
+      ],
+      "required_market_conditions": [
+        "calm_carry remains active",
+        "macro/trend interaction remains constructive",
+        "volatility stays subdued"
+      ],
+      "research_question": "During calm_carry conditions, does quiet accumulation create a slow positive drift in XAU/USD when macro/trend alignment remains constructive?",
+      "research_question_id": "IKROS-RQ-20260802-0403",
+      "slug": "carry_state_accumulation_drift",
+      "support_score": 1.5969,
+      "title": "Carry-state accumulation drift",
+      "validation_feasibility": 4.0,
+      "validation_plan": [
+        "walk_forward tests on calm_carry windows",
+        "bootstrap around low-volatility subsamples",
+        "sensitivity to transition breakpoints into macro_transition",
+        "capacity and turnover diagnostics deferred to later campaigns"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "fade direction remains more stable than continuation direction",
+        "range assumption survives transition diagnostics",
+        "narrative shocks can be economically explained as inventory rebalancing rather than trend starts"
+      ],
+      "advance_to_campaign_0005": false,
+      "alpha_capacity": 3.0,
+      "confidence_prior": 0.42,
+      "contradictory_evidence": [
+        "Range compression was a low-signal regime in Campaign 0003.",
+        "Forward expectation can behave as a cross-asset narrative proxy rather than a direct causal driver."
+      ],
+      "economic_plausibility": 3.7,
+      "economic_theory": "Range-bound markets often absorb macro narrative shocks without broad participation; a low-volatility environment can cause initial impulse to mean revert rather than expand.",
+      "expected_direction": "MEAN_REVERT_WITHIN_RANGE",
+      "expected_holding_period": "2-4D",
+      "expected_horizon": "3-5D",
+      "expected_information_gain": 4.0,
+      "explainability": 4.1,
+      "failure_modes": [
+        "compressed state resolves into a genuine breakout",
+        "macro shock is large enough to invalidate the range assumption",
+        "range compression has insufficient amplitude to justify future study"
+      ],
+      "feature_ids": [
+        "IKROS-FEAT-20260802-0307",
+        "IKROS-FEAT-20260802-0304",
+        "IKROS-FEAT-20260802-0305"
+      ],
+      "feature_set": [
+        "macro_trend_interaction",
+        "forward_expectation",
+        "regime_vol_20"
+      ],
+      "historical_analogues": [
+        "2008 Financial Crisis",
+        "2022 Inflation Cycle",
+        "2024 Rate Cycle"
+      ],
+      "historical_regimes": [
+        "historical_2025",
+        "available_2026"
+      ],
+      "identifier": "IKROS-HYP-20260802-0406",
+      "institutional_usefulness": 3.5,
+      "knowledge_links": [
+        "IKROS-FEAT-20260802-0307",
+        "IKROS-FEAT-20260802-0304",
+        "IKROS-FEAT-20260802-0305",
+        "IKROS-KO-20260802-0406"
+      ],
+      "market_participants": [
+        "range traders",
+        "options desks",
+        "inventory-balancing liquidity providers"
+      ],
+      "mechanism_id": "IKROS-KO-20260802-0406",
+      "novelty": 4.2,
+      "priority_score": 3.6422,
+      "priority_tier": "P3",
+      "regime_scope": [
+        "range_compression"
+      ],
+      "rejection_criteria": [
+        "breakout contamination dominates the sample",
+        "expected edge amplitude is too low for institutional usefulness",
+        "forward_expectation adds no incremental explanatory value over volatility alone"
+      ],
+      "required_evidence": [
+        "compression-window replay set",
+        "breakout contamination analysis",
+        "transition contradiction memo"
+      ],
+      "required_market_conditions": [
+        "range_compression remains the dominant state",
+        "volatility remains suppressed",
+        "no confirmed breakout follows the initial narrative shock"
+      ],
+      "research_question": "In range_compression, do expectation shocks and constructive macro/trend context identify fade opportunities rather than trend continuation?",
+      "research_question_id": "IKROS-RQ-20260802-0406",
+      "slug": "compression_state_expectation_fade",
+      "support_score": 1.2434,
+      "title": "Compression-state expectation fade",
+      "validation_feasibility": 3.9,
+      "validation_plan": [
+        "walk_forward validation on compression windows only",
+        "sensitivity to breakout false-positive detection",
+        "bootstrap on low-volatility subsamples",
+        "transition audit into macro_transition and bull_trend states"
+      ]
+    }
+  ],
+  "hypothesis_dependency_graph": {
+    "edges": [
+      {
+        "from": "IKROS-HYP-20260802-0405",
+        "reason": "event-driven repricing can seed a later trend handoff",
+        "to": "IKROS-HYP-20260802-0408"
+      },
+      {
+        "from": "IKROS-HYP-20260802-0408",
+        "reason": "successful transition handoff can mature into bull continuation",
+        "to": "IKROS-HYP-20260802-0401"
+      },
+      {
+        "from": "IKROS-HYP-20260802-0402",
+        "reason": "continued liquidation is the precursor state for an exhaustion rebound",
+        "to": "IKROS-HYP-20260802-0407"
+      },
+      {
+        "from": "IKROS-HYP-20260802-0406",
+        "reason": "range compression can break into macro transition when narrative shocks persist",
+        "to": "IKROS-HYP-20260802-0405"
+      },
+      {
+        "from": "IKROS-HYP-20260802-0404",
+        "reason": "crisis continuation and crisis exhaustion share the same shock domain but opposite outcomes",
+        "to": "IKROS-HYP-20260802-0407"
+      }
+    ],
+    "nodes": [
+      {
+        "identifier": "IKROS-HYP-20260802-0401",
+        "priority_tier": "P1",
+        "title": "Expectation-relief bull continuation"
+      },
+      {
+        "identifier": "IKROS-HYP-20260802-0404",
+        "priority_tier": "P2",
+        "title": "Crisis safe-haven breakout convexity"
+      },
+      {
+        "identifier": "IKROS-HYP-20260802-0405",
+        "priority_tier": "P2",
+        "title": "Policy-shock repricing continuation"
+      },
+      {
+        "identifier": "IKROS-HYP-20260802-0402",
+        "priority_tier": "P2",
+        "title": "Liquidation-pressure bear continuation"
+      },
+      {
+        "identifier": "IKROS-HYP-20260802-0408",
+        "priority_tier": "P2",
+        "title": "Transition-to-trend handoff"
+      },
+      {
+        "identifier": "IKROS-HYP-20260802-0407",
+        "priority_tier": "P3",
+        "title": "Liquidation-exhaustion rebound"
+      },
+      {
+        "identifier": "IKROS-HYP-20260802-0403",
+        "priority_tier": "P3",
+        "title": "Carry-state accumulation drift"
+      },
+      {
+        "identifier": "IKROS-HYP-20260802-0406",
+        "priority_tier": "P3",
+        "title": "Compression-state expectation fade"
+      }
+    ]
+  },
+  "recommended_hypotheses": [
+    "IKROS-HYP-20260802-0401",
+    "IKROS-HYP-20260802-0404",
+    "IKROS-HYP-20260802-0405",
+    "IKROS-HYP-20260802-0402",
+    "IKROS-HYP-20260802-0408"
+  ],
+  "research_priority_matrix": [
+    {
+      "advance_to_campaign_0005": true,
+      "alpha_capacity": 4.2,
+      "economic_plausibility": 4.5,
+      "expected_information_gain": 4.2,
+      "identifier": "IKROS-HYP-20260802-0401",
+      "institutional_usefulness": 4.5,
+      "novelty": 3.7,
+      "priority_score": 4.2132,
+      "priority_tier": "P1",
+      "support_score": 1.9644,
+      "title": "Expectation-relief bull continuation",
+      "validation_feasibility": 4.4
+    },
+    {
+      "advance_to_campaign_0005": true,
+      "alpha_capacity": 4.0,
+      "economic_plausibility": 4.4,
+      "expected_information_gain": 4.6,
+      "identifier": "IKROS-HYP-20260802-0404",
+      "institutional_usefulness": 4.5,
+      "novelty": 4.4,
+      "priority_score": 4.192,
+      "priority_tier": "P2",
+      "support_score": 1.7398,
+      "title": "Crisis safe-haven breakout convexity",
+      "validation_feasibility": 3.8
+    },
+    {
+      "advance_to_campaign_0005": true,
+      "alpha_capacity": 3.9,
+      "economic_plausibility": 4.3,
+      "expected_information_gain": 4.5,
+      "identifier": "IKROS-HYP-20260802-0405",
+      "institutional_usefulness": 4.4,
+      "novelty": 4.6,
+      "priority_score": 4.1472,
+      "priority_tier": "P2",
+      "support_score": 0.9445,
+      "title": "Policy-shock repricing continuation",
+      "validation_feasibility": 4.1
+    },
+    {
+      "advance_to_campaign_0005": true,
+      "alpha_capacity": 4.1,
+      "economic_plausibility": 4.3,
+      "expected_information_gain": 3.9,
+      "identifier": "IKROS-HYP-20260802-0402",
+      "institutional_usefulness": 4.2,
+      "novelty": 3.3,
+      "priority_score": 4.011,
+      "priority_tier": "P2",
+      "support_score": 1.721,
+      "title": "Liquidation-pressure bear continuation",
+      "validation_feasibility": 4.4
+    },
+    {
+      "advance_to_campaign_0005": true,
+      "alpha_capacity": 4.0,
+      "economic_plausibility": 4.0,
+      "expected_information_gain": 4.5,
+      "identifier": "IKROS-HYP-20260802-0408",
+      "institutional_usefulness": 4.0,
+      "novelty": 4.7,
+      "priority_score": 3.9988,
+      "priority_tier": "P2",
+      "support_score": 1.3765,
+      "title": "Transition-to-trend handoff",
+      "validation_feasibility": 3.7
+    },
+    {
+      "advance_to_campaign_0005": false,
+      "alpha_capacity": 3.6,
+      "economic_plausibility": 4.1,
+      "expected_information_gain": 4.4,
+      "identifier": "IKROS-HYP-20260802-0407",
+      "institutional_usefulness": 3.8,
+      "novelty": 4.5,
+      "priority_score": 3.8913,
+      "priority_tier": "P3",
+      "support_score": 1.5266,
+      "title": "Liquidation-exhaustion rebound",
+      "validation_feasibility": 3.5
+    },
+    {
+      "advance_to_campaign_0005": false,
+      "alpha_capacity": 3.7,
+      "economic_plausibility": 4.0,
+      "expected_information_gain": 4.0,
+      "identifier": "IKROS-HYP-20260802-0403",
+      "institutional_usefulness": 3.9,
+      "novelty": 4.1,
+      "priority_score": 3.8848,
+      "priority_tier": "P3",
+      "support_score": 1.5969,
+      "title": "Carry-state accumulation drift",
+      "validation_feasibility": 4.0
+    },
+    {
+      "advance_to_campaign_0005": false,
+      "alpha_capacity": 3.0,
+      "economic_plausibility": 3.7,
+      "expected_information_gain": 4.0,
+      "identifier": "IKROS-HYP-20260802-0406",
+      "institutional_usefulness": 3.5,
+      "novelty": 4.2,
+      "priority_score": 3.6422,
+      "priority_tier": "P3",
+      "support_score": 1.2434,
+      "title": "Compression-state expectation fade",
+      "validation_feasibility": 3.9
+    }
+  ]
+}

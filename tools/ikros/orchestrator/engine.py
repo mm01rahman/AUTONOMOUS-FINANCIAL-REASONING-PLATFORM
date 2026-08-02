@@ -389,7 +389,7 @@ class ResearchOrchestrator:
         return ResearchTaskResult(
             output_refs=output_refs,
             metrics={
-                "ingestion_status": result.status,
+                "ingestion_status": str(result.status),
                 "memory_ids": list(result.report.memory_ids),
                 "graph_node_ids": list(result.report.graph_node_ids),
             },

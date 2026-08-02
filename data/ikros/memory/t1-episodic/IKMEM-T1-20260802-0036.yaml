@@ -1,0 +1,141 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:51:28.817029+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0028
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/feature_importance.json
+- 11-research/phase-g/feature-discovery/FEATURE_DISCOVERY_CAMPAIGN.md
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\feature_discovery_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0003
+- IKROS-RESEARCHTASK-20260802-0029
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0036
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0003
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0028
+    finished_at: '2026-08-02T01:51:28.817029+00:00'
+    kind: FEATURE_SELECTION
+    max_attempts: 1
+    payload:
+      candidate_feature_ids:
+      - IKROS-FEAT-20260802-0301
+      - IKROS-FEAT-20260802-0302
+      - IKROS-FEAT-20260802-0303
+      - IKROS-FEAT-20260802-0304
+      - IKROS-FEAT-20260802-0305
+      - IKROS-FEAT-20260802-0306
+      - IKROS-FEAT-20260802-0307
+      - IKROS-FEAT-20260802-0308
+      - IKROS-FEAT-20260802-0309
+      - IKROS-FEAT-20260802-0310
+      - IKROS-FEAT-20260802-0311
+      - IKROS-FEAT-20260802-0312
+      top_k: 12
+    planned_order: 7
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0029
+      memory_record_id: null
+      metrics:
+        ranked_candidates:
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0301
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0302
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0303
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0304
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0305
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0306
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0307
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0308
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0309
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0310
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0311
+        - confidence: 0.8
+          identifier: IKROS-FEAT-20260802-0312
+      output_refs: []
+      payload:
+        candidate_key: candidate_feature_ids
+        selected_ids:
+        - IKROS-FEAT-20260802-0301
+        - IKROS-FEAT-20260802-0302
+        - IKROS-FEAT-20260802-0303
+        - IKROS-FEAT-20260802-0304
+        - IKROS-FEAT-20260802-0305
+        - IKROS-FEAT-20260802-0306
+        - IKROS-FEAT-20260802-0307
+        - IKROS-FEAT-20260802-0308
+        - IKROS-FEAT-20260802-0309
+        - IKROS-FEAT-20260802-0310
+        - IKROS-FEAT-20260802-0311
+        - IKROS-FEAT-20260802-0312
+      selected_ids:
+      - IKROS-FEAT-20260802-0301
+      - IKROS-FEAT-20260802-0302
+      - IKROS-FEAT-20260802-0303
+      - IKROS-FEAT-20260802-0304
+      - IKROS-FEAT-20260802-0305
+      - IKROS-FEAT-20260802-0306
+      - IKROS-FEAT-20260802-0307
+      - IKROS-FEAT-20260802-0308
+      - IKROS-FEAT-20260802-0309
+      - IKROS-FEAT-20260802-0310
+      - IKROS-FEAT-20260802-0311
+      - IKROS-FEAT-20260802-0312
+    started_at: '2026-08-02T01:51:28.641972+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0029
+    title: Feature Selection
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0003
+- IKROS-FEAT-20260802-0301
+- IKROS-FEAT-20260802-0302
+- IKROS-FEAT-20260802-0303
+- IKROS-FEAT-20260802-0304
+- IKROS-FEAT-20260802-0305
+- IKROS-FEAT-20260802-0306
+- IKROS-FEAT-20260802-0307
+- IKROS-FEAT-20260802-0308
+- IKROS-FEAT-20260802-0309
+- IKROS-FEAT-20260802-0310
+- IKROS-FEAT-20260802-0311
+- IKROS-FEAT-20260802-0312
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: FEATURE_SELECTION COMPLETED
+tags:
+- research-orchestrator
+- feature_selection
+tier: T1_EPISODIC
+title: 'Campaign 0003 Feature Discovery :: Feature Selection'
+updated_at: '2026-08-02T01:51:28.817029+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

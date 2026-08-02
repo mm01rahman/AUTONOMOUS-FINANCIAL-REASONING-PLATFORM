@@ -1,0 +1,99 @@
+archived_at: null
+capability_refs: []
+confidence: 0.49
+created_at: '2026-08-02T01:59:35.071678+00:00'
+dependency_ids: []
+entity_type: Hypothesis
+evidence_refs:
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-HYP-20260802-0404
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0077
+payload:
+  attributes:
+    acceptance_criteria:
+    - breakout-led continuation remains directional across crisis episodes
+    - trend anchor improves separation of durable vs transient shocks
+    - historical analogues align with safe-haven flow logic
+    advance_to_campaign_0005: true
+    alternative_hypothesis: In crisis states, gold receives flow from investors seeking
+      collateral resilience and macro hedging, but only some crises produce durable
+      continuation rather than liquidation whipsaw.
+    contradictions: []
+    expected_direction: UP
+    expected_holding_period: 2-5D
+    expected_horizon: 5D
+    experiments: []
+    feature_ids:
+    - IKROS-FEAT-20260802-0308
+    - IKROS-FEAT-20260802-0309
+    - IKROS-FEAT-20260802-0303
+    feature_set:
+    - breakout_60
+    - trend_gap_20_120
+    - breakdown_20
+    knowledge_links:
+    - IKROS-FEAT-20260802-0308
+    - IKROS-FEAT-20260802-0309
+    - IKROS-FEAT-20260802-0303
+    - IKROS-KO-20260802-0404
+    motivating_theses: []
+    null_hypothesis: The described mechanism does not produce a persistent regime-conditioned
+      predictive relationship.
+    posterior_confidence: 0.0
+    power: 0.8
+    prior_confidence: 0.49
+    priority_tier: P2
+    regime_scope:
+    - crisis_dislocation
+    rejection_criteria:
+    - continuation fails after removing a small number of crisis windows
+    - breakout signal proves indistinguishable from generic volatility spikes
+    - liquidation whipsaw dominates more often than continuation
+    required_evidence:
+    - crisis event replay book
+    - breakout vs volatility discrimination memo
+    - counterexample log for liquidation whipsaws
+    research_question: Inside crisis_dislocation, do breakout expansion and intermediate
+      trend persistence identify the subset of shocks that produce persistent safe-haven
+      inflows rather than one-day panic noise?
+    significance_level: 0.05
+    source_rq: IKROS-RQ-20260802-0404
+    statement: Inside crisis_dislocation, do breakout expansion and intermediate trend
+      persistence identify the subset of shocks that produce persistent safe-haven
+      inflows rather than one-day panic noise?
+    validation_plan:
+    - event-window walk_forward validation around crisis episodes
+    - bootstrap conditioned on crisis subtypes
+    - Monte Carlo sequencing of crisis event order
+    - stress testing versus immediate post-event reversals
+    validations: []
+  lifecycle_state: APPROVED_FOR_TESTING
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-HYP-20260802-0404
+- IKROS-RQ-20260802-0404
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: In crisis states, gold receives flow from investors seeking collateral resilience
+  and macro hedging, but only some crises produce durable continuation rather than
+  liquidation whipsaw.
+tags:
+- hypothesis
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Crisis safe-haven breakout convexity
+updated_at: '2026-08-02T01:59:35.071678+00:00'
+valid_from: '2026-08-02T01:59:35.071678+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

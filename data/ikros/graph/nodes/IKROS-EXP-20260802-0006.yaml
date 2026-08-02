@@ -1,0 +1,125 @@
+attributes:
+  capability_refs:
+  - ALPHA-RESEARCH
+  - IKROS-ORCHESTRATOR
+  - IKROS-INGESTION
+  completed_at: null
+  confidence:
+    data: 0.82
+    economic: 0.68
+    last_updated: '2026-08-02T00:00:00Z'
+    model: 0.0
+    operational: 0.72
+    overall: 0.737709009036208
+    prior: 0.56
+    replication: 0.0
+    statistical: 0.0
+    validation: 0.0
+  dataset_versions:
+  - IKROS-DSV-20260802-0006
+  entity_type: Experiment
+  failures_produced: []
+  feature_versions:
+  - IKROS-FEAT-20260802-0301
+  - IKROS-FEAT-20260802-0302
+  - IKROS-FEAT-20260802-0303
+  - IKROS-FEAT-20260802-0304
+  - IKROS-FEAT-20260802-0305
+  - IKROS-FEAT-20260802-0306
+  - IKROS-FEAT-20260802-0308
+  - IKROS-FEAT-20260802-0309
+  - IKROS-FEAT-20260802-0310
+  - IKROS-FEAT-20260802-0311
+  - IKROS-FEAT-20260802-0312
+  git_commit: ''
+  hypotheses:
+  - IKROS-HYP-20260802-0401
+  - IKROS-HYP-20260802-0405
+  - IKROS-HYP-20260802-0408
+  ikros_id: IKROS-EXP-20260802-0006
+  in_sample_end: ''
+  in_sample_start: ''
+  lifecycle_state: RUNNING
+  lineage:
+    dependencies:
+      datasets:
+      - IKROS-DSV-20260802-0006
+      external_refs:
+      - 11-research/phase-g/failure-analysis/failure_analysis_analysis.json
+      - 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+      features:
+      - IKROS-FEAT-20260802-0301
+      - IKROS-FEAT-20260802-0302
+      - IKROS-FEAT-20260802-0303
+      - IKROS-FEAT-20260802-0304
+      - IKROS-FEAT-20260802-0305
+      - IKROS-FEAT-20260802-0306
+      - IKROS-FEAT-20260802-0308
+      - IKROS-FEAT-20260802-0309
+      - IKROS-FEAT-20260802-0310
+      - IKROS-FEAT-20260802-0311
+      - IKROS-FEAT-20260802-0312
+      inputs:
+      - IKROS-HYP-20260802-0006
+      models:
+      - institutional_six_state_overlay_taxonomy_v1
+    evidence:
+      contradicting: []
+      ers_records: []
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T00:00:00Z'
+      created_by: campaign-0006-failure-analysis
+      creation_context: Campaign 0006 failure analysis
+      motivation: Execute the governed root-cause analysis for the retained Campaign
+        0005 hypotheses.
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  out_of_sample_end: ''
+  out_of_sample_start: ''
+  parameters:
+    governance_constraints:
+    - no runtime changes
+    - no infrastructure changes
+    - no hypothesis mutation
+    - no parameter optimization
+    - no promotion
+    retained_hypotheses:
+    - IKROS-HYP-20260802-0401
+    - IKROS-HYP-20260802-0405
+    - IKROS-HYP-20260802-0408
+  protocol: Reuse the frozen validation frame and Campaign 0005 outputs to analyse
+    regime fragility, temporal degradation, feature redundancy, evidence gaps, and
+    recommended governed follow-up experiments.
+  random_seed: 42
+  reproducibility_hash: f15f46d2a8a3670b97ddc61b5416570c14e4f34978bced7393134c95fc6d06bf
+  spec_refs:
+  - SPEC-012
+  - SPEC-060
+  title: Campaign 0006 institutional alpha failure analysis
+  validations_produced: []
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.737709009036208
+created_at: '2026-08-02T00:00:00Z'
+ikros_id: IKROS-EXP-20260802-0006
+label: Campaign 0006 institutional alpha failure analysis
+node_id: IKROS-EXP-20260802-0006
+node_type: EXPERIMENT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

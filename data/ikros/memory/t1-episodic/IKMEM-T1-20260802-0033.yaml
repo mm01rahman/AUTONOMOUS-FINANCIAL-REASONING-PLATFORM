@@ -1,0 +1,226 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:51:26.337210+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0025
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/feature_importance.json
+- 11-research/phase-g/feature-discovery/FEATURE_DISCOVERY_CAMPAIGN.md
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\feature_discovery_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0003
+- IKROS-RESEARCHTASK-20260802-0026
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0033
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0003
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0025
+    finished_at: '2026-08-02T01:51:26.337210+00:00'
+    kind: HYPOTHESIS_REGISTRATION
+    max_attempts: 1
+    payload:
+      entity:
+        alternative_hypothesis: 'H1: Regime conditioning produces a smaller, more
+          stable, and more interpretable institutional feature catalogue.'
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-CONFIDENCE
+        confidence:
+          data: 0.77
+          economic: 0.65
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.57
+          operational: 0.63
+          overall: 0.569089031494146
+          prior: 0.51
+          replication: 0.0
+          statistical: 0.45
+          validation: 0.42
+        contradictions: []
+        entity_type: Hypothesis
+        experiments: []
+        ikros_id: IKROS-HYP-20260802-0003
+        lifecycle_state: APPROVED_FOR_TESTING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0002
+            external_refs:
+            - 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0201
+            - IKROS-FEAT-20260802-0202
+            - IKROS-FEAT-20260802-0203
+            - IKROS-FEAT-20260802-0204
+            - IKROS-FEAT-20260802-0205
+            - IKROS-FEAT-20260802-0206
+            - IKROS-FEAT-20260802-0207
+            inputs:
+            - IKROS-RQ-20260802-0003
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0003-feature-discovery
+            creation_context: Campaign 0003 feature discovery
+            motivation: Translate regime-conditioned feature evaluation into a falsifiable
+              institutional hypothesis.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        motivating_theses: []
+        null_hypothesis: 'H0: Regime conditioning does not materially improve feature
+          discrimination or redundancy control.'
+        posterior_confidence: 0.0
+        power: 0.8
+        prior_confidence: 0.51
+        significance_level: 0.05
+        source_rq: IKROS-RQ-20260802-0003
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        statement: Conditioning AFRP features on the accepted six-state taxonomy will
+          shrink the usable catalogue to a small set of cross-regime anchors plus
+          a bounded regime-specific interaction layer.
+        validations: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: Hypothesis
+    planned_order: 4
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0026
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-HYP-20260802-0003
+      payload:
+        alternative_hypothesis: 'H1: Regime conditioning produces a smaller, more
+          stable, and more interpretable institutional feature catalogue.'
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-CONFIDENCE
+        confidence:
+          data: 0.77
+          economic: 0.65
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.57
+          operational: 0.63
+          overall: 0.569089031494146
+          prior: 0.51
+          replication: 0.0
+          statistical: 0.45
+          validation: 0.42
+        contradictions: []
+        entity_type: Hypothesis
+        experiments: []
+        ikros_id: IKROS-HYP-20260802-0003
+        lifecycle_state: APPROVED_FOR_TESTING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0002
+            external_refs:
+            - 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0201
+            - IKROS-FEAT-20260802-0202
+            - IKROS-FEAT-20260802-0203
+            - IKROS-FEAT-20260802-0204
+            - IKROS-FEAT-20260802-0205
+            - IKROS-FEAT-20260802-0206
+            - IKROS-FEAT-20260802-0207
+            inputs:
+            - IKROS-RQ-20260802-0003
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0003-feature-discovery
+            creation_context: Campaign 0003 feature discovery
+            motivation: Translate regime-conditioned feature evaluation into a falsifiable
+              institutional hypothesis.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        motivating_theses: []
+        null_hypothesis: 'H0: Regime conditioning does not materially improve feature
+          discrimination or redundancy control.'
+        posterior_confidence: 0.0
+        power: 0.8
+        prior_confidence: 0.51
+        significance_level: 0.05
+        source_rq: IKROS-RQ-20260802-0003
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        statement: Conditioning AFRP features on the accepted six-state taxonomy will
+          shrink the usable catalogue to a small set of cross-regime anchors plus
+          a bounded regime-specific interaction layer.
+        validations: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T01:51:26.167625+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0026
+    title: Hypothesis Registration
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0003
+- IKROS-HYP-20260802-0003
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: HYPOTHESIS_REGISTRATION COMPLETED
+tags:
+- research-orchestrator
+- hypothesis_registration
+tier: T1_EPISODIC
+title: 'Campaign 0003 Feature Discovery :: Hypothesis Registration'
+updated_at: '2026-08-02T01:51:26.337210+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

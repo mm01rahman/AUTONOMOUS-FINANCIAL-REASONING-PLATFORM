@@ -1,0 +1,139 @@
+alternative_hypothesis: Macro announcements can reset inflation, rate, and USD expectations
+  quickly; when the first gold response is confirmed by event pressure and directional
+  structure, follow-through may persist for several sessions.
+capability_refs: []
+confidence:
+  data: 0.48
+  economic: 0.48
+  last_updated: '2026-08-02T01:59:35.155719+00:00'
+  model: 0.0
+  operational: 0.0
+  overall: 0.48
+  prior: 0.48
+  replication: 0.48
+  statistical: 0.48
+  validation: 0.48
+contradictions: []
+entity_type: Hypothesis
+experiments:
+- IKROS-EXP-20260802-0005
+- IKROS-EXP-20260802-0006
+- IKROS-EXP-20260802-0603
+- IKROS-EXP-20260802-0604
+ikros_id: IKROS-HYP-20260802-0405
+lifecycle_state: INCONCLUSIVE
+lineage:
+  dependencies:
+    datasets: []
+    external_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+    features: []
+    inputs:
+    - IKROS-RQ-20260802-0405
+    models: []
+  evidence:
+    contradicting: []
+    ers_records:
+    - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+    supporting: []
+  experiments:
+    tested_in:
+    - IKROS-EXP-20260802-0005
+    - IKROS-EXP-20260802-0006
+    - IKROS-EXP-20260802-0603
+    - IKROS-EXP-20260802-0604
+    validated_by:
+    - IKROS-VAL-20260802-0405
+  origin:
+    created_at: '2026-08-02T01:59:35.071678+00:00'
+    created_by: ikros-ingestion-engine
+    creation_context: INTERNAL_RESEARCH_REPORT
+    motivation: Ingested from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+motivating_theses: []
+null_hypothesis: The described mechanism does not produce a persistent regime-conditioned
+  predictive relationship.
+posterior_confidence: 0.4534
+power: 0.8
+prior_confidence: 0.48
+significance_level: 0.05
+source_rq: IKROS-RQ-20260802-0405
+spec_refs:
+- SPEC-012
+- SPEC-060
+statement: During macro_transition states, does the first-day gold reaction persist
+  when event pressure and breakout alignment indicate a genuine regime handoff?
+validations:
+- IKROS-VAL-20260802-0405
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.269399+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.272404+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.275907+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.279913+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: State → TESTING. Campaign 0005 began subordinate hypothesis validation.
+  changed_at: '2026-08-02T02:19:46.282914+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: State → INCONCLUSIVE. Campaign 0005 kept the hypothesis in further-research
+    status.
+  changed_at: '2026-08-02T02:19:46.286914+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.290918+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.761003+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.765003+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.770003+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.894034+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.899034+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.914041+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.920049+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.983615+00:00'
+  confidence_at_time: 0.48
+  version: 1.0.0
+work_package_refs: []

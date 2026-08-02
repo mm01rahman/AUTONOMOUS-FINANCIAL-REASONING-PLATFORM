@@ -1,0 +1,94 @@
+attributes:
+  campaign_tag: PHASE-G-HYPOTHESIS-004
+  capability_refs:
+  - ALPHA-RESEARCH
+  - IKROS-ORCHESTRATOR
+  confidence:
+    data: 0.8
+    economic: 0.66
+    last_updated: '2026-08-02T00:00:00Z'
+    model: 0.0
+    operational: 0.7
+    overall: 0.7176466372625586
+    prior: 0.56
+    replication: 0.0
+    statistical: 0.0
+    validation: 0.0
+  entity_type: ResearchQuestion
+  ikros_id: IKROS-RQ-20260802-0004
+  instrument: XAU/USD
+  lifecycle_state: ACTIVE
+  lineage:
+    dependencies:
+      datasets:
+      - IKROS-DSV-20260802-0003
+      external_refs:
+      - 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+      - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+      features:
+      - IKROS-FEAT-20260802-0301
+      - IKROS-FEAT-20260802-0302
+      - IKROS-FEAT-20260802-0303
+      - IKROS-FEAT-20260802-0304
+      - IKROS-FEAT-20260802-0305
+      - IKROS-FEAT-20260802-0306
+      - IKROS-FEAT-20260802-0307
+      - IKROS-FEAT-20260802-0308
+      - IKROS-FEAT-20260802-0309
+      - IKROS-FEAT-20260802-0310
+      - IKROS-FEAT-20260802-0311
+      - IKROS-FEAT-20260802-0312
+      inputs:
+      - IKROS-RQ-20260802-0002
+      - IKROS-RQ-20260802-0003
+      models:
+      - institutional_six_state_overlay_taxonomy_v1
+    evidence:
+      contradicting: []
+      ers_records: []
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T00:00:00Z'
+      created_by: campaign-0004-hypothesis-discovery
+      creation_context: Campaign 0004 hypothesis discovery
+      motivation: Determine which approved feature combinations deserve formal scientific
+        validation next.
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  linked_conclusions: []
+  linked_hypotheses: []
+  motivation: Campaign 0004 converts the approved feature catalogue into a governed
+    research backlog without validating or optimizing candidates.
+  scope: HYPOTHESIS_DISCOVERY
+  spec_refs:
+  - SPEC-012
+  - SPEC-060
+  time_horizon: 5D
+  title: Which combinations of approved features form economically plausible, statistically
+    testable, regime-conditioned alpha hypotheses?
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.7176466372625586
+created_at: '2026-08-02T00:00:00Z'
+ikros_id: IKROS-RQ-20260802-0004
+label: Which combinations of approved features form economically plausible, statistically
+  testable, regime-conditioned alpha hypotheses?
+node_id: IKROS-RQ-20260802-0004
+node_type: RESEARCH_QUESTION
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

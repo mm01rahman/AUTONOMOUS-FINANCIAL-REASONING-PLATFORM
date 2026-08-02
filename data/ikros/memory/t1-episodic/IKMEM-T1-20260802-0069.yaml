@@ -1,0 +1,299 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:37:47.195123+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0071
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_PROGRAM.md
+- 11-research/phase-g/failure-analysis/failure_analysis_analysis.json
+- 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0010
+- IKROS-RESEARCHTASK-20260802-0073
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0069
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0010
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0071
+    finished_at: '2026-08-02T02:37:47.195123+00:00'
+    kind: KNOWLEDGE_REGISTRATION
+    max_attempts: 1
+    payload:
+      source_path: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+    planned_order: 2
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0073
+      memory_record_id: null
+      metrics:
+        graph_node_ids:
+        - IKROS-DSV-20260802-0007
+        - IKROS-KO-20260802-0700
+        - IKROS-EVIDENCE-20260802-0007
+        - IKROS-CONTRA-20260802-0007
+        - IKROS-KO-20260802-0707
+        - IKROS-KO-20260802-0701
+        - IKROS-KO-20260802-0702
+        - IKROS-KO-20260802-0703
+        - IKROS-KO-20260802-0704
+        - IKROS-KO-20260802-0705
+        - IKROS-KO-20260802-0706
+        ingestion_status: INGESTED
+        memory_ids:
+        - IKMEM-T2-20260802-0101
+        - IKMEM-T2-20260802-0102
+        - IKMEM-T1-20260802-0068
+        - IKMEM-T2-20260802-0103
+        - IKMEM-T2-20260802-0104
+        - IKMEM-T2-20260802-0105
+        - IKMEM-T2-20260802-0106
+        - IKMEM-T2-20260802-0107
+        - IKMEM-T2-20260802-0108
+        - IKMEM-T2-20260802-0109
+        - IKMEM-T2-20260802-0110
+      output_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+      - IKROS-CONTRA-20260802-0007
+      - IKROS-DSV-20260802-0007
+      - IKROS-EVIDENCE-20260802-0007
+      - IKROS-KO-20260802-0700
+      - IKROS-KO-20260802-0701
+      - IKROS-KO-20260802-0702
+      - IKROS-KO-20260802-0703
+      - IKROS-KO-20260802-0704
+      - IKROS-KO-20260802-0705
+      - IKROS-KO-20260802-0706
+      - IKROS-KO-20260802-0707
+      - diagnostic_experiment_knowledge
+      payload:
+        graph_node_ids:
+        - IKROS-DSV-20260802-0007
+        - IKROS-KO-20260802-0700
+        - IKROS-EVIDENCE-20260802-0007
+        - IKROS-CONTRA-20260802-0007
+        - IKROS-KO-20260802-0707
+        - IKROS-KO-20260802-0701
+        - IKROS-KO-20260802-0702
+        - IKROS-KO-20260802-0703
+        - IKROS-KO-20260802-0704
+        - IKROS-KO-20260802-0705
+        - IKROS-KO-20260802-0706
+        ingested_at: '2026-08-02T02:37:47.186613+00:00'
+        ingestion_id: IKING-20260802-0015
+        memory_ids:
+        - IKMEM-T2-20260802-0101
+        - IKMEM-T2-20260802-0102
+        - IKMEM-T1-20260802-0068
+        - IKMEM-T2-20260802-0103
+        - IKMEM-T2-20260802-0104
+        - IKMEM-T2-20260802-0105
+        - IKMEM-T2-20260802-0106
+        - IKMEM-T2-20260802-0107
+        - IKMEM-T2-20260802-0108
+        - IKMEM-T2-20260802-0109
+        - IKMEM-T2-20260802-0110
+        object_fingerprints:
+        - '{"attributes": {"diagnostic_experiment_count": 6, "retained_hypothesis_count":
+          3}, "capability_refs": [], "confidence": 0.89, "created_at": "2026-08-02T02:37:46.459254+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json"],
+          "identifier": "IKROS-DSV-20260802-0007", "lifecycle_state": "VALIDATED",
+          "memory_tier": null, "object_type": "DatasetVersion", "relationships": [],
+          "source_format": "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT",
+          "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Diagnostic experiment
+          snapshot built on the frozen validation frame plus Campaign 0006 failure-analysis
+          outputs.", "title": "Campaign 0007 diagnostic dataset reference", "version":
+          "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"authorized_experiments": ["IKROS-EXP-20260802-0601", "IKROS-EXP-20260802-0602",
+          "IKROS-EXP-20260802-0603", "IKROS-EXP-20260802-0604", "IKROS-EXP-20260802-0605",
+          "IKROS-EXP-20260802-0606"], "remain_in_testing": ["IKROS-HYP-20260802-0408"],
+          "return_for_validation": ["IKROS-HYP-20260802-0401", "IKROS-HYP-20260802-0405"]},
+          "capability_refs": [], "confidence": 0.84, "created_at": "2026-08-02T02:37:46.459254+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"],
+          "identifier": "IKROS-KO-20260802-0700", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Governed methodology
+          for reducing uncertainty around retained hypotheses through diagnostic experiments
+          without changing hypothesis definitions.", "title": "Campaign 0007 diagnostic
+          methodology", "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"experiment_ids": ["IKROS-EXP-20260802-0601", "IKROS-EXP-20260802-0602",
+          "IKROS-EXP-20260802-0603", "IKROS-EXP-20260802-0604", "IKROS-EXP-20260802-0605",
+          "IKROS-EXP-20260802-0606"], "recommendations": {"IKROS-HYP-20260802-0401":
+          "RETURN_FOR_VALIDATION", "IKROS-HYP-20260802-0405": "RETURN_FOR_VALIDATION",
+          "IKROS-HYP-20260802-0408": "REMAIN_IN_TESTING"}}, "capability_refs": [],
+          "confidence": 0.82, "created_at": "2026-08-02T02:37:46.459254+00:00", "dependency_ids":
+          [], "evidence_refs": ["11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json"],
+          "identifier": "IKROS-EVIDENCE-20260802-0007", "lifecycle_state": "ACTIVE",
+          "memory_tier": null, "object_type": "Evidence", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Evidence bundle
+          covering the six diagnostic experiments, updated research gaps, confidence
+          updates, and the recommendation matrix.", "title": "Campaign 0007 diagnostic
+          evidence bundle", "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"open_gaps": ["Participant crowding and positioning", "Cross-asset
+          sequencing", "Event taxonomy granularity", "Intraday transition structure",
+          "Participant adoption"]}, "capability_refs": [], "confidence": 0.79, "created_at":
+          "2026-08-02T02:37:46.459254+00:00", "dependency_ids": [], "evidence_refs":
+          ["11-research/phase-g/diagnostic-experiments/UPDATED_RESEARCH_GAP_ANALYSIS.md"],
+          "identifier": "IKROS-CONTRA-20260802-0007", "lifecycle_state": "ACTIVE",
+          "memory_tier": null, "object_type": "ContradictoryEvidence", "relationships":
+          [], "source_format": "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT",
+          "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Contradiction
+          bundle documenting the remaining factors that still block institutional
+          promotion or re-validation for the retained hypotheses.", "title": "Campaign
+          0007 contradiction bundle", "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"rejected": [], "remain_in_testing": ["IKROS-HYP-20260802-0408"],
+          "return_for_validation": ["IKROS-HYP-20260802-0401", "IKROS-HYP-20260802-0405"]},
+          "capability_refs": [], "confidence": 0.81, "created_at": "2026-08-02T02:37:46.459254+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_FINAL_CAMPAIGN_REPORT.md"],
+          "identifier": "IKROS-KO-20260802-0707", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Return IKROS-HYP-20260802-0401
+          and IKROS-HYP-20260802-0405 to governed validation with explicit persistence,
+          branch, and contamination panels; keep IKROS-HYP-20260802-0408 in testing
+          until broader episode coverage and richer sequencing evidence are available;
+          reject none at this stage.", "title": "Campaign 0007 final conclusion",
+          "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"hypothesis_id": "IKROS-HYP-20260802-0401", "recommendation":
+          "RETURN_FOR_VALIDATION", "support_classification": "SUPPORTS_CURRENT_HYPOTHESIS"},
+          "capability_refs": [], "confidence": 0.78, "created_at": "2026-08-02T02:37:46.459254+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"],
+          "identifier": "IKROS-KO-20260802-0701", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Persistent bull
+          windows delivered +2.98% average event return with a 100% win rate across
+          7 governed events.", "title": "IKROS-EXP-20260802-0601 diagnostic finding",
+          "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"hypothesis_id": "IKROS-HYP-20260802-0401", "recommendation":
+          "RETURN_FOR_VALIDATION", "support_classification": "SUPPORTS_CURRENT_HYPOTHESIS"},
+          "capability_refs": [], "confidence": 0.78, "created_at": "2026-08-02T02:37:46.459254+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"],
+          "identifier": "IKROS-KO-20260802-0702", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Low-DXY-spillover
+          H0401 events returned +1.36% on average across 12 events.", "title": "IKROS-EXP-20260802-0602
+          diagnostic finding", "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"hypothesis_id": "IKROS-HYP-20260802-0405", "recommendation":
+          "RETURN_FOR_VALIDATION", "support_classification": "SUPPORTS_WITH_ASYMMETRY"},
+          "capability_refs": [], "confidence": 0.78, "created_at": "2026-08-02T02:37:46.459254+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"],
+          "identifier": "IKROS-KO-20260802-0703", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Bearish policy-shock
+          branches produced +0.31% average continuation with a 62.5% win rate, but
+          only across 8 events.", "title": "IKROS-EXP-20260802-0603 diagnostic finding",
+          "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"hypothesis_id": "IKROS-HYP-20260802-0405", "recommendation":
+          "RETURN_FOR_VALIDATION", "support_classification": "SUPPORTS_CURRENT_HYPOTHESIS"},
+          "capability_refs": [], "confidence": 0.78, "created_at": "2026-08-02T02:37:46.459254+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"],
+          "identifier": "IKROS-KO-20260802-0704", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Narrow-range
+          macro-transition events returned +0.56% on average with a 60% win rate across
+          50 events.", "title": "IKROS-EXP-20260802-0604 diagnostic finding", "version":
+          "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"hypothesis_id": "IKROS-HYP-20260802-0408", "recommendation":
+          "REMAIN_IN_TESTING", "support_classification": "SUPPORTS_WITH_SCOPE_EXPANSION"},
+          "capability_refs": [], "confidence": 0.78, "created_at": "2026-08-02T02:37:46.459254+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"],
+          "identifier": "IKROS-KO-20260802-0705", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Broadening H0408
+          to all governed macro-to-bull handoff episodes increased coverage from 7
+          to 18 events without losing directional sign.", "title": "IKROS-EXP-20260802-0605
+          diagnostic finding", "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"hypothesis_id": "IKROS-HYP-20260802-0408", "recommendation":
+          "REMAIN_IN_TESTING", "support_classification": "MIXED_SUPPORT"}, "capability_refs":
+          [], "confidence": 0.78, "created_at": "2026-08-02T02:37:46.459254+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"],
+          "identifier": "IKROS-KO-20260802-0706", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "The most common
+          broadened H0408 path was a clean bull_trend continuation, but only 4 times.",
+          "title": "IKROS-EXP-20260802-0606 diagnostic finding", "version": "1.0.0",
+          "work_package_refs": []}'
+        object_ids:
+        - IKROS-DSV-20260802-0007
+        - IKROS-KO-20260802-0700
+        - IKROS-EVIDENCE-20260802-0007
+        - IKROS-CONTRA-20260802-0007
+        - IKROS-KO-20260802-0707
+        - IKROS-KO-20260802-0701
+        - IKROS-KO-20260802-0702
+        - IKROS-KO-20260802-0703
+        - IKROS-KO-20260802-0704
+        - IKROS-KO-20260802-0705
+        - IKROS-KO-20260802-0706
+        source_format: JSON
+        source_hash: 916d0b0552df4f767dc2b6ebeac8f4365fe74871e44ab8df30d76717aa5c1392
+        source_kind: INTERNAL_RESEARCH_REPORT
+        source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+        source_version: 1.0.0
+        status: INGESTED
+        warnings: []
+      selected_ids: []
+    started_at: '2026-08-02T02:37:45.996582+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0073
+    title: Knowledge Registration
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0010
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+- IKROS-CONTRA-20260802-0007
+- IKROS-DSV-20260802-0007
+- IKROS-EVIDENCE-20260802-0007
+- IKROS-KO-20260802-0700
+- IKROS-KO-20260802-0701
+- IKROS-KO-20260802-0702
+- IKROS-KO-20260802-0703
+- IKROS-KO-20260802-0704
+- IKROS-KO-20260802-0705
+- IKROS-KO-20260802-0706
+- IKROS-KO-20260802-0707
+- diagnostic_experiment_knowledge
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: KNOWLEDGE_REGISTRATION COMPLETED
+tags:
+- research-orchestrator
+- knowledge_registration
+tier: T1_EPISODIC
+title: 'Campaign 0007 Institutional Diagnostic Experiment Program :: Knowledge Registration'
+updated_at: '2026-08-02T02:37:47.195123+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

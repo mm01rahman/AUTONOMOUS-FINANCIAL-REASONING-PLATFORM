@@ -1,0 +1,117 @@
+alternative_hypothesis: 'H1: The macro pressure signal produces durable next-day XAU/USD
+  edge.'
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+confidence:
+  data: 0.2377695
+  economic: 0.2017695
+  last_updated: '2026-08-02T01:27:44.627889+00:00'
+  model: 0.3055275
+  operational: 0.299637
+  overall: 0.2366238482224464
+  prior: 0.38
+  replication: 0.0
+  statistical: 0.1237695
+  validation: 0.32290891304347824
+contradictions: []
+entity_type: Hypothesis
+experiments:
+- IKROS-EXP-20260802-0001
+ikros_id: IKROS-HYP-20260802-0001
+lifecycle_state: REFUTED
+lineage:
+  dependencies:
+    datasets:
+    - IKROS-DSV-20260802-0001
+    external_refs:
+    - 11-research/phase-e/phase_e_final_report.md
+    features:
+    - IKROS-FEAT-20260802-0001
+    - IKROS-FEAT-20260802-0002
+    - IKROS-FEAT-20260802-0003
+    inputs:
+    - IKROS-RQ-20260802-0001
+    - IKROS-THESIS-20260802-0001
+    models: []
+  evidence:
+    contradicting: []
+    ers_records:
+    - EXEC-041
+    supporting: []
+  experiments:
+    tested_in:
+    - IKROS-EXP-20260802-0001
+    validated_by:
+    - IKROS-VAL-20260802-0001
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: phase-g-macro-alpha
+    creation_context: Phase G Macro Alpha baseline audit
+    motivation: Convert the macro-only thesis into a formally falsifiable institutional
+      hypothesis.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+motivating_theses:
+- IKROS-THESIS-20260802-0001
+null_hypothesis: 'H0: The macro pressure signal does not produce durable next-day
+  XAU/USD edge.'
+posterior_confidence: 0.0
+power: 0.8
+prior_confidence: 0.38
+significance_level: 0.05
+source_rq: IKROS-RQ-20260802-0001
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+statement: A macro pressure signal combining USD weakness, rates compression, and
+  dovish policy surprise produces durable next-day XAU/USD upside drift.
+validations:
+- IKROS-VAL-20260802-0001
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:43.539398+00:00'
+  confidence_at_time: 0.45133100205913185
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:44.536891+00:00'
+  confidence_at_time: 0.3805768346333486
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:44.539892+00:00'
+  confidence_at_time: 0.3805768346333486
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:44.542892+00:00'
+  confidence_at_time: 0.3805768346333486
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:44.546892+00:00'
+  confidence_at_time: 0.3805768346333486
+  version: 1.0.0
+- change_summary: State → TESTING. Phase E macro-only evidence contradicts the thesis.
+  changed_at: '2026-08-02T01:27:44.550890+00:00'
+  confidence_at_time: 0.3805768346333486
+  version: 1.0.0
+- change_summary: State → REFUTED. Phase E macro-only evidence contradicts the thesis.
+  changed_at: '2026-08-02T01:27:44.554891+00:00'
+  confidence_at_time: 0.3805768346333486
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:44.558892+00:00'
+  confidence_at_time: 0.3805768346333486
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:44.627889+00:00'
+  confidence_at_time: 0.3805768346333486
+  version: 1.0.0
+work_package_refs: []

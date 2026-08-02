@@ -1,0 +1,92 @@
+attributes:
+  campaign_tag: PHASE-G-DIAGNOSTIC-007
+  capability_refs:
+  - ALPHA-RESEARCH
+  - IKROS-ORCHESTRATOR
+  confidence:
+    data: 0.82
+    economic: 0.7
+    last_updated: '2026-08-02T00:00:00Z'
+    model: 0.0
+    operational: 0.73
+    overall: 0.7483043172507827
+    prior: 0.57
+    replication: 0.0
+    statistical: 0.0
+    validation: 0.0
+  entity_type: ResearchQuestion
+  ikros_id: IKROS-RQ-20260802-0007
+  instrument: XAU/USD
+  lifecycle_state: ACTIVE
+  lineage:
+    dependencies:
+      datasets:
+      - IKROS-DSV-20260802-0007
+      external_refs:
+      - 11-research/phase-g/failure-analysis/failure_analysis_analysis.json
+      - 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+      features:
+      - IKROS-FEAT-20260802-0301
+      - IKROS-FEAT-20260802-0302
+      - IKROS-FEAT-20260802-0303
+      - IKROS-FEAT-20260802-0304
+      - IKROS-FEAT-20260802-0305
+      - IKROS-FEAT-20260802-0306
+      - IKROS-FEAT-20260802-0308
+      - IKROS-FEAT-20260802-0309
+      - IKROS-FEAT-20260802-0310
+      - IKROS-FEAT-20260802-0311
+      - IKROS-FEAT-20260802-0312
+      inputs:
+      - IKROS-RQ-20260802-0006
+      models:
+      - institutional_six_state_overlay_taxonomy_v1
+    evidence:
+      contradicting: []
+      ers_records: []
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T00:00:00Z'
+      created_by: campaign-0007-diagnostic-experiments
+      creation_context: Campaign 0007 diagnostic experiment program
+      motivation: Reduce scientific uncertainty around the retained hypotheses by
+        executing only the six diagnostic experiments authorized by Campaign 0006.
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  linked_conclusions: []
+  linked_hypotheses: []
+  motivation: Campaign 0006 left three retained hypotheses unresolved and authorized
+    only six follow-up diagnostic experiments.
+  scope: DIAGNOSTIC_EXPERIMENT_PROGRAM
+  spec_refs:
+  - SPEC-012
+  - SPEC-060
+  time_horizon: 1D-15D
+  title: Do the six governed diagnostic experiments reduce uncertainty enough to determine
+    the next scientific step for the retained hypotheses?
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.7483043172507827
+created_at: '2026-08-02T00:00:00Z'
+ikros_id: IKROS-RQ-20260802-0007
+label: Do the six governed diagnostic experiments reduce uncertainty enough to determine
+  the next scientific step for the retained hypotheses?
+node_id: IKROS-RQ-20260802-0007
+node_type: RESEARCH_QUESTION
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

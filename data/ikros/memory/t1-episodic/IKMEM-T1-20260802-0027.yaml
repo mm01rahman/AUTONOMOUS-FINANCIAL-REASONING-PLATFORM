@@ -1,0 +1,270 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-ORCHESTRATOR
+confidence: 0.2267749515409686
+created_at: '2026-08-02T01:43:06.266733+00:00'
+dependency_ids: []
+entity_type: ConfidenceAssessment
+evidence_refs:
+- PHASEG-REGIME-EVID-001
+- PHASEG-REGIME-EVID-002
+- PHASEG-REGIME-EVID-003
+- PHASEG-REGIME-EVID-004
+graph_node_ids:
+- IKROS-HYP-20260802-0002
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0027
+payload:
+  assessed_at: '2026-08-02T01:43:06.235220+00:00'
+  assessed_confidence:
+    data: 0.7071150442477877
+    economic: 0.5490285714285714
+    experimental: 0.5871681415929204
+    last_updated: '2026-08-02T01:43:06.214218+00:00'
+    operational: 0.496
+    overall: 0.2267749515409686
+    prior: 0.48
+    replication: 0.2267749515409686
+    statistical: 0.7360000000000001
+    validation: 0.6175575221238939
+  assessment_id: ICA-20260802-0003
+  audit_id: ICAUD-20260802-0003
+  contradiction_resolution:
+    contradiction_multiplier: 0.8
+    recommended_action: PEER_REVIEW
+    requires_review: false
+    severity_counts:
+      MODERATE: 1
+  evidence:
+  - confidence_weight: 0.65
+    contradiction_severity: null
+    evidence_id: PHASEG-REGIME-EVID-001
+    evidence_type: SPECIFICATION
+    independent_source: campaign-0002-governance
+    metrics:
+      data_confidence: 0.82
+      economic_confidence: 0.68
+      experimental_confidence: 0.71
+      validation_confidence: 0.74
+    notes: The campaign design is governed, reproducible, and uses only frozen AFRP
+      research evidence.
+    observed_at: '2026-08-02T00:00:00Z'
+    references:
+      backtest_ids: []
+      capability_ids:
+      - ALPHA-RESEARCH
+      - IKROS-CONFIDENCE
+      - IKROS-ORCHESTRATOR
+      dataset_ids:
+      - IKROS-DSV-20260802-0002
+      evidence_record_ids: []
+      experiment_ids: []
+      feature_ids:
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+      - IKROS-FEAT-20260802-0207
+      monte_carlo_ids: []
+      research_report_ids: []
+      specification_ids:
+      - SPEC-010
+      - SPEC-012
+      - SPEC-060
+      stress_test_ids: []
+      validation_ids: []
+      walk_forward_ids: []
+      work_package_ids: []
+    relation: SUPPORTS
+    temporal_bucket: 2026Q3
+  - confidence_weight: 0.95
+    contradiction_severity: null
+    evidence_id: PHASEG-REGIME-EVID-002
+    evidence_type: VALIDATION
+    independent_source: campaign-0002-validation
+    metrics:
+      accepted_hit_rate_spread: 0.1422228565085708
+      accepted_return_spread: 0.004942385609214154
+      data_quality_grade: A
+      experimental_confidence: 0.74
+      stability: 0.7800863033402589
+      statistical_confidence: 0.92
+      validation_confidence: 0.78
+    notes: The accepted taxonomy materially improves validation separation over simpler
+      baselines.
+    observed_at: '2026-08-02T00:00:00Z'
+    references:
+      backtest_ids: []
+      capability_ids: []
+      dataset_ids:
+      - IKROS-DSV-20260802-0002
+      evidence_record_ids: []
+      experiment_ids: []
+      feature_ids:
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      monte_carlo_ids: []
+      research_report_ids:
+      - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+      specification_ids: []
+      stress_test_ids: []
+      validation_ids:
+      - IKROS-VAL-20260802-0002
+      walk_forward_ids: []
+      work_package_ids: []
+    relation: SUPPORTS
+    temporal_bucket: 2026Q3
+  - confidence_weight: 0.7
+    contradiction_severity: null
+    evidence_id: PHASEG-REGIME-EVID-003
+    evidence_type: RESEARCH_REPORT
+    independent_source: historical-regime-atlas
+    metrics:
+      economic_confidence: 0.69
+      historical_windows: 8
+      out_of_sample_confirmations: 8
+    notes: Historical windows remain economically interpretable under the accepted
+      taxonomy.
+    observed_at: '2026-08-02T00:00:00Z'
+    references:
+      backtest_ids: []
+      capability_ids: []
+      dataset_ids:
+      - IKROS-DSV-20260802-0002
+      evidence_record_ids: []
+      experiment_ids: []
+      feature_ids: []
+      monte_carlo_ids: []
+      research_report_ids:
+      - 11-research/regime_analysis.md
+      specification_ids: []
+      stress_test_ids: []
+      validation_ids: []
+      walk_forward_ids: []
+      work_package_ids: []
+    relation: SUPPORTS
+    temporal_bucket: 2026Q3
+  - confidence_weight: 0.45
+    contradiction_severity: MODERATE
+    evidence_id: PHASEG-REGIME-EVID-004
+    evidence_type: VALIDATION
+    independent_source: campaign-0002-contradictions
+    metrics:
+      available_2026_avg_future_return: -0.002099
+      crisis_hit_rate: 0.501134
+      stability: 0.7800863033402589
+    notes: The accepted taxonomy improves research quality overall, but crisis and
+      recent windows remain lower-confidence states.
+    observed_at: '2026-08-02T00:00:00Z'
+    references:
+      backtest_ids: []
+      capability_ids: []
+      dataset_ids: []
+      evidence_record_ids: []
+      experiment_ids: []
+      feature_ids: []
+      monte_carlo_ids: []
+      research_report_ids:
+      - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+      specification_ids: []
+      stress_test_ids: []
+      validation_ids:
+      - IKROS-VAL-20260802-0002
+      walk_forward_ids: []
+      work_package_ids: []
+    relation: CONTRADICTS
+    temporal_bucket: 2026Q3
+  memory_record_id: null
+  operator: ikros-confidence-engine
+  previous_confidence:
+    data: 0.72
+    economic: 0.61
+    experimental: 0.58
+    last_updated: '2026-08-02T00:00:00Z'
+    operational: 0.62
+    overall: 0.0
+    prior: 0.48
+    replication: 0.0
+    statistical: 0.43
+    validation: 0.4
+  propagation: []
+  quality:
+    contradiction_count: 1
+    contradiction_score: 0.8
+    dataset_diversity: 1
+    dataset_diversity_score: 0.25
+    evidence_freshness: 1.0
+    independent_validations: 1
+    independent_validations_score: 0.3333333333333333
+    out_of_sample_confirmations: 0
+    out_of_sample_score: 0.0
+    overall_quality: 0.4416802022759544
+    regime_diversity: 0
+    regime_diversity_score: 0.0
+    replication_count: 1
+    replication_score: 0.28346868942621073
+    research_maturity: 0.5
+    temporal_diversity: 1
+    temporal_diversity_score: 0.25
+    validation_completeness: 1.0
+  reason: Campaign 0002 regime taxonomy review
+  references:
+    backtest_ids: []
+    capability_ids:
+    - ALPHA-RESEARCH
+    - IKROS-CONFIDENCE
+    - IKROS-ORCHESTRATOR
+    dataset_ids:
+    - IKROS-DSV-20260802-0002
+    evidence_record_ids: []
+    experiment_ids: []
+    feature_ids:
+    - IKROS-FEAT-20260802-0201
+    - IKROS-FEAT-20260802-0202
+    - IKROS-FEAT-20260802-0203
+    - IKROS-FEAT-20260802-0204
+    - IKROS-FEAT-20260802-0205
+    - IKROS-FEAT-20260802-0206
+    - IKROS-FEAT-20260802-0207
+    monte_carlo_ids: []
+    research_report_ids:
+    - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+    - 11-research/regime_analysis.md
+    specification_ids:
+    - SPEC-010
+    - SPEC-012
+    - SPEC-060
+    stress_test_ids: []
+    validation_ids:
+    - IKROS-VAL-20260802-0002
+    walk_forward_ids: []
+    work_package_ids: []
+  source_assessment_id: null
+  target_id: IKROS-HYP-20260802-0002
+  target_type: Hypothesis
+retired_at: null
+source_ids:
+- IKROS-HYP-20260802-0002
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: Campaign 0002 regime taxonomy review
+tags:
+- confidence
+- hypothesis
+tier: T1_EPISODIC
+title: Confidence assessment for IKROS-HYP-20260802-0002
+updated_at: '2026-08-02T01:43:06.266733+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs:
+- WP-IMP-0047

@@ -1,0 +1,51 @@
+[
+  {
+    "best_regime": "bull_trend",
+    "feature": "macro_pressure",
+    "identifier": "IKROS-KO-20260802-0321",
+    "max_score": 3.219999,
+    "rejection_reason": "Retained as a regime-defining context variable, but rejected as a standalone predictive feature."
+  },
+  {
+    "best_regime": "macro_transition",
+    "feature": "micro_momentum",
+    "identifier": "IKROS-KO-20260802-0322",
+    "max_score": 1.132776,
+    "rejection_reason": "Too redundant with one-bar gold reaction during transitions and too weak elsewhere."
+  },
+  {
+    "best_regime": "bull_trend",
+    "feature": "dxy_return_20",
+    "identifier": "IKROS-KO-20260802-0323",
+    "max_score": 4.356993,
+    "rejection_reason": "Rejected because its utility is absorbed by forward expectation once regime is conditioned."
+  },
+  {
+    "best_regime": "bull_trend",
+    "feature": "vol_macro_interaction",
+    "identifier": "IKROS-KO-20260802-0324",
+    "max_score": 2.525046,
+    "rejection_reason": "Interaction complexity did not add enough stability over regime volatility and macro/trend interaction."
+  },
+  {
+    "best_regime": "bull_trend",
+    "feature": "stress_momentum_interaction",
+    "identifier": "IKROS-KO-20260802-0325",
+    "max_score": 0.414607,
+    "rejection_reason": "Sparse crisis-only coverage prevented institutional promotion."
+  },
+  {
+    "best_regime": "calm_carry",
+    "feature": "geo_severity",
+    "identifier": "IKROS-KO-20260802-0326",
+    "max_score": 1.429165,
+    "rejection_reason": "Useful for taxonomy context, but too sparse and unstable as a direct predictive feature."
+  },
+  {
+    "best_regime": "crisis_dislocation",
+    "feature": "xau_return_5",
+    "identifier": "IKROS-KO-20260802-0327",
+    "max_score": 3.825059,
+    "rejection_reason": "Rejected because the 20-bar return and breakout family dominated it across the approved states."
+  }
+]

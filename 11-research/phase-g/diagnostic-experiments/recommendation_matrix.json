@@ -1,0 +1,38 @@
+[
+  {
+    "arb_reasoning": "Campaign 0007 isolated the dominant contamination channels with governed evidence and reduced uncertainty enough to justify another full validation pass without changing the hypothesis definition.",
+    "blocking_gaps": "Participant crowding and positioning",
+    "campaign_0006_confidence": 0.4633,
+    "campaign_0007_confidence": 0.5133,
+    "confidence_change": 0.05,
+    "confidence_rationale": "Campaign 0007 isolated the dominant contamination channels with governed evidence and reduced uncertainty enough to justify another full validation pass without changing the hypothesis definition.",
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "recommendation": "RETURN_FOR_VALIDATION",
+    "supporting_experiments": "IKROS-EXP-20260802-0601, IKROS-EXP-20260802-0602",
+    "title": "Expectation-relief bull continuation"
+  },
+  {
+    "arb_reasoning": "Campaign 0007 isolated the dominant contamination channels with governed evidence and reduced uncertainty enough to justify another full validation pass without changing the hypothesis definition.",
+    "blocking_gaps": "Cross-asset sequencing, event taxonomy granularity",
+    "campaign_0006_confidence": 0.4134,
+    "campaign_0007_confidence": 0.4534,
+    "confidence_change": 0.04,
+    "confidence_rationale": "Campaign 0007 isolated the dominant contamination channels with governed evidence and reduced uncertainty enough to justify another full validation pass without changing the hypothesis definition.",
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "recommendation": "RETURN_FOR_VALIDATION",
+    "supporting_experiments": "IKROS-EXP-20260802-0603, IKROS-EXP-20260802-0604",
+    "title": "Policy-shock repricing continuation"
+  },
+  {
+    "arb_reasoning": "Campaign 0007 expanded the governed handoff sample and showed the sign remains positive, but the remaining sequencing gap and limited structural dominance still block a return to formal validation.",
+    "blocking_gaps": "Episode coverage, intraday transition structure",
+    "campaign_0006_confidence": 0.2582,
+    "campaign_0007_confidence": 0.2682,
+    "confidence_change": 0.01,
+    "confidence_rationale": "Campaign 0007 expanded the governed handoff sample and showed the sign remains positive, but the remaining sequencing gap and limited structural dominance still block a return to formal validation.",
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "recommendation": "REMAIN_IN_TESTING",
+    "supporting_experiments": "IKROS-EXP-20260802-0605, IKROS-EXP-20260802-0606",
+    "title": "Transition-to-trend handoff"
+  }
+]

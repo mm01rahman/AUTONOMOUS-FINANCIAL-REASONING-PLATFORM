@@ -1,0 +1,37 @@
+attributes:
+  failure_reasons:
+  - full-sample expectancy not positive
+  - full-sample sharpe not positive enough
+  - full-sample sortino below governance bar
+  - walk-forward out-of-sample edge not positive
+  - insufficient positive walk-forward fold ratio
+  full_sample_expectancy_positive: false
+  full_sample_sharpe: -2.127
+  positive_fold_ratio: 0.0
+  required_tests_missing:
+  - CPCV
+  - DeflatedSharpeRatio
+  - ProbabilisticSharpeRatio
+  - WhitesRealityCheck
+  - ProbabilityOfBacktestOverfitting
+  ruin_probability: 0.0125
+  source_kind: VALIDATION_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_validation_report.json
+  summary: Validation synthesis for the Phase E macro-only candidate imported into
+    IKROS.
+  validation_type: baseline_audit
+  verdict: FAIL
+  walk_forward_sharpe: -1.9781
+confidence: 0.72
+created_at: '2026-08-02T01:27:42.840118+00:00'
+ikros_id: IKROS-VAL-20260802-0001
+label: Macro-only Phase E validation artifact
+node_id: IKROS-VAL-20260802-0001
+node_type: VALIDATION
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:27:42.840118+00:00'
+valid_to: null
+wp_refs: []

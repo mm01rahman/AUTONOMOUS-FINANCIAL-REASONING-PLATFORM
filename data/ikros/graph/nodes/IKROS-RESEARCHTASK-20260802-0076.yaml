@@ -1,0 +1,17 @@
+attributes:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0009
+  entity_type: ResearchTask
+  kind: FINAL_REPORT
+  status: COMPLETED
+confidence: 1.0
+created_at: '2026-08-02T02:28:58.210079+00:00'
+ikros_id: IKROS-RESEARCHTASK-20260802-0076
+label: Final Report
+node_id: IKROS-RESEARCHTASK-20260802-0076
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

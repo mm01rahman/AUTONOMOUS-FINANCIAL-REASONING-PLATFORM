@@ -1,0 +1,21 @@
+attributes:
+  decision: ACCEPT
+  hit_rate_spread: 0.1422228565085708
+  return_spread: 0.004942385609214154
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+  stability: 0.7800863033402589
+  summary: Accepted as the institutional state model for future AFRP research.
+  taxonomy_name: Institutional Six-State Overlay Taxonomy v1
+confidence: 0.86
+created_at: '2026-08-02T01:43:01.847413+00:00'
+ikros_id: IKROS-KO-20260802-0209
+label: Accepted deterministic macro-event overlay taxonomy
+node_id: IKROS-KO-20260802-0209
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:43:01.847413+00:00'
+valid_to: null
+wp_refs: []

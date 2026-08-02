@@ -1,0 +1,28 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0169
+- IKROS-CAMPAIGNAUDIT-20260802-0170
+- IKROS-CAMPAIGNAUDIT-20260802-0171
+- IKROS-CAMPAIGNAUDIT-20260802-0172
+- IKROS-CAMPAIGNAUDIT-20260802-0173
+blocked_task_ids: []
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0007
+campaign_type: HYPOTHESIS_VALIDATION
+completed_task_ids: []
+failed_task_ids:
+- IKROS-RESEARCHTASK-20260802-0054
+finished_at: '2026-08-02T02:19:25.002301+00:00'
+lifecycle_state: FAILED
+memory_record_ids:
+- IKMEM-T4-20260802-0013
+output_refs: []
+progress:
+  blocked: 0
+  completed: 0
+  failed: 1
+  percent_complete: 0.0
+  skipped: 0
+  total: 6
+report_id: IKROS-CAMPAIGNREPORT-20260802-0007
+skipped_task_ids: []
+started_at: '2026-08-02T02:19:23.331024+00:00'
+summary: Campaign 0005 Scientific Alpha Validation failed after 1 task failures.

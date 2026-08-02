@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-02T02:20:00.634628+00:00",
+  "repository": "mm01rahman/AUTONOMOUS-FINANCIAL-REASONING-PLATFORM",
+  "health_score": 0.5,
+  "health_grade": "D",
+  "quality": {
+    "ruff": {
+      "status": "SKIPPED",
+      "exit_code": -1
+    },
+    "mypy_strict": {
+      "status": "SKIPPED",
+      "exit_code": -1
+    },
+    "pytest": {
+      "status": "SKIPPED",
+      "exit_code": -1,
+      "collected": 0
+    },
+    "coverage": {
+      "available": true,
+      "percent": 82.33,
+      "lines_covered": 5365,
+      "lines_total": 6308,
+      "branches_covered": 1243,
+      "branches_total": 1718
+    }
+  },
+  "capabilities": {
+    "total": 48,
+    "complete": 48,
+    "completion_ratio": 1.0
+  },
+  "traceability": {
+    "total": 94,
+    "implemented": 94,
+    "coverage": 1.0
+  },
+  "summary": {
+    "health_score": 0.5,
+    "coverage_pct": 82.33,
+    "capabilities_complete": 48,
+    "capabilities_total": 48,
+    "requirements_implemented": 94,
+    "requirements_total": 94
+  }
+}

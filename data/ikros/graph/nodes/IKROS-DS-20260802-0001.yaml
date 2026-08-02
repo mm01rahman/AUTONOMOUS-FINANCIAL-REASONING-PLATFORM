@@ -1,0 +1,23 @@
+attributes:
+  coverage_rows: 6257
+  granularity: 1D
+  instrument: XAU/USD
+  provenance_note: Canonical data foundation path referenced by the Phase C/D/E research
+    stack.
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_path_hint: C:\Users\mm01r\AFRP-Datasets\processed\xauusd\xauusd_1d.parquet
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_knowledge.json
+  summary: Phase E daily XAU/USD research dataset with macro proxy joins.
+confidence: 0.9
+created_at: '2026-08-02T01:27:41.710581+00:00'
+ikros_id: IKROS-DS-20260802-0001
+label: Canonical XAU/USD daily research dataset
+node_id: IKROS-DS-20260802-0001
+node_type: DATASET
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:27:41.710581+00:00'
+valid_to: null
+wp_refs: []

@@ -1,0 +1,187 @@
+assessed_at: '2026-08-02T01:27:44.603890+00:00'
+assessed_confidence:
+  data: 0.198
+  economic: 0.198
+  experimental: 0.51
+  last_updated: '2026-08-02T01:27:44.593889+00:00'
+  operational: 0.46799999999999997
+  overall: 0.0
+  prior: 0.33
+  replication: 0.0
+  statistical: 0.198
+  validation: 0.54
+assessment_id: ICA-20260802-0002
+audit_id: ICAUD-20260802-0002
+contradiction_resolution:
+  contradiction_multiplier: 0.6
+  recommended_action: ARB_REVIEW
+  requires_review: true
+  severity_counts:
+    MAJOR: 1
+evidence:
+- confidence_weight: 0.8
+  contradiction_severity: null
+  evidence_id: PHASEG-MACRO-EVID-002
+  evidence_type: EVIDENCE_RECORD
+  independent_source: phase-e-governance
+  metrics:
+    experimental_confidence: 0.85
+    operational_confidence: 0.78
+    validation_confidence: 0.9
+    verdict: PASS
+  notes: Execution quality and evidence capture were strong.
+  observed_at: '2026-08-01T13:52:03Z'
+  references:
+    backtest_ids: []
+    capability_ids:
+    - ALPHA-RESEARCH
+    dataset_ids: []
+    evidence_record_ids:
+    - EXEC-041
+    experiment_ids: []
+    feature_ids: []
+    monte_carlo_ids: []
+    research_report_ids: []
+    specification_ids: []
+    stress_test_ids: []
+    validation_ids: []
+    walk_forward_ids: []
+    work_package_ids:
+    - WP-IMP-0039
+  relation: SUPPORTS
+  temporal_bucket: 2026Q3
+- confidence_weight: 1.0
+  contradiction_severity: MAJOR
+  evidence_id: PHASEG-MACRO-EVID-003
+  evidence_type: BACKTEST
+  independent_source: phase-e-results
+  metrics:
+    consistency_score: 0.05
+    data_quality_grade: A
+    economic_score: 0.25
+    oos_confirmed: false
+    positive_fold_ratio: 0.0
+    ruin_probability: 0.0125
+    sharpe_degradation: 0.8
+    statistical_confidence: 0.05
+    validation_confidence: 0.15
+    walk_forward_sharpe: -1.9781
+  notes: Macro-only candidate failed advancement criteria.
+  observed_at: '2026-08-01T13:52:03Z'
+  references:
+    backtest_ids:
+    - phase-e-macro-only
+    capability_ids: []
+    dataset_ids:
+    - IKROS-DSV-20260802-0001
+    evidence_record_ids: []
+    experiment_ids:
+    - IKROS-EXP-20260802-0001
+    feature_ids:
+    - IKROS-FEAT-20260802-0001
+    monte_carlo_ids:
+    - phase-e-mc-macro-only
+    research_report_ids: []
+    specification_ids: []
+    stress_test_ids: []
+    validation_ids:
+    - IKROS-VAL-20260802-0001
+    walk_forward_ids:
+    - phase-e-wf-macro-only
+    work_package_ids: []
+  relation: CONTRADICTS
+  temporal_bucket: 2026Q3
+memory_record_id: IKMEM-T1-20260802-0015
+operator: ikros-confidence-engine
+previous_confidence:
+  data: 0.33
+  economic: 0.33
+  experimental: 0.0
+  last_updated: '2026-08-02T01:27:42.848115+00:00'
+  operational: 0.0
+  overall: 0.0
+  prior: 0.33
+  replication: 0.33
+  statistical: 0.33
+  validation: 0.33
+propagation:
+- confidence:
+    data: 0.3777695
+    economic: 0.3177695
+    experimental: 0.3865275
+    last_updated: '2026-08-02T01:27:44.613890+00:00'
+    operational: 0.370637
+    overall: 0.0
+    prior: 0.45
+    replication: 0.0
+    statistical: 0.19776950000000001
+    validation: 0.23073500000000002
+  depth: 1
+  new_overall: 0.0
+  previous_overall: 0.0
+  target_id: IKROS-EXP-20260802-0001
+  target_type: Experiment
+- confidence:
+    data: 0.2377695
+    economic: 0.2017695
+    experimental: 0.3055275
+    last_updated: '2026-08-02T01:27:44.627889+00:00'
+    operational: 0.299637
+    overall: 0.0
+    prior: 0.38
+    replication: 0.0
+    statistical: 0.1237695
+    validation: 0.32290891304347824
+  depth: 1
+  new_overall: 0.0
+  previous_overall: 0.0
+  target_id: IKROS-HYP-20260802-0001
+  target_type: Hypothesis
+quality:
+  contradiction_count: 1
+  contradiction_score: 0.8
+  dataset_diversity: 0
+  dataset_diversity_score: 0.0
+  evidence_freshness: 1.0
+  independent_validations: 0
+  independent_validations_score: 0.0
+  out_of_sample_confirmations: 0
+  out_of_sample_score: 0.0
+  overall_quality: 0.22166666666666662
+  regime_diversity: 0
+  regime_diversity_score: 0.0
+  replication_count: 0
+  replication_score: 0.0
+  research_maturity: 0.16666666666666666
+  temporal_diversity: 1
+  temporal_diversity_score: 0.25
+  validation_completeness: 0.0
+reason: Phase G Macro Alpha candidate review
+references:
+  backtest_ids:
+  - phase-e-macro-only
+  capability_ids:
+  - ALPHA-RESEARCH
+  dataset_ids:
+  - IKROS-DSV-20260802-0001
+  evidence_record_ids:
+  - EXEC-041
+  experiment_ids:
+  - IKROS-EXP-20260802-0001
+  feature_ids:
+  - IKROS-FEAT-20260802-0001
+  monte_carlo_ids:
+  - phase-e-mc-macro-only
+  research_report_ids: []
+  specification_ids:
+  - SPEC-060
+  stress_test_ids: []
+  validation_ids:
+  - IKROS-VAL-20260802-0001
+  walk_forward_ids:
+  - phase-e-wf-macro-only
+  work_package_ids:
+  - WP-IMP-0039
+source_assessment_id: null
+target_id: IKROS-ALPHACAND-20260802-0001
+target_type: AlphaCandidate

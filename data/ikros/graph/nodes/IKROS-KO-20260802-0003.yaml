@@ -1,0 +1,30 @@
+attributes:
+  document_metadata: {}
+  section_names:
+  - Acceptance criteria
+  - Campaign 0003 - Institutional Feature Discovery Within the Six-State Market Taxonomy
+  - Candidate feature sources
+  - Economic rationale
+  - Experiment design
+  - Failure criteria
+  - Governed datasets
+  - Hypotheses
+  - Required evidence
+  - Research question
+  - Supporting literature
+  - Validation methodology
+  source_kind: MARKDOWN
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\FEATURE_DISCOVERY_CAMPAIGN.md
+  summary: MARKDOWN imported from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\FEATURE_DISCOVERY_CAMPAIGN.md
+confidence: 0.6
+created_at: '2026-08-02T01:51:24.090871+00:00'
+ikros_id: IKROS-KO-20260802-0003
+label: Campaign 0003 - Institutional Feature Discovery Within the Six-State Market
+  Taxonomy
+node_id: IKROS-KO-20260802-0003
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-02T01:51:24.090871+00:00'
+valid_to: null
+wp_refs: []

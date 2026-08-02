@@ -1,0 +1,516 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0010",
+  "diagnostic_summary": {
+    "arb_recommendation": "Return IKROS-HYP-20260802-0401 and IKROS-HYP-20260802-0405 to governed validation with explicit persistence, branch, and contamination panels; keep IKROS-HYP-20260802-0408 in testing until broader episode coverage and richer sequencing evidence are available; reject none at this stage.",
+    "conclusion_id": "IKROS-CONCL-20260802-0007",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0007",
+    "evidence_id": "IKROS-EVIDENCE-20260802-0007",
+    "executed_experiments": [
+      "IKROS-EXP-20260802-0601",
+      "IKROS-EXP-20260802-0602",
+      "IKROS-EXP-20260802-0603",
+      "IKROS-EXP-20260802-0604",
+      "IKROS-EXP-20260802-0605",
+      "IKROS-EXP-20260802-0606"
+    ],
+    "rejected": [],
+    "remain_in_testing": [
+      "IKROS-HYP-20260802-0408"
+    ],
+    "return_for_validation": [
+      "IKROS-HYP-20260802-0401",
+      "IKROS-HYP-20260802-0405"
+    ],
+    "updated_confidence": {
+      "IKROS-HYP-20260802-0401": 0.5133,
+      "IKROS-HYP-20260802-0405": 0.4534,
+      "IKROS-HYP-20260802-0408": 0.2682
+    }
+  },
+  "experiment": {
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-ORCHESTRATOR",
+      "IKROS-INGESTION"
+    ],
+    "completed_at": null,
+    "confidence": {
+      "data": 0.83,
+      "economic": 0.69,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.0,
+      "operational": 0.73,
+      "overall": 0.7477389682749352,
+      "prior": 0.57,
+      "replication": 0.0,
+      "statistical": 0.0,
+      "validation": 0.0
+    },
+    "dataset_versions": [
+      "IKROS-DSV-20260802-0007"
+    ],
+    "entity_type": "Experiment",
+    "failures_produced": [],
+    "feature_versions": [
+      "IKROS-FEAT-20260802-0301",
+      "IKROS-FEAT-20260802-0302",
+      "IKROS-FEAT-20260802-0303",
+      "IKROS-FEAT-20260802-0304",
+      "IKROS-FEAT-20260802-0305",
+      "IKROS-FEAT-20260802-0306",
+      "IKROS-FEAT-20260802-0308",
+      "IKROS-FEAT-20260802-0309",
+      "IKROS-FEAT-20260802-0310",
+      "IKROS-FEAT-20260802-0311",
+      "IKROS-FEAT-20260802-0312"
+    ],
+    "git_commit": "",
+    "hypotheses": [
+      "IKROS-HYP-20260802-0401",
+      "IKROS-HYP-20260802-0405",
+      "IKROS-HYP-20260802-0408"
+    ],
+    "ikros_id": "IKROS-EXP-20260802-0007",
+    "in_sample_end": "",
+    "in_sample_start": "",
+    "lifecycle_state": "REVIEWED",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0007"
+        ],
+        "external_refs": [
+          "11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json",
+          "11-research/phase-g/failure-analysis/failure_analysis_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "inputs": [
+          "IKROS-HYP-20260802-0007"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0007-diagnostic-experiments",
+        "creation_context": "Campaign 0007 diagnostic experiment program",
+        "motivation": "Execute only the six governed diagnostic experiments authorized by Campaign 0006."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "out_of_sample_end": "",
+    "out_of_sample_start": "",
+    "parameters": {
+      "authorized_experiments": [
+        "IKROS-EXP-20260802-0601",
+        "IKROS-EXP-20260802-0602",
+        "IKROS-EXP-20260802-0603",
+        "IKROS-EXP-20260802-0604",
+        "IKROS-EXP-20260802-0605",
+        "IKROS-EXP-20260802-0606"
+      ],
+      "governance_constraints": [
+        "no runtime changes",
+        "no infrastructure changes",
+        "no new hypotheses",
+        "no parameter optimization",
+        "no promotion"
+      ]
+    },
+    "protocol": "Execute the six governed diagnostic experiments from Campaign 0006 using the frozen validation frame and retained-hypothesis evidence stack.",
+    "random_seed": 42,
+    "reproducibility_hash": "0b24e9f664d2d055d98fa88ac982c17a0eba0a911e842f10dbef8415a02e305f",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "title": "Campaign 0007 institutional diagnostic experiment program",
+    "validations_produced": [],
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "State \u2192 COMPLETE.",
+        "changed_at": "2026-08-02T02:37:54.845517+00:00",
+        "confidence_at_time": 0.7477389682749352,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 REVIEWED.",
+        "changed_at": "2026-08-02T02:37:54.849517+00:00",
+        "confidence_at_time": 0.7477389682749352,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  },
+  "hypothesis": {
+    "alternative_hypothesis": "H1: The authorized diagnostic experiments materially reduce uncertainty and support a governed next-step recommendation for each retained hypothesis.",
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-INGESTION"
+    ],
+    "confidence": {
+      "data": 0.82,
+      "economic": 0.69,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.0,
+      "operational": 0.72,
+      "overall": 0.7413076465172295,
+      "prior": 0.56,
+      "replication": 0.0,
+      "statistical": 0.0,
+      "validation": 0.0
+    },
+    "contradictions": [],
+    "entity_type": "Hypothesis",
+    "experiments": [
+      "IKROS-EXP-20260802-0007"
+    ],
+    "ikros_id": "IKROS-HYP-20260802-0007",
+    "lifecycle_state": "INCONCLUSIVE",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0007"
+        ],
+        "external_refs": [
+          "11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "inputs": [
+          "IKROS-RQ-20260802-0007"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [
+          "IKROS-EXP-20260802-0007"
+        ],
+        "validated_by": []
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0007-diagnostic-experiments",
+        "creation_context": "Campaign 0007 diagnostic experiment program",
+        "motivation": "Represent the governed claim that the authorized diagnostic experiments can materially reduce uncertainty and determine the next scientific step for the retained hypotheses."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "motivating_theses": [],
+    "null_hypothesis": "H0: The authorized diagnostic experiments do not materially reduce uncertainty around the retained hypotheses.",
+    "posterior_confidence": 0.7413076465172295,
+    "power": 0.8,
+    "prior_confidence": 0.56,
+    "significance_level": 0.05,
+    "source_rq": "IKROS-RQ-20260802-0007",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "statement": "The six Campaign 0006 diagnostic experiments can reduce uncertainty enough to determine whether each retained hypothesis should remain in testing, return for validation, or be rejected.",
+    "validations": [],
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:37:54.827517+00:00",
+        "confidence_at_time": 0.7413076465172295,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:37:54.831518+00:00",
+        "confidence_at_time": 0.7413076465172295,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 TESTING. Campaign 0007 entered governed diagnostic experimentation.",
+        "changed_at": "2026-08-02T02:37:54.834517+00:00",
+        "confidence_at_time": 0.7413076465172295,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 INCONCLUSIVE. Campaign 0007 completed the diagnostic experiment program.",
+        "changed_at": "2026-08-02T02:37:54.838517+00:00",
+        "confidence_at_time": 0.7413076465172295,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:37:54.842517+00:00",
+        "confidence_at_time": 0.7413076465172295,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  },
+  "progress": {
+    "blocked": 0,
+    "completed": 5,
+    "failed": 0,
+    "percent_complete": 100.0,
+    "skipped": 0,
+    "total": 5
+  },
+  "report": {
+    "audit_ids": [
+      "IKROS-CAMPAIGNAUDIT-20260802-0202",
+      "IKROS-CAMPAIGNAUDIT-20260802-0203",
+      "IKROS-CAMPAIGNAUDIT-20260802-0204",
+      "IKROS-CAMPAIGNAUDIT-20260802-0205",
+      "IKROS-CAMPAIGNAUDIT-20260802-0206",
+      "IKROS-CAMPAIGNAUDIT-20260802-0207",
+      "IKROS-CAMPAIGNAUDIT-20260802-0208",
+      "IKROS-CAMPAIGNAUDIT-20260802-0209",
+      "IKROS-CAMPAIGNAUDIT-20260802-0210",
+      "IKROS-CAMPAIGNAUDIT-20260802-0211",
+      "IKROS-CAMPAIGNAUDIT-20260802-0212",
+      "IKROS-CAMPAIGNAUDIT-20260802-0213",
+      "IKROS-CAMPAIGNAUDIT-20260802-0214",
+      "IKROS-CAMPAIGNAUDIT-20260802-0215",
+      "IKROS-CAMPAIGNAUDIT-20260802-0216",
+      "IKROS-CAMPAIGNAUDIT-20260802-0217",
+      "IKROS-CAMPAIGNAUDIT-20260802-0218"
+    ],
+    "blocked_task_ids": [],
+    "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0010",
+    "campaign_type": "RESEARCH_AUDIT",
+    "completed_task_ids": [
+      "IKROS-RESEARCHTASK-20260802-0071",
+      "IKROS-RESEARCHTASK-20260802-0073",
+      "IKROS-RESEARCHTASK-20260802-0074",
+      "IKROS-RESEARCHTASK-20260802-0075",
+      "IKROS-RESEARCHTASK-20260802-0081"
+    ],
+    "failed_task_ids": [],
+    "finished_at": "2026-08-02T02:37:53.340380+00:00",
+    "lifecycle_state": "COMPLETED",
+    "memory_record_ids": [
+      "IKMEM-T1-20260802-0067",
+      "IKMEM-T1-20260802-0069",
+      "IKMEM-T1-20260802-0070",
+      "IKMEM-T1-20260802-0071",
+      "IKMEM-T1-20260802-0072",
+      "IKMEM-T4-20260802-0016"
+    ],
+    "output_refs": [
+      "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_knowledge.json",
+      "IKROS-CONTRA-20260802-0007",
+      "IKROS-DSV-20260802-0007",
+      "IKROS-EVIDENCE-20260802-0007",
+      "IKROS-EXP-20260802-0007",
+      "IKROS-HYP-20260802-0007",
+      "IKROS-KO-20260802-0700",
+      "IKROS-KO-20260802-0701",
+      "IKROS-KO-20260802-0702",
+      "IKROS-KO-20260802-0703",
+      "IKROS-KO-20260802-0704",
+      "IKROS-KO-20260802-0705",
+      "IKROS-KO-20260802-0706",
+      "IKROS-KO-20260802-0707",
+      "IKROS-RQ-20260802-0007",
+      "diagnostic_experiment_knowledge"
+    ],
+    "progress": {
+      "blocked": 0,
+      "completed": 5,
+      "failed": 0,
+      "percent_complete": 100.0,
+      "skipped": 0,
+      "total": 5
+    },
+    "report_id": "IKROS-CAMPAIGNREPORT-20260802-0010",
+    "skipped_task_ids": [],
+    "started_at": "2026-08-02T02:37:43.683129+00:00",
+    "summary": "Campaign 0007 Institutional Diagnostic Experiment Program completed with 5 completed tasks."
+  },
+  "report_paths": {
+    "confidence_update_report_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\confidence_update_report.json",
+    "confidence_update_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\CONFIDENCE_UPDATE_REPORT.md",
+    "diagnostic_experiment_report_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\diagnostic_experiment_report.json",
+    "diagnostic_experiment_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\DIAGNOSTIC_EXPERIMENT_REPORT.md",
+    "evidence_summary_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\evidence_summary.json",
+    "evidence_summary_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\EVIDENCE_SUMMARY.md",
+    "final_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\DIAGNOSTIC_EXPERIMENT_FINAL_CAMPAIGN_REPORT.md",
+    "recommendation_matrix_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\recommendation_matrix.json",
+    "recommendation_matrix_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\RECOMMENDATION_MATRIX.md",
+    "updated_research_gap_analysis_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\updated_research_gap_analysis.json",
+    "updated_research_gap_analysis_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\diagnostic-experiments\\UPDATED_RESEARCH_GAP_ANALYSIS.md"
+  },
+  "research_question": {
+    "campaign_tag": "PHASE-G-DIAGNOSTIC-007",
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-ORCHESTRATOR"
+    ],
+    "confidence": {
+      "data": 0.82,
+      "economic": 0.7,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.0,
+      "operational": 0.73,
+      "overall": 0.7483043172507827,
+      "prior": 0.57,
+      "replication": 0.0,
+      "statistical": 0.0,
+      "validation": 0.0
+    },
+    "entity_type": "ResearchQuestion",
+    "ikros_id": "IKROS-RQ-20260802-0007",
+    "instrument": "XAU/USD",
+    "lifecycle_state": "ANSWERED",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0007"
+        ],
+        "external_refs": [
+          "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+          "11-research/phase-g/scientific-validation/scientific_validation_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "inputs": [
+          "IKROS-RQ-20260802-0006"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0007-diagnostic-experiments",
+        "creation_context": "Campaign 0007 diagnostic experiment program",
+        "motivation": "Reduce scientific uncertainty around the retained hypotheses by executing only the six diagnostic experiments authorized by Campaign 0006."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "linked_conclusions": [
+      "IKROS-CONCL-20260802-0007"
+    ],
+    "linked_hypotheses": [
+      "IKROS-HYP-20260802-0007"
+    ],
+    "motivation": "Campaign 0006 left three retained hypotheses unresolved and authorized only six follow-up diagnostic experiments.",
+    "scope": "DIAGNOSTIC_EXPERIMENT_PROGRAM",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "time_horizon": "1D-15D",
+    "title": "Do the six governed diagnostic experiments reduce uncertainty enough to determine the next scientific step for the retained hypotheses?",
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:37:54.817007+00:00",
+        "confidence_at_time": 0.7483043172507827,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T02:37:54.821007+00:00",
+        "confidence_at_time": 0.7483043172507827,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 ANSWERED. Campaign 0007 diagnostic experiment program completed.",
+        "changed_at": "2026-08-02T02:37:54.824517+00:00",
+        "confidence_at_time": 0.7483043172507827,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  }
+}

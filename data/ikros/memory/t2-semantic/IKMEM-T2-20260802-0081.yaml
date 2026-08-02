@@ -1,0 +1,99 @@
+archived_at: null
+capability_refs: []
+confidence: 0.44
+created_at: '2026-08-02T01:59:35.072679+00:00'
+dependency_ids: []
+entity_type: Hypothesis
+evidence_refs:
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-HYP-20260802-0407
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0081
+payload:
+  attributes:
+    acceptance_criteria:
+    - rebound sign persists across multiple stress analogues
+    - exhaustion controls improve signal quality over raw breakdown alone
+    - rebound timing remains reproducible enough for scientific follow-up
+    advance_to_campaign_0005: false
+    alternative_hypothesis: Gold can initially be sold for liquidity during stress,
+      then rebound sharply once balance-sheet pressure eases and safe-haven demand
+      returns.
+    contradictions: []
+    expected_direction: UP_AFTER_EXTREME_STRESS
+    expected_holding_period: 3-7D
+    expected_horizon: 5-10D
+    experiments: []
+    feature_ids:
+    - IKROS-FEAT-20260802-0303
+    - IKROS-FEAT-20260802-0309
+    - IKROS-FEAT-20260802-0305
+    feature_set:
+    - breakdown_20
+    - trend_gap_20_120
+    - regime_vol_20
+    knowledge_links:
+    - IKROS-FEAT-20260802-0303
+    - IKROS-FEAT-20260802-0309
+    - IKROS-FEAT-20260802-0305
+    - IKROS-KO-20260802-0407
+    motivating_theses: []
+    null_hypothesis: The described mechanism does not produce a persistent regime-conditioned
+      predictive relationship.
+    posterior_confidence: 0.0
+    power: 0.8
+    prior_confidence: 0.44
+    priority_tier: P3
+    regime_scope:
+    - bear_unwind
+    - crisis_dislocation
+    rejection_criteria:
+    - rebound depends on a single crisis window
+    - timing uncertainty overwhelms institutional usefulness
+    - bear continuation dominates even after exhaustion controls
+    required_evidence:
+    - episode replay archive
+    - rebound-timing sensitivity note
+    - continuation-vs-reversal contradiction analysis
+    research_question: After extreme selloffs in bear_unwind or crisis_dislocation,
+      do elevated volatility and intermediate-trend stabilization identify rebound
+      windows once forced selling exhausts itself?
+    significance_level: 0.05
+    source_rq: IKROS-RQ-20260802-0407
+    statement: After extreme selloffs in bear_unwind or crisis_dislocation, do elevated
+      volatility and intermediate-trend stabilization identify rebound windows once
+      forced selling exhausts itself?
+    validation_plan:
+    - episode-based walk_forward validation around extreme selloffs
+    - Monte Carlo sequencing of stress and rebound episodes
+    - stress testing against extended liquidation paths
+    - sensitivity to rebound timing lag
+    validations: []
+  lifecycle_state: APPROVED_FOR_TESTING
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-HYP-20260802-0407
+- IKROS-RQ-20260802-0407
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Gold can initially be sold for liquidity during stress, then rebound sharply
+  once balance-sheet pressure eases and safe-haven demand returns.
+tags:
+- hypothesis
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Liquidation-exhaustion rebound
+updated_at: '2026-08-02T01:59:35.072679+00:00'
+valid_from: '2026-08-02T01:59:35.072679+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []
