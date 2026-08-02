@@ -1,0 +1,13 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0394
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0031
+detail: 'Task RESEARCH_QUESTION failed: Duplicate: ResearchQuestion ''IKROS-RQ-20260802-9601''
+  already registered'
+entry_hash: 48781c841e6337131e6920806c79e7903c9baa7be128c531ef53c07cab02687c
+event_type: TASK_FAILED
+new_state: FAILED
+output_refs: []
+previous_hash: 278c5742fb0846ac8ae4aa2e25b7eb536f62906594d04e1a10c77ca84e64a003
+previous_state: RUNNING
+task_id: IKROS-RESEARCHTASK-20260802-0138
+timestamp: '2026-08-02T14:57:51.330405+00:00'

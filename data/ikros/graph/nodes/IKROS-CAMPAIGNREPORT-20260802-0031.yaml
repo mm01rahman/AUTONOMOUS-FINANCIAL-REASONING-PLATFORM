@@ -1,0 +1,16 @@
+attributes:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0031
+  entity_type: CampaignCompletionReport
+  lifecycle_state: FAILED
+confidence: 0.5
+created_at: '2026-08-02T14:57:53.546350+00:00'
+ikros_id: IKROS-CAMPAIGNREPORT-20260802-0031
+label: DC3 Phase 5 Institutional Alpha Revision Program completion report
+node_id: IKROS-CAMPAIGNREPORT-20260802-0031
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

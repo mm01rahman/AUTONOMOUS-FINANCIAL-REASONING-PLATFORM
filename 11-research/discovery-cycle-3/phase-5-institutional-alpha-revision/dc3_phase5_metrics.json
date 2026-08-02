@@ -1,0 +1,50 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0031",
+  "confidence_updates": {
+    "decision_cascade": {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "delta": -0.018,
+      "direction": "DECREASE",
+      "phase4_posterior": 0.528,
+      "phase5_posterior": 0.51
+    },
+    "safe_haven_migration": {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "delta": 0.014,
+      "direction": "MARGINAL_INCREASE",
+      "phase4_posterior": 0.576,
+      "phase5_posterior": 0.59
+    }
+  },
+  "execute_batch_2_now": false,
+  "graph_edges_created": 5,
+  "graph_nodes_created": 3,
+  "mechanisms_ready_for_revalidation": [
+    "IKROS-ALPHA-DC3-20260802-0006"
+  ],
+  "mechanisms_reject": [],
+  "mechanisms_research": [
+    "IKROS-ALPHA-DC3-20260802-0009"
+  ],
+  "mechanisms_revised": 2,
+  "promote_now": false,
+  "report_paths": {
+    "arb_recommendation": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\ARB_RECOMMENDATION_PHASE5.md",
+    "campaign_result": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\dc3_phase5_campaign_result.json",
+    "causal_revision_decision_cascade": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\CAUSAL_REVISION_PLAN_DECISION_CASCADE.md",
+    "causal_revision_safe_haven_migration": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\CAUSAL_REVISION_PLAN_SAFE_HAVEN_MIGRATION.md",
+    "change_proposal_decision_cascade": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\MECHANISM_CHANGE_PROPOSAL_DECISION_CASCADE.md",
+    "change_proposal_safe_haven_migration": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\MECHANISM_CHANGE_PROPOSAL_SAFE_HAVEN_MIGRATION.md",
+    "confidence_update_decision_cascade": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\CONFIDENCE_UPDATE_DECISION_CASCADE.md",
+    "confidence_update_safe_haven_migration": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\CONFIDENCE_UPDATE_SAFE_HAVEN_MIGRATION.md",
+    "dataset_gap_report": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\DATASET_GAP_REPORT.md",
+    "evidence_gap_report": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\EVIDENCE_GAP_REPORT.md",
+    "experiment_backlog": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\EXPERIMENT_BACKLOG.md",
+    "feature_revision_plan": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\FEATURE_REVISION_PLAN.md",
+    "proxy_replacement_plan": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\PROXY_REPLACEMENT_PLAN.md",
+    "revision_report_decision_cascade": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\REVISION_REPORT_DECISION_CASCADE.md",
+    "revision_report_safe_haven_migration": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\REVISION_REPORT_SAFE_HAVEN_MIGRATION.md"
+  },
+  "total_dataset_gaps": 7,
+  "total_experiment_backlog": 8
+}

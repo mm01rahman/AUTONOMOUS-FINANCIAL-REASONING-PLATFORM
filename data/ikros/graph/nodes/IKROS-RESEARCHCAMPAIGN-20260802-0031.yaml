@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Revise safe_haven_migration and decision_cascade mechanisms using Phase
+    4 validation evidence; produce assumption audits, feature/proxy/causal revision
+    plans, experiment backlogs, confidence updates, and ARB decisions.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0031
+confidence: 0.0
+created_at: '2026-08-02T14:57:47.011602+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0031
+label: DC3 Phase 5 Institutional Alpha Revision Program
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0031
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048
