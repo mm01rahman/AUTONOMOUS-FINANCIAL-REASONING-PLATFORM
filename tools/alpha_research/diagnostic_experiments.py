@@ -202,6 +202,21 @@ def prepare_phase_g_diagnostic_experiment_artifacts(
     output_dir: Path,
 ) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
+    source_analysis_path = repo_root / PHASE_G_DIAGNOSTIC_EXPERIMENTS_ANALYSIS
+    if source_analysis_path.is_file():
+        analysis = cast(dict[str, Any], json.loads(source_analysis_path.read_text(encoding="utf-8")))
+        analysis_path = output_dir / "diagnostic_experiment_analysis.json"
+        knowledge_path = output_dir / "diagnostic_experiment_knowledge.json"
+        write_json(analysis_path, analysis)
+        write_json(knowledge_path, _build_knowledge_pack(analysis))
+        return {
+            "analysis": analysis,
+            "paths": {
+                "analysis": str(analysis_path),
+                "knowledge": str(knowledge_path),
+            },
+        }
+
     failure_analysis = load_phase_g_failure_analysis(repo_root)
     prior_confidence = {
         item["hypothesis_id"]: float(item["analysis_adjusted_confidence"])
