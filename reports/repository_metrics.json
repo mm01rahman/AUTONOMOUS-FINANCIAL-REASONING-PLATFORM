@@ -1,397 +1,61 @@
+﻿Collecting repository metrics...
+  Running ruff...
+  Running mypy...
+  Collecting pytest...
+
+Repository Health Score: 100.0% (A)
+  Coverage:      82.33%
+  Ruff:          PASS
+  Mypy:          PASS
+  Pytest:        PASS
+  Capabilities:  48/48 (100.0%)
+  Traceability:  94/94 (100.0%)
+
 {
-  "schema_version": "2.0",
-  "generated_at": "2026-08-02T15:38:17.170805+00:00",
+  "schema_version": "1.0",
+  "generated_at": "2026-08-02T18:18:55.170576+00:00",
   "repository": "mm01rahman/AUTONOMOUS-FINANCIAL-REASONING-PLATFORM",
-  "metrics": {
-    "repository": {
-      "total": 48,
-      "complete": 48,
-      "available": 0,
-      "locked": 0,
-      "completion_pct": 100.0,
-      "eos": {
-        "total": 9,
-        "complete": 9,
-        "completion_pct": 100.0
-      },
-      "runtime": {
-        "total": 22,
-        "complete": 22,
-        "completion_pct": 100.0
-      },
-      "layers": {
-        "Layer 1": {
-          "total": 4,
-          "complete": 4
-        },
-        "Layer 2": {
-          "total": 7,
-          "complete": 7
-        },
-        "Layer 3": {
-          "total": 2,
-          "complete": 2
-        },
-        "Layer 4": {
-          "total": 3,
-          "complete": 3
-        },
-        "Layer 5": {
-          "total": 1,
-          "complete": 1
-        },
-        "Layer 6": {
-          "total": 1,
-          "complete": 1
-        }
-      }
+  "health_score": 1.0,
+  "health_grade": "A",
+  "quality": {
+    "ruff": {
+      "status": "PASS",
+      "exit_code": 0
     },
-    "work_packages": {
-      "total": 64,
-      "completed": 62,
-      "in_progress": 0,
-      "blocked": 0,
-      "remaining": 2,
-      "burn_pct": 96.88,
-      "completed_ids": [
-        "WP-FIX-0001",
-        "WP-FIX-0002",
-        "WP-FIX-0003",
-        "WP-IMP-0001",
-        "WP-IMP-0003",
-        "WP-IMP-0004",
-        "WP-IMP-0005",
-        "WP-IMP-0006",
-        "WP-IMP-0007",
-        "WP-IMP-0008",
-        "WP-IMP-0009",
-        "WP-IMP-0010",
-        "WP-IMP-0011",
-        "WP-IMP-0012",
-        "WP-IMP-0013",
-        "WP-IMP-0014",
-        "WP-IMP-0015",
-        "WP-IMP-0016",
-        "WP-IMP-0017",
-        "WP-IMP-0018",
-        "WP-IMP-0019",
-        "WP-IMP-0020",
-        "WP-IMP-0021",
-        "WP-IMP-0022",
-        "WP-IMP-0023",
-        "WP-IMP-0024",
-        "WP-IMP-0025",
-        "WP-IMP-0026",
-        "WP-IMP-0027",
-        "WP-IMP-0028",
-        "WP-IMP-0029",
-        "WP-IMP-0030",
-        "WP-IMP-0031",
-        "WP-IMP-0032",
-        "WP-IMP-0033",
-        "WP-IMP-0034",
-        "WP-IMP-0035",
-        "WP-IMP-0036",
-        "WP-IMP-0037",
-        "WP-IMP-0038",
-        "WP-IMP-0039",
-        "WP-IMP-0040",
-        "WP-IMP-0041",
-        "WP-IMP-0042",
-        "WP-IMP-0043",
-        "WP-IMP-0044",
-        "WP-IMP-0045",
-        "WP-IMP-0046",
-        "WP-IMP-0047",
-        "WP-IMP-0048",
-        "WP-IMP-0049",
-        "WP-RT-1001",
-        "WP-RT-1002",
-        "WP-RT-1003",
-        "WP-RT-1004",
-        "WP-RT-1005",
-        "WP-RT-1006",
-        "WP-RT-1007",
-        "WP-RT-1008",
-        "WP-RT-1009",
-        "WP-RT-1010",
-        "WP-RT-1011"
-      ],
-      "in_progress_ids": [],
-      "blocked_ids": []
+    "mypy_strict": {
+      "status": "PASS",
+      "exit_code": 0
     },
-    "quality": {
-      "ruff": {
-        "status": "FAIL",
-        "violations": 57,
-        "fixable": 11,
-        "top_error_types": [
-          "Exx (36)",
-          "Bxx (7)",
-          "ixx (5)",
-          "Fxx (4)",
-          "Axx (4)"
-        ]
-      },
-      "mypy": {
-        "status": "FAIL",
-        "errors": 1,
-        "warnings": 0,
-        "notes": 0,
-        "files_checked": 1
-      },
-      "tests": {
-        "status": "FAIL",
-        "collected": 7,
-        "passed": 0,
-        "failed": 0,
-        "errors": 7,
-        "skipped": 0,
-        "pass_rate_pct": 0.0,
-        "duration_s": 2.67
-      },
-      "coverage": {
-        "available": true,
-        "line_pct": 82.33,
-        "branch_pct": 72.35,
-        "lines_covered": 5365,
-        "lines_total": 6308,
-        "branches_covered": 1243,
-        "branches_total": 1718,
-        "files_measured": 75
-      }
+    "pytest": {
+      "status": "PASS",
+      "exit_code": 0,
+      "collected": 96
     },
-    "architecture": {
-      "overall_status": "PASS",
-      "violations": 0,
-      "fitness_functions": [
-        {
-          "id": "FIT-002",
-          "status": "UNKNOWN",
-          "detail": ""
-        },
-        {
-          "id": "FIT-004",
-          "status": "UNKNOWN",
-          "detail": ""
-        },
-        {
-          "id": "FIT-006",
-          "status": "UNKNOWN",
-          "detail": ""
-        },
-        {
-          "id": "FIT-003",
-          "status": "PASS",
-          "detail": "proto gate"
-        },
-        {
-          "id": "FIT-001",
-          "status": "PASS",
-          "detail": "DAG acyclicity"
-        }
-      ],
-      "fit_pass": 2,
-      "fit_fail": 0,
-      "dag_acyclic": true,
-      "layer_violations": 0,
-      "import_cycles": 0,
-      "public_api_violations": 0,
-      "proto_compatible": true,
-      "gates": {
-        "baseline": "PASS",
-        "ops": "PASS",
-        "proto": "PASS",
-        "validate": "PASS",
-        "plan": "PASS"
-      }
-    },
-    "governance": {
-      "work_packages": {
-        "total": 64,
-        "completed": 62,
-        "completion_pct": 96.88,
-        "with_evidence": 62,
-        "evidence_coverage_pct": 100.0
-      },
-      "evidence_records": {
-        "total": 69,
-        "approved": 62
-      },
-      "capability_registry": {
-        "consistent": true,
-        "with_work_package": 48,
-        "without_work_package": 0
-      },
-      "traceability": {
-        "requirements_total": 94,
-        "requirements_implemented": 94,
-        "coverage_pct": 100.0,
-        "by_type": {
-          "FR": 16,
-          "OBS": 1,
-          "NFR": 57,
-          "FIT": 8,
-          "EDR": 12
-        }
-      },
-      "adrs": {
-        "total": 5,
-        "open": 0,
-        "accepted": 0
-      },
-      "completion_reports": 11
-    },
-    "security": {
-      "overall_status": "UNKNOWN",
-      "bandit": {
-        "available": false,
-        "status": "UNAVAILABLE",
-        "total_findings": 0,
-        "high_severity": 0,
-        "medium_severity": 0,
-        "low_severity": 0
-      },
-      "dependencies": {
-        "available": false,
-        "status": "UNAVAILABLE",
-        "total_vulnerabilities": 0,
-        "critical": 0,
-        "high": 0,
-        "medium": 0,
-        "low": 0,
-        "affected_packages": []
-      },
-      "secret_scan": "CONFIGURED",
-      "codeql": "CONFIGURED"
-    },
-    "release": {
-      "tags": {
-        "total": 10,
-        "latest": "v2.5.0-layer6",
-        "version_tags": [
-          "v1.0.0"
-        ],
-        "pre_release_count": 8
-      },
-      "evidence": {
-        "archives": 0,
-        "completion_reports": 11,
-        "evidence_records": 79
-      },
-      "readiness": {
-        "score": 100.0,
-        "blockers": []
-      },
-      "release_manifest": {
-        "present": true,
-        "status": "PRESENT"
-      }
-    },
-    "git": {
-      "commits": {
-        "total": 139,
-        "last_7d": 139,
-        "last_30d": 139,
-        "last_sha": "d6f358b9",
-        "last_date": "2026-08-02 21:38:05 +0600",
-        "last_author": "mm01rahman",
-        "last_message": "Add Data Foundation V2 evidence record"
-      },
-      "branch": "mm01rahman-engineering-automation-platform",
-      "contributors": 3,
-      "conventional_commits": {
-        "compliant": 55,
-        "non_compliant": 45,
-        "compliance_pct": 55.0
-      },
-      "activity": {
-        "feat": 35,
-        "fix": 10,
-        "ci": 1
-      },
-      "files": {
-        "tracked": 2685,
-        "python": 296
-      }
+    "coverage": {
+      "available": true,
+      "percent": 82.33,
+      "lines_covered": 5365,
+      "lines_total": 6308,
+      "branches_covered": 1243,
+      "branches_total": 1718
     }
   },
-  "health": {
-    "score": 0.6975,
-    "score_pct": 69.75,
-    "grade": "C",
-    "emoji": "\ud83d\udfe0",
-    "dimensions": [
-      {
-        "name": "lint_ruff",
-        "score": 0.0,
-        "weight": 0.08,
-        "weighted_contribution": 0.0,
-        "detail": "ruff check"
-      },
-      {
-        "name": "types_mypy",
-        "score": 0.0,
-        "weight": 0.1,
-        "weighted_contribution": 0.0,
-        "detail": "mypy --strict"
-      },
-      {
-        "name": "tests",
-        "score": 0.0,
-        "weight": 0.12,
-        "weighted_contribution": 0.0,
-        "detail": "0/7 passed"
-      },
-      {
-        "name": "coverage",
-        "score": 1.0,
-        "weight": 0.1,
-        "weighted_contribution": 0.1,
-        "detail": "82.3% line coverage"
-      },
-      {
-        "name": "architecture",
-        "score": 1.0,
-        "weight": 0.15,
-        "weighted_contribution": 0.15,
-        "detail": "2/2 fitness functions PASS"
-      },
-      {
-        "name": "traceability",
-        "score": 1.0,
-        "weight": 0.1,
-        "weighted_contribution": 0.1,
-        "detail": "94/94 requirements"
-      },
-      {
-        "name": "governance_wps",
-        "score": 0.9688,
-        "weight": 0.08,
-        "weighted_contribution": 0.0775,
-        "detail": "62/64 WPs complete"
-      },
-      {
-        "name": "capabilities",
-        "score": 1.0,
-        "weight": 0.12,
-        "weighted_contribution": 0.12,
-        "detail": "48/48 capabilities COMPLETE"
-      },
-      {
-        "name": "security",
-        "score": 1.0,
-        "weight": 0.08,
-        "weighted_contribution": 0.08,
-        "detail": "overall=UNKNOWN, codeql=CONFIGURED"
-      },
-      {
-        "name": "release_readiness",
-        "score": 1.0,
-        "weight": 0.07,
-        "weighted_contribution": 0.07,
-        "detail": "100% ready"
-      }
-    ]
+  "capabilities": {
+    "total": 48,
+    "complete": 48,
+    "completion_ratio": 1.0
+  },
+  "traceability": {
+    "total": 94,
+    "implemented": 94,
+    "coverage": 1.0
+  },
+  "summary": {
+    "health_score": 1.0,
+    "coverage_pct": 82.33,
+    "capabilities_complete": 48,
+    "capabilities_total": 48,
+    "requirements_implemented": 94,
+    "requirements_total": 94
   }
 }
