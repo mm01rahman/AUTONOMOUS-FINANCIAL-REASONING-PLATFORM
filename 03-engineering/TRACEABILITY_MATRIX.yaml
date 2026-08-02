@@ -1083,3 +1083,42 @@ requirements:
       - "tests/unit/test_ikros_confidence.py"
     verified_by:
       - "05-work-packages/WP-IMP-0047/evidence/EXEC-049.yaml"
+
+  - id: "NFR-057"
+    title: "IKROS Research Orchestrator shall deterministically schedule and execute governed research campaigns with explicit task dependencies, progress tracking, and completion reporting"
+    source: "SPEC-060 §11, §12 (AFRP-WP-IMP-0048)"
+    capability: "IKROS-ORCHESTRATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/orchestrator/models.py"
+      - "tools/ikros/orchestrator/validation.py"
+      - "tools/ikros/orchestrator/engine.py"
+      - "tests/unit/test_ikros_orchestrator.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0048/evidence/EXEC-050.yaml"
+
+  - id: "NFR-058"
+    title: "IKROS Research Orchestrator shall integrate structured campaign tasks with registries, ingestion, confidence, Knowledge Graph, Research Memory, the Institutional Query Engine, and bounded backtest execution through deterministic adapters"
+    source: "SPEC-060 §3, §11, §12 (AFRP-WP-IMP-0048)"
+    capability: "IKROS-ORCHESTRATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/orchestrator/engine.py"
+      - "tools/ikros/__init__.py"
+      - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+      - "tests/unit/test_ikros_orchestrator.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0048/evidence/EXEC-050.yaml"
+
+  - id: "NFR-059"
+    title: "IKROS Research Orchestrator shall preserve auditability through hash-chained campaign logs, query-visible task memory, bounded failure handling, and resume support without Runtime changes"
+    source: "SPEC-060 §10, §11, §12 (AFRP-WP-IMP-0048)"
+    capability: "IKROS-ORCHESTRATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/orchestrator/persistence.py"
+      - "tools/ikros/orchestrator/engine.py"
+      - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+      - "tests/unit/test_ikros_orchestrator.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0048/evidence/EXEC-050.yaml"

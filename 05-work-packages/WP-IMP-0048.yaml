@@ -1,0 +1,163 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0048"
+capability_id:
+  id: "IKROS-ORCHESTRATOR"
+  version: "1.0"
+title: "IKROS Foundation — Institutional Research Orchestrator"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "KNOWLEDGE"
+  traceability:
+    implements_req: ["NFR-057", "NFR-058", "NFR-059"]
+    trace_sls: "AFRP-WP-IMP-0048-1.0.0"
+    trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('IKROS-CONFIDENCE')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/ikros/orchestrator/"
+      - "tools/ikros/__init__.py"
+      - "tests/unit/test_ikros_orchestrator.py"
+      - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+      - "data/ikros/orchestrator/"
+      - "05-work-packages/WP-IMP-0048.yaml"
+      - "05-work-packages/WP-IMP-0048/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    read:
+      - "02-architecture/ikros/"
+      - "03-engineering/"
+      - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+      - "05-work-packages/WP-IMP-0047.yaml"
+      - "05-work-packages/WP-IMP-0047/"
+      - "07-research/afrp_research/backtest.py"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "8h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/ikros/IKROS-INTEGRATION.md"
+    - "02-architecture/ikros/IKROS-GOVERNANCE.md"
+    - "02-architecture/ikros/IKROS-FUTURE.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+    - "07-research/afrp_research/backtest.py"
+
+outputs:
+  expected_source_files:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/orchestrator/__init__.py"
+    - "tools/ikros/orchestrator/models.py"
+    - "tools/ikros/orchestrator/persistence.py"
+    - "tools/ikros/orchestrator/validation.py"
+    - "tools/ikros/orchestrator/engine.py"
+  expected_test_files:
+    - "tests/unit/test_ikros_orchestrator.py"
+  expected_documentation:
+    - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0048/evidence/EXEC-050.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/orchestrator/"
+    - "tests/unit/test_ikros_orchestrator.py"
+    - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+    - "data/ikros/orchestrator/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0048/evidence/EXEC-050.yaml"
+
+produces:
+  capability:
+    id: "IKROS-ORCHESTRATOR"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/ikros/orchestrator/"
+    - "tools/ikros/__init__.py"
+    - "tests/unit/test_ikros_orchestrator.py"
+    - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+    - "data/ikros/orchestrator/"
+    - "05-work-packages/WP-IMP-0048.yaml"
+    - "05-work-packages/WP-IMP-0048/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  non_goals:
+    - "No LLMs."
+    - "No autonomous research."
+    - "No automatic hypothesis generation."
+    - "No alpha discovery."
+    - "No Runtime modification."
+    - "No Engineering OS modification."
+
+requirements:
+  institutional_research_orchestrator:
+    module: "tools/ikros/orchestrator/"
+    rules:
+      - "Implements deterministic campaign, pipeline, task, scheduling, dependency, progress, audit, and completion-report models."
+      - "Coordinates ingestion, confidence, graph, memory, query, and bounded backtest execution through structured handlers only."
+      - "Persists campaigns, reports, and append-only audit chains with deterministic YAML serialization."
+      - "Supports bounded failure handling and campaign resume without Runtime changes."
+      - "Does not import or modify AFRP Runtime implementation beyond bounded research-harness adapters."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0048"
+
+completion:
+  success_requires:
+    - "Institutional Research Orchestrator modules implemented under tools/ikros/orchestrator/."
+    - "Campaign execution, dependency resolution, failure recovery, confidence integration, and backtest integration tests pass."
+    - "IKROS-ORCHESTRATOR capability added to CAPABILITY_REGISTRY.yaml."
+    - "NFR-057, NFR-058, and NFR-059 added to TRACEABILITY_MATRIX.yaml."
+    - "All quality gates pass (ruff, mypy --strict, pytest, afrp validate/plan/health/evidence)."
+    - "No Runtime behaviour changed."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-SCHEMA: "WPS-1.0 schema violation in WP YAML structure."
+  ERR-ORCHESTRATOR-DETERMINISM: "Campaign scheduling, task execution, persistence, or audit output is nondeterministic."
+  ERR-TRACEABILITY: "Campaign execution is missing structured references, completion reports, or audit coverage."

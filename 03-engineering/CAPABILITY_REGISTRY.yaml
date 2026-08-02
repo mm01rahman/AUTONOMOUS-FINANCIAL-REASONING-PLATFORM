@@ -550,3 +550,16 @@ capabilities:
       implements_req: ["NFR-054", "NFR-055", "NFR-056"]
       trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004", "ADR-IKROS-005"]
       trace_vvc: "TVM-001"
+
+  # -- Stage S -- IKROS Research Orchestrator -----------------------------------
+  - id: "IKROS-ORCHESTRATOR"
+    version: "1.0"
+    title: "IKROS Institutional Research Orchestrator"
+    owner: "ARB"
+    status: "COMPLETE"
+    depends_on: ["IKROS-CONFIDENCE"]
+    work_package: "WP-IMP-0048"
+    traceability:
+      implements_req: ["NFR-057", "NFR-058", "NFR-059"]
+      trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004", "ADR-IKROS-005"]
+      trace_vvc: "TVM-001"
