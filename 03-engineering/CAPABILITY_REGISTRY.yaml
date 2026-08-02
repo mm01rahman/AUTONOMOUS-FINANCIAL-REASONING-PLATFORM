@@ -511,3 +511,16 @@ capabilities:
       implements_req: ["NFR-045", "NFR-046", "NFR-047"]
       trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004"]
       trace_vvc: "TVM-001"
+
+  # -- Stage P -- IKROS Query Engine ------------------------------------------
+  - id: "IKROS-QUERY"
+    version: "1.0"
+    title: "IKROS Institutional Query Engine"
+    owner: "ARB"
+    status: "COMPLETE"
+    depends_on: ["IKROS-MEMORY"]
+    work_package: "WP-IMP-0045"
+    traceability:
+      implements_req: ["NFR-048", "NFR-049", "NFR-050"]
+      trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004"]
+      trace_vvc: "TVM-001"

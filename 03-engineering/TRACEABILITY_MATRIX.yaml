@@ -966,3 +966,42 @@ requirements:
       - "tests/unit/test_ikros_memory.py"
     verified_by:
       - "05-work-packages/WP-IMP-0044/evidence/EXEC-046.yaml"
+
+  - id: "NFR-048"
+    title: "IKROS Query Engine shall parse, plan, validate, and execute deterministic structured queries across registries, graph, and memory"
+    source: "SPEC-060 §6, §7 (AFRP-WP-IMP-0045)"
+    capability: "IKROS-QUERY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/query/parser.py"
+      - "tools/ikros/query/planner.py"
+      - "tools/ikros/query/engine.py"
+      - "tests/unit/test_ikros_query.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0045/evidence/EXEC-047.yaml"
+
+  - id: "NFR-049"
+    title: "IKROS Query Engine shall support deterministic graph traversal, lineage path lookup, contradiction analysis, and governed archive access"
+    source: "SPEC-060 §7, §8, §9 (AFRP-WP-IMP-0045)"
+    capability: "IKROS-QUERY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/query/adapters.py"
+      - "tools/ikros/query/validation.py"
+      - "docs/ikros/INSTITUTIONAL_QUERY_GUIDE.md"
+      - "tests/unit/test_ikros_query.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0045/evidence/EXEC-047.yaml"
+
+  - id: "NFR-050"
+    title: "IKROS Query Engine shall emit deterministic audit records and normalized results with lineage, confidence, temporal, evidence, and work-package metadata"
+    source: "SPEC-060 §6, §9 (AFRP-WP-IMP-0045)"
+    capability: "IKROS-QUERY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/query/models.py"
+      - "tools/ikros/query/audit.py"
+      - "tools/ikros/query/engine.py"
+      - "tests/unit/test_ikros_query.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0045/evidence/EXEC-047.yaml"
