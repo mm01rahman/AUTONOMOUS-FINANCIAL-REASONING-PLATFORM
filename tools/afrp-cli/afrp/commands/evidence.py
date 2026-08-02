@@ -37,6 +37,7 @@ from afrp.core.workpackage import load_work_package
 def evidence_command(wp_id: str, base_ref: str, repo_root: Path) -> None:
     """Audit working-tree changes against the Work Package bounded_files."""
     root = repo_root.resolve()
+    evidence_status = ""
     try:
         with _workspace_lock(root):
             wp = load_work_package(root, wp_id)

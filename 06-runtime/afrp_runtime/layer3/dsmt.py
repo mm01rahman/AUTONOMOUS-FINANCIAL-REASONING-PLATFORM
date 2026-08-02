@@ -29,6 +29,22 @@ from __future__ import annotations
 from afrp_runtime.common.errors import ContractViolationError
 from afrp_runtime.contracts.cio import THETA
 
+__all__ = (
+    "FRAME",
+    "Element",
+    "EMPTY",
+    "THETA_ELEMENT",
+    "MassFunction",
+    "parse_label",
+    "render_label",
+    "intersect",
+    "validate_mass_function",
+    "combine_pcr5",
+    "combine_all",
+    "discount",
+    "pignistic",
+)
+
 FRAME: tuple[str, ...] = ("BULL", "BEAR", "RANGE")
 
 # A focal element in canonical DNF: frozenset of conjunctions.
