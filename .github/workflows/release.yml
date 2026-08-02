@@ -65,7 +65,7 @@ jobs:
       - name: Repository metrics
         run: uv run python -m tools.metrics --output metrics.json
       - name: Upload pre-release artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pre-release-reports
           path: |
@@ -95,7 +95,7 @@ jobs:
       - name: Build Python wheel and sdist
         run: uv build
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: dist
           path: dist/
@@ -127,7 +127,7 @@ jobs:
             --tag "$TAG" \
             --output "evidence-archive-${TAG}.tar.gz"
       - name: Upload evidence archive
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: evidence-archive
           path: evidence-archive-*.tar.gz
@@ -190,7 +190,7 @@ jobs:
           } > release-notes.md
           echo "notes=$(cat release-notes.md | base64 -w 0)" >> "$GITHUB_OUTPUT"
       - name: Upload release notes
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: release-notes
           path: release-notes.md

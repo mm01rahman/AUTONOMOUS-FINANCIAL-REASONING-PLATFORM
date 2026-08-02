@@ -97,14 +97,14 @@ jobs:
             $FAST_FLAG
 
       - name: Upload metrics artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: repository-metrics
           path: reports/
           retention-days: 90
 
       - name: Upload coverage JSON
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: ${{ !inputs.fast }}
         with:
           name: coverage-json
