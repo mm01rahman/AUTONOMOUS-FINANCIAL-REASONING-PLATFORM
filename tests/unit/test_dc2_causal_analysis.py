@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import tempfile
 from pathlib import Path
+from typing import Any
 
 import pytest
 
@@ -15,13 +16,15 @@ from tools.alpha_research.causal_analysis import (
 )
 from tools.alpha_research.dc2_phase2 import run_dc2_phase2_campaign
 
+pytestmark = pytest.mark.slow
+
 
 @pytest.fixture(scope="module")
-def analysis() -> dict:
+def analysis() -> dict[str, Any]:
     return prepare_dc2_phase2_artifacts()
 
 
-def test_dc2_phase2_analysis_runs(analysis: dict) -> None:
+def test_dc2_phase2_analysis_runs(analysis: dict[str, Any]) -> None:
     """Phase 2 analysis produces a well-formed result dict."""
     assert "theme1_conditional_causality" in analysis
     assert "theme2_lag_causality" in analysis
@@ -31,7 +34,7 @@ def test_dc2_phase2_analysis_runs(analysis: dict) -> None:
     assert "arb_summary" in analysis
 
 
-def test_dc2_phase2_conditional_causality(analysis: dict) -> None:
+def test_dc2_phase2_conditional_causality(analysis: dict[str, Any]) -> None:
     """Theme 1: each signal has regime-conditioned Granger results."""
     theme1 = analysis["theme1_conditional_causality"]
     assert len(theme1) > 0
@@ -42,7 +45,7 @@ def test_dc2_phase2_conditional_causality(analysis: dict) -> None:
         assert isinstance(info.get("causal_regimes"), list)
 
 
-def test_dc2_phase2_lag_causality(analysis: dict) -> None:
+def test_dc2_phase2_lag_causality(analysis: dict[str, Any]) -> None:
     """Theme 2: lag profile covers all governed lags for each signal."""
     theme2 = analysis["theme2_lag_causality"]
     assert len(theme2) > 0
@@ -55,11 +58,11 @@ def test_dc2_phase2_lag_causality(analysis: dict) -> None:
         assert info.get("persistence") in ("persistent", "transient")
 
 
-def test_dc2_phase2_macro_mediation(analysis: dict) -> None:
+def test_dc2_phase2_macro_mediation(analysis: dict[str, Any]) -> None:
     """Theme 3: macro mediation analysis covers all non-mediator signals."""
     theme3 = analysis["theme3_macro_mediation"]
     assert len(theme3) > 0
-    for sig_name, info in theme3.items():
+    for _sig_name, info in theme3.items():
         assert "direct_correlation" in info
         assert "mediation_by_factor" in info
         assert "interpretation" in info
@@ -72,18 +75,18 @@ def test_dc2_phase2_macro_mediation(analysis: dict) -> None:
             )
 
 
-def test_dc2_phase2_causal_stability(analysis: dict) -> None:
+def test_dc2_phase2_causal_stability(analysis: dict[str, Any]) -> None:
     """Theme 4: stability analysis produces consistency assessment."""
     theme4 = analysis["theme4_causal_stability"]
     assert len(theme4) > 0
-    for sig_name, info in theme4.items():
+    for _sig_name, info in theme4.items():
         assert "stability_score" in info
         assert "consistency" in info
         assert info["consistency"] in ("STABLE", "MODERATE", "UNSTABLE", "INSUFFICIENT_DATA")
         assert isinstance(info.get("rolling_f_proxy"), list)
 
 
-def test_dc2_phase2_causal_conclusions(analysis: dict) -> None:
+def test_dc2_phase2_causal_conclusions(analysis: dict[str, Any]) -> None:
     """Synthesis: each signal gets a causal classification and ARB recommendation."""
     conclusions = analysis["causal_conclusions"]
     assert len(conclusions) > 0
@@ -106,7 +109,7 @@ def test_dc2_phase2_causal_conclusions(analysis: dict) -> None:
         assert isinstance(info.get("contradictions"), list)
 
 
-def test_dc2_phase2_causal_graph(analysis: dict) -> None:
+def test_dc2_phase2_causal_graph(analysis: dict[str, Any]) -> None:
     """Causal graph has nodes and edges."""
     graph = analysis["causal_graph"]
     assert "nodes" in graph
@@ -117,7 +120,7 @@ def test_dc2_phase2_causal_graph(analysis: dict) -> None:
         assert "→" in edge
 
 
-def test_dc2_phase2_arb_summary(analysis: dict) -> None:
+def test_dc2_phase2_arb_summary(analysis: dict[str, Any]) -> None:
     """ARB summary partitions all signals into recommendation buckets."""
     arb = analysis["arb_summary"]
     assert "promote_to_institutional_knowledge" in arb
@@ -135,7 +138,7 @@ def test_dc2_phase2_arb_summary(analysis: dict) -> None:
     assert total == len(analysis["causal_conclusions"])
 
 
-def test_dc2_phase2_reports_emitted(analysis: dict) -> None:
+def test_dc2_phase2_reports_emitted(analysis: dict[str, Any]) -> None:
     """All nine Phase 2 deliverable reports are written."""
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)

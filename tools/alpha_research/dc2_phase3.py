@@ -12,7 +12,7 @@ Architecture constraints:
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any, cast
+from typing import Any, Protocol, cast
 
 from tools.alpha_research.information_network import (
     DC2_PHASE3_DIR,
@@ -56,8 +56,23 @@ def _select_campaign_pipeline(
     return campaign
 
 
+class _TransitionEntity(Protocol):
+    lifecycle_state: str
+
+
+class _TransitionRegistry(Protocol):
+    def get(self, entity_id: str) -> _TransitionEntity: ...
+
+    def transition(
+        self,
+        entity_id: str,
+        target_state: str,
+        note: str = "",
+    ) -> object: ...
+
+
 def _transition_if_needed(
-    registry: Any,
+    registry: _TransitionRegistry,
     entity_id: str,
     target_state: str,
     note: str = "",
@@ -106,7 +121,11 @@ def run_dc2_phase3_campaign(repo_root: Path) -> dict[str, Any]:
     }
     campaign = orchestrator.build_campaign(
         title=str(spec["title"]),
-        objective="Construct the institutional cross-asset information network describing how information propagates through financial markets before XAU/USD transitions between regimes.",
+        objective=(
+            "Construct the institutional cross-asset information network "
+            "describing how information propagates through financial markets "
+            "before XAU/USD transitions between regimes."
+        ),
         campaign_type="RESEARCH_AUDIT",
         task_payloads=task_payloads,
         failure_policy=FailurePolicy.CONTINUE.value,
@@ -245,7 +264,11 @@ def _default_campaign_spec() -> dict[str, Any]:
                     "created_by": "dc2-phase3",
                     "created_at": "2026-08-02T00:00:00Z",
                     "creation_context": "DC2 Program A Phase 3 primary research question",
-                    "motivation": "Phase 2 established causal relationships. Phase 3 integrates them into the full institutional information network.",
+                    "motivation": (
+                        "Phase 2 established causal relationships. Phase 3 "
+                        "integrates them into the full institutional "
+                        "information network."
+                    ),
                 },
                 "dependencies": {"supporting": [], "contradicting": [], "ers_records": []},
             },
@@ -253,8 +276,14 @@ def _default_campaign_spec() -> dict[str, Any]:
             "capability_refs": [],
             "work_package_refs": [],
             "version_history": [],
-            "title": "DC2-P3: What is the governing institutional cross-asset information network preceding XAU/USD regime transitions?",
-            "motivation": "The network must be modeled as a full system, not as independent pairwise relationships.",
+            "title": (
+                "DC2-P3: What is the governing institutional cross-asset "
+                "information network preceding XAU/USD regime transitions?"
+            ),
+            "motivation": (
+                "The network must be modeled as a full system, not as "
+                "independent pairwise relationships."
+            ),
             "instrument": "XAU/USD",
             "scope": "CROSS_ASSET",
             "time_horizon": "1D",
@@ -281,7 +310,10 @@ def _default_campaign_spec() -> dict[str, Any]:
                     "created_by": "dc2-phase3",
                     "created_at": "2026-08-02T00:00:00Z",
                     "creation_context": "DC2 Phase 3 network experiment",
-                    "motivation": "Dynamic directed network, centrality, communities, hierarchy, and stability.",
+                    "motivation": (
+                        "Dynamic directed network, centrality, communities, "
+                        "hierarchy, and stability."
+                    ),
                 },
                 "dependencies": {"supporting": [], "contradicting": [], "ers_records": []},
             },
@@ -290,29 +322,44 @@ def _default_campaign_spec() -> dict[str, Any]:
             "work_package_refs": [],
             "version_history": [],
             "title": "DC2-P3-EXP-001: Institutional Cross-Asset Information Network",
-            "description": "Construct the governed dynamic information network over the full causal market system.",
+            "description": (
+                "Construct the governed dynamic information network over the "
+                "full causal market system."
+            ),
             "reproducibility_hash": "dc2-phase3-exp-v1",
         },
         "research_questions_secondary": [
             {
                 "ikros_id": "IKROS-RQ-20260802-3002",
                 "theme": "Source Markets",
-                "statement": "Which markets act as persistent information sources prior to XAU/USD regime transitions?",
+                "statement": (
+                    "Which markets act as persistent information sources prior "
+                    "to XAU/USD regime transitions?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-3003",
                 "theme": "Relay Markets",
-                "statement": "Which markets relay or bottleneck information between macro shocks and XAU/USD?",
+                "statement": (
+                    "Which markets relay or bottleneck information between "
+                    "macro shocks and XAU/USD?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-3004",
                 "theme": "Regime Topology",
-                "statement": "How does network topology change across the six institutional regimes and stress periods?",
+                "statement": (
+                    "How does network topology change across the six "
+                    "institutional regimes and stress periods?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-3005",
                 "theme": "Feedback Loops",
-                "statement": "Which feedback loops are stable enough to be treated as institutional network structure?",
+                "statement": (
+                    "Which feedback loops are stable enough to be treated as "
+                    "institutional network structure?"
+                ),
             },
         ],
     }

@@ -14,6 +14,8 @@ from tools.alpha_research.market_ecology import (
     prepare_dc2_program_b_artifacts,
 )
 
+pytestmark = pytest.mark.slow
+
 
 @pytest.fixture(scope="module")
 def analysis() -> dict[str, Any]:

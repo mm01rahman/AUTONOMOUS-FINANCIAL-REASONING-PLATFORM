@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, cast
+from typing import Any, Protocol, cast
 
 from tools.alpha_research.cross_asset_ecology import (
     DC2_PROGRAM_A_DIR,
@@ -76,15 +76,30 @@ def _resolve_task_payloads(
     return dict(raw_payloads)
 
 
+class _TransitionEntity(Protocol):
+    lifecycle_state: str
+
+
+class _TransitionRegistry(Protocol):
+    def get(self, entity_id: str) -> _TransitionEntity: ...
+
+    def transition(
+        self,
+        entity_id: str,
+        target_state: str,
+        note: str = "",
+    ) -> object: ...
+
+
 def _transition_if_needed(
-    registry: Any,
+    registry: _TransitionRegistry,
     entity_id: str,
     target_state: str,
     *,
     note: str = "",
 ) -> None:
     """Transition entity to target_state only if not already at or past that state."""
-    _STATE_RANK: dict[str, int] = {
+    state_rank: dict[str, int] = {
         "PROPOSED": 0,
         "APPROVED_FOR_TESTING": 1,
         "OPEN": 1,
@@ -98,8 +113,8 @@ def _transition_if_needed(
     }
     try:
         current = str(registry.get(entity_id).lifecycle_state)
-        current_rank = _STATE_RANK.get(current, -1)
-        target_rank = _STATE_RANK.get(target_state, -1)
+        current_rank = state_rank.get(current, -1)
+        target_rank = state_rank.get(target_state, -1)
         if current_rank < target_rank:
             if note:
                 registry.transition(entity_id, target_state, note=note)
@@ -151,7 +166,10 @@ def run_dc2_program_a_campaign(
     campaign_spec = manifest["campaign"]
     campaign = orchestrator.build_campaign(
         title=str(campaign_spec["title"]),
-        objective="Map cross-asset transition ecology to determine how information propagates before XAU/USD regime changes.",
+        objective=(
+            "Map cross-asset transition ecology to determine how information "
+            "propagates before XAU/USD regime changes."
+        ),
         campaign_type="RESEARCH_AUDIT",
         task_payloads=task_payloads,
         failure_policy=FailurePolicy.FAIL_FAST.value,

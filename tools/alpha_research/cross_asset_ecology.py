@@ -940,7 +940,7 @@ Rows analyzed: {prog["rows_analyzed"]:,}
 ## Unavailable Markets (Data Gaps)
 {
             chr(10).join(
-                f"- **{g["market"]}** (severity: {g["gap_severity"]}) — {g["expected_contribution"]}"
+                f"- **{g['market']}** (severity: {g['gap_severity']}) - {g['expected_contribution']}"
                 for g in analysis["data_availability"]["unavailable_markets"]
             )
         }
@@ -1109,7 +1109,11 @@ Yield-derived signals form a semi-independent yield ecology cluster.
 
 ## Data Gap Impact
 The following HIGH-severity markets, if added, would materially extend this dependency graph:
-{chr(10).join(f"- {g["market"]}: {g["expected_contribution"]}" for g in UNAVAILABLE_MARKETS if g["gap_severity"] == "HIGH")}
+{chr(10).join(
+    f"- {g['market']}: {g['expected_contribution']}"
+    for g in UNAVAILABLE_MARKETS
+    if g["gap_severity"] == "HIGH"
+)}
 """,
     )
     written["dependency_graph"] = str(dep_md)

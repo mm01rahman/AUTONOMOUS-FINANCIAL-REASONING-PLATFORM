@@ -14,6 +14,8 @@ from tools.alpha_research.institutional_theory_extraction import (
     prepare_dc2_program_f_phase1_artifacts,
 )
 
+pytestmark = pytest.mark.slow
+
 
 @pytest.fixture(scope="module")
 def analysis() -> dict[str, Any]:

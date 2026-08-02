@@ -12,8 +12,6 @@ from tools.alpha_research.dc3_phase3_alpha_taxonomy import (
     run_dc3_phase3_alpha_taxonomy_campaign,
 )
 from tools.alpha_research.institutional_alpha_taxonomy import (
-    ALPHA_FAMILIES,
-    emit_dc3_phase3_taxonomy_reports,
     prepare_dc3_phase3_taxonomy_artifacts,
 )
 

@@ -15,6 +15,8 @@ from tools.alpha_research.transition_engine_ablation import (
     prepare_dc2_program_e_phase1_artifacts,
 )
 
+pytestmark = pytest.mark.slow
+
 
 @pytest.fixture(scope="module")
 def analysis() -> dict[str, Any]:

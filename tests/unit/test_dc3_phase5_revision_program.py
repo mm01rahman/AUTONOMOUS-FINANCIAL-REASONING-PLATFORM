@@ -14,7 +14,6 @@ from tools.alpha_research.dc3_phase5_revision_program import (
 )
 from tools.alpha_research.institutional_alpha_revision import (
     _ARB_OUTCOME_RANK,
-    emit_dc3_phase5_revision_reports,
     prepare_dc3_phase5_revision_artifacts,
 )
 

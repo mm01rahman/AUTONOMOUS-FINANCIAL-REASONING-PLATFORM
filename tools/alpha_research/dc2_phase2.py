@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, cast
+from typing import Any, Protocol, cast
 
 from tools.alpha_research.causal_analysis import (
     DC2_PHASE2_DIR,
@@ -66,8 +66,23 @@ def _select_campaign_pipeline(
     return campaign
 
 
+class _TransitionEntity(Protocol):
+    lifecycle_state: str
+
+
+class _TransitionRegistry(Protocol):
+    def get(self, entity_id: str) -> _TransitionEntity: ...
+
+    def transition(
+        self,
+        entity_id: str,
+        target_state: str,
+        note: str = "",
+    ) -> object: ...
+
+
 def _transition_if_needed(
-    registry: Any,
+    registry: _TransitionRegistry,
     entity_id: str,
     target_state: str,
     note: str = "",
@@ -105,7 +120,8 @@ def run_dc2_phase2_campaign(repo_root: Path) -> dict[str, Any]:
     else:
         campaign_spec = _default_campaign_spec()
 
-    # ------------------------------------------------------------------ research question + experiment
+    # ------------------------------------------------------------------
+    # research question + experiment
     rq_primary_dict = campaign_spec.get("research_question_primary", {})
     rq_id = rq_primary_dict.get("ikros_id", "IKROS-RQ-20260802-2001")
     exp_spec = campaign_spec.get("experiment", {})
@@ -121,7 +137,8 @@ def run_dc2_phase2_campaign(repo_root: Path) -> dict[str, Any]:
             _with_reproducibility_hash(_default_campaign_spec()["experiment"])
         )
 
-    # ------------------------------------------------------------------ build campaign (dict payload by TaskKind)
+    # ------------------------------------------------------------------
+    # build campaign (dict payload by TaskKind)
     task_payloads: dict[str, Any] = {
         TaskKind.RESEARCH_QUESTION.value: {
             "entity_type": "ResearchQuestion",
@@ -138,7 +155,10 @@ def run_dc2_phase2_campaign(repo_root: Path) -> dict[str, Any]:
                 "title", "DC2 Program A Phase 2: Cross-Asset Causal Transition Analysis"
             )
         ),
-        objective="Determine which observed cross-asset relationships represent genuine causal mechanisms preceding XAU/USD regime transitions.",
+        objective=(
+            "Determine which observed cross-asset relationships represent "
+            "genuine causal mechanisms preceding XAU/USD regime transitions."
+        ),
         campaign_type="RESEARCH_AUDIT",
         task_payloads=task_payloads,
         failure_policy=FailurePolicy.CONTINUE.value,
@@ -155,7 +175,8 @@ def run_dc2_phase2_campaign(repo_root: Path) -> dict[str, Any]:
     # ------------------------------------------------------------------ run analysis
     analysis = prepare_dc2_phase2_artifacts(repo_root=repo_root)
 
-    # ------------------------------------------------------------------ register entities and run campaign
+    # ------------------------------------------------------------------
+    # register entities and run campaign
     research_registry = cast(
         ResearchRegistry,
         orchestrator._registries.get("ResearchQuestion", ResearchRegistry(base_dir=resolved_base)),
@@ -325,7 +346,10 @@ def _default_campaign_spec() -> dict[str, Any]:
                     "created_by": "dc2-phase2",
                     "created_at": "2026-08-02T00:00:00Z",
                     "creation_context": "DC2 Program A Phase 2 primary research question",
-                    "motivation": "Phase 1 produced observational relationships. Phase 2 tests causal validity.",
+                    "motivation": (
+                        "Phase 1 produced observational relationships. "
+                        "Phase 2 tests causal validity."
+                    ),
                 },
                 "dependencies": {"supporting": [], "contradicting": [], "ers_records": []},
             },
@@ -333,8 +357,14 @@ def _default_campaign_spec() -> dict[str, Any]:
             "capability_refs": [],
             "work_package_refs": [],
             "version_history": [],
-            "title": "DC2-P2: Which observed cross-asset relationships represent genuine causal mechanisms?",
-            "motivation": "Phase 1 observational findings need causal validation before becoming institutional knowledge.",
+            "title": (
+                "DC2-P2: Which observed cross-asset relationships represent "
+                "genuine causal mechanisms?"
+            ),
+            "motivation": (
+                "Phase 1 observational findings need causal validation "
+                "before becoming institutional knowledge."
+            ),
             "instrument": "XAU/USD",
             "scope": "CROSS_ASSET",
             "time_horizon": "1D",
@@ -370,7 +400,10 @@ def _default_campaign_spec() -> dict[str, Any]:
             "work_package_refs": [],
             "version_history": [],
             "title": "DC2-P2-EXP-001: Cross-Asset Causal Audit",
-            "description": "Four-theme causal analysis: conditional Granger, lag-horizon Granger, macro mediation, rolling stability.",
+            "description": (
+                "Four-theme causal analysis: conditional Granger, "
+                "lag-horizon Granger, macro mediation, rolling stability."
+            ),
             "reproducibility_hash": "dc2-phase2-exp-v1",
         },
         "tasks": _default_tasks(),
@@ -378,22 +411,36 @@ def _default_campaign_spec() -> dict[str, Any]:
             {
                 "ikros_id": "IKROS-RQ-20260802-2002",
                 "theme": "Conditional Causality",
-                "statement": "Does causal influence from cross-asset signals to XAU/USD change across the six institutional regimes?",
+                "statement": (
+                    "Does causal influence from cross-asset signals to XAU/USD "
+                    "change across the six institutional regimes?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-2003",
                 "theme": "Time-Lag Causality",
-                "statement": "At what horizons (immediate/short/medium/long) do cross-asset signals most causally precede XAU/USD transitions?",
+                "statement": (
+                    "At what horizons (immediate/short/medium/long) do "
+                    "cross-asset signals most causally precede XAU/USD "
+                    "transitions?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-2004",
                 "theme": "Macro Mediation",
-                "statement": "Are cross-asset correlations direct causal paths or are they mediated by shared macro factors (DXY, yields, macro_pressure)?",
+                "statement": (
+                    "Are cross-asset correlations direct causal paths or are "
+                    "they mediated by shared macro factors (DXY, yields, "
+                    "macro_pressure)?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-2005",
                 "theme": "Causal Stability",
-                "statement": "Do identified causal relationships remain stable across macro cycles, volatility regimes, and stress periods?",
+                "statement": (
+                    "Do identified causal relationships remain stable across "
+                    "macro cycles, volatility regimes, and stress periods?"
+                ),
             },
         ],
     }

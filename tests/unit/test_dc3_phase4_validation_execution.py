@@ -14,7 +14,6 @@ from tools.alpha_research.dc3_phase4_validation_execution import (
 )
 from tools.alpha_research.institutional_alpha_validation_execution import (
     VALIDATION_OUTCOMES,
-    emit_dc3_phase4_validation_reports,
     prepare_dc3_phase4_validation_artifacts,
 )
 
@@ -83,12 +82,16 @@ def test_phase4_campaign_end_to_end() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
         src_dc3 = Path("11-research/discovery-cycle-3/institutional-alpha-discovery-program")
-        dst_dc3 = root / "11-research" / "discovery-cycle-3" / "institutional-alpha-discovery-program"
+        dst_dc3 = (
+            root / "11-research" / "discovery-cycle-3" / "institutional-alpha-discovery-program"
+        )
         dst_dc3.mkdir(parents=True, exist_ok=True)
         for f in src_dc3.glob("*.json"):
             shutil.copy(f, dst_dc3 / f.name)
         src_phase3 = Path("11-research/discovery-cycle-3/phase-3-institutional-alpha-taxonomy")
-        dst_phase3 = root / "11-research" / "discovery-cycle-3" / "phase-3-institutional-alpha-taxonomy"
+        dst_phase3 = (
+            root / "11-research" / "discovery-cycle-3" / "phase-3-institutional-alpha-taxonomy"
+        )
         dst_phase3.mkdir(parents=True, exist_ok=True)
         for f in src_phase3.glob("*.json"):
             shutil.copy(f, dst_phase3 / f.name)

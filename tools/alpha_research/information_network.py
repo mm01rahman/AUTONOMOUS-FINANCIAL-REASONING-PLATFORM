@@ -443,13 +443,13 @@ def _edge_registry(
     regime_presence: dict[str, int] = defaultdict(int)
     stress_presence: dict[str, int] = defaultdict(int)
     event_presence: dict[str, int] = defaultdict(int)
-    for label, network in regimes.items():
+    for _label, network in regimes.items():
         for edge in network.get("edges", []):
             regime_presence[f"{edge['source']}->{edge['target']}"] += 1
-    for label, network in stress.items():
+    for _label, network in stress.items():
         for edge in network.get("edges", []):
             stress_presence[f"{edge['source']}->{edge['target']}"] += 1
-    for label, network in events.items():
+    for _label, network in events.items():
         for edge in network.get("edges", []):
             event_presence[f"{edge['source']}->{edge['target']}"] += 1
 

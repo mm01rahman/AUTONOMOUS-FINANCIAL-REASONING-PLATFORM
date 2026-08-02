@@ -806,7 +806,7 @@ def emit_dc2_program_b_reports(
     profile_blocks = []
     for pid, profile in profiles.items():
         profile_blocks.append(
-            f"""### {profile["label"]}
+            f"""### {profile["label"]} (`{pid}`)
 - **Objectives:** {profile["objectives"]}
 - **Constraints:** {profile["constraints"]}
 - **Information:** {profile["information"]}

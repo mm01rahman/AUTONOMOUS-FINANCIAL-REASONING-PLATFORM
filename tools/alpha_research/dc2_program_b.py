@@ -6,7 +6,7 @@ Program B Phase 1: Institutional Market Ecology Research Program.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any, cast
+from typing import Any, Protocol, cast
 
 from tools.alpha_research.market_ecology import (
     DC2_PROGRAM_B_DIR,
@@ -46,7 +46,26 @@ def _select_campaign_pipeline(
     return campaign
 
 
-def _transition_if_needed(registry: Any, entity_id: str, target_state: str, note: str = "") -> None:
+class _TransitionEntity(Protocol):
+    lifecycle_state: str
+
+
+class _TransitionRegistry(Protocol):
+    def get(self, entity_id: str) -> _TransitionEntity: ...
+
+    def transition(
+        self,
+        entity_id: str,
+        target_state: str,
+        note: str = "",
+    ) -> object: ...
+
+def _transition_if_needed(
+    registry: _TransitionRegistry,
+    entity_id: str,
+    target_state: str,
+    note: str = "",
+) -> None:
     state_rank: dict[str, int] = {
         "PROPOSED": 0,
         "OPEN": 0,
@@ -94,7 +113,10 @@ def _upsert_graph_payload(
             wp_refs=["WP-IMP-0048"],
             attributes={
                 "program": "DC2 Program B Phase 1",
-                "description": "First institutional ecology model explaining participant interactions behind the cross-asset information network.",
+                "description": (
+                    "First institutional ecology model explaining participant "
+                    "interactions behind the cross-asset information network."
+                ),
             },
         ),
         GraphNode(
@@ -246,7 +268,12 @@ def run_dc2_program_b_campaign(repo_root: Path) -> dict[str, Any]:
     }
     campaign = orchestrator.build_campaign(
         title=str(spec["title"]),
-        objective="Construct the first institutional market ecology model explaining how heterogeneous participants collectively generate the cross-asset information network and XAU/USD regime transitions.",
+        objective=(
+            "Construct the first institutional market ecology model "
+            "explaining how heterogeneous participants collectively "
+            "generate the cross-asset information network and XAU/USD "
+            "regime transitions."
+        ),
         campaign_type="RESEARCH_AUDIT",
         task_payloads=task_payloads,
         failure_policy=FailurePolicy.CONTINUE.value,
@@ -386,7 +413,10 @@ def _default_campaign_spec() -> dict[str, Any]:
                     "created_by": "dc2-program-b",
                     "created_at": "2026-08-02T00:00:00Z",
                     "creation_context": "Program B Phase 1 primary research question",
-                    "motivation": "Program A completed the cross-asset network; Program B explains it through participant ecology.",
+                    "motivation": (
+                        "Program A completed the cross-asset network; "
+                        "Program B explains it through participant ecology."
+                    ),
                 },
                 "dependencies": {"supporting": [], "contradicting": [], "ers_records": []},
             },
@@ -394,8 +424,16 @@ def _default_campaign_spec() -> dict[str, Any]:
             "capability_refs": [],
             "work_package_refs": [],
             "version_history": [],
-            "title": "DC2-PB1: How do heterogeneous market participants collectively generate the cross-asset information network and XAU/USD regime transitions?",
-            "motivation": "The network must be explained through institutional participant behavior rather than treated as purely statistical structure.",
+            "title": (
+                "DC2-PB1: How do heterogeneous market participants "
+                "collectively generate the cross-asset information network "
+                "and XAU/USD regime transitions?"
+            ),
+            "motivation": (
+                "The network must be explained through institutional "
+                "participant behavior rather than treated as purely "
+                "statistical structure."
+            ),
             "instrument": "XAU/USD",
             "scope": "CROSS_ASSET",
             "time_horizon": "1D",
@@ -422,7 +460,11 @@ def _default_campaign_spec() -> dict[str, Any]:
                     "created_by": "dc2-program-b",
                     "created_at": "2026-08-02T00:00:00Z",
                     "creation_context": "Program B Phase 1 ecology experiment",
-                    "motivation": "Integrate participant objectives, constraints, and interactions into the first institutional ecology model.",
+                    "motivation": (
+                        "Integrate participant objectives, constraints, and "
+                        "interactions into the first institutional ecology "
+                        "model."
+                    ),
                 },
                 "dependencies": {"supporting": [], "contradicting": [], "ers_records": []},
             },
@@ -431,29 +473,46 @@ def _default_campaign_spec() -> dict[str, Any]:
             "work_package_refs": [],
             "version_history": [],
             "title": "DC2-PB1-EXP-001: Institutional Market Ecology Model",
-            "description": "Participant-layer ecology model grounded in the approved Program A confidence-weighted network.",
+            "description": (
+                "Participant-layer ecology model grounded in the approved "
+                "Program A confidence-weighted network."
+            ),
             "reproducibility_hash": "dc2-program-b-exp-v1",
         },
         "research_questions_secondary": [
             {
                 "ikros_id": "IKROS-RQ-20260802-4002",
                 "theme": "Participant Drivers",
-                "statement": "Which participant classes most consistently initiate the network structures and regime transitions observed in Program A?",
+                "statement": (
+                    "Which participant classes most consistently initiate the "
+                    "network structures and regime transitions observed in "
+                    "Program A?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-4003",
                 "theme": "Liquidity Ecology",
-                "statement": "How do dealers, makers, and bullion banks transform macro shocks into liquidity conditions and bottlenecks?",
+                "statement": (
+                    "How do dealers, makers, and bullion banks transform "
+                    "macro shocks into liquidity conditions and bottlenecks?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-4004",
                 "theme": "Capital Flow Network",
-                "statement": "How do ETF investors, macro hedge funds, and safe-haven flows propagate capital across the network during different regimes?",
+                "statement": (
+                    "How do ETF investors, macro hedge funds, and safe-haven "
+                    "flows propagate capital across the network during "
+                    "different regimes?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-4005",
                 "theme": "Adaptive Behaviour",
-                "statement": "How do participant reaction functions adapt across the six regimes and during stress dislocations?",
+                "statement": (
+                    "How do participant reaction functions adapt across the "
+                    "six regimes and during stress dislocations?"
+                ),
             },
         ],
     }
