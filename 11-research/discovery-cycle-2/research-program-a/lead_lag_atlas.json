@@ -1,0 +1,404 @@
+{
+  "regime_conditioned": {
+    "bear_unwind": {
+      "dxy_return_1": {
+        "best_correlation": 0.0236,
+        "best_lead_lag": 3
+      },
+      "dxy_return_5": {
+        "best_correlation": 0.0635,
+        "best_lead_lag": 1
+      },
+      "macro_pressure": {
+        "best_correlation": -0.0712,
+        "best_lead_lag": 1
+      },
+      "yield_10y_change_5": {
+        "best_correlation": 0.0,
+        "best_lead_lag": 0
+      }
+    },
+    "bull_trend": {
+      "dxy_return_1": {
+        "best_correlation": -0.0693,
+        "best_lead_lag": 1
+      },
+      "dxy_return_5": {
+        "best_correlation": 0.1316,
+        "best_lead_lag": 5
+      },
+      "macro_pressure": {
+        "best_correlation": -0.1426,
+        "best_lead_lag": 5
+      },
+      "yield_10y_change_5": {
+        "best_correlation": 0.0,
+        "best_lead_lag": 0
+      }
+    },
+    "calm_carry": {
+      "dxy_return_1": {
+        "best_correlation": 0.0833,
+        "best_lead_lag": 2
+      },
+      "dxy_return_5": {
+        "best_correlation": 0.0779,
+        "best_lead_lag": 5
+      },
+      "macro_pressure": {
+        "best_correlation": -0.0908,
+        "best_lead_lag": 5
+      },
+      "yield_10y_change_5": {
+        "best_correlation": 0.0,
+        "best_lead_lag": 0
+      }
+    },
+    "crisis_dislocation": {
+      "dxy_return_1": {
+        "best_correlation": -0.132,
+        "best_lead_lag": 1
+      },
+      "dxy_return_5": {
+        "best_correlation": 0.1059,
+        "best_lead_lag": 3
+      },
+      "macro_pressure": {
+        "best_correlation": -0.1076,
+        "best_lead_lag": 3
+      },
+      "yield_10y_change_5": {
+        "best_correlation": 0.0,
+        "best_lead_lag": 0
+      }
+    },
+    "macro_transition": {
+      "dxy_return_1": {
+        "best_correlation": -0.1461,
+        "best_lead_lag": 1
+      },
+      "dxy_return_5": {
+        "best_correlation": -0.1801,
+        "best_lead_lag": 1
+      },
+      "macro_pressure": {
+        "best_correlation": 0.1833,
+        "best_lead_lag": 1
+      },
+      "yield_10y_change_5": {
+        "best_correlation": 0.0,
+        "best_lead_lag": 0
+      }
+    },
+    "range_compression": {
+      "dxy_return_1": {
+        "best_correlation": 0.0584,
+        "best_lead_lag": 3
+      },
+      "dxy_return_5": {
+        "best_correlation": 0.0764,
+        "best_lead_lag": 1
+      },
+      "macro_pressure": {
+        "best_correlation": -0.0723,
+        "best_lead_lag": 1
+      },
+      "yield_10y_change_5": {
+        "best_correlation": 0.0,
+        "best_lead_lag": 0
+      }
+    }
+  },
+  "unconditional": {
+    "dxy_return_1": {
+      "category": "USD_pressure",
+      "economic_rationale": "Immediate USD pressure is the primary cross-asset antagonist to gold.",
+      "lead_direction": "contemporaneous",
+      "market": "DXY",
+      "peak_correlation": -0.4003,
+      "peak_lag_days": 0,
+      "profile": {
+        "-1": -0.0086,
+        "-10": -0.0039,
+        "-15": -0.0212,
+        "-2": -0.0444,
+        "-20": 0.0069,
+        "-3": -0.0119,
+        "-5": -0.0134,
+        "-7": -0.0076,
+        "0": -0.4003,
+        "1": -0.047,
+        "10": 0.0207,
+        "15": 0.0123,
+        "2": 0.0118,
+        "20": 0.0039,
+        "3": 0.0191,
+        "5": -0.0034,
+        "7": 0.0084
+      },
+      "t_stat_proxy": 34.547,
+      "title": "DXY 1-day return"
+    },
+    "dxy_return_20": {
+      "category": "USD_pressure",
+      "economic_rationale": "Trend-horizon DXY context shapes institutional gold positioning.",
+      "lead_direction": "lagged",
+      "market": "DXY",
+      "peak_correlation": -0.1052,
+      "peak_lag_days": -5,
+      "profile": {
+        "-1": -0.0854,
+        "-10": -0.0895,
+        "-15": -0.097,
+        "-2": -0.0965,
+        "-20": -0.0097,
+        "-3": -0.1003,
+        "-5": -0.1052,
+        "-7": -0.1035,
+        "0": -0.082,
+        "1": 0.0081,
+        "10": -0.0034,
+        "15": 0.0013,
+        "2": 0.0177,
+        "20": 0.0017,
+        "3": 0.0213,
+        "5": 0.0137,
+        "7": 0.0144
+      },
+      "t_stat_proxy": 8.365,
+      "title": "DXY 20-day return"
+    },
+    "dxy_return_5": {
+      "category": "USD_pressure",
+      "economic_rationale": "Five-day DXY momentum captures whether USD strength is building or fading.",
+      "lead_direction": "lagged",
+      "market": "DXY",
+      "peak_correlation": -0.2305,
+      "peak_lag_days": -3,
+      "profile": {
+        "-1": -0.1909,
+        "-10": 0.0264,
+        "-15": 0.0003,
+        "-2": -0.2194,
+        "-20": -0.0097,
+        "-3": -0.2305,
+        "-5": -0.0371,
+        "-7": -0.0107,
+        "0": -0.1827,
+        "1": -0.0045,
+        "10": -0.0053,
+        "15": 0.0082,
+        "2": 0.0232,
+        "20": 0.0099,
+        "3": 0.022,
+        "5": 0.0152,
+        "7": 0.005
+      },
+      "t_stat_proxy": 18.735,
+      "title": "DXY 5-day return"
+    },
+    "fed_surprise": {
+      "category": "macro_event",
+      "economic_rationale": "Unanticipated policy surprises immediately reprice gold relative to real rates.",
+      "lead_direction": "lagged",
+      "market": "Economic_Calendar",
+      "peak_correlation": 0.0,
+      "peak_lag_days": -20,
+      "profile": {
+        "-1": 0.0,
+        "-10": 0.0,
+        "-15": 0.0,
+        "-2": 0.0,
+        "-20": 0.0,
+        "-3": 0.0,
+        "-5": 0.0,
+        "-7": 0.0,
+        "0": 0.0,
+        "1": 0.0,
+        "10": 0.0,
+        "15": 0.0,
+        "2": 0.0,
+        "20": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0
+      },
+      "t_stat_proxy": 0.0,
+      "title": "Fed announcement surprise"
+    },
+    "forward_expectation": {
+      "category": "expectation",
+      "economic_rationale": "Blends yield curve change, Fed surprise, and DXY trend to proxy institutional forward expectations.",
+      "lead_direction": "lagged",
+      "market": "Composite",
+      "peak_correlation": 0.1052,
+      "peak_lag_days": -5,
+      "profile": {
+        "-1": 0.0854,
+        "-10": 0.0895,
+        "-15": 0.097,
+        "-2": 0.0965,
+        "-20": 0.0097,
+        "-3": 0.1003,
+        "-5": 0.1052,
+        "-7": 0.1035,
+        "0": 0.082,
+        "1": -0.0081,
+        "10": 0.0034,
+        "15": -0.0013,
+        "2": -0.0177,
+        "20": -0.0017,
+        "3": -0.0213,
+        "5": -0.0137,
+        "7": -0.0144
+      },
+      "t_stat_proxy": 8.365,
+      "title": "Forward expectation spread"
+    },
+    "geo_severity": {
+      "category": "safe_haven_demand",
+      "economic_rationale": "Geopolitical stress elevates safe-haven demand and can break normal cross-asset correlations.",
+      "lead_direction": "lagged",
+      "market": "Geopolitical",
+      "peak_correlation": 0.0039,
+      "peak_lag_days": -1,
+      "profile": {
+        "-1": 0.0039,
+        "-10": 0.0014,
+        "-15": 0.0005,
+        "-2": 0.0031,
+        "-20": 0.002,
+        "-3": 0.0018,
+        "-5": 0.0032,
+        "-7": 0.0025,
+        "0": 0.0009,
+        "1": 0.0009,
+        "10": -0.0007,
+        "15": -0.0017,
+        "2": 0.0023,
+        "20": -0.0037,
+        "3": -0.0008,
+        "5": -0.0008,
+        "7": -0.0028
+      },
+      "t_stat_proxy": 0.312,
+      "title": "Geopolitical severity score"
+    },
+    "macro_pressure": {
+      "category": "macro_composite",
+      "economic_rationale": "Composite of DXY, yield, and Fed signals that captures the regime-defining macro environment.",
+      "lead_direction": "lagged",
+      "market": "Composite",
+      "peak_correlation": 0.2299,
+      "peak_lag_days": -3,
+      "profile": {
+        "-1": 0.1907,
+        "-10": -0.0261,
+        "-15": -0.0002,
+        "-2": 0.219,
+        "-20": 0.01,
+        "-3": 0.2299,
+        "-5": 0.0374,
+        "-7": 0.0111,
+        "0": 0.1821,
+        "1": 0.0046,
+        "10": 0.0052,
+        "15": -0.0084,
+        "2": -0.0227,
+        "20": -0.0104,
+        "3": -0.022,
+        "5": -0.0152,
+        "7": -0.0054
+      },
+      "t_stat_proxy": 18.682,
+      "title": "Macro pressure composite"
+    },
+    "yield_10y_change_5": {
+      "category": "real_rates",
+      "economic_rationale": "Rising real rates suppress gold opportunity cost; falling rates support it.",
+      "lead_direction": "lagged",
+      "market": "US_Treasuries",
+      "peak_correlation": 0.0,
+      "peak_lag_days": -20,
+      "profile": {
+        "-1": 0.0,
+        "-10": 0.0,
+        "-15": 0.0,
+        "-2": 0.0,
+        "-20": 0.0,
+        "-3": 0.0,
+        "-5": 0.0,
+        "-7": 0.0,
+        "0": 0.0,
+        "1": 0.0,
+        "10": 0.0,
+        "15": 0.0,
+        "2": 0.0,
+        "20": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0
+      },
+      "t_stat_proxy": 0.0,
+      "title": "10Y Treasury yield 5-day change"
+    },
+    "yield_30y_change_20": {
+      "category": "real_rates",
+      "economic_rationale": "Long-end yield trends anchor institutional duration and macro regime assessment.",
+      "lead_direction": "lagged",
+      "market": "US_Treasuries",
+      "peak_correlation": 0.0,
+      "peak_lag_days": -20,
+      "profile": {
+        "-1": 0.0,
+        "-10": 0.0,
+        "-15": 0.0,
+        "-2": 0.0,
+        "-20": 0.0,
+        "-3": 0.0,
+        "-5": 0.0,
+        "-7": 0.0,
+        "0": 0.0,
+        "1": 0.0,
+        "10": 0.0,
+        "15": 0.0,
+        "2": 0.0,
+        "20": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0
+      },
+      "t_stat_proxy": 0.0,
+      "title": "30Y Treasury yield 20-day change"
+    },
+    "yield_curve_10y_3m": {
+      "category": "yield_curve",
+      "economic_rationale": "Yield curve shape reflects growth and recession expectations that drive safe-haven demand.",
+      "lead_direction": "lagged",
+      "market": "US_Treasuries",
+      "peak_correlation": 0.0,
+      "peak_lag_days": -20,
+      "profile": {
+        "-1": 0.0,
+        "-10": 0.0,
+        "-15": 0.0,
+        "-2": 0.0,
+        "-20": 0.0,
+        "-3": 0.0,
+        "-5": 0.0,
+        "-7": 0.0,
+        "0": 0.0,
+        "1": 0.0,
+        "10": 0.0,
+        "15": 0.0,
+        "2": 0.0,
+        "20": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0
+      },
+      "t_stat_proxy": 0.0,
+      "title": "Yield curve 10Y-3M spread"
+    }
+  }
+}

@@ -1,0 +1,3552 @@
+{
+  "arb_recommendation": {
+    "arb_narrative": "The cross-asset transition ecology analysis identifies dxy_return_1, dxy_return_5, yield_10y_change_5 as the dominant pre-transition drivers visible in locally governed data. The strongest overall relationships are dxy_return_1, dxy_return_5, macro_pressure. The most critical data gaps blocking a complete cross-asset network are: VIX. The ARB is recommended to authorize data acquisition for HIGH-severity gaps before Discovery Cycle 2 validation.",
+    "data_gap_priority": [
+      "VIX",
+      "S&P 500",
+      "Crude Oil",
+      "EUR/USD",
+      "USD/JPY",
+      "Bond Futures",
+      "ETF Flows (GLD)",
+      "COMEX Positioning"
+    ],
+    "dominant_transition_drivers": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "yield_10y_change_5"
+    ],
+    "granger_positive_signals": [],
+    "promotion_candidates_for_dc2_validation": [],
+    "signals_requiring_further_research": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "macro_pressure"
+    ],
+    "stable_relationships": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "macro_pressure"
+    ],
+    "stop_confirmation": "ARB recommendation complete. No hypotheses created, no strategies built, no parameters optimized.",
+    "stress_amplified_relationships": [
+      "dxy_return_1",
+      "dxy_return_5"
+    ],
+    "strongest_cross_market_relationships": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "macro_pressure",
+      "dxy_return_20",
+      "forward_expectation"
+    ]
+  },
+  "cross_market_influence_matrix": {
+    "influence_rows": [
+      {
+        "category": "USD_pressure",
+        "composite_influence_score": 0.3861,
+        "granger_positive": false,
+        "lead_direction": "contemporaneous",
+        "market": "DXY",
+        "peak_correlation": -0.4003,
+        "peak_lag_days": 0,
+        "peak_mi": 0.00092,
+        "r2_gain": 0.00021,
+        "signal": "dxy_return_1",
+        "stability_score": 0.7667,
+        "title": "DXY 1-day return"
+      },
+      {
+        "category": "USD_pressure",
+        "composite_influence_score": 0.2207,
+        "granger_positive": false,
+        "lead_direction": "lagged",
+        "market": "DXY",
+        "peak_correlation": -0.2305,
+        "peak_lag_days": -3,
+        "peak_mi": 0.00122,
+        "r2_gain": 0.00068,
+        "signal": "dxy_return_5",
+        "stability_score": 0.7067,
+        "title": "DXY 5-day return"
+      },
+      {
+        "category": "macro_composite",
+        "composite_influence_score": 0.2168,
+        "granger_positive": false,
+        "lead_direction": "lagged",
+        "market": "Composite",
+        "peak_correlation": 0.2299,
+        "peak_lag_days": -3,
+        "peak_mi": 0.00105,
+        "r2_gain": 0.0007,
+        "signal": "macro_pressure",
+        "stability_score": 0.7069,
+        "title": "Macro pressure composite"
+      },
+      {
+        "category": "USD_pressure",
+        "composite_influence_score": 0.089,
+        "granger_positive": false,
+        "lead_direction": "lagged",
+        "market": "DXY",
+        "peak_correlation": -0.1052,
+        "peak_lag_days": -5,
+        "peak_mi": 0.00094,
+        "r2_gain": 0.00028,
+        "signal": "dxy_return_20",
+        "stability_score": 0.5465,
+        "title": "DXY 20-day return"
+      },
+      {
+        "category": "expectation",
+        "composite_influence_score": 0.089,
+        "granger_positive": false,
+        "lead_direction": "lagged",
+        "market": "Composite",
+        "peak_correlation": 0.1052,
+        "peak_lag_days": -5,
+        "peak_mi": 0.00094,
+        "r2_gain": 0.00028,
+        "signal": "forward_expectation",
+        "stability_score": 0.5465,
+        "title": "Forward expectation spread"
+      },
+      {
+        "category": "safe_haven_demand",
+        "composite_influence_score": 0.002,
+        "granger_positive": false,
+        "lead_direction": "lagged",
+        "market": "Geopolitical",
+        "peak_correlation": 0.0039,
+        "peak_lag_days": -1,
+        "peak_mi": 0.0002,
+        "r2_gain": 0.0,
+        "signal": "geo_severity",
+        "stability_score": 0.0,
+        "title": "Geopolitical severity score"
+      },
+      {
+        "category": "yield_curve",
+        "composite_influence_score": 0.0,
+        "granger_positive": false,
+        "lead_direction": "lagged",
+        "market": "US_Treasuries",
+        "peak_correlation": 0.0,
+        "peak_lag_days": -20,
+        "peak_mi": 0.0,
+        "r2_gain": -1e-05,
+        "signal": "yield_curve_10y_3m",
+        "stability_score": 0.0,
+        "title": "Yield curve 10Y-3M spread"
+      },
+      {
+        "category": "real_rates",
+        "composite_influence_score": 0.0,
+        "granger_positive": false,
+        "lead_direction": "lagged",
+        "market": "US_Treasuries",
+        "peak_correlation": 0.0,
+        "peak_lag_days": -20,
+        "peak_mi": 0.0,
+        "r2_gain": -1e-05,
+        "signal": "yield_10y_change_5",
+        "stability_score": 0.0,
+        "title": "10Y Treasury yield 5-day change"
+      },
+      {
+        "category": "real_rates",
+        "composite_influence_score": 0.0,
+        "granger_positive": false,
+        "lead_direction": "lagged",
+        "market": "US_Treasuries",
+        "peak_correlation": 0.0,
+        "peak_lag_days": -20,
+        "peak_mi": 0.0,
+        "r2_gain": -1e-05,
+        "signal": "yield_30y_change_20",
+        "stability_score": 0.0,
+        "title": "30Y Treasury yield 20-day change"
+      },
+      {
+        "category": "macro_event",
+        "composite_influence_score": 0.0,
+        "granger_positive": false,
+        "lead_direction": "lagged",
+        "market": "Economic_Calendar",
+        "peak_correlation": 0.0,
+        "peak_lag_days": -20,
+        "peak_mi": 0.0,
+        "r2_gain": -1e-05,
+        "signal": "fed_surprise",
+        "stability_score": 0.0,
+        "title": "Fed announcement surprise"
+      }
+    ]
+  },
+  "data_availability": {
+    "available": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "dxy_return_20",
+      "yield_curve_10y_3m",
+      "yield_10y_change_5",
+      "yield_30y_change_20",
+      "fed_surprise",
+      "geo_severity",
+      "macro_pressure",
+      "forward_expectation"
+    ],
+    "unavailable_markets": [
+      {
+        "expected_contribution": "Equity volatility regime context; synchronization during stress; cross-asset fear transmission.",
+        "gap_severity": "HIGH",
+        "ikros_gap_id": "DC2-GAP-20260802-0001",
+        "market": "VIX"
+      },
+      {
+        "expected_contribution": "Equity-gold correlation and regime interaction; risk-on/risk-off transmission.",
+        "gap_severity": "HIGH",
+        "ikros_gap_id": "DC2-GAP-20260802-0002",
+        "market": "S&P 500"
+      },
+      {
+        "expected_contribution": "Growth-proxy and tech-sector risk appetite signal.",
+        "gap_severity": "MEDIUM",
+        "ikros_gap_id": "DC2-GAP-20260802-0003",
+        "market": "NASDAQ"
+      },
+      {
+        "expected_contribution": "Inflation proxy; commodity bloc co-movement; regime transition signal.",
+        "gap_severity": "HIGH",
+        "ikros_gap_id": "DC2-GAP-20260802-0004",
+        "market": "Crude Oil"
+      },
+      {
+        "expected_contribution": "Industrial metals ratio and gold/silver spread as positioning diagnostic.",
+        "gap_severity": "MEDIUM",
+        "ikros_gap_id": "DC2-GAP-20260802-0005",
+        "market": "Silver"
+      },
+      {
+        "expected_contribution": "Global growth proxy and commodity cycle signal.",
+        "gap_severity": "MEDIUM",
+        "ikros_gap_id": "DC2-GAP-20260802-0006",
+        "market": "Copper"
+      },
+      {
+        "expected_contribution": "Precious metals basket diversification signal.",
+        "gap_severity": "LOW",
+        "ikros_gap_id": "DC2-GAP-20260802-0007",
+        "market": "Platinum"
+      },
+      {
+        "expected_contribution": "Industrial precious metals demand signal.",
+        "gap_severity": "LOW",
+        "ikros_gap_id": "DC2-GAP-20260802-0008",
+        "market": "Palladium"
+      },
+      {
+        "expected_contribution": "DXY component; European macro and ECB policy signal.",
+        "gap_severity": "HIGH",
+        "ikros_gap_id": "DC2-GAP-20260802-0009",
+        "market": "EUR/USD"
+      },
+      {
+        "expected_contribution": "Risk-off safe-haven dynamics; BOJ policy interaction with gold.",
+        "gap_severity": "HIGH",
+        "ikros_gap_id": "DC2-GAP-20260802-0010",
+        "market": "USD/JPY"
+      },
+      {
+        "expected_contribution": "Safe-haven currency co-movement with gold during crisis regimes.",
+        "gap_severity": "MEDIUM",
+        "ikros_gap_id": "DC2-GAP-20260802-0011",
+        "market": "CHF"
+      },
+      {
+        "expected_contribution": "Duration positioning and flight-to-quality flows.",
+        "gap_severity": "HIGH",
+        "ikros_gap_id": "DC2-GAP-20260802-0012",
+        "market": "Bond Futures"
+      },
+      {
+        "expected_contribution": "Institutional positioning and retail flow pressure on gold.",
+        "gap_severity": "HIGH",
+        "ikros_gap_id": "DC2-GAP-20260802-0013",
+        "market": "ETF Flows (GLD)"
+      },
+      {
+        "expected_contribution": "Futures open interest and COT-style positioning for crowding signals.",
+        "gap_severity": "HIGH",
+        "ikros_gap_id": "DC2-GAP-20260802-0014",
+        "market": "COMEX Positioning"
+      }
+    ]
+  },
+  "program": {
+    "authority": "Architecture Review Board (ARB)",
+    "available_signals": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "dxy_return_20",
+      "yield_curve_10y_3m",
+      "yield_10y_change_5",
+      "yield_30y_change_20",
+      "fed_surprise",
+      "geo_severity",
+      "macro_pressure",
+      "forward_expectation"
+    ],
+    "cycle": "Discovery Cycle 2",
+    "governing_feature_catalogue": "Institutional Feature Catalogue v1",
+    "governing_taxonomy": "Institutional Six-State Overlay Taxonomy v1",
+    "research_themes": [
+      "Theme 1: Cross-Asset Lead-Lag",
+      "Theme 2: Information Flow",
+      "Theme 3: Transition Ecology",
+      "Theme 4: Market Synchronization",
+      "Theme 5: Adaptive Behaviour"
+    ],
+    "rows_analyzed": 6257,
+    "title": "DC2 Research Program A \u2014 Cross-Asset Transition Ecology",
+    "unavailable_markets": 14
+  },
+  "theme1_lead_lag": {
+    "regime_conditioned": {
+      "bear_unwind": {
+        "dxy_return_1": {
+          "best_correlation": 0.0236,
+          "best_lead_lag": 3
+        },
+        "dxy_return_5": {
+          "best_correlation": 0.0635,
+          "best_lead_lag": 1
+        },
+        "macro_pressure": {
+          "best_correlation": -0.0712,
+          "best_lead_lag": 1
+        },
+        "yield_10y_change_5": {
+          "best_correlation": 0.0,
+          "best_lead_lag": 0
+        }
+      },
+      "bull_trend": {
+        "dxy_return_1": {
+          "best_correlation": -0.0693,
+          "best_lead_lag": 1
+        },
+        "dxy_return_5": {
+          "best_correlation": 0.1316,
+          "best_lead_lag": 5
+        },
+        "macro_pressure": {
+          "best_correlation": -0.1426,
+          "best_lead_lag": 5
+        },
+        "yield_10y_change_5": {
+          "best_correlation": 0.0,
+          "best_lead_lag": 0
+        }
+      },
+      "calm_carry": {
+        "dxy_return_1": {
+          "best_correlation": 0.0833,
+          "best_lead_lag": 2
+        },
+        "dxy_return_5": {
+          "best_correlation": 0.0779,
+          "best_lead_lag": 5
+        },
+        "macro_pressure": {
+          "best_correlation": -0.0908,
+          "best_lead_lag": 5
+        },
+        "yield_10y_change_5": {
+          "best_correlation": 0.0,
+          "best_lead_lag": 0
+        }
+      },
+      "crisis_dislocation": {
+        "dxy_return_1": {
+          "best_correlation": -0.132,
+          "best_lead_lag": 1
+        },
+        "dxy_return_5": {
+          "best_correlation": 0.1059,
+          "best_lead_lag": 3
+        },
+        "macro_pressure": {
+          "best_correlation": -0.1076,
+          "best_lead_lag": 3
+        },
+        "yield_10y_change_5": {
+          "best_correlation": 0.0,
+          "best_lead_lag": 0
+        }
+      },
+      "macro_transition": {
+        "dxy_return_1": {
+          "best_correlation": -0.1461,
+          "best_lead_lag": 1
+        },
+        "dxy_return_5": {
+          "best_correlation": -0.1801,
+          "best_lead_lag": 1
+        },
+        "macro_pressure": {
+          "best_correlation": 0.1833,
+          "best_lead_lag": 1
+        },
+        "yield_10y_change_5": {
+          "best_correlation": 0.0,
+          "best_lead_lag": 0
+        }
+      },
+      "range_compression": {
+        "dxy_return_1": {
+          "best_correlation": 0.0584,
+          "best_lead_lag": 3
+        },
+        "dxy_return_5": {
+          "best_correlation": 0.0764,
+          "best_lead_lag": 1
+        },
+        "macro_pressure": {
+          "best_correlation": -0.0723,
+          "best_lead_lag": 1
+        },
+        "yield_10y_change_5": {
+          "best_correlation": 0.0,
+          "best_lead_lag": 0
+        }
+      }
+    },
+    "unconditional": {
+      "dxy_return_1": {
+        "category": "USD_pressure",
+        "economic_rationale": "Immediate USD pressure is the primary cross-asset antagonist to gold.",
+        "lead_direction": "contemporaneous",
+        "market": "DXY",
+        "peak_correlation": -0.4003,
+        "peak_lag_days": 0,
+        "profile": {
+          "-1": -0.0086,
+          "-10": -0.0039,
+          "-15": -0.0212,
+          "-2": -0.0444,
+          "-20": 0.0069,
+          "-3": -0.0119,
+          "-5": -0.0134,
+          "-7": -0.0076,
+          "0": -0.4003,
+          "1": -0.047,
+          "10": 0.0207,
+          "15": 0.0123,
+          "2": 0.0118,
+          "20": 0.0039,
+          "3": 0.0191,
+          "5": -0.0034,
+          "7": 0.0084
+        },
+        "t_stat_proxy": 34.547,
+        "title": "DXY 1-day return"
+      },
+      "dxy_return_20": {
+        "category": "USD_pressure",
+        "economic_rationale": "Trend-horizon DXY context shapes institutional gold positioning.",
+        "lead_direction": "lagged",
+        "market": "DXY",
+        "peak_correlation": -0.1052,
+        "peak_lag_days": -5,
+        "profile": {
+          "-1": -0.0854,
+          "-10": -0.0895,
+          "-15": -0.097,
+          "-2": -0.0965,
+          "-20": -0.0097,
+          "-3": -0.1003,
+          "-5": -0.1052,
+          "-7": -0.1035,
+          "0": -0.082,
+          "1": 0.0081,
+          "10": -0.0034,
+          "15": 0.0013,
+          "2": 0.0177,
+          "20": 0.0017,
+          "3": 0.0213,
+          "5": 0.0137,
+          "7": 0.0144
+        },
+        "t_stat_proxy": 8.365,
+        "title": "DXY 20-day return"
+      },
+      "dxy_return_5": {
+        "category": "USD_pressure",
+        "economic_rationale": "Five-day DXY momentum captures whether USD strength is building or fading.",
+        "lead_direction": "lagged",
+        "market": "DXY",
+        "peak_correlation": -0.2305,
+        "peak_lag_days": -3,
+        "profile": {
+          "-1": -0.1909,
+          "-10": 0.0264,
+          "-15": 0.0003,
+          "-2": -0.2194,
+          "-20": -0.0097,
+          "-3": -0.2305,
+          "-5": -0.0371,
+          "-7": -0.0107,
+          "0": -0.1827,
+          "1": -0.0045,
+          "10": -0.0053,
+          "15": 0.0082,
+          "2": 0.0232,
+          "20": 0.0099,
+          "3": 0.022,
+          "5": 0.0152,
+          "7": 0.005
+        },
+        "t_stat_proxy": 18.735,
+        "title": "DXY 5-day return"
+      },
+      "fed_surprise": {
+        "category": "macro_event",
+        "economic_rationale": "Unanticipated policy surprises immediately reprice gold relative to real rates.",
+        "lead_direction": "lagged",
+        "market": "Economic_Calendar",
+        "peak_correlation": 0.0,
+        "peak_lag_days": -20,
+        "profile": {
+          "-1": 0.0,
+          "-10": 0.0,
+          "-15": 0.0,
+          "-2": 0.0,
+          "-20": 0.0,
+          "-3": 0.0,
+          "-5": 0.0,
+          "-7": 0.0,
+          "0": 0.0,
+          "1": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "2": 0.0,
+          "20": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "7": 0.0
+        },
+        "t_stat_proxy": 0.0,
+        "title": "Fed announcement surprise"
+      },
+      "forward_expectation": {
+        "category": "expectation",
+        "economic_rationale": "Blends yield curve change, Fed surprise, and DXY trend to proxy institutional forward expectations.",
+        "lead_direction": "lagged",
+        "market": "Composite",
+        "peak_correlation": 0.1052,
+        "peak_lag_days": -5,
+        "profile": {
+          "-1": 0.0854,
+          "-10": 0.0895,
+          "-15": 0.097,
+          "-2": 0.0965,
+          "-20": 0.0097,
+          "-3": 0.1003,
+          "-5": 0.1052,
+          "-7": 0.1035,
+          "0": 0.082,
+          "1": -0.0081,
+          "10": 0.0034,
+          "15": -0.0013,
+          "2": -0.0177,
+          "20": -0.0017,
+          "3": -0.0213,
+          "5": -0.0137,
+          "7": -0.0144
+        },
+        "t_stat_proxy": 8.365,
+        "title": "Forward expectation spread"
+      },
+      "geo_severity": {
+        "category": "safe_haven_demand",
+        "economic_rationale": "Geopolitical stress elevates safe-haven demand and can break normal cross-asset correlations.",
+        "lead_direction": "lagged",
+        "market": "Geopolitical",
+        "peak_correlation": 0.0039,
+        "peak_lag_days": -1,
+        "profile": {
+          "-1": 0.0039,
+          "-10": 0.0014,
+          "-15": 0.0005,
+          "-2": 0.0031,
+          "-20": 0.002,
+          "-3": 0.0018,
+          "-5": 0.0032,
+          "-7": 0.0025,
+          "0": 0.0009,
+          "1": 0.0009,
+          "10": -0.0007,
+          "15": -0.0017,
+          "2": 0.0023,
+          "20": -0.0037,
+          "3": -0.0008,
+          "5": -0.0008,
+          "7": -0.0028
+        },
+        "t_stat_proxy": 0.312,
+        "title": "Geopolitical severity score"
+      },
+      "macro_pressure": {
+        "category": "macro_composite",
+        "economic_rationale": "Composite of DXY, yield, and Fed signals that captures the regime-defining macro environment.",
+        "lead_direction": "lagged",
+        "market": "Composite",
+        "peak_correlation": 0.2299,
+        "peak_lag_days": -3,
+        "profile": {
+          "-1": 0.1907,
+          "-10": -0.0261,
+          "-15": -0.0002,
+          "-2": 0.219,
+          "-20": 0.01,
+          "-3": 0.2299,
+          "-5": 0.0374,
+          "-7": 0.0111,
+          "0": 0.1821,
+          "1": 0.0046,
+          "10": 0.0052,
+          "15": -0.0084,
+          "2": -0.0227,
+          "20": -0.0104,
+          "3": -0.022,
+          "5": -0.0152,
+          "7": -0.0054
+        },
+        "t_stat_proxy": 18.682,
+        "title": "Macro pressure composite"
+      },
+      "yield_10y_change_5": {
+        "category": "real_rates",
+        "economic_rationale": "Rising real rates suppress gold opportunity cost; falling rates support it.",
+        "lead_direction": "lagged",
+        "market": "US_Treasuries",
+        "peak_correlation": 0.0,
+        "peak_lag_days": -20,
+        "profile": {
+          "-1": 0.0,
+          "-10": 0.0,
+          "-15": 0.0,
+          "-2": 0.0,
+          "-20": 0.0,
+          "-3": 0.0,
+          "-5": 0.0,
+          "-7": 0.0,
+          "0": 0.0,
+          "1": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "2": 0.0,
+          "20": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "7": 0.0
+        },
+        "t_stat_proxy": 0.0,
+        "title": "10Y Treasury yield 5-day change"
+      },
+      "yield_30y_change_20": {
+        "category": "real_rates",
+        "economic_rationale": "Long-end yield trends anchor institutional duration and macro regime assessment.",
+        "lead_direction": "lagged",
+        "market": "US_Treasuries",
+        "peak_correlation": 0.0,
+        "peak_lag_days": -20,
+        "profile": {
+          "-1": 0.0,
+          "-10": 0.0,
+          "-15": 0.0,
+          "-2": 0.0,
+          "-20": 0.0,
+          "-3": 0.0,
+          "-5": 0.0,
+          "-7": 0.0,
+          "0": 0.0,
+          "1": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "2": 0.0,
+          "20": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "7": 0.0
+        },
+        "t_stat_proxy": 0.0,
+        "title": "30Y Treasury yield 20-day change"
+      },
+      "yield_curve_10y_3m": {
+        "category": "yield_curve",
+        "economic_rationale": "Yield curve shape reflects growth and recession expectations that drive safe-haven demand.",
+        "lead_direction": "lagged",
+        "market": "US_Treasuries",
+        "peak_correlation": 0.0,
+        "peak_lag_days": -20,
+        "profile": {
+          "-1": 0.0,
+          "-10": 0.0,
+          "-15": 0.0,
+          "-2": 0.0,
+          "-20": 0.0,
+          "-3": 0.0,
+          "-5": 0.0,
+          "-7": 0.0,
+          "0": 0.0,
+          "1": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "2": 0.0,
+          "20": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "7": 0.0
+        },
+        "t_stat_proxy": 0.0,
+        "title": "Yield curve 10Y-3M spread"
+      }
+    }
+  },
+  "theme2_information_flow": {
+    "granger_causality_proxy": {
+      "dxy_return_1": {
+        "baseline_r2": 0.00025,
+        "enhanced_r2": 0.00046,
+        "granger_positive": false,
+        "r2_gain": 0.00021
+      },
+      "dxy_return_20": {
+        "baseline_r2": 0.00025,
+        "enhanced_r2": 0.00053,
+        "granger_positive": false,
+        "r2_gain": 0.00028
+      },
+      "dxy_return_5": {
+        "baseline_r2": 0.00025,
+        "enhanced_r2": 0.00093,
+        "granger_positive": false,
+        "r2_gain": 0.00068
+      },
+      "fed_surprise": {
+        "baseline_r2": 0.00025,
+        "enhanced_r2": 0.00024,
+        "granger_positive": false,
+        "r2_gain": -1e-05
+      },
+      "forward_expectation": {
+        "baseline_r2": 0.00025,
+        "enhanced_r2": 0.00053,
+        "granger_positive": false,
+        "r2_gain": 0.00028
+      },
+      "geo_severity": {
+        "baseline_r2": 0.00025,
+        "enhanced_r2": 0.00025,
+        "granger_positive": false,
+        "r2_gain": 0.0
+      },
+      "macro_pressure": {
+        "baseline_r2": 0.00025,
+        "enhanced_r2": 0.00094,
+        "granger_positive": false,
+        "r2_gain": 0.0007
+      },
+      "yield_10y_change_5": {
+        "baseline_r2": 0.00025,
+        "enhanced_r2": 0.00024,
+        "granger_positive": false,
+        "r2_gain": -1e-05
+      },
+      "yield_30y_change_20": {
+        "baseline_r2": 0.00025,
+        "enhanced_r2": 0.00024,
+        "granger_positive": false,
+        "r2_gain": -1e-05
+      },
+      "yield_curve_10y_3m": {
+        "baseline_r2": 0.00025,
+        "enhanced_r2": 0.00024,
+        "granger_positive": false,
+        "r2_gain": -1e-05
+      }
+    },
+    "regime_conditioned_mi": {
+      "dxy_return_1": {
+        "bear_unwind": 0.07074,
+        "bull_trend": 0.0,
+        "calm_carry": 0.06968,
+        "crisis_dislocation": 0.02797,
+        "macro_transition": 0.10492,
+        "range_compression": 0.07628
+      },
+      "dxy_return_5": {
+        "bear_unwind": 0.01007,
+        "bull_trend": 0.0,
+        "calm_carry": 0.01396,
+        "crisis_dislocation": 0.01095,
+        "macro_transition": 0.04913,
+        "range_compression": 0.00531
+      },
+      "macro_pressure": {
+        "bear_unwind": 0.01193,
+        "bull_trend": 0.0,
+        "calm_carry": 0.01727,
+        "crisis_dislocation": 0.0078,
+        "macro_transition": 0.05362,
+        "range_compression": 0.00524
+      },
+      "yield_curve_10y_3m": {
+        "bear_unwind": 0.0,
+        "bull_trend": 0.0,
+        "calm_carry": 0.0,
+        "crisis_dislocation": 0.0,
+        "macro_transition": 0.0,
+        "range_compression": 0.0
+      }
+    },
+    "transfer_entropy_proxy": {
+      "dxy_return_1": {
+        "contemporaneous_mi": 0.07207,
+        "information_gain_from_lag": -0.07115,
+        "interpretation": "negligible",
+        "mi_profile": {
+          "1": 0.00076,
+          "10": 0.00049,
+          "15": 0.00056,
+          "2": 0.00057,
+          "20": 0.00092,
+          "3": 0.00029,
+          "5": 0.00044,
+          "7": 0.00039
+        },
+        "peak_lag_days": 20,
+        "peak_mi": 0.00092
+      },
+      "dxy_return_20": {
+        "contemporaneous_mi": 0.00407,
+        "information_gain_from_lag": -0.00314,
+        "interpretation": "negligible",
+        "mi_profile": {
+          "1": 0.00067,
+          "10": 0.00045,
+          "15": 0.00017,
+          "2": 0.00051,
+          "20": 0.00038,
+          "3": 0.0008,
+          "5": 0.00094,
+          "7": 0.0003
+        },
+        "peak_lag_days": 5,
+        "peak_mi": 0.00094
+      },
+      "dxy_return_5": {
+        "contemporaneous_mi": 0.01163,
+        "information_gain_from_lag": -0.01042,
+        "interpretation": "signal_informative",
+        "mi_profile": {
+          "1": 0.00046,
+          "10": 0.00053,
+          "15": 0.00095,
+          "2": 0.00058,
+          "20": 0.00093,
+          "3": 0.00106,
+          "5": 0.00067,
+          "7": 0.00122
+        },
+        "peak_lag_days": 7,
+        "peak_mi": 0.00122
+      },
+      "fed_surprise": {
+        "contemporaneous_mi": 0.0,
+        "information_gain_from_lag": 0.0,
+        "interpretation": "negligible",
+        "mi_profile": {
+          "1": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "2": 0.0,
+          "20": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "7": 0.0
+        },
+        "peak_lag_days": 1,
+        "peak_mi": 0.0
+      },
+      "forward_expectation": {
+        "contemporaneous_mi": 0.00407,
+        "information_gain_from_lag": -0.00314,
+        "interpretation": "negligible",
+        "mi_profile": {
+          "1": 0.00067,
+          "10": 0.00045,
+          "15": 0.00017,
+          "2": 0.00051,
+          "20": 0.00038,
+          "3": 0.0008,
+          "5": 0.00094,
+          "7": 0.0003
+        },
+        "peak_lag_days": 5,
+        "peak_mi": 0.00094
+      },
+      "geo_severity": {
+        "contemporaneous_mi": 0.0002,
+        "information_gain_from_lag": -0.0,
+        "interpretation": "negligible",
+        "mi_profile": {
+          "1": 0.0002,
+          "10": 0.0002,
+          "15": 0.00019,
+          "2": 0.00019,
+          "20": 0.00016,
+          "3": 0.00018,
+          "5": 0.0002,
+          "7": 0.00018
+        },
+        "peak_lag_days": 1,
+        "peak_mi": 0.0002
+      },
+      "macro_pressure": {
+        "contemporaneous_mi": 0.01183,
+        "information_gain_from_lag": -0.01079,
+        "interpretation": "signal_informative",
+        "mi_profile": {
+          "1": 0.00048,
+          "10": 0.00063,
+          "15": 0.00085,
+          "2": 0.00076,
+          "20": 0.00048,
+          "3": 0.00105,
+          "5": 0.00086,
+          "7": 0.00047
+        },
+        "peak_lag_days": 3,
+        "peak_mi": 0.00105
+      },
+      "yield_10y_change_5": {
+        "contemporaneous_mi": 0.0,
+        "information_gain_from_lag": 0.0,
+        "interpretation": "negligible",
+        "mi_profile": {
+          "1": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "2": 0.0,
+          "20": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "7": 0.0
+        },
+        "peak_lag_days": 1,
+        "peak_mi": 0.0
+      },
+      "yield_30y_change_20": {
+        "contemporaneous_mi": 0.0,
+        "information_gain_from_lag": 0.0,
+        "interpretation": "negligible",
+        "mi_profile": {
+          "1": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "2": 0.0,
+          "20": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "7": 0.0
+        },
+        "peak_lag_days": 1,
+        "peak_mi": 0.0
+      },
+      "yield_curve_10y_3m": {
+        "contemporaneous_mi": 0.0,
+        "information_gain_from_lag": 0.0,
+        "interpretation": "negligible",
+        "mi_profile": {
+          "1": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "2": 0.0,
+          "20": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "7": 0.0
+        },
+        "peak_lag_days": 1,
+        "peak_mi": 0.0
+      }
+    }
+  },
+  "theme3_transition_ecology": {
+    "aggregated_profiles": {
+      "bear_unwind\u2192calm_carry": {
+        "count": 20,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.001831,
+            "w+1": -0.001137,
+            "w+10": 2.3e-05,
+            "w+2": 0.000246,
+            "w+5": -0.000658,
+            "w-1": 0.000464,
+            "w-10": 0.00073,
+            "w-2": -0.000758,
+            "w-5": -0.000177
+          },
+          "dxy_return_5": {
+            "w+0": -0.002272,
+            "w+1": -0.003412,
+            "w+10": -0.001152,
+            "w+2": -0.00302,
+            "w+5": -0.002614,
+            "w-1": -0.000617,
+            "w-10": -6.1e-05,
+            "w-2": -0.000328,
+            "w-5": 0.001155
+          },
+          "forward_expectation": {
+            "w+0": -0.018437,
+            "w+1": -0.001114,
+            "w+10": 0.048679,
+            "w+2": 0.002999,
+            "w+5": 0.037906,
+            "w-1": -0.046968,
+            "w-10": -0.128141,
+            "w-2": -0.066155,
+            "w-5": -0.084295
+          },
+          "geo_severity": {
+            "w+0": 0.2375,
+            "w+1": 0.2375,
+            "w+10": 0.2375,
+            "w+2": 0.2375,
+            "w+5": 0.2375,
+            "w-1": 0.2375,
+            "w-10": 0.2375,
+            "w-2": 0.2375,
+            "w-5": 0.2375
+          },
+          "macro_pressure": {
+            "w+0": 0.161084,
+            "w+1": 0.218098,
+            "w+10": 0.105101,
+            "w+2": 0.198491,
+            "w+5": 0.178192,
+            "w-1": 0.078357,
+            "w-10": 0.050561,
+            "w-2": 0.063903,
+            "w-5": -0.010231
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "bear_unwind\u2192crisis_dislocation": {
+        "count": 7,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.000443,
+            "w+1": -0.004933,
+            "w+10": 0.001376,
+            "w+2": 0.00055,
+            "w+5": 0.0021,
+            "w-1": 0.004593,
+            "w-10": -0.001565,
+            "w-2": -0.000465,
+            "w-5": 0.003296
+          },
+          "dxy_return_5": {
+            "w+0": 0.004053,
+            "w+1": -0.000917,
+            "w+10": -0.000741,
+            "w+2": -0.000686,
+            "w+5": -0.002769,
+            "w-1": 0.007773,
+            "w-10": 0.001512,
+            "w-2": 0.003965,
+            "w-5": 0.001575
+          },
+          "forward_expectation": {
+            "w+0": -0.062713,
+            "w+1": -0.018082,
+            "w+10": -0.020557,
+            "w+2": -0.007626,
+            "w+5": -0.042599,
+            "w-1": -0.067052,
+            "w-10": -0.008122,
+            "w-2": -0.038616,
+            "w-5": -0.048955
+          },
+          "geo_severity": {
+            "w+0": 0.571429,
+            "w+1": 0.464286,
+            "w+10": 0.464286,
+            "w+2": 0.464286,
+            "w+5": 0.464286,
+            "w-1": 0.571429,
+            "w-10": 0.464286,
+            "w-2": 0.464286,
+            "w-5": 0.464286
+          },
+          "macro_pressure": {
+            "w+0": -0.088358,
+            "w+1": 0.138707,
+            "w+10": 0.129891,
+            "w+2": 0.127171,
+            "w+5": 0.231332,
+            "w-1": -0.274376,
+            "w-10": 0.017268,
+            "w-2": -0.105392,
+            "w-5": 0.014099
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "bear_unwind\u2192macro_transition": {
+        "count": 49,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.000244,
+            "w+1": 0.000926,
+            "w+10": -8e-05,
+            "w+2": -2.2e-05,
+            "w+5": 0.000399,
+            "w-1": 0.000422,
+            "w-10": 0.002063,
+            "w-2": 0.00139,
+            "w-5": -0.0001
+          },
+          "dxy_return_5": {
+            "w+0": 0.003493,
+            "w+1": 0.003398,
+            "w+10": 0.000392,
+            "w+2": 0.00299,
+            "w+5": 0.001679,
+            "w-1": 0.003036,
+            "w-10": 0.00642,
+            "w-2": 0.003857,
+            "w-5": 0.003885
+          },
+          "forward_expectation": {
+            "w+0": -0.149762,
+            "w+1": -0.151105,
+            "w+10": -0.093683,
+            "w+2": -0.151809,
+            "w+5": -0.153875,
+            "w-1": -0.140039,
+            "w-10": -0.117718,
+            "w-2": -0.147477,
+            "w-5": -0.118681
+          },
+          "geo_severity": {
+            "w+0": 0.188776,
+            "w+1": 0.188776,
+            "w+10": 0.188776,
+            "w+2": 0.188776,
+            "w+5": 0.188776,
+            "w-1": 0.188776,
+            "w-10": 0.193878,
+            "w-2": 0.188776,
+            "w-5": 0.188776
+          },
+          "macro_pressure": {
+            "w+0": -0.136869,
+            "w+1": -0.132127,
+            "w+10": 0.018149,
+            "w+2": -0.111725,
+            "w+5": -0.04619,
+            "w-1": -0.114059,
+            "w-10": -0.282223,
+            "w-2": -0.155107,
+            "w-5": -0.156474
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "bear_unwind\u2192range_compression": {
+        "count": 76,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.002011,
+            "w+1": 0.000332,
+            "w+10": 0.000442,
+            "w+2": -0.000587,
+            "w+5": 0.000391,
+            "w-1": 0.000444,
+            "w-10": 0.001135,
+            "w-2": -0.000135,
+            "w-5": -0.000325
+          },
+          "dxy_return_5": {
+            "w+0": -0.001131,
+            "w+1": -0.001478,
+            "w+10": 0.000721,
+            "w+2": -0.002025,
+            "w+5": 0.001438,
+            "w-1": 0.000554,
+            "w-10": 0.000175,
+            "w-2": 0.000389,
+            "w-5": 0.001228
+          },
+          "forward_expectation": {
+            "w+0": -0.02333,
+            "w+1": -0.024781,
+            "w+10": -0.021799,
+            "w+2": -0.011232,
+            "w+5": -0.015877,
+            "w-1": -0.041162,
+            "w-10": -0.061855,
+            "w-2": -0.046418,
+            "w-5": -0.054056
+          },
+          "geo_severity": {
+            "w+0": 0.256579,
+            "w+1": 0.26,
+            "w+10": 0.263514,
+            "w+2": 0.26,
+            "w+5": 0.263514,
+            "w-1": 0.256579,
+            "w-10": 0.256579,
+            "w-2": 0.256579,
+            "w-5": 0.256579
+          },
+          "macro_pressure": {
+            "w+0": 0.107892,
+            "w+1": 0.125904,
+            "w+10": 0.016671,
+            "w+2": 0.153236,
+            "w+5": -0.019212,
+            "w-1": 0.023603,
+            "w-10": 0.042572,
+            "w-2": 0.031873,
+            "w-5": -0.01007
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "bull_trend\u2192calm_carry": {
+        "count": 14,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.000727,
+            "w+1": -0.001457,
+            "w+10": -0.000238,
+            "w+2": -0.001257,
+            "w+5": 0.000572,
+            "w-1": -0.003005,
+            "w-10": -0.000601,
+            "w-2": 0.00039,
+            "w-5": -0.001771
+          },
+          "dxy_return_5": {
+            "w+0": -0.003091,
+            "w+1": -0.004475,
+            "w+10": -0.004047,
+            "w+2": -0.004611,
+            "w+5": -0.002328,
+            "w-1": -0.005578,
+            "w-10": -0.002123,
+            "w-2": -0.001782,
+            "w-5": -0.004746
+          },
+          "forward_expectation": {
+            "w+0": 0.099146,
+            "w+1": 0.11551,
+            "w+10": 0.141415,
+            "w+2": 0.133891,
+            "w+5": 0.122139,
+            "w-1": 0.113084,
+            "w-10": 0.08908,
+            "w-2": 0.096231,
+            "w-5": 0.101581
+          },
+          "geo_severity": {
+            "w+0": 0.464286,
+            "w+1": 0.464286,
+            "w+10": 0.464286,
+            "w+2": 0.464286,
+            "w+5": 0.464286,
+            "w-1": 0.464286,
+            "w-10": 0.357143,
+            "w-2": 0.464286,
+            "w-5": 0.392857
+          },
+          "macro_pressure": {
+            "w+0": 0.247417,
+            "w+1": 0.316598,
+            "w+10": 0.295225,
+            "w+2": 0.323391,
+            "w+5": 0.209279,
+            "w-1": 0.371752,
+            "w-10": 0.177581,
+            "w-2": 0.181978,
+            "w-5": 0.315873
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "bull_trend\u2192crisis_dislocation": {
+        "count": 2,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.003214,
+            "w+1": 0.001358,
+            "w+10": 0.008663,
+            "w+2": -0.000767,
+            "w+5": -0.000708,
+            "w-1": -0.004098,
+            "w-10": -0.001162,
+            "w-2": 0.000444,
+            "w-5": -0.005307
+          },
+          "dxy_return_5": {
+            "w+0": 0.000232,
+            "w+1": -0.003286,
+            "w+10": 0.014185,
+            "w+2": 0.000106,
+            "w+5": -0.001033,
+            "w-1": -0.008279,
+            "w-10": 0.001667,
+            "w-2": -0.003389,
+            "w-5": -0.007917
+          },
+          "forward_expectation": {
+            "w+0": 0.13675,
+            "w+1": 0.050398,
+            "w+10": -0.052537,
+            "w+2": 0.079469,
+            "w+5": 0.070983,
+            "w-1": 0.188064,
+            "w-10": 0.216537,
+            "w-2": 0.08649,
+            "w-5": 0.274339
+          },
+          "geo_severity": {
+            "w+0": 0.75,
+            "w+1": 0.75,
+            "w+10": 0.75,
+            "w+2": 0.75,
+            "w+5": 0.75,
+            "w-1": 0.75,
+            "w-10": 0.75,
+            "w-2": 0.75,
+            "w-5": 0.75
+          },
+          "macro_pressure": {
+            "w+0": 0.13842,
+            "w+1": 0.314273,
+            "w+10": -0.559235,
+            "w+2": 0.144697,
+            "w+5": 0.201662,
+            "w-1": 0.563932,
+            "w-10": 0.066667,
+            "w-2": 0.319443,
+            "w-5": 0.545882
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "bull_trend\u2192macro_transition": {
+        "count": 24,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.005263,
+            "w+1": -0.000561,
+            "w+10": -0.000475,
+            "w+2": -0.000678,
+            "w+5": -0.001029,
+            "w-1": -0.00427,
+            "w-10": 0.001798,
+            "w-2": -0.001448,
+            "w-5": 0.002965
+          },
+          "dxy_return_5": {
+            "w+0": -0.015736,
+            "w+1": -0.014444,
+            "w+10": -0.002393,
+            "w+2": -0.012168,
+            "w+5": -0.004112,
+            "w-1": -0.007626,
+            "w-10": -0.003075,
+            "w-2": -0.004686,
+            "w-5": -0.000484
+          },
+          "forward_expectation": {
+            "w+0": 0.237188,
+            "w+1": 0.225311,
+            "w+10": 0.225989,
+            "w+2": 0.236121,
+            "w+5": 0.232667,
+            "w-1": 0.198953,
+            "w-10": 0.140024,
+            "w-2": 0.141109,
+            "w-5": 0.089877
+          },
+          "geo_severity": {
+            "w+0": 0.104167,
+            "w+1": 0.104167,
+            "w+10": 0.104167,
+            "w+2": 0.104167,
+            "w+5": 0.104167,
+            "w-1": 0.104167,
+            "w-10": 0.104167,
+            "w-2": 0.104167,
+            "w-5": 0.104167
+          },
+          "macro_pressure": {
+            "w+0": 0.807621,
+            "w+1": 0.743022,
+            "w+10": 0.140483,
+            "w+2": 0.62923,
+            "w+5": 0.226417,
+            "w-1": 0.402112,
+            "w-10": 0.174563,
+            "w-2": 0.255143,
+            "w-5": 0.045049
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "bull_trend\u2192range_compression": {
+        "count": 101,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.000997,
+            "w+1": 0.000456,
+            "w+10": 0.000235,
+            "w+2": -0.000368,
+            "w+5": 0.000303,
+            "w-1": -0.001678,
+            "w-10": -0.000469,
+            "w-2": -0.000644,
+            "w-5": 2.5e-05
+          },
+          "dxy_return_5": {
+            "w+0": -0.003225,
+            "w+1": -0.001885,
+            "w+10": -0.001981,
+            "w+2": -0.001234,
+            "w+5": -0.00042,
+            "w-1": -0.004196,
+            "w-10": -0.001961,
+            "w-2": -0.002763,
+            "w-5": -0.001398
+          },
+          "forward_expectation": {
+            "w+0": 0.101909,
+            "w+1": 0.092101,
+            "w+10": 0.069409,
+            "w+2": 0.088044,
+            "w+5": 0.069473,
+            "w-1": 0.118082,
+            "w-10": 0.0997,
+            "w-2": 0.112675,
+            "w-5": 0.109676
+          },
+          "geo_severity": {
+            "w+0": 0.143564,
+            "w+1": 0.143564,
+            "w+10": 0.143564,
+            "w+2": 0.143564,
+            "w+5": 0.143564,
+            "w-1": 0.143564,
+            "w-10": 0.128713,
+            "w-2": 0.143564,
+            "w-5": 0.136139
+          },
+          "macro_pressure": {
+            "w+0": 0.189971,
+            "w+1": 0.12295,
+            "w+10": 0.127787,
+            "w+2": 0.090418,
+            "w+5": 0.049713,
+            "w-1": 0.238531,
+            "w-10": 0.123792,
+            "w-2": 0.166846,
+            "w-5": 0.09714
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "calm_carry\u2192bear_unwind": {
+        "count": 23,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.001411,
+            "w+1": 0.000617,
+            "w+10": 0.000653,
+            "w+2": 0.001647,
+            "w+5": -0.000239,
+            "w-1": 0.000204,
+            "w-10": 0.000465,
+            "w-2": 0.001449,
+            "w-5": -6.9e-05
+          },
+          "dxy_return_5": {
+            "w+0": 0.002519,
+            "w+1": 0.003923,
+            "w+10": 0.000422,
+            "w+2": 0.005331,
+            "w+5": 0.001779,
+            "w-1": 0.001038,
+            "w-10": 0.003681,
+            "w-2": 0.001361,
+            "w-5": 0.000676
+          },
+          "forward_expectation": {
+            "w+0": -0.087384,
+            "w+1": -0.088963,
+            "w+10": -0.054042,
+            "w+2": -0.098211,
+            "w+5": -0.086845,
+            "w-1": -0.085796,
+            "w-10": -0.113072,
+            "w-2": -0.091302,
+            "w-5": -0.109007
+          },
+          "geo_severity": {
+            "w+0": 0.26087,
+            "w+1": 0.26087,
+            "w+10": 0.293478,
+            "w+2": 0.26087,
+            "w+5": 0.26087,
+            "w-1": 0.26087,
+            "w-10": 0.26087,
+            "w-2": 0.26087,
+            "w-5": 0.26087
+          },
+          "macro_pressure": {
+            "w+0": -0.073744,
+            "w+1": -0.143964,
+            "w+10": 0.037623,
+            "w+2": -0.214361,
+            "w+5": -0.036772,
+            "w-1": 0.000269,
+            "w-10": -0.131889,
+            "w-2": -0.015875,
+            "w-5": 0.018384
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "calm_carry\u2192bull_trend": {
+        "count": 18,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.001544,
+            "w+1": -0.00381,
+            "w+10": -0.000976,
+            "w+2": 0.00169,
+            "w+5": -0.003274,
+            "w-1": -0.000999,
+            "w-10": -0.000845,
+            "w-2": 0.000399,
+            "w-5": -0.000806
+          },
+          "dxy_return_5": {
+            "w+0": -0.002686,
+            "w+1": -0.006659,
+            "w+10": -0.001983,
+            "w+2": -0.004276,
+            "w+5": -0.005018,
+            "w-1": -0.001958,
+            "w-10": -0.004265,
+            "w-2": -0.002287,
+            "w-5": -0.002091
+          },
+          "forward_expectation": {
+            "w+0": 0.113804,
+            "w+1": 0.145596,
+            "w+10": 0.117334,
+            "w+2": 0.111708,
+            "w+5": 0.139674,
+            "w-1": 0.084721,
+            "w-10": 0.13827,
+            "w-2": 0.082689,
+            "w-5": 0.120678
+          },
+          "geo_severity": {
+            "w+0": 0.472222,
+            "w+1": 0.472222,
+            "w+10": 0.472222,
+            "w+2": 0.472222,
+            "w+5": 0.472222,
+            "w-1": 0.472222,
+            "w-10": 0.388889,
+            "w-2": 0.472222,
+            "w-5": 0.416667
+          },
+          "macro_pressure": {
+            "w+0": 0.228762,
+            "w+1": 0.427375,
+            "w+10": 0.193598,
+            "w+2": 0.308256,
+            "w+5": 0.345323,
+            "w-1": 0.19235,
+            "w-10": 0.291006,
+            "w-2": 0.208812,
+            "w-5": 0.187867
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "calm_carry\u2192macro_transition": {
+        "count": 38,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.002545,
+            "w+1": -7.5e-05,
+            "w+10": 1.4e-05,
+            "w+2": -0.000351,
+            "w+5": 0.000324,
+            "w-1": 1.3e-05,
+            "w-10": -0.001398,
+            "w-2": -0.001912,
+            "w-5": 3.6e-05
+          },
+          "dxy_return_5": {
+            "w+0": -0.007348,
+            "w+1": -0.005573,
+            "w+10": 0.001732,
+            "w+2": -0.004853,
+            "w+5": -0.001665,
+            "w-1": -0.004839,
+            "w-10": -0.003138,
+            "w-2": -0.005116,
+            "w-5": -0.001159
+          },
+          "forward_expectation": {
+            "w+0": 0.142629,
+            "w+1": 0.139504,
+            "w+10": 0.08434,
+            "w+2": 0.132882,
+            "w+5": 0.132891,
+            "w-1": 0.11826,
+            "w-10": 0.027975,
+            "w-2": 0.115383,
+            "w-5": 0.03832
+          },
+          "geo_severity": {
+            "w+0": 0.223684,
+            "w+1": 0.223684,
+            "w+10": 0.210526,
+            "w+2": 0.223684,
+            "w+5": 0.223684,
+            "w-1": 0.223684,
+            "w-10": 0.243421,
+            "w-2": 0.223684,
+            "w-5": 0.223684
+          },
+          "macro_pressure": {
+            "w+0": 0.412153,
+            "w+1": 0.323383,
+            "w+10": -0.044516,
+            "w+2": 0.287388,
+            "w+5": 0.127989,
+            "w-1": 0.286697,
+            "w-10": 0.205576,
+            "w-2": 0.300525,
+            "w-5": 0.102659
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "calm_carry\u2192range_compression": {
+        "count": 74,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.000377,
+            "w+1": -0.000477,
+            "w+10": 0.00046,
+            "w+2": 1.6e-05,
+            "w+5": 0.00021,
+            "w-1": 0.000149,
+            "w-10": -0.000297,
+            "w-2": -0.000685,
+            "w-5": -0.000716
+          },
+          "dxy_return_5": {
+            "w+0": 0.000201,
+            "w+1": -0.000167,
+            "w+10": -0.000474,
+            "w+2": -0.000612,
+            "w+5": 3.6e-05,
+            "w-1": -0.00089,
+            "w-10": -0.002298,
+            "w-2": -0.001382,
+            "w-5": -0.002943
+          },
+          "forward_expectation": {
+            "w+0": 0.052401,
+            "w+1": 0.060344,
+            "w+10": 0.031601,
+            "w+2": 0.052731,
+            "w+5": 0.050288,
+            "w-1": 0.070155,
+            "w-10": 0.035033,
+            "w-2": 0.066831,
+            "w-5": 0.048517
+          },
+          "geo_severity": {
+            "w+0": 0.219595,
+            "w+1": 0.219595,
+            "w+10": 0.216216,
+            "w+2": 0.219595,
+            "w+5": 0.209459,
+            "w-1": 0.219595,
+            "w-10": 0.219595,
+            "w-2": 0.219595,
+            "w-5": 0.219595
+          },
+          "macro_pressure": {
+            "w+0": 0.033869,
+            "w+1": 0.052287,
+            "w+10": 0.066933,
+            "w+2": 0.074528,
+            "w+5": 0.0401,
+            "w-1": 0.088439,
+            "w-10": 0.158834,
+            "w-2": 0.113035,
+            "w-5": 0.191045
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "crisis_dislocation\u2192bear_unwind": {
+        "count": 1,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.008129,
+            "w+1": 0.011132,
+            "w+10": -0.005113,
+            "w+2": -0.001331,
+            "w+5": 0.004233,
+            "w-1": 0.001336,
+            "w-10": 0.002538,
+            "w-2": 0.000729,
+            "w-5": -0.005317
+          },
+          "dxy_return_5": {
+            "w+0": -0.006804,
+            "w+1": 0.001575,
+            "w+10": -0.015657,
+            "w+2": 0.003647,
+            "w+5": 0.015657,
+            "w-1": -0.003988,
+            "w-10": 0.000845,
+            "w-2": -0.002303,
+            "w-5": -0.007596
+          },
+          "forward_expectation": {
+            "w+0": 0.113678,
+            "w+1": 0.039763,
+            "w+10": 0.145888,
+            "w+2": 0.027784,
+            "w+5": -0.019307,
+            "w-1": -0.01945,
+            "w-10": -0.08757,
+            "w-2": 0.036316,
+            "w-5": 0.031489
+          },
+          "geo_severity": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.75,
+            "w-10": 0.0,
+            "w-2": 0.75,
+            "w-5": 0.0
+          },
+          "macro_pressure": {
+            "w+0": 0.340176,
+            "w+1": -0.078762,
+            "w+10": 0.782847,
+            "w+2": -0.182373,
+            "w+5": -0.782874,
+            "w-1": 0.349397,
+            "w-10": -0.042235,
+            "w-2": 0.265153,
+            "w-5": 0.379796
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "crisis_dislocation\u2192macro_transition": {
+        "count": 4,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.005879,
+            "w+1": 0.002607,
+            "w+10": -0.002806,
+            "w+2": 0.000972,
+            "w+5": 0.002245,
+            "w-1": 0.003529,
+            "w-10": -0.001095,
+            "w-2": 0.002577,
+            "w-5": 0.000829
+          },
+          "dxy_return_5": {
+            "w+0": -0.000726,
+            "w+1": 0.002595,
+            "w+10": -0.000421,
+            "w+2": 0.003926,
+            "w+5": 0.011432,
+            "w-1": 0.005884,
+            "w-10": -0.004429,
+            "w-2": 0.006913,
+            "w-5": 0.003007
+          },
+          "forward_expectation": {
+            "w+0": -0.029187,
+            "w+1": -0.050138,
+            "w+10": -0.129253,
+            "w+2": -0.021204,
+            "w+5": -0.08861,
+            "w-1": -0.019913,
+            "w-10": 0.069699,
+            "w-2": 0.01357,
+            "w-5": 0.055899
+          },
+          "geo_severity": {
+            "w+0": 0.1875,
+            "w+1": 0.1875,
+            "w+10": 0.1875,
+            "w+2": 0.1875,
+            "w+5": 0.1875,
+            "w-1": 0.1875,
+            "w-10": 0.1875,
+            "w-2": 0.1875,
+            "w-5": 0.1875
+          },
+          "macro_pressure": {
+            "w+0": 0.073837,
+            "w+1": -0.092273,
+            "w+10": 0.058522,
+            "w+2": -0.158797,
+            "w+5": -0.534123,
+            "w-1": -0.256677,
+            "w-10": 0.258945,
+            "w-2": -0.30813,
+            "w-5": -0.112845
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "crisis_dislocation\u2192range_compression": {
+        "count": 17,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.001089,
+            "w+1": -6.4e-05,
+            "w+10": 7.8e-05,
+            "w+2": -0.00145,
+            "w+5": -0.001593,
+            "w-1": 0.000352,
+            "w-10": 0.000862,
+            "w-2": 0.001125,
+            "w-5": 0.001198
+          },
+          "dxy_return_5": {
+            "w+0": 0.001693,
+            "w+1": 0.00207,
+            "w+10": -0.002482,
+            "w+2": 0.001037,
+            "w+5": -0.002459,
+            "w-1": 0.001802,
+            "w-10": 0.002695,
+            "w-2": 0.002847,
+            "w-5": -0.000834
+          },
+          "forward_expectation": {
+            "w+0": -0.031799,
+            "w+1": -0.07191,
+            "w+10": 0.041398,
+            "w+2": -0.043185,
+            "w+5": -0.010271,
+            "w-1": -0.020269,
+            "w-10": -0.052793,
+            "w-2": -0.03444,
+            "w-5": -0.022971
+          },
+          "geo_severity": {
+            "w+0": 0.705882,
+            "w+1": 0.705882,
+            "w+10": 0.705882,
+            "w+2": 0.705882,
+            "w+5": 0.705882,
+            "w-1": 0.764706,
+            "w-10": 0.764706,
+            "w-2": 0.764706,
+            "w-5": 0.764706
+          },
+          "macro_pressure": {
+            "w+0": 0.056532,
+            "w+1": 0.037704,
+            "w+10": 0.265298,
+            "w+2": 0.089329,
+            "w+5": 0.264113,
+            "w-1": 0.062834,
+            "w-10": 0.018214,
+            "w-2": 0.010566,
+            "w-5": 0.194644
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "macro_transition\u2192bear_unwind": {
+        "count": 53,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.0003,
+            "w+1": -0.00088,
+            "w+10": 0.000596,
+            "w+2": -4.5e-05,
+            "w+5": -0.001038,
+            "w-1": 0.001322,
+            "w-10": 0.000516,
+            "w-2": 0.000237,
+            "w-5": 0.002318
+          },
+          "dxy_return_5": {
+            "w+0": 0.004039,
+            "w+1": 0.002097,
+            "w+10": 0.000481,
+            "w+2": 0.000918,
+            "w+5": -0.002091,
+            "w-1": 0.006152,
+            "w-10": 0.001501,
+            "w-2": 0.005083,
+            "w-5": 0.00696
+          },
+          "forward_expectation": {
+            "w+0": -0.160629,
+            "w+1": -0.146992,
+            "w+10": -0.094192,
+            "w+2": -0.135271,
+            "w+5": -0.103884,
+            "w-1": -0.156825,
+            "w-10": -0.071562,
+            "w-2": -0.12853,
+            "w-5": -0.11297
+          },
+          "geo_severity": {
+            "w+0": 0.179245,
+            "w+1": 0.179245,
+            "w+10": 0.179245,
+            "w+2": 0.179245,
+            "w+5": 0.179245,
+            "w-1": 0.179245,
+            "w-10": 0.179245,
+            "w-2": 0.179245,
+            "w-5": 0.179245
+          },
+          "macro_pressure": {
+            "w+0": -0.166127,
+            "w+1": -0.06901,
+            "w+10": 0.01178,
+            "w+2": -0.01006,
+            "w+5": 0.140386,
+            "w-1": -0.271727,
+            "w-10": -0.039216,
+            "w-2": -0.218297,
+            "w-5": -0.312128
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "macro_transition\u2192bull_trend": {
+        "count": 19,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.000741,
+            "w+1": -4e-06,
+            "w+10": 0.000965,
+            "w+2": 0.000371,
+            "w+5": 0.000748,
+            "w-1": -0.001648,
+            "w-10": 0.001211,
+            "w-2": -0.001645,
+            "w-5": -0.002244
+          },
+          "dxy_return_5": {
+            "w+0": -0.003476,
+            "w+1": -0.002392,
+            "w+10": -0.003607,
+            "w+2": -0.002222,
+            "w+5": 0.001179,
+            "w-1": -0.006371,
+            "w-10": 0.001064,
+            "w-2": -0.006002,
+            "w-5": -0.007533
+          },
+          "forward_expectation": {
+            "w+0": 0.149638,
+            "w+1": 0.128595,
+            "w+10": 0.132299,
+            "w+2": 0.117926,
+            "w+5": 0.085655,
+            "w-1": 0.187762,
+            "w-10": 0.058334,
+            "w-2": 0.186079,
+            "w-5": 0.151331
+          },
+          "geo_severity": {
+            "w+0": 0.289474,
+            "w+1": 0.289474,
+            "w+10": 0.289474,
+            "w+2": 0.289474,
+            "w+5": 0.289474,
+            "w-1": 0.289474,
+            "w-10": 0.289474,
+            "w-2": 0.289474,
+            "w-5": 0.289474
+          },
+          "macro_pressure": {
+            "w+0": 0.231684,
+            "w+1": 0.177509,
+            "w+10": 0.238244,
+            "w+2": 0.168998,
+            "w+5": -0.001039,
+            "w-1": 0.376463,
+            "w-10": 0.004676,
+            "w-2": 0.358009,
+            "w-5": 0.434574
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "macro_transition\u2192calm_carry": {
+        "count": 41,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.000986,
+            "w+1": -0.000636,
+            "w+10": -0.000907,
+            "w+2": -0.000802,
+            "w+5": 0.001368,
+            "w-1": -0.002308,
+            "w-10": 0.000408,
+            "w-2": -0.000913,
+            "w-5": -0.002765
+          },
+          "dxy_return_5": {
+            "w+0": -0.006757,
+            "w+1": -0.005134,
+            "w+10": 0.000214,
+            "w+2": -0.003683,
+            "w+5": 0.000576,
+            "w-1": -0.010436,
+            "w-10": -0.001648,
+            "w-2": -0.008939,
+            "w-5": -0.00586
+          },
+          "forward_expectation": {
+            "w+0": 0.171142,
+            "w+1": 0.167245,
+            "w+10": 0.117878,
+            "w+2": 0.169978,
+            "w+5": 0.135933,
+            "w-1": 0.176569,
+            "w-10": 0.037295,
+            "w-2": 0.156824,
+            "w-5": 0.097019
+          },
+          "geo_severity": {
+            "w+0": 0.237805,
+            "w+1": 0.237805,
+            "w+10": 0.189024,
+            "w+2": 0.237805,
+            "w+5": 0.219512,
+            "w-1": 0.237805,
+            "w-10": 0.256098,
+            "w-2": 0.237805,
+            "w-5": 0.237805
+          },
+          "macro_pressure": {
+            "w+0": 0.385403,
+            "w+1": 0.304274,
+            "w+10": 0.027087,
+            "w+2": 0.231721,
+            "w+5": 0.015108,
+            "w-1": 0.569362,
+            "w-10": 0.133614,
+            "w-2": 0.494534,
+            "w-5": 0.340554
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "macro_transition\u2192crisis_dislocation": {
+        "count": 3,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.001858,
+            "w+1": 0.0004,
+            "w+10": 0.002871,
+            "w+2": 0.002413,
+            "w+5": -0.001145,
+            "w-1": -0.004009,
+            "w-10": 0.002153,
+            "w-2": -0.00554,
+            "w-5": -0.005584
+          },
+          "dxy_return_5": {
+            "w+0": -0.014639,
+            "w+1": -0.012436,
+            "w+10": 0.011216,
+            "w+2": -0.008614,
+            "w+5": 0.002299,
+            "w-1": -0.018312,
+            "w-10": 0.003922,
+            "w-2": -0.011328,
+            "w-5": 0.003748
+          },
+          "forward_expectation": {
+            "w+0": 0.068361,
+            "w+1": 0.062021,
+            "w+10": -0.021555,
+            "w+2": 0.051939,
+            "w+5": 0.048702,
+            "w-1": 0.053617,
+            "w-10": 0.087612,
+            "w-2": 0.049289,
+            "w-5": -0.013115
+          },
+          "geo_severity": {
+            "w+0": 0.916667,
+            "w+1": 0.916667,
+            "w+10": 0.916667,
+            "w+2": 0.916667,
+            "w+5": 0.916667,
+            "w-1": 0.916667,
+            "w-10": 0.916667,
+            "w-2": 0.916667,
+            "w-5": 0.916667
+          },
+          "macro_pressure": {
+            "w+0": 0.915272,
+            "w+1": 0.805125,
+            "w+10": -0.377459,
+            "w+2": 0.614057,
+            "w+5": 0.068378,
+            "w-1": 1.098914,
+            "w-10": -0.012754,
+            "w-2": 0.749716,
+            "w-5": -0.004066
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "macro_transition\u2192range_compression": {
+        "count": 262,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 1.8e-05,
+            "w+1": -0.000231,
+            "w+10": -0.000385,
+            "w+2": 0.000595,
+            "w+5": 0.000118,
+            "w-1": -0.000181,
+            "w-10": -9.5e-05,
+            "w-2": -0.000669,
+            "w-5": -0.001257
+          },
+          "dxy_return_5": {
+            "w+0": -0.000953,
+            "w+1": -0.001361,
+            "w+10": -0.000244,
+            "w+2": -0.000489,
+            "w+5": -0.000195,
+            "w-1": -0.002127,
+            "w-10": -0.000301,
+            "w-2": -0.002047,
+            "w-5": -0.002085
+          },
+          "forward_expectation": {
+            "w+0": 0.044927,
+            "w+1": 0.043304,
+            "w+10": 0.034835,
+            "w+2": 0.036203,
+            "w+5": 0.036103,
+            "w-1": 0.040581,
+            "w-10": 0.03097,
+            "w-2": 0.04219,
+            "w-5": 0.054996
+          },
+          "geo_severity": {
+            "w+0": 0.170802,
+            "w+1": 0.174618,
+            "w+10": 0.181298,
+            "w+2": 0.174618,
+            "w+5": 0.174618,
+            "w-1": 0.170802,
+            "w-10": 0.181034,
+            "w-2": 0.170802,
+            "w-5": 0.178161
+          },
+          "macro_pressure": {
+            "w+0": 0.081789,
+            "w+1": 0.102973,
+            "w+10": 0.048465,
+            "w+2": 0.059378,
+            "w+5": 0.044674,
+            "w-1": 0.140493,
+            "w-10": 0.051278,
+            "w-2": 0.136512,
+            "w-5": 0.139901
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "range_compression\u2192bear_unwind": {
+        "count": 75,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.002069,
+            "w+1": 0.000642,
+            "w+10": -8.3e-05,
+            "w+2": -0.000584,
+            "w+5": 3.3e-05,
+            "w-1": -0.000365,
+            "w-10": -0.000864,
+            "w-2": 8e-06,
+            "w-5": 5e-06
+          },
+          "dxy_return_5": {
+            "w+0": 0.001426,
+            "w+1": 0.002413,
+            "w+10": 0.000474,
+            "w+2": 0.001731,
+            "w+5": 0.00035,
+            "w-1": -0.00064,
+            "w-10": -0.002618,
+            "w-2": 0.000349,
+            "w-5": 0.002517
+          },
+          "forward_expectation": {
+            "w+0": -0.045517,
+            "w+1": -0.03933,
+            "w+10": -0.04835,
+            "w+2": -0.039724,
+            "w+5": -0.016477,
+            "w-1": -0.026758,
+            "w-10": -0.045706,
+            "w-2": -0.034558,
+            "w-5": -0.051043
+          },
+          "geo_severity": {
+            "w+0": 0.283333,
+            "w+1": 0.283333,
+            "w+10": 0.291096,
+            "w+2": 0.297297,
+            "w+5": 0.287162,
+            "w-1": 0.283333,
+            "w-10": 0.286667,
+            "w-2": 0.283333,
+            "w-5": 0.286667
+          },
+          "macro_pressure": {
+            "w+0": -0.014624,
+            "w+1": -0.063991,
+            "w+10": 0.0345,
+            "w+2": -0.027082,
+            "w+5": 0.039923,
+            "w-1": 0.08865,
+            "w-10": 0.188245,
+            "w-2": 0.039198,
+            "w-5": -0.068541
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "range_compression\u2192bull_trend": {
+        "count": 104,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.002204,
+            "w+1": -0.001099,
+            "w+10": -0.000702,
+            "w+2": -0.000106,
+            "w+5": -0.001284,
+            "w-1": 0.000288,
+            "w-10": -0.000283,
+            "w-2": -0.001211,
+            "w-5": -0.000843
+          },
+          "dxy_return_5": {
+            "w+0": -0.00349,
+            "w+1": -0.004522,
+            "w+10": -0.001776,
+            "w+2": -0.004322,
+            "w+5": -0.003166,
+            "w-1": -0.002131,
+            "w-10": -0.00258,
+            "w-2": -0.002696,
+            "w-5": -0.002137
+          },
+          "forward_expectation": {
+            "w+0": 0.117944,
+            "w+1": 0.121088,
+            "w+10": 0.104749,
+            "w+2": 0.115411,
+            "w+5": 0.112794,
+            "w-1": 0.100073,
+            "w-10": 0.107084,
+            "w-2": 0.108194,
+            "w-5": 0.111874
+          },
+          "geo_severity": {
+            "w+0": 0.105769,
+            "w+1": 0.105769,
+            "w+10": 0.105769,
+            "w+2": 0.105769,
+            "w+5": 0.105769,
+            "w-1": 0.105769,
+            "w-10": 0.091346,
+            "w-2": 0.105769,
+            "w-5": 0.098558
+          },
+          "macro_pressure": {
+            "w+0": 0.195675,
+            "w+1": 0.247251,
+            "w+10": 0.109961,
+            "w+2": 0.237243,
+            "w+5": 0.17947,
+            "w-1": 0.127682,
+            "w-10": 0.147256,
+            "w-2": 0.155974,
+            "w-5": 0.126579
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "range_compression\u2192calm_carry": {
+        "count": 78,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.000302,
+            "w+1": 0.000344,
+            "w+10": -0.000159,
+            "w+2": -0.000147,
+            "w+5": -9.2e-05,
+            "w-1": 0.000128,
+            "w-10": -0.001036,
+            "w-2": 0.000333,
+            "w-5": -0.00026
+          },
+          "dxy_return_5": {
+            "w+0": -0.000331,
+            "w+1": 0.000191,
+            "w+10": -0.000139,
+            "w+2": 0.000354,
+            "w+5": 0.000238,
+            "w-1": -0.000293,
+            "w-10": -0.00081,
+            "w-2": -0.000678,
+            "w-5": -0.000777
+          },
+          "forward_expectation": {
+            "w+0": 0.011234,
+            "w+1": 0.008466,
+            "w+10": 0.009931,
+            "w+2": 0.008065,
+            "w+5": 0.019374,
+            "w-1": 0.002934,
+            "w-10": 0.009498,
+            "w-2": 4.4e-05,
+            "w-5": -0.003015
+          },
+          "geo_severity": {
+            "w+0": 0.237179,
+            "w+1": 0.237179,
+            "w+10": 0.237179,
+            "w+2": 0.237179,
+            "w+5": 0.237179,
+            "w-1": 0.237179,
+            "w-10": 0.24026,
+            "w-2": 0.237179,
+            "w-5": 0.237179
+          },
+          "macro_pressure": {
+            "w+0": 0.063966,
+            "w+1": 0.037905,
+            "w+10": 0.054396,
+            "w+2": 0.029739,
+            "w+5": 0.035522,
+            "w-1": 0.062085,
+            "w-10": 0.088552,
+            "w-2": 0.081349,
+            "w-5": 0.086279
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "range_compression\u2192crisis_dislocation": {
+        "count": 10,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": 0.000878,
+            "w+1": 0.001605,
+            "w+10": 0.000339,
+            "w+2": -0.001856,
+            "w+5": -0.00354,
+            "w-1": 0.000838,
+            "w-10": 0.000469,
+            "w-2": 0.003107,
+            "w-5": 7.7e-05
+          },
+          "dxy_return_5": {
+            "w+0": 0.003654,
+            "w+1": 0.005831,
+            "w+10": 0.003646,
+            "w+2": 0.004576,
+            "w+5": -0.001426,
+            "w-1": 0.002855,
+            "w-10": 0.003012,
+            "w-2": 0.002506,
+            "w-5": -0.000105
+          },
+          "forward_expectation": {
+            "w+0": -0.001846,
+            "w+1": -0.040366,
+            "w+10": -0.055993,
+            "w+2": -0.042064,
+            "w+5": -0.050599,
+            "w-1": -0.003167,
+            "w-10": 0.002369,
+            "w-2": -0.007002,
+            "w-5": 0.001461
+          },
+          "geo_severity": {
+            "w+0": 0.625,
+            "w+1": 0.625,
+            "w+10": 0.625,
+            "w+2": 0.625,
+            "w+5": 0.625,
+            "w-1": 0.525,
+            "w-10": 0.525,
+            "w-2": 0.525,
+            "w-5": 0.525
+          },
+          "macro_pressure": {
+            "w+0": -0.057732,
+            "w+1": -0.166557,
+            "w+10": -0.057304,
+            "w+2": -0.103822,
+            "w+5": 0.19631,
+            "w-1": -0.037746,
+            "w-10": -0.045607,
+            "w-2": -0.020287,
+            "w-5": 0.110239
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      },
+      "range_compression\u2192macro_transition": {
+        "count": 262,
+        "signal_profiles": {
+          "dxy_return_1": {
+            "w+0": -0.000617,
+            "w+1": 0.00024,
+            "w+10": 0.000384,
+            "w+2": -0.000367,
+            "w+5": -2.9e-05,
+            "w-1": -0.000287,
+            "w-10": -0.000517,
+            "w-2": -0.000437,
+            "w-5": 1.6e-05
+          },
+          "dxy_return_5": {
+            "w+0": -0.001861,
+            "w+1": -0.000697,
+            "w+10": 0.000232,
+            "w+2": -0.00145,
+            "w+5": 2.2e-05,
+            "w-1": -0.001339,
+            "w-10": -0.000428,
+            "w-2": -0.001441,
+            "w-5": -0.000407
+          },
+          "forward_expectation": {
+            "w+0": 0.03872,
+            "w+1": 0.037193,
+            "w+10": 0.021233,
+            "w+2": 0.036633,
+            "w+5": 0.027714,
+            "w-1": 0.036603,
+            "w-10": 0.036501,
+            "w-2": 0.038556,
+            "w-5": 0.034457
+          },
+          "geo_severity": {
+            "w+0": 0.195611,
+            "w+1": 0.195611,
+            "w+10": 0.203244,
+            "w+2": 0.195611,
+            "w+5": 0.195611,
+            "w-1": 0.195611,
+            "w-10": 0.206107,
+            "w-2": 0.198473,
+            "w-5": 0.205153
+          },
+          "macro_pressure": {
+            "w+0": 0.132159,
+            "w+1": 0.073967,
+            "w+10": 0.029038,
+            "w+2": 0.111636,
+            "w+5": 0.038038,
+            "w-1": 0.106092,
+            "w-10": 0.062599,
+            "w-2": 0.111747,
+            "w-5": 0.061404
+          },
+          "yield_10y_change_5": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          },
+          "yield_curve_10y_3m": {
+            "w+0": 0.0,
+            "w+1": 0.0,
+            "w+10": 0.0,
+            "w+2": 0.0,
+            "w+5": 0.0,
+            "w-1": 0.0,
+            "w-10": 0.0,
+            "w-2": 0.0,
+            "w-5": 0.0
+          }
+        }
+      }
+    },
+    "common_transitions": [
+      "macro_transition\u2192range_compression",
+      "range_compression\u2192macro_transition",
+      "range_compression\u2192bull_trend",
+      "bull_trend\u2192range_compression",
+      "range_compression\u2192calm_carry",
+      "bear_unwind\u2192range_compression",
+      "range_compression\u2192bear_unwind",
+      "calm_carry\u2192range_compression"
+    ],
+    "dominant_pre_transition_signals": [
+      {
+        "mean_abs_change_w5_to_w0": 0.0,
+        "signal": "dxy_return_1"
+      },
+      {
+        "mean_abs_change_w5_to_w0": 0.0,
+        "signal": "dxy_return_5"
+      },
+      {
+        "mean_abs_change_w5_to_w0": 0.0,
+        "signal": "yield_10y_change_5"
+      },
+      {
+        "mean_abs_change_w5_to_w0": 0.0,
+        "signal": "yield_curve_10y_3m"
+      },
+      {
+        "mean_abs_change_w5_to_w0": 0.0,
+        "signal": "geo_severity"
+      },
+      {
+        "mean_abs_change_w5_to_w0": 0.0,
+        "signal": "macro_pressure"
+      },
+      {
+        "mean_abs_change_w5_to_w0": 0.0,
+        "signal": "forward_expectation"
+      }
+    ],
+    "total_transitions": 1375,
+    "transition_list_sample": [
+      {
+        "date": "2001-08-20",
+        "from_regime": "macro_transition",
+        "row_index": 3,
+        "to_regime": "range_compression"
+      },
+      {
+        "date": "2001-08-28",
+        "from_regime": "range_compression",
+        "row_index": 9,
+        "to_regime": "calm_carry"
+      },
+      {
+        "date": "2001-08-30",
+        "from_regime": "calm_carry",
+        "row_index": 11,
+        "to_regime": "range_compression"
+      },
+      {
+        "date": "2001-09-04",
+        "from_regime": "range_compression",
+        "row_index": 13,
+        "to_regime": "macro_transition"
+      },
+      {
+        "date": "2001-09-06",
+        "from_regime": "macro_transition",
+        "row_index": 15,
+        "to_regime": "bear_unwind"
+      },
+      {
+        "date": "2001-09-14",
+        "from_regime": "bear_unwind",
+        "row_index": 18,
+        "to_regime": "crisis_dislocation"
+      },
+      {
+        "date": "2001-09-17",
+        "from_regime": "crisis_dislocation",
+        "row_index": 19,
+        "to_regime": "macro_transition"
+      },
+      {
+        "date": "2001-09-21",
+        "from_regime": "macro_transition",
+        "row_index": 23,
+        "to_regime": "range_compression"
+      },
+      {
+        "date": "2001-10-11",
+        "from_regime": "range_compression",
+        "row_index": 37,
+        "to_regime": "crisis_dislocation"
+      },
+      {
+        "date": "2001-10-12",
+        "from_regime": "crisis_dislocation",
+        "row_index": 38,
+        "to_regime": "range_compression"
+      },
+      {
+        "date": "2001-10-22",
+        "from_regime": "range_compression",
+        "row_index": 44,
+        "to_regime": "macro_transition"
+      },
+      {
+        "date": "2001-10-24",
+        "from_regime": "macro_transition",
+        "row_index": 46,
+        "to_regime": "range_compression"
+      },
+      {
+        "date": "2001-11-12",
+        "from_regime": "range_compression",
+        "row_index": 59,
+        "to_regime": "calm_carry"
+      },
+      {
+        "date": "2001-11-21",
+        "from_regime": "calm_carry",
+        "row_index": 66,
+        "to_regime": "bear_unwind"
+      },
+      {
+        "date": "2001-12-14",
+        "from_regime": "bear_unwind",
+        "row_index": 81,
+        "to_regime": "calm_carry"
+      },
+      {
+        "date": "2001-12-19",
+        "from_regime": "calm_carry",
+        "row_index": 84,
+        "to_regime": "bear_unwind"
+      },
+      {
+        "date": "2001-12-21",
+        "from_regime": "bear_unwind",
+        "row_index": 86,
+        "to_regime": "macro_transition"
+      },
+      {
+        "date": "2001-12-31",
+        "from_regime": "macro_transition",
+        "row_index": 90,
+        "to_regime": "range_compression"
+      },
+      {
+        "date": "2002-01-07",
+        "from_regime": "range_compression",
+        "row_index": 94,
+        "to_regime": "calm_carry"
+      },
+      {
+        "date": "2002-01-09",
+        "from_regime": "calm_carry",
+        "row_index": 96,
+        "to_regime": "range_compression"
+      }
+    ],
+    "transition_type_count": 25
+  },
+  "theme4_synchronization": {
+    "cross_signal_matrix": {
+      "dxy_return_1": {
+        "dxy_return_1": 1.0,
+        "dxy_return_20": 0.2299,
+        "dxy_return_5": 0.448,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "dxy_return_20": {
+        "dxy_return_1": 0.2299,
+        "dxy_return_20": 1.0,
+        "dxy_return_5": 0.5076,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "dxy_return_5": {
+        "dxy_return_1": 0.448,
+        "dxy_return_20": 0.5076,
+        "dxy_return_5": 1.0,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "yield_10y_change_5": {
+        "dxy_return_1": 0.0,
+        "dxy_return_20": 0.0,
+        "dxy_return_5": 0.0,
+        "yield_10y_change_5": 1.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "yield_30y_change_20": {
+        "dxy_return_1": 0.0,
+        "dxy_return_20": 0.0,
+        "dxy_return_5": 0.0,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 1.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "yield_curve_10y_3m": {
+        "dxy_return_1": 0.0,
+        "dxy_return_20": 0.0,
+        "dxy_return_5": 0.0,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 1.0
+      }
+    },
+    "stress_synchronization_change": {
+      "dxy_return_1": 0.1327,
+      "dxy_return_20": 0.0176,
+      "dxy_return_5": 0.0754,
+      "fed_surprise": 0.0,
+      "forward_expectation": -0.0176,
+      "geo_severity": -0.1733,
+      "macro_pressure": -0.0793,
+      "yield_10y_change_5": 0.0,
+      "yield_30y_change_20": 0.0,
+      "yield_curve_10y_3m": 0.0
+    },
+    "synchronization_by_period": {
+      "calendar_event": {
+        "dxy_return_1": 0.0,
+        "dxy_return_20": 0.0,
+        "dxy_return_5": 0.0,
+        "fed_surprise": 0.0,
+        "forward_expectation": 0.0,
+        "geo_severity": 0.0,
+        "macro_pressure": 0.0,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "geopolitical": {
+        "dxy_return_1": -0.3973,
+        "dxy_return_20": -0.0872,
+        "dxy_return_5": -0.1649,
+        "fed_surprise": 0.0,
+        "forward_expectation": 0.0872,
+        "geo_severity": 0.0334,
+        "macro_pressure": 0.1653,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "normal": {
+        "dxy_return_1": -0.4556,
+        "dxy_return_20": -0.0798,
+        "dxy_return_5": -0.2105,
+        "fed_surprise": 0.0,
+        "forward_expectation": 0.0798,
+        "geo_severity": 0.0511,
+        "macro_pressure": 0.2105,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "stress": {
+        "dxy_return_1": -0.3229,
+        "dxy_return_20": -0.0622,
+        "dxy_return_5": -0.1351,
+        "fed_surprise": 0.0,
+        "forward_expectation": 0.0622,
+        "geo_severity": -0.1222,
+        "macro_pressure": 0.1312,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      }
+    },
+    "synchronization_by_regime": {
+      "bear_unwind": {
+        "dxy_return_1": -0.413,
+        "dxy_return_20": -0.0927,
+        "dxy_return_5": -0.2014,
+        "fed_surprise": 0.0,
+        "forward_expectation": 0.0927,
+        "geo_severity": -0.1481,
+        "macro_pressure": 0.2002,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "bull_trend": {
+        "dxy_return_1": -0.3498,
+        "dxy_return_20": -0.0339,
+        "dxy_return_5": -0.1043,
+        "fed_surprise": 0.0,
+        "forward_expectation": 0.0339,
+        "geo_severity": 0.0876,
+        "macro_pressure": 0.1049,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "calm_carry": {
+        "dxy_return_1": -0.4577,
+        "dxy_return_20": -0.11,
+        "dxy_return_5": -0.2044,
+        "fed_surprise": 0.0,
+        "forward_expectation": 0.11,
+        "geo_severity": 0.0227,
+        "macro_pressure": 0.2043,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "crisis_dislocation": {
+        "dxy_return_1": -0.3441,
+        "dxy_return_20": -0.0839,
+        "dxy_return_5": -0.1663,
+        "fed_surprise": 0.0,
+        "forward_expectation": 0.0839,
+        "geo_severity": 0.0809,
+        "macro_pressure": 0.1665,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "macro_transition": {
+        "dxy_return_1": -0.427,
+        "dxy_return_20": -0.082,
+        "dxy_return_5": -0.1951,
+        "fed_surprise": 0.0,
+        "forward_expectation": 0.082,
+        "geo_severity": -0.0996,
+        "macro_pressure": 0.1946,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      },
+      "range_compression": {
+        "dxy_return_1": -0.4486,
+        "dxy_return_20": -0.0713,
+        "dxy_return_5": -0.1964,
+        "fed_surprise": 0.0,
+        "forward_expectation": 0.0713,
+        "geo_severity": -0.0541,
+        "macro_pressure": 0.1963,
+        "yield_10y_change_5": 0.0,
+        "yield_30y_change_20": 0.0,
+        "yield_curve_10y_3m": 0.0
+      }
+    }
+  },
+  "theme5_adaptive_behavior": {
+    "epoch_comparison": {
+      "dxy_return_1": {
+        "drift": 0.0337,
+        "early_period_correlation": -0.414,
+        "late_period_correlation": -0.3803,
+        "structural_change_suspected": false
+      },
+      "dxy_return_20": {
+        "drift": -0.0195,
+        "early_period_correlation": -0.0743,
+        "late_period_correlation": -0.0938,
+        "structural_change_suspected": false
+      },
+      "dxy_return_5": {
+        "drift": 0.0313,
+        "early_period_correlation": -0.1953,
+        "late_period_correlation": -0.164,
+        "structural_change_suspected": false
+      },
+      "fed_surprise": {
+        "drift": 0.0,
+        "early_period_correlation": 0.0,
+        "late_period_correlation": 0.0,
+        "structural_change_suspected": false
+      },
+      "forward_expectation": {
+        "drift": 0.0195,
+        "early_period_correlation": 0.0743,
+        "late_period_correlation": 0.0938,
+        "structural_change_suspected": false
+      },
+      "geo_severity": {
+        "drift": -0.0184,
+        "early_period_correlation": 0.0116,
+        "late_period_correlation": -0.0068,
+        "structural_change_suspected": false
+      },
+      "macro_pressure": {
+        "drift": -0.0364,
+        "early_period_correlation": 0.197,
+        "late_period_correlation": 0.1606,
+        "structural_change_suspected": false
+      },
+      "yield_10y_change_5": {
+        "drift": 0.0,
+        "early_period_correlation": 0.0,
+        "late_period_correlation": 0.0,
+        "structural_change_suspected": false
+      },
+      "yield_30y_change_20": {
+        "drift": 0.0,
+        "early_period_correlation": 0.0,
+        "late_period_correlation": 0.0,
+        "structural_change_suspected": false
+      },
+      "yield_curve_10y_3m": {
+        "drift": 0.0,
+        "early_period_correlation": 0.0,
+        "late_period_correlation": 0.0,
+        "structural_change_suspected": false
+      }
+    },
+    "temporal_stability": {
+      "dxy_return_1": {
+        "interpretation": "stable",
+        "max_correlation": -0.1156,
+        "mean_correlation": -0.4309,
+        "min_correlation": -0.766,
+        "sign_flip_rate": 0.0,
+        "stability_score": 0.7667,
+        "std_correlation": 0.1311
+      },
+      "dxy_return_20": {
+        "interpretation": "moderately_stable",
+        "max_correlation": 0.1661,
+        "mean_correlation": -0.0837,
+        "min_correlation": -0.2599,
+        "sign_flip_rate": 0.0153,
+        "stability_score": 0.5465,
+        "std_correlation": 0.0695
+      },
+      "dxy_return_5": {
+        "interpretation": "stable",
+        "max_correlation": 0.0937,
+        "mean_correlation": -0.1944,
+        "min_correlation": -0.3661,
+        "sign_flip_rate": 0.001,
+        "stability_score": 0.7067,
+        "std_correlation": 0.0807
+      },
+      "fed_surprise": {
+        "interpretation": "insufficient_data",
+        "max_correlation": 0.0,
+        "mean_correlation": 0.0,
+        "min_correlation": 0.0,
+        "sign_flip_rate": 0.0,
+        "stability_score": 0.0,
+        "std_correlation": 0.0
+      },
+      "forward_expectation": {
+        "interpretation": "moderately_stable",
+        "max_correlation": 0.2599,
+        "mean_correlation": 0.0837,
+        "min_correlation": -0.1661,
+        "sign_flip_rate": 0.0153,
+        "stability_score": 0.5465,
+        "std_correlation": 0.0695
+      },
+      "geo_severity": {
+        "interpretation": "unstable",
+        "max_correlation": Infinity,
+        "mean_correlation": NaN,
+        "min_correlation": -Infinity,
+        "sign_flip_rate": 0.0722,
+        "stability_score": 0.0,
+        "std_correlation": NaN
+      },
+      "macro_pressure": {
+        "interpretation": "stable",
+        "max_correlation": 0.3661,
+        "mean_correlation": 0.1943,
+        "min_correlation": -0.0937,
+        "sign_flip_rate": 0.001,
+        "stability_score": 0.7069,
+        "std_correlation": 0.0806
+      },
+      "yield_10y_change_5": {
+        "interpretation": "insufficient_data",
+        "max_correlation": 0.0,
+        "mean_correlation": 0.0,
+        "min_correlation": 0.0,
+        "sign_flip_rate": 0.0,
+        "stability_score": 0.0,
+        "std_correlation": 0.0
+      },
+      "yield_30y_change_20": {
+        "interpretation": "insufficient_data",
+        "max_correlation": 0.0,
+        "mean_correlation": 0.0,
+        "min_correlation": 0.0,
+        "sign_flip_rate": 0.0,
+        "stability_score": 0.0,
+        "std_correlation": 0.0
+      },
+      "yield_curve_10y_3m": {
+        "interpretation": "insufficient_data",
+        "max_correlation": 0.0,
+        "mean_correlation": 0.0,
+        "min_correlation": 0.0,
+        "sign_flip_rate": 0.0,
+        "stability_score": 0.0,
+        "std_correlation": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,1146 @@
+{
+  "factor_edges": [
+    {
+      "attributes": {
+        "flow_type": "physical_flow"
+      },
+      "confidence": 2.5148,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-COMMERCIAL-HEDGERS",
+      "target": "IKROS-PB1-FACTOR-FORWARD-EXPECTATION"
+    },
+    {
+      "attributes": {
+        "flow_type": "inventory_transformer"
+      },
+      "confidence": 2.5148,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-FACTOR-FORWARD-EXPECTATION"
+    },
+    {
+      "attributes": {
+        "flow_type": "microstructure_provider"
+      },
+      "confidence": 2.2486,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-MARKET-MAKERS",
+      "target": "IKROS-PB1-FACTOR-XAU-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "tactical_allocator"
+      },
+      "confidence": 2.0621,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS",
+      "target": "IKROS-PB1-FACTOR-DXY-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "fragmented_flow"
+      },
+      "confidence": 2.0237,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-RETAIL-TRADERS",
+      "target": "IKROS-PB1-FACTOR-XAU-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "systematic_flow"
+      },
+      "confidence": 1.9854,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-CTAS",
+      "target": "IKROS-PB1-FACTOR-DXY-RETURN-20"
+    },
+    {
+      "attributes": {
+        "flow_type": "inventory_transformer"
+      },
+      "confidence": 1.9475,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-FACTOR-DXY-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "systematic_flow"
+      },
+      "confidence": 1.9113,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-CTAS",
+      "target": "IKROS-PB1-FACTOR-XAU-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "systematic_flow"
+      },
+      "confidence": 1.853,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-CTAS",
+      "target": "IKROS-PB1-FACTOR-FORWARD-EXPECTATION"
+    },
+    {
+      "attributes": {
+        "flow_type": "investment_flow"
+      },
+      "confidence": 1.853,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-ETF-INVESTORS",
+      "target": "IKROS-PB1-FACTOR-FORWARD-EXPECTATION"
+    },
+    {
+      "attributes": {
+        "flow_type": "inventory_transformer"
+      },
+      "confidence": 1.7989,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-FACTOR-XAU-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "flow_matcher"
+      },
+      "confidence": 1.7989,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-FACTOR-XAU-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "flow_matcher"
+      },
+      "confidence": 1.7184,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-FACTOR-DXY-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "investment_flow"
+      },
+      "confidence": 1.6865,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-ETF-INVESTORS",
+      "target": "IKROS-PB1-FACTOR-XAU-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "microstructure_provider"
+      },
+      "confidence": 1.4893,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-MARKET-MAKERS",
+      "target": "IKROS-PB1-FACTOR-DXY-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "defensive_reallocator"
+      },
+      "confidence": 1.4893,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "target": "IKROS-PB1-FACTOR-DXY-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "physical_flow"
+      },
+      "confidence": 1.3492,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-COMMERCIAL-HEDGERS",
+      "target": "IKROS-PB1-FACTOR-XAU-RETURN-1"
+    },
+    {
+      "attributes": {
+        "flow_type": "tactical_allocator"
+      },
+      "confidence": 1.0543,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS",
+      "target": "IKROS-PB1-FACTOR-MACRO-PRESSURE"
+    },
+    {
+      "attributes": {
+        "flow_type": "sovereign_allocator"
+      },
+      "confidence": 0.9489,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-CENTRAL-BANKS",
+      "target": "IKROS-PB1-FACTOR-MACRO-PRESSURE"
+    },
+    {
+      "attributes": {
+        "flow_type": "inventory_transformer"
+      },
+      "confidence": 0.9208,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-FACTOR-DXY-RETURN-5"
+    },
+    {
+      "attributes": {
+        "flow_type": "flow_matcher"
+      },
+      "confidence": 0.8962,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-FACTOR-MACRO-PRESSURE"
+    },
+    {
+      "attributes": {
+        "flow_type": "defensive_reallocator"
+      },
+      "confidence": 0.8962,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "target": "IKROS-PB1-FACTOR-MACRO-PRESSURE"
+    },
+    {
+      "attributes": {
+        "flow_type": "flow_matcher"
+      },
+      "confidence": 0.8696,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-FACTOR-DXY-RETURN-5"
+    },
+    {
+      "attributes": {
+        "flow_type": "defensive_reallocator"
+      },
+      "confidence": 0.7228,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "target": "IKROS-PB1-FACTOR-GEO-SEVERITY"
+    },
+    {
+      "attributes": {
+        "flow_type": "sovereign_allocator"
+      },
+      "confidence": 0.6,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-CENTRAL-BANKS",
+      "target": "IKROS-PB1-FACTOR-YIELD-CURVE-10Y-3M"
+    },
+    {
+      "attributes": {
+        "flow_type": "sovereign_allocator"
+      },
+      "confidence": 0.6,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-CENTRAL-BANKS",
+      "target": "IKROS-PB1-FACTOR-FED-SURPRISE"
+    },
+    {
+      "attributes": {
+        "flow_type": "investment_flow"
+      },
+      "confidence": 0.5782,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-ETF-INVESTORS",
+      "target": "IKROS-PB1-FACTOR-GEO-SEVERITY"
+    },
+    {
+      "attributes": {
+        "flow_type": "sovereign_allocator"
+      },
+      "confidence": 0.57,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-CENTRAL-BANKS",
+      "target": "IKROS-PB1-FACTOR-YIELD-10Y-CHANGE-5"
+    },
+    {
+      "attributes": {
+        "flow_type": "tactical_allocator"
+      },
+      "confidence": 0.54,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS",
+      "target": "IKROS-PB1-FACTOR-FED-SURPRISE"
+    },
+    {
+      "attributes": {
+        "flow_type": "tactical_allocator"
+      },
+      "confidence": 0.51,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS",
+      "target": "IKROS-PB1-FACTOR-YIELD-10Y-CHANGE-5"
+    },
+    {
+      "attributes": {
+        "flow_type": "fragmented_flow"
+      },
+      "confidence": 0.4698,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-RETAIL-TRADERS",
+      "target": "IKROS-PB1-FACTOR-GEO-SEVERITY"
+    },
+    {
+      "attributes": {
+        "flow_type": "defensive_reallocator"
+      },
+      "confidence": 0.45,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "target": "IKROS-PB1-FACTOR-YIELD-CURVE-10Y-3M"
+    },
+    {
+      "attributes": {
+        "flow_type": "physical_flow"
+      },
+      "confidence": 0.42,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-COMMERCIAL-HEDGERS",
+      "target": "IKROS-PB1-FACTOR-YIELD-30Y-CHANGE-20"
+    },
+    {
+      "attributes": {
+        "flow_type": "microstructure_provider"
+      },
+      "confidence": 0.3975,
+      "relation": "CAUSES",
+      "source": "IKROS-PB1-PARTICIPANT-MARKET-MAKERS",
+      "target": "IKROS-PB1-FACTOR-GEO-SEVERITY"
+    }
+  ],
+  "factor_nodes": [
+    {
+      "attributes": {
+        "market": "XAU/USD"
+      },
+      "label": "XAU/USD 1-day return",
+      "node_id": "IKROS-PB1-FACTOR-XAU-RETURN-1",
+      "node_type": "FACTOR"
+    },
+    {
+      "attributes": {
+        "market": "DXY"
+      },
+      "label": "DXY 1-day return",
+      "node_id": "IKROS-PB1-FACTOR-DXY-RETURN-1",
+      "node_type": "FACTOR"
+    },
+    {
+      "attributes": {
+        "market": "DXY"
+      },
+      "label": "DXY 5-day return",
+      "node_id": "IKROS-PB1-FACTOR-DXY-RETURN-5",
+      "node_type": "FACTOR"
+    },
+    {
+      "attributes": {
+        "market": "DXY"
+      },
+      "label": "DXY 20-day return",
+      "node_id": "IKROS-PB1-FACTOR-DXY-RETURN-20",
+      "node_type": "FACTOR"
+    },
+    {
+      "attributes": {
+        "market": "US_Treasuries"
+      },
+      "label": "Yield curve 10Y-3M spread",
+      "node_id": "IKROS-PB1-FACTOR-YIELD-CURVE-10Y-3M",
+      "node_type": "FACTOR"
+    },
+    {
+      "attributes": {
+        "market": "US_Treasuries"
+      },
+      "label": "10Y Treasury yield 5-day change",
+      "node_id": "IKROS-PB1-FACTOR-YIELD-10Y-CHANGE-5",
+      "node_type": "FACTOR"
+    },
+    {
+      "attributes": {
+        "market": "US_Treasuries"
+      },
+      "label": "30Y Treasury yield 20-day change",
+      "node_id": "IKROS-PB1-FACTOR-YIELD-30Y-CHANGE-20",
+      "node_type": "FACTOR"
+    },
+    {
+      "attributes": {
+        "market": "Economic_Calendar"
+      },
+      "label": "Fed announcement surprise",
+      "node_id": "IKROS-PB1-FACTOR-FED-SURPRISE",
+      "node_type": "FACTOR"
+    },
+    {
+      "attributes": {
+        "market": "Geopolitical"
+      },
+      "label": "Geopolitical severity score",
+      "node_id": "IKROS-PB1-FACTOR-GEO-SEVERITY",
+      "node_type": "FACTOR"
+    },
+    {
+      "attributes": {
+        "market": "Composite"
+      },
+      "label": "Macro pressure composite",
+      "node_id": "IKROS-PB1-FACTOR-MACRO-PRESSURE",
+      "node_type": "FACTOR"
+    },
+    {
+      "attributes": {
+        "market": "Composite"
+      },
+      "label": "Forward expectation spread",
+      "node_id": "IKROS-PB1-FACTOR-FORWARD-EXPECTATION",
+      "node_type": "FACTOR"
+    }
+  ],
+  "feedback_loops": [
+    {
+      "backward": 1.4629,
+      "forward": 1.6446,
+      "loop_type": "reinforcing",
+      "pair": "bullion_banks<->dealers"
+    },
+    {
+      "backward": 0.6442,
+      "forward": 1.6668,
+      "loop_type": "reinforcing",
+      "pair": "dealers<->market_makers"
+    },
+    {
+      "backward": 1.2277,
+      "forward": 1.0201,
+      "loop_type": "reinforcing",
+      "pair": "central_banks<->macro_hedge_funds"
+    },
+    {
+      "backward": 0.7832,
+      "forward": 1.3932,
+      "loop_type": "reinforcing",
+      "pair": "dealers<->macro_hedge_funds"
+    },
+    {
+      "backward": 0.8136,
+      "forward": 1.3582,
+      "loop_type": "reinforcing",
+      "pair": "dealers<->safe_haven_capital_flows"
+    },
+    {
+      "backward": 0.671,
+      "forward": 1.4038,
+      "loop_type": "reinforcing",
+      "pair": "bullion_banks<->commercial_hedgers"
+    },
+    {
+      "backward": 0.6598,
+      "forward": 1.3241,
+      "loop_type": "reinforcing",
+      "pair": "bullion_banks<->market_makers"
+    },
+    {
+      "backward": 0.6322,
+      "forward": 1.3448,
+      "loop_type": "reinforcing",
+      "pair": "bullion_banks<->ctas"
+    },
+    {
+      "backward": 0.5747,
+      "forward": 1.3454,
+      "loop_type": "reinforcing",
+      "pair": "bullion_banks<->etf_investors"
+    },
+    {
+      "backward": 0.9356,
+      "forward": 0.8701,
+      "loop_type": "reinforcing",
+      "pair": "macro_hedge_funds<->safe_haven_capital_flows"
+    }
+  ],
+  "interaction_edges": [
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.6668,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-PARTICIPANT-MARKET-MAKERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "dxy_return_5",
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.6446,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-PARTICIPANT-DEALERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "dxy_return_5",
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.4629,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-PARTICIPANT-BULLION-BANKS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "forward_expectation",
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.4038,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-PARTICIPANT-COMMERCIAL-HEDGERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "macro_pressure"
+        ]
+      },
+      "confidence": 1.3932,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "macro_pressure"
+        ]
+      },
+      "confidence": 1.3582,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "forward_expectation",
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.3454,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-PARTICIPANT-ETF-INVESTORS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "forward_expectation",
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.3448,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-PARTICIPANT-CTAS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.3241,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-PARTICIPANT-MARKET-MAKERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "macro_pressure"
+        ]
+      },
+      "confidence": 1.3198,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-PARTICIPANT-CENTRAL-BANKS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.3044,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-PARTICIPANT-RETAIL-TRADERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.2575,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-PARTICIPANT-COMMERCIAL-HEDGERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.254,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-PARTICIPANT-ETF-INVESTORS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.2534,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "target": "IKROS-PB1-PARTICIPANT-CTAS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "xau_return_1"
+        ]
+      },
+      "confidence": 1.2418,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-PARTICIPANT-RETAIL-TRADERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "fed_surprise",
+          "macro_pressure",
+          "yield_10y_change_5"
+        ]
+      },
+      "confidence": 1.2277,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS",
+      "target": "IKROS-PB1-PARTICIPANT-CENTRAL-BANKS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1"
+        ]
+      },
+      "confidence": 1.1656,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1"
+        ]
+      },
+      "confidence": 1.1085,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": []
+      },
+      "confidence": 1.0701,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "target": "IKROS-PB1-PARTICIPANT-CENTRAL-BANKS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "geo_severity"
+        ]
+      },
+      "confidence": 1.0694,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "target": "IKROS-PB1-PARTICIPANT-ETF-INVESTORS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "macro_pressure",
+          "yield_curve_10y_3m"
+        ]
+      },
+      "confidence": 1.0491,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "target": "IKROS-PB1-PARTICIPANT-CENTRAL-BANKS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "fed_surprise",
+          "macro_pressure",
+          "yield_10y_change_5"
+        ]
+      },
+      "confidence": 1.0201,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-CENTRAL-BANKS",
+      "target": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "macro_pressure"
+        ]
+      },
+      "confidence": 0.9356,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "target": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "macro_pressure"
+        ]
+      },
+      "confidence": 0.8701,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS",
+      "target": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "geo_severity",
+          "xau_return_1"
+        ]
+      },
+      "confidence": 0.8533,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-MARKET-MAKERS",
+      "target": "IKROS-PB1-PARTICIPANT-RETAIL-TRADERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "geo_severity"
+        ]
+      },
+      "confidence": 0.8358,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "target": "IKROS-PB1-PARTICIPANT-RETAIL-TRADERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "geo_severity"
+        ]
+      },
+      "confidence": 0.8161,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "target": "IKROS-PB1-PARTICIPANT-MARKET-MAKERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "macro_pressure"
+        ]
+      },
+      "confidence": 0.8136,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "target": "IKROS-PB1-PARTICIPANT-DEALERS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": []
+      },
+      "confidence": 0.7894,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS",
+      "target": "IKROS-PB1-PARTICIPANT-CTAS"
+    },
+    {
+      "attributes": {
+        "relation": "cooperative",
+        "shared_channels": [
+          "dxy_return_1",
+          "macro_pressure"
+        ]
+      },
+      "confidence": 0.7832,
+      "relation": "RELATED_TO",
+      "source": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS",
+      "target": "IKROS-PB1-PARTICIPANT-DEALERS"
+    }
+  ],
+  "liquidity_edges": [
+    {
+      "liquidity_effect": "balancing",
+      "source": "dealers",
+      "strength": 1.6668,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "bullion_banks",
+      "strength": 1.6446,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "dealers",
+      "strength": 1.4629,
+      "target": "bullion_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "bullion_banks",
+      "strength": 1.4038,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "dealers",
+      "strength": 1.3932,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "dealers",
+      "strength": 1.3582,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "bullion_banks",
+      "strength": 1.3454,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "bullion_banks",
+      "strength": 1.3448,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "bullion_banks",
+      "strength": 1.3241,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "dealers",
+      "strength": 1.3198,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "dealers",
+      "strength": 1.3044,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "dealers",
+      "strength": 1.2575,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "dealers",
+      "strength": 1.254,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "dealers",
+      "strength": 1.2534,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "bullion_banks",
+      "strength": 1.2418,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "macro_hedge_funds",
+      "strength": 1.2277,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "bullion_banks",
+      "strength": 1.1656,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "bullion_banks",
+      "strength": 1.1085,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "bullion_banks",
+      "strength": 1.0701,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "safe_haven_capital_flows",
+      "strength": 1.0694,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "safe_haven_capital_flows",
+      "strength": 1.0491,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "central_banks",
+      "strength": 1.0201,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.9356,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "macro_hedge_funds",
+      "strength": 0.8701,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "market_makers",
+      "strength": 0.8533,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.8358,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.8161,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.8136,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "macro_hedge_funds",
+      "strength": 0.7894,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "macro_hedge_funds",
+      "strength": 0.7832,
+      "target": "dealers"
+    }
+  ],
+  "participant_nodes": [
+    {
+      "attributes": {
+        "capital_role": "sovereign_allocator",
+        "ecology_role": "ecology_driver",
+        "liquidity_role": "policy_anchor",
+        "participant_id": "central_banks",
+        "theme": "Theme 1"
+      },
+      "label": "Central Banks",
+      "node_id": "IKROS-PB1-PARTICIPANT-CENTRAL-BANKS",
+      "node_type": "KNOWLEDGE_OBJECT"
+    },
+    {
+      "attributes": {
+        "capital_role": "physical_flow",
+        "ecology_role": "ecology_driver",
+        "liquidity_role": "inventory_hedger",
+        "participant_id": "commercial_hedgers",
+        "theme": "Theme 2"
+      },
+      "label": "Commercial Hedgers",
+      "node_id": "IKROS-PB1-PARTICIPANT-COMMERCIAL-HEDGERS",
+      "node_type": "KNOWLEDGE_OBJECT"
+    },
+    {
+      "attributes": {
+        "capital_role": "inventory_transformer",
+        "ecology_role": "ecology_driver",
+        "liquidity_role": "intermediation_core",
+        "participant_id": "bullion_banks",
+        "theme": "Theme 3"
+      },
+      "label": "Bullion Banks",
+      "node_id": "IKROS-PB1-PARTICIPANT-BULLION-BANKS",
+      "node_type": "KNOWLEDGE_OBJECT"
+    },
+    {
+      "attributes": {
+        "capital_role": "flow_matcher",
+        "ecology_role": "ecology_driver",
+        "liquidity_role": "balance_sheet_intermediary",
+        "participant_id": "dealers",
+        "theme": "Theme 4"
+      },
+      "label": "Dealers",
+      "node_id": "IKROS-PB1-PARTICIPANT-DEALERS",
+      "node_type": "KNOWLEDGE_OBJECT"
+    },
+    {
+      "attributes": {
+        "capital_role": "microstructure_provider",
+        "ecology_role": "ecology_driver",
+        "liquidity_role": "liquidity_provider",
+        "participant_id": "market_makers",
+        "theme": "Theme 5"
+      },
+      "label": "Market Makers",
+      "node_id": "IKROS-PB1-PARTICIPANT-MARKET-MAKERS",
+      "node_type": "KNOWLEDGE_OBJECT"
+    },
+    {
+      "attributes": {
+        "capital_role": "systematic_flow",
+        "ecology_role": "ecology_driver",
+        "liquidity_role": "trend_amplifier",
+        "participant_id": "ctas",
+        "theme": "Theme 6"
+      },
+      "label": "Commodity Trading Advisors",
+      "node_id": "IKROS-PB1-PARTICIPANT-CTAS",
+      "node_type": "KNOWLEDGE_OBJECT"
+    },
+    {
+      "attributes": {
+        "capital_role": "tactical_allocator",
+        "ecology_role": "ecology_driver",
+        "liquidity_role": "macro_reallocator",
+        "participant_id": "macro_hedge_funds",
+        "theme": "Theme 7"
+      },
+      "label": "Macro Hedge Funds",
+      "node_id": "IKROS-PB1-PARTICIPANT-MACRO-HEDGE-FUNDS",
+      "node_type": "KNOWLEDGE_OBJECT"
+    },
+    {
+      "attributes": {
+        "capital_role": "investment_flow",
+        "ecology_role": "ecology_driver",
+        "liquidity_role": "allocation_flow",
+        "participant_id": "etf_investors",
+        "theme": "Theme 8"
+      },
+      "label": "ETF Investors",
+      "node_id": "IKROS-PB1-PARTICIPANT-ETF-INVESTORS",
+      "node_type": "KNOWLEDGE_OBJECT"
+    },
+    {
+      "attributes": {
+        "capital_role": "fragmented_flow",
+        "ecology_role": "ecology_driver",
+        "liquidity_role": "sentiment_echo",
+        "participant_id": "retail_traders",
+        "theme": "Theme 9"
+      },
+      "label": "Retail Traders",
+      "node_id": "IKROS-PB1-PARTICIPANT-RETAIL-TRADERS",
+      "node_type": "KNOWLEDGE_OBJECT"
+    },
+    {
+      "attributes": {
+        "capital_role": "defensive_reallocator",
+        "ecology_role": "ecology_driver",
+        "liquidity_role": "stress_allocator",
+        "participant_id": "safe_haven_capital_flows",
+        "theme": "Theme 10"
+      },
+      "label": "Safe Haven Capital Flows",
+      "node_id": "IKROS-PB1-PARTICIPANT-SAFE-HAVEN-CAPITAL-FLOWS",
+      "node_type": "KNOWLEDGE_OBJECT"
+    }
+  ]
+}

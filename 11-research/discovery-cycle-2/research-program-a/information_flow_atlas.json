@@ -1,0 +1,270 @@
+{
+  "granger_causality_proxy": {
+    "dxy_return_1": {
+      "baseline_r2": 0.00025,
+      "enhanced_r2": 0.00046,
+      "granger_positive": false,
+      "r2_gain": 0.00021
+    },
+    "dxy_return_20": {
+      "baseline_r2": 0.00025,
+      "enhanced_r2": 0.00053,
+      "granger_positive": false,
+      "r2_gain": 0.00028
+    },
+    "dxy_return_5": {
+      "baseline_r2": 0.00025,
+      "enhanced_r2": 0.00093,
+      "granger_positive": false,
+      "r2_gain": 0.00068
+    },
+    "fed_surprise": {
+      "baseline_r2": 0.00025,
+      "enhanced_r2": 0.00024,
+      "granger_positive": false,
+      "r2_gain": -1e-05
+    },
+    "forward_expectation": {
+      "baseline_r2": 0.00025,
+      "enhanced_r2": 0.00053,
+      "granger_positive": false,
+      "r2_gain": 0.00028
+    },
+    "geo_severity": {
+      "baseline_r2": 0.00025,
+      "enhanced_r2": 0.00025,
+      "granger_positive": false,
+      "r2_gain": 0.0
+    },
+    "macro_pressure": {
+      "baseline_r2": 0.00025,
+      "enhanced_r2": 0.00094,
+      "granger_positive": false,
+      "r2_gain": 0.0007
+    },
+    "yield_10y_change_5": {
+      "baseline_r2": 0.00025,
+      "enhanced_r2": 0.00024,
+      "granger_positive": false,
+      "r2_gain": -1e-05
+    },
+    "yield_30y_change_20": {
+      "baseline_r2": 0.00025,
+      "enhanced_r2": 0.00024,
+      "granger_positive": false,
+      "r2_gain": -1e-05
+    },
+    "yield_curve_10y_3m": {
+      "baseline_r2": 0.00025,
+      "enhanced_r2": 0.00024,
+      "granger_positive": false,
+      "r2_gain": -1e-05
+    }
+  },
+  "regime_conditioned_mi": {
+    "dxy_return_1": {
+      "bear_unwind": 0.07074,
+      "bull_trend": 0.0,
+      "calm_carry": 0.06968,
+      "crisis_dislocation": 0.02797,
+      "macro_transition": 0.10492,
+      "range_compression": 0.07628
+    },
+    "dxy_return_5": {
+      "bear_unwind": 0.01007,
+      "bull_trend": 0.0,
+      "calm_carry": 0.01396,
+      "crisis_dislocation": 0.01095,
+      "macro_transition": 0.04913,
+      "range_compression": 0.00531
+    },
+    "macro_pressure": {
+      "bear_unwind": 0.01193,
+      "bull_trend": 0.0,
+      "calm_carry": 0.01727,
+      "crisis_dislocation": 0.0078,
+      "macro_transition": 0.05362,
+      "range_compression": 0.00524
+    },
+    "yield_curve_10y_3m": {
+      "bear_unwind": 0.0,
+      "bull_trend": 0.0,
+      "calm_carry": 0.0,
+      "crisis_dislocation": 0.0,
+      "macro_transition": 0.0,
+      "range_compression": 0.0
+    }
+  },
+  "transfer_entropy_proxy": {
+    "dxy_return_1": {
+      "contemporaneous_mi": 0.07207,
+      "information_gain_from_lag": -0.07115,
+      "interpretation": "negligible",
+      "mi_profile": {
+        "1": 0.00076,
+        "10": 0.00049,
+        "15": 0.00056,
+        "2": 0.00057,
+        "20": 0.00092,
+        "3": 0.00029,
+        "5": 0.00044,
+        "7": 0.00039
+      },
+      "peak_lag_days": 20,
+      "peak_mi": 0.00092
+    },
+    "dxy_return_20": {
+      "contemporaneous_mi": 0.00407,
+      "information_gain_from_lag": -0.00314,
+      "interpretation": "negligible",
+      "mi_profile": {
+        "1": 0.00067,
+        "10": 0.00045,
+        "15": 0.00017,
+        "2": 0.00051,
+        "20": 0.00038,
+        "3": 0.0008,
+        "5": 0.00094,
+        "7": 0.0003
+      },
+      "peak_lag_days": 5,
+      "peak_mi": 0.00094
+    },
+    "dxy_return_5": {
+      "contemporaneous_mi": 0.01163,
+      "information_gain_from_lag": -0.01042,
+      "interpretation": "signal_informative",
+      "mi_profile": {
+        "1": 0.00046,
+        "10": 0.00053,
+        "15": 0.00095,
+        "2": 0.00058,
+        "20": 0.00093,
+        "3": 0.00106,
+        "5": 0.00067,
+        "7": 0.00122
+      },
+      "peak_lag_days": 7,
+      "peak_mi": 0.00122
+    },
+    "fed_surprise": {
+      "contemporaneous_mi": 0.0,
+      "information_gain_from_lag": 0.0,
+      "interpretation": "negligible",
+      "mi_profile": {
+        "1": 0.0,
+        "10": 0.0,
+        "15": 0.0,
+        "2": 0.0,
+        "20": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0
+      },
+      "peak_lag_days": 1,
+      "peak_mi": 0.0
+    },
+    "forward_expectation": {
+      "contemporaneous_mi": 0.00407,
+      "information_gain_from_lag": -0.00314,
+      "interpretation": "negligible",
+      "mi_profile": {
+        "1": 0.00067,
+        "10": 0.00045,
+        "15": 0.00017,
+        "2": 0.00051,
+        "20": 0.00038,
+        "3": 0.0008,
+        "5": 0.00094,
+        "7": 0.0003
+      },
+      "peak_lag_days": 5,
+      "peak_mi": 0.00094
+    },
+    "geo_severity": {
+      "contemporaneous_mi": 0.0002,
+      "information_gain_from_lag": -0.0,
+      "interpretation": "negligible",
+      "mi_profile": {
+        "1": 0.0002,
+        "10": 0.0002,
+        "15": 0.00019,
+        "2": 0.00019,
+        "20": 0.00016,
+        "3": 0.00018,
+        "5": 0.0002,
+        "7": 0.00018
+      },
+      "peak_lag_days": 1,
+      "peak_mi": 0.0002
+    },
+    "macro_pressure": {
+      "contemporaneous_mi": 0.01183,
+      "information_gain_from_lag": -0.01079,
+      "interpretation": "signal_informative",
+      "mi_profile": {
+        "1": 0.00048,
+        "10": 0.00063,
+        "15": 0.00085,
+        "2": 0.00076,
+        "20": 0.00048,
+        "3": 0.00105,
+        "5": 0.00086,
+        "7": 0.00047
+      },
+      "peak_lag_days": 3,
+      "peak_mi": 0.00105
+    },
+    "yield_10y_change_5": {
+      "contemporaneous_mi": 0.0,
+      "information_gain_from_lag": 0.0,
+      "interpretation": "negligible",
+      "mi_profile": {
+        "1": 0.0,
+        "10": 0.0,
+        "15": 0.0,
+        "2": 0.0,
+        "20": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0
+      },
+      "peak_lag_days": 1,
+      "peak_mi": 0.0
+    },
+    "yield_30y_change_20": {
+      "contemporaneous_mi": 0.0,
+      "information_gain_from_lag": 0.0,
+      "interpretation": "negligible",
+      "mi_profile": {
+        "1": 0.0,
+        "10": 0.0,
+        "15": 0.0,
+        "2": 0.0,
+        "20": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0
+      },
+      "peak_lag_days": 1,
+      "peak_mi": 0.0
+    },
+    "yield_curve_10y_3m": {
+      "contemporaneous_mi": 0.0,
+      "information_gain_from_lag": 0.0,
+      "interpretation": "negligible",
+      "mi_profile": {
+        "1": 0.0,
+        "10": 0.0,
+        "15": 0.0,
+        "2": 0.0,
+        "20": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0
+      },
+      "peak_lag_days": 1,
+      "peak_mi": 0.0
+    }
+  }
+}

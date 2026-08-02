@@ -1,0 +1,128 @@
+{
+  "bottlenecks": [
+    "dxy_return_5",
+    "macro_pressure"
+  ],
+  "nodes": {
+    "dxy_return_1": {
+      "in_strength": 2.2411,
+      "label": "DXY 1-day return",
+      "market": "DXY",
+      "net_flow": 1.6912,
+      "out_strength": 3.9323,
+      "relay_score": 8.8127,
+      "topology_role": "source"
+    },
+    "dxy_return_20": {
+      "in_strength": 4.2724,
+      "label": "DXY 20-day return",
+      "market": "DXY",
+      "net_flow": -2.0472,
+      "out_strength": 2.2252,
+      "relay_score": 9.5069,
+      "topology_role": "sink"
+    },
+    "dxy_return_5": {
+      "in_strength": 3.457,
+      "label": "DXY 5-day return",
+      "market": "DXY",
+      "net_flow": 0.4231,
+      "out_strength": 3.8801,
+      "relay_score": 13.4135,
+      "topology_role": "relay"
+    },
+    "fed_surprise": {
+      "in_strength": 0.0,
+      "label": "Fed announcement surprise",
+      "market": "Economic_Calendar",
+      "net_flow": 0.0,
+      "out_strength": 0.0,
+      "relay_score": 0.0,
+      "topology_role": "intermediate"
+    },
+    "forward_expectation": {
+      "in_strength": 4.2724,
+      "label": "Forward expectation spread",
+      "market": "Composite",
+      "net_flow": -2.0472,
+      "out_strength": 2.2252,
+      "relay_score": 9.5069,
+      "topology_role": "sink"
+    },
+    "geo_severity": {
+      "in_strength": 2.4972,
+      "label": "Geopolitical severity score",
+      "market": "Geopolitical",
+      "net_flow": -0.1228,
+      "out_strength": 2.3744,
+      "relay_score": 5.9294,
+      "topology_role": "sink"
+    },
+    "macro_pressure": {
+      "in_strength": 3.2894,
+      "label": "Macro pressure composite",
+      "market": "Composite",
+      "net_flow": 0.4543,
+      "out_strength": 3.7437,
+      "relay_score": 12.3145,
+      "topology_role": "relay"
+    },
+    "xau_return_1": {
+      "in_strength": 1.8121,
+      "label": "XAU/USD 1-day return",
+      "market": "XAU/USD",
+      "net_flow": 1.6486,
+      "out_strength": 3.4607,
+      "relay_score": 6.2711,
+      "topology_role": "source"
+    },
+    "yield_10y_change_5": {
+      "in_strength": 0.0,
+      "label": "10Y Treasury yield 5-day change",
+      "market": "US_Treasuries",
+      "net_flow": 0.0,
+      "out_strength": 0.0,
+      "relay_score": 0.0,
+      "topology_role": "intermediate"
+    },
+    "yield_30y_change_20": {
+      "in_strength": 0.0,
+      "label": "30Y Treasury yield 20-day change",
+      "market": "US_Treasuries",
+      "net_flow": 0.0,
+      "out_strength": 0.0,
+      "relay_score": 0.0,
+      "topology_role": "intermediate"
+    },
+    "yield_curve_10y_3m": {
+      "in_strength": 0.0,
+      "label": "Yield curve 10Y-3M spread",
+      "market": "US_Treasuries",
+      "net_flow": 0.0,
+      "out_strength": 0.0,
+      "relay_score": 0.0,
+      "topology_role": "intermediate"
+    }
+  },
+  "top_relays": [
+    "dxy_return_5",
+    "macro_pressure",
+    "dxy_return_20",
+    "forward_expectation",
+    "dxy_return_1"
+  ],
+  "top_sinks": [
+    "dxy_return_20",
+    "forward_expectation",
+    "geo_severity",
+    "yield_curve_10y_3m",
+    "yield_10y_change_5"
+  ],
+  "top_sources": [
+    "dxy_return_1",
+    "xau_return_1",
+    "macro_pressure",
+    "dxy_return_5",
+    "yield_curve_10y_3m"
+  ]
+}

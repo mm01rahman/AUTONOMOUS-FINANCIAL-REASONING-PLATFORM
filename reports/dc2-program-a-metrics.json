@@ -1,0 +1,24 @@
+{
+  "campaign": "DC2 Research Program A",
+  "cycle": "Discovery Cycle 2",
+  "dominant_drivers": [
+    "dxy_return_1",
+    "dxy_return_5",
+    "yield_10y_change_5"
+  ],
+  "granger_positive_signals": [],
+  "promotion_candidates": [],
+  "reports_written": 11,
+  "rows": 6257,
+  "signals_analyzed": 10,
+  "status": "COMPLETE",
+  "top_signals": [
+    "dxy_return_1",
+    "dxy_return_5",
+    "macro_pressure",
+    "dxy_return_20",
+    "forward_expectation"
+  ],
+  "transitions_identified": 1375,
+  "unavailable_markets": 14
+}

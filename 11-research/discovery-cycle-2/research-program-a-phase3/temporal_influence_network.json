@@ -1,0 +1,289 @@
+[
+  {
+    "best_lag": 15,
+    "confidence": 1.0,
+    "edge": "dxy_return_5->dxy_return_20",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 15,
+    "confidence": 1.0,
+    "edge": "dxy_return_5->forward_expectation",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 15,
+    "confidence": 1.0,
+    "edge": "macro_pressure->dxy_return_20",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 15,
+    "confidence": 1.0,
+    "edge": "macro_pressure->forward_expectation",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 3,
+    "confidence": 0.914,
+    "edge": "dxy_return_1->macro_pressure",
+    "lag_horizon": "short",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 3,
+    "confidence": 0.912,
+    "edge": "dxy_return_1->dxy_return_5",
+    "lag_horizon": "short",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 2,
+    "confidence": 0.701,
+    "edge": "xau_return_1->dxy_return_1",
+    "lag_horizon": "immediate",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 20,
+    "confidence": 0.7,
+    "edge": "dxy_return_5->macro_pressure",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 1,
+    "confidence": 0.7,
+    "edge": "dxy_return_1->xau_return_1",
+    "lag_horizon": "immediate",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 15,
+    "confidence": 0.6532,
+    "edge": "dxy_return_1->dxy_return_20",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 15,
+    "confidence": 0.6532,
+    "edge": "dxy_return_1->forward_expectation",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 3,
+    "confidence": 0.6218,
+    "edge": "xau_return_1->dxy_return_5",
+    "lag_horizon": "short",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 3,
+    "confidence": 0.6214,
+    "edge": "xau_return_1->macro_pressure",
+    "lag_horizon": "short",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 20,
+    "confidence": 0.5756,
+    "edge": "geo_severity->macro_pressure",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 1,
+    "confidence": 0.5665,
+    "edge": "macro_pressure->dxy_return_5",
+    "lag_horizon": "immediate",
+    "significance": "NONE"
+  },
+  {
+    "best_lag": 20,
+    "confidence": 0.5645,
+    "edge": "dxy_return_20->geo_severity",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 20,
+    "confidence": 0.5645,
+    "edge": "forward_expectation->geo_severity",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 20,
+    "confidence": 0.5645,
+    "edge": "geo_severity->dxy_return_20",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 20,
+    "confidence": 0.5645,
+    "edge": "geo_severity->forward_expectation",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 15,
+    "confidence": 0.5547,
+    "edge": "xau_return_1->dxy_return_20",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 15,
+    "confidence": 0.5547,
+    "edge": "xau_return_1->forward_expectation",
+    "lag_horizon": "long",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 5,
+    "confidence": 0.5313,
+    "edge": "geo_severity->dxy_return_5",
+    "lag_horizon": "short",
+    "significance": "STRONG"
+  },
+  {
+    "best_lag": 1,
+    "confidence": 0.5,
+    "edge": "forward_expectation->dxy_return_20",
+    "lag_horizon": "immediate",
+    "significance": "NONE"
+  },
+  {
+    "best_lag": 1,
+    "confidence": 0.5,
+    "edge": "dxy_return_20->forward_expectation",
+    "lag_horizon": "immediate",
+    "significance": "NONE"
+  },
+  {
+    "best_lag": 10,
+    "confidence": 0.4478,
+    "edge": "macro_pressure->geo_severity",
+    "lag_horizon": "medium",
+    "significance": "MODERATE"
+  },
+  {
+    "best_lag": 10,
+    "confidence": 0.4327,
+    "edge": "dxy_return_5->dxy_return_1",
+    "lag_horizon": "medium",
+    "significance": "MODERATE"
+  },
+  {
+    "best_lag": 10,
+    "confidence": 0.4134,
+    "edge": "dxy_return_5->geo_severity",
+    "lag_horizon": "medium",
+    "significance": "MODERATE"
+  },
+  {
+    "best_lag": 15,
+    "confidence": 0.4127,
+    "edge": "dxy_return_20->dxy_return_5",
+    "lag_horizon": "long",
+    "significance": "MODERATE"
+  },
+  {
+    "best_lag": 15,
+    "confidence": 0.4127,
+    "edge": "forward_expectation->dxy_return_5",
+    "lag_horizon": "long",
+    "significance": "MODERATE"
+  },
+  {
+    "best_lag": 1,
+    "confidence": 0.4071,
+    "edge": "xau_return_1->geo_severity",
+    "lag_horizon": "immediate",
+    "significance": "MODERATE"
+  },
+  {
+    "best_lag": 10,
+    "confidence": 0.3955,
+    "edge": "macro_pressure->dxy_return_1",
+    "lag_horizon": "medium",
+    "significance": "WEAK"
+  },
+  {
+    "best_lag": 3,
+    "confidence": 0.334,
+    "edge": "dxy_return_5->xau_return_1",
+    "lag_horizon": "short",
+    "significance": "MODERATE"
+  },
+  {
+    "best_lag": 3,
+    "confidence": 0.3339,
+    "edge": "macro_pressure->xau_return_1",
+    "lag_horizon": "short",
+    "significance": "MODERATE"
+  },
+  {
+    "best_lag": 10,
+    "confidence": 0.2867,
+    "edge": "dxy_return_20->dxy_return_1",
+    "lag_horizon": "medium",
+    "significance": "WEAK"
+  },
+  {
+    "best_lag": 10,
+    "confidence": 0.2867,
+    "edge": "forward_expectation->dxy_return_1",
+    "lag_horizon": "medium",
+    "significance": "WEAK"
+  },
+  {
+    "best_lag": 20,
+    "confidence": 0.2392,
+    "edge": "dxy_return_20->macro_pressure",
+    "lag_horizon": "long",
+    "significance": "NONE"
+  },
+  {
+    "best_lag": 20,
+    "confidence": 0.2392,
+    "edge": "forward_expectation->macro_pressure",
+    "lag_horizon": "long",
+    "significance": "NONE"
+  },
+  {
+    "best_lag": 3,
+    "confidence": 0.2221,
+    "edge": "dxy_return_20->xau_return_1",
+    "lag_horizon": "short",
+    "significance": "WEAK"
+  },
+  {
+    "best_lag": 3,
+    "confidence": 0.2221,
+    "edge": "forward_expectation->xau_return_1",
+    "lag_horizon": "short",
+    "significance": "WEAK"
+  },
+  {
+    "best_lag": 2,
+    "confidence": 0.1385,
+    "edge": "geo_severity->dxy_return_1",
+    "lag_horizon": "immediate",
+    "significance": "WEAK"
+  },
+  {
+    "best_lag": 15,
+    "confidence": 0.0999,
+    "edge": "dxy_return_1->geo_severity",
+    "lag_horizon": "long",
+    "significance": "WEAK"
+  }
+]

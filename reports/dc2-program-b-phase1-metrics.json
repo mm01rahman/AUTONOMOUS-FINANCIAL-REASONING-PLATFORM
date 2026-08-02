@@ -1,0 +1,28 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0020",
+  "graph_edges_created": 67,
+  "graph_nodes_created": 24,
+  "n_capital_flow_edges": 34,
+  "n_feedback_loops": 45,
+  "n_interactions": 90,
+  "n_participants": 10,
+  "phase": "DC2_PROGRAM_B_PHASE1",
+  "reports": {
+    "adaptive_behaviour": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\ADAPTIVE_BEHAVIOUR_REPORT.md",
+    "adaptive_behaviour_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\adaptive_behaviour_model.json",
+    "capital_flow_atlas": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\CAPITAL_FLOW_ATLAS.md",
+    "capital_flow_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\capital_flow_atlas.json",
+    "ecology_atlas": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\INSTITUTIONAL_MARKET_ECOLOGY_ATLAS.md",
+    "ecology_graph_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\institutional_market_ecology_graph.json",
+    "ecology_knowledge_graph": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\ECOLOGY_KNOWLEDGE_GRAPH.md",
+    "interaction_matrix": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\INTERACTION_MATRIX.md",
+    "interaction_matrix_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\interaction_matrix.json",
+    "knowledge_graph_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\ecology_knowledge_graph.json",
+    "liquidity_ecology": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\LIQUIDITY_ECOLOGY_REPORT.md",
+    "liquidity_network_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\liquidity_network.json",
+    "participant_profiles": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\PARTICIPANT_PROFILES.md",
+    "participant_profiles_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\participant_profiles.json",
+    "recommendations_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\research_recommendations.json",
+    "research_recommendations": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-b-phase1\\RESEARCH_RECOMMENDATIONS.md"
+  }
+}

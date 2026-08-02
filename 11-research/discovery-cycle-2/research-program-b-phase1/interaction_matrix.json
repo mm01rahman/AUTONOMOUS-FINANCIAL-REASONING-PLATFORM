@@ -1,0 +1,122 @@
+{
+  "bullion_banks": {
+    "bullion_banks": 0.0,
+    "central_banks": 1.0701,
+    "commercial_hedgers": 1.4038,
+    "ctas": 1.3448,
+    "dealers": 1.6446,
+    "etf_investors": 1.3454,
+    "macro_hedge_funds": 1.1656,
+    "market_makers": 1.3241,
+    "retail_traders": 1.2418,
+    "safe_haven_capital_flows": 1.1085
+  },
+  "central_banks": {
+    "bullion_banks": 0.2608,
+    "central_banks": 0.0,
+    "commercial_hedgers": 0.2713,
+    "ctas": 0.2233,
+    "dealers": 0.2521,
+    "etf_investors": 0.2349,
+    "macro_hedge_funds": 1.0201,
+    "market_makers": 0.2136,
+    "retail_traders": 0.2743,
+    "safe_haven_capital_flows": 0.646
+  },
+  "commercial_hedgers": {
+    "bullion_banks": 0.671,
+    "central_banks": 0.3078,
+    "commercial_hedgers": 0.0,
+    "ctas": 0.5385,
+    "dealers": 0.4063,
+    "etf_investors": 0.5501,
+    "macro_hedge_funds": 0.2163,
+    "market_makers": 0.3748,
+    "retail_traders": 0.4355,
+    "safe_haven_capital_flows": 0.2032
+  },
+  "ctas": {
+    "bullion_banks": 0.6322,
+    "central_banks": 0.5,
+    "commercial_hedgers": 0.7787,
+    "ctas": 0.0,
+    "dealers": 0.4625,
+    "etf_investors": 0.7753,
+    "macro_hedge_funds": 0.4085,
+    "market_makers": 0.622,
+    "retail_traders": 0.6827,
+    "safe_haven_capital_flows": 0.3954
+  },
+  "dealers": {
+    "bullion_banks": 1.4629,
+    "central_banks": 1.3198,
+    "commercial_hedgers": 1.2575,
+    "ctas": 1.2534,
+    "dealers": 0.0,
+    "etf_investors": 1.254,
+    "macro_hedge_funds": 1.3932,
+    "market_makers": 1.6668,
+    "retail_traders": 1.3044,
+    "safe_haven_capital_flows": 1.3582
+  },
+  "etf_investors": {
+    "bullion_banks": 0.5747,
+    "central_banks": 0.4536,
+    "commercial_hedgers": 0.7323,
+    "ctas": 0.7173,
+    "dealers": 0.4051,
+    "etf_investors": 0.0,
+    "macro_hedge_funds": 0.3621,
+    "market_makers": 0.6746,
+    "retail_traders": 0.7572,
+    "safe_haven_capital_flows": 0.525
+  },
+  "macro_hedge_funds": {
+    "bullion_banks": 0.6339,
+    "central_banks": 1.2277,
+    "commercial_hedgers": 0.6374,
+    "ctas": 0.7894,
+    "dealers": 0.7832,
+    "etf_investors": 0.701,
+    "macro_hedge_funds": 0.0,
+    "market_makers": 0.7227,
+    "retail_traders": 0.6404,
+    "safe_haven_capital_flows": 0.8701
+  },
+  "market_makers": {
+    "bullion_banks": 0.6598,
+    "central_banks": 0.5387,
+    "commercial_hedgers": 0.6634,
+    "ctas": 0.6704,
+    "dealers": 0.6442,
+    "etf_investors": 0.781,
+    "macro_hedge_funds": 0.5902,
+    "market_makers": 0.0,
+    "retail_traders": 0.8533,
+    "safe_haven_capital_flows": 0.6981
+  },
+  "retail_traders": {
+    "bullion_banks": 0.2742,
+    "central_banks": 0.2961,
+    "commercial_hedgers": 0.4208,
+    "ctas": 0.4278,
+    "dealers": 0.2586,
+    "etf_investors": 0.5604,
+    "macro_hedge_funds": 0.2046,
+    "market_makers": 0.5001,
+    "retail_traders": 0.0,
+    "safe_haven_capital_flows": 0.3345
+  },
+  "safe_haven_capital_flows": {
+    "bullion_banks": 0.6422,
+    "central_banks": 1.0491,
+    "commercial_hedgers": 0.6898,
+    "ctas": 0.6418,
+    "dealers": 0.8136,
+    "etf_investors": 1.0694,
+    "macro_hedge_funds": 0.9356,
+    "market_makers": 0.8161,
+    "retail_traders": 0.8358,
+    "safe_haven_capital_flows": 0.0
+  }
+}

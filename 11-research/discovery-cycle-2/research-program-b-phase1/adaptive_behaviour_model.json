@@ -1,0 +1,62 @@
+{
+  "bullion_banks": {
+    "adaptation_mode": "warehouse",
+    "adaptive_trigger": "macro_source_repricing",
+    "participant": "bullion_banks",
+    "regime_sensitivity": "high"
+  },
+  "central_banks": {
+    "adaptation_mode": "hedge_rebalance",
+    "adaptive_trigger": "macro_source_repricing",
+    "participant": "central_banks",
+    "regime_sensitivity": "high"
+  },
+  "commercial_hedgers": {
+    "adaptation_mode": "hedge_rebalance",
+    "adaptive_trigger": "macro_source_repricing",
+    "participant": "commercial_hedgers",
+    "regime_sensitivity": "high"
+  },
+  "ctas": {
+    "adaptation_mode": "rule_scale",
+    "adaptive_trigger": "macro_source_repricing",
+    "participant": "ctas",
+    "regime_sensitivity": "high"
+  },
+  "dealers": {
+    "adaptation_mode": "warehouse",
+    "adaptive_trigger": "macro_source_repricing",
+    "participant": "dealers",
+    "regime_sensitivity": "high"
+  },
+  "etf_investors": {
+    "adaptation_mode": "reallocate",
+    "adaptive_trigger": "macro_source_repricing",
+    "participant": "etf_investors",
+    "regime_sensitivity": "high"
+  },
+  "macro_hedge_funds": {
+    "adaptation_mode": "reallocate",
+    "adaptive_trigger": "macro_source_repricing",
+    "participant": "macro_hedge_funds",
+    "regime_sensitivity": "high"
+  },
+  "market_makers": {
+    "adaptation_mode": "quote_adjust",
+    "adaptive_trigger": "macro_source_repricing",
+    "participant": "market_makers",
+    "regime_sensitivity": "high"
+  },
+  "retail_traders": {
+    "adaptation_mode": "hedge_rebalance",
+    "adaptive_trigger": "macro_source_repricing",
+    "participant": "retail_traders",
+    "regime_sensitivity": "high"
+  },
+  "safe_haven_capital_flows": {
+    "adaptation_mode": "reallocate",
+    "adaptive_trigger": "macro_source_repricing",
+    "participant": "safe_haven_capital_flows",
+    "regime_sensitivity": "high"
+  }
+}

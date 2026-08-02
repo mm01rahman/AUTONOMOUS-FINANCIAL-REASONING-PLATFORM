@@ -1,7 +1,7 @@
 attributes:
-  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0009
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0011
   entity_type: ResearchTask
-  kind: FINAL_REPORT
+  kind: RESEARCH_QUESTION
   status: COMPLETED
 confidence: 1.0
 created_at: '2026-08-02T02:28:58.210079+00:00'

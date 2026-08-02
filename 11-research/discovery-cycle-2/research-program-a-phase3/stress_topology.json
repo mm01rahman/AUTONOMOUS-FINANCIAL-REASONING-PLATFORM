@@ -1,0 +1,3336 @@
+{
+  "global_financial_crisis": {
+    "centrality": {
+      "bottlenecks": [
+        "dxy_return_5",
+        "macro_pressure",
+        "dxy_return_20"
+      ],
+      "nodes": {
+        "dxy_return_1": {
+          "in_strength": 3.0193,
+          "label": "DXY 1-day return",
+          "market": "DXY",
+          "net_flow": 0.7286,
+          "out_strength": 3.7479,
+          "relay_score": 11.316,
+          "topology_role": "source"
+        },
+        "dxy_return_20": {
+          "in_strength": 4.299,
+          "label": "DXY 20-day return",
+          "market": "DXY",
+          "net_flow": -1.0821,
+          "out_strength": 3.2169,
+          "relay_score": 13.8295,
+          "topology_role": "relay"
+        },
+        "dxy_return_5": {
+          "in_strength": 4.137,
+          "label": "DXY 5-day return",
+          "market": "DXY",
+          "net_flow": -0.0388,
+          "out_strength": 4.0982,
+          "relay_score": 16.9543,
+          "topology_role": "relay"
+        },
+        "fed_surprise": {
+          "in_strength": 0.0,
+          "label": "Fed announcement surprise",
+          "market": "Economic_Calendar",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "forward_expectation": {
+          "in_strength": 4.299,
+          "label": "Forward expectation spread",
+          "market": "Composite",
+          "net_flow": -1.1124,
+          "out_strength": 3.1866,
+          "relay_score": 13.6992,
+          "topology_role": "sink"
+        },
+        "geo_severity": {
+          "in_strength": 3.1013,
+          "label": "Geopolitical severity score",
+          "market": "Geopolitical",
+          "net_flow": -0.2513,
+          "out_strength": 2.85,
+          "relay_score": 8.8387,
+          "topology_role": "sink"
+        },
+        "macro_pressure": {
+          "in_strength": 3.9474,
+          "label": "Macro pressure composite",
+          "market": "Composite",
+          "net_flow": 0.1818,
+          "out_strength": 4.1292,
+          "relay_score": 16.2996,
+          "topology_role": "relay"
+        },
+        "xau_return_1": {
+          "in_strength": 1.5787,
+          "label": "XAU/USD 1-day return",
+          "market": "XAU/USD",
+          "net_flow": 1.5742,
+          "out_strength": 3.1529,
+          "relay_score": 4.9775,
+          "topology_role": "source"
+        },
+        "yield_10y_change_5": {
+          "in_strength": 0.0,
+          "label": "10Y Treasury yield 5-day change",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "yield_30y_change_20": {
+          "in_strength": 0.0,
+          "label": "30Y Treasury yield 20-day change",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "yield_curve_10y_3m": {
+          "in_strength": 0.0,
+          "label": "Yield curve 10Y-3M spread",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        }
+      },
+      "top_relays": [
+        "dxy_return_5",
+        "macro_pressure",
+        "dxy_return_20",
+        "forward_expectation",
+        "dxy_return_1"
+      ],
+      "top_sinks": [
+        "forward_expectation",
+        "dxy_return_20",
+        "geo_severity",
+        "dxy_return_5",
+        "yield_curve_10y_3m"
+      ],
+      "top_sources": [
+        "xau_return_1",
+        "dxy_return_1",
+        "macro_pressure",
+        "yield_curve_10y_3m",
+        "yield_10y_change_5"
+      ]
+    },
+    "communities": [
+      [
+        "dxy_return_1",
+        "dxy_return_20",
+        "dxy_return_5",
+        "forward_expectation",
+        "geo_severity",
+        "macro_pressure",
+        "xau_return_1"
+      ],
+      [
+        "yield_curve_10y_3m"
+      ],
+      [
+        "yield_10y_change_5"
+      ],
+      [
+        "yield_30y_change_20"
+      ],
+      [
+        "fed_surprise"
+      ]
+    ],
+    "density": 0.3636,
+    "edges": [
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": 0.5361,
+        "f_proxy": 70.9804,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.07337
+      },
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": -0.5361,
+        "f_proxy": 70.9804,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.07337
+      },
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": -0.508,
+        "f_proxy": 58.1692,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.05507
+      },
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": 0.508,
+        "f_proxy": 58.1692,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.05507
+      },
+      {
+        "best_lag": 3,
+        "confidence": 1.0,
+        "correlation": -0.4656,
+        "f_proxy": 25.6537,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0831
+      },
+      {
+        "best_lag": 3,
+        "confidence": 1.0,
+        "correlation": 0.4682,
+        "f_proxy": 24.4091,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.06837
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.8693,
+        "correlation": 0.3798,
+        "f_proxy": 7.3851,
+        "lag_horizon": "medium",
+        "significance": "MODERATE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.15999
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.8693,
+        "correlation": -0.3798,
+        "f_proxy": 7.3851,
+        "lag_horizon": "medium",
+        "significance": "MODERATE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.15999
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.7457,
+        "correlation": -0.9956,
+        "f_proxy": 17.5916,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.00761
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.7325,
+        "correlation": 0.4682,
+        "f_proxy": 7.9548,
+        "lag_horizon": "long",
+        "significance": "MODERATE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.02246
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.7,
+        "correlation": 0.3798,
+        "f_proxy": 30.078,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.7,
+        "correlation": -0.3798,
+        "f_proxy": 30.078,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.6858,
+        "correlation": -0.4656,
+        "f_proxy": 8.1362,
+        "lag_horizon": "long",
+        "significance": "MODERATE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.01317
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.6711,
+        "correlation": 0.2566,
+        "f_proxy": 10.3822,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.6711,
+        "correlation": -0.2566,
+        "f_proxy": 10.3822,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.6589,
+        "correlation": 0.1591,
+        "f_proxy": 17.3496,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0088
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.6382,
+        "correlation": 0.2073,
+        "f_proxy": 17.5916,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 2,
+        "confidence": 0.6316,
+        "correlation": -0.316,
+        "f_proxy": 5.48,
+        "lag_horizon": "immediate",
+        "significance": "MODERATE",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.02627
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.6054,
+        "correlation": -0.508,
+        "f_proxy": 2.5165,
+        "lag_horizon": "medium",
+        "significance": "WEAK",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0466
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.6054,
+        "correlation": 0.508,
+        "f_proxy": 2.5165,
+        "lag_horizon": "medium",
+        "significance": "WEAK",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0466
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.6001,
+        "correlation": -0.1501,
+        "f_proxy": 16.4043,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.5765,
+        "correlation": 0.5361,
+        "f_proxy": 1.5298,
+        "lag_horizon": "medium",
+        "significance": "WEAK",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.06082
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.5765,
+        "correlation": -0.5361,
+        "f_proxy": 1.5298,
+        "lag_horizon": "medium",
+        "significance": "WEAK",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.06082
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.5427,
+        "correlation": 0.2073,
+        "f_proxy": 2.9158,
+        "lag_horizon": "medium",
+        "significance": "WEAK",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.04311
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5392,
+        "correlation": -0.9956,
+        "f_proxy": 0.7837,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.1313
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.5385,
+        "correlation": -0.1147,
+        "f_proxy": 9.2397,
+        "lag_horizon": "medium",
+        "significance": "MODERATE",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5,
+        "correlation": -1.0,
+        "f_proxy": 0.0,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.24318
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5,
+        "correlation": -1.0,
+        "f_proxy": 0.0,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.24318
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.4279,
+        "correlation": -0.0864,
+        "f_proxy": 7.4063,
+        "lag_horizon": "short",
+        "significance": "MODERATE",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.4279,
+        "correlation": 0.0864,
+        "f_proxy": 7.4063,
+        "lag_horizon": "short",
+        "significance": "MODERATE",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.4135,
+        "correlation": -0.1147,
+        "f_proxy": 2.9158,
+        "lag_horizon": "medium",
+        "significance": "WEAK",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.03187
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.4065,
+        "correlation": 0.0697,
+        "f_proxy": 1.2013,
+        "lag_horizon": "short",
+        "significance": "NONE",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.05111
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.4057,
+        "correlation": -0.316,
+        "f_proxy": 2.6212,
+        "lag_horizon": "immediate",
+        "significance": "WEAK",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.01244
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.3632,
+        "correlation": 0.2566,
+        "f_proxy": 0.9953,
+        "lag_horizon": "medium",
+        "significance": "NONE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.02373
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.3329,
+        "correlation": -0.2566,
+        "f_proxy": 0.0114,
+        "lag_horizon": "medium",
+        "significance": "NONE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.02688
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.3025,
+        "correlation": -0.0864,
+        "f_proxy": 0.3096,
+        "lag_horizon": "medium",
+        "significance": "NONE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.03824
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.3025,
+        "correlation": 0.0864,
+        "f_proxy": 0.3096,
+        "lag_horizon": "medium",
+        "significance": "NONE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.03824
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.2842,
+        "correlation": 0.1591,
+        "f_proxy": 0.6026,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.02467
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.2838,
+        "correlation": -0.1501,
+        "f_proxy": 0.6642,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.02509
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.2733,
+        "correlation": 0.1027,
+        "f_proxy": 4.0971,
+        "lag_horizon": "medium",
+        "significance": "MODERATE",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      }
+    ],
+    "feedback_loops": [
+      {
+        "backward_confidence": 0.7325,
+        "combined_confidence": 0.8662,
+        "forward_confidence": 1.0,
+        "pair": "dxy_return_1 <-> dxy_return_5"
+      },
+      {
+        "backward_confidence": 0.6858,
+        "combined_confidence": 0.8429,
+        "forward_confidence": 1.0,
+        "pair": "dxy_return_1 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 1.0,
+        "combined_confidence": 0.8027,
+        "forward_confidence": 0.6054,
+        "pair": "dxy_return_20 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 1.0,
+        "combined_confidence": 0.8027,
+        "forward_confidence": 0.6054,
+        "pair": "forward_expectation <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.5765,
+        "combined_confidence": 0.7883,
+        "forward_confidence": 1.0,
+        "pair": "dxy_return_5 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 1.0,
+        "combined_confidence": 0.7883,
+        "forward_confidence": 0.5765,
+        "pair": "dxy_return_20 <-> dxy_return_5"
+      },
+      {
+        "backward_confidence": 0.7,
+        "combined_confidence": 0.7846,
+        "forward_confidence": 0.8693,
+        "pair": "dxy_return_20 <-> geo_severity"
+      },
+      {
+        "backward_confidence": 0.7,
+        "combined_confidence": 0.7846,
+        "forward_confidence": 0.8693,
+        "pair": "forward_expectation <-> geo_severity"
+      },
+      {
+        "backward_confidence": 0.7457,
+        "combined_confidence": 0.6424,
+        "forward_confidence": 0.5392,
+        "pair": "dxy_return_5 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.6382,
+        "combined_confidence": 0.5904,
+        "forward_confidence": 0.5427,
+        "pair": "dxy_return_5 <-> geo_severity"
+      },
+      {
+        "backward_confidence": 0.6316,
+        "combined_confidence": 0.5187,
+        "forward_confidence": 0.4057,
+        "pair": "dxy_return_1 <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.3632,
+        "combined_confidence": 0.5171,
+        "forward_confidence": 0.6711,
+        "pair": "dxy_return_1 <-> dxy_return_20"
+      },
+      {
+        "backward_confidence": 0.3329,
+        "combined_confidence": 0.502,
+        "forward_confidence": 0.6711,
+        "pair": "dxy_return_1 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 0.5,
+        "combined_confidence": 0.5,
+        "forward_confidence": 0.5,
+        "pair": "dxy_return_20 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 0.4135,
+        "combined_confidence": 0.476,
+        "forward_confidence": 0.5385,
+        "pair": "geo_severity <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.6589,
+        "combined_confidence": 0.4716,
+        "forward_confidence": 0.2842,
+        "pair": "macro_pressure <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.6001,
+        "combined_confidence": 0.4419,
+        "forward_confidence": 0.2838,
+        "pair": "dxy_return_5 <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.4279,
+        "combined_confidence": 0.3652,
+        "forward_confidence": 0.3025,
+        "pair": "dxy_return_20 <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.4279,
+        "combined_confidence": 0.3652,
+        "forward_confidence": 0.3025,
+        "pair": "forward_expectation <-> xau_return_1"
+      }
+    ],
+    "hierarchy": [
+      {
+        "in_strength": 1.5787,
+        "label": "XAU/USD 1-day return",
+        "market": "XAU/USD",
+        "net_flow": 1.5742,
+        "node": "xau_return_1",
+        "out_strength": 3.1529,
+        "role": "source"
+      },
+      {
+        "in_strength": 3.0193,
+        "label": "DXY 1-day return",
+        "market": "DXY",
+        "net_flow": 0.7286,
+        "node": "dxy_return_1",
+        "out_strength": 3.7479,
+        "role": "source"
+      },
+      {
+        "in_strength": 3.9474,
+        "label": "Macro pressure composite",
+        "market": "Composite",
+        "net_flow": 0.1818,
+        "node": "macro_pressure",
+        "out_strength": 4.1292,
+        "role": "relay"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "Yield curve 10Y-3M spread",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_curve_10y_3m",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "10Y Treasury yield 5-day change",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_10y_change_5",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "30Y Treasury yield 20-day change",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_30y_change_20",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "Fed announcement surprise",
+        "market": "Economic_Calendar",
+        "net_flow": 0.0,
+        "node": "fed_surprise",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 4.137,
+        "label": "DXY 5-day return",
+        "market": "DXY",
+        "net_flow": -0.0388,
+        "node": "dxy_return_5",
+        "out_strength": 4.0982,
+        "role": "relay"
+      },
+      {
+        "in_strength": 3.1013,
+        "label": "Geopolitical severity score",
+        "market": "Geopolitical",
+        "net_flow": -0.2513,
+        "node": "geo_severity",
+        "out_strength": 2.85,
+        "role": "sink"
+      },
+      {
+        "in_strength": 4.299,
+        "label": "DXY 20-day return",
+        "market": "DXY",
+        "net_flow": -1.0821,
+        "node": "dxy_return_20",
+        "out_strength": 3.2169,
+        "role": "relay"
+      },
+      {
+        "in_strength": 4.299,
+        "label": "Forward expectation spread",
+        "market": "Composite",
+        "net_flow": -1.1124,
+        "node": "forward_expectation",
+        "out_strength": 3.1866,
+        "role": "sink"
+      }
+    ],
+    "label": "global_financial_crisis",
+    "n_obs": 208,
+    "nodes": [
+      "xau_return_1",
+      "dxy_return_1",
+      "dxy_return_5",
+      "dxy_return_20",
+      "yield_curve_10y_3m",
+      "yield_10y_change_5",
+      "yield_30y_change_20",
+      "fed_surprise",
+      "geo_severity",
+      "macro_pressure",
+      "forward_expectation"
+    ]
+  },
+  "gold_liquidation_2013": {
+    "centrality": {
+      "bottlenecks": [
+        "macro_pressure",
+        "dxy_return_20",
+        "forward_expectation"
+      ],
+      "nodes": {
+        "dxy_return_1": {
+          "in_strength": 3.1243,
+          "label": "DXY 1-day return",
+          "market": "DXY",
+          "net_flow": 0.0244,
+          "out_strength": 3.1487,
+          "relay_score": 9.8375,
+          "topology_role": "intermediate"
+        },
+        "dxy_return_20": {
+          "in_strength": 3.0166,
+          "label": "DXY 20-day return",
+          "market": "DXY",
+          "net_flow": 0.9535,
+          "out_strength": 3.9701,
+          "relay_score": 11.9762,
+          "topology_role": "relay"
+        },
+        "dxy_return_5": {
+          "in_strength": 3.3632,
+          "label": "DXY 5-day return",
+          "market": "DXY",
+          "net_flow": -0.0297,
+          "out_strength": 3.3335,
+          "relay_score": 11.2112,
+          "topology_role": "sink"
+        },
+        "fed_surprise": {
+          "in_strength": 0.0,
+          "label": "Fed announcement surprise",
+          "market": "Economic_Calendar",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "forward_expectation": {
+          "in_strength": 3.0166,
+          "label": "Forward expectation spread",
+          "market": "Composite",
+          "net_flow": 0.9535,
+          "out_strength": 3.9701,
+          "relay_score": 11.9762,
+          "topology_role": "relay"
+        },
+        "geo_severity": {
+          "in_strength": 1.2753,
+          "label": "Geopolitical severity score",
+          "market": "Geopolitical",
+          "net_flow": -0.2124,
+          "out_strength": 1.0629,
+          "relay_score": 1.3555,
+          "topology_role": "sink"
+        },
+        "macro_pressure": {
+          "in_strength": 3.3791,
+          "label": "Macro pressure composite",
+          "market": "Composite",
+          "net_flow": 0.2364,
+          "out_strength": 3.6155,
+          "relay_score": 12.2171,
+          "topology_role": "relay"
+        },
+        "xau_return_1": {
+          "in_strength": 3.4477,
+          "label": "XAU/USD 1-day return",
+          "market": "XAU/USD",
+          "net_flow": -1.9257,
+          "out_strength": 1.522,
+          "relay_score": 5.2474,
+          "topology_role": "sink"
+        },
+        "yield_10y_change_5": {
+          "in_strength": 0.0,
+          "label": "10Y Treasury yield 5-day change",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "yield_30y_change_20": {
+          "in_strength": 0.0,
+          "label": "30Y Treasury yield 20-day change",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "yield_curve_10y_3m": {
+          "in_strength": 0.0,
+          "label": "Yield curve 10Y-3M spread",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        }
+      },
+      "top_relays": [
+        "macro_pressure",
+        "dxy_return_20",
+        "forward_expectation",
+        "dxy_return_5",
+        "dxy_return_1"
+      ],
+      "top_sinks": [
+        "xau_return_1",
+        "geo_severity",
+        "dxy_return_5",
+        "yield_curve_10y_3m",
+        "yield_10y_change_5"
+      ],
+      "top_sources": [
+        "dxy_return_20",
+        "forward_expectation",
+        "macro_pressure",
+        "dxy_return_1",
+        "yield_curve_10y_3m"
+      ]
+    },
+    "communities": [
+      [
+        "dxy_return_1",
+        "dxy_return_20",
+        "dxy_return_5",
+        "forward_expectation",
+        "geo_severity",
+        "macro_pressure",
+        "xau_return_1"
+      ],
+      [
+        "yield_curve_10y_3m"
+      ],
+      [
+        "yield_10y_change_5"
+      ],
+      [
+        "yield_30y_change_20"
+      ],
+      [
+        "fed_surprise"
+      ]
+    ],
+    "density": 0.3273,
+    "edges": [
+      {
+        "best_lag": 7,
+        "confidence": 0.9438,
+        "correlation": -0.2156,
+        "f_proxy": 79.2644,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.22734
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.9438,
+        "correlation": 0.2156,
+        "f_proxy": 79.2644,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.22734
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.9438,
+        "correlation": -0.2156,
+        "f_proxy": 70.3088,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.18712
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.9438,
+        "correlation": 0.2156,
+        "f_proxy": 70.3088,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.18712
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.9437,
+        "correlation": 0.2155,
+        "f_proxy": 79.6717,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.22987
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.9437,
+        "correlation": -0.2155,
+        "f_proxy": 79.6717,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.22987
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.9437,
+        "correlation": 0.2155,
+        "f_proxy": 71.1587,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.18209
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.9437,
+        "correlation": -0.2155,
+        "f_proxy": 71.1587,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.18209
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.7455,
+        "correlation": 0.0416,
+        "f_proxy": 11.7382,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0363
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.7455,
+        "correlation": -0.0416,
+        "f_proxy": 11.7382,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0363
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.7382,
+        "correlation": -0.435,
+        "f_proxy": 5.1358,
+        "lag_horizon": "medium",
+        "significance": "MODERATE",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.04691
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.7,
+        "correlation": -0.5549,
+        "f_proxy": 14.9172,
+        "lag_horizon": "immediate",
+        "significance": "STRONG",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.6291,
+        "correlation": 0.0416,
+        "f_proxy": 10.4376,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.01689
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.6291,
+        "correlation": -0.0416,
+        "f_proxy": 10.4376,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.01689
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.5913,
+        "correlation": -0.4796,
+        "f_proxy": 6.2196,
+        "lag_horizon": "short",
+        "significance": "MODERATE",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.01338
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5778,
+        "correlation": 0.0782,
+        "f_proxy": 4.5128,
+        "lag_horizon": "immediate",
+        "significance": "MODERATE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.05019
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5778,
+        "correlation": -0.0782,
+        "f_proxy": 4.5128,
+        "lag_horizon": "immediate",
+        "significance": "MODERATE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.05019
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.561,
+        "correlation": 0.4821,
+        "f_proxy": 6.0738,
+        "lag_horizon": "short",
+        "significance": "MODERATE",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.00955
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5163,
+        "correlation": -0.9992,
+        "f_proxy": 0.3252,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.18555
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5063,
+        "correlation": -0.9992,
+        "f_proxy": 0.1262,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.18555
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.5056,
+        "correlation": -0.4796,
+        "f_proxy": 0.1124,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.10827
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.5044,
+        "correlation": 0.4821,
+        "f_proxy": 0.0871,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.08132
+      },
+      {
+        "best_lag": 5,
+        "confidence": 0.5038,
+        "correlation": -0.435,
+        "f_proxy": 0.0765,
+        "lag_horizon": "short",
+        "significance": "NONE",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.05708
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5,
+        "correlation": -1.0,
+        "f_proxy": 0.0,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.22202
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5,
+        "correlation": -1.0,
+        "f_proxy": 0.0,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.22202
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.4692,
+        "correlation": -0.5549,
+        "f_proxy": 2.7488,
+        "lag_horizon": "immediate",
+        "significance": "WEAK",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.02196
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.4354,
+        "correlation": -0.1863,
+        "f_proxy": 0.2251,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.06333
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.4185,
+        "correlation": 0.1639,
+        "f_proxy": 0.1849,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.09029
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.2875,
+        "correlation": 0.0731,
+        "f_proxy": 0.0696,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.03921
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.2824,
+        "correlation": -0.1863,
+        "f_proxy": 2.0864,
+        "lag_horizon": "medium",
+        "significance": "WEAK",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.00898
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.2666,
+        "correlation": 0.1639,
+        "f_proxy": 3.147,
+        "lag_horizon": "short",
+        "significance": "WEAK",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 5,
+        "confidence": 0.2593,
+        "correlation": -0.0143,
+        "f_proxy": 0.009,
+        "lag_horizon": "short",
+        "significance": "NONE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.04155
+      },
+      {
+        "best_lag": 5,
+        "confidence": 0.2593,
+        "correlation": 0.0143,
+        "f_proxy": 0.009,
+        "lag_horizon": "short",
+        "significance": "NONE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.04155
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.1273,
+        "correlation": 0.0731,
+        "f_proxy": 1.5705,
+        "lag_horizon": "long",
+        "significance": "WEAK",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.1195,
+        "correlation": 0.037,
+        "f_proxy": 1.8965,
+        "lag_horizon": "short",
+        "significance": "WEAK",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.1161,
+        "correlation": -0.0336,
+        "f_proxy": 1.8741,
+        "lag_horizon": "long",
+        "significance": "WEAK",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      }
+    ],
+    "feedback_loops": [
+      {
+        "backward_confidence": 0.9438,
+        "combined_confidence": 0.9438,
+        "forward_confidence": 0.9438,
+        "pair": "dxy_return_20 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.9438,
+        "combined_confidence": 0.9438,
+        "forward_confidence": 0.9438,
+        "pair": "forward_expectation <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.9437,
+        "combined_confidence": 0.9437,
+        "forward_confidence": 0.9437,
+        "pair": "dxy_return_20 <-> dxy_return_5"
+      },
+      {
+        "backward_confidence": 0.9437,
+        "combined_confidence": 0.9437,
+        "forward_confidence": 0.9437,
+        "pair": "dxy_return_5 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 0.7455,
+        "combined_confidence": 0.6873,
+        "forward_confidence": 0.6291,
+        "pair": "dxy_return_1 <-> dxy_return_20"
+      },
+      {
+        "backward_confidence": 0.7455,
+        "combined_confidence": 0.6873,
+        "forward_confidence": 0.6291,
+        "pair": "dxy_return_1 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 0.5038,
+        "combined_confidence": 0.621,
+        "forward_confidence": 0.7382,
+        "pair": "dxy_return_1 <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.4692,
+        "combined_confidence": 0.5846,
+        "forward_confidence": 0.7,
+        "pair": "geo_severity <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.5056,
+        "combined_confidence": 0.5485,
+        "forward_confidence": 0.5913,
+        "pair": "dxy_return_1 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.5044,
+        "combined_confidence": 0.5327,
+        "forward_confidence": 0.561,
+        "pair": "dxy_return_1 <-> dxy_return_5"
+      },
+      {
+        "backward_confidence": 0.5163,
+        "combined_confidence": 0.5113,
+        "forward_confidence": 0.5063,
+        "pair": "dxy_return_5 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.5,
+        "combined_confidence": 0.5,
+        "forward_confidence": 0.5,
+        "pair": "dxy_return_20 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 0.2824,
+        "combined_confidence": 0.3589,
+        "forward_confidence": 0.4354,
+        "pair": "dxy_return_5 <-> xau_return_1"
+      }
+    ],
+    "hierarchy": [
+      {
+        "in_strength": 3.0166,
+        "label": "DXY 20-day return",
+        "market": "DXY",
+        "net_flow": 0.9535,
+        "node": "dxy_return_20",
+        "out_strength": 3.9701,
+        "role": "relay"
+      },
+      {
+        "in_strength": 3.0166,
+        "label": "Forward expectation spread",
+        "market": "Composite",
+        "net_flow": 0.9535,
+        "node": "forward_expectation",
+        "out_strength": 3.9701,
+        "role": "relay"
+      },
+      {
+        "in_strength": 3.3791,
+        "label": "Macro pressure composite",
+        "market": "Composite",
+        "net_flow": 0.2364,
+        "node": "macro_pressure",
+        "out_strength": 3.6155,
+        "role": "relay"
+      },
+      {
+        "in_strength": 3.1243,
+        "label": "DXY 1-day return",
+        "market": "DXY",
+        "net_flow": 0.0244,
+        "node": "dxy_return_1",
+        "out_strength": 3.1487,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "Yield curve 10Y-3M spread",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_curve_10y_3m",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "10Y Treasury yield 5-day change",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_10y_change_5",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "30Y Treasury yield 20-day change",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_30y_change_20",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "Fed announcement surprise",
+        "market": "Economic_Calendar",
+        "net_flow": 0.0,
+        "node": "fed_surprise",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 3.3632,
+        "label": "DXY 5-day return",
+        "market": "DXY",
+        "net_flow": -0.0297,
+        "node": "dxy_return_5",
+        "out_strength": 3.3335,
+        "role": "sink"
+      },
+      {
+        "in_strength": 1.2753,
+        "label": "Geopolitical severity score",
+        "market": "Geopolitical",
+        "net_flow": -0.2124,
+        "node": "geo_severity",
+        "out_strength": 1.0629,
+        "role": "sink"
+      },
+      {
+        "in_strength": 3.4477,
+        "label": "XAU/USD 1-day return",
+        "market": "XAU/USD",
+        "net_flow": -1.9257,
+        "node": "xau_return_1",
+        "out_strength": 1.522,
+        "role": "sink"
+      }
+    ],
+    "label": "gold_liquidation_2013",
+    "n_obs": 85,
+    "nodes": [
+      "xau_return_1",
+      "dxy_return_1",
+      "dxy_return_5",
+      "dxy_return_20",
+      "yield_curve_10y_3m",
+      "yield_10y_change_5",
+      "yield_30y_change_20",
+      "fed_surprise",
+      "geo_severity",
+      "macro_pressure",
+      "forward_expectation"
+    ]
+  },
+  "inflation_repricing_2022": {
+    "centrality": {
+      "bottlenecks": [
+        "dxy_return_5",
+        "macro_pressure",
+        "dxy_return_20"
+      ],
+      "nodes": {
+        "dxy_return_1": {
+          "in_strength": 1.6435,
+          "label": "DXY 1-day return",
+          "market": "DXY",
+          "net_flow": 1.6625,
+          "out_strength": 3.306,
+          "relay_score": 5.4334,
+          "topology_role": "source"
+        },
+        "dxy_return_20": {
+          "in_strength": 3.6486,
+          "label": "DXY 20-day return",
+          "market": "DXY",
+          "net_flow": -0.8559,
+          "out_strength": 2.7927,
+          "relay_score": 10.1894,
+          "topology_role": "relay"
+        },
+        "dxy_return_5": {
+          "in_strength": 3.5947,
+          "label": "DXY 5-day return",
+          "market": "DXY",
+          "net_flow": 0.0392,
+          "out_strength": 3.6339,
+          "relay_score": 13.0628,
+          "topology_role": "relay"
+        },
+        "fed_surprise": {
+          "in_strength": 0.0,
+          "label": "Fed announcement surprise",
+          "market": "Economic_Calendar",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "forward_expectation": {
+          "in_strength": 3.6486,
+          "label": "Forward expectation spread",
+          "market": "Composite",
+          "net_flow": -0.8575,
+          "out_strength": 2.7911,
+          "relay_score": 10.1836,
+          "topology_role": "sink"
+        },
+        "geo_severity": {
+          "in_strength": 2.0539,
+          "label": "Geopolitical severity score",
+          "market": "Geopolitical",
+          "net_flow": 0.6075,
+          "out_strength": 2.6614,
+          "relay_score": 5.4662,
+          "topology_role": "source"
+        },
+        "macro_pressure": {
+          "in_strength": 3.5013,
+          "label": "Macro pressure composite",
+          "market": "Composite",
+          "net_flow": 0.0279,
+          "out_strength": 3.5292,
+          "relay_score": 12.3568,
+          "topology_role": "relay"
+        },
+        "xau_return_1": {
+          "in_strength": 2.0465,
+          "label": "XAU/USD 1-day return",
+          "market": "XAU/USD",
+          "net_flow": -0.6237,
+          "out_strength": 1.4228,
+          "relay_score": 2.9118,
+          "topology_role": "sink"
+        },
+        "yield_10y_change_5": {
+          "in_strength": 0.0,
+          "label": "10Y Treasury yield 5-day change",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "yield_30y_change_20": {
+          "in_strength": 0.0,
+          "label": "30Y Treasury yield 20-day change",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "yield_curve_10y_3m": {
+          "in_strength": 0.0,
+          "label": "Yield curve 10Y-3M spread",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        }
+      },
+      "top_relays": [
+        "dxy_return_5",
+        "macro_pressure",
+        "dxy_return_20",
+        "forward_expectation",
+        "geo_severity"
+      ],
+      "top_sinks": [
+        "forward_expectation",
+        "dxy_return_20",
+        "xau_return_1",
+        "yield_curve_10y_3m",
+        "yield_10y_change_5"
+      ],
+      "top_sources": [
+        "dxy_return_1",
+        "geo_severity",
+        "dxy_return_5",
+        "macro_pressure",
+        "yield_curve_10y_3m"
+      ]
+    },
+    "communities": [
+      [
+        "dxy_return_1",
+        "dxy_return_20",
+        "dxy_return_5",
+        "forward_expectation",
+        "geo_severity",
+        "macro_pressure",
+        "xau_return_1"
+      ],
+      [
+        "yield_curve_10y_3m"
+      ],
+      [
+        "yield_10y_change_5"
+      ],
+      [
+        "yield_30y_change_20"
+      ],
+      [
+        "fed_surprise"
+      ]
+    ],
+    "density": 0.3455,
+    "edges": [
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": 0.5544,
+        "f_proxy": 53.3381,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.05917
+      },
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": -0.5544,
+        "f_proxy": 53.3381,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.05753
+      },
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": -0.5482,
+        "f_proxy": 50.3588,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.05905
+      },
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": 0.5482,
+        "f_proxy": 50.3588,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0574
+      },
+      {
+        "best_lag": 3,
+        "confidence": 1.0,
+        "correlation": -0.4607,
+        "f_proxy": 27.9629,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.05525
+      },
+      {
+        "best_lag": 3,
+        "confidence": 1.0,
+        "correlation": 0.4613,
+        "f_proxy": 27.4328,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.07165
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.673,
+        "correlation": 0.2596,
+        "f_proxy": 18.7682,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.673,
+        "correlation": -0.2596,
+        "f_proxy": 18.7682,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.673,
+        "correlation": 0.2596,
+        "f_proxy": 12.2397,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.673,
+        "correlation": -0.2596,
+        "f_proxy": 12.2397,
+        "lag_horizon": "medium",
+        "significance": "STRONG",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 5,
+        "confidence": 0.6077,
+        "correlation": 0.1616,
+        "f_proxy": 11.9,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.5672,
+        "correlation": -0.237,
+        "f_proxy": 4.3909,
+        "lag_horizon": "medium",
+        "significance": "MODERATE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.03161
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5538,
+        "correlation": -0.9994,
+        "f_proxy": 1.0757,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.13088
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5382,
+        "correlation": -0.9994,
+        "f_proxy": 0.7639,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.13213
+      },
+      {
+        "best_lag": 5,
+        "confidence": 0.5127,
+        "correlation": -0.128,
+        "f_proxy": 8.548,
+        "lag_horizon": "short",
+        "significance": "MODERATE",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.503,
+        "correlation": -0.5482,
+        "f_proxy": 0.06,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.07093
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.503,
+        "correlation": 0.5482,
+        "f_proxy": 0.06,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.06391
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.5025,
+        "correlation": 0.5544,
+        "f_proxy": 0.0504,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.05469
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.5009,
+        "correlation": -0.5544,
+        "f_proxy": 0.0504,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.04973
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5,
+        "correlation": -1.0,
+        "f_proxy": 0.0,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.2251
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5,
+        "correlation": -1.0,
+        "f_proxy": 0.0,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.2251
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.4775,
+        "correlation": 0.2389,
+        "f_proxy": 4.4547,
+        "lag_horizon": "medium",
+        "significance": "MODERATE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.01591
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.4756,
+        "correlation": 0.2586,
+        "f_proxy": 6.0639,
+        "lag_horizon": "long",
+        "significance": "MODERATE",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.4756,
+        "correlation": -0.2586,
+        "f_proxy": 6.0639,
+        "lag_horizon": "long",
+        "significance": "MODERATE",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.4444,
+        "correlation": 0.2389,
+        "f_proxy": 5.703,
+        "lag_horizon": "short",
+        "significance": "MODERATE",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.4298,
+        "correlation": -0.237,
+        "f_proxy": 5.4367,
+        "lag_horizon": "short",
+        "significance": "MODERATE",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.3548,
+        "correlation": -0.4652,
+        "f_proxy": 0.649,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.02039
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.3349,
+        "correlation": -0.4652,
+        "f_proxy": 0.0215,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.02231
+      },
+      {
+        "best_lag": 2,
+        "confidence": 0.3235,
+        "correlation": -0.2085,
+        "f_proxy": 2.6963,
+        "lag_horizon": "immediate",
+        "significance": "WEAK",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.00828
+      },
+      {
+        "best_lag": 2,
+        "confidence": 0.3235,
+        "correlation": 0.2085,
+        "f_proxy": 2.6963,
+        "lag_horizon": "immediate",
+        "significance": "WEAK",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.00828
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.2907,
+        "correlation": 0.2586,
+        "f_proxy": 0.0095,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.01964
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.2907,
+        "correlation": -0.2586,
+        "f_proxy": 0.0095,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.01964
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.2702,
+        "correlation": 0.4613,
+        "f_proxy": 0.1945,
+        "lag_horizon": "long",
+        "significance": "NONE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.01008
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.262,
+        "correlation": -0.4607,
+        "f_proxy": 1.1071,
+        "lag_horizon": "medium",
+        "significance": "NONE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0011
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.2583,
+        "correlation": 0.1616,
+        "f_proxy": 3.0112,
+        "lag_horizon": "long",
+        "significance": "WEAK",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 20,
+        "confidence": 0.2359,
+        "correlation": -0.128,
+        "f_proxy": 3.0112,
+        "lag_horizon": "long",
+        "significance": "WEAK",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.2137,
+        "correlation": 0.0206,
+        "f_proxy": 3.9999,
+        "lag_horizon": "long",
+        "significance": "WEAK",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "geo_severity",
+        "target_market": "Geopolitical",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 2,
+        "confidence": 0.195,
+        "correlation": 0.0815,
+        "f_proxy": 2.8148,
+        "lag_horizon": "immediate",
+        "significance": "WEAK",
+        "source": "geo_severity",
+        "source_market": "Geopolitical",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      }
+    ],
+    "feedback_loops": [
+      {
+        "backward_confidence": 1.0,
+        "combined_confidence": 0.7515,
+        "forward_confidence": 0.503,
+        "pair": "dxy_return_20 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 1.0,
+        "combined_confidence": 0.7515,
+        "forward_confidence": 0.503,
+        "pair": "forward_expectation <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 1.0,
+        "combined_confidence": 0.7512,
+        "forward_confidence": 0.5025,
+        "pair": "dxy_return_20 <-> dxy_return_5"
+      },
+      {
+        "backward_confidence": 0.5009,
+        "combined_confidence": 0.7505,
+        "forward_confidence": 1.0,
+        "pair": "dxy_return_5 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 0.673,
+        "combined_confidence": 0.673,
+        "forward_confidence": 0.673,
+        "pair": "dxy_return_20 <-> geo_severity"
+      },
+      {
+        "backward_confidence": 0.673,
+        "combined_confidence": 0.673,
+        "forward_confidence": 0.673,
+        "pair": "forward_expectation <-> geo_severity"
+      },
+      {
+        "backward_confidence": 0.5538,
+        "combined_confidence": 0.546,
+        "forward_confidence": 0.5382,
+        "pair": "dxy_return_5 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.5,
+        "combined_confidence": 0.5,
+        "forward_confidence": 0.5,
+        "pair": "dxy_return_20 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 0.4298,
+        "combined_confidence": 0.4985,
+        "forward_confidence": 0.5672,
+        "pair": "dxy_return_5 <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.4444,
+        "combined_confidence": 0.4609,
+        "forward_confidence": 0.4775,
+        "pair": "macro_pressure <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.2907,
+        "combined_confidence": 0.3831,
+        "forward_confidence": 0.4756,
+        "pair": "dxy_return_1 <-> dxy_return_20"
+      },
+      {
+        "backward_confidence": 0.2907,
+        "combined_confidence": 0.3831,
+        "forward_confidence": 0.4756,
+        "pair": "dxy_return_1 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 0.3349,
+        "combined_confidence": 0.3448,
+        "forward_confidence": 0.3548,
+        "pair": "dxy_return_1 <-> xau_return_1"
+      }
+    ],
+    "hierarchy": [
+      {
+        "in_strength": 1.6435,
+        "label": "DXY 1-day return",
+        "market": "DXY",
+        "net_flow": 1.6625,
+        "node": "dxy_return_1",
+        "out_strength": 3.306,
+        "role": "source"
+      },
+      {
+        "in_strength": 2.0539,
+        "label": "Geopolitical severity score",
+        "market": "Geopolitical",
+        "net_flow": 0.6075,
+        "node": "geo_severity",
+        "out_strength": 2.6614,
+        "role": "source"
+      },
+      {
+        "in_strength": 3.5947,
+        "label": "DXY 5-day return",
+        "market": "DXY",
+        "net_flow": 0.0392,
+        "node": "dxy_return_5",
+        "out_strength": 3.6339,
+        "role": "relay"
+      },
+      {
+        "in_strength": 3.5013,
+        "label": "Macro pressure composite",
+        "market": "Composite",
+        "net_flow": 0.0279,
+        "node": "macro_pressure",
+        "out_strength": 3.5292,
+        "role": "relay"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "Yield curve 10Y-3M spread",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_curve_10y_3m",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "10Y Treasury yield 5-day change",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_10y_change_5",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "30Y Treasury yield 20-day change",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_30y_change_20",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "Fed announcement surprise",
+        "market": "Economic_Calendar",
+        "net_flow": 0.0,
+        "node": "fed_surprise",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 2.0465,
+        "label": "XAU/USD 1-day return",
+        "market": "XAU/USD",
+        "net_flow": -0.6237,
+        "node": "xau_return_1",
+        "out_strength": 1.4228,
+        "role": "sink"
+      },
+      {
+        "in_strength": 3.6486,
+        "label": "DXY 20-day return",
+        "market": "DXY",
+        "net_flow": -0.8559,
+        "node": "dxy_return_20",
+        "out_strength": 2.7927,
+        "role": "relay"
+      },
+      {
+        "in_strength": 3.6486,
+        "label": "Forward expectation spread",
+        "market": "Composite",
+        "net_flow": -0.8575,
+        "node": "forward_expectation",
+        "out_strength": 2.7911,
+        "role": "sink"
+      }
+    ],
+    "label": "inflation_repricing_2022",
+    "n_obs": 231,
+    "nodes": [
+      "xau_return_1",
+      "dxy_return_1",
+      "dxy_return_5",
+      "dxy_return_20",
+      "yield_curve_10y_3m",
+      "yield_10y_change_5",
+      "yield_30y_change_20",
+      "fed_surprise",
+      "geo_severity",
+      "macro_pressure",
+      "forward_expectation"
+    ]
+  },
+  "pandemic_2020": {
+    "centrality": {
+      "bottlenecks": [
+        "dxy_return_5",
+        "macro_pressure",
+        "dxy_return_20"
+      ],
+      "nodes": {
+        "dxy_return_1": {
+          "in_strength": 2.9643,
+          "label": "DXY 1-day return",
+          "market": "DXY",
+          "net_flow": 0.5452,
+          "out_strength": 3.5095,
+          "relay_score": 10.4032,
+          "topology_role": "source"
+        },
+        "dxy_return_20": {
+          "in_strength": 3.3105,
+          "label": "DXY 20-day return",
+          "market": "DXY",
+          "net_flow": 0.2092,
+          "out_strength": 3.5197,
+          "relay_score": 11.652,
+          "topology_role": "relay"
+        },
+        "dxy_return_5": {
+          "in_strength": 4.0741,
+          "label": "DXY 5-day return",
+          "market": "DXY",
+          "net_flow": -0.4618,
+          "out_strength": 3.6123,
+          "relay_score": 14.7169,
+          "topology_role": "relay"
+        },
+        "fed_surprise": {
+          "in_strength": 0.0,
+          "label": "Fed announcement surprise",
+          "market": "Economic_Calendar",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "forward_expectation": {
+          "in_strength": 3.2682,
+          "label": "Forward expectation spread",
+          "market": "Composite",
+          "net_flow": 0.2713,
+          "out_strength": 3.5395,
+          "relay_score": 11.5678,
+          "topology_role": "source"
+        },
+        "geo_severity": {
+          "in_strength": 0.0,
+          "label": "Geopolitical severity score",
+          "market": "Geopolitical",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "macro_pressure": {
+          "in_strength": 3.8547,
+          "label": "Macro pressure composite",
+          "market": "Composite",
+          "net_flow": -0.2244,
+          "out_strength": 3.6303,
+          "relay_score": 13.9937,
+          "topology_role": "relay"
+        },
+        "xau_return_1": {
+          "in_strength": 3.2938,
+          "label": "XAU/USD 1-day return",
+          "market": "XAU/USD",
+          "net_flow": -0.3395,
+          "out_strength": 2.9543,
+          "relay_score": 9.7309,
+          "topology_role": "sink"
+        },
+        "yield_10y_change_5": {
+          "in_strength": 0.0,
+          "label": "10Y Treasury yield 5-day change",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "yield_30y_change_20": {
+          "in_strength": 0.0,
+          "label": "30Y Treasury yield 20-day change",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        },
+        "yield_curve_10y_3m": {
+          "in_strength": 0.0,
+          "label": "Yield curve 10Y-3M spread",
+          "market": "US_Treasuries",
+          "net_flow": 0.0,
+          "out_strength": 0.0,
+          "relay_score": 0.0,
+          "topology_role": "intermediate"
+        }
+      },
+      "top_relays": [
+        "dxy_return_5",
+        "macro_pressure",
+        "dxy_return_20",
+        "forward_expectation",
+        "dxy_return_1"
+      ],
+      "top_sinks": [
+        "dxy_return_5",
+        "xau_return_1",
+        "macro_pressure",
+        "yield_curve_10y_3m",
+        "yield_10y_change_5"
+      ],
+      "top_sources": [
+        "dxy_return_1",
+        "forward_expectation",
+        "dxy_return_20",
+        "yield_curve_10y_3m",
+        "yield_10y_change_5"
+      ]
+    },
+    "communities": [
+      [
+        "dxy_return_1",
+        "dxy_return_20",
+        "dxy_return_5",
+        "forward_expectation",
+        "macro_pressure",
+        "xau_return_1"
+      ],
+      [
+        "yield_curve_10y_3m"
+      ],
+      [
+        "yield_10y_change_5"
+      ],
+      [
+        "yield_30y_change_20"
+      ],
+      [
+        "fed_surprise"
+      ],
+      [
+        "geo_severity"
+      ]
+    ],
+    "density": 0.2727,
+    "edges": [
+      {
+        "best_lag": 3,
+        "confidence": 1.0,
+        "correlation": -0.485,
+        "f_proxy": 30.7588,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.22548
+      },
+      {
+        "best_lag": 3,
+        "confidence": 1.0,
+        "correlation": 0.485,
+        "f_proxy": 30.7588,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.12378
+      },
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": 0.3514,
+        "f_proxy": 17.696,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.06771
+      },
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": -0.3514,
+        "f_proxy": 17.696,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.06771
+      },
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": -0.3514,
+        "f_proxy": 17.696,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.06771
+      },
+      {
+        "best_lag": 15,
+        "confidence": 1.0,
+        "correlation": 0.3514,
+        "f_proxy": 17.696,
+        "lag_horizon": "long",
+        "significance": "STRONG",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.06771
+      },
+      {
+        "best_lag": 5,
+        "confidence": 1.0,
+        "correlation": 0.3514,
+        "f_proxy": 13.7352,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.08619
+      },
+      {
+        "best_lag": 5,
+        "confidence": 1.0,
+        "correlation": -0.3514,
+        "f_proxy": 13.7352,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.08619
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.8717,
+        "correlation": -0.1112,
+        "f_proxy": 21.8337,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.04959
+      },
+      {
+        "best_lag": 5,
+        "confidence": 0.7415,
+        "correlation": -0.3514,
+        "f_proxy": 13.7352,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.00691
+      },
+      {
+        "best_lag": 5,
+        "confidence": 0.7415,
+        "correlation": 0.3514,
+        "f_proxy": 13.7352,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.00691
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.7395,
+        "correlation": -0.1716,
+        "f_proxy": 18.3294,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.02086
+      },
+      {
+        "best_lag": 2,
+        "confidence": 0.7088,
+        "correlation": -0.2106,
+        "f_proxy": 5.8075,
+        "lag_horizon": "immediate",
+        "significance": "MODERATE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.04633
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.6998,
+        "correlation": -0.1716,
+        "f_proxy": 6.7297,
+        "lag_horizon": "short",
+        "significance": "MODERATE",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.04149
+      },
+      {
+        "best_lag": 2,
+        "confidence": 0.6866,
+        "correlation": 0.2106,
+        "f_proxy": 5.8075,
+        "lag_horizon": "immediate",
+        "significance": "MODERATE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.04263
+      },
+      {
+        "best_lag": 2,
+        "confidence": 0.6083,
+        "correlation": -0.1112,
+        "f_proxy": 6.9425,
+        "lag_horizon": "immediate",
+        "significance": "MODERATE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.03117
+      },
+      {
+        "best_lag": 2,
+        "confidence": 0.5916,
+        "correlation": 0.0831,
+        "f_proxy": 6.7781,
+        "lag_horizon": "immediate",
+        "significance": "MODERATE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.03289
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.5903,
+        "correlation": 0.1112,
+        "f_proxy": 6.4398,
+        "lag_horizon": "short",
+        "significance": "MODERATE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "xau_return_1",
+        "target_market": "XAU/USD",
+        "transfer_entropy": 0.03236
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.5892,
+        "correlation": -0.0831,
+        "f_proxy": 8.4366,
+        "lag_horizon": "short",
+        "significance": "MODERATE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.01866
+      },
+      {
+        "best_lag": 3,
+        "confidence": 0.5741,
+        "correlation": 0.1112,
+        "f_proxy": 21.8337,
+        "lag_horizon": "short",
+        "significance": "STRONG",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.0
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.522,
+        "correlation": 0.485,
+        "f_proxy": 0.4409,
+        "lag_horizon": "medium",
+        "significance": "NONE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.05761
+      },
+      {
+        "best_lag": 10,
+        "confidence": 0.522,
+        "correlation": -0.485,
+        "f_proxy": 0.4409,
+        "lag_horizon": "medium",
+        "significance": "NONE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_1",
+        "target_market": "DXY",
+        "transfer_entropy": 0.05761
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5,
+        "correlation": -1.0,
+        "f_proxy": 0.0,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "dxy_return_20",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.203
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5,
+        "correlation": -1.0,
+        "f_proxy": 0.0,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "forward_expectation",
+        "source_market": "Composite",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.203
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5,
+        "correlation": -1.0,
+        "f_proxy": 0.0,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "macro_pressure",
+        "source_market": "Composite",
+        "target": "dxy_return_5",
+        "target_market": "DXY",
+        "transfer_entropy": 0.17069
+      },
+      {
+        "best_lag": 1,
+        "confidence": 0.5,
+        "correlation": -1.0,
+        "f_proxy": 0.0,
+        "lag_horizon": "immediate",
+        "significance": "NONE",
+        "source": "dxy_return_5",
+        "source_market": "DXY",
+        "target": "macro_pressure",
+        "target_market": "Composite",
+        "transfer_entropy": 0.1175
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.426,
+        "correlation": 0.0831,
+        "f_proxy": 1.4118,
+        "lag_horizon": "medium",
+        "significance": "NONE",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.05082
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.3845,
+        "correlation": 0.2106,
+        "f_proxy": 1.6385,
+        "lag_horizon": "long",
+        "significance": "WEAK",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "dxy_return_20",
+        "target_market": "DXY",
+        "transfer_entropy": 0.02703
+      },
+      {
+        "best_lag": 15,
+        "confidence": 0.3845,
+        "correlation": -0.2106,
+        "f_proxy": 1.6385,
+        "lag_horizon": "long",
+        "significance": "WEAK",
+        "source": "xau_return_1",
+        "source_market": "XAU/USD",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.02703
+      },
+      {
+        "best_lag": 7,
+        "confidence": 0.3837,
+        "correlation": -0.0831,
+        "f_proxy": 1.4118,
+        "lag_horizon": "medium",
+        "significance": "NONE",
+        "source": "dxy_return_1",
+        "source_market": "DXY",
+        "target": "forward_expectation",
+        "target_market": "Composite",
+        "transfer_entropy": 0.04296
+      }
+    ],
+    "feedback_loops": [
+      {
+        "backward_confidence": 1.0,
+        "combined_confidence": 1.0,
+        "forward_confidence": 1.0,
+        "pair": "dxy_return_5 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 1.0,
+        "combined_confidence": 1.0,
+        "forward_confidence": 1.0,
+        "pair": "dxy_return_20 <-> dxy_return_5"
+      },
+      {
+        "backward_confidence": 1.0,
+        "combined_confidence": 0.8708,
+        "forward_confidence": 0.7415,
+        "pair": "dxy_return_20 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 1.0,
+        "combined_confidence": 0.8708,
+        "forward_confidence": 0.7415,
+        "pair": "forward_expectation <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.522,
+        "combined_confidence": 0.761,
+        "forward_confidence": 1.0,
+        "pair": "dxy_return_1 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.522,
+        "combined_confidence": 0.761,
+        "forward_confidence": 1.0,
+        "pair": "dxy_return_1 <-> dxy_return_5"
+      },
+      {
+        "backward_confidence": 0.8717,
+        "combined_confidence": 0.74,
+        "forward_confidence": 0.6083,
+        "pair": "macro_pressure <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.7395,
+        "combined_confidence": 0.7197,
+        "forward_confidence": 0.6998,
+        "pair": "dxy_return_1 <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.5741,
+        "combined_confidence": 0.5822,
+        "forward_confidence": 0.5903,
+        "pair": "dxy_return_5 <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.3845,
+        "combined_confidence": 0.5466,
+        "forward_confidence": 0.7088,
+        "pair": "forward_expectation <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.3845,
+        "combined_confidence": 0.5355,
+        "forward_confidence": 0.6866,
+        "pair": "dxy_return_20 <-> xau_return_1"
+      },
+      {
+        "backward_confidence": 0.5916,
+        "combined_confidence": 0.5088,
+        "forward_confidence": 0.426,
+        "pair": "dxy_return_1 <-> dxy_return_20"
+      },
+      {
+        "backward_confidence": 0.5,
+        "combined_confidence": 0.5,
+        "forward_confidence": 0.5,
+        "pair": "dxy_return_20 <-> forward_expectation"
+      },
+      {
+        "backward_confidence": 0.5,
+        "combined_confidence": 0.5,
+        "forward_confidence": 0.5,
+        "pair": "dxy_return_5 <-> macro_pressure"
+      },
+      {
+        "backward_confidence": 0.5892,
+        "combined_confidence": 0.4864,
+        "forward_confidence": 0.3837,
+        "pair": "dxy_return_1 <-> forward_expectation"
+      }
+    ],
+    "hierarchy": [
+      {
+        "in_strength": 2.9643,
+        "label": "DXY 1-day return",
+        "market": "DXY",
+        "net_flow": 0.5452,
+        "node": "dxy_return_1",
+        "out_strength": 3.5095,
+        "role": "source"
+      },
+      {
+        "in_strength": 3.2682,
+        "label": "Forward expectation spread",
+        "market": "Composite",
+        "net_flow": 0.2713,
+        "node": "forward_expectation",
+        "out_strength": 3.5395,
+        "role": "source"
+      },
+      {
+        "in_strength": 3.3105,
+        "label": "DXY 20-day return",
+        "market": "DXY",
+        "net_flow": 0.2092,
+        "node": "dxy_return_20",
+        "out_strength": 3.5197,
+        "role": "relay"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "Yield curve 10Y-3M spread",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_curve_10y_3m",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "10Y Treasury yield 5-day change",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_10y_change_5",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "30Y Treasury yield 20-day change",
+        "market": "US_Treasuries",
+        "net_flow": 0.0,
+        "node": "yield_30y_change_20",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "Fed announcement surprise",
+        "market": "Economic_Calendar",
+        "net_flow": 0.0,
+        "node": "fed_surprise",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 0.0,
+        "label": "Geopolitical severity score",
+        "market": "Geopolitical",
+        "net_flow": 0.0,
+        "node": "geo_severity",
+        "out_strength": 0.0,
+        "role": "intermediate"
+      },
+      {
+        "in_strength": 3.8547,
+        "label": "Macro pressure composite",
+        "market": "Composite",
+        "net_flow": -0.2244,
+        "node": "macro_pressure",
+        "out_strength": 3.6303,
+        "role": "relay"
+      },
+      {
+        "in_strength": 3.2938,
+        "label": "XAU/USD 1-day return",
+        "market": "XAU/USD",
+        "net_flow": -0.3395,
+        "node": "xau_return_1",
+        "out_strength": 2.9543,
+        "role": "sink"
+      },
+      {
+        "in_strength": 4.0741,
+        "label": "DXY 5-day return",
+        "market": "DXY",
+        "net_flow": -0.4618,
+        "node": "dxy_return_5",
+        "out_strength": 3.6123,
+        "role": "relay"
+      }
+    ],
+    "label": "pandemic_2020",
+    "n_obs": 93,
+    "nodes": [
+      "xau_return_1",
+      "dxy_return_1",
+      "dxy_return_5",
+      "dxy_return_20",
+      "yield_curve_10y_3m",
+      "yield_10y_change_5",
+      "yield_30y_change_20",
+      "fed_surprise",
+      "geo_severity",
+      "macro_pressure",
+      "forward_expectation"
+    ]
+  }
+}

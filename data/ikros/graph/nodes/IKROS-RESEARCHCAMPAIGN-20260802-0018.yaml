@@ -1,0 +1,18 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Map cross-asset transition ecology to determine how information propagates
+    before XAU/USD regime changes.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0018
+confidence: 0.0
+created_at: '2026-08-02T03:21:36.422797+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0018
+label: DC2 Research Program A — Cross-Asset Transition Ecology
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0018
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

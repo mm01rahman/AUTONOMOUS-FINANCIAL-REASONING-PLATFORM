@@ -1,0 +1,217 @@
+{
+  "campaign": {
+    "id": "IKROS-RESEARCHCAMPAIGN-20260802-0011",
+    "title": "DC2 Research Program A — Cross-Asset Transition Ecology",
+    "cycle": "Discovery Cycle 2",
+    "authority": "Architecture Review Board (ARB)",
+    "status": "PENDING",
+    "governing_taxonomy": "Institutional Six-State Overlay Taxonomy v1",
+    "governing_feature_catalogue": "Institutional Regime-Conditioned Feature Catalogue v1",
+    "runtime_frozen": true,
+    "ikros_frozen": true,
+    "infrastructure_changes_authorized": false
+  },
+  "entities": {
+    "research_question_primary": {
+      "ikros_id": "IKROS-RQ-20260802-1001",
+      "entity_type": "ResearchQuestion",
+      "version": "1.0.0",
+      "lifecycle_state": "OPEN",
+      "confidence": {
+        "prior": 0.5,
+        "statistical": 0.5,
+        "economic": 0.5,
+        "data": 0.5,
+        "model": 0.5,
+        "validation": 0.5,
+        "replication": 0.0,
+        "operational": 0.5,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "dc2-program-a",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Discovery Cycle 2 Research Program A",
+          "motivation": "Understand cross-asset information propagation before XAU/USD regime transitions."
+        },
+        "dependencies": {
+          "inputs": [],
+          "datasets": [],
+          "features": [],
+          "models": [],
+          "external_refs": []
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": [],
+      "capability_refs": [],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Cross-Asset Transition Ecology — Primary Research Question",
+      "motivation": "Determine how cross-asset markets create, amplify, or suppress XAU/USD regime transitions.",
+      "scope": "MACRO",
+      "instrument": "XAU/USD",
+      "time_horizon": "1D",
+      "campaign_tag": "DC2-PROGRAM-A-001",
+      "linked_hypotheses": [],
+      "linked_conclusions": []
+    },
+    "research_questions_secondary": [
+      {
+        "id": "IKROS-RQ-20260802-1002",
+        "statement": "Which markets consistently lead XAU/USD in the governed dataset?",
+        "theme": "Theme 1 — Cross-Asset Lead-Lag"
+      },
+      {
+        "id": "IKROS-RQ-20260802-1003",
+        "statement": "Which markets consistently lag XAU/USD in the governed dataset?",
+        "theme": "Theme 1 — Cross-Asset Lead-Lag"
+      },
+      {
+        "id": "IKROS-RQ-20260802-1004",
+        "statement": "Which cross-asset relationships change by regime?",
+        "theme": "Theme 2 — Information Flow"
+      },
+      {
+        "id": "IKROS-RQ-20260802-1005",
+        "statement": "Which cross-asset relationships disappear during stress?",
+        "theme": "Theme 4 — Market Synchronization"
+      },
+      {
+        "id": "IKROS-RQ-20260802-1006",
+        "statement": "Which markets dominate during macro transitions?",
+        "theme": "Theme 3 — Transition Ecology"
+      },
+      {
+        "id": "IKROS-RQ-20260802-1007",
+        "statement": "Which relationships are causal versus merely correlated?",
+        "theme": "Theme 2 — Information Flow"
+      },
+      {
+        "id": "IKROS-RQ-20260802-1008",
+        "statement": "Do cross-asset relationships evolve over time (adaptive markets)?",
+        "theme": "Theme 5 — Adaptive Behaviour"
+      },
+      {
+        "id": "IKROS-RQ-20260802-1009",
+        "statement": "What signals propagate information about impending XAU/USD regime transitions?",
+        "theme": "Theme 3 — Transition Ecology"
+      }
+    ],
+    "experiments": [
+      {
+        "id": "IKROS-EXP-20260802-1001",
+        "title": "Theme 1 — Cross-Asset Lead-Lag Analysis",
+        "description": "Cross-correlation at lags -20 to +20 days between XAU/USD returns and each governed cross-asset signal. Regime-conditioned profiles computed for four key signals.",
+        "methods": ["cross_correlation", "regime_conditioned_cross_correlation"],
+        "target_rq": "IKROS-RQ-20260802-1002"
+      },
+      {
+        "id": "IKROS-EXP-20260802-1002",
+        "title": "Theme 2 — Information Flow Analysis",
+        "description": "Transfer entropy proxy via binned mutual information at lags 1-20 days. Granger causality proxy via OLS R-squared gain. Regime-conditioned mutual information for all six regimes.",
+        "methods": ["transfer_entropy_proxy", "granger_causality_proxy", "conditional_mutual_information"],
+        "target_rq": "IKROS-RQ-20260802-1007"
+      },
+      {
+        "id": "IKROS-EXP-20260802-1003",
+        "title": "Theme 3 — Transition Ecology Analysis",
+        "description": "Identification of all regime transitions in the governed frame. Window analysis of signal behavior at offsets w-10 to w+10 days relative to transitions. Dominant pre-transition signal ranking.",
+        "methods": ["transition_window_analysis", "dominant_driver_ranking"],
+        "target_rq": "IKROS-RQ-20260802-1009"
+      },
+      {
+        "id": "IKROS-EXP-20260802-1004",
+        "title": "Theme 4 — Market Synchronization Analysis",
+        "description": "Rolling 60-day correlation analysis stratified by normal, stress, geopolitical, and calendar-event periods. Regime-conditioned synchronization. Cross-signal correlation matrix.",
+        "methods": ["rolling_correlation", "period_stratified_synchronization", "regime_conditioned_synchronization"],
+        "target_rq": "IKROS-RQ-20260802-1005"
+      },
+      {
+        "id": "IKROS-EXP-20260802-1005",
+        "title": "Theme 5 — Adaptive Behaviour Analysis",
+        "description": "Rolling 252-day correlations with stability scoring. Epoch comparison (early vs late sample) with structural change detection. Sign-flip rate as regime-adaptive marker.",
+        "methods": ["rolling_annual_correlation", "epoch_comparison", "structural_change_detection"],
+        "target_rq": "IKROS-RQ-20260802-1008"
+      }
+    ]
+  },
+  "task_payloads": {
+    "LITERATURE_INGESTION": {},
+    "RESEARCH_QUESTION": {
+      "entity_type": "ResearchQuestion",
+      "entity": {
+        "id": "IKROS-RQ-20260802-1001",
+        "title": "Cross-Asset Transition Ecology — Primary Research Question",
+        "statement": "How do interactions among cross-asset markets create, amplify, or suppress transitions between the six institutional XAU/USD regimes?",
+        "lifecycle_status": "OPEN",
+        "confidence": 0.5
+      }
+    },
+    "HYPOTHESIS_REGISTRATION": {},
+    "EXPERIMENT_REGISTRATION": {
+      "entity_type": "Experiment",
+      "entity": {
+        "ikros_id": "IKROS-EXP-20260802-1001",
+        "entity_type": "Experiment",
+        "version": "1.0.0",
+        "lifecycle_state": "DESIGNED",
+        "confidence": {
+          "prior": 0.5, "statistical": 0.5, "economic": 0.5, "data": 0.5,
+          "model": 0.5, "validation": 0.5, "replication": 0.0, "operational": 0.5,
+          "last_updated": "2026-08-02T00:00:00Z"
+        },
+        "lineage": {
+          "origin": {
+            "created_by": "dc2-program-a",
+            "created_at": "2026-08-02T00:00:00Z",
+            "creation_context": "DC2 Program A — Cross-Asset Ecology",
+            "motivation": "Map cross-asset information flow before XAU/USD regime transitions."
+          },
+          "dependencies": {
+            "inputs": [], "datasets": [], "features": [], "models": [], "external_refs": []
+          },
+          "experiments": {"tested_in": [], "validated_by": []},
+          "evidence": {"supporting": [], "contradicting": [], "ers_records": []}
+        },
+        "spec_refs": [], "capability_refs": [], "work_package_refs": [], "version_history": [],
+        "title": "DC2 Program A — Cross-Asset Ecology Experiment Suite",
+        "description": "Five-theme cross-asset ecology analysis: lead-lag, information flow, transition ecology, synchronization, adaptive behaviour.",
+        "methodology": "deterministic_cross_asset_analysis",
+        "reproducibility_hash": "dc2-program-a-v1",
+        "parameters": {},
+        "results_summary": {},
+        "validations": [],
+        "linked_hypothesis_id": ""
+      }
+    },
+    "KNOWLEDGE_INGESTION": {},
+    "VALIDATION": {
+      "validation_type": "ecology_mapping",
+      "stop_condition": "No hypotheses created; no strategies built; no parameters optimized."
+    },
+    "EVIDENCE_ARCHIVAL": {
+      "evidence_ids": [
+        "IKROS-EVIDENCE-20260802-1001",
+        "IKROS-EVIDENCE-20260802-1002",
+        "IKROS-EVIDENCE-20260802-1003",
+        "IKROS-EVIDENCE-20260802-1004",
+        "IKROS-EVIDENCE-20260802-1005"
+      ]
+    },
+    "COMPLETION_REPORT": {
+      "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0011",
+      "cycle": "Discovery Cycle 2",
+      "program": "Research Program A"
+    }
+  }
+}

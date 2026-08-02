@@ -1,0 +1,18 @@
+attributes:
+  capital_role: sovereign_allocator
+  ecology_role: ecology_driver
+  liquidity_role: policy_anchor
+  participant_id: central_banks
+  theme: Theme 1
+confidence: 0.65
+created_at: '2026-08-02T10:44:26.618726+00:00'
+ikros_id: IKROS-PB1-PARTICIPANT-CENTRAL-BANKS
+label: Central Banks
+node_id: IKROS-PB1-PARTICIPANT-CENTRAL-BANKS
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

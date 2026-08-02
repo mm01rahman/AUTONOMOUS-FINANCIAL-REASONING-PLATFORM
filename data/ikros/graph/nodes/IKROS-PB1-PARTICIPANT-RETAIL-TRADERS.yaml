@@ -1,0 +1,18 @@
+attributes:
+  capital_role: fragmented_flow
+  ecology_role: ecology_driver
+  liquidity_role: sentiment_echo
+  participant_id: retail_traders
+  theme: Theme 9
+confidence: 0.65
+created_at: '2026-08-02T10:44:26.618726+00:00'
+ikros_id: IKROS-PB1-PARTICIPANT-RETAIL-TRADERS
+label: Retail Traders
+node_id: IKROS-PB1-PARTICIPANT-RETAIL-TRADERS
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048
