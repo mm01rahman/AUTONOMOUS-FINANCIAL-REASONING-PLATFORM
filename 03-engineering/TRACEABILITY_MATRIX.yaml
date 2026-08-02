@@ -888,3 +888,42 @@ requirements:
       - "tests/unit/test_ikros_registries.py"
     verified_by:
       - "05-work-packages/WP-IMP-0042/evidence/EXEC-044.yaml"
+
+  - id: "NFR-042"
+    title: "IKROS Knowledge Graph shall provide deterministic traversal, loading, and YAML persistence for reproducible institutional research state"
+    source: "SPEC-060 §4-§6 (AFRP-WP-IMP-0043)"
+    capability: "IKROS-GRAPH"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/graph/core.py"
+      - "tools/ikros/graph/models.py"
+      - "tools/ikros/graph/persistence.py"
+      - "tests/unit/test_ikros_graph.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0043/evidence/EXEC-045.yaml"
+
+  - id: "NFR-043"
+    title: "IKROS lineage traversal shall support forward and reverse dependency analysis across research questions, hypotheses, experiments, validations, and alphas"
+    source: "SPEC-060 §4, §7 (AFRP-WP-IMP-0043)"
+    capability: "IKROS-GRAPH"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/graph/core.py"
+      - "tools/ikros/graph/lineage.py"
+      - "tools/ikros/graph/validation.py"
+      - "tests/unit/test_ikros_graph.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0043/evidence/EXEC-045.yaml"
+
+  - id: "NFR-044"
+    title: "IKROS contradictions shall remain first-class relationships with explicit evidence references and deterministic confidence penalties"
+    source: "SPEC-060 §6, §8 (AFRP-WP-IMP-0043)"
+    capability: "IKROS-GRAPH"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/graph/models.py"
+      - "tools/ikros/graph/confidence.py"
+      - "tools/ikros/graph/validation.py"
+      - "tests/unit/test_ikros_graph.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0043/evidence/EXEC-045.yaml"

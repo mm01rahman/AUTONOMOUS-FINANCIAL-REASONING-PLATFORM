@@ -1,0 +1,165 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0043"
+capability_id:
+  id: "IKROS-GRAPH"
+  version: "1.0"
+title: "IKROS Foundation — Institutional Knowledge Graph"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "KNOWLEDGE"
+  traceability:
+    implements_req: ["NFR-042", "NFR-043", "NFR-044"]
+    trace_sls: "AFRP-WP-IMP-0043-1.0.0"
+    trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('IKROS-REGISTRIES')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/ikros/graph/"
+      - "tools/ikros/__init__.py"
+      - "tests/unit/test_ikros_graph.py"
+      - "docs/ikros/"
+      - "data/ikros/graph/"
+      - "05-work-packages/WP-IMP-0043.yaml"
+      - "05-work-packages/WP-IMP-0043/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    read:
+      - "02-architecture/ikros/"
+      - "03-engineering/"
+      - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+      - "05-work-packages/WP-IMP-0042.yaml"
+      - "05-work-packages/WP-IMP-0042/"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "8h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/ikros/IKROS-KNOWLEDGE-GRAPH.md"
+    - "02-architecture/ikros/IKROS-LINEAGE.md"
+    - "02-architecture/ikros/IKROS-CONFIDENCE.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+
+outputs:
+  expected_source_files:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/graph/__init__.py"
+    - "tools/ikros/graph/models.py"
+    - "tools/ikros/graph/core.py"
+    - "tools/ikros/graph/lineage.py"
+    - "tools/ikros/graph/confidence.py"
+    - "tools/ikros/graph/validation.py"
+    - "tools/ikros/graph/persistence.py"
+  expected_test_files:
+    - "tests/unit/test_ikros_graph.py"
+  expected_documentation:
+    - "docs/ikros/KNOWLEDGE_GRAPH_GUIDE.md"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0043/evidence/EXEC-045.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/graph/"
+    - "tests/unit/test_ikros_graph.py"
+    - "docs/ikros/KNOWLEDGE_GRAPH_GUIDE.md"
+    - "data/ikros/graph/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0043/evidence/EXEC-045.yaml"
+
+produces:
+  capability:
+    id: "IKROS-GRAPH"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/ikros/graph/"
+    - "tools/ikros/__init__.py"
+    - "tests/unit/test_ikros_graph.py"
+    - "docs/ikros/"
+    - "data/ikros/graph/"
+    - "05-work-packages/WP-IMP-0043.yaml"
+    - "05-work-packages/WP-IMP-0043/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  non_goals:
+    - "No Research Memory implementation."
+    - "No natural-language query engine."
+    - "No vector search or semantic retrieval."
+    - "No autonomous research implementation."
+    - "No GNN or graph neural network implementation."
+    - "No Runtime modification."
+    - "No Engineering OS modification."
+
+requirements:
+  knowledge_graph_foundation:
+    module: "tools/ikros/graph/"
+    rules:
+      - "Implements a storage-independent directed property graph for IKROS research objects."
+      - "Supports 27 node types and 20 edge types aligned to SPEC-060."
+      - "Enforces referential integrity, confidence bounds, and contradiction evidence requirements."
+      - "Provides BFS, DFS, path finding, lineage traversal, and deterministic confidence propagation."
+      - "Persists deterministically through a YAML repository adapter behind a repository port."
+      - "Does not import or modify AFRP Runtime."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0043"
+
+completion:
+  success_requires:
+    - "Knowledge Graph modules implemented under tools/ikros/graph/."
+    - "Comprehensive Knowledge Graph tests pass."
+    - "IKROS-GRAPH capability added to CAPABILITY_REGISTRY.yaml."
+    - "NFR-042, NFR-043, and NFR-044 added to TRACEABILITY_MATRIX.yaml."
+    - "All quality gates pass (ruff, mypy --strict, pytest, afrp validate/plan/health/evidence)."
+    - "No Runtime behaviour changed."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-SCHEMA: "WPS-1.0 schema violation in WP YAML structure."
+  ERR-GRAPH-INTEGRITY: "Graph permits dangling references, invalid confidence, or unverified contradiction edges."
+  ERR-DETERMINISM: "Persistence or traversal is nondeterministic across repeated runs."

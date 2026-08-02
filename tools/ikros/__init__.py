@@ -1,10 +1,23 @@
 """IKROS — Institutional Knowledge & Research Operating System.
 
-Core registries for AFRP institutional research management.
+Core registries and Knowledge Graph for AFRP institutional research management.
 """
 
 from __future__ import annotations
 
+from tools.ikros.graph import (
+    ConfidencePropagator,
+    EdgeType,
+    GraphEdge,
+    GraphError,
+    GraphNode,
+    GraphValidationError,
+    KnowledgeGraph,
+    KnowledgeGraphRepository,
+    LineageEngine,
+    NodeType,
+    YAMLGraphRepository,
+)
 from tools.ikros.models import (
     Alpha,
     AlphaCandidate,
@@ -28,17 +41,28 @@ __all__ = [
     "Alpha",
     "AlphaCandidate",
     "AlphaRegistry",
+    "ConfidencePropagator",
     "ConfidenceVector",
+    "EdgeType",
     "Experiment",
     "ExperimentRegistry",
     "Feature",
     "FeatureFamily",
     "FeatureRegistry",
+    "GraphEdge",
+    "GraphError",
+    "GraphNode",
+    "GraphValidationError",
     "Hypothesis",
     "HypothesisRegistry",
     "IKROSEntity",
+    "KnowledgeGraph",
+    "KnowledgeGraphRepository",
+    "LineageEngine",
     "LineageRecord",
+    "NodeType",
     "PromotionStatus",
     "ResearchQuestion",
     "ResearchRegistry",
+    "YAMLGraphRepository",
 ]
