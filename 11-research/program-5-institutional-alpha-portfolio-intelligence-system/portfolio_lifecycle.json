@@ -1,0 +1,62 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "current_state": "ACTIVE",
+    "history": [
+      "CANDIDATE",
+      "APPROVED",
+      "ACTIVE"
+    ],
+    "mechanism": "safe_haven_migration",
+    "revalidation_trigger": "Trigger revalidation when confidence drops below 0.65 or observation quality deteriorates.",
+    "transition_reason": "State derived from governed allocation weight, uncertainty, and failure severity."
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0001",
+    "current_state": "ACTIVE",
+    "history": [
+      "CANDIDATE",
+      "APPROVED",
+      "ACTIVE"
+    ],
+    "mechanism": "real_yield_dislocation_reversion",
+    "revalidation_trigger": "Trigger revalidation when confidence drops below 0.65 or observation quality deteriorates.",
+    "transition_reason": "State derived from governed allocation weight, uncertainty, and failure severity."
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0002",
+    "current_state": "ACTIVE",
+    "history": [
+      "CANDIDATE",
+      "APPROVED",
+      "ACTIVE"
+    ],
+    "mechanism": "policy_expectation_repricing",
+    "revalidation_trigger": "Trigger revalidation when confidence drops below 0.65 or observation quality deteriorates.",
+    "transition_reason": "State derived from governed allocation weight, uncertainty, and failure severity."
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0003",
+    "current_state": "REDUCED",
+    "history": [
+      "CANDIDATE",
+      "APPROVED",
+      "REDUCED"
+    ],
+    "mechanism": "etf_flow_accumulation_pressure",
+    "revalidation_trigger": "Trigger revalidation when confidence drops below 0.65 or observation quality deteriorates.",
+    "transition_reason": "State derived from governed allocation weight, uncertainty, and failure severity."
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0004",
+    "current_state": "ACTIVE",
+    "history": [
+      "CANDIDATE",
+      "APPROVED",
+      "ACTIVE"
+    ],
+    "mechanism": "commodity_cross_curve_divergence",
+    "revalidation_trigger": "Trigger revalidation when confidence drops below 0.65 or observation quality deteriorates.",
+    "transition_reason": "State derived from governed allocation weight, uncertainty, and failure severity."
+  }
+]

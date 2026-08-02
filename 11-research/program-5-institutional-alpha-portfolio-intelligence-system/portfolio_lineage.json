@@ -1,0 +1,56 @@
+{
+  "alpha_to_portfolio_lineage": {
+    "commodity_cross_curve_divergence": [
+      "PROGRAM_4_APPROVED_LIBRARY",
+      "PROGRAM_5_PORTFOLIO_CONSTRUCTION"
+    ],
+    "etf_flow_accumulation_pressure": [
+      "PROGRAM_4_APPROVED_LIBRARY",
+      "PROGRAM_5_PORTFOLIO_CONSTRUCTION"
+    ],
+    "policy_expectation_repricing": [
+      "PROGRAM_4_APPROVED_LIBRARY",
+      "PROGRAM_5_PORTFOLIO_CONSTRUCTION"
+    ],
+    "real_yield_dislocation_reversion": [
+      "PROGRAM_4_APPROVED_LIBRARY",
+      "PROGRAM_5_PORTFOLIO_CONSTRUCTION"
+    ],
+    "safe_haven_migration": [
+      "PROGRAM_4_APPROVED_LIBRARY",
+      "PROGRAM_5_PORTFOLIO_CONSTRUCTION"
+    ]
+  },
+  "lifecycle_lineage": {
+    "commodity_cross_curve_divergence": [
+      "CANDIDATE",
+      "APPROVED",
+      "ACTIVE"
+    ],
+    "etf_flow_accumulation_pressure": [
+      "CANDIDATE",
+      "APPROVED",
+      "REDUCED"
+    ],
+    "policy_expectation_repricing": [
+      "CANDIDATE",
+      "APPROVED",
+      "ACTIVE"
+    ],
+    "real_yield_dislocation_reversion": [
+      "CANDIDATE",
+      "APPROVED",
+      "ACTIVE"
+    ],
+    "safe_haven_migration": [
+      "CANDIDATE",
+      "APPROVED",
+      "ACTIVE"
+    ]
+  },
+  "origin_programs": [
+    "PROGRAM_3",
+    "PROGRAM_4",
+    "PROGRAM_5"
+  ]
+}

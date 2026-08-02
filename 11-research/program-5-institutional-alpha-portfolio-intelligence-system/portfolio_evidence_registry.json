@@ -1,0 +1,42 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "evidence_completeness": 0.75,
+    "mechanism": "safe_haven_migration",
+    "portfolio_decision_relevance": 0.88,
+    "replication_quality": 0.73,
+    "supporting_evidence_units": 14
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0001",
+    "evidence_completeness": 0.72,
+    "mechanism": "real_yield_dislocation_reversion",
+    "portfolio_decision_relevance": 0.92,
+    "replication_quality": 0.72,
+    "supporting_evidence_units": 11
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0002",
+    "evidence_completeness": 0.71,
+    "mechanism": "policy_expectation_repricing",
+    "portfolio_decision_relevance": 0.95,
+    "replication_quality": 0.7,
+    "supporting_evidence_units": 10
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0003",
+    "evidence_completeness": 0.72,
+    "mechanism": "etf_flow_accumulation_pressure",
+    "portfolio_decision_relevance": 0.61,
+    "replication_quality": 0.7,
+    "supporting_evidence_units": 12
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0004",
+    "evidence_completeness": 0.7,
+    "mechanism": "commodity_cross_curve_divergence",
+    "portfolio_decision_relevance": 0.74,
+    "replication_quality": 0.69,
+    "supporting_evidence_units": 9
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "allocation_rationale": {
+      "type": "string"
+    },
+    "allocation_weight": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "alpha_id": {
+      "type": "string"
+    },
+    "capacity_constraint": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "confidence_weight": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "evidence_weight": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "mechanism": {
+      "type": "string"
+    },
+    "regime_weight": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "scientific_quality_weight": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    }
+  },
+  "required": [
+    "alpha_id",
+    "mechanism",
+    "allocation_weight",
+    "confidence_weight",
+    "evidence_weight",
+    "regime_weight"
+  ],
+  "title": "Institutional Allocation Entry",
+  "type": "object"
+}

@@ -1,0 +1,41 @@
+{
+  "audit_ids": [
+    "IKROS-CAMPAIGNAUDIT-20260802-0559",
+    "IKROS-CAMPAIGNAUDIT-20260802-0560",
+    "IKROS-CAMPAIGNAUDIT-20260802-0561",
+    "IKROS-CAMPAIGNAUDIT-20260802-0562",
+    "IKROS-CAMPAIGNAUDIT-20260802-0563",
+    "IKROS-CAMPAIGNAUDIT-20260802-0564",
+    "IKROS-CAMPAIGNAUDIT-20260802-0565",
+    "IKROS-CAMPAIGNAUDIT-20260802-0566"
+  ],
+  "blocked_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0201",
+    "IKROS-RESEARCHTASK-20260802-0205",
+    "IKROS-RESEARCHTASK-20260802-0207"
+  ],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0049",
+  "campaign_type": "HYPOTHESIS_VALIDATION",
+  "completed_task_ids": [],
+  "failed_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0197"
+  ],
+  "finished_at": "2026-08-02T22:54:27.794510+00:00",
+  "lifecycle_state": "FAILED",
+  "memory_record_ids": [
+    "IKMEM-T4-20260802-0056"
+  ],
+  "output_refs": [],
+  "progress": {
+    "blocked": 3,
+    "completed": 0,
+    "failed": 1,
+    "percent_complete": 0.0,
+    "skipped": 0,
+    "total": 4
+  },
+  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0049",
+  "skipped_task_ids": [],
+  "started_at": "2026-08-02T22:54:19.648920+00:00",
+  "summary": "Program 5 \u2014 Institutional Alpha Portfolio Intelligence System failed after 1 task failures."
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "contributions": {
+      "type": "array"
+    },
+    "decision": {
+      "enum": [
+        "BUY",
+        "SELL",
+        "HOLD",
+        "REDUCE",
+        "INCREASE",
+        "NO POSITION"
+      ],
+      "type": "string"
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "preferred_mix": {
+      "type": "array"
+    },
+    "weighted_score": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    }
+  },
+  "required": [
+    "decision",
+    "weighted_score",
+    "explanation",
+    "contributions"
+  ],
+  "title": "Portfolio Decision",
+  "type": "object"
+}

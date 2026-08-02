@@ -1,0 +1,12 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0565
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0049
+detail: Task STATISTICAL_EVALUATION blocked by dependency failure
+entry_hash: d0cce8c0b147d711b41ddaf311c0b1187de74f52d8d51fef693b84e1d56867d0
+event_type: TASK_BLOCKED
+new_state: BLOCKED
+output_refs: []
+previous_hash: 1046c2129497fd4bfc76a176d9938fa2c108cdd0e12d6bb3b5ed1ca1b13ab38d
+previous_state: PENDING
+task_id: IKROS-RESEARCHTASK-20260802-0205
+timestamp: '2026-08-02T22:54:26.768513+00:00'

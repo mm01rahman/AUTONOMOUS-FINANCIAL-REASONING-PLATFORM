@@ -1,0 +1,12 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0564
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0049
+detail: Task EXPERIMENT_REGISTRATION blocked by dependency failure
+entry_hash: 1046c2129497fd4bfc76a176d9938fa2c108cdd0e12d6bb3b5ed1ca1b13ab38d
+event_type: TASK_BLOCKED
+new_state: BLOCKED
+output_refs: []
+previous_hash: 07b38ee2d73c789680a618a96b071fe7980c097bf10158fe5252545a17583a94
+previous_state: PENDING
+task_id: IKROS-RESEARCHTASK-20260802-0201
+timestamp: '2026-08-02T22:54:25.757510+00:00'

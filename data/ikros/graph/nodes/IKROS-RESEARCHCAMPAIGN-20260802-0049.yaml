@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: HYPOTHESIS_VALIDATION
+  entity_type: ResearchCampaign
+  objective: Transform the approved institutional alpha library into a governed portfolio
+    with explainable allocation, conflict resolution, risk, capacity, lifecycle, and
+    regime-aware decision logic.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0049
+confidence: 0.0
+created_at: '2026-08-02T22:54:17.556224+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0049
+label: Program 5 — Institutional Alpha Portfolio Intelligence System
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0049
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

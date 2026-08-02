@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "allocated_capital_share": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "alpha_id": {
+      "type": "string"
+    },
+    "capacity_score": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "expected_degradation": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "market_impact": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "mechanism": {
+      "type": "string"
+    },
+    "utilization_ratio": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    }
+  },
+  "required": [
+    "alpha_id",
+    "mechanism",
+    "capacity_score",
+    "allocated_capital_share",
+    "utilization_ratio"
+  ],
+  "title": "Portfolio Capacity Entry",
+  "type": "object"
+}

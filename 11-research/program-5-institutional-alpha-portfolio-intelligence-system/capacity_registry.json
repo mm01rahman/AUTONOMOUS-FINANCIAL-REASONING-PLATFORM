@@ -1,0 +1,87 @@
+{
+  "per_alpha": [
+    {
+      "allocated_capital_share": 0.2023,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "capacity_score": 0.61,
+      "expected_capacity": "MEDIUM",
+      "expected_degradation": 0.1046,
+      "liquidity_constraints": "Event-window liquidity compression",
+      "market_impact": 0.1244,
+      "mechanism": "safe_haven_migration",
+      "scalability": 0.599,
+      "utilization_ratio": 0.3316
+    },
+    {
+      "allocated_capital_share": 0.2098,
+      "alpha_id": "IKROS-ALPHA-P4-0001",
+      "capacity_score": 0.73,
+      "expected_capacity": "HIGH",
+      "expected_degradation": 0.1016,
+      "liquidity_constraints": "Within governed capacity envelope",
+      "market_impact": 0.1189,
+      "mechanism": "real_yield_dislocation_reversion",
+      "scalability": 0.707,
+      "utilization_ratio": 0.2874
+    },
+    {
+      "allocated_capital_share": 0.2059,
+      "alpha_id": "IKROS-ALPHA-P4-0002",
+      "capacity_score": 0.64,
+      "expected_capacity": "MEDIUM",
+      "expected_degradation": 0.1031,
+      "liquidity_constraints": "Event-window liquidity compression",
+      "market_impact": 0.1238,
+      "mechanism": "policy_expectation_repricing",
+      "scalability": 0.626,
+      "utilization_ratio": 0.3217
+    },
+    {
+      "allocated_capital_share": 0.1899,
+      "alpha_id": "IKROS-ALPHA-P4-0003",
+      "capacity_score": 0.68,
+      "expected_capacity": "HIGH",
+      "expected_degradation": 0.0958,
+      "liquidity_constraints": "Within governed capacity envelope",
+      "market_impact": 0.111,
+      "mechanism": "etf_flow_accumulation_pressure",
+      "scalability": 0.662,
+      "utilization_ratio": 0.2793
+    },
+    {
+      "allocated_capital_share": 0.1921,
+      "alpha_id": "IKROS-ALPHA-P4-0004",
+      "capacity_score": 0.67,
+      "expected_capacity": "MEDIUM",
+      "expected_degradation": 0.1072,
+      "liquidity_constraints": "Within governed capacity envelope",
+      "market_impact": 0.1131,
+      "mechanism": "commodity_cross_curve_divergence",
+      "scalability": 0.653,
+      "utilization_ratio": 0.2867
+    }
+  ],
+  "portfolio_level": {
+    "cross_capacity_interactions": [
+      {
+        "affected_mechanisms": [
+          "safe_haven_migration",
+          "real_yield_dislocation_reversion",
+          "policy_expectation_repricing",
+          "etf_flow_accumulation_pressure"
+        ],
+        "portfolio_penalty": 0.08,
+        "shared_dependency": "USD"
+      },
+      {
+        "affected_mechanisms": [
+          "real_yield_dislocation_reversion",
+          "policy_expectation_repricing"
+        ],
+        "portfolio_penalty": 0.06,
+        "shared_dependency": "Macro policy repricing"
+      }
+    ],
+    "portfolio_level_capacity": 0.666
+  }
+}

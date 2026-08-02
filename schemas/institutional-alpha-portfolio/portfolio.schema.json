@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approved_alpha_count": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "current_regime": {
+      "type": "string"
+    },
+    "portfolio_confidence": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "portfolio_decision": {
+      "enum": [
+        "BUY",
+        "SELL",
+        "HOLD",
+        "REDUCE",
+        "INCREASE",
+        "NO POSITION"
+      ],
+      "type": "string"
+    },
+    "portfolio_id": {
+      "type": "string"
+    },
+    "portfolio_name": {
+      "type": "string"
+    },
+    "portfolio_uncertainty": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "scientific_objective": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "portfolio_id",
+    "portfolio_name",
+    "approved_alpha_count",
+    "current_regime",
+    "portfolio_decision",
+    "portfolio_confidence",
+    "portfolio_uncertainty"
+  ],
+  "title": "Institutional Portfolio",
+  "type": "object"
+}

@@ -1,0 +1,97 @@
+{
+  "edges": [
+    {
+      "relationship": "ALLOCATES_TO",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "IKROS-ALPHA-P4-0001"
+    },
+    {
+      "relationship": "ALLOCATES_TO",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "IKROS-ALPHA-P4-0002"
+    },
+    {
+      "relationship": "ALLOCATES_TO",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "IKROS-ALPHA-DC3-20260802-0006"
+    },
+    {
+      "relationship": "ALLOCATES_TO",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "IKROS-ALPHA-P4-0004"
+    },
+    {
+      "relationship": "ALLOCATES_TO",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "IKROS-ALPHA-P4-0003"
+    },
+    {
+      "relationship": "GOVERNS_CONFLICT",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "PORTFOLIO-CONFLICT-0001"
+    },
+    {
+      "relationship": "GOVERNS_CONFLICT",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "PORTFOLIO-CONFLICT-0002"
+    },
+    {
+      "relationship": "GOVERNS_CONFLICT",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "PORTFOLIO-CONFLICT-0003"
+    },
+    {
+      "relationship": "GOVERNS_CONFLICT",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "PORTFOLIO-CONFLICT-0004"
+    },
+    {
+      "relationship": "GOVERNS_CONFLICT",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "PORTFOLIO-CONFLICT-0005"
+    },
+    {
+      "relationship": "GOVERNS_CONFLICT",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "PORTFOLIO-CONFLICT-0006"
+    },
+    {
+      "relationship": "GOVERNS_CONFLICT",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "PORTFOLIO-CONFLICT-0007"
+    },
+    {
+      "relationship": "GOVERNS_CONFLICT",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "PORTFOLIO-CONFLICT-0008"
+    },
+    {
+      "relationship": "GOVERNS_CONFLICT",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "PORTFOLIO-CONFLICT-0009"
+    },
+    {
+      "relationship": "GOVERNS_CONFLICT",
+      "source": "PROGRAM5-PORTFOLIO",
+      "target": "PORTFOLIO-CONFLICT-0010"
+    }
+  ],
+  "nodes": [
+    "PROGRAM5-PORTFOLIO",
+    "IKROS-ALPHA-P4-0001",
+    "IKROS-ALPHA-P4-0002",
+    "IKROS-ALPHA-DC3-20260802-0006",
+    "IKROS-ALPHA-P4-0004",
+    "IKROS-ALPHA-P4-0003",
+    "PORTFOLIO-CONFLICT-0001",
+    "PORTFOLIO-CONFLICT-0002",
+    "PORTFOLIO-CONFLICT-0003",
+    "PORTFOLIO-CONFLICT-0004",
+    "PORTFOLIO-CONFLICT-0005",
+    "PORTFOLIO-CONFLICT-0006",
+    "PORTFOLIO-CONFLICT-0007",
+    "PORTFOLIO-CONFLICT-0008",
+    "PORTFOLIO-CONFLICT-0009",
+    "PORTFOLIO-CONFLICT-0010"
+  ]
+}

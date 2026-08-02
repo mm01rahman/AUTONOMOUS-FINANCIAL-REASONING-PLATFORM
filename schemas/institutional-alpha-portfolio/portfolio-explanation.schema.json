@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "alpha_contribution_report": {
+      "type": "array"
+    },
+    "capital_allocation_rationale": {
+      "type": "string"
+    },
+    "contradictory_evidence": {
+      "type": "array"
+    },
+    "current_portfolio_decision": {
+      "type": "object"
+    },
+    "economic_narrative": {
+      "type": "string"
+    },
+    "portfolio_executive_report": {
+      "type": "string"
+    },
+    "portfolio_risk_summary": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "portfolio_executive_report",
+    "capital_allocation_rationale",
+    "alpha_contribution_report",
+    "economic_narrative",
+    "current_portfolio_decision"
+  ],
+  "title": "Portfolio Explanation",
+  "type": "object"
+}
