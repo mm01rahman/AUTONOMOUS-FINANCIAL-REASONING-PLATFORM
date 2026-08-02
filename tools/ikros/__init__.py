@@ -18,6 +18,18 @@ from tools.ikros.graph import (
     NodeType,
     YAMLGraphRepository,
 )
+from tools.ikros.memory import (
+    MemoryLifecycleState,
+    MemoryQuery,
+    MemoryRecord,
+    MemoryRepository,
+    MemoryRetriever,
+    MemoryTier,
+    MemoryValidationError,
+    ResearchMemoryManager,
+    WorkingMemorySnapshot,
+    YAMLMemoryRepository,
+)
 from tools.ikros.models import (
     Alpha,
     AlphaCandidate,
@@ -60,9 +72,19 @@ __all__ = [
     "KnowledgeGraphRepository",
     "LineageEngine",
     "LineageRecord",
+    "MemoryLifecycleState",
+    "MemoryQuery",
+    "MemoryRecord",
+    "MemoryRepository",
+    "MemoryRetriever",
+    "MemoryTier",
+    "MemoryValidationError",
     "NodeType",
     "PromotionStatus",
+    "ResearchMemoryManager",
     "ResearchQuestion",
     "ResearchRegistry",
     "YAMLGraphRepository",
+    "WorkingMemorySnapshot",
+    "YAMLMemoryRepository",
 ]

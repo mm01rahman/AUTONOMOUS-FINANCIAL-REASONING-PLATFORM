@@ -498,3 +498,16 @@ capabilities:
       implements_req: ["NFR-042", "NFR-043", "NFR-044"]
       trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004"]
       trace_vvc: "TVM-001"
+
+  # -- Stage O -- IKROS Research Memory ---------------------------------------
+  - id: "IKROS-MEMORY"
+    version: "1.0"
+    title: "IKROS Institutional Research Memory"
+    owner: "ARB"
+    status: "COMPLETE"
+    depends_on: ["IKROS-GRAPH"]
+    work_package: "WP-IMP-0044"
+    traceability:
+      implements_req: ["NFR-045", "NFR-046", "NFR-047"]
+      trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004"]
+      trace_vvc: "TVM-001"

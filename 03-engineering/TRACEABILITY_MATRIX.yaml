@@ -927,3 +927,42 @@ requirements:
       - "tests/unit/test_ikros_graph.py"
     verified_by:
       - "05-work-packages/WP-IMP-0043/evidence/EXEC-045.yaml"
+
+  - id: "NFR-045"
+    title: "IKROS Research Memory shall provide deterministic six-tier storage, structured retrieval, lifecycle state, and YAML persistence for institutional research memory"
+    source: "SPEC-060 §6 (AFRP-WP-IMP-0044)"
+    capability: "IKROS-MEMORY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/memory/models.py"
+      - "tools/ikros/memory/core.py"
+      - "tools/ikros/memory/persistence.py"
+      - "tests/unit/test_ikros_memory.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0044/evidence/EXEC-046.yaml"
+
+  - id: "NFR-046"
+    title: "IKROS Research Memory shall support governed consolidation, promotion, retirement, archive, restore, and merge operations without deleting research history"
+    source: "SPEC-060 §6, §8, §9 (AFRP-WP-IMP-0044)"
+    capability: "IKROS-MEMORY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/memory/core.py"
+      - "tools/ikros/memory/validation.py"
+      - "docs/ikros/RESEARCH_MEMORY_GUIDE.md"
+      - "tests/unit/test_ikros_memory.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0044/evidence/EXEC-046.yaml"
+
+  - id: "NFR-047"
+    title: "IKROS Research Memory shall preserve graph-linked lineage, evidence, confidence, temporal history, and archive integrity across all tiers"
+    source: "SPEC-060 §6, §7, §8 (AFRP-WP-IMP-0044)"
+    capability: "IKROS-MEMORY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/memory/core.py"
+      - "tools/ikros/memory/retrieval.py"
+      - "tools/ikros/memory/validation.py"
+      - "tests/unit/test_ikros_memory.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0044/evidence/EXEC-046.yaml"
