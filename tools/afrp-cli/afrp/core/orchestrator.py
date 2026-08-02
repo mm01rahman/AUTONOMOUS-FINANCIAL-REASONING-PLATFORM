@@ -433,6 +433,7 @@ def _restore_git_control(
         try:
             directory.rmdir()
         except OSError:
+            # Best-effort cleanup: skip directories that remain non-empty.
             pass
 
 
