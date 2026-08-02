@@ -1,0 +1,17 @@
+attributes:
+  covered_variables:
+  - real_yield_tip_direct
+  domain: policy_expectations
+  provider: FREDProvider
+confidence: 0.9592
+created_at: '2026-08-02T15:33:14.512596+00:00'
+ikros_id: IKROS-DF2-DATASET-DS019
+label: DS-019 TIPS 10Y Real Yield
+node_id: IKROS-DF2-DATASET-DS019
+node_type: DATASET
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

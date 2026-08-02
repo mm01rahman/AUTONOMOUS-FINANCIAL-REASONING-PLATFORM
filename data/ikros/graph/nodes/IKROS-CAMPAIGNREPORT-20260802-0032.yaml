@@ -1,0 +1,17 @@
+attributes:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0032
+  entity_type: CampaignCompletionReport
+  lifecycle_state: FAILED
+confidence: 0.5
+created_at: '2026-08-02T15:13:35.067459+00:00'
+ikros_id: IKROS-CAMPAIGNREPORT-20260802-0032
+label: DC4 Institutional Market Observability & Data Expansion Program completion
+  report
+node_id: IKROS-CAMPAIGNREPORT-20260802-0032
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

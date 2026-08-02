@@ -1,0 +1,634 @@
+{
+  "edges": [
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": -0.22,
+      "source": "dealers",
+      "target": "market_makers",
+      "update_strength": 2.2668
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": 0.0,
+      "source": "bullion_banks",
+      "target": "dealers",
+      "update_strength": 2.2367
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": 0.0,
+      "source": "dealers",
+      "target": "bullion_banks",
+      "update_strength": 1.9895
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": 0.0,
+      "source": "bullion_banks",
+      "target": "commercial_hedgers",
+      "update_strength": 1.9092
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": -0.16,
+      "source": "dealers",
+      "target": "macro_hedge_funds",
+      "update_strength": 1.8948
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": 0.26,
+      "source": "macro_hedge_funds",
+      "target": "central_banks",
+      "update_strength": 1.8661
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": -0.04,
+      "source": "dealers",
+      "target": "safe_haven_capital_flows",
+      "update_strength": 1.8472
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": -0.04,
+      "source": "bullion_banks",
+      "target": "etf_investors",
+      "update_strength": 1.8297
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": 0.0,
+      "source": "bullion_banks",
+      "target": "ctas",
+      "update_strength": 1.8289
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": -0.22,
+      "source": "bullion_banks",
+      "target": "market_makers",
+      "update_strength": 1.8008
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": 0.1,
+      "source": "dealers",
+      "target": "central_banks",
+      "update_strength": 1.7949
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": 0.0,
+      "source": "dealers",
+      "target": "retail_traders",
+      "update_strength": 1.774
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": 0.0,
+      "source": "dealers",
+      "target": "commercial_hedgers",
+      "update_strength": 1.7102
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": -0.04,
+      "source": "dealers",
+      "target": "etf_investors",
+      "update_strength": 1.7054
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": 0.0,
+      "source": "dealers",
+      "target": "ctas",
+      "update_strength": 1.7046
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": 0.0,
+      "source": "bullion_banks",
+      "target": "retail_traders",
+      "update_strength": 1.6888
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": -0.16,
+      "source": "bullion_banks",
+      "target": "macro_hedge_funds",
+      "update_strength": 1.5852
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": -0.04,
+      "source": "bullion_banks",
+      "target": "safe_haven_capital_flows",
+      "update_strength": 1.5076
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.0,
+      "source": "safe_haven_capital_flows",
+      "target": "etf_investors",
+      "update_strength": 1.4972
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.14,
+      "source": "safe_haven_capital_flows",
+      "target": "central_banks",
+      "update_strength": 1.4687
+    },
+    {
+      "channel": "flow_balancing",
+      "information_asymmetry": 0.1,
+      "source": "bullion_banks",
+      "target": "central_banks",
+      "update_strength": 1.4553
+    },
+    {
+      "channel": "microstructure_state",
+      "information_asymmetry": 0.22,
+      "source": "market_makers",
+      "target": "retail_traders",
+      "update_strength": 1.3482
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": 0.12,
+      "source": "macro_hedge_funds",
+      "target": "safe_haven_capital_flows",
+      "update_strength": 1.3226
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": -0.12,
+      "source": "safe_haven_capital_flows",
+      "target": "macro_hedge_funds",
+      "update_strength": 1.3098
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": -0.26,
+      "source": "central_banks",
+      "target": "macro_hedge_funds",
+      "update_strength": 1.2853
+    },
+    {
+      "channel": "microstructure_state",
+      "information_asymmetry": 0.18,
+      "source": "market_makers",
+      "target": "etf_investors",
+      "update_strength": 1.234
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": 0.16,
+      "source": "macro_hedge_funds",
+      "target": "ctas",
+      "update_strength": 1.1999
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": 0.16,
+      "source": "macro_hedge_funds",
+      "target": "dealers",
+      "update_strength": 1.1905
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.04,
+      "source": "safe_haven_capital_flows",
+      "target": "retail_traders",
+      "update_strength": 1.1701
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": -0.18,
+      "source": "safe_haven_capital_flows",
+      "target": "market_makers",
+      "update_strength": 1.1425
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.04,
+      "source": "safe_haven_capital_flows",
+      "target": "dealers",
+      "update_strength": 1.139
+    },
+    {
+      "channel": "microstructure_state",
+      "information_asymmetry": 0.18,
+      "source": "market_makers",
+      "target": "safe_haven_capital_flows",
+      "update_strength": 1.103
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": -0.06,
+      "source": "macro_hedge_funds",
+      "target": "market_makers",
+      "update_strength": 1.0985
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": 0.12,
+      "source": "macro_hedge_funds",
+      "target": "etf_investors",
+      "update_strength": 1.0655
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.04,
+      "source": "etf_investors",
+      "target": "retail_traders",
+      "update_strength": 1.0601
+    },
+    {
+      "channel": "microstructure_state",
+      "information_asymmetry": 0.22,
+      "source": "market_makers",
+      "target": "ctas",
+      "update_strength": 1.0592
+    },
+    {
+      "channel": "systematic_trend",
+      "information_asymmetry": 0.0,
+      "source": "ctas",
+      "target": "commercial_hedgers",
+      "update_strength": 1.059
+    },
+    {
+      "channel": "systematic_trend",
+      "information_asymmetry": -0.04,
+      "source": "ctas",
+      "target": "etf_investors",
+      "update_strength": 1.0544
+    },
+    {
+      "channel": "microstructure_state",
+      "information_asymmetry": 0.22,
+      "source": "market_makers",
+      "target": "commercial_hedgers",
+      "update_strength": 1.0482
+    },
+    {
+      "channel": "microstructure_state",
+      "information_asymmetry": 0.22,
+      "source": "market_makers",
+      "target": "bullion_banks",
+      "update_strength": 1.0425
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.04,
+      "source": "etf_investors",
+      "target": "commercial_hedgers",
+      "update_strength": 1.0252
+    },
+    {
+      "channel": "microstructure_state",
+      "information_asymmetry": 0.22,
+      "source": "market_makers",
+      "target": "dealers",
+      "update_strength": 1.0178
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.04,
+      "source": "etf_investors",
+      "target": "ctas",
+      "update_strength": 1.0042
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": 0.16,
+      "source": "macro_hedge_funds",
+      "target": "retail_traders",
+      "update_strength": 0.9734
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": 0.16,
+      "source": "macro_hedge_funds",
+      "target": "commercial_hedgers",
+      "update_strength": 0.9688
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.04,
+      "source": "safe_haven_capital_flows",
+      "target": "commercial_hedgers",
+      "update_strength": 0.9657
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": 0.16,
+      "source": "macro_hedge_funds",
+      "target": "bullion_banks",
+      "update_strength": 0.9635
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": -0.18,
+      "source": "etf_investors",
+      "target": "market_makers",
+      "update_strength": 0.9444
+    },
+    {
+      "channel": "microstructure_state",
+      "information_asymmetry": 0.06,
+      "source": "market_makers",
+      "target": "macro_hedge_funds",
+      "update_strength": 0.9325
+    },
+    {
+      "channel": "systematic_trend",
+      "information_asymmetry": 0.0,
+      "source": "ctas",
+      "target": "retail_traders",
+      "update_strength": 0.9285
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": 0.0,
+      "source": "commercial_hedgers",
+      "target": "bullion_banks",
+      "update_strength": 0.9126
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.04,
+      "source": "safe_haven_capital_flows",
+      "target": "bullion_banks",
+      "update_strength": 0.8991
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.04,
+      "source": "safe_haven_capital_flows",
+      "target": "ctas",
+      "update_strength": 0.8985
+    },
+    {
+      "channel": "systematic_trend",
+      "information_asymmetry": 0.0,
+      "source": "ctas",
+      "target": "bullion_banks",
+      "update_strength": 0.8598
+    },
+    {
+      "channel": "microstructure_state",
+      "information_asymmetry": 0.32,
+      "source": "market_makers",
+      "target": "central_banks",
+      "update_strength": 0.8511
+    },
+    {
+      "channel": "systematic_trend",
+      "information_asymmetry": -0.22,
+      "source": "ctas",
+      "target": "market_makers",
+      "update_strength": 0.8459
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": -0.14,
+      "source": "central_banks",
+      "target": "safe_haven_capital_flows",
+      "update_strength": 0.814
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.04,
+      "source": "etf_investors",
+      "target": "bullion_banks",
+      "update_strength": 0.8046
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": -0.04,
+      "source": "retail_traders",
+      "target": "etf_investors",
+      "update_strength": 0.7621
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": -0.04,
+      "source": "commercial_hedgers",
+      "target": "etf_investors",
+      "update_strength": 0.7481
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.0,
+      "source": "etf_investors",
+      "target": "safe_haven_capital_flows",
+      "update_strength": 0.735
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": 0.0,
+      "source": "commercial_hedgers",
+      "target": "ctas",
+      "update_strength": 0.7324
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": -0.22,
+      "source": "retail_traders",
+      "target": "market_makers",
+      "update_strength": 0.6801
+    },
+    {
+      "channel": "systematic_trend",
+      "information_asymmetry": 0.1,
+      "source": "ctas",
+      "target": "central_banks",
+      "update_strength": 0.68
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.14,
+      "source": "etf_investors",
+      "target": "central_banks",
+      "update_strength": 0.635
+    },
+    {
+      "channel": "systematic_trend",
+      "information_asymmetry": 0.0,
+      "source": "ctas",
+      "target": "dealers",
+      "update_strength": 0.629
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": 0.0,
+      "source": "commercial_hedgers",
+      "target": "retail_traders",
+      "update_strength": 0.5923
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": 0.0,
+      "source": "retail_traders",
+      "target": "ctas",
+      "update_strength": 0.5818
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": 0.0,
+      "source": "retail_traders",
+      "target": "commercial_hedgers",
+      "update_strength": 0.5723
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": 0.04,
+      "source": "etf_investors",
+      "target": "dealers",
+      "update_strength": 0.5671
+    },
+    {
+      "channel": "systematic_trend",
+      "information_asymmetry": -0.16,
+      "source": "ctas",
+      "target": "macro_hedge_funds",
+      "update_strength": 0.5556
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": 0.0,
+      "source": "commercial_hedgers",
+      "target": "dealers",
+      "update_strength": 0.5526
+    },
+    {
+      "channel": "systematic_trend",
+      "information_asymmetry": -0.04,
+      "source": "ctas",
+      "target": "safe_haven_capital_flows",
+      "update_strength": 0.5377
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": -0.22,
+      "source": "commercial_hedgers",
+      "target": "market_makers",
+      "update_strength": 0.5097
+    },
+    {
+      "channel": "allocation_narrative",
+      "information_asymmetry": -0.12,
+      "source": "etf_investors",
+      "target": "macro_hedge_funds",
+      "update_strength": 0.5069
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": -0.04,
+      "source": "retail_traders",
+      "target": "safe_haven_capital_flows",
+      "update_strength": 0.4549
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": 0.1,
+      "source": "commercial_hedgers",
+      "target": "central_banks",
+      "update_strength": 0.4186
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": 0.1,
+      "source": "retail_traders",
+      "target": "central_banks",
+      "update_strength": 0.4027
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": 0.0,
+      "source": "retail_traders",
+      "target": "bullion_banks",
+      "update_strength": 0.3729
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": 0.0,
+      "source": "retail_traders",
+      "target": "dealers",
+      "update_strength": 0.3517
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": -0.1,
+      "source": "central_banks",
+      "target": "retail_traders",
+      "update_strength": 0.3456
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": -0.1,
+      "source": "central_banks",
+      "target": "commercial_hedgers",
+      "update_strength": 0.3418
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": -0.1,
+      "source": "central_banks",
+      "target": "bullion_banks",
+      "update_strength": 0.3286
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": -0.1,
+      "source": "central_banks",
+      "target": "dealers",
+      "update_strength": 0.3176
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": -0.14,
+      "source": "central_banks",
+      "target": "etf_investors",
+      "update_strength": 0.296
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": -0.16,
+      "source": "commercial_hedgers",
+      "target": "macro_hedge_funds",
+      "update_strength": 0.2942
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": -0.1,
+      "source": "central_banks",
+      "target": "ctas",
+      "update_strength": 0.2814
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": -0.16,
+      "source": "retail_traders",
+      "target": "macro_hedge_funds",
+      "update_strength": 0.2783
+    },
+    {
+      "channel": "hedge_optimization",
+      "information_asymmetry": -0.04,
+      "source": "commercial_hedgers",
+      "target": "safe_haven_capital_flows",
+      "update_strength": 0.2764
+    },
+    {
+      "channel": "macro_scenario",
+      "information_asymmetry": -0.32,
+      "source": "central_banks",
+      "target": "market_makers",
+      "update_strength": 0.2691
+    }
+  ]
+}

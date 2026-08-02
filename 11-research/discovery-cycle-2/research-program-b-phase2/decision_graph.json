@@ -1,0 +1,27 @@
+{
+  "dominant_cascade_initiators": [
+    "market_makers",
+    "macro_hedge_funds",
+    "etf_investors",
+    "safe_haven_capital_flows"
+  ],
+  "fastest_decision_makers": [
+    "market_makers",
+    "macro_hedge_funds",
+    "etf_investors",
+    "safe_haven_capital_flows",
+    "commercial_hedgers"
+  ],
+  "participants": [
+    "central_banks",
+    "commercial_hedgers",
+    "bullion_banks",
+    "dealers",
+    "market_makers",
+    "ctas",
+    "macro_hedge_funds",
+    "etf_investors",
+    "retail_traders",
+    "safe_haven_capital_flows"
+  ]
+}

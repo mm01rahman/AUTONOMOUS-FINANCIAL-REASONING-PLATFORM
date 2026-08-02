@@ -1,0 +1,1505 @@
+{
+  "coverage_registry": [
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-001",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "start_timestamp": "2026-07-27T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-003",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "start_timestamp": "2026-07-27T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-007",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "start_timestamp": "2026-07-27T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-008",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "start_timestamp": "2026-07-27T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-009",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-07-28T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 4,
+      "start_timestamp": "2026-07-07T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-010",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-07-28T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 4,
+      "start_timestamp": "2026-07-07T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-011",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "start_timestamp": "2026-07-27T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-012",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "start_timestamp": "2026-07-27T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-014",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-07-31T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 4,
+      "start_timestamp": "2026-04-30T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-017",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-07-31T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 4,
+      "start_timestamp": "2026-04-30T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-018",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "start_timestamp": "2026-07-27T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-019",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "start_timestamp": "2026-07-27T00:00:00Z"
+    },
+    {
+      "completeness": 1.0,
+      "coverage": 1.0,
+      "dataset_id": "DS-PUB-021",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "start_timestamp": "2026-07-27T00:00:00Z"
+    }
+  ],
+  "covered_variable_count": 22,
+  "dataset_count": 13,
+  "dataset_registry": [
+    {
+      "cadence": "daily",
+      "confidence_score": 0.9592,
+      "covered_variables": [
+        "vix",
+        "macro_stress_proxy"
+      ],
+      "dataset_id": "DS-001",
+      "domain": "macro_stress",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-001\\DF2-DS001-20260801-08c94fe3\\manifest.json",
+      "name": "VIX Index",
+      "provider": "FREDProvider",
+      "quality_score": 0.9833,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-001\\DF2-DS001-20260801-08c94fe3\\data.csv",
+      "supported_mechanisms": [
+        "liquidity_withdrawal",
+        "safe_haven_migration",
+        "regime_transition_chain"
+      ],
+      "version_id": "DF2-DS001-20260801-08c94fe3",
+      "work_package": "DF2-WP-001"
+    },
+    {
+      "cadence": "daily",
+      "confidence_score": 0.9592,
+      "covered_variables": [
+        "ted_spread"
+      ],
+      "dataset_id": "DS-003",
+      "domain": "macro_stress",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-003\\DF2-DS003-20260801-35e90076\\manifest.json",
+      "name": "TED Spread",
+      "provider": "FREDProvider",
+      "quality_score": 0.9833,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-003\\DF2-DS003-20260801-35e90076\\data.csv",
+      "supported_mechanisms": [
+        "liquidity_withdrawal",
+        "safe_haven_migration"
+      ],
+      "version_id": "DF2-DS003-20260801-35e90076",
+      "work_package": "DF2-WP-001"
+    },
+    {
+      "cadence": "daily",
+      "confidence_score": 0.9592,
+      "covered_variables": [
+        "gld_shares_outstanding",
+        "gld_etf_flows"
+      ],
+      "dataset_id": "DS-007",
+      "domain": "etf_positioning",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-007\\DF2-DS007-20260801-d7565c08\\manifest.json",
+      "name": "GLD ETF Shares Outstanding",
+      "provider": "ETFHoldingsProvider",
+      "quality_score": 0.9833,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-007\\DF2-DS007-20260801-d7565c08\\data.csv",
+      "supported_mechanisms": [
+        "safe_haven_migration",
+        "etf_flow_propagation",
+        "adaptive_ecology_shift"
+      ],
+      "version_id": "DF2-DS007-20260801-d7565c08",
+      "work_package": "DF2-WP-002"
+    },
+    {
+      "cadence": "daily",
+      "confidence_score": 0.9592,
+      "covered_variables": [
+        "iau_shares_outstanding",
+        "iau_etf_flows"
+      ],
+      "dataset_id": "DS-008",
+      "domain": "etf_positioning",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-008\\DF2-DS008-20260801-3d99595e\\manifest.json",
+      "name": "IAU ETF Shares Outstanding",
+      "provider": "ETFHoldingsProvider",
+      "quality_score": 0.9833,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-008\\DF2-DS008-20260801-3d99595e\\data.csv",
+      "supported_mechanisms": [
+        "safe_haven_migration",
+        "etf_flow_propagation"
+      ],
+      "version_id": "DF2-DS008-20260801-3d99595e",
+      "work_package": "DF2-WP-002"
+    },
+    {
+      "cadence": "weekly",
+      "confidence_score": 0.9502,
+      "covered_variables": [
+        "comex_positioning_direct",
+        "cot_participant_mix"
+      ],
+      "dataset_id": "DS-009",
+      "domain": "institutional_positioning",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-009\\DF2-DS009-20260728-90146ca4\\manifest.json",
+      "name": "COMEX Non-Commercial Positioning",
+      "provider": "CFTCProvider",
+      "quality_score": 0.9762,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-009\\DF2-DS009-20260728-90146ca4\\data.csv",
+      "supported_mechanisms": [
+        "cross_asset_transition",
+        "dealer_inventory",
+        "adaptive_ecology_shift"
+      ],
+      "version_id": "DF2-DS009-20260728-90146ca4",
+      "work_package": "DF2-WP-002"
+    },
+    {
+      "cadence": "weekly",
+      "confidence_score": 0.9502,
+      "covered_variables": [
+        "cot_dealers",
+        "dealer_net_position_change"
+      ],
+      "dataset_id": "DS-010",
+      "domain": "institutional_positioning",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-010\\DF2-DS010-20260728-f26c40e9\\manifest.json",
+      "name": "COMEX Dealer Net Position",
+      "provider": "CFTCProvider",
+      "quality_score": 0.9762,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-010\\DF2-DS010-20260728-f26c40e9\\data.csv",
+      "supported_mechanisms": [
+        "dealer_inventory",
+        "adaptive_ecology_shift"
+      ],
+      "version_id": "DF2-DS010-20260728-f26c40e9",
+      "work_package": "DF2-WP-002"
+    },
+    {
+      "cadence": "daily",
+      "confidence_score": 0.9592,
+      "covered_variables": [
+        "vol_surface",
+        "dealer_gamma"
+      ],
+      "dataset_id": "DS-011",
+      "domain": "macro_stress",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-011\\DF2-DS011-20260801-2682d621\\manifest.json",
+      "name": "Gold Volatility Index (GVZ)",
+      "provider": "CBOEProvider",
+      "quality_score": 0.9833,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-011\\DF2-DS011-20260801-2682d621\\data.csv",
+      "supported_mechanisms": [
+        "dealer_inventory",
+        "decision_cascade",
+        "liquidity_withdrawal"
+      ],
+      "version_id": "DF2-DS011-20260801-2682d621",
+      "work_package": "DF2-WP-002"
+    },
+    {
+      "cadence": "daily",
+      "confidence_score": 0.9592,
+      "covered_variables": [
+        "breakeven_inflation"
+      ],
+      "dataset_id": "DS-012",
+      "domain": "rates",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-012\\DF2-DS012-20260801-da2dc1c4\\manifest.json",
+      "name": "Breakeven Inflation Rates (5Y, 10Y)",
+      "provider": "FREDProvider",
+      "quality_score": 0.9833,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-012\\DF2-DS012-20260801-da2dc1c4\\data.csv",
+      "supported_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "version_id": "DF2-DS012-20260801-da2dc1c4",
+      "work_package": "DF2-WP-001"
+    },
+    {
+      "cadence": "monthly",
+      "confidence_score": 0.9765,
+      "covered_variables": [
+        "central_bank_gold_purchases",
+        "institutional_flow_direction"
+      ],
+      "dataset_id": "DS-014",
+      "domain": "structural_demand",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-014\\DF2-DS014-20260731-0567cd20\\manifest.json",
+      "name": "Central Bank Gold Purchases",
+      "provider": "WGCProvider",
+      "quality_score": 0.9972,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-014\\DF2-DS014-20260731-0567cd20\\data.csv",
+      "supported_mechanisms": [
+        "safe_haven_migration",
+        "adaptive_ecology_shift"
+      ],
+      "version_id": "DF2-DS014-20260731-0567cd20",
+      "work_package": "DF2-WP-004"
+    },
+    {
+      "cadence": "monthly",
+      "confidence_score": 0.9765,
+      "covered_variables": [
+        "geopolitical_risk_index"
+      ],
+      "dataset_id": "DS-017",
+      "domain": "structural_demand",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-017\\DF2-DS017-20260731-e6e80fab\\manifest.json",
+      "name": "Geopolitical Risk Index",
+      "provider": "AcademicProvider",
+      "quality_score": 0.9972,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-017\\DF2-DS017-20260731-e6e80fab\\data.csv",
+      "supported_mechanisms": [
+        "safe_haven_migration"
+      ],
+      "version_id": "DF2-DS017-20260731-e6e80fab",
+      "work_package": "DF2-WP-004"
+    },
+    {
+      "cadence": "daily",
+      "confidence_score": 0.9592,
+      "covered_variables": [
+        "us_treasury_2y_yield",
+        "fomc_policy_anchor_public"
+      ],
+      "dataset_id": "DS-018",
+      "domain": "policy_expectations",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-018\\DF2-DS018-20260801-a87bcbe7\\manifest.json",
+      "name": "US Treasury 2Y Yield",
+      "provider": "FREDProvider",
+      "quality_score": 0.9833,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-018\\DF2-DS018-20260801-a87bcbe7\\data.csv",
+      "supported_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "version_id": "DF2-DS018-20260801-a87bcbe7",
+      "work_package": "DF2-WP-003"
+    },
+    {
+      "cadence": "daily",
+      "confidence_score": 0.9592,
+      "covered_variables": [
+        "real_yield_tip_direct"
+      ],
+      "dataset_id": "DS-019",
+      "domain": "policy_expectations",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-019\\DF2-DS019-20260801-746a952a\\manifest.json",
+      "name": "TIPS 10Y Real Yield",
+      "provider": "FREDProvider",
+      "quality_score": 0.9833,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-019\\DF2-DS019-20260801-746a952a\\data.csv",
+      "supported_mechanisms": [
+        "cross_asset_transition",
+        "macro_repricing",
+        "policy_repricing"
+      ],
+      "version_id": "DF2-DS019-20260801-746a952a",
+      "work_package": "DF2-WP-003"
+    },
+    {
+      "cadence": "derived",
+      "confidence_score": 0.9592,
+      "covered_variables": [
+        "policy_expectation_proxy_public",
+        "fomc_meeting_prob_public_proxy"
+      ],
+      "dataset_id": "DS-PUB-021",
+      "domain": "policy_expectations",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-PUB-021\\DF2-DSPUB021-20260801-fdeae205\\manifest.json",
+      "name": "Public Policy Expectation Curve",
+      "provider": "DerivedPolicyProvider",
+      "quality_score": 0.9833,
+      "storage_path": "data\\data-foundation-v2\\datasets\\DS-PUB-021\\DF2-DSPUB021-20260801-fdeae205\\data.csv",
+      "supported_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "version_id": "DF2-DSPUB021-20260801-fdeae205",
+      "work_package": "DF2-WP-003"
+    }
+  ],
+  "generated_at": "2026-08-02T00:00:00Z",
+  "manifest_catalogue": [
+    {
+      "checksum": "08c94fe37e8a921d4f427d8180215f6fcc11ddadbc848d60b09cd9501712403d",
+      "dataset_id": "DS-001",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-001\\DF2-DS001-20260801-08c94fe3\\manifest.json",
+      "raw_checksum": "e283e0c0f9264aa8f12e5a8bd9e805b428df03560f9cee8e48b3fb2ab2e4726d",
+      "version_id": "DF2-DS001-20260801-08c94fe3"
+    },
+    {
+      "checksum": "35e90076c2fecfbbd4059da9511c7c2fca8e1a1e20576e16029853a64551c3c9",
+      "dataset_id": "DS-003",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-003\\DF2-DS003-20260801-35e90076\\manifest.json",
+      "raw_checksum": "142cf0266fbba78293014c9fb61c753c0f8ab88dc71207d94ae76f2f6ee26eb1",
+      "version_id": "DF2-DS003-20260801-35e90076"
+    },
+    {
+      "checksum": "d7565c08f19f2561e5543df609fe4b5115e4f10a1736fceb1e491c0c904319ff",
+      "dataset_id": "DS-007",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-007\\DF2-DS007-20260801-d7565c08\\manifest.json",
+      "raw_checksum": "4f1041d8876fbc291ee374724b54e91b29b7cf714ca1c9d559637b91509540bc",
+      "version_id": "DF2-DS007-20260801-d7565c08"
+    },
+    {
+      "checksum": "3d99595ebb4b562054df70205d3ee8206dec7fb96ebe3ae52fca76e26a3f73ac",
+      "dataset_id": "DS-008",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-008\\DF2-DS008-20260801-3d99595e\\manifest.json",
+      "raw_checksum": "4f1041d8876fbc291ee374724b54e91b29b7cf714ca1c9d559637b91509540bc",
+      "version_id": "DF2-DS008-20260801-3d99595e"
+    },
+    {
+      "checksum": "90146ca401f0849b98789908d91b054630def92353350e2ee1e448ff54e41371",
+      "dataset_id": "DS-009",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-009\\DF2-DS009-20260728-90146ca4\\manifest.json",
+      "raw_checksum": "e6feab5e5e0d083b23850af3b7094fece4952a0c8afd41ff82fe59e67a0707c6",
+      "version_id": "DF2-DS009-20260728-90146ca4"
+    },
+    {
+      "checksum": "f26c40e9ef0e2d7870efe267e410f3307246c270b0d778840e232867b93b88c0",
+      "dataset_id": "DS-010",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-010\\DF2-DS010-20260728-f26c40e9\\manifest.json",
+      "raw_checksum": "e6feab5e5e0d083b23850af3b7094fece4952a0c8afd41ff82fe59e67a0707c6",
+      "version_id": "DF2-DS010-20260728-f26c40e9"
+    },
+    {
+      "checksum": "2682d6218c9027fcf477e3ed60f9b3fa1a43d2af1faf7633dc8161ae8873abb5",
+      "dataset_id": "DS-011",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-011\\DF2-DS011-20260801-2682d621\\manifest.json",
+      "raw_checksum": "604ba7203d5d339d45693db8b28d0a5af701ed4dc1f5b17dc5735ca53f06f550",
+      "version_id": "DF2-DS011-20260801-2682d621"
+    },
+    {
+      "checksum": "da2dc1c4e35034b84d10da04dacf8a51408b41077cc147706bb4eca11d901f0b",
+      "dataset_id": "DS-012",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-012\\DF2-DS012-20260801-da2dc1c4\\manifest.json",
+      "raw_checksum": "0bfbfe28e4e82a7d8811302ac76588ec42bfe1b6fd8df122c3f2b84b27f51127",
+      "version_id": "DF2-DS012-20260801-da2dc1c4"
+    },
+    {
+      "checksum": "0567cd202d0941a1dc5fe712823ef3f3dceea8c4d703928f1210d237996a8635",
+      "dataset_id": "DS-014",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-014\\DF2-DS014-20260731-0567cd20\\manifest.json",
+      "raw_checksum": "c6e831ad1ff336938cd7732e1fff98cb06b8011d4824baffda4aecc1e5445027",
+      "version_id": "DF2-DS014-20260731-0567cd20"
+    },
+    {
+      "checksum": "e6e80fabe45edf55f5e43349cbfe23a446d94115244a47f286b5de45dae4be98",
+      "dataset_id": "DS-017",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-017\\DF2-DS017-20260731-e6e80fab\\manifest.json",
+      "raw_checksum": "952612b3efb7343b2ef78b948d329df5098d727aa610c310d93649384e3a6153",
+      "version_id": "DF2-DS017-20260731-e6e80fab"
+    },
+    {
+      "checksum": "a87bcbe79e6f57e99e1c5a7f0e6d91fc33d9c7888a70c7facafc4426df2ec2fd",
+      "dataset_id": "DS-018",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-018\\DF2-DS018-20260801-a87bcbe7\\manifest.json",
+      "raw_checksum": "bfaeaa2d2eca173236ae8f6444f65fcb4d0afb70b912c98c1db79ab1a42da4b5",
+      "version_id": "DF2-DS018-20260801-a87bcbe7"
+    },
+    {
+      "checksum": "746a952a35936e4d4dcb3ee8d82782a2fb5ecece78a3b4934186d000d6735db0",
+      "dataset_id": "DS-019",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-019\\DF2-DS019-20260801-746a952a\\manifest.json",
+      "raw_checksum": "bfaeaa2d2eca173236ae8f6444f65fcb4d0afb70b912c98c1db79ab1a42da4b5",
+      "version_id": "DF2-DS019-20260801-746a952a"
+    },
+    {
+      "checksum": "fdeae205e6cf2958a27b05944908c0e28c730db5c185c5486e099d5896b83363",
+      "dataset_id": "DS-PUB-021",
+      "manifest_path": "data\\data-foundation-v2\\datasets\\DS-PUB-021\\DF2-DSPUB021-20260801-fdeae205\\manifest.json",
+      "raw_checksum": "fdeae205e6cf2958a27b05944908c0e28c730db5c185c5486e099d5896b83363",
+      "version_id": "DF2-DSPUB021-20260801-fdeae205"
+    }
+  ],
+  "market_state_registry": [
+    {
+      "dataset_ids": [],
+      "domain": "Macro",
+      "status": "UNMAPPED",
+      "variable": "cpi_yoy"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Macro",
+      "status": "UNMAPPED",
+      "variable": "pce_yoy"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Macro",
+      "status": "UNMAPPED",
+      "variable": "nfp_surprise"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Macro",
+      "status": "UNMAPPED",
+      "variable": "gdp_qoq"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Macro",
+      "status": "UNMAPPED",
+      "variable": "unemployment_rate"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Macro",
+      "status": "UNMAPPED",
+      "variable": "economic_surprise_index"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Macro",
+      "status": "UNMAPPED",
+      "variable": "ism_manufacturing"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Macro",
+      "status": "UNMAPPED",
+      "variable": "consumer_confidence"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Rates",
+      "status": "UNMAPPED",
+      "variable": "us_2y_yield"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Rates",
+      "status": "UNMAPPED",
+      "variable": "us_10y_yield"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Rates",
+      "status": "UNMAPPED",
+      "variable": "tips_10y_real_yield"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Rates",
+      "status": "UNMAPPED",
+      "variable": "breakeven_inflation_5y"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Rates",
+      "status": "UNMAPPED",
+      "variable": "breakeven_inflation_10y"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Rates",
+      "status": "UNMAPPED",
+      "variable": "fed_funds_futures_implied_rate"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Rates",
+      "status": "UNMAPPED",
+      "variable": "sofr_futures_front"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Rates",
+      "status": "UNMAPPED",
+      "variable": "dot_plot_median"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "FX",
+      "status": "UNMAPPED",
+      "variable": "dxy_index"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "FX",
+      "status": "UNMAPPED",
+      "variable": "eur_usd"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "FX",
+      "status": "UNMAPPED",
+      "variable": "usd_jpy"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "FX",
+      "status": "UNMAPPED",
+      "variable": "usd_chf"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "FX",
+      "status": "UNMAPPED",
+      "variable": "usd_cny"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "FX",
+      "status": "UNMAPPED",
+      "variable": "dxy_momentum"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "FX",
+      "status": "UNMAPPED",
+      "variable": "dxy_regime"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Gold",
+      "status": "UNMAPPED",
+      "variable": "xau_usd_spot"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Gold",
+      "status": "UNMAPPED",
+      "variable": "xau_usd_1m_future"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Gold",
+      "status": "UNMAPPED",
+      "variable": "xau_usd_3m_future"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Gold",
+      "status": "UNMAPPED",
+      "variable": "gold_lease_rate_1m"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Gold",
+      "status": "UNMAPPED",
+      "variable": "lbma_am_fix"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Gold",
+      "status": "UNMAPPED",
+      "variable": "lbma_pm_fix"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Gold",
+      "status": "UNMAPPED",
+      "variable": "gold_open_interest_comex"
+    },
+    {
+      "dataset_ids": [
+        "DS-001"
+      ],
+      "domain": "Volatility",
+      "status": "OBSERVED",
+      "variable": "vix"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Volatility",
+      "status": "UNMAPPED",
+      "variable": "gvz"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Volatility",
+      "status": "UNMAPPED",
+      "variable": "move_index"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Volatility",
+      "status": "UNMAPPED",
+      "variable": "vxn"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Volatility",
+      "status": "UNMAPPED",
+      "variable": "realized_vol_xau_20d"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Volatility",
+      "status": "UNMAPPED",
+      "variable": "realized_vol_xau_5d"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Volatility",
+      "status": "UNMAPPED",
+      "variable": "vol_regime_indicator"
+    },
+    {
+      "dataset_ids": [
+        "DS-003"
+      ],
+      "domain": "Credit",
+      "status": "OBSERVED",
+      "variable": "ted_spread"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Credit",
+      "status": "UNMAPPED",
+      "variable": "fra_ois_spread"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Credit",
+      "status": "UNMAPPED",
+      "variable": "hy_credit_spread"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Credit",
+      "status": "UNMAPPED",
+      "variable": "ig_credit_spread"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Credit",
+      "status": "UNMAPPED",
+      "variable": "libor_ois_spread"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Liquidity",
+      "status": "UNMAPPED",
+      "variable": "fed_balance_sheet"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Liquidity",
+      "status": "UNMAPPED",
+      "variable": "m2_growth"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Liquidity",
+      "status": "UNMAPPED",
+      "variable": "repo_rate"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Liquidity",
+      "status": "UNMAPPED",
+      "variable": "sofr_rate"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Liquidity",
+      "status": "UNMAPPED",
+      "variable": "excess_reserves"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Liquidity",
+      "status": "UNMAPPED",
+      "variable": "bank_reserve_requirement"
+    },
+    {
+      "dataset_ids": [
+        "DS-007"
+      ],
+      "domain": "Flows",
+      "status": "OBSERVED",
+      "variable": "gld_shares_outstanding"
+    },
+    {
+      "dataset_ids": [
+        "DS-008"
+      ],
+      "domain": "Flows",
+      "status": "OBSERVED",
+      "variable": "iau_shares_outstanding"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Flows",
+      "status": "UNMAPPED",
+      "variable": "etf_creation_redemption_net"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Flows",
+      "status": "UNMAPPED",
+      "variable": "central_bank_gold_purchases_monthly"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Flows",
+      "status": "UNMAPPED",
+      "variable": "comex_warehouse_stock_change"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Positioning",
+      "status": "UNMAPPED",
+      "variable": "cot_leveraged_net"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Positioning",
+      "status": "UNMAPPED",
+      "variable": "cot_asset_manager_net"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Positioning",
+      "status": "UNMAPPED",
+      "variable": "cot_dealer_net"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Positioning",
+      "status": "UNMAPPED",
+      "variable": "cot_other_reportable_net"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Positioning",
+      "status": "UNMAPPED",
+      "variable": "comex_speculative_net_pct_oi"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Options",
+      "status": "UNMAPPED",
+      "variable": "gold_25d_risk_reversal"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Options",
+      "status": "UNMAPPED",
+      "variable": "gold_atm_implied_vol"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Options",
+      "status": "UNMAPPED",
+      "variable": "gvz_term_structure"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Options",
+      "status": "UNMAPPED",
+      "variable": "dealer_gamma_proxy"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Options",
+      "status": "UNMAPPED",
+      "variable": "put_call_ratio_gold"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Microstructure",
+      "status": "UNMAPPED",
+      "variable": "bid_ask_spread_proxy"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Microstructure",
+      "status": "UNMAPPED",
+      "variable": "volume_delta"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Microstructure",
+      "status": "UNMAPPED",
+      "variable": "vwap_deviation"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Microstructure",
+      "status": "UNMAPPED",
+      "variable": "trade_aggressor_ratio"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Microstructure",
+      "status": "UNMAPPED",
+      "variable": "intraday_vol_clustering"
+    },
+    {
+      "dataset_ids": [
+        "DS-017"
+      ],
+      "domain": "Geopolitics_Sentiment",
+      "status": "OBSERVED",
+      "variable": "geopolitical_risk_index"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Geopolitics_Sentiment",
+      "status": "UNMAPPED",
+      "variable": "news_macro_event_score"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Geopolitics_Sentiment",
+      "status": "UNMAPPED",
+      "variable": "us_political_uncertainty_index"
+    },
+    {
+      "dataset_ids": [],
+      "domain": "Geopolitics_Sentiment",
+      "status": "UNMAPPED",
+      "variable": "global_uncertainty_index"
+    }
+  ],
+  "no_alpha_validation": true,
+  "no_broker_connectivity": true,
+  "no_runtime_changes": true,
+  "observation_registry": [
+    {
+      "family_id": "FAM-004",
+      "mechanism_type": "cross_asset_transition",
+      "newly_observed_variables": [],
+      "observed_after": 3,
+      "observed_before": 3,
+      "proxy_dependence_after": 1,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "real_yield_tip",
+        "cross_asset_topology_weight"
+      ],
+      "required_count": 5,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-001",
+      "mechanism_type": "macro_repricing",
+      "newly_observed_variables": [],
+      "observed_after": 3,
+      "observed_before": 3,
+      "proxy_dependence_after": 1,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "cpi_surprise",
+        "fomc_rate_path",
+        "fed_funds_futures"
+      ],
+      "required_count": 6,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-002",
+      "mechanism_type": "liquidity_withdrawal",
+      "newly_observed_variables": [
+        "vix",
+        "ted_spread"
+      ],
+      "observed_after": 3,
+      "observed_before": 1,
+      "proxy_dependence_after": 0,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "bid_ask_spread_proxy",
+        "fra_ois",
+        "market_depth"
+      ],
+      "required_count": 6,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-002",
+      "mechanism_type": "dealer_inventory",
+      "newly_observed_variables": [
+        "comex_positioning",
+        "cot_dealers",
+        "vol_surface"
+      ],
+      "observed_after": 4,
+      "observed_before": 1,
+      "proxy_dependence_after": 0,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "gold_lease_rate"
+      ],
+      "required_count": 5,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-005",
+      "mechanism_type": "expectation_reset",
+      "newly_observed_variables": [
+        "breakeven_inflation"
+      ],
+      "observed_after": 1,
+      "observed_before": 0,
+      "proxy_dependence_after": 0,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "fed_funds_futures",
+        "sofr_futures",
+        "fomc_meeting_prob",
+        "economic_surprise_index"
+      ],
+      "required_count": 5,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-003",
+      "mechanism_type": "safe_haven_migration",
+      "newly_observed_variables": [
+        "vix",
+        "ted_spread",
+        "gld_etf_flows",
+        "iau_etf_flows",
+        "geopolitical_risk_index"
+      ],
+      "observed_after": 7,
+      "observed_before": 2,
+      "proxy_dependence_after": 0,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "us_treasury_flows"
+      ],
+      "required_count": 8,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-004",
+      "mechanism_type": "etf_flow_propagation",
+      "newly_observed_variables": [
+        "gld_shares_outstanding",
+        "iau_shares_outstanding"
+      ],
+      "observed_after": 2,
+      "observed_before": 0,
+      "proxy_dependence_after": 0,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "etf_nav_premium",
+        "etf_creation_redemption"
+      ],
+      "required_count": 4,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-005",
+      "mechanism_type": "policy_repricing",
+      "newly_observed_variables": [],
+      "observed_after": 0,
+      "observed_before": 0,
+      "proxy_dependence_after": 1,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "fomc_statement_embedding",
+        "fed_funds_futures",
+        "sofr_futures",
+        "dot_plot_surprise",
+        "cpi_actuals"
+      ],
+      "required_count": 5,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-006",
+      "mechanism_type": "decision_cascade",
+      "newly_observed_variables": [
+        "dealer_gamma"
+      ],
+      "observed_after": 1,
+      "observed_before": 0,
+      "proxy_dependence_after": 0,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "order_flow_imbalance",
+        "volume_delta",
+        "trade_aggressor_ratio",
+        "intraday_vol_clustering"
+      ],
+      "required_count": 5,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-004",
+      "mechanism_type": "information_cascade",
+      "newly_observed_variables": [],
+      "observed_after": 1,
+      "observed_before": 1,
+      "proxy_dependence_after": 1,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "news_embedding_velocity",
+        "macro_event_embedding",
+        "directed_edge_weight"
+      ],
+      "required_count": 4,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-007",
+      "mechanism_type": "adaptive_ecology_shift",
+      "newly_observed_variables": [
+        "cot_participant_mix",
+        "dealer_net_position_change",
+        "institutional_flow_direction"
+      ],
+      "observed_after": 3,
+      "observed_before": 0,
+      "proxy_dependence_after": 0,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "etf_vs_futures_ratio"
+      ],
+      "required_count": 4,
+      "still_blocked": true
+    },
+    {
+      "family_id": "FAM-007",
+      "mechanism_type": "regime_transition_chain",
+      "newly_observed_variables": [],
+      "observed_after": 1,
+      "observed_before": 1,
+      "proxy_dependence_after": 1,
+      "proxy_dependence_before": 1,
+      "remaining_unavailable": [
+        "macro_regime_indicator",
+        "vol_regime_indicator",
+        "liquidity_regime_indicator",
+        "flow_regime_indicator",
+        "cross_asset_stress_composite"
+      ],
+      "required_count": 5,
+      "still_blocked": true
+    }
+  ],
+  "phase": "DATA_FOUNDATION_V2_PHASE_1",
+  "provider_library": [
+    {
+      "checksum_enabled": true,
+      "deterministic": true,
+      "historical_only": true,
+      "provider": "AcademicProvider",
+      "requires_api_key": false,
+      "retry_attempts": 3,
+      "supported_source_kinds": [
+        "public_file"
+      ]
+    },
+    {
+      "checksum_enabled": true,
+      "deterministic": true,
+      "historical_only": true,
+      "provider": "CBOEProvider",
+      "requires_api_key": false,
+      "retry_attempts": 3,
+      "supported_source_kinds": [
+        "public_file"
+      ]
+    },
+    {
+      "checksum_enabled": true,
+      "deterministic": true,
+      "historical_only": true,
+      "provider": "CFTCProvider",
+      "requires_api_key": false,
+      "retry_attempts": 3,
+      "supported_source_kinds": [
+        "public_api"
+      ]
+    },
+    {
+      "checksum_enabled": true,
+      "deterministic": true,
+      "historical_only": true,
+      "provider": "DerivedPolicyProvider",
+      "requires_api_key": false,
+      "retry_attempts": 3,
+      "supported_source_kinds": [
+        "derived"
+      ]
+    },
+    {
+      "checksum_enabled": true,
+      "deterministic": true,
+      "historical_only": true,
+      "provider": "ETFHoldingsProvider",
+      "requires_api_key": false,
+      "retry_attempts": 3,
+      "supported_source_kinds": [
+        "public_file"
+      ]
+    },
+    {
+      "checksum_enabled": true,
+      "deterministic": true,
+      "historical_only": true,
+      "provider": "FREDProvider",
+      "requires_api_key": false,
+      "retry_attempts": 3,
+      "supported_source_kinds": [
+        "public_api"
+      ]
+    },
+    {
+      "checksum_enabled": true,
+      "deterministic": true,
+      "historical_only": true,
+      "provider": "WGCProvider",
+      "requires_api_key": false,
+      "retry_attempts": 3,
+      "supported_source_kinds": [
+        "public_file"
+      ]
+    }
+  ],
+  "proxy_dependence_reduction": 7,
+  "quality_registry": [
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9592,
+      "coverage": 1.0,
+      "dataset_id": "DS-001",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "freshness": 0.9,
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-27T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9833
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9592,
+      "coverage": 1.0,
+      "dataset_id": "DS-003",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "freshness": 0.9,
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-27T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9833
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9592,
+      "coverage": 1.0,
+      "dataset_id": "DS-007",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "freshness": 0.9,
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-27T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9833
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9592,
+      "coverage": 1.0,
+      "dataset_id": "DS-008",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "freshness": 0.9,
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-27T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9833
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9502,
+      "coverage": 1.0,
+      "dataset_id": "DS-009",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-07-28T00:00:00Z",
+      "freshness": 0.8571,
+      "missing_rate": 0.0,
+      "record_count": 4,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-07T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9762
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9502,
+      "coverage": 1.0,
+      "dataset_id": "DS-010",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-07-28T00:00:00Z",
+      "freshness": 0.8571,
+      "missing_rate": 0.0,
+      "record_count": 4,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-07T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9762
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9592,
+      "coverage": 1.0,
+      "dataset_id": "DS-011",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "freshness": 0.9,
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-27T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9833
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9592,
+      "coverage": 1.0,
+      "dataset_id": "DS-012",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "freshness": 0.9,
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-27T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9833
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9765,
+      "coverage": 1.0,
+      "dataset_id": "DS-014",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-07-31T00:00:00Z",
+      "freshness": 0.9833,
+      "missing_rate": 0.0,
+      "record_count": 4,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-04-30T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9972
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9765,
+      "coverage": 1.0,
+      "dataset_id": "DS-017",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-07-31T00:00:00Z",
+      "freshness": 0.9833,
+      "missing_rate": 0.0,
+      "record_count": 4,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-04-30T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9972
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9592,
+      "coverage": 1.0,
+      "dataset_id": "DS-018",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "freshness": 0.9,
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-27T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9833
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9592,
+      "coverage": 1.0,
+      "dataset_id": "DS-019",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "freshness": 0.9,
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-27T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9833
+    },
+    {
+      "completeness": 1.0,
+      "confidence_score": 0.9592,
+      "coverage": 1.0,
+      "dataset_id": "DS-PUB-021",
+      "duplicate_rate": 0.0,
+      "end_timestamp": "2026-08-01T00:00:00Z",
+      "freshness": 0.9,
+      "missing_rate": 0.0,
+      "record_count": 6,
+      "schema_conformity": 1.0,
+      "start_timestamp": "2026-07-27T00:00:00Z",
+      "timestamp_consistency": 1.0,
+      "validation_score": 0.9833
+    }
+  ],
+  "ready_mechanisms_after_tier1": [],
+  "remaining_blocked_families": [
+    "FAM-001",
+    "FAM-002",
+    "FAM-003",
+    "FAM-004",
+    "FAM-005",
+    "FAM-006",
+    "FAM-007"
+  ],
+  "remaining_commercial_only_gaps": [
+    "DS-002",
+    "DS-004",
+    "DS-005",
+    "DS-006",
+    "DS-013",
+    "DS-015",
+    "DS-016",
+    "DS-020"
+  ],
+  "report_paths": {
+    "arb_recommendation": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\ARB_RECOMMENDATION_DATA_FOUNDATION_V2_PHASE1.md",
+    "coverage_dashboard": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\COVERAGE_DASHBOARD.md",
+    "dataset_registry": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\DATASET_REGISTRY.md",
+    "json_schema_library": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\JSON_SCHEMA_LIBRARY.md",
+    "manifest_catalogue": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\MANIFEST_CATALOGUE.md",
+    "market_state_registry": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\MARKET_STATE_REGISTRY.md",
+    "metadata_catalogue": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\METADATA_CATALOGUE.md",
+    "observability_improvement_report": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\OBSERVABILITY_IMPROVEMENT_REPORT.md",
+    "provider_library": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\PROVIDER_LIBRARY.md",
+    "quality_dashboard": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\QUALITY_DASHBOARD.md"
+  },
+  "schema_paths": {
+    "coverage-registry-entry.schema.json": "schemas\\data-foundation-v2\\coverage-registry-entry.schema.json",
+    "dataset-manifest.schema.json": "schemas\\data-foundation-v2\\dataset-manifest.schema.json",
+    "dataset-quality.schema.json": "schemas\\data-foundation-v2\\dataset-quality.schema.json",
+    "dataset-registry-entry.schema.json": "schemas\\data-foundation-v2\\dataset-registry-entry.schema.json",
+    "dataset-spec.schema.json": "schemas\\data-foundation-v2\\dataset-spec.schema.json",
+    "market-state-registry-entry.schema.json": "schemas\\data-foundation-v2\\market-state-registry-entry.schema.json",
+    "provider-library-entry.schema.json": "schemas\\data-foundation-v2\\provider-library-entry.schema.json"
+  },
+  "supported_datasets": [
+    "DS-001",
+    "DS-003",
+    "DS-012",
+    "DS-018",
+    "DS-019",
+    "DS-007",
+    "DS-008",
+    "DS-009",
+    "DS-010",
+    "DS-011",
+    "DS-014",
+    "DS-017",
+    "DS-PUB-021"
+  ]
+}

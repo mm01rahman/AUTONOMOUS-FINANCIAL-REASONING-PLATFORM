@@ -1,0 +1,32 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0022",
+  "graph_edges_created": 93,
+  "graph_nodes_created": 45,
+  "n_causal_graph_edges": 210,
+  "n_early_warning_indicators": 15,
+  "n_state_edges": 30,
+  "n_transitions": 30,
+  "phase": "DC2_PROGRAM_C_PHASE1",
+  "reports": {
+    "early_warning_indicator_catalogue": "11-research\\discovery-cycle-2\\research-program-c-phase1\\EARLY_WARNING_INDICATOR_CATALOGUE.md",
+    "early_warning_indicator_catalogue_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\early_warning_indicator_catalogue.json",
+    "institutional_transition_atlas": "11-research\\discovery-cycle-2\\research-program-c-phase1\\INSTITUTIONAL_TRANSITION_ATLAS.md",
+    "integrated_causal_flow_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\integrated_causal_flow.json",
+    "integrated_market_transition_report": "11-research\\discovery-cycle-2\\research-program-c-phase1\\INTEGRATED_MARKET_TRANSITION_REPORT.md",
+    "research_recommendations": "11-research\\discovery-cycle-2\\research-program-c-phase1\\RESEARCH_RECOMMENDATIONS.md",
+    "research_recommendations_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\research_recommendations.json",
+    "transition_causal_graph": "11-research\\discovery-cycle-2\\research-program-c-phase1\\TRANSITION_CAUSAL_GRAPH.md",
+    "transition_causal_graph_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\transition_causal_graph.json",
+    "transition_confidence_model_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\transition_confidence_model.json",
+    "transition_confidence_report": "11-research\\discovery-cycle-2\\research-program-c-phase1\\TRANSITION_CONFIDENCE_REPORT.md",
+    "transition_dependency_graph_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\transition_dependency_graph.json",
+    "transition_engine_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\transition_engine.json",
+    "transition_engine_specification": "11-research\\discovery-cycle-2\\research-program-c-phase1\\TRANSITION_ENGINE_SPECIFICATION.md",
+    "transition_failure_catalogue_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\transition_failure_catalogue.json",
+    "transition_state_machine_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\transition_state_machine.json",
+    "transition_timeline_catalogue": "11-research\\discovery-cycle-2\\research-program-c-phase1\\TRANSITION_TIMELINE_CATALOGUE.md",
+    "transition_timeline_library_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\transition_timeline_library.json",
+    "transition_trigger_registry": "11-research\\discovery-cycle-2\\research-program-c-phase1\\TRANSITION_TRIGGER_REGISTRY.md",
+    "transition_trigger_registry_json": "11-research\\discovery-cycle-2\\research-program-c-phase1\\transition_trigger_registry.json"
+  }
+}

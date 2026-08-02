@@ -1,0 +1,48 @@
+{
+  "cadence": "daily",
+  "checksum_sha256": "3d99595ebb4b562054df70205d3ee8206dec7fb96ebe3ae52fca76e26a3f73ac",
+  "covered_variables": [
+    "iau_shares_outstanding",
+    "iau_etf_flows"
+  ],
+  "dataset_id": "DS-008",
+  "dataset_name": "IAU ETF Shares Outstanding",
+  "generated_at": "2026-08-02T00:00:00Z",
+  "provenance": {
+    "fixture_or_remote": "fixture",
+    "retrieved_at": "2026-08-02T00:00:00Z",
+    "source_kind": "public_file",
+    "timezone": "UTC"
+  },
+  "provider": "ETFHoldingsProvider",
+  "quality": {
+    "completeness": 1.0,
+    "confidence_score": 0.9592,
+    "coverage": 1.0,
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "freshness": 0.9,
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "schema_conformity": 1.0,
+    "start_timestamp": "2026-07-27T00:00:00Z",
+    "timestamp_consistency": 1.0,
+    "validation_score": 0.9833
+  },
+  "raw_checksum_sha256": "4f1041d8876fbc291ee374724b54e91b29b7cf714ca1c9d559637b91509540bc",
+  "row_count": 6,
+  "source": "iShares",
+  "source_url": "https://www.ishares.com/data/iau-holdings.csv",
+  "storage_path": "data\\data-foundation-v2\\datasets\\DS-008\\DF2-DS008-20260801-3d99595e\\data.csv",
+  "supported_families": [
+    "FAM-003",
+    "FAM-004"
+  ],
+  "supported_mechanisms": [
+    "safe_haven_migration",
+    "etf_flow_propagation"
+  ],
+  "timezone": "UTC",
+  "version_id": "DF2-DS008-20260801-3d99595e",
+  "work_package": "DF2-WP-002"
+}

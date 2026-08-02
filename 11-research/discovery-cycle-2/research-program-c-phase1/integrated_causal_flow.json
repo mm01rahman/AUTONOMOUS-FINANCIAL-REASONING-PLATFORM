@@ -1,0 +1,302 @@
+[
+  {
+    "confidence": 0.7077,
+    "flow_chain": [
+      "yield_10y_change_5",
+      "dealers",
+      "macro_hedge_funds",
+      "Bear Unwind"
+    ],
+    "transition_id": "calm_carry__to__bear_unwind"
+  },
+  {
+    "confidence": 0.7077,
+    "flow_chain": [
+      "yield_curve_10y_3m",
+      "commercial_hedgers",
+      "market_makers",
+      "Calm Carry"
+    ],
+    "transition_id": "bear_unwind__to__calm_carry"
+  },
+  {
+    "confidence": 0.7061,
+    "flow_chain": [
+      "yield_curve_10y_3m",
+      "commercial_hedgers",
+      "market_makers",
+      "Calm Carry"
+    ],
+    "transition_id": "range_compression__to__calm_carry"
+  },
+  {
+    "confidence": 0.7061,
+    "flow_chain": [
+      "yield_curve_10y_3m",
+      "commercial_hedgers",
+      "market_makers",
+      "Calm Carry"
+    ],
+    "transition_id": "macro_transition__to__calm_carry"
+  },
+  {
+    "confidence": 0.7061,
+    "flow_chain": [
+      "dxy_return_20",
+      "market_makers",
+      "market_makers",
+      "Range Compression"
+    ],
+    "transition_id": "calm_carry__to__range_compression"
+  },
+  {
+    "confidence": 0.7061,
+    "flow_chain": [
+      "fed_surprise",
+      "central_banks",
+      "macro_hedge_funds",
+      "Macro Transition"
+    ],
+    "transition_id": "calm_carry__to__macro_transition"
+  },
+  {
+    "confidence": 0.7061,
+    "flow_chain": [
+      "forward_expectation",
+      "macro_hedge_funds",
+      "macro_hedge_funds",
+      "Bull Trend"
+    ],
+    "transition_id": "calm_carry__to__bull_trend"
+  },
+  {
+    "confidence": 0.7061,
+    "flow_chain": [
+      "yield_curve_10y_3m",
+      "commercial_hedgers",
+      "market_makers",
+      "Calm Carry"
+    ],
+    "transition_id": "bull_trend__to__calm_carry"
+  },
+  {
+    "confidence": 0.7045,
+    "flow_chain": [
+      "yield_10y_change_5",
+      "dealers",
+      "macro_hedge_funds",
+      "Bear Unwind"
+    ],
+    "transition_id": "range_compression__to__bear_unwind"
+  },
+  {
+    "confidence": 0.7045,
+    "flow_chain": [
+      "yield_10y_change_5",
+      "dealers",
+      "macro_hedge_funds",
+      "Bear Unwind"
+    ],
+    "transition_id": "macro_transition__to__bear_unwind"
+  },
+  {
+    "confidence": 0.7045,
+    "flow_chain": [
+      "yield_10y_change_5",
+      "dealers",
+      "macro_hedge_funds",
+      "Bear Unwind"
+    ],
+    "transition_id": "bull_trend__to__bear_unwind"
+  },
+  {
+    "confidence": 0.7045,
+    "flow_chain": [
+      "dxy_return_20",
+      "market_makers",
+      "market_makers",
+      "Range Compression"
+    ],
+    "transition_id": "bear_unwind__to__range_compression"
+  },
+  {
+    "confidence": 0.7045,
+    "flow_chain": [
+      "fed_surprise",
+      "central_banks",
+      "macro_hedge_funds",
+      "Macro Transition"
+    ],
+    "transition_id": "bear_unwind__to__macro_transition"
+  },
+  {
+    "confidence": 0.7045,
+    "flow_chain": [
+      "forward_expectation",
+      "macro_hedge_funds",
+      "macro_hedge_funds",
+      "Bull Trend"
+    ],
+    "transition_id": "bear_unwind__to__bull_trend"
+  },
+  {
+    "confidence": 0.7029,
+    "flow_chain": [
+      "fed_surprise",
+      "central_banks",
+      "macro_hedge_funds",
+      "Macro Transition"
+    ],
+    "transition_id": "range_compression__to__macro_transition"
+  },
+  {
+    "confidence": 0.7029,
+    "flow_chain": [
+      "forward_expectation",
+      "macro_hedge_funds",
+      "macro_hedge_funds",
+      "Bull Trend"
+    ],
+    "transition_id": "range_compression__to__bull_trend"
+  },
+  {
+    "confidence": 0.7029,
+    "flow_chain": [
+      "dxy_return_20",
+      "market_makers",
+      "market_makers",
+      "Range Compression"
+    ],
+    "transition_id": "macro_transition__to__range_compression"
+  },
+  {
+    "confidence": 0.7029,
+    "flow_chain": [
+      "forward_expectation",
+      "macro_hedge_funds",
+      "macro_hedge_funds",
+      "Bull Trend"
+    ],
+    "transition_id": "macro_transition__to__bull_trend"
+  },
+  {
+    "confidence": 0.7029,
+    "flow_chain": [
+      "yield_curve_10y_3m",
+      "commercial_hedgers",
+      "market_makers",
+      "Calm Carry"
+    ],
+    "transition_id": "crisis_dislocation__to__calm_carry"
+  },
+  {
+    "confidence": 0.7029,
+    "flow_chain": [
+      "geo_severity",
+      "safe_haven_capital_flows",
+      "market_makers",
+      "Crisis Dislocation"
+    ],
+    "transition_id": "calm_carry__to__crisis_dislocation"
+  },
+  {
+    "confidence": 0.7029,
+    "flow_chain": [
+      "dxy_return_20",
+      "market_makers",
+      "market_makers",
+      "Range Compression"
+    ],
+    "transition_id": "bull_trend__to__range_compression"
+  },
+  {
+    "confidence": 0.7029,
+    "flow_chain": [
+      "fed_surprise",
+      "central_banks",
+      "macro_hedge_funds",
+      "Macro Transition"
+    ],
+    "transition_id": "bull_trend__to__macro_transition"
+  },
+  {
+    "confidence": 0.7013,
+    "flow_chain": [
+      "yield_10y_change_5",
+      "dealers",
+      "macro_hedge_funds",
+      "Bear Unwind"
+    ],
+    "transition_id": "crisis_dislocation__to__bear_unwind"
+  },
+  {
+    "confidence": 0.7013,
+    "flow_chain": [
+      "geo_severity",
+      "safe_haven_capital_flows",
+      "market_makers",
+      "Crisis Dislocation"
+    ],
+    "transition_id": "bear_unwind__to__crisis_dislocation"
+  },
+  {
+    "confidence": 0.6997,
+    "flow_chain": [
+      "geo_severity",
+      "safe_haven_capital_flows",
+      "market_makers",
+      "Crisis Dislocation"
+    ],
+    "transition_id": "range_compression__to__crisis_dislocation"
+  },
+  {
+    "confidence": 0.6997,
+    "flow_chain": [
+      "geo_severity",
+      "safe_haven_capital_flows",
+      "market_makers",
+      "Crisis Dislocation"
+    ],
+    "transition_id": "macro_transition__to__crisis_dislocation"
+  },
+  {
+    "confidence": 0.6997,
+    "flow_chain": [
+      "dxy_return_20",
+      "market_makers",
+      "market_makers",
+      "Range Compression"
+    ],
+    "transition_id": "crisis_dislocation__to__range_compression"
+  },
+  {
+    "confidence": 0.6997,
+    "flow_chain": [
+      "fed_surprise",
+      "central_banks",
+      "macro_hedge_funds",
+      "Macro Transition"
+    ],
+    "transition_id": "crisis_dislocation__to__macro_transition"
+  },
+  {
+    "confidence": 0.6997,
+    "flow_chain": [
+      "forward_expectation",
+      "macro_hedge_funds",
+      "macro_hedge_funds",
+      "Bull Trend"
+    ],
+    "transition_id": "crisis_dislocation__to__bull_trend"
+  },
+  {
+    "confidence": 0.6997,
+    "flow_chain": [
+      "geo_severity",
+      "safe_haven_capital_flows",
+      "market_makers",
+      "Crisis Dislocation"
+    ],
+    "transition_id": "bull_trend__to__crisis_dislocation"
+  }
+]

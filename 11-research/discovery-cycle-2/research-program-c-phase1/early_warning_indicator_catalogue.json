@@ -1,0 +1,191 @@
+[
+  {
+    "indicator": "yield_curve_10y_3m",
+    "mean_confidence": 0.7045,
+    "transition_count": 10,
+    "transitions": [
+      "bear_unwind__to__calm_carry",
+      "range_compression__to__calm_carry",
+      "macro_transition__to__calm_carry",
+      "calm_carry__to__range_compression",
+      "bull_trend__to__calm_carry",
+      "bear_unwind__to__range_compression",
+      "macro_transition__to__range_compression",
+      "crisis_dislocation__to__calm_carry"
+    ]
+  },
+  {
+    "indicator": "dxy_return_20",
+    "mean_confidence": 0.7032,
+    "transition_count": 10,
+    "transitions": [
+      "calm_carry__to__range_compression",
+      "calm_carry__to__bull_trend",
+      "bear_unwind__to__range_compression",
+      "bear_unwind__to__bull_trend",
+      "range_compression__to__bull_trend",
+      "macro_transition__to__range_compression",
+      "macro_transition__to__bull_trend",
+      "bull_trend__to__range_compression"
+    ]
+  },
+  {
+    "indicator": "macro_pressure",
+    "mean_confidence": 0.7019,
+    "transition_count": 10,
+    "transitions": [
+      "calm_carry__to__macro_transition",
+      "bear_unwind__to__macro_transition",
+      "range_compression__to__macro_transition",
+      "calm_carry__to__crisis_dislocation",
+      "bull_trend__to__macro_transition",
+      "bear_unwind__to__crisis_dislocation",
+      "range_compression__to__crisis_dislocation",
+      "macro_transition__to__crisis_dislocation"
+    ]
+  },
+  {
+    "indicator": "yield_30y_change_20",
+    "mean_confidence": 0.7058,
+    "transition_count": 5,
+    "transitions": [
+      "bear_unwind__to__calm_carry",
+      "range_compression__to__calm_carry",
+      "macro_transition__to__calm_carry",
+      "bull_trend__to__calm_carry",
+      "crisis_dislocation__to__calm_carry"
+    ]
+  },
+  {
+    "indicator": "market_makers",
+    "mean_confidence": 0.7058,
+    "transition_count": 5,
+    "transitions": [
+      "bear_unwind__to__calm_carry",
+      "range_compression__to__calm_carry",
+      "macro_transition__to__calm_carry",
+      "bull_trend__to__calm_carry",
+      "crisis_dislocation__to__calm_carry"
+    ]
+  },
+  {
+    "indicator": "yield_10y_change_5",
+    "mean_confidence": 0.7045,
+    "transition_count": 5,
+    "transitions": [
+      "calm_carry__to__bear_unwind",
+      "range_compression__to__bear_unwind",
+      "macro_transition__to__bear_unwind",
+      "bull_trend__to__bear_unwind",
+      "crisis_dislocation__to__bear_unwind"
+    ]
+  },
+  {
+    "indicator": "dxy_return_1",
+    "mean_confidence": 0.7045,
+    "transition_count": 5,
+    "transitions": [
+      "calm_carry__to__bear_unwind",
+      "range_compression__to__bear_unwind",
+      "macro_transition__to__bear_unwind",
+      "bull_trend__to__bear_unwind",
+      "crisis_dislocation__to__bear_unwind"
+    ]
+  },
+  {
+    "indicator": "dealers",
+    "mean_confidence": 0.7045,
+    "transition_count": 5,
+    "transitions": [
+      "calm_carry__to__bear_unwind",
+      "range_compression__to__bear_unwind",
+      "macro_transition__to__bear_unwind",
+      "bull_trend__to__bear_unwind",
+      "crisis_dislocation__to__bear_unwind"
+    ]
+  },
+  {
+    "indicator": "bullion_banks",
+    "mean_confidence": 0.7032,
+    "transition_count": 5,
+    "transitions": [
+      "calm_carry__to__range_compression",
+      "bear_unwind__to__range_compression",
+      "macro_transition__to__range_compression",
+      "bull_trend__to__range_compression",
+      "crisis_dislocation__to__range_compression"
+    ]
+  },
+  {
+    "indicator": "fed_surprise",
+    "mean_confidence": 0.7032,
+    "transition_count": 5,
+    "transitions": [
+      "calm_carry__to__macro_transition",
+      "bear_unwind__to__macro_transition",
+      "range_compression__to__macro_transition",
+      "bull_trend__to__macro_transition",
+      "crisis_dislocation__to__macro_transition"
+    ]
+  },
+  {
+    "indicator": "central_banks",
+    "mean_confidence": 0.7032,
+    "transition_count": 5,
+    "transitions": [
+      "calm_carry__to__macro_transition",
+      "bear_unwind__to__macro_transition",
+      "range_compression__to__macro_transition",
+      "bull_trend__to__macro_transition",
+      "crisis_dislocation__to__macro_transition"
+    ]
+  },
+  {
+    "indicator": "forward_expectation",
+    "mean_confidence": 0.7032,
+    "transition_count": 5,
+    "transitions": [
+      "calm_carry__to__bull_trend",
+      "bear_unwind__to__bull_trend",
+      "range_compression__to__bull_trend",
+      "macro_transition__to__bull_trend",
+      "crisis_dislocation__to__bull_trend"
+    ]
+  },
+  {
+    "indicator": "macro_hedge_funds",
+    "mean_confidence": 0.7032,
+    "transition_count": 5,
+    "transitions": [
+      "calm_carry__to__bull_trend",
+      "bear_unwind__to__bull_trend",
+      "range_compression__to__bull_trend",
+      "macro_transition__to__bull_trend",
+      "crisis_dislocation__to__bull_trend"
+    ]
+  },
+  {
+    "indicator": "geo_severity",
+    "mean_confidence": 0.7007,
+    "transition_count": 5,
+    "transitions": [
+      "calm_carry__to__crisis_dislocation",
+      "bear_unwind__to__crisis_dislocation",
+      "range_compression__to__crisis_dislocation",
+      "macro_transition__to__crisis_dislocation",
+      "bull_trend__to__crisis_dislocation"
+    ]
+  },
+  {
+    "indicator": "safe_haven_capital_flows",
+    "mean_confidence": 0.7007,
+    "transition_count": 5,
+    "transitions": [
+      "calm_carry__to__crisis_dislocation",
+      "bear_unwind__to__crisis_dislocation",
+      "range_compression__to__crisis_dislocation",
+      "macro_transition__to__crisis_dislocation",
+      "bull_trend__to__crisis_dislocation"
+    ]
+  }
+]

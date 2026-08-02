@@ -1,0 +1,29 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0026",
+  "discovered": 12,
+  "graph_edges_created": 15,
+  "graph_nodes_created": 15,
+  "phase": "DISCOVERY_CYCLE_3_INSTITUTIONAL_ALPHA_PROGRAM",
+  "queue_size": 12,
+  "rejected": 0,
+  "reports": {
+    "alpha_competition_report": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\ALPHA_COMPETITION_REPORT.md",
+    "alpha_explainability_reports": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\ALPHA_EXPLAINABILITY_REPORTS.md",
+    "alpha_mechanism_atlas": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\ALPHA_MECHANISM_ATLAS.md",
+    "arb_recommendation": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\ARB_RECOMMENDATION.md",
+    "campaign_result": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\dc3_program_campaign_result.json",
+    "competition_json": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\dc3_alpha_competition_report.json",
+    "discovery_cycle_3_completion_report": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\DISCOVERY_CYCLE_3_COMPLETION_REPORT.md",
+    "economic_mechanism_atlas": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\ECONOMIC_MECHANISM_ATLAS.md",
+    "institutional_alpha_catalogue": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\INSTITUTIONAL_ALPHA_CATALOGUE.md",
+    "institutional_alpha_discovery_engine": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\INSTITUTIONAL_ALPHA_DISCOVERY_ENGINE.md",
+    "institutional_alpha_queue": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\INSTITUTIONAL_ALPHA_QUEUE.md",
+    "institutional_alpha_registry": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\INSTITUTIONAL_ALPHA_REGISTRY.md",
+    "institutional_alpha_roadmap": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\INSTITUTIONAL_ALPHA_ROADMAP.md",
+    "queue_json": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\dc3_institutional_alpha_queue.json",
+    "registry_json": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\dc3_institutional_alpha_registry.json",
+    "research_priority_matrix": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\RESEARCH_PRIORITY_MATRIX.md",
+    "validation_preparation_reports": "11-research\\discovery-cycle-3\\institutional-alpha-discovery-program\\VALIDATION_PREPARATION_REPORTS.md"
+  },
+  "retained": 12
+}

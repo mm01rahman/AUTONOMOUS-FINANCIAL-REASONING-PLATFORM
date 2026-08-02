@@ -1,0 +1,1114 @@
+{
+  "edges": [
+    {
+      "edge_type": "CAUSES",
+      "source": "calm_carry",
+      "target": "calm_carry__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:real_rate_shock",
+      "target": "calm_carry__to__bear_unwind"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:inventory_unwind",
+      "target": "calm_carry__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "calm_carry__to__bear_unwind",
+      "target": "bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:dealers",
+      "target": "calm_carry__to__bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "calm_carry__to__bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:commercial_hedgers",
+      "target": "calm_carry__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bear_unwind",
+      "target": "bear_unwind__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:range_stabilization",
+      "target": "bear_unwind__to__calm_carry"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:inventory_absorption",
+      "target": "bear_unwind__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bear_unwind__to__calm_carry",
+      "target": "calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:commercial_hedgers",
+      "target": "bear_unwind__to__calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "bear_unwind__to__calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "bear_unwind__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "range_compression",
+      "target": "range_compression__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:range_stabilization",
+      "target": "range_compression__to__calm_carry"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:inventory_absorption",
+      "target": "range_compression__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "range_compression__to__calm_carry",
+      "target": "calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:commercial_hedgers",
+      "target": "range_compression__to__calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "range_compression__to__calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "range_compression__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "macro_transition",
+      "target": "macro_transition__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:range_stabilization",
+      "target": "macro_transition__to__calm_carry"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:inventory_absorption",
+      "target": "macro_transition__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "macro_transition__to__calm_carry",
+      "target": "calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:commercial_hedgers",
+      "target": "macro_transition__to__calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "macro_transition__to__calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "macro_transition__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "calm_carry",
+      "target": "calm_carry__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:volatility_decay",
+      "target": "calm_carry__to__range_compression"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:liquidity_rebalancing",
+      "target": "calm_carry__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "calm_carry__to__range_compression",
+      "target": "range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "calm_carry__to__range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "calm_carry__to__range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:retail_traders",
+      "target": "calm_carry__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "calm_carry",
+      "target": "calm_carry__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:macro_repricing",
+      "target": "calm_carry__to__macro_transition"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:policy_signal_repricing",
+      "target": "calm_carry__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "calm_carry__to__macro_transition",
+      "target": "macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:central_banks",
+      "target": "calm_carry__to__macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:macro_hedge_funds",
+      "target": "calm_carry__to__macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "calm_carry__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "calm_carry",
+      "target": "calm_carry__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:trend_reinforcement",
+      "target": "calm_carry__to__bull_trend"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:trend_amplification",
+      "target": "calm_carry__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "calm_carry__to__bull_trend",
+      "target": "bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:macro_hedge_funds",
+      "target": "calm_carry__to__bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:ctas",
+      "target": "calm_carry__to__bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:etf_investors",
+      "target": "calm_carry__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bull_trend",
+      "target": "bull_trend__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:range_stabilization",
+      "target": "bull_trend__to__calm_carry"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:inventory_absorption",
+      "target": "bull_trend__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bull_trend__to__calm_carry",
+      "target": "calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:commercial_hedgers",
+      "target": "bull_trend__to__calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "bull_trend__to__calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "bull_trend__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "range_compression",
+      "target": "range_compression__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:real_rate_shock",
+      "target": "range_compression__to__bear_unwind"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:inventory_unwind",
+      "target": "range_compression__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "range_compression__to__bear_unwind",
+      "target": "bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:dealers",
+      "target": "range_compression__to__bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "range_compression__to__bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:commercial_hedgers",
+      "target": "range_compression__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "macro_transition",
+      "target": "macro_transition__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:real_rate_shock",
+      "target": "macro_transition__to__bear_unwind"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:inventory_unwind",
+      "target": "macro_transition__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "macro_transition__to__bear_unwind",
+      "target": "bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:dealers",
+      "target": "macro_transition__to__bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "macro_transition__to__bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:commercial_hedgers",
+      "target": "macro_transition__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bull_trend",
+      "target": "bull_trend__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:real_rate_shock",
+      "target": "bull_trend__to__bear_unwind"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:inventory_unwind",
+      "target": "bull_trend__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bull_trend__to__bear_unwind",
+      "target": "bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:dealers",
+      "target": "bull_trend__to__bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "bull_trend__to__bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:commercial_hedgers",
+      "target": "bull_trend__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bear_unwind",
+      "target": "bear_unwind__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:volatility_decay",
+      "target": "bear_unwind__to__range_compression"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:liquidity_rebalancing",
+      "target": "bear_unwind__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bear_unwind__to__range_compression",
+      "target": "range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "bear_unwind__to__range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "bear_unwind__to__range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:retail_traders",
+      "target": "bear_unwind__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bear_unwind",
+      "target": "bear_unwind__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:macro_repricing",
+      "target": "bear_unwind__to__macro_transition"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:policy_signal_repricing",
+      "target": "bear_unwind__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bear_unwind__to__macro_transition",
+      "target": "macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:central_banks",
+      "target": "bear_unwind__to__macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:macro_hedge_funds",
+      "target": "bear_unwind__to__macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "bear_unwind__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bear_unwind",
+      "target": "bear_unwind__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:trend_reinforcement",
+      "target": "bear_unwind__to__bull_trend"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:trend_amplification",
+      "target": "bear_unwind__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bear_unwind__to__bull_trend",
+      "target": "bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:macro_hedge_funds",
+      "target": "bear_unwind__to__bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:ctas",
+      "target": "bear_unwind__to__bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:etf_investors",
+      "target": "bear_unwind__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "range_compression",
+      "target": "range_compression__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:macro_repricing",
+      "target": "range_compression__to__macro_transition"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:policy_signal_repricing",
+      "target": "range_compression__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "range_compression__to__macro_transition",
+      "target": "macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:central_banks",
+      "target": "range_compression__to__macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:macro_hedge_funds",
+      "target": "range_compression__to__macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "range_compression__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "range_compression",
+      "target": "range_compression__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:trend_reinforcement",
+      "target": "range_compression__to__bull_trend"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:trend_amplification",
+      "target": "range_compression__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "range_compression__to__bull_trend",
+      "target": "bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:macro_hedge_funds",
+      "target": "range_compression__to__bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:ctas",
+      "target": "range_compression__to__bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:etf_investors",
+      "target": "range_compression__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "macro_transition",
+      "target": "macro_transition__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:volatility_decay",
+      "target": "macro_transition__to__range_compression"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:liquidity_rebalancing",
+      "target": "macro_transition__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "macro_transition__to__range_compression",
+      "target": "range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "macro_transition__to__range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "macro_transition__to__range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:retail_traders",
+      "target": "macro_transition__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "macro_transition",
+      "target": "macro_transition__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:trend_reinforcement",
+      "target": "macro_transition__to__bull_trend"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:trend_amplification",
+      "target": "macro_transition__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "macro_transition__to__bull_trend",
+      "target": "bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:macro_hedge_funds",
+      "target": "macro_transition__to__bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:ctas",
+      "target": "macro_transition__to__bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:etf_investors",
+      "target": "macro_transition__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "crisis_dislocation",
+      "target": "crisis_dislocation__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:range_stabilization",
+      "target": "crisis_dislocation__to__calm_carry"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:inventory_absorption",
+      "target": "crisis_dislocation__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "crisis_dislocation__to__calm_carry",
+      "target": "calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:commercial_hedgers",
+      "target": "crisis_dislocation__to__calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "crisis_dislocation__to__calm_carry"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "crisis_dislocation__to__calm_carry"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "calm_carry",
+      "target": "calm_carry__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:systemic_stress",
+      "target": "calm_carry__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:safe_haven_reallocation",
+      "target": "calm_carry__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "calm_carry__to__crisis_dislocation",
+      "target": "crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:safe_haven_capital_flows",
+      "target": "calm_carry__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:dealers",
+      "target": "calm_carry__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "calm_carry__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bull_trend",
+      "target": "bull_trend__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:volatility_decay",
+      "target": "bull_trend__to__range_compression"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:liquidity_rebalancing",
+      "target": "bull_trend__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bull_trend__to__range_compression",
+      "target": "range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "bull_trend__to__range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "bull_trend__to__range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:retail_traders",
+      "target": "bull_trend__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bull_trend",
+      "target": "bull_trend__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:macro_repricing",
+      "target": "bull_trend__to__macro_transition"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:policy_signal_repricing",
+      "target": "bull_trend__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bull_trend__to__macro_transition",
+      "target": "macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:central_banks",
+      "target": "bull_trend__to__macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:macro_hedge_funds",
+      "target": "bull_trend__to__macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "bull_trend__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "crisis_dislocation",
+      "target": "crisis_dislocation__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:real_rate_shock",
+      "target": "crisis_dislocation__to__bear_unwind"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:inventory_unwind",
+      "target": "crisis_dislocation__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "crisis_dislocation__to__bear_unwind",
+      "target": "bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:dealers",
+      "target": "crisis_dislocation__to__bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "crisis_dislocation__to__bear_unwind"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:commercial_hedgers",
+      "target": "crisis_dislocation__to__bear_unwind"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bear_unwind",
+      "target": "bear_unwind__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:systemic_stress",
+      "target": "bear_unwind__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:safe_haven_reallocation",
+      "target": "bear_unwind__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bear_unwind__to__crisis_dislocation",
+      "target": "crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:safe_haven_capital_flows",
+      "target": "bear_unwind__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:dealers",
+      "target": "bear_unwind__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "bear_unwind__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "range_compression",
+      "target": "range_compression__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:systemic_stress",
+      "target": "range_compression__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:safe_haven_reallocation",
+      "target": "range_compression__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "range_compression__to__crisis_dislocation",
+      "target": "crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:safe_haven_capital_flows",
+      "target": "range_compression__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:dealers",
+      "target": "range_compression__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "range_compression__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "macro_transition",
+      "target": "macro_transition__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:systemic_stress",
+      "target": "macro_transition__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:safe_haven_reallocation",
+      "target": "macro_transition__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "macro_transition__to__crisis_dislocation",
+      "target": "crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:safe_haven_capital_flows",
+      "target": "macro_transition__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:dealers",
+      "target": "macro_transition__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "macro_transition__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "crisis_dislocation",
+      "target": "crisis_dislocation__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:volatility_decay",
+      "target": "crisis_dislocation__to__range_compression"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:liquidity_rebalancing",
+      "target": "crisis_dislocation__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "crisis_dislocation__to__range_compression",
+      "target": "range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "crisis_dislocation__to__range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "crisis_dislocation__to__range_compression"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:retail_traders",
+      "target": "crisis_dislocation__to__range_compression"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "crisis_dislocation",
+      "target": "crisis_dislocation__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:macro_repricing",
+      "target": "crisis_dislocation__to__macro_transition"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:policy_signal_repricing",
+      "target": "crisis_dislocation__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "crisis_dislocation__to__macro_transition",
+      "target": "macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:central_banks",
+      "target": "crisis_dislocation__to__macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:macro_hedge_funds",
+      "target": "crisis_dislocation__to__macro_transition"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:bullion_banks",
+      "target": "crisis_dislocation__to__macro_transition"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "crisis_dislocation",
+      "target": "crisis_dislocation__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:trend_reinforcement",
+      "target": "crisis_dislocation__to__bull_trend"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:trend_amplification",
+      "target": "crisis_dislocation__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "crisis_dislocation__to__bull_trend",
+      "target": "bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:macro_hedge_funds",
+      "target": "crisis_dislocation__to__bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:ctas",
+      "target": "crisis_dislocation__to__bull_trend"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:etf_investors",
+      "target": "crisis_dislocation__to__bull_trend"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bull_trend",
+      "target": "bull_trend__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "trigger:systemic_stress",
+      "target": "bull_trend__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "DEPENDS_ON",
+      "source": "mechanism:safe_haven_reallocation",
+      "target": "bull_trend__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "CAUSES",
+      "source": "bull_trend__to__crisis_dislocation",
+      "target": "crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:safe_haven_capital_flows",
+      "target": "bull_trend__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:dealers",
+      "target": "bull_trend__to__crisis_dislocation"
+    },
+    {
+      "edge_type": "RELATED_TO",
+      "source": "participant:market_makers",
+      "target": "bull_trend__to__crisis_dislocation"
+    }
+  ],
+  "nodes": [
+    "bear_unwind",
+    "bear_unwind__to__bull_trend",
+    "bear_unwind__to__calm_carry",
+    "bear_unwind__to__crisis_dislocation",
+    "bear_unwind__to__macro_transition",
+    "bear_unwind__to__range_compression",
+    "bull_trend",
+    "bull_trend__to__bear_unwind",
+    "bull_trend__to__calm_carry",
+    "bull_trend__to__crisis_dislocation",
+    "bull_trend__to__macro_transition",
+    "bull_trend__to__range_compression",
+    "calm_carry",
+    "calm_carry__to__bear_unwind",
+    "calm_carry__to__bull_trend",
+    "calm_carry__to__crisis_dislocation",
+    "calm_carry__to__macro_transition",
+    "calm_carry__to__range_compression",
+    "crisis_dislocation",
+    "crisis_dislocation__to__bear_unwind",
+    "crisis_dislocation__to__bull_trend",
+    "crisis_dislocation__to__calm_carry",
+    "crisis_dislocation__to__macro_transition",
+    "crisis_dislocation__to__range_compression",
+    "macro_transition",
+    "macro_transition__to__bear_unwind",
+    "macro_transition__to__bull_trend",
+    "macro_transition__to__calm_carry",
+    "macro_transition__to__crisis_dislocation",
+    "macro_transition__to__range_compression",
+    "mechanism:inventory_absorption",
+    "mechanism:inventory_unwind",
+    "mechanism:liquidity_rebalancing",
+    "mechanism:policy_signal_repricing",
+    "mechanism:safe_haven_reallocation",
+    "mechanism:trend_amplification",
+    "participant:bullion_banks",
+    "participant:central_banks",
+    "participant:commercial_hedgers",
+    "participant:ctas",
+    "participant:dealers",
+    "participant:etf_investors",
+    "participant:macro_hedge_funds",
+    "participant:market_makers",
+    "participant:retail_traders",
+    "participant:safe_haven_capital_flows",
+    "range_compression",
+    "range_compression__to__bear_unwind",
+    "range_compression__to__bull_trend",
+    "range_compression__to__calm_carry",
+    "range_compression__to__crisis_dislocation",
+    "range_compression__to__macro_transition",
+    "trigger:macro_repricing",
+    "trigger:range_stabilization",
+    "trigger:real_rate_shock",
+    "trigger:systemic_stress",
+    "trigger:trend_reinforcement",
+    "trigger:volatility_decay"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "arb_recommendation": "Adopt a layered decision ecology in which macro hedge funds and market makers update fastest, central banks and bullion banks anchor belief formation, dealers relay strategic dependencies, and ETF/safe-haven flows turn localized decisions into market-wide cascades.",
+  "dominant_cascade_initiators": [
+    "market_makers",
+    "macro_hedge_funds",
+    "etf_investors",
+    "safe_haven_capital_flows"
+  ],
+  "fastest_decision_makers": [
+    "market_makers",
+    "macro_hedge_funds",
+    "etf_investors",
+    "safe_haven_capital_flows",
+    "commercial_hedgers"
+  ],
+  "highest_information_asymmetry": [
+    "macro_hedge_funds",
+    "safe_haven_capital_flows",
+    "bullion_banks",
+    "dealers",
+    "central_banks"
+  ]
+}

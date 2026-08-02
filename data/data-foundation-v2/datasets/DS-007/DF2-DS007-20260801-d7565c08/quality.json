@@ -1,0 +1,14 @@
+{
+  "completeness": 1.0,
+  "confidence_score": 0.9592,
+  "coverage": 1.0,
+  "duplicate_rate": 0.0,
+  "end_timestamp": "2026-08-01T00:00:00Z",
+  "freshness": 0.9,
+  "missing_rate": 0.0,
+  "record_count": 6,
+  "schema_conformity": 1.0,
+  "start_timestamp": "2026-07-27T00:00:00Z",
+  "timestamp_consistency": 1.0,
+  "validation_score": 0.9833
+}

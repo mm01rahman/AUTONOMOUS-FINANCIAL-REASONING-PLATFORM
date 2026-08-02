@@ -1,0 +1,1052 @@
+[
+  {
+    "timeline": [
+      {
+        "detail": "Calm Carry",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "real_rate_shock",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "dealers, bullion_banks, commercial_hedgers",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "dealer balance sheets pass de-risking outward",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Bear Unwind",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "calm_carry__to__bear_unwind"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Bear Unwind",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "range_stabilization",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "commercial_hedgers, market_makers, bullion_banks",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "market makers and hedgers absorb flow into balanced inventory",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Calm Carry",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "bear_unwind__to__calm_carry"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Range Compression",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "range_stabilization",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "commercial_hedgers, market_makers, bullion_banks",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "market makers and hedgers absorb flow into balanced inventory",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Calm Carry",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "range_compression__to__calm_carry"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Macro Transition",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "range_stabilization",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "commercial_hedgers, market_makers, bullion_banks",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "market makers and hedgers absorb flow into balanced inventory",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Calm Carry",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "macro_transition__to__calm_carry"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Calm Carry",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "volatility_decay",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "market_makers, bullion_banks, retail_traders",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "quoted depth recovers while directional urgency fades",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Range Compression",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "calm_carry__to__range_compression"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Calm Carry",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "macro_repricing",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "central_banks, macro_hedge_funds, bullion_banks",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, bullion_banks, dealers",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "relay channels rewire as macro conviction reallocates balance sheets",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Macro Transition",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "calm_carry__to__macro_transition"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Calm Carry",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "trend_reinforcement",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "macro_hedge_funds, ctas, etf_investors",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, etf_investors, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "directional_depth_thins_as_trend_strengthens",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Bull Trend",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "calm_carry__to__bull_trend"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Bull Trend",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "range_stabilization",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "commercial_hedgers, market_makers, bullion_banks",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "market makers and hedgers absorb flow into balanced inventory",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Calm Carry",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "bull_trend__to__calm_carry"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Range Compression",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "real_rate_shock",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "dealers, bullion_banks, commercial_hedgers",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "dealer balance sheets pass de-risking outward",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Bear Unwind",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "range_compression__to__bear_unwind"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Macro Transition",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "real_rate_shock",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "dealers, bullion_banks, commercial_hedgers",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "dealer balance sheets pass de-risking outward",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Bear Unwind",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "macro_transition__to__bear_unwind"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Bull Trend",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "real_rate_shock",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "dealers, bullion_banks, commercial_hedgers",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "dealer balance sheets pass de-risking outward",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Bear Unwind",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "bull_trend__to__bear_unwind"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Bear Unwind",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "volatility_decay",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "market_makers, bullion_banks, retail_traders",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "quoted depth recovers while directional urgency fades",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Range Compression",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "bear_unwind__to__range_compression"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Bear Unwind",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "macro_repricing",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "central_banks, macro_hedge_funds, bullion_banks",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, bullion_banks, dealers",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "relay channels rewire as macro conviction reallocates balance sheets",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Macro Transition",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "bear_unwind__to__macro_transition"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Bear Unwind",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "trend_reinforcement",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "macro_hedge_funds, ctas, etf_investors",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, etf_investors, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "directional_depth_thins_as_trend_strengthens",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Bull Trend",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "bear_unwind__to__bull_trend"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Range Compression",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "macro_repricing",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "central_banks, macro_hedge_funds, bullion_banks",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, bullion_banks, dealers",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "relay channels rewire as macro conviction reallocates balance sheets",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Macro Transition",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "range_compression__to__macro_transition"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Range Compression",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "trend_reinforcement",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "macro_hedge_funds, ctas, etf_investors",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, etf_investors, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "directional_depth_thins_as_trend_strengthens",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Bull Trend",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "range_compression__to__bull_trend"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Macro Transition",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "volatility_decay",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "market_makers, bullion_banks, retail_traders",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "quoted depth recovers while directional urgency fades",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Range Compression",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "macro_transition__to__range_compression"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Macro Transition",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "trend_reinforcement",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "macro_hedge_funds, ctas, etf_investors",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, etf_investors, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "directional_depth_thins_as_trend_strengthens",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Bull Trend",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "macro_transition__to__bull_trend"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Crisis Dislocation",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "range_stabilization",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "commercial_hedgers, market_makers, bullion_banks",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "market makers and hedgers absorb flow into balanced inventory",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Calm Carry",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "crisis_dislocation__to__calm_carry"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Calm Carry",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "systemic_stress",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "safe_haven_capital_flows, dealers, market_makers",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, etf_investors, safe_haven_capital_flows",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "normal depth collapses as defensive flow overwhelms intermediaries",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Crisis Dislocation",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "calm_carry__to__crisis_dislocation"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Bull Trend",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "volatility_decay",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "market_makers, bullion_banks, retail_traders",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "quoted depth recovers while directional urgency fades",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Range Compression",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "bull_trend__to__range_compression"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Bull Trend",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "macro_repricing",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "central_banks, macro_hedge_funds, bullion_banks",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, bullion_banks, dealers",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "relay channels rewire as macro conviction reallocates balance sheets",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Macro Transition",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "bull_trend__to__macro_transition"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Crisis Dislocation",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "real_rate_shock",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "dealers, bullion_banks, commercial_hedgers",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "dealer balance sheets pass de-risking outward",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Bear Unwind",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "crisis_dislocation__to__bear_unwind"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Bear Unwind",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "systemic_stress",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "safe_haven_capital_flows, dealers, market_makers",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, etf_investors, safe_haven_capital_flows",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "normal depth collapses as defensive flow overwhelms intermediaries",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Crisis Dislocation",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "bear_unwind__to__crisis_dislocation"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Range Compression",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "systemic_stress",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "safe_haven_capital_flows, dealers, market_makers",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, etf_investors, safe_haven_capital_flows",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "normal depth collapses as defensive flow overwhelms intermediaries",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Crisis Dislocation",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "range_compression__to__crisis_dislocation"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Macro Transition",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "systemic_stress",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "safe_haven_capital_flows, dealers, market_makers",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, etf_investors, safe_haven_capital_flows",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "normal depth collapses as defensive flow overwhelms intermediaries",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Crisis Dislocation",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "macro_transition__to__crisis_dislocation"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Crisis Dislocation",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "volatility_decay",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "market_makers, bullion_banks, retail_traders",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, commercial_hedgers, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "quoted depth recovers while directional urgency fades",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Range Compression",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "crisis_dislocation__to__range_compression"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Crisis Dislocation",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "macro_repricing",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "central_banks, macro_hedge_funds, bullion_banks",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, bullion_banks, dealers",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "relay channels rewire as macro conviction reallocates balance sheets",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Macro Transition",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "crisis_dislocation__to__macro_transition"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Crisis Dislocation",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "trend_reinforcement",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "macro_hedge_funds, ctas, etf_investors",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "macro_hedge_funds, etf_investors, bullion_banks",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "directional_depth_thins_as_trend_strengthens",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Bull Trend",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "crisis_dislocation__to__bull_trend"
+  },
+  {
+    "timeline": [
+      {
+        "detail": "Bull Trend",
+        "name": "initial_conditions",
+        "stage": 1
+      },
+      {
+        "detail": "systemic_stress",
+        "name": "trigger",
+        "stage": 2
+      },
+      {
+        "detail": "safe_haven_capital_flows, dealers, market_makers",
+        "name": "participant_actions",
+        "stage": 3
+      },
+      {
+        "detail": "market_makers, etf_investors, safe_haven_capital_flows",
+        "name": "decision_sequence",
+        "stage": 4
+      },
+      {
+        "detail": "normal depth collapses as defensive flow overwhelms intermediaries",
+        "name": "liquidity_transformation",
+        "stage": 5
+      },
+      {
+        "detail": "Crisis Dislocation",
+        "name": "regime_activation",
+        "stage": 6
+      }
+    ],
+    "transition_id": "bull_trend__to__crisis_dislocation"
+  }
+]

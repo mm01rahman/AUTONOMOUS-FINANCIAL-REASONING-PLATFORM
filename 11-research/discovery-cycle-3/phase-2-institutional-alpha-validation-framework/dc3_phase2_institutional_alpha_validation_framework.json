@@ -1,0 +1,673 @@
+{
+  "arb_recommendation": {
+    "adopt_as_only_approved_path": true,
+    "framework_ready": true,
+    "initial_queue_reference_size": 12,
+    "next_action": "Await ARB approval, then run validation executions under this framework in Phase 3.",
+    "promote_any_alpha_now": false,
+    "remaining_gaps": [
+      "Repository-wide Ruff cleanup still required for fully green baseline.",
+      "afrp evidence boundary scope must align with bounded files for current work package.",
+      "Performance-test harness for validation methods to be implemented with Phase 3 execution."
+    ],
+    "validate_phase1_mechanisms_now": false
+  },
+  "ecology_knowledge_graph": {
+    "conclusion_node": {
+      "confidence": 0.78,
+      "label": "DC3 Phase 2 Validation Framework Conclusion",
+      "node_id": "IKROS-DC3-P2-CONCLUSION-20260802-0001",
+      "node_type": "RESEARCH_CONCLUSION"
+    },
+    "edges": [
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0001",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0002",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0003",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0004",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0005",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0006",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0007",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0008",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0009",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0010",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0011",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0012",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0013",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0014",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0015",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0016",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "IMPLEMENTS",
+        "source": "IKROS-VALMETHOD-0017",
+        "target": "IKROS-DC3-P2-FRAMEWORK-20260802-0001"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "EXPLAINS",
+        "source": "IKROS-DC3-P2-FRAMEWORK-20260802-0001",
+        "target": "IKROS-DC3-P2-STANDARD-20260802-0001"
+      },
+      {
+        "confidence": 0.79,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3-P2-STANDARD-20260802-0001",
+        "target": "IKROS-DC3-P2-CONCLUSION-20260802-0001"
+      }
+    ],
+    "framework_node": {
+      "confidence": 0.8,
+      "label": "Institutional Alpha Validation Framework",
+      "node_id": "IKROS-DC3-P2-FRAMEWORK-20260802-0001",
+      "node_type": "WORLD_MODEL"
+    },
+    "method_nodes": [
+      {
+        "confidence": 0.7,
+        "label": "walk_forward_validation",
+        "node_id": "IKROS-VALMETHOD-0001",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "nested_walk_forward",
+        "node_id": "IKROS-VALMETHOD-0002",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "combinatorial_purged_cross_validation",
+        "node_id": "IKROS-VALMETHOD-0003",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "monte_carlo",
+        "node_id": "IKROS-VALMETHOD-0004",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "bootstrap",
+        "node_id": "IKROS-VALMETHOD-0005",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "sensitivity_analysis",
+        "node_id": "IKROS-VALMETHOD-0006",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "stress_testing",
+        "node_id": "IKROS-VALMETHOD-0007",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "historical_replay",
+        "node_id": "IKROS-VALMETHOD-0008",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "out_of_sample_validation",
+        "node_id": "IKROS-VALMETHOD-0009",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "probability_of_backtest_overfitting",
+        "node_id": "IKROS-VALMETHOD-0010",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "deflated_sharpe_ratio",
+        "node_id": "IKROS-VALMETHOD-0011",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "probabilistic_sharpe_ratio",
+        "node_id": "IKROS-VALMETHOD-0012",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "whites_reality_check",
+        "node_id": "IKROS-VALMETHOD-0013",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "spa_test",
+        "node_id": "IKROS-VALMETHOD-0014",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "concept_drift_detection",
+        "node_id": "IKROS-VALMETHOD-0015",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "stability_analysis",
+        "node_id": "IKROS-VALMETHOD-0016",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.7,
+        "label": "failure_replay",
+        "node_id": "IKROS-VALMETHOD-0017",
+        "node_type": "VALIDATION"
+      }
+    ],
+    "standard_node": {
+      "confidence": 0.79,
+      "label": "Institutional Alpha Standard",
+      "node_id": "IKROS-DC3-P2-STANDARD-20260802-0001",
+      "node_type": "KNOWLEDGE_OBJECT"
+    }
+  },
+  "failure_registry_schema": {
+    "description": "Canonical failed-alpha analysis schema.",
+    "required_fields": [
+      "failure_id",
+      "alpha_id",
+      "failure_classification",
+      "failure_cause",
+      "failure_timeline",
+      "failure_modes",
+      "contradictory_evidence",
+      "confidence_update",
+      "required_future_research",
+      "diagnostic_experiments"
+    ],
+    "schema_id": "IKROS-FAILREG-SCHEMA-20260802-0001"
+  },
+  "failure_workflow": {
+    "steps": [
+      "Classify failure (noise/correlation/conditional/causal-breakdown/alpha-breakdown).",
+      "Identify root causes and contradictory evidence.",
+      "Build failure timeline and replay packet.",
+      "Update confidence and lineage.",
+      "Generate required future research and diagnostic experiments.",
+      "Insert continuation item into research queue."
+    ],
+    "workflow_id": "IKROS-FAILURE-WORKFLOW-20260802-0001"
+  },
+  "framework_version": "1.0.0",
+  "governance_guards": [
+    "Do not validate Phase 1 mechanisms in this phase.",
+    "Do not optimize any mechanism.",
+    "Do not generate trading strategies.",
+    "No runtime modifications."
+  ],
+  "institutional_alpha_standard": {
+    "definition": "Institutional Alpha requires mechanism-level evidence beyond correlation, stable cross-regime behavior, reproducible validation, calibrated confidence, and acceptable institutional risk.",
+    "non_negotiables": [
+      "No promotion on backtest return alone.",
+      "No promotion without contradiction accounting.",
+      "No promotion without method-complete validation trace.",
+      "No promotion without reproducibility and lineage integrity."
+    ],
+    "standard_id": "IKROS-INSTITUTIONAL-ALPHA-STANDARD-20260802-0001"
+  },
+  "mandatory_validation_methods": [
+    "walk_forward_validation",
+    "nested_walk_forward",
+    "combinatorial_purged_cross_validation",
+    "monte_carlo",
+    "bootstrap",
+    "sensitivity_analysis",
+    "stress_testing",
+    "historical_replay",
+    "out_of_sample_validation",
+    "probability_of_backtest_overfitting",
+    "deflated_sharpe_ratio",
+    "probabilistic_sharpe_ratio",
+    "whites_reality_check",
+    "spa_test",
+    "concept_drift_detection",
+    "stability_analysis",
+    "failure_replay"
+  ],
+  "phase": "DISCOVERY_CYCLE_3_PHASE_2",
+  "phase1_campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0026",
+  "phase1_registry_size": 12,
+  "phase1_retained_size": 12,
+  "promotion_criteria": {
+    "maximum_institutional_risk": 0.4,
+    "minimum_economic_plausibility": 0.7,
+    "minimum_regime_consistency": 0.65,
+    "minimum_reproducibility": 1.0,
+    "minimum_scientific_validity": 0.7,
+    "minimum_temporal_stability": 0.65
+  },
+  "promotion_framework": {
+    "framework_id": "IKROS-PROMOTION-FRAMEWORK-20260802-0001",
+    "gating_rules": [
+      "No mechanism may reach APPROVED without passing all mandatory validation methods.",
+      "No mechanism may reach PROMOTION_REVIEW if confidence calibration or reproducibility fails.",
+      "REJECTED and REVISE outcomes must create failure analyses and research continuation tasks.",
+      "APPROVED status remains institutional-only until separate ARB production authorization."
+    ],
+    "levels": [
+      "REJECTED",
+      "RESEARCH",
+      "REVISE",
+      "VALIDATE_AGAIN",
+      "CANDIDATE",
+      "PROMOTION_REVIEW",
+      "APPROVED"
+    ],
+    "promotion_criteria": {
+      "maximum_institutional_risk": 0.4,
+      "minimum_economic_plausibility": 0.7,
+      "minimum_regime_consistency": 0.65,
+      "minimum_reproducibility": 1.0,
+      "minimum_scientific_validity": 0.7,
+      "minimum_temporal_stability": 0.65
+    }
+  },
+  "replication_registry_schema": {
+    "required_fields": [
+      "replication_id",
+      "validation_id",
+      "environment",
+      "seed",
+      "result_consistency",
+      "status"
+    ],
+    "schema_id": "IKROS-REPLICA-SCHEMA-20260802-0001"
+  },
+  "research_continuation_queue_schema": {
+    "required_fields": [
+      "task_id",
+      "alpha_id",
+      "reason",
+      "priority",
+      "required_evidence",
+      "assigned_method_bundle"
+    ],
+    "schema_id": "IKROS-RESEARCH-CONTINUATION-SCHEMA-20260802-0001"
+  },
+  "scope": "Mechanism-agnostic, reusable for all future alpha mechanisms.",
+  "success_workflow": {
+    "steps": [
+      "Collect supporting evidence set and replication packet.",
+      "Generate economic, market, regime, and cross-asset narratives.",
+      "Estimate expected capacity, decay, and risks.",
+      "List known weaknesses and unresolved contradictions.",
+      "Assign promotion level with explicit confidence calibration record."
+    ],
+    "workflow_id": "IKROS-SUCCESS-WORKFLOW-20260802-0001"
+  },
+  "title": "Institutional Alpha Validation Framework",
+  "validation_api_spec": {
+    "api_version": "1.0.0",
+    "endpoints": [
+      {
+        "input": [
+          "alpha_id",
+          "mechanism_spec",
+          "evidence_refs"
+        ],
+        "name": "register_alpha_for_validation",
+        "output": [
+          "validation_id",
+          "status"
+        ]
+      },
+      {
+        "input": [
+          "validation_id",
+          "methods"
+        ],
+        "name": "execute_validation_protocol",
+        "output": [
+          "method_reports",
+          "dimension_scores",
+          "promotion_level"
+        ]
+      },
+      {
+        "input": [
+          "validation_id",
+          "failure_packet"
+        ],
+        "name": "record_failure_analysis",
+        "output": [
+          "failure_id",
+          "continuation_task_id"
+        ]
+      },
+      {
+        "input": [
+          "validation_id",
+          "success_packet"
+        ],
+        "name": "record_success_analysis",
+        "output": [
+          "support_packet_id",
+          "promotion_level"
+        ]
+      },
+      {
+        "input": [
+          "validation_id",
+          "confidence_components"
+        ],
+        "name": "update_validation_confidence",
+        "output": [
+          "confidence_post"
+        ]
+      }
+    ]
+  },
+  "validation_dashboard_spec": {
+    "dashboard_id": "IKROS-VAL-DASHBOARD-20260802-0001",
+    "tiles": [
+      "Validation pipeline status",
+      "Dimension score heatmap",
+      "Method pass/fail matrix",
+      "Promotion distribution",
+      "Failure cause clusters",
+      "Confidence evolution timeline",
+      "Evidence quality summary",
+      "Research continuation queue"
+    ]
+  },
+  "validation_dimensions": [
+    "scientific_validity",
+    "economic_plausibility",
+    "market_mechanism",
+    "cross_asset_consistency",
+    "regime_consistency",
+    "temporal_stability",
+    "robustness",
+    "generalization",
+    "failure_behaviour",
+    "capacity",
+    "transaction_cost_sensitivity",
+    "slippage_sensitivity",
+    "liquidity_sensitivity",
+    "complexity",
+    "interpretability",
+    "explainability",
+    "confidence_calibration",
+    "reproducibility",
+    "institutional_risk",
+    "evidence_quality"
+  ],
+  "validation_evidence_registry_schema": {
+    "required_fields": [
+      "evidence_id",
+      "validation_id",
+      "method",
+      "artifact_ref",
+      "quality_score",
+      "lineage_ref"
+    ],
+    "schema_id": "IKROS-VALEVID-SCHEMA-20260802-0001"
+  },
+  "validation_method_specifications": [
+    {
+      "method": "walk_forward_validation",
+      "method_id": "VAL-METHOD-0001",
+      "minimum_outputs": [
+        "window_metrics",
+        "drift_flags",
+        "stability_summary"
+      ],
+      "purpose": "Temporal forward robustness"
+    },
+    {
+      "method": "nested_walk_forward",
+      "method_id": "VAL-METHOD-0002",
+      "minimum_outputs": [
+        "outer_metrics",
+        "inner_selection_trace",
+        "variance_estimates"
+      ],
+      "purpose": "Nested temporal robustness with inner diagnostics"
+    },
+    {
+      "method": "combinatorial_purged_cross_validation",
+      "method_id": "VAL-METHOD-0003",
+      "minimum_outputs": [
+        "fold_metrics",
+        "purge_log",
+        "overlap_controls"
+      ],
+      "purpose": "Leakage-resistant combinatorial validation"
+    },
+    {
+      "method": "monte_carlo",
+      "method_id": "VAL-METHOD-0004",
+      "minimum_outputs": [
+        "distribution_summary",
+        "tail_behavior",
+        "failure_rate"
+      ],
+      "purpose": "Path perturbation and stochastic resilience"
+    },
+    {
+      "method": "bootstrap",
+      "method_id": "VAL-METHOD-0005",
+      "minimum_outputs": [
+        "resampled_statistics",
+        "confidence_intervals"
+      ],
+      "purpose": "Resampling confidence estimation"
+    },
+    {
+      "method": "sensitivity_analysis",
+      "method_id": "VAL-METHOD-0006",
+      "minimum_outputs": [
+        "sensitivity_map",
+        "fragility_points"
+      ],
+      "purpose": "Parameter/assumption sensitivity"
+    },
+    {
+      "method": "stress_testing",
+      "method_id": "VAL-METHOD-0007",
+      "minimum_outputs": [
+        "stress_scenarios",
+        "drawdown_behavior",
+        "regime_breaks"
+      ],
+      "purpose": "Extreme-market resilience"
+    },
+    {
+      "method": "historical_replay",
+      "method_id": "VAL-METHOD-0008",
+      "minimum_outputs": [
+        "event_replay_outcomes",
+        "contradiction_flags"
+      ],
+      "purpose": "Historical event consistency"
+    },
+    {
+      "method": "out_of_sample_validation",
+      "method_id": "VAL-METHOD-0009",
+      "minimum_outputs": [
+        "oos_metrics",
+        "degradation_delta"
+      ],
+      "purpose": "Generalization beyond in-sample"
+    },
+    {
+      "method": "probability_of_backtest_overfitting",
+      "method_id": "VAL-METHOD-0010",
+      "minimum_outputs": [
+        "pbo_score",
+        "risk_band"
+      ],
+      "purpose": "Overfitting probability estimate"
+    },
+    {
+      "method": "deflated_sharpe_ratio",
+      "method_id": "VAL-METHOD-0011",
+      "minimum_outputs": [
+        "dsr_value",
+        "significance_level"
+      ],
+      "purpose": "Selection-adjusted Sharpe significance"
+    },
+    {
+      "method": "probabilistic_sharpe_ratio",
+      "method_id": "VAL-METHOD-0012",
+      "minimum_outputs": [
+        "psr_value",
+        "confidence"
+      ],
+      "purpose": "Probabilistic Sharpe confidence"
+    },
+    {
+      "method": "whites_reality_check",
+      "method_id": "VAL-METHOD-0013",
+      "minimum_outputs": [
+        "wrc_pvalue",
+        "null_rejection"
+      ],
+      "purpose": "Data-snooping adjustment"
+    },
+    {
+      "method": "spa_test",
+      "method_id": "VAL-METHOD-0014",
+      "minimum_outputs": [
+        "spa_pvalue",
+        "comparative_outcome"
+      ],
+      "purpose": "Superior predictive ability test"
+    },
+    {
+      "method": "concept_drift_detection",
+      "method_id": "VAL-METHOD-0015",
+      "minimum_outputs": [
+        "drift_statistics",
+        "drift_timeline"
+      ],
+      "purpose": "Distribution/mechanism drift detection"
+    },
+    {
+      "method": "stability_analysis",
+      "method_id": "VAL-METHOD-0016",
+      "minimum_outputs": [
+        "stability_scores",
+        "instability_diagnostics"
+      ],
+      "purpose": "Feature and mechanism stability"
+    },
+    {
+      "method": "failure_replay",
+      "method_id": "VAL-METHOD-0017",
+      "minimum_outputs": [
+        "failure_sequences",
+        "cause_attribution"
+      ],
+      "purpose": "Failure mode replay and attribution"
+    }
+  ],
+  "validation_registry_schema": {
+    "description": "Canonical validation registry schema for alpha mechanisms.",
+    "required_fields": [
+      "validation_id",
+      "alpha_id",
+      "framework_version",
+      "methods_executed",
+      "dimensions_scored",
+      "promotion_level",
+      "confidence_post",
+      "evidence_refs",
+      "contradiction_refs",
+      "reproducibility_hash"
+    ],
+    "schema_id": "IKROS-VALREG-SCHEMA-20260802-0001"
+  }
+}

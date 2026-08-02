@@ -1,0 +1,174 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0049"
+capability_id:
+  id: "ALPHA-RESEARCH"
+  version: "1.0"
+title: "Data Foundation V2 Phase 1 — Institutional Market Data Infrastructure"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
+    trace_sls: "AFRP-DF2-PHASE1-1.0.0"
+    trace_adr: ["ADR-0001", "ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('IKROS-ORCHESTRATOR')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/data_foundation/"
+      - "tools/ikros/persistence.py"
+      - "tests/unit/test_data_foundation_v2_phase1.py"
+      - "data/data-foundation-v2/"
+      - "schemas/data-foundation-v2/"
+      - "11-research/data-foundation-v2/"
+      - "data/ikros/graph/"
+      - "data/ikros/memory/"
+      - "data/ikros/orchestrator/"
+      - "data/ikros/registries/research/"
+      - "data/ikros/registries/experiments/"
+      - "reports/repository_metrics.json"
+      - "05-work-packages/WP-IMP-0049.yaml"
+      - "05-work-packages/WP-IMP-0049/"
+    read:
+      - "11-research/discovery-cycle-4/"
+      - "data/ikros/"
+      - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+      - "03-engineering/"
+      - "05-work-packages/WP-IMP-0048.yaml"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "8h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "11-research/discovery-cycle-4/institutional-market-observability/"
+    - "11-research/discovery-cycle-4/phase-2-institutional-data-acquisition-prioritization/"
+    - "data/ikros/"
+    - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/data_foundation/__init__.py"
+    - "tools/data_foundation/models.py"
+    - "tools/data_foundation/engine.py"
+    - "tools/data_foundation/phase1_program.py"
+    - "tools/ikros/persistence.py"
+  expected_test_files:
+    - "tests/unit/test_data_foundation_v2_phase1.py"
+  expected_documentation:
+    - "11-research/data-foundation-v2/phase-1-institutional-market-data-infrastructure/"
+    - "schemas/data-foundation-v2/"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0049/evidence/EXEC-051.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/data_foundation/"
+    - "tools/ikros/persistence.py"
+    - "tests/unit/test_data_foundation_v2_phase1.py"
+    - "data/data-foundation-v2/"
+    - "schemas/data-foundation-v2/"
+    - "11-research/data-foundation-v2/"
+    - "data/ikros/graph/"
+    - "data/ikros/memory/"
+    - "data/ikros/orchestrator/"
+    - "data/ikros/registries/research/"
+    - "data/ikros/registries/experiments/"
+    - "reports/repository_metrics.json"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0049/evidence/EXEC-051.yaml"
+
+produces:
+  capability:
+    id: "ALPHA-RESEARCH"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/data_foundation/"
+    - "tools/ikros/persistence.py"
+    - "tests/unit/test_data_foundation_v2_phase1.py"
+    - "data/data-foundation-v2/"
+    - "schemas/data-foundation-v2/"
+    - "11-research/data-foundation-v2/"
+    - "data/ikros/graph/"
+    - "data/ikros/memory/"
+    - "data/ikros/orchestrator/"
+    - "data/ikros/registries/research/"
+    - "data/ikros/registries/experiments/"
+    - "reports/repository_metrics.json"
+    - "05-work-packages/WP-IMP-0049.yaml"
+    - "05-work-packages/WP-IMP-0049/"
+  non_goals:
+    - "No Runtime modification."
+    - "No live integrations."
+    - "No broker connectivity."
+    - "No commercial dataset implementation."
+    - "No alpha validation or promotion."
+
+requirements:
+  data_foundation_v2_phase1:
+    module: "tools/data_foundation/"
+    rules:
+      - "Implements deterministic historical-only provider ingestion for the approved Tier 1 datasets."
+      - "Computes manifests, checksums, coverage, completeness, missing-rate, duplicate-rate, timestamp-consistency, schema-conformity, validation-score, and confidence-score for every dataset."
+      - "Normalizes timestamps to UTC and persists governed dataset registry, quality, coverage, observation, and market-state outputs."
+      - "Generates reproducible machine-readable schemas, dataset artifacts, dashboards, and final governed reports under the bounded Data Foundation V2 directories."
+      - "Integrates with IKROS graph, memory, orchestrator, research, and experiment registries without modifying Runtime behaviour."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0049"
+
+completion:
+  success_requires:
+    - "Approved Tier 1 Data Foundation V2 datasets are implemented with deterministic offline historical ingestion."
+    - "Governed registries, manifests, dashboards, schemas, and final reports are generated under the bounded Data Foundation V2 directories."
+    - "IKROS graph, memory, research, experiment, and orchestrator artifacts are updated reproducibly."
+    - "All quality gates pass (ruff, mypy --strict, pytest, afrp validate/plan/health/evidence, repository metrics)."
+    - "No Runtime behaviour changed."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-SCHEMA: "WPS-1.0 schema violation in WP YAML structure."
+  ERR-DATA-DETERMINISM: "Ingestion, manifests, registry identifiers, or quality scoring are nondeterministic."
+  ERR-GOVERNANCE: "Generated artifacts fall outside the bounded work-package scope or lack governed evidence."

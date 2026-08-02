@@ -1,0 +1,11 @@
+{
+  "best_model_by_detection": "technical_trend_transition_heuristic",
+  "contradictory_evidence": [
+    "CPI/NFP direct datasets unavailable; macro-event proxies were used.",
+    "Some stress regimes show comparable baseline performance, reducing unique explanatory lift."
+  ],
+  "dataset_limitations": [
+    "CPI and NFP direct event feeds unavailable; proxy construction used."
+  ],
+  "transition_engine_rank": 7
+}

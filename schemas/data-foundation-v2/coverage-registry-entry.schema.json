@@ -1,0 +1,49 @@
+{
+  "description": "Coverage and missing-data registry summary.",
+  "properties": {
+    "completeness": {
+      "title": "Completeness",
+      "type": "number"
+    },
+    "coverage": {
+      "title": "Coverage",
+      "type": "number"
+    },
+    "dataset_id": {
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "duplicate_rate": {
+      "title": "Duplicate Rate",
+      "type": "number"
+    },
+    "end_timestamp": {
+      "title": "End Timestamp",
+      "type": "string"
+    },
+    "missing_rate": {
+      "title": "Missing Rate",
+      "type": "number"
+    },
+    "record_count": {
+      "title": "Record Count",
+      "type": "integer"
+    },
+    "start_timestamp": {
+      "title": "Start Timestamp",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "record_count",
+    "coverage",
+    "completeness",
+    "missing_rate",
+    "duplicate_rate",
+    "start_timestamp",
+    "end_timestamp"
+  ],
+  "title": "CoverageRegistryEntry",
+  "type": "object"
+}

@@ -1,0 +1,937 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0001",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.68,
+    "confidence_prior": 0.62,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.74,
+    "economic_rationale": "When source shocks concentrate into relay bottlenecks, downstream sink repricing accelerates regime pressure.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Confidence calibration is weak under transition-risk scoring."
+    ],
+    "expected_information_gain": 0.467,
+    "expected_institutional_value": 0.5859,
+    "expected_regimes": [
+      "macro_transition",
+      "crisis_dislocation",
+      "bear_unwind"
+    ],
+    "expected_robustness": 0.57,
+    "failure_catalogue": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Confidence calibration is weak under transition-risk scoring."
+    ],
+    "failure_risk": 0.58,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0001",
+      "IKROS-PF1-PRINCIPLE-0002"
+    ],
+    "market_mechanism": "Directed source\u2192relay\u2192sink propagation anchored by stable edges (dxy_return_5->dxy_return_20, dxy_return_5->forward_expectation, macro_pressure->dxy_return_20).",
+    "mechanism_type": "cross_asset_transition",
+    "name": "Cross-Asset Relay Pressure Transition Mechanism",
+    "novelty_score": 0.44,
+    "promotion_history": [],
+    "regime_applicability": [
+      "macro_transition",
+      "crisis_dislocation",
+      "bear_unwind"
+    ],
+    "required_conditions": [
+      "Relay concentration in dxy_return_5, macro_pressure",
+      "Elevated transition-risk context"
+    ],
+    "required_datasets": [
+      "dxy_return_1",
+      "dxy_return_20",
+      "dxy_return_5",
+      "forward_expectation",
+      "macro_pressure",
+      "xau_return_1"
+    ],
+    "required_evidence": [
+      "Program A3 network atlas",
+      "Program D robustness matrix",
+      "Program F axioms"
+    ],
+    "required_features": [
+      "forward_expectation",
+      "dxy_return_20",
+      "dxy_return_1",
+      "dxy_return_5",
+      "xau_return_1",
+      "macro_pressure"
+    ],
+    "research_cost": 0.672,
+    "research_priority": 0.4787,
+    "research_question": "Can cross-asset relay pressure transition mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.7,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program A3 network atlas",
+      "Program D robustness matrix",
+      "Program F axioms"
+    ],
+    "validation_cost": 0.756,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0002",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.52,
+    "confidence_prior": 0.56,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.68,
+    "economic_rationale": "Macro shocks require relay-capacity confirmation before transition propagation becomes durable.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Transition detection accuracy is not superior to simpler baselines."
+    ],
+    "expected_information_gain": 0.501,
+    "expected_institutional_value": 0.5589,
+    "expected_regimes": [
+      "macro_transition",
+      "bull_trend",
+      "bear_unwind"
+    ],
+    "expected_robustness": 0.51,
+    "failure_catalogue": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Transition detection accuracy is not superior to simpler baselines."
+    ],
+    "failure_risk": 0.42,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0010"
+    ],
+    "market_mechanism": "Macro pressure and policy surprise transmit through DXY-rate relay channels before broad XAU/USD regime shifts.",
+    "mechanism_type": "macro_repricing",
+    "name": "Macro Repricing Relay Mechanism",
+    "novelty_score": 0.46,
+    "promotion_history": [],
+    "regime_applicability": [
+      "macro_transition",
+      "bull_trend",
+      "bear_unwind"
+    ],
+    "required_conditions": [
+      "Macro-event intensity above baseline",
+      "Relay stability maintained across event windows"
+    ],
+    "required_datasets": [
+      "dxy_return_5",
+      "fed_surprise",
+      "macro_pressure",
+      "yield_10y_change_5"
+    ],
+    "required_evidence": [
+      "Program A2 causal retention",
+      "Program C trigger registry",
+      "Program E unresolved macro-layer evidence"
+    ],
+    "required_features": [
+      "macro_pressure",
+      "fed_surprise",
+      "dxy_return_5",
+      "yield_10y_change_5"
+    ],
+    "research_cost": 0.608,
+    "research_priority": 0.4661,
+    "research_question": "Can macro repricing relay mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.64,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program A2 causal retention",
+      "Program C trigger registry",
+      "Program E unresolved macro-layer evidence"
+    ],
+    "validation_cost": 0.684,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0003",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.54,
+    "confidence_prior": 0.58,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.7,
+    "economic_rationale": "Liquidity withdrawal amplifies directional information and increases transition discontinuity.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "Robustness under stress/event subsets is weaker than at least one simpler baseline."
+    ],
+    "expected_information_gain": 0.488,
+    "expected_institutional_value": 0.5673,
+    "expected_regimes": [
+      "crisis_dislocation",
+      "range_compression",
+      "bear_unwind"
+    ],
+    "expected_robustness": 0.53,
+    "failure_catalogue": [
+      "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "Robustness under stress/event subsets is weaker than at least one simpler baseline."
+    ],
+    "failure_risk": 0.44,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0006"
+    ],
+    "market_mechanism": "Volatility and depth compression force inventory pass-through across institutional intermediaries.",
+    "mechanism_type": "liquidity_withdrawal",
+    "name": "Liquidity Withdrawal Shock Mechanism",
+    "novelty_score": 0.42,
+    "promotion_history": [],
+    "regime_applicability": [
+      "crisis_dislocation",
+      "range_compression",
+      "bear_unwind"
+    ],
+    "required_conditions": [
+      "High realized volatility",
+      "Inventory transfer pressure through dealers/market makers"
+    ],
+    "required_datasets": [
+      "breakdown_20",
+      "breakout_60",
+      "regime_vol_20"
+    ],
+    "required_evidence": [
+      "Program B1 liquidity ecology",
+      "Program E liquidity-layer redesign requirement"
+    ],
+    "required_features": [
+      "regime_vol_20",
+      "breakout_60",
+      "breakdown_20"
+    ],
+    "research_cost": 0.616,
+    "research_priority": 0.4686,
+    "research_question": "Can liquidity withdrawal shock mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.66,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program B1 liquidity ecology",
+      "Program E liquidity-layer redesign requirement"
+    ],
+    "validation_cost": 0.693,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0004",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.53,
+    "confidence_prior": 0.57,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.69,
+    "economic_rationale": "Dealer inventory constraints mediate whether flows absorb or cascade into regime transitions.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "Transition detection accuracy is not superior to simpler baselines."
+    ],
+    "expected_information_gain": 0.505,
+    "expected_institutional_value": 0.5667,
+    "expected_regimes": [
+      "calm_carry",
+      "bear_unwind",
+      "macro_transition"
+    ],
+    "expected_robustness": 0.52,
+    "failure_catalogue": [
+      "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "Transition detection accuracy is not superior to simpler baselines."
+    ],
+    "failure_risk": 0.43,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0001"
+    ],
+    "market_mechanism": "Critical interaction pathways (dealers->market_makers, bullion_banks->dealers) govern inventory redistribution speed.",
+    "mechanism_type": "dealer_inventory",
+    "name": "Dealer Inventory Redistribution Mechanism",
+    "novelty_score": 0.47,
+    "promotion_history": [],
+    "regime_applicability": [
+      "calm_carry",
+      "bear_unwind",
+      "macro_transition"
+    ],
+    "required_conditions": [
+      "Dealer constraint signal present",
+      "Hedger/market-maker offset insufficient"
+    ],
+    "required_datasets": [
+      "regime_vol_20",
+      "xau_return_1",
+      "yield_curve_10y_3m"
+    ],
+    "required_evidence": [
+      "Program B1 interaction matrix",
+      "Program B2 strategic dependency network"
+    ],
+    "required_features": [
+      "xau_return_1",
+      "regime_vol_20",
+      "yield_curve_10y_3m"
+    ],
+    "research_cost": 0.612,
+    "research_priority": 0.4732,
+    "research_question": "Can dealer inventory redistribution mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.65,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program B1 interaction matrix",
+      "Program B2 strategic dependency network"
+    ],
+    "validation_cost": 0.6885,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0005",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.5,
+    "confidence_prior": 0.55,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.67,
+    "economic_rationale": "Expectation shifts by fast decision-makers can reset institutional priors and trigger regime reclassification.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Confidence calibration is weak under transition-risk scoring.",
+      "Transition detection accuracy is not superior to simpler baselines."
+    ],
+    "expected_information_gain": 0.5175,
+    "expected_institutional_value": 0.5581,
+    "expected_regimes": [
+      "macro_transition",
+      "bull_trend",
+      "range_compression"
+    ],
+    "expected_robustness": 0.5,
+    "failure_catalogue": [
+      "Confidence calibration is weak under transition-risk scoring.",
+      "Transition detection accuracy is not superior to simpler baselines."
+    ],
+    "failure_risk": 0.4,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0002"
+    ],
+    "market_mechanism": "Fast participants (market_makers, macro_hedge_funds, etf_investors) update first and propagate belief updates downstream.",
+    "mechanism_type": "expectation_reset",
+    "name": "Expectation Reset Mechanism",
+    "novelty_score": 0.5,
+    "promotion_history": [],
+    "regime_applicability": [
+      "macro_transition",
+      "bull_trend",
+      "range_compression"
+    ],
+    "required_conditions": [
+      "Expectation shock above threshold",
+      "Belief-diffusion through dependency network"
+    ],
+    "required_datasets": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "forward_expectation"
+    ],
+    "required_evidence": [
+      "Program B2 belief update report",
+      "Program C transition timelines"
+    ],
+    "required_features": [
+      "forward_expectation",
+      "dxy_return_1",
+      "dxy_return_5"
+    ],
+    "research_cost": 0.6,
+    "research_priority": 0.4702,
+    "research_question": "Can expectation reset mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.63,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program B2 belief update report",
+      "Program C transition timelines"
+    ],
+    "validation_cost": 0.675,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.57,
+    "confidence_prior": 0.6,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.72,
+    "economic_rationale": "Stress migration reallocates capital toward gold proxies via institutional risk-off channels.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Robustness under stress/event subsets is weaker than at least one simpler baseline."
+    ],
+    "expected_information_gain": 0.507,
+    "expected_institutional_value": 0.587,
+    "expected_regimes": [
+      "crisis_dislocation",
+      "bull_trend"
+    ],
+    "expected_robustness": 0.55,
+    "failure_catalogue": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Robustness under stress/event subsets is weaker than at least one simpler baseline."
+    ],
+    "failure_risk": 0.47,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0002",
+      "IKROS-PF1-PRINCIPLE-0010"
+    ],
+    "market_mechanism": "Event/stress topology rewires flows toward safe-haven sinks under policy/geopolitical pressure.",
+    "mechanism_type": "safe_haven_migration",
+    "name": "Safe-Haven Capital Migration Mechanism",
+    "novelty_score": 0.48,
+    "promotion_history": [],
+    "regime_applicability": [
+      "crisis_dislocation",
+      "bull_trend"
+    ],
+    "required_conditions": [
+      "Stress-event topology activation",
+      "Safe-haven participant impulse"
+    ],
+    "required_datasets": [
+      "dxy_return_1",
+      "geo_severity",
+      "macro_pressure"
+    ],
+    "required_evidence": [
+      "Program A3 stress topology",
+      "Program B1 safe-haven flow ecology"
+    ],
+    "required_features": [
+      "geo_severity",
+      "macro_pressure",
+      "dxy_return_1"
+    ],
+    "research_cost": 0.628,
+    "research_priority": 0.4892,
+    "research_question": "Can safe-haven capital migration mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.68,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program A3 stress topology",
+      "Program B1 safe-haven flow ecology"
+    ],
+    "validation_cost": 0.7065,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0007",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.49,
+    "confidence_prior": 0.54,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.66,
+    "economic_rationale": "ETF participation can convert localized signal shocks into broader positioning pressure.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "Confidence calibration is weak under transition-risk scoring."
+    ],
+    "expected_information_gain": 0.524,
+    "expected_institutional_value": 0.5539,
+    "expected_regimes": [
+      "bull_trend",
+      "range_compression",
+      "crisis_dislocation"
+    ],
+    "expected_robustness": 0.49,
+    "failure_catalogue": [
+      "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "Confidence calibration is weak under transition-risk scoring."
+    ],
+    "failure_risk": 0.39,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0001"
+    ],
+    "market_mechanism": "Flow propagation from ETF cohorts interacts with relay nodes to amplify transition pathways.",
+    "mechanism_type": "etf_flow_propagation",
+    "name": "ETF Flow Propagation Mechanism",
+    "novelty_score": 0.52,
+    "promotion_history": [],
+    "regime_applicability": [
+      "bull_trend",
+      "range_compression",
+      "crisis_dislocation"
+    ],
+    "required_conditions": [
+      "ETF flow impulse present",
+      "Cross-asset relay path open"
+    ],
+    "required_datasets": [
+      "dxy_return_20",
+      "forward_expectation",
+      "regime_vol_20"
+    ],
+    "required_evidence": [
+      "Program B2 cascade atlas",
+      "Program A3 temporal influence network"
+    ],
+    "required_features": [
+      "dxy_return_20",
+      "forward_expectation",
+      "regime_vol_20"
+    ],
+    "research_cost": 0.596,
+    "research_priority": 0.4689,
+    "research_question": "Can etf flow propagation mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.62,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program B2 cascade atlas",
+      "Program A3 temporal influence network"
+    ],
+    "validation_cost": 0.6705,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0008",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.51,
+    "confidence_prior": 0.55,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.67,
+    "economic_rationale": "Policy surprises repricing rates and FX can alter gold-transition pressure through institutional allocation constraints.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Transition detection accuracy is not superior to simpler baselines."
+    ],
+    "expected_information_gain": 0.497,
+    "expected_institutional_value": 0.551,
+    "expected_regimes": [
+      "macro_transition",
+      "bear_unwind",
+      "calm_carry"
+    ],
+    "expected_robustness": 0.5,
+    "failure_catalogue": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Transition detection accuracy is not superior to simpler baselines."
+    ],
+    "failure_risk": 0.41,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0010"
+    ],
+    "market_mechanism": "Central-bank signal shock propagates via rates/FX corridor before regime activation.",
+    "mechanism_type": "policy_repricing",
+    "name": "Policy Repricing Chain Mechanism",
+    "novelty_score": 0.45,
+    "promotion_history": [],
+    "regime_applicability": [
+      "macro_transition",
+      "bear_unwind",
+      "calm_carry"
+    ],
+    "required_conditions": [
+      "Policy surprise present",
+      "Rates-FX co-movement above baseline"
+    ],
+    "required_datasets": [
+      "dxy_return_5",
+      "fed_surprise",
+      "yield_10y_change_5"
+    ],
+    "required_evidence": [
+      "Program A2 macro mediation",
+      "Program C trigger registry"
+    ],
+    "required_features": [
+      "fed_surprise",
+      "yield_10y_change_5",
+      "dxy_return_5"
+    ],
+    "research_cost": 0.604,
+    "research_priority": 0.459,
+    "research_question": "Can policy repricing chain mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.63,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program A2 macro mediation",
+      "Program C trigger registry"
+    ],
+    "validation_cost": 0.6795,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.61,
+    "confidence_prior": 0.59,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.71,
+    "economic_rationale": "Strategic dependencies create cascade chains where early actor decisions alter downstream participant constraints.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Confidence calibration is weak under transition-risk scoring.",
+      "Robustness under stress/event subsets is weaker than at least one simpler baseline."
+    ],
+    "expected_information_gain": 0.502,
+    "expected_institutional_value": 0.5787,
+    "expected_regimes": [
+      "macro_transition",
+      "crisis_dislocation",
+      "bull_trend"
+    ],
+    "expected_robustness": 0.54,
+    "failure_catalogue": [
+      "Confidence calibration is weak under transition-risk scoring.",
+      "Robustness under stress/event subsets is weaker than at least one simpler baseline."
+    ],
+    "failure_risk": 0.51,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0006"
+    ],
+    "market_mechanism": "Cascade initiators (market_makers, macro_hedge_funds, etf_investors) shift strategic network state and transition probabilities.",
+    "mechanism_type": "decision_cascade",
+    "name": "Institutional Decision Cascade Mechanism",
+    "novelty_score": 0.51,
+    "promotion_history": [],
+    "regime_applicability": [
+      "macro_transition",
+      "crisis_dislocation",
+      "bull_trend"
+    ],
+    "required_conditions": [
+      "Initiator cohort activation",
+      "Dependency graph connectivity intact"
+    ],
+    "required_datasets": [
+      "dxy_return_1",
+      "forward_expectation",
+      "macro_pressure"
+    ],
+    "required_evidence": [
+      "Program B2 strategic interaction matrix",
+      "Program C integrated causal flow"
+    ],
+    "required_features": [
+      "forward_expectation",
+      "macro_pressure",
+      "dxy_return_1"
+    ],
+    "research_cost": 0.644,
+    "research_priority": 0.4826,
+    "research_question": "Can institutional decision cascade mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.67,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program B2 strategic interaction matrix",
+      "Program C integrated causal flow"
+    ],
+    "validation_cost": 0.7245,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0010",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.6,
+    "confidence_prior": 0.61,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.73,
+    "economic_rationale": "Persistent directed information chains can generate synchronized repricing across linked markets.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Confidence calibration is weak under transition-risk scoring."
+    ],
+    "expected_information_gain": 0.5085,
+    "expected_institutional_value": 0.594,
+    "expected_regimes": [
+      "macro_transition",
+      "range_compression",
+      "bull_trend"
+    ],
+    "expected_robustness": 0.56,
+    "failure_catalogue": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Confidence calibration is weak under transition-risk scoring."
+    ],
+    "failure_risk": 0.5,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0001",
+      "IKROS-PF1-PRINCIPLE-0002"
+    ],
+    "market_mechanism": "Stable edges (dxy_return_5->dxy_return_20, dxy_return_5->forward_expectation, macro_pressure->dxy_return_20, macro_pressure->forward_expectation) propagate information with regime-dependent intensity.",
+    "mechanism_type": "information_cascade",
+    "name": "Cross-Asset Information Cascade Mechanism",
+    "novelty_score": 0.5,
+    "promotion_history": [],
+    "regime_applicability": [
+      "macro_transition",
+      "range_compression",
+      "bull_trend"
+    ],
+    "required_conditions": [
+      "Directed edge confidence above threshold",
+      "Regime overlay alignment"
+    ],
+    "required_datasets": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "forward_expectation",
+      "macro_pressure"
+    ],
+    "required_evidence": [
+      "Program A3 confidence-weighted edge registry",
+      "Program F topology axioms"
+    ],
+    "required_features": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "macro_pressure",
+      "forward_expectation"
+    ],
+    "research_cost": 0.64,
+    "research_priority": 0.4953,
+    "research_question": "Can cross-asset information cascade mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.69,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program A3 confidence-weighted edge registry",
+      "Program F topology axioms"
+    ],
+    "validation_cost": 0.72,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0011",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.58,
+    "confidence_prior": 0.57,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.69,
+    "economic_rationale": "Participant objective shifts across regimes alter capital-flow competition/cooperation structure.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "Robustness under stress/event subsets is weaker than at least one simpler baseline."
+    ],
+    "expected_information_gain": 0.511,
+    "expected_institutional_value": 0.5688,
+    "expected_regimes": [
+      "calm_carry",
+      "macro_transition",
+      "crisis_dislocation"
+    ],
+    "expected_robustness": 0.52,
+    "failure_catalogue": [
+      "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "Robustness under stress/event subsets is weaker than at least one simpler baseline."
+    ],
+    "failure_risk": 0.48,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0002"
+    ],
+    "market_mechanism": "Ecology-state shifts modify dominant flow pathways and liquidity absorption capacity.",
+    "mechanism_type": "adaptive_ecology_shift",
+    "name": "Adaptive Ecology Shift Mechanism",
+    "novelty_score": 0.53,
+    "promotion_history": [],
+    "regime_applicability": [
+      "calm_carry",
+      "macro_transition",
+      "crisis_dislocation"
+    ],
+    "required_conditions": [
+      "Participant role rotation observed",
+      "Interaction-network rewiring signal present"
+    ],
+    "required_datasets": [
+      "dxy_return_20",
+      "regime_vol_20",
+      "yield_curve_10y_3m"
+    ],
+    "required_evidence": [
+      "Program B1 adaptive behaviour report",
+      "Program A3 regime-specific topology"
+    ],
+    "required_features": [
+      "regime_vol_20",
+      "dxy_return_20",
+      "yield_curve_10y_3m"
+    ],
+    "research_cost": 0.632,
+    "research_priority": 0.4777,
+    "research_question": "Can adaptive ecology shift mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.65,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program B1 adaptive behaviour report",
+      "Program A3 regime-specific topology"
+    ],
+    "validation_cost": 0.711,
+    "validation_history": [],
+    "version": "1.0.0"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0012",
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion."
+    ],
+    "complexity_score": 0.64,
+    "confidence_prior": 0.58,
+    "contradictory_evidence": [],
+    "economic_plausibility": 0.7,
+    "economic_rationale": "Regime transitions emerge through ordered trigger\u2192participant\u2192liquidity\u2192activation chains constrained by institutional architecture.",
+    "expected_capacity": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_decay": "UNSPECIFIED_PRE_VALIDATION",
+    "expected_failure_modes": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "Transition detection accuracy is not superior to simpler baselines."
+    ],
+    "expected_information_gain": 0.4615,
+    "expected_institutional_value": 0.558,
+    "expected_regimes": [
+      "calm_carry__to__bear_unwind",
+      "bear_unwind__to__calm_carry",
+      "range_compression__to__calm_carry"
+    ],
+    "expected_robustness": 0.53,
+    "failure_catalogue": [
+      "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "Transition detection accuracy is not superior to simpler baselines."
+    ],
+    "failure_risk": 0.54,
+    "institutional_lineage": [
+      "IKROS-PF1-PRINCIPLE-0001",
+      "IKROS-PF1-PRINCIPLE-0006",
+      "IKROS-PF1-PRINCIPLE-0010"
+    ],
+    "market_mechanism": "Transition timelines encode deterministic stage progression with regime-specific trigger signatures.",
+    "mechanism_type": "regime_transition_chain",
+    "name": "Institutional Regime Transition Chain Mechanism",
+    "novelty_score": 0.43,
+    "promotion_history": [],
+    "regime_applicability": [
+      "calm_carry__to__bear_unwind",
+      "bear_unwind__to__calm_carry",
+      "range_compression__to__calm_carry"
+    ],
+    "required_conditions": [
+      "Ordered stage progression observed",
+      "No contradiction to architecture constraints"
+    ],
+    "required_datasets": [
+      "dxy_return_5",
+      "macro_pressure",
+      "regime_vol_20",
+      "xau_return_1"
+    ],
+    "required_evidence": [
+      "Program C transition timeline catalogue",
+      "Program D falsification report",
+      "Program F constraints"
+    ],
+    "required_features": [
+      "xau_return_1",
+      "macro_pressure",
+      "dxy_return_5",
+      "regime_vol_20"
+    ],
+    "research_cost": 0.656,
+    "research_priority": 0.4561,
+    "research_question": "Can institutional regime transition chain mechanism generate durable, regime-aware, institutionally explainable alpha mechanisms in XAU/USD?",
+    "scientific_support": 0.66,
+    "status": "DISCOVERED",
+    "supporting_evidence": [
+      "Program C transition timeline catalogue",
+      "Program D falsification report",
+      "Program F constraints"
+    ],
+    "validation_cost": 0.738,
+    "validation_history": [],
+    "version": "1.0.0"
+  }
+]

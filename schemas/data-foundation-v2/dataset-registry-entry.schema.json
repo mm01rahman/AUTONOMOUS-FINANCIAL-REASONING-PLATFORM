@@ -1,0 +1,80 @@
+{
+  "description": "Registry summary for the latest version of a dataset.",
+  "properties": {
+    "cadence": {
+      "title": "Cadence",
+      "type": "string"
+    },
+    "confidence_score": {
+      "title": "Confidence Score",
+      "type": "number"
+    },
+    "covered_variables": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Covered Variables",
+      "type": "array"
+    },
+    "dataset_id": {
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "domain": {
+      "title": "Domain",
+      "type": "string"
+    },
+    "manifest_path": {
+      "title": "Manifest Path",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "provider": {
+      "title": "Provider",
+      "type": "string"
+    },
+    "quality_score": {
+      "title": "Quality Score",
+      "type": "number"
+    },
+    "storage_path": {
+      "title": "Storage Path",
+      "type": "string"
+    },
+    "supported_mechanisms": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supported Mechanisms",
+      "type": "array"
+    },
+    "version_id": {
+      "title": "Version Id",
+      "type": "string"
+    },
+    "work_package": {
+      "title": "Work Package",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "name",
+    "version_id",
+    "provider",
+    "domain",
+    "cadence",
+    "work_package",
+    "storage_path",
+    "manifest_path",
+    "quality_score",
+    "confidence_score",
+    "covered_variables",
+    "supported_mechanisms"
+  ],
+  "title": "DatasetRegistryEntry",
+  "type": "object"
+}

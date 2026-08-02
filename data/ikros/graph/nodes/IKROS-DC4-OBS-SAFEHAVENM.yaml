@@ -1,0 +1,13 @@
+attributes: {}
+confidence: 0.2587
+created_at: '2026-08-02T15:13:39.154629+00:00'
+ikros_id: IKROS-DC4-OBS-SAFEHAVENM
+label: 'DC4 Observability: safe_haven_migration (25%)'
+node_id: IKROS-DC4-OBS-SAFEHAVENM
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

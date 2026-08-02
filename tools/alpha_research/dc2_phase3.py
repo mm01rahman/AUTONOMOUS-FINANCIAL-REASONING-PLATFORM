@@ -45,7 +45,9 @@ def _select_campaign_pipeline(
 ) -> ResearchCampaign:
     kind_set = set(task_kinds)
     filtered = [task for task in campaign.tasks if task.kind in kind_set]
-    ordered = sorted(filtered, key=lambda task: task_kinds.index(task.kind) if task.kind in task_kinds else 999)
+    ordered = sorted(
+        filtered, key=lambda task: task_kinds.index(task.kind) if task.kind in task_kinds else 999
+    )
     for idx, task in enumerate(ordered):
         task.depends_on = [ordered[idx - 1].task_id] if idx > 0 else []
     campaign.tasks = ordered
@@ -87,12 +89,20 @@ def run_dc2_phase3_campaign(repo_root: Path) -> dict[str, Any]:
     orchestrator = ResearchOrchestrator(base_dir=resolved_base)
 
     spec = _default_campaign_spec()
-    research_question = ResearchQuestion.from_dict(_with_reproducibility_hash(spec["research_question_primary"]))
+    research_question = ResearchQuestion.from_dict(
+        _with_reproducibility_hash(spec["research_question_primary"])
+    )
     experiment = Experiment.from_dict(_with_reproducibility_hash(spec["experiment"]))
 
     task_payloads: dict[str, Any] = {
-        TaskKind.RESEARCH_QUESTION.value: {"entity_type": "ResearchQuestion", "entity": research_question.to_dict()},
-        TaskKind.EXPERIMENT_REGISTRATION.value: {"entity_type": "Experiment", "entity": experiment.to_dict()},
+        TaskKind.RESEARCH_QUESTION.value: {
+            "entity_type": "ResearchQuestion",
+            "entity": research_question.to_dict(),
+        },
+        TaskKind.EXPERIMENT_REGISTRATION.value: {
+            "entity_type": "Experiment",
+            "entity": experiment.to_dict(),
+        },
     }
     campaign = orchestrator.build_campaign(
         title=str(spec["title"]),
@@ -125,7 +135,9 @@ def run_dc2_phase3_campaign(repo_root: Path) -> dict[str, Any]:
 
     output_dir = repo_root / DC2_PHASE3_DIR
     output_dir.mkdir(parents=True, exist_ok=True)
-    report_paths = emit_dc2_phase3_reports(analysis, campaign_result=report.to_dict(), repo_root=repo_root)
+    report_paths = emit_dc2_phase3_reports(
+        analysis, campaign_result=report.to_dict(), repo_root=repo_root
+    )
 
     for rq_secondary in spec["research_questions_secondary"]:
         rq_id = str(rq_secondary["ikros_id"])

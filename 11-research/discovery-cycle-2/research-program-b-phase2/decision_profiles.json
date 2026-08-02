@@ -1,0 +1,266 @@
+{
+  "bullion_banks": {
+    "belief_update_process": "flow_balancing",
+    "confidence": 0.92,
+    "decision_constraints": "balance_sheet",
+    "decision_objectives": "Warehouse flow, manage basis exposure, intermediate OTC and futures demand.",
+    "ecology_role": "ecology_driver",
+    "failure_modes": "Funding stress, basis breaks, concentrated client flow shocks.",
+    "historical_examples": "Most important during USD and forward-basis dislocations.",
+    "information_sources": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "forward_expectation",
+      "xau_return_1"
+    ],
+    "label": "Bullion Banks",
+    "participant": "bullion_banks",
+    "reaction_score": 0.76,
+    "reaction_speed": "medium",
+    "typical_responses_by_regime": {
+      "bear_unwind": "Unwind inventories and funding-sensitive structures.",
+      "bull_trend": "Warehouse trend-following demand and manage forward inventory.",
+      "calm_carry": "Monetize stable basis conditions.",
+      "crisis_dislocation": "Funding and basis stress make them critical relays.",
+      "macro_transition": "Translate macro repricing into forward/spot market structure.",
+      "range_compression": "Optimize balance sheet rather than directional expression."
+    }
+  },
+  "central_banks": {
+    "belief_update_process": "macro_scenario",
+    "confidence": 0.92,
+    "decision_constraints": "policy_credibility",
+    "decision_objectives": "Anchor inflation expectations, manage reserves, preserve policy credibility.",
+    "ecology_role": "ecology_driver",
+    "failure_modes": "Policy surprise misread, reserve defense constraints, delayed response to inflation stress.",
+    "historical_examples": "Dominant at macro turning points, inflation shocks, and policy regime shifts.",
+    "information_sources": [
+      "fed_surprise",
+      "macro_pressure",
+      "yield_10y_change_5",
+      "yield_curve_10y_3m"
+    ],
+    "label": "Central Banks",
+    "participant": "central_banks",
+    "reaction_score": 0.66,
+    "reaction_speed": "slow",
+    "typical_responses_by_regime": {
+      "bear_unwind": "Higher real-rate pressure dominates reserve demand.",
+      "bull_trend": "Policy stance matters less than persistent investor and CTA trend reinforcement.",
+      "calm_carry": "Steady policy backdrop suppresses urgent gold demand.",
+      "crisis_dislocation": "Policy and reserve credibility become central network anchors.",
+      "macro_transition": "Primary drivers through policy-path repricing.",
+      "range_compression": "Policy uncertainty is low and participant interactions are muted."
+    }
+  },
+  "commercial_hedgers": {
+    "belief_update_process": "hedge_optimization",
+    "confidence": 0.92,
+    "decision_constraints": "mandate_and_liquidity",
+    "decision_objectives": "Reduce operating PnL volatility and manage physical exposure.",
+    "ecology_role": "ecology_driver",
+    "failure_modes": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+    "historical_examples": "Most visible during term-structure stress and producer margin compression.",
+    "information_sources": [
+      "forward_expectation",
+      "xau_return_1",
+      "yield_30y_change_20"
+    ],
+    "label": "Commercial Hedgers",
+    "participant": "commercial_hedgers",
+    "reaction_score": 0.76,
+    "reaction_speed": "medium",
+    "typical_responses_by_regime": {
+      "bear_unwind": "Reduce hedges or monetize prior protection.",
+      "bull_trend": "Increase tactical hedging as upside persists.",
+      "calm_carry": "Optimize carry and financing through forward structures.",
+      "crisis_dislocation": "Prioritize balance-sheet protection over optimization.",
+      "macro_transition": "Re-evaluate hedge structures as macro carry changes.",
+      "range_compression": "Maintain baseline hedges with little directional urgency."
+    }
+  },
+  "ctas": {
+    "belief_update_process": "systematic_trend",
+    "confidence": 0.92,
+    "decision_constraints": "model_rules",
+    "decision_objectives": "Exploit persistent trends and convexity in macro futures and metals.",
+    "ecology_role": "ecology_driver",
+    "failure_modes": "Whipsaws, false breakouts, crowded trend reversals.",
+    "historical_examples": "Most influential after macro transitions convert into persistent price trends.",
+    "information_sources": [
+      "dxy_return_20",
+      "forward_expectation",
+      "xau_return_1"
+    ],
+    "label": "Commodity Trading Advisors",
+    "participant": "ctas",
+    "reaction_score": 0.76,
+    "reaction_speed": "medium",
+    "typical_responses_by_regime": {
+      "bear_unwind": "Reverse long exposure and accelerate unwind.",
+      "bull_trend": "Scale into trend continuation and amplify directional persistence.",
+      "calm_carry": "Lower participation because trends are muted.",
+      "crisis_dislocation": "Can reinforce both crash and rebound once trend rules trigger.",
+      "macro_transition": "Join after directional persistence is established.",
+      "range_compression": "Low engagement because breakout signals are absent."
+    }
+  },
+  "dealers": {
+    "belief_update_process": "flow_balancing",
+    "confidence": 0.92,
+    "decision_constraints": "balance_sheet",
+    "decision_objectives": "Absorb client flow while preserving inventory and spread economics.",
+    "ecology_role": "ecology_driver",
+    "failure_modes": "Inventory saturation, spread blowout, procyclical de-risking.",
+    "historical_examples": "Critical in transition phases when information must be warehoused before redistribution.",
+    "information_sources": [
+      "dxy_return_1",
+      "dxy_return_5",
+      "macro_pressure",
+      "xau_return_1"
+    ],
+    "label": "Dealers",
+    "participant": "dealers",
+    "reaction_score": 0.76,
+    "reaction_speed": "medium",
+    "typical_responses_by_regime": {
+      "bear_unwind": "Transmit de-risking across client channels.",
+      "bull_trend": "Distribute directional client demand while protecting inventory.",
+      "calm_carry": "Warehouse balanced two-way flow efficiently.",
+      "crisis_dislocation": "Become bottlenecks as balance-sheet capacity shrinks.",
+      "macro_transition": "Intermediate rapid portfolio reallocation across participants.",
+      "range_compression": "Facilitate mean-reverting two-way flow."
+    }
+  },
+  "etf_investors": {
+    "belief_update_process": "allocation_narrative",
+    "confidence": 0.92,
+    "decision_constraints": "mandate_and_liquidity",
+    "decision_objectives": "Allocate to gold as strategic hedge, inflation diversifier, or safe haven.",
+    "ecology_role": "ecology_driver",
+    "failure_modes": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+    "historical_examples": "Most active during fear-driven allocation cycles and inflation hedging episodes.",
+    "information_sources": [
+      "forward_expectation",
+      "geo_severity",
+      "xau_return_1"
+    ],
+    "label": "ETF Investors",
+    "participant": "etf_investors",
+    "reaction_score": 0.8,
+    "reaction_speed": "medium",
+    "typical_responses_by_regime": {
+      "bear_unwind": "Redeem exposure after thesis deterioration.",
+      "bull_trend": "Increase strategic allocations after confirmation.",
+      "calm_carry": "Strategic flows dominate over tactical changes.",
+      "crisis_dislocation": "Add to safe-haven positions after stress confirmation.",
+      "macro_transition": "Respond after thesis gains institutional legitimacy.",
+      "range_compression": "Strategic but inactive."
+    }
+  },
+  "macro_hedge_funds": {
+    "belief_update_process": "macro_scenario",
+    "confidence": 0.92,
+    "decision_constraints": "mandate_and_liquidity",
+    "decision_objectives": "Express macro theses across rates, FX, commodities, and safe-haven trades.",
+    "ecology_role": "ecology_driver",
+    "failure_modes": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+    "historical_examples": "Dominant during macro transitions, inflation repricing, and policy shocks.",
+    "information_sources": [
+      "dxy_return_1",
+      "fed_surprise",
+      "macro_pressure",
+      "yield_10y_change_5"
+    ],
+    "label": "Macro Hedge Funds",
+    "participant": "macro_hedge_funds",
+    "reaction_score": 0.92,
+    "reaction_speed": "fast",
+    "typical_responses_by_regime": {
+      "bear_unwind": "Rotate toward USD/rates expressions over gold.",
+      "bull_trend": "Express pro-gold macro thesis via cross-asset allocations.",
+      "calm_carry": "Prefer relative-value expressions.",
+      "crisis_dislocation": "Aggressively reallocate across gold, USD, and rates.",
+      "macro_transition": "Fastest tactical reallocators at narrative turning points.",
+      "range_compression": "Wait for cleaner macro asymmetry."
+    }
+  },
+  "market_makers": {
+    "belief_update_process": "microstructure_state",
+    "confidence": 0.92,
+    "decision_constraints": "flow_toxicity",
+    "decision_objectives": "Earn spread, manage adverse selection, maintain quoting franchise.",
+    "ecology_role": "ecology_driver",
+    "failure_modes": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+    "historical_examples": "Strong in calm carry/range regimes, defensive in crisis dislocation.",
+    "information_sources": [
+      "dxy_return_1",
+      "geo_severity",
+      "xau_return_1"
+    ],
+    "label": "Market Makers",
+    "participant": "market_makers",
+    "reaction_score": 0.98,
+    "reaction_speed": "intraday",
+    "typical_responses_by_regime": {
+      "bear_unwind": "Tighten risk, manage adverse flow imbalances.",
+      "bull_trend": "Provide liquidity but shorten quote horizons.",
+      "calm_carry": "Deepest liquidity and narrowest spreads.",
+      "crisis_dislocation": "Withdraw liquidity and widen spreads sharply.",
+      "macro_transition": "Adjust depth as information arrival accelerates.",
+      "range_compression": "Dominate microstructure with deepest continuous liquidity."
+    }
+  },
+  "retail_traders": {
+    "belief_update_process": "hedge_optimization",
+    "confidence": 0.92,
+    "decision_constraints": "mandate_and_liquidity",
+    "decision_objectives": "Capture short-horizon price action or express discretionary macro sentiment.",
+    "ecology_role": "ecology_driver",
+    "failure_modes": "Buying tops, selling troughs, liquidity chasing.",
+    "historical_examples": "Most active after public narratives become obvious and price momentum is visible.",
+    "information_sources": [
+      "geo_severity",
+      "xau_return_1"
+    ],
+    "label": "Retail Traders",
+    "participant": "retail_traders",
+    "reaction_score": 0.76,
+    "reaction_speed": "medium",
+    "typical_responses_by_regime": {
+      "bear_unwind": "Late liquidation after visible breakdown.",
+      "bull_trend": "Join once momentum is visible.",
+      "calm_carry": "Attention fades without visible volatility.",
+      "crisis_dislocation": "Chase fear-driven moves late in the cycle.",
+      "macro_transition": "Mostly reactive, not initiators.",
+      "range_compression": "Fade visibility due to low excitement."
+    }
+  },
+  "safe_haven_capital_flows": {
+    "belief_update_process": "allocation_narrative",
+    "confidence": 0.92,
+    "decision_constraints": "mandate_and_liquidity",
+    "decision_objectives": "Protect capital under systemic uncertainty and preserve real purchasing power.",
+    "ecology_role": "ecology_driver",
+    "failure_modes": "Crowding into same hedge, late panic allocation, reversal after stress normalization.",
+    "historical_examples": "Strongest in crisis dislocation and geopolitical shock regimes.",
+    "information_sources": [
+      "dxy_return_1",
+      "geo_severity",
+      "macro_pressure",
+      "yield_curve_10y_3m"
+    ],
+    "label": "Safe Haven Capital Flows",
+    "participant": "safe_haven_capital_flows",
+    "reaction_score": 0.8,
+    "reaction_speed": "medium",
+    "typical_responses_by_regime": {
+      "bear_unwind": "Retreat as stress premium falls.",
+      "bull_trend": "Less dominant unless trend is fear-driven.",
+      "calm_carry": "Remain dormant.",
+      "crisis_dislocation": "Most dominant participant during systemic stress.",
+      "macro_transition": "Rise when macro transition overlaps with systemic fear.",
+      "range_compression": "Inactive in absence of stress."
+    }
+  }
+}

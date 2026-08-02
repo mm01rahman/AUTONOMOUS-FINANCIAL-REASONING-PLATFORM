@@ -1,0 +1,40 @@
+{
+  "avg_observation_completeness": 0.1806,
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0032",
+  "graph_edges_created": 13,
+  "graph_nodes_created": 13,
+  "immediate_free_acquisitions": [
+    "DS-001",
+    "DS-003",
+    "DS-007",
+    "DS-009",
+    "DS-010",
+    "DS-011",
+    "DS-012",
+    "DS-018",
+    "DS-019"
+  ],
+  "mechanism_count": 12,
+  "mechanisms_blocked": 11,
+  "missing_datasets": 20,
+  "new_feature_families": 7,
+  "new_features_total": 30,
+  "p1_datasets": 14,
+  "promote_now": false,
+  "report_paths": {
+    "arb_recommendation": "11-research\\discovery-cycle-4\\institutional-market-observability\\ARB_RECOMMENDATION_DC4.md",
+    "campaign_result": "11-research\\discovery-cycle-4\\institutional-market-observability\\dc4_campaign_result.json",
+    "data_foundation_v2_spec": "11-research\\discovery-cycle-4\\institutional-market-observability\\DATA_FOUNDATION_V2_SPECIFICATION.md",
+    "data_source_registry": "11-research\\discovery-cycle-4\\institutional-market-observability\\INSTITUTIONAL_DATA_SOURCE_REGISTRY.md",
+    "dataset_acquisition_roadmap": "11-research\\discovery-cycle-4\\institutional-market-observability\\DATASET_ACQUISITION_ROADMAP.md",
+    "dataset_gap_report": "11-research\\discovery-cycle-4\\institutional-market-observability\\DATASET_GAP_REPORT.md",
+    "feature_expansion_roadmap": "11-research\\discovery-cycle-4\\institutional-market-observability\\FEATURE_EXPANSION_ROADMAP.md",
+    "market_state_variable_atlas": "11-research\\discovery-cycle-4\\institutional-market-observability\\MARKET_STATE_VARIABLE_ATLAS.md",
+    "observability_dashboard": "11-research\\discovery-cycle-4\\institutional-market-observability\\OBSERVABILITY_DASHBOARD.md",
+    "observability_matrix": "11-research\\discovery-cycle-4\\institutional-market-observability\\OBSERVABILITY_MATRIX.md",
+    "scientific_readiness_report": "11-research\\discovery-cycle-4\\institutional-market-observability\\SCIENTIFIC_READINESS_REPORT.md",
+    "validation_readiness_report": "11-research\\discovery-cycle-4\\institutional-market-observability\\VALIDATION_READINESS_REPORT.md"
+  },
+  "state_variables_identified": 72,
+  "validate_additional_now": false
+}

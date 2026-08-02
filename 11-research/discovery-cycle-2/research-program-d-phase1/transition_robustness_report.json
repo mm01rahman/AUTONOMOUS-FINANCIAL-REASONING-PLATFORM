@@ -1,0 +1,730 @@
+{
+  "hidden_markov_model": {
+    "mean_detection_accuracy": 0.7025,
+    "min_detection_accuracy": 0.0,
+    "scenarios": [
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.0,
+        "scenario": "fomc",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.0
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9474,
+        "scenario": "cpi_proxy",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.9808
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9967,
+        "scenario": "nfp_proxy",
+        "transition_classification_accuracy": 0.3553,
+        "transition_detection_accuracy": 0.516
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9688,
+        "scenario": "global_financial_crisis",
+        "transition_classification_accuracy": 0.5,
+        "transition_detection_accuracy": 0.851
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9677,
+        "scenario": "gold_liquidation_2013",
+        "transition_classification_accuracy": 0.3226,
+        "transition_detection_accuracy": 0.6471
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9167,
+        "scenario": "pandemic_2020",
+        "transition_classification_accuracy": 0.4167,
+        "transition_detection_accuracy": 0.8817
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9821,
+        "scenario": "inflation_repricing_2022",
+        "transition_classification_accuracy": 0.3571,
+        "transition_detection_accuracy": 0.7619
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9583,
+        "scenario": "flash_crash_proxy",
+        "transition_classification_accuracy": 0.3333,
+        "transition_detection_accuracy": 0.6349
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9908,
+        "scenario": "weekend_gap_proxy",
+        "transition_classification_accuracy": 0.3945,
+        "transition_detection_accuracy": 0.5
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9904,
+        "scenario": "liquidity_shock_proxy",
+        "transition_classification_accuracy": 0.4519,
+        "transition_detection_accuracy": 0.8355
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9949,
+        "scenario": "high_volatility",
+        "transition_classification_accuracy": 0.4416,
+        "transition_detection_accuracy": 0.8435
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9955,
+        "scenario": "low_volatility",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.8227
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9974,
+        "scenario": "out_of_sample",
+        "transition_classification_accuracy": 0.4021,
+        "transition_detection_accuracy": 0.7939
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9944,
+        "scenario": "long_replay_window",
+        "transition_classification_accuracy": 0.4213,
+        "transition_detection_accuracy": 0.7659
+      }
+    ]
+  },
+  "institutional_transition_engine_v1": {
+    "mean_detection_accuracy": 0.5466,
+    "min_detection_accuracy": 0.0,
+    "scenarios": [
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.0,
+        "scenario": "fomc",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.0
+      },
+      {
+        "false_transition_rate": 0.9857,
+        "missed_transition_rate": 0.6842,
+        "scenario": "cpi_proxy",
+        "transition_classification_accuracy": 0.3158,
+        "transition_detection_accuracy": 0.5442
+      },
+      {
+        "false_transition_rate": 0.4865,
+        "missed_transition_rate": 0.625,
+        "scenario": "nfp_proxy",
+        "transition_classification_accuracy": 0.0658,
+        "transition_detection_accuracy": 0.524
+      },
+      {
+        "false_transition_rate": 0.798,
+        "missed_transition_rate": 0.375,
+        "scenario": "global_financial_crisis",
+        "transition_classification_accuracy": 0.1875,
+        "transition_detection_accuracy": 0.5625
+      },
+      {
+        "false_transition_rate": 0.5789,
+        "missed_transition_rate": 0.2258,
+        "scenario": "gold_liquidation_2013",
+        "transition_classification_accuracy": 0.4194,
+        "transition_detection_accuracy": 0.5294
+      },
+      {
+        "false_transition_rate": 0.875,
+        "missed_transition_rate": 0.8333,
+        "scenario": "pandemic_2020",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.7419
+      },
+      {
+        "false_transition_rate": 0.7049,
+        "missed_transition_rate": 0.6786,
+        "scenario": "inflation_repricing_2022",
+        "transition_classification_accuracy": 0.0357,
+        "transition_detection_accuracy": 0.6494
+      },
+      {
+        "false_transition_rate": 0.5278,
+        "missed_transition_rate": 0.2917,
+        "scenario": "flash_crash_proxy",
+        "transition_classification_accuracy": 0.0417,
+        "transition_detection_accuracy": 0.5873
+      },
+      {
+        "false_transition_rate": 0.4732,
+        "missed_transition_rate": 0.4587,
+        "scenario": "weekend_gap_proxy",
+        "transition_classification_accuracy": 0.1927,
+        "transition_detection_accuracy": 0.5231
+      },
+      {
+        "false_transition_rate": 0.7743,
+        "missed_transition_rate": 0.3077,
+        "scenario": "liquidity_shock_proxy",
+        "transition_classification_accuracy": 0.25,
+        "transition_detection_accuracy": 0.5543
+      },
+      {
+        "false_transition_rate": 0.7783,
+        "missed_transition_rate": 0.335,
+        "scenario": "high_volatility",
+        "transition_classification_accuracy": 0.3096,
+        "transition_detection_accuracy": 0.5799
+      },
+      {
+        "false_transition_rate": 0.7767,
+        "missed_transition_rate": 0.5695,
+        "scenario": "low_volatility",
+        "transition_classification_accuracy": 0.1166,
+        "transition_detection_accuracy": 0.6318
+      },
+      {
+        "false_transition_rate": 0.7371,
+        "missed_transition_rate": 0.6186,
+        "scenario": "out_of_sample",
+        "transition_classification_accuracy": 0.2139,
+        "transition_detection_accuracy": 0.6512
+      },
+      {
+        "false_transition_rate": 0.7008,
+        "missed_transition_rate": 0.3933,
+        "scenario": "long_replay_window",
+        "transition_classification_accuracy": 0.382,
+        "transition_detection_accuracy": 0.5728
+      }
+    ]
+  },
+  "macro_only_transition_model": {
+    "mean_detection_accuracy": 0.6142,
+    "min_detection_accuracy": 0.0,
+    "scenarios": [
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.0,
+        "scenario": "fomc",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.0
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9474,
+        "scenario": "cpi_proxy",
+        "transition_classification_accuracy": 0.5263,
+        "transition_detection_accuracy": 0.9808
+      },
+      {
+        "false_transition_rate": 0.3577,
+        "missed_transition_rate": 0.2204,
+        "scenario": "nfp_proxy",
+        "transition_classification_accuracy": 0.6151,
+        "transition_detection_accuracy": 0.6821
+      },
+      {
+        "false_transition_rate": 0.7115,
+        "missed_transition_rate": 0.0625,
+        "scenario": "global_financial_crisis",
+        "transition_classification_accuracy": 0.8125,
+        "transition_detection_accuracy": 0.6346
+      },
+      {
+        "false_transition_rate": 0.3953,
+        "missed_transition_rate": 0.1613,
+        "scenario": "gold_liquidation_2013",
+        "transition_classification_accuracy": 0.6129,
+        "transition_detection_accuracy": 0.7412
+      },
+      {
+        "false_transition_rate": 0.7838,
+        "missed_transition_rate": 0.3333,
+        "scenario": "pandemic_2020",
+        "transition_classification_accuracy": 0.5,
+        "transition_detection_accuracy": 0.6452
+      },
+      {
+        "false_transition_rate": 0.6239,
+        "missed_transition_rate": 0.2143,
+        "scenario": "inflation_repricing_2022",
+        "transition_classification_accuracy": 0.5714,
+        "transition_detection_accuracy": 0.632
+      },
+      {
+        "false_transition_rate": 0.561,
+        "missed_transition_rate": 0.25,
+        "scenario": "flash_crash_proxy",
+        "transition_classification_accuracy": 0.5,
+        "transition_detection_accuracy": 0.5397
+      },
+      {
+        "false_transition_rate": 0.3769,
+        "missed_transition_rate": 0.2569,
+        "scenario": "weekend_gap_proxy",
+        "transition_classification_accuracy": 0.5413,
+        "transition_detection_accuracy": 0.6435
+      },
+      {
+        "false_transition_rate": 0.7374,
+        "missed_transition_rate": 0.25,
+        "scenario": "liquidity_shock_proxy",
+        "transition_classification_accuracy": 0.6731,
+        "transition_detection_accuracy": 0.6086
+      },
+      {
+        "false_transition_rate": 0.762,
+        "missed_transition_rate": 0.2944,
+        "scenario": "high_volatility",
+        "transition_classification_accuracy": 0.6447,
+        "transition_detection_accuracy": 0.5982
+      },
+      {
+        "false_transition_rate": 0.7125,
+        "missed_transition_rate": 0.296,
+        "scenario": "low_volatility",
+        "transition_classification_accuracy": 0.3722,
+        "transition_detection_accuracy": 0.6366
+      },
+      {
+        "false_transition_rate": 0.7062,
+        "missed_transition_rate": 0.4253,
+        "scenario": "out_of_sample",
+        "transition_classification_accuracy": 0.5,
+        "transition_detection_accuracy": 0.6267
+      },
+      {
+        "false_transition_rate": 0.67,
+        "missed_transition_rate": 0.4438,
+        "scenario": "long_replay_window",
+        "transition_classification_accuracy": 0.4944,
+        "transition_detection_accuracy": 0.6296
+      }
+    ]
+  },
+  "markov_transition_model": {
+    "mean_detection_accuracy": 0.7025,
+    "min_detection_accuracy": 0.0,
+    "scenarios": [
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.0,
+        "scenario": "fomc",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.0
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9474,
+        "scenario": "cpi_proxy",
+        "transition_classification_accuracy": 0.5263,
+        "transition_detection_accuracy": 0.9808
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9967,
+        "scenario": "nfp_proxy",
+        "transition_classification_accuracy": 0.3651,
+        "transition_detection_accuracy": 0.516
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9688,
+        "scenario": "global_financial_crisis",
+        "transition_classification_accuracy": 0.4688,
+        "transition_detection_accuracy": 0.851
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9677,
+        "scenario": "gold_liquidation_2013",
+        "transition_classification_accuracy": 0.3548,
+        "transition_detection_accuracy": 0.6471
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9167,
+        "scenario": "pandemic_2020",
+        "transition_classification_accuracy": 0.25,
+        "transition_detection_accuracy": 0.8817
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9821,
+        "scenario": "inflation_repricing_2022",
+        "transition_classification_accuracy": 0.3929,
+        "transition_detection_accuracy": 0.7619
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9583,
+        "scenario": "flash_crash_proxy",
+        "transition_classification_accuracy": 0.25,
+        "transition_detection_accuracy": 0.6349
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9908,
+        "scenario": "weekend_gap_proxy",
+        "transition_classification_accuracy": 0.2661,
+        "transition_detection_accuracy": 0.5
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9904,
+        "scenario": "liquidity_shock_proxy",
+        "transition_classification_accuracy": 0.3462,
+        "transition_detection_accuracy": 0.8355
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9949,
+        "scenario": "high_volatility",
+        "transition_classification_accuracy": 0.3452,
+        "transition_detection_accuracy": 0.8435
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9955,
+        "scenario": "low_volatility",
+        "transition_classification_accuracy": 0.2691,
+        "transition_detection_accuracy": 0.8227
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9974,
+        "scenario": "out_of_sample",
+        "transition_classification_accuracy": 0.2036,
+        "transition_detection_accuracy": 0.7939
+      },
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.9944,
+        "scenario": "long_replay_window",
+        "transition_classification_accuracy": 0.1854,
+        "transition_detection_accuracy": 0.7659
+      }
+    ]
+  },
+  "random_transition_baseline": {
+    "mean_detection_accuracy": 0.5963,
+    "min_detection_accuracy": 0.0,
+    "scenarios": [
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.0,
+        "scenario": "fomc",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.0
+      },
+      {
+        "false_transition_rate": 0.974,
+        "missed_transition_rate": 0.4737,
+        "scenario": "cpi_proxy",
+        "transition_classification_accuracy": 0.1579,
+        "transition_detection_accuracy": 0.5921
+      },
+      {
+        "false_transition_rate": 0.4373,
+        "missed_transition_rate": 0.4243,
+        "scenario": "nfp_proxy",
+        "transition_classification_accuracy": 0.2664,
+        "transition_detection_accuracy": 0.5767
+      },
+      {
+        "false_transition_rate": 0.75,
+        "missed_transition_rate": 0.6562,
+        "scenario": "global_financial_crisis",
+        "transition_classification_accuracy": 0.1875,
+        "transition_detection_accuracy": 0.7404
+      },
+      {
+        "false_transition_rate": 0.5385,
+        "missed_transition_rate": 0.6129,
+        "scenario": "gold_liquidation_2013",
+        "transition_classification_accuracy": 0.2581,
+        "transition_detection_accuracy": 0.6118
+      },
+      {
+        "false_transition_rate": 0.8095,
+        "missed_transition_rate": 0.6667,
+        "scenario": "pandemic_2020",
+        "transition_classification_accuracy": 0.0833,
+        "transition_detection_accuracy": 0.7312
+      },
+      {
+        "false_transition_rate": 0.6949,
+        "missed_transition_rate": 0.6786,
+        "scenario": "inflation_repricing_2022",
+        "transition_classification_accuracy": 0.2857,
+        "transition_detection_accuracy": 0.658
+      },
+      {
+        "false_transition_rate": 0.575,
+        "missed_transition_rate": 0.2917,
+        "scenario": "flash_crash_proxy",
+        "transition_classification_accuracy": 0.375,
+        "transition_detection_accuracy": 0.5238
+      },
+      {
+        "false_transition_rate": 0.4832,
+        "missed_transition_rate": 0.2936,
+        "scenario": "weekend_gap_proxy",
+        "transition_classification_accuracy": 0.2018,
+        "transition_detection_accuracy": 0.5185
+      },
+      {
+        "false_transition_rate": 0.8079,
+        "missed_transition_rate": 0.7212,
+        "scenario": "liquidity_shock_proxy",
+        "transition_classification_accuracy": 0.2308,
+        "transition_detection_accuracy": 0.6853
+      },
+      {
+        "false_transition_rate": 0.7987,
+        "missed_transition_rate": 0.6853,
+        "scenario": "high_volatility",
+        "transition_classification_accuracy": 0.2843,
+        "transition_detection_accuracy": 0.6957
+      },
+      {
+        "false_transition_rate": 0.7423,
+        "missed_transition_rate": 0.6233,
+        "scenario": "low_volatility",
+        "transition_classification_accuracy": 0.1166,
+        "transition_detection_accuracy": 0.6957
+      },
+      {
+        "false_transition_rate": 0.7667,
+        "missed_transition_rate": 0.7397,
+        "scenario": "out_of_sample",
+        "transition_classification_accuracy": 0.2552,
+        "transition_detection_accuracy": 0.6704
+      },
+      {
+        "false_transition_rate": 0.75,
+        "missed_transition_rate": 0.7528,
+        "scenario": "long_replay_window",
+        "transition_classification_accuracy": 0.2472,
+        "transition_detection_accuracy": 0.6481
+      }
+    ]
+  },
+  "technical_trend_transition_heuristic": {
+    "mean_detection_accuracy": 0.7227,
+    "min_detection_accuracy": 0.0,
+    "scenarios": [
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.0,
+        "scenario": "fomc",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.0
+      },
+      {
+        "false_transition_rate": 0.9263,
+        "missed_transition_rate": 0.1579,
+        "scenario": "cpi_proxy",
+        "transition_classification_accuracy": 0.3684,
+        "transition_detection_accuracy": 0.7827
+      },
+      {
+        "false_transition_rate": 0.3105,
+        "missed_transition_rate": 0.5691,
+        "scenario": "nfp_proxy",
+        "transition_classification_accuracy": 0.2204,
+        "transition_detection_accuracy": 0.6294
+      },
+      {
+        "false_transition_rate": 0.7333,
+        "missed_transition_rate": 0.75,
+        "scenario": "global_financial_crisis",
+        "transition_classification_accuracy": 0.0312,
+        "transition_detection_accuracy": 0.7788
+      },
+      {
+        "false_transition_rate": 0.2727,
+        "missed_transition_rate": 0.7419,
+        "scenario": "gold_liquidation_2013",
+        "transition_classification_accuracy": 0.2581,
+        "transition_detection_accuracy": 0.6941
+      },
+      {
+        "false_transition_rate": 0.5385,
+        "missed_transition_rate": 0.5,
+        "scenario": "pandemic_2020",
+        "transition_classification_accuracy": 0.25,
+        "transition_detection_accuracy": 0.8602
+      },
+      {
+        "false_transition_rate": 0.52,
+        "missed_transition_rate": 0.7857,
+        "scenario": "inflation_repricing_2022",
+        "transition_classification_accuracy": 0.1786,
+        "transition_detection_accuracy": 0.7532
+      },
+      {
+        "false_transition_rate": 0.3182,
+        "missed_transition_rate": 0.375,
+        "scenario": "flash_crash_proxy",
+        "transition_classification_accuracy": 0.3333,
+        "transition_detection_accuracy": 0.746
+      },
+      {
+        "false_transition_rate": 0.3061,
+        "missed_transition_rate": 0.3761,
+        "scenario": "weekend_gap_proxy",
+        "transition_classification_accuracy": 0.2752,
+        "transition_detection_accuracy": 0.6713
+      },
+      {
+        "false_transition_rate": 0.4762,
+        "missed_transition_rate": 0.6827,
+        "scenario": "liquidity_shock_proxy",
+        "transition_classification_accuracy": 0.1731,
+        "transition_detection_accuracy": 0.8387
+      },
+      {
+        "false_transition_rate": 0.5294,
+        "missed_transition_rate": 0.6345,
+        "scenario": "high_volatility",
+        "transition_classification_accuracy": 0.1777,
+        "transition_detection_accuracy": 0.8355
+      },
+      {
+        "false_transition_rate": 0.4952,
+        "missed_transition_rate": 0.5247,
+        "scenario": "low_volatility",
+        "transition_classification_accuracy": 0.6054,
+        "transition_detection_accuracy": 0.8235
+      },
+      {
+        "false_transition_rate": 0.3118,
+        "missed_transition_rate": 0.5335,
+        "scenario": "out_of_sample",
+        "transition_classification_accuracy": 0.3247,
+        "transition_detection_accuracy": 0.8461
+      },
+      {
+        "false_transition_rate": 0.216,
+        "missed_transition_rate": 0.4494,
+        "scenario": "long_replay_window",
+        "transition_classification_accuracy": 0.3539,
+        "transition_detection_accuracy": 0.8585
+      }
+    ]
+  },
+  "volatility_only_transition_model": {
+    "mean_detection_accuracy": 0.6941,
+    "min_detection_accuracy": 0.0,
+    "scenarios": [
+      {
+        "false_transition_rate": 0.0,
+        "missed_transition_rate": 0.0,
+        "scenario": "fomc",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.0
+      },
+      {
+        "false_transition_rate": 0.8,
+        "missed_transition_rate": 0.1579,
+        "scenario": "cpi_proxy",
+        "transition_classification_accuracy": 0.4737,
+        "transition_detection_accuracy": 0.9286
+      },
+      {
+        "false_transition_rate": 0.4257,
+        "missed_transition_rate": 0.8092,
+        "scenario": "nfp_proxy",
+        "transition_classification_accuracy": 0.1316,
+        "transition_detection_accuracy": 0.5383
+      },
+      {
+        "false_transition_rate": 0.6429,
+        "missed_transition_rate": 0.375,
+        "scenario": "global_financial_crisis",
+        "transition_classification_accuracy": 0.0,
+        "transition_detection_accuracy": 0.7692
+      },
+      {
+        "false_transition_rate": 0.2222,
+        "missed_transition_rate": 0.5484,
+        "scenario": "gold_liquidation_2013",
+        "transition_classification_accuracy": 0.2581,
+        "transition_detection_accuracy": 0.7529
+      },
+      {
+        "false_transition_rate": 0.8462,
+        "missed_transition_rate": 0.8333,
+        "scenario": "pandemic_2020",
+        "transition_classification_accuracy": 0.3333,
+        "transition_detection_accuracy": 0.7742
+      },
+      {
+        "false_transition_rate": 0.6667,
+        "missed_transition_rate": 0.9464,
+        "scenario": "inflation_repricing_2022",
+        "transition_classification_accuracy": 0.125,
+        "transition_detection_accuracy": 0.7446
+      },
+      {
+        "false_transition_rate": 0.5517,
+        "missed_transition_rate": 0.4583,
+        "scenario": "flash_crash_proxy",
+        "transition_classification_accuracy": 0.2083,
+        "transition_detection_accuracy": 0.5714
+      },
+      {
+        "false_transition_rate": 0.3214,
+        "missed_transition_rate": 0.6514,
+        "scenario": "weekend_gap_proxy",
+        "transition_classification_accuracy": 0.2018,
+        "transition_detection_accuracy": 0.588
+      },
+      {
+        "false_transition_rate": 0.5248,
+        "missed_transition_rate": 0.3558,
+        "scenario": "liquidity_shock_proxy",
+        "transition_classification_accuracy": 0.1442,
+        "transition_detection_accuracy": 0.8227
+      },
+      {
+        "false_transition_rate": 0.494,
+        "missed_transition_rate": 0.3604,
+        "scenario": "high_volatility",
+        "transition_classification_accuracy": 0.1675,
+        "transition_detection_accuracy": 0.845
+      },
+      {
+        "false_transition_rate": 0.5517,
+        "missed_transition_rate": 0.9417,
+        "scenario": "low_volatility",
+        "transition_classification_accuracy": 0.2108,
+        "transition_detection_accuracy": 0.8195
+      },
+      {
+        "false_transition_rate": 0.5694,
+        "missed_transition_rate": 0.9201,
+        "scenario": "out_of_sample",
+        "transition_classification_accuracy": 0.2113,
+        "transition_detection_accuracy": 0.7881
+      },
+      {
+        "false_transition_rate": 0.3667,
+        "missed_transition_rate": 0.8933,
+        "scenario": "long_replay_window",
+        "transition_classification_accuracy": 0.2584,
+        "transition_detection_accuracy": 0.7751
+      }
+    ]
+  }
+}

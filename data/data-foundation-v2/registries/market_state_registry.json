@@ -1,0 +1,444 @@
+[
+  {
+    "dataset_ids": [],
+    "domain": "Macro",
+    "status": "UNMAPPED",
+    "variable": "cpi_yoy"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Macro",
+    "status": "UNMAPPED",
+    "variable": "pce_yoy"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Macro",
+    "status": "UNMAPPED",
+    "variable": "nfp_surprise"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Macro",
+    "status": "UNMAPPED",
+    "variable": "gdp_qoq"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Macro",
+    "status": "UNMAPPED",
+    "variable": "unemployment_rate"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Macro",
+    "status": "UNMAPPED",
+    "variable": "economic_surprise_index"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Macro",
+    "status": "UNMAPPED",
+    "variable": "ism_manufacturing"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Macro",
+    "status": "UNMAPPED",
+    "variable": "consumer_confidence"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Rates",
+    "status": "UNMAPPED",
+    "variable": "us_2y_yield"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Rates",
+    "status": "UNMAPPED",
+    "variable": "us_10y_yield"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Rates",
+    "status": "UNMAPPED",
+    "variable": "tips_10y_real_yield"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Rates",
+    "status": "UNMAPPED",
+    "variable": "breakeven_inflation_5y"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Rates",
+    "status": "UNMAPPED",
+    "variable": "breakeven_inflation_10y"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Rates",
+    "status": "UNMAPPED",
+    "variable": "fed_funds_futures_implied_rate"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Rates",
+    "status": "UNMAPPED",
+    "variable": "sofr_futures_front"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Rates",
+    "status": "UNMAPPED",
+    "variable": "dot_plot_median"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "FX",
+    "status": "UNMAPPED",
+    "variable": "dxy_index"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "FX",
+    "status": "UNMAPPED",
+    "variable": "eur_usd"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "FX",
+    "status": "UNMAPPED",
+    "variable": "usd_jpy"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "FX",
+    "status": "UNMAPPED",
+    "variable": "usd_chf"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "FX",
+    "status": "UNMAPPED",
+    "variable": "usd_cny"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "FX",
+    "status": "UNMAPPED",
+    "variable": "dxy_momentum"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "FX",
+    "status": "UNMAPPED",
+    "variable": "dxy_regime"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Gold",
+    "status": "UNMAPPED",
+    "variable": "xau_usd_spot"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Gold",
+    "status": "UNMAPPED",
+    "variable": "xau_usd_1m_future"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Gold",
+    "status": "UNMAPPED",
+    "variable": "xau_usd_3m_future"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Gold",
+    "status": "UNMAPPED",
+    "variable": "gold_lease_rate_1m"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Gold",
+    "status": "UNMAPPED",
+    "variable": "lbma_am_fix"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Gold",
+    "status": "UNMAPPED",
+    "variable": "lbma_pm_fix"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Gold",
+    "status": "UNMAPPED",
+    "variable": "gold_open_interest_comex"
+  },
+  {
+    "dataset_ids": [
+      "DS-001"
+    ],
+    "domain": "Volatility",
+    "status": "OBSERVED",
+    "variable": "vix"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Volatility",
+    "status": "UNMAPPED",
+    "variable": "gvz"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Volatility",
+    "status": "UNMAPPED",
+    "variable": "move_index"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Volatility",
+    "status": "UNMAPPED",
+    "variable": "vxn"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Volatility",
+    "status": "UNMAPPED",
+    "variable": "realized_vol_xau_20d"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Volatility",
+    "status": "UNMAPPED",
+    "variable": "realized_vol_xau_5d"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Volatility",
+    "status": "UNMAPPED",
+    "variable": "vol_regime_indicator"
+  },
+  {
+    "dataset_ids": [
+      "DS-003"
+    ],
+    "domain": "Credit",
+    "status": "OBSERVED",
+    "variable": "ted_spread"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Credit",
+    "status": "UNMAPPED",
+    "variable": "fra_ois_spread"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Credit",
+    "status": "UNMAPPED",
+    "variable": "hy_credit_spread"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Credit",
+    "status": "UNMAPPED",
+    "variable": "ig_credit_spread"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Credit",
+    "status": "UNMAPPED",
+    "variable": "libor_ois_spread"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Liquidity",
+    "status": "UNMAPPED",
+    "variable": "fed_balance_sheet"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Liquidity",
+    "status": "UNMAPPED",
+    "variable": "m2_growth"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Liquidity",
+    "status": "UNMAPPED",
+    "variable": "repo_rate"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Liquidity",
+    "status": "UNMAPPED",
+    "variable": "sofr_rate"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Liquidity",
+    "status": "UNMAPPED",
+    "variable": "excess_reserves"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Liquidity",
+    "status": "UNMAPPED",
+    "variable": "bank_reserve_requirement"
+  },
+  {
+    "dataset_ids": [
+      "DS-007"
+    ],
+    "domain": "Flows",
+    "status": "OBSERVED",
+    "variable": "gld_shares_outstanding"
+  },
+  {
+    "dataset_ids": [
+      "DS-008"
+    ],
+    "domain": "Flows",
+    "status": "OBSERVED",
+    "variable": "iau_shares_outstanding"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Flows",
+    "status": "UNMAPPED",
+    "variable": "etf_creation_redemption_net"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Flows",
+    "status": "UNMAPPED",
+    "variable": "central_bank_gold_purchases_monthly"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Flows",
+    "status": "UNMAPPED",
+    "variable": "comex_warehouse_stock_change"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Positioning",
+    "status": "UNMAPPED",
+    "variable": "cot_leveraged_net"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Positioning",
+    "status": "UNMAPPED",
+    "variable": "cot_asset_manager_net"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Positioning",
+    "status": "UNMAPPED",
+    "variable": "cot_dealer_net"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Positioning",
+    "status": "UNMAPPED",
+    "variable": "cot_other_reportable_net"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Positioning",
+    "status": "UNMAPPED",
+    "variable": "comex_speculative_net_pct_oi"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Options",
+    "status": "UNMAPPED",
+    "variable": "gold_25d_risk_reversal"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Options",
+    "status": "UNMAPPED",
+    "variable": "gold_atm_implied_vol"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Options",
+    "status": "UNMAPPED",
+    "variable": "gvz_term_structure"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Options",
+    "status": "UNMAPPED",
+    "variable": "dealer_gamma_proxy"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Options",
+    "status": "UNMAPPED",
+    "variable": "put_call_ratio_gold"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Microstructure",
+    "status": "UNMAPPED",
+    "variable": "bid_ask_spread_proxy"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Microstructure",
+    "status": "UNMAPPED",
+    "variable": "volume_delta"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Microstructure",
+    "status": "UNMAPPED",
+    "variable": "vwap_deviation"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Microstructure",
+    "status": "UNMAPPED",
+    "variable": "trade_aggressor_ratio"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Microstructure",
+    "status": "UNMAPPED",
+    "variable": "intraday_vol_clustering"
+  },
+  {
+    "dataset_ids": [
+      "DS-017"
+    ],
+    "domain": "Geopolitics_Sentiment",
+    "status": "OBSERVED",
+    "variable": "geopolitical_risk_index"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Geopolitics_Sentiment",
+    "status": "UNMAPPED",
+    "variable": "news_macro_event_score"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Geopolitics_Sentiment",
+    "status": "UNMAPPED",
+    "variable": "us_political_uncertainty_index"
+  },
+  {
+    "dataset_ids": [],
+    "domain": "Geopolitics_Sentiment",
+    "status": "UNMAPPED",
+    "variable": "global_uncertainty_index"
+  }
+]

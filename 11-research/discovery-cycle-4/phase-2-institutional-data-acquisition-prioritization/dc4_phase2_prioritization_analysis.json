@@ -1,0 +1,3001 @@
+{
+  "acquisition_dependency_graph": {
+    "blocking_datasets": [
+      "DS-001",
+      "DS-018",
+      "DS-007",
+      "DS-009",
+      "DS-012",
+      "DS-011",
+      "DS-003",
+      "DS-019",
+      "DS-010"
+    ],
+    "edges": [
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-001",
+        "target": "DS-003"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-001",
+        "target": "DS-011"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-001",
+        "target": "DS-017"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-002",
+        "target": "DS-005"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-002",
+        "target": "DS-006"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-002",
+        "target": "DS-012"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-002",
+        "target": "DS-018"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-002",
+        "target": "DS-019"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-003",
+        "target": "DS-001"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-003",
+        "target": "DS-004"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-003",
+        "target": "DS-017"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-004",
+        "target": "DS-001"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-004",
+        "target": "DS-003"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-004",
+        "target": "DS-002"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-005",
+        "target": "DS-006"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-005",
+        "target": "DS-018"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-005",
+        "target": "DS-012"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-005",
+        "target": "DS-013"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-006",
+        "target": "DS-005"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-006",
+        "target": "DS-018"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-006",
+        "target": "DS-012"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-006",
+        "target": "DS-013"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-007",
+        "target": "DS-009"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-007",
+        "target": "DS-008"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-007",
+        "target": "DS-014"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-008",
+        "target": "DS-007"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-009",
+        "target": "DS-010"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-009",
+        "target": "DS-007"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-009",
+        "target": "DS-014"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-010",
+        "target": "DS-009"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-010",
+        "target": "DS-011"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-011",
+        "target": "DS-001"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-011",
+        "target": "DS-010"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-011",
+        "target": "DS-020"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-012",
+        "target": "DS-018"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-012",
+        "target": "DS-019"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-012",
+        "target": "DS-005"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-012",
+        "target": "DS-006"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-013",
+        "target": "DS-005"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-013",
+        "target": "DS-006"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-013",
+        "target": "DS-012"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-013",
+        "target": "DS-018"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-014",
+        "target": "DS-007"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-014",
+        "target": "DS-009"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-015",
+        "target": "DS-020"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-015",
+        "target": "DS-011"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-015",
+        "target": "DS-016"
+      },
+      {
+        "confidence": 0.76,
+        "relation": "DERIVED_FROM",
+        "source": "DS-015",
+        "target": "DS-020"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-016",
+        "target": "DS-005"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-016",
+        "target": "DS-006"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-016",
+        "target": "DS-015"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-017",
+        "target": "DS-001"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-017",
+        "target": "DS-003"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-017",
+        "target": "DS-014"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-018",
+        "target": "DS-005"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-018",
+        "target": "DS-006"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-018",
+        "target": "DS-012"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-018",
+        "target": "DS-019"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-019",
+        "target": "DS-012"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-019",
+        "target": "DS-018"
+      },
+      {
+        "confidence": 0.6,
+        "relation": "OPTIONAL_WITH",
+        "source": "DS-019",
+        "target": "DS-002"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-020",
+        "target": "DS-015"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "REQUIRED_TOGETHER",
+        "source": "DS-020",
+        "target": "DS-011"
+      }
+    ],
+    "high_leverage_datasets": [
+      "DS-001",
+      "DS-018",
+      "DS-007",
+      "DS-012",
+      "DS-011",
+      "DS-006",
+      "DS-002",
+      "DS-015",
+      "DS-005",
+      "DS-013",
+      "DS-016"
+    ],
+    "nodes": [
+      {
+        "label": "DS-001 VIX Index",
+        "node_id": "DS-001",
+        "priority": 0.521,
+        "tier": "Tier 1"
+      },
+      {
+        "label": "DS-018 US Treasury 2Y Yield (FRED)",
+        "node_id": "DS-018",
+        "priority": 0.505,
+        "tier": "Tier 1"
+      },
+      {
+        "label": "DS-007 GLD ETF Shares Outstanding",
+        "node_id": "DS-007",
+        "priority": 0.4891,
+        "tier": "Tier 1"
+      },
+      {
+        "label": "DS-009 COMEX Non-Commercial Positioning",
+        "node_id": "DS-009",
+        "priority": 0.4751,
+        "tier": "Tier 1"
+      },
+      {
+        "label": "DS-012 Breakeven Inflation Rates (5Y, 10Y)",
+        "node_id": "DS-012",
+        "priority": 0.4741,
+        "tier": "Tier 1"
+      },
+      {
+        "label": "DS-011 Gold Volatility Index (GVZ)",
+        "node_id": "DS-011",
+        "priority": 0.4729,
+        "tier": "Tier 1"
+      },
+      {
+        "label": "DS-006 Fed Funds Futures",
+        "node_id": "DS-006",
+        "priority": 0.4722,
+        "tier": "Tier 4"
+      },
+      {
+        "label": "DS-003 TED Spread",
+        "node_id": "DS-003",
+        "priority": 0.4686,
+        "tier": "Tier 1"
+      },
+      {
+        "label": "DS-002 MOVE Index",
+        "node_id": "DS-002",
+        "priority": 0.4608,
+        "tier": "Tier 4"
+      },
+      {
+        "label": "DS-019 TIPS 10Y Real Yield (FRED)",
+        "node_id": "DS-019",
+        "priority": 0.4497,
+        "tier": "Tier 1"
+      },
+      {
+        "label": "DS-015 Order Flow Imbalance Proxy (VWAP deviation)",
+        "node_id": "DS-015",
+        "priority": 0.4318,
+        "tier": "Tier 4"
+      },
+      {
+        "label": "DS-005 SOFR Futures",
+        "node_id": "DS-005",
+        "priority": 0.4211,
+        "tier": "Tier 4"
+      },
+      {
+        "label": "DS-010 COMEX Dealer Net Position",
+        "node_id": "DS-010",
+        "priority": 0.4172,
+        "tier": "Tier 1"
+      },
+      {
+        "label": "DS-004 FRA/OIS Spread",
+        "node_id": "DS-004",
+        "priority": 0.4164,
+        "tier": "Tier 4"
+      },
+      {
+        "label": "DS-008 IAU ETF Shares Outstanding",
+        "node_id": "DS-008",
+        "priority": 0.4067,
+        "tier": "Tier 3"
+      },
+      {
+        "label": "DS-013 Economic Surprise Index (Citi/Bloomberg)",
+        "node_id": "DS-013",
+        "priority": 0.3839,
+        "tier": "Tier 4"
+      },
+      {
+        "label": "DS-014 Central Bank Gold Purchases (IMF/WGC)",
+        "node_id": "DS-014",
+        "priority": 0.3738,
+        "tier": "Tier 3"
+      },
+      {
+        "label": "DS-017 Geopolitical Risk Index (GPR)",
+        "node_id": "DS-017",
+        "priority": 0.3671,
+        "tier": "Tier 3"
+      },
+      {
+        "label": "DS-016 News and Event Embeddings (NLP)",
+        "node_id": "DS-016",
+        "priority": 0.328,
+        "tier": "Tier 5"
+      },
+      {
+        "label": "DS-020 Intraday Gold Tick Data (LBMA / CME)",
+        "node_id": "DS-020",
+        "priority": 0.2801,
+        "tier": "Tier 5"
+      }
+    ],
+    "shared_dependencies": [
+      {
+        "dataset_id": "DS-001",
+        "mechanism_count": 3,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-018",
+        "mechanism_count": 3,
+        "required_together_count": 3
+      },
+      {
+        "dataset_id": "DS-007",
+        "mechanism_count": 3,
+        "required_together_count": 1
+      },
+      {
+        "dataset_id": "DS-009",
+        "mechanism_count": 2,
+        "required_together_count": 1
+      },
+      {
+        "dataset_id": "DS-012",
+        "mechanism_count": 3,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-011",
+        "mechanism_count": 3,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-006",
+        "mechanism_count": 3,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-003",
+        "mechanism_count": 2,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-002",
+        "mechanism_count": 3,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-019",
+        "mechanism_count": 2,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-015",
+        "mechanism_count": 3,
+        "required_together_count": 1
+      },
+      {
+        "dataset_id": "DS-005",
+        "mechanism_count": 3,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-010",
+        "mechanism_count": 2,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-004",
+        "mechanism_count": 2,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-008",
+        "mechanism_count": 2,
+        "required_together_count": 1
+      },
+      {
+        "dataset_id": "DS-013",
+        "mechanism_count": 3,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-017",
+        "mechanism_count": 1,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-016",
+        "mechanism_count": 3,
+        "required_together_count": 2
+      },
+      {
+        "dataset_id": "DS-020",
+        "mechanism_count": 2,
+        "required_together_count": 2
+      }
+    ]
+  },
+  "arb_recommendation": {
+    "highest_scientific_value_dataset": "DS-001",
+    "highest_validation_impact_dataset": "DS-007",
+    "no_acquisition_performed": true,
+    "no_validation_resumed": true,
+    "ranked_dataset_ids": [
+      "DS-001",
+      "DS-018",
+      "DS-007",
+      "DS-009",
+      "DS-012",
+      "DS-011",
+      "DS-006",
+      "DS-003",
+      "DS-002",
+      "DS-019",
+      "DS-015",
+      "DS-005",
+      "DS-010",
+      "DS-004",
+      "DS-008",
+      "DS-013",
+      "DS-014",
+      "DS-017",
+      "DS-016",
+      "DS-020"
+    ],
+    "recommended_next_action": "Await ARB approval, then implement Data Foundation V2 Tier 1 work packages only. Do not acquire commercial, intraday, or NLP datasets until Tier 1 evidence has been reviewed.",
+    "tier_1_immediate": [
+      "DS-001",
+      "DS-018",
+      "DS-007",
+      "DS-009",
+      "DS-012",
+      "DS-011",
+      "DS-003",
+      "DS-019",
+      "DS-010"
+    ],
+    "tier_2_after_core": [],
+    "tier_3_optional": [
+      "DS-008",
+      "DS-014",
+      "DS-017"
+    ],
+    "tier_4_commercial_only": [
+      "DS-006",
+      "DS-002",
+      "DS-015",
+      "DS-005",
+      "DS-004",
+      "DS-013"
+    ],
+    "tier_5_long_term_research": [
+      "DS-016",
+      "DS-020"
+    ],
+    "top_roi_dataset": "DS-001"
+  },
+  "data_foundation_v2_work_package_plan": [
+    {
+      "acceptance_criteria": [
+        "All FRED series are catalogued with deterministic identifiers and normalized UTC dates.",
+        "Scientific lineage links each series to macro_repricing, expectation_reset, and policy_repricing evidence needs.",
+        "Quality scoring proves historical depth, completeness, and schema stability."
+      ],
+      "datasets": [
+        "DS-001",
+        "DS-003",
+        "DS-012",
+        "DS-018",
+        "DS-019"
+      ],
+      "dependencies": [],
+      "governance_checkpoints": [
+        "ARB sign-off before implementation",
+        "Evidence linkage to Program F axiom Data completeness constrains causal claims"
+      ],
+      "tier": "Tier 1",
+      "title": "Free macro stress core",
+      "validation_requirements": [
+        "Schema checksum repeatability",
+        "Missing-value audit",
+        "Cross-series calendar alignment"
+      ],
+      "wp_id": "DF2-WP-001"
+    },
+    {
+      "acceptance_criteria": [
+        "ETF share and positioning series align to governed weekly/daily cadence.",
+        "Dealer and speculative positioning are linked to blocked mechanism hypotheses.",
+        "All datasets produce reproducible provenance and licensing metadata."
+      ],
+      "datasets": [
+        "DS-007",
+        "DS-009",
+        "DS-010",
+        "DS-011"
+      ],
+      "dependencies": [
+        "DF2-WP-001"
+      ],
+      "governance_checkpoints": [
+        "ARB review of safe_haven_migration and dealer_inventory support claims",
+        "IKROS graph update approval"
+      ],
+      "tier": "Tier 1",
+      "title": "Institutional positioning and ETF flow core",
+      "validation_requirements": [
+        "Cross-source reconciliation",
+        "Participant-class mapping audit",
+        "Regime coverage completeness check"
+      ],
+      "wp_id": "DF2-WP-002"
+    },
+    {
+      "acceptance_criteria": [
+        "Commercial licensing is approved and recorded.",
+        "Rate-path, funding-stress, and macro-surprise series are normalized into a deterministic policy-expectation bundle.",
+        "Phase 4 alpha validation hypotheses gain explicit uncertainty-reduction evidence."
+      ],
+      "datasets": [
+        "DS-002",
+        "DS-004",
+        "DS-005",
+        "DS-006",
+        "DS-013"
+      ],
+      "dependencies": [
+        "DF2-WP-001"
+      ],
+      "governance_checkpoints": [
+        "Commercial licensing approval",
+        "ARB checkpoint on macro evidence uplift before implementation"
+      ],
+      "tier": "Tier 4",
+      "title": "Policy expectation extension",
+      "validation_requirements": [
+        "License compliance audit",
+        "Historical continuity backfill audit",
+        "Signal-stability drift check"
+      ],
+      "wp_id": "DF2-WP-003"
+    },
+    {
+      "acceptance_criteria": [
+        "Structural safe-haven context is recorded without live integrations.",
+        "All monthly datasets carry provenance and lag annotations.",
+        "Optional series improve cross-checking rather than block current research."
+      ],
+      "datasets": [
+        "DS-008",
+        "DS-014",
+        "DS-017"
+      ],
+      "dependencies": [
+        "DF2-WP-002"
+      ],
+      "governance_checkpoints": [
+        "ARB review for optionality and future reuse"
+      ],
+      "tier": "Tier 3",
+      "title": "Structural demand and reserve context",
+      "validation_requirements": [
+        "Lag annotation audit",
+        "Source attribution validation"
+      ],
+      "wp_id": "DF2-WP-004"
+    },
+    {
+      "acceptance_criteria": [
+        "No live feeds; acquisition planning remains offline and governed.",
+        "Intraday and event-level storage budgets are approved before build.",
+        "Decision-cascade evidence paths are explicitly bounded by cost and complexity."
+      ],
+      "datasets": [
+        "DS-015",
+        "DS-016",
+        "DS-020"
+      ],
+      "dependencies": [
+        "DF2-WP-002",
+        "DF2-WP-003"
+      ],
+      "governance_checkpoints": [
+        "ARB approval after Tier 1 and Tier 4 review",
+        "No implementation before dedicated decision-cascade evidence program"
+      ],
+      "tier": "Tier 5",
+      "title": "Microstructure and information cascade research",
+      "validation_requirements": [
+        "Storage and retention forecast",
+        "Operational complexity review",
+        "Proxy-replacement justification"
+      ],
+      "wp_id": "DF2-WP-005"
+    }
+  ],
+  "dataset_count": 20,
+  "dataset_impact_matrix": [
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-001",
+      "supported_families": [
+        "FAM-002",
+        "FAM-003",
+        "FAM-007"
+      ],
+      "target_mechanisms": [
+        "liquidity_withdrawal",
+        "safe_haven_migration",
+        "regime_transition_chain"
+      ],
+      "validation_impact_score": 0.2759
+    },
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-018",
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "validation_impact_score": 0.2788
+    },
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-007",
+      "supported_families": [
+        "FAM-003",
+        "FAM-004"
+      ],
+      "target_mechanisms": [
+        "safe_haven_migration",
+        "etf_flow_propagation",
+        "adaptive_ecology_shift"
+      ],
+      "validation_impact_score": 0.2857
+    },
+    {
+      "blocked_mechanism_count": 2,
+      "dataset_id": "DS-009",
+      "supported_families": [
+        "FAM-002",
+        "FAM-004",
+        "FAM-007"
+      ],
+      "target_mechanisms": [
+        "cross_asset_transition",
+        "dealer_inventory",
+        "adaptive_ecology_shift"
+      ],
+      "validation_impact_score": 0.2175
+    },
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-012",
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "expectation_reset",
+        "macro_repricing",
+        "policy_repricing"
+      ],
+      "validation_impact_score": 0.2788
+    },
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-011",
+      "supported_families": [
+        "FAM-002",
+        "FAM-006"
+      ],
+      "target_mechanisms": [
+        "dealer_inventory",
+        "decision_cascade",
+        "liquidity_withdrawal"
+      ],
+      "validation_impact_score": 0.2828
+    },
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-006",
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "validation_impact_score": 0.2788
+    },
+    {
+      "blocked_mechanism_count": 2,
+      "dataset_id": "DS-003",
+      "supported_families": [
+        "FAM-002",
+        "FAM-003"
+      ],
+      "target_mechanisms": [
+        "liquidity_withdrawal",
+        "safe_haven_migration"
+      ],
+      "validation_impact_score": 0.2099
+    },
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-002",
+      "supported_families": [
+        "FAM-001",
+        "FAM-003",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "macro_repricing",
+        "safe_haven_migration",
+        "policy_repricing"
+      ],
+      "validation_impact_score": 0.2719
+    },
+    {
+      "blocked_mechanism_count": 2,
+      "dataset_id": "DS-019",
+      "supported_families": [
+        "FAM-001",
+        "FAM-004"
+      ],
+      "target_mechanisms": [
+        "cross_asset_transition",
+        "macro_repricing",
+        "policy_repricing"
+      ],
+      "validation_impact_score": 0.2051
+    },
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-015",
+      "supported_families": [
+        "FAM-004",
+        "FAM-006"
+      ],
+      "target_mechanisms": [
+        "cross_asset_transition",
+        "decision_cascade",
+        "information_cascade",
+        "regime_transition_chain"
+      ],
+      "validation_impact_score": 0.2795
+    },
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-005",
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "validation_impact_score": 0.2788
+    },
+    {
+      "blocked_mechanism_count": 2,
+      "dataset_id": "DS-010",
+      "supported_families": [
+        "FAM-002"
+      ],
+      "target_mechanisms": [
+        "dealer_inventory",
+        "adaptive_ecology_shift"
+      ],
+      "validation_impact_score": 0.2175
+    },
+    {
+      "blocked_mechanism_count": 2,
+      "dataset_id": "DS-004",
+      "supported_families": [
+        "FAM-002",
+        "FAM-003"
+      ],
+      "target_mechanisms": [
+        "liquidity_withdrawal",
+        "safe_haven_migration"
+      ],
+      "validation_impact_score": 0.2099
+    },
+    {
+      "blocked_mechanism_count": 2,
+      "dataset_id": "DS-008",
+      "supported_families": [
+        "FAM-003",
+        "FAM-004"
+      ],
+      "target_mechanisms": [
+        "safe_haven_migration",
+        "etf_flow_propagation"
+      ],
+      "validation_impact_score": 0.2163
+    },
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-013",
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "validation_impact_score": 0.2788
+    },
+    {
+      "blocked_mechanism_count": 2,
+      "dataset_id": "DS-014",
+      "supported_families": [
+        "FAM-003",
+        "FAM-007"
+      ],
+      "target_mechanisms": [
+        "safe_haven_migration",
+        "adaptive_ecology_shift"
+      ],
+      "validation_impact_score": 0.2163
+    },
+    {
+      "blocked_mechanism_count": 1,
+      "dataset_id": "DS-017",
+      "supported_families": [
+        "FAM-003"
+      ],
+      "target_mechanisms": [
+        "safe_haven_migration"
+      ],
+      "validation_impact_score": 0.1404
+    },
+    {
+      "blocked_mechanism_count": 3,
+      "dataset_id": "DS-016",
+      "supported_families": [
+        "FAM-004",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "information_cascade",
+        "policy_repricing",
+        "expectation_reset"
+      ],
+      "validation_impact_score": 0.2855
+    },
+    {
+      "blocked_mechanism_count": 2,
+      "dataset_id": "DS-020",
+      "supported_families": [
+        "FAM-006"
+      ],
+      "target_mechanisms": [
+        "decision_cascade",
+        "information_cascade"
+      ],
+      "validation_impact_score": 0.2153
+    }
+  ],
+  "dataset_priority_registry": [
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.5388,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "liquidity_withdrawal",
+        "safe_haven_migration",
+        "regime_transition_chain"
+      ],
+      "burden_score": 0.333,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-001",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.6695,
+      "historical_depth_score": 0.6,
+      "institutional_importance_score": 0.7645,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "VIX Index",
+      "operational_complexity_score": 0.85,
+      "optional_with": [
+        "DS-017"
+      ],
+      "overall_institutional_priority": 0.521,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-003",
+        "DS-011"
+      ],
+      "research_value_score": 0.7034,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.82,
+      "source": "CBOE / FRED",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0001",
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0006",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Directed cross-asset topology governs information propagation",
+        "Topology is regime-dependent but structurally persistent",
+        "High trigger sensitivity without calibration degrades transition validity",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Volatility and depth compression force inventory pass-through across institutional intermediaries.",
+        "Event/stress topology rewires flows toward safe-haven sinks under policy/geopolitical pressure.",
+        "Transition timelines encode deterministic stage progression with regime-specific trigger signatures."
+      ],
+      "supported_families": [
+        "FAM-002",
+        "FAM-003",
+        "FAM-007"
+      ],
+      "target_mechanisms": [
+        "liquidity_withdrawal",
+        "safe_haven_migration",
+        "regime_transition_chain"
+      ],
+      "tier": "Tier 1",
+      "uncertainty_reduction_score": 0.5421,
+      "validation_impact_score": 0.2759
+    },
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.4993,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "burden_score": 0.225,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-018",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.6545,
+      "historical_depth_score": 0.8333,
+      "institutional_importance_score": 0.5145,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "US Treasury 2Y Yield (FRED)",
+      "operational_complexity_score": 0.25,
+      "optional_with": [
+        "DS-019"
+      ],
+      "overall_institutional_priority": 0.505,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-005",
+        "DS-006",
+        "DS-012"
+      ],
+      "research_value_score": 0.6628,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.8167,
+      "source": "FRED",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Macro pressure and policy surprise transmit through DXY-rate relay channels before broad XAU/USD regime shifts.",
+        "Fast participants (market_makers, macro_hedge_funds, etf_investors) update first and propagate belief updates downstream.",
+        "Central-bank signal shock propagates via rates/FX corridor before regime activation."
+      ],
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "tier": "Tier 1",
+      "uncertainty_reduction_score": 0.5576,
+      "validation_impact_score": 0.2788
+    },
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.4821,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "safe_haven_migration",
+        "etf_flow_propagation",
+        "adaptive_ecology_shift"
+      ],
+      "burden_score": 0.225,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-007",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.4595,
+      "historical_depth_score": 0.3667,
+      "institutional_importance_score": 0.602,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "GLD ETF Shares Outstanding",
+      "operational_complexity_score": 0.25,
+      "optional_with": [
+        "DS-008",
+        "DS-014"
+      ],
+      "overall_institutional_priority": 0.4891,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-009"
+      ],
+      "research_value_score": 0.5948,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.7483,
+      "source": "SPDR / SEC filings / FRED",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0001",
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Directed cross-asset topology governs information propagation",
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Event/stress topology rewires flows toward safe-haven sinks under policy/geopolitical pressure.",
+        "Flow propagation from ETF cohorts interacts with relay nodes to amplify transition pathways.",
+        "Ecology-state shifts modify dominant flow pathways and liquidity absorption capacity."
+      ],
+      "supported_families": [
+        "FAM-003",
+        "FAM-004"
+      ],
+      "target_mechanisms": [
+        "safe_haven_migration",
+        "etf_flow_propagation",
+        "adaptive_ecology_shift"
+      ],
+      "tier": "Tier 1",
+      "uncertainty_reduction_score": 0.596,
+      "validation_impact_score": 0.2857
+    },
+    {
+      "alpha_coverage_score": 0.1818,
+      "benefit_score": 0.4657,
+      "blocked_mechanism_count": 2,
+      "blocked_mechanisms_impacted": [
+        "dealer_inventory",
+        "adaptive_ecology_shift"
+      ],
+      "burden_score": 0.2184,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-009",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.617,
+      "historical_depth_score": 0.6667,
+      "institutional_importance_score": 0.5714,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "COMEX Non-Commercial Positioning",
+      "operational_complexity_score": 0.28,
+      "optional_with": [
+        "DS-007",
+        "DS-014"
+      ],
+      "overall_institutional_priority": 0.4751,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.1667,
+      "required_together": [
+        "DS-010"
+      ],
+      "research_value_score": 0.6458,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.7833,
+      "source": "CFTC COT Report",
+      "storage_cost_score": 0.2,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0001",
+        "IKROS-PF1-PRINCIPLE-0002"
+      ],
+      "supported_axioms": [
+        "Directed cross-asset topology governs information propagation",
+        "Topology is regime-dependent but structurally persistent"
+      ],
+      "supported_causal_relationships": [
+        "Directed source\u2192relay\u2192sink propagation anchored by stable edges (dxy_return_5->dxy_return_20, dxy_return_5->forward_expectation, macro_pressure->dxy_return_20).",
+        "Critical interaction pathways (dealers->market_makers, bullion_banks->dealers) govern inventory redistribution speed.",
+        "Ecology-state shifts modify dominant flow pathways and liquidity absorption capacity."
+      ],
+      "supported_families": [
+        "FAM-002",
+        "FAM-004",
+        "FAM-007"
+      ],
+      "target_mechanisms": [
+        "cross_asset_transition",
+        "dealer_inventory",
+        "adaptive_ecology_shift"
+      ],
+      "tier": "Tier 1",
+      "uncertainty_reduction_score": 0.5459,
+      "validation_impact_score": 0.2175
+    },
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.4658,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "expectation_reset",
+        "macro_repricing",
+        "policy_repricing"
+      ],
+      "burden_score": 0.225,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-012",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.5245,
+      "historical_depth_score": 0.3833,
+      "institutional_importance_score": 0.5145,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "Breakeven Inflation Rates (5Y, 10Y)",
+      "operational_complexity_score": 0.25,
+      "optional_with": [
+        "DS-005",
+        "DS-006"
+      ],
+      "overall_institutional_priority": 0.4741,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-018",
+        "DS-019"
+      ],
+      "research_value_score": 0.5903,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.7267,
+      "source": "FRED",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Fast participants (market_makers, macro_hedge_funds, etf_investors) update first and propagate belief updates downstream.",
+        "Macro pressure and policy surprise transmit through DXY-rate relay channels before broad XAU/USD regime shifts.",
+        "Central-bank signal shock propagates via rates/FX corridor before regime activation."
+      ],
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "expectation_reset",
+        "macro_repricing",
+        "policy_repricing"
+      ],
+      "tier": "Tier 1",
+      "uncertainty_reduction_score": 0.5576,
+      "validation_impact_score": 0.2788
+    },
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.4645,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "dealer_inventory",
+        "decision_cascade",
+        "liquidity_withdrawal"
+      ],
+      "burden_score": 0.225,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-011",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.512,
+      "historical_depth_score": 0.3,
+      "institutional_importance_score": 0.5145,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "Gold Volatility Index (GVZ)",
+      "operational_complexity_score": 0.25,
+      "optional_with": [
+        "DS-020"
+      ],
+      "overall_institutional_priority": 0.4729,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-001",
+        "DS-010"
+      ],
+      "research_value_score": 0.5853,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.71,
+      "source": "CBOE",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0001",
+        "IKROS-PF1-PRINCIPLE-0006"
+      ],
+      "supported_axioms": [
+        "Directed cross-asset topology governs information propagation",
+        "High trigger sensitivity without calibration degrades transition validity"
+      ],
+      "supported_causal_relationships": [
+        "Critical interaction pathways (dealers->market_makers, bullion_banks->dealers) govern inventory redistribution speed.",
+        "Cascade initiators (market_makers, macro_hedge_funds, etf_investors) shift strategic network state and transition probabilities.",
+        "Volatility and depth compression force inventory pass-through across institutional intermediaries."
+      ],
+      "supported_families": [
+        "FAM-002",
+        "FAM-006"
+      ],
+      "target_mechanisms": [
+        "dealer_inventory",
+        "decision_cascade",
+        "liquidity_withdrawal"
+      ],
+      "tier": "Tier 1",
+      "uncertainty_reduction_score": 0.5796,
+      "validation_impact_score": 0.2828
+    },
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.4802,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "burden_score": 0.315,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-006",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.55,
+      "future_reuse_score": 0.562,
+      "historical_depth_score": 0.6333,
+      "institutional_importance_score": 0.5145,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "Fed Funds Futures",
+      "operational_complexity_score": 0.25,
+      "optional_with": [
+        "DS-012",
+        "DS-013"
+      ],
+      "overall_institutional_priority": 0.4722,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-005",
+        "DS-018"
+      ],
+      "research_value_score": 0.6184,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.7767,
+      "source": "CME",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Macro pressure and policy surprise transmit through DXY-rate relay channels before broad XAU/USD regime shifts.",
+        "Fast participants (market_makers, macro_hedge_funds, etf_investors) update first and propagate belief updates downstream.",
+        "Central-bank signal shock propagates via rates/FX corridor before regime activation."
+      ],
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "tier": "Tier 4",
+      "uncertainty_reduction_score": 0.5576,
+      "validation_impact_score": 0.2788
+    },
+    {
+      "alpha_coverage_score": 0.1818,
+      "benefit_score": 0.4598,
+      "blocked_mechanism_count": 2,
+      "blocked_mechanisms_impacted": [
+        "liquidity_withdrawal",
+        "safe_haven_migration"
+      ],
+      "burden_score": 0.225,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-003",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.567,
+      "historical_depth_score": 0.6667,
+      "institutional_importance_score": 0.5839,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "TED Spread",
+      "operational_complexity_score": 0.25,
+      "optional_with": [
+        "DS-017"
+      ],
+      "overall_institutional_priority": 0.4686,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.1667,
+      "required_together": [
+        "DS-001",
+        "DS-004"
+      ],
+      "research_value_score": 0.6293,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.8083,
+      "source": "FRED",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0006",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Topology is regime-dependent but structurally persistent",
+        "High trigger sensitivity without calibration degrades transition validity",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Volatility and depth compression force inventory pass-through across institutional intermediaries.",
+        "Event/stress topology rewires flows toward safe-haven sinks under policy/geopolitical pressure."
+      ],
+      "supported_families": [
+        "FAM-002",
+        "FAM-003"
+      ],
+      "target_mechanisms": [
+        "liquidity_withdrawal",
+        "safe_haven_migration"
+      ],
+      "tier": "Tier 1",
+      "uncertainty_reduction_score": 0.504,
+      "validation_impact_score": 0.2099
+    },
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.4997,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "macro_repricing",
+        "safe_haven_migration",
+        "policy_repricing"
+      ],
+      "burden_score": 0.48,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-002",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.55,
+      "future_reuse_score": 0.6745,
+      "historical_depth_score": 0.6333,
+      "institutional_importance_score": 0.5895,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.2,
+      "name": "MOVE Index",
+      "operational_complexity_score": 0.25,
+      "optional_with": [
+        "DS-012",
+        "DS-018",
+        "DS-019"
+      ],
+      "overall_institutional_priority": 0.4608,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-005",
+        "DS-006"
+      ],
+      "research_value_score": 0.6615,
+      "roi_score": 0.7901,
+      "scientific_value_score": 0.7767,
+      "source": "ICE BofA / Bloomberg",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Macro pressure and policy surprise transmit through DXY-rate relay channels before broad XAU/USD regime shifts.",
+        "Event/stress topology rewires flows toward safe-haven sinks under policy/geopolitical pressure.",
+        "Central-bank signal shock propagates via rates/FX corridor before regime activation."
+      ],
+      "supported_families": [
+        "FAM-001",
+        "FAM-003",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "macro_repricing",
+        "safe_haven_migration",
+        "policy_repricing"
+      ],
+      "tier": "Tier 4",
+      "uncertainty_reduction_score": 0.5201,
+      "validation_impact_score": 0.2719
+    },
+    {
+      "alpha_coverage_score": 0.1818,
+      "benefit_score": 0.4393,
+      "blocked_mechanism_count": 2,
+      "blocked_mechanisms_impacted": [
+        "macro_repricing",
+        "policy_repricing"
+      ],
+      "burden_score": 0.225,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-019",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.5245,
+      "historical_depth_score": 0.3833,
+      "institutional_importance_score": 0.5839,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "TIPS 10Y Real Yield (FRED)",
+      "operational_complexity_score": 0.25,
+      "optional_with": [
+        "DS-002"
+      ],
+      "overall_institutional_priority": 0.4497,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.1667,
+      "required_together": [
+        "DS-012",
+        "DS-018"
+      ],
+      "research_value_score": 0.5922,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.7517,
+      "source": "FRED",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0001",
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Directed cross-asset topology governs information propagation",
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Directed source\u2192relay\u2192sink propagation anchored by stable edges (dxy_return_5->dxy_return_20, dxy_return_5->forward_expectation, macro_pressure->dxy_return_20).",
+        "Macro pressure and policy surprise transmit through DXY-rate relay channels before broad XAU/USD regime shifts.",
+        "Central-bank signal shock propagates via rates/FX corridor before regime activation."
+      ],
+      "supported_families": [
+        "FAM-001",
+        "FAM-004"
+      ],
+      "target_mechanisms": [
+        "cross_asset_transition",
+        "macro_repricing",
+        "policy_repricing"
+      ],
+      "tier": "Tier 1",
+      "uncertainty_reduction_score": 0.4778,
+      "validation_impact_score": 0.2051
+    },
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.5059,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "decision_cascade",
+        "information_cascade",
+        "regime_transition_chain"
+      ],
+      "burden_score": 0.6726,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-015",
+      "derived_from": [
+        "DS-020"
+      ],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.55,
+      "future_reuse_score": 0.487,
+      "historical_depth_score": 0.55,
+      "institutional_importance_score": 0.6895,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.5,
+      "name": "Order Flow Imbalance Proxy (VWAP deviation)",
+      "operational_complexity_score": 0.72,
+      "optional_with": [
+        "DS-011",
+        "DS-016"
+      ],
+      "overall_institutional_priority": 0.4318,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-020"
+      ],
+      "research_value_score": 0.6292,
+      "roi_score": 0.6106,
+      "scientific_value_score": 0.81,
+      "source": "Polygon / Tiingo / LBMA",
+      "storage_cost_score": 0.75,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0001",
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0006",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Directed cross-asset topology governs information propagation",
+        "Topology is regime-dependent but structurally persistent",
+        "High trigger sensitivity without calibration degrades transition validity",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Directed source\u2192relay\u2192sink propagation anchored by stable edges (dxy_return_5->dxy_return_20, dxy_return_5->forward_expectation, macro_pressure->dxy_return_20).",
+        "Cascade initiators (market_makers, macro_hedge_funds, etf_investors) shift strategic network state and transition probabilities.",
+        "Stable edges (dxy_return_5->dxy_return_20, dxy_return_5->forward_expectation, macro_pressure->dxy_return_20, macro_pressure->forward_expectation) propagate information with regime-dependent intensity.",
+        "Transition timelines encode deterministic stage progression with regime-specific trigger signatures."
+      ],
+      "supported_families": [
+        "FAM-004",
+        "FAM-006"
+      ],
+      "target_mechanisms": [
+        "cross_asset_transition",
+        "decision_cascade",
+        "information_cascade",
+        "regime_transition_chain"
+      ],
+      "tier": "Tier 4",
+      "uncertainty_reduction_score": 0.5618,
+      "validation_impact_score": 0.2795
+    },
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.4514,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "burden_score": 0.477,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-005",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.55,
+      "future_reuse_score": 0.487,
+      "historical_depth_score": 0.1333,
+      "institutional_importance_score": 0.5145,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.5,
+      "name": "SOFR Futures",
+      "operational_complexity_score": 0.85,
+      "optional_with": [
+        "DS-012",
+        "DS-013"
+      ],
+      "overall_institutional_priority": 0.4211,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-006",
+        "DS-018"
+      ],
+      "research_value_score": 0.5622,
+      "roi_score": 0.7593,
+      "scientific_value_score": 0.6767,
+      "source": "CME",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Macro pressure and policy surprise transmit through DXY-rate relay channels before broad XAU/USD regime shifts.",
+        "Fast participants (market_makers, macro_hedge_funds, etf_investors) update first and propagate belief updates downstream.",
+        "Central-bank signal shock propagates via rates/FX corridor before regime activation."
+      ],
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "tier": "Tier 4",
+      "uncertainty_reduction_score": 0.5576,
+      "validation_impact_score": 0.2788
+    },
+    {
+      "alpha_coverage_score": 0.1818,
+      "benefit_score": 0.403,
+      "blocked_mechanism_count": 2,
+      "blocked_mechanisms_impacted": [
+        "dealer_inventory",
+        "adaptive_ecology_shift"
+      ],
+      "burden_score": 0.2184,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-010",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.4045,
+      "historical_depth_score": 0.3333,
+      "institutional_importance_score": 0.4214,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "COMEX Dealer Net Position",
+      "operational_complexity_score": 0.28,
+      "optional_with": [],
+      "overall_institutional_priority": 0.4172,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.1667,
+      "required_together": [
+        "DS-009",
+        "DS-011"
+      ],
+      "research_value_score": 0.529,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.7167,
+      "source": "CFTC COT Disaggregated",
+      "storage_cost_score": 0.2,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0001",
+        "IKROS-PF1-PRINCIPLE-0002"
+      ],
+      "supported_axioms": [
+        "Directed cross-asset topology governs information propagation",
+        "Topology is regime-dependent but structurally persistent"
+      ],
+      "supported_causal_relationships": [
+        "Critical interaction pathways (dealers->market_makers, bullion_banks->dealers) govern inventory redistribution speed.",
+        "Ecology-state shifts modify dominant flow pathways and liquidity absorption capacity."
+      ],
+      "supported_families": [
+        "FAM-002"
+      ],
+      "target_mechanisms": [
+        "dealer_inventory",
+        "adaptive_ecology_shift"
+      ],
+      "tier": "Tier 1",
+      "uncertainty_reduction_score": 0.5459,
+      "validation_impact_score": 0.2175
+    },
+    {
+      "alpha_coverage_score": 0.1818,
+      "benefit_score": 0.4464,
+      "blocked_mechanism_count": 2,
+      "blocked_mechanisms_impacted": [
+        "liquidity_withdrawal",
+        "safe_haven_migration"
+      ],
+      "burden_score": 0.48,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-004",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.55,
+      "future_reuse_score": 0.532,
+      "historical_depth_score": 0.4333,
+      "institutional_importance_score": 0.5839,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.2,
+      "name": "FRA/OIS Spread",
+      "operational_complexity_score": 0.25,
+      "optional_with": [
+        "DS-002"
+      ],
+      "overall_institutional_priority": 0.4164,
+      "phase1_priority": "P1",
+      "proxy_replacement_score": 0.1667,
+      "required_together": [
+        "DS-001",
+        "DS-003"
+      ],
+      "research_value_score": 0.6031,
+      "roi_score": 0.7079,
+      "scientific_value_score": 0.7617,
+      "source": "Bloomberg / ICE",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0006",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Topology is regime-dependent but structurally persistent",
+        "High trigger sensitivity without calibration degrades transition validity",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Volatility and depth compression force inventory pass-through across institutional intermediaries.",
+        "Event/stress topology rewires flows toward safe-haven sinks under policy/geopolitical pressure."
+      ],
+      "supported_families": [
+        "FAM-002",
+        "FAM-003"
+      ],
+      "target_mechanisms": [
+        "liquidity_withdrawal",
+        "safe_haven_migration"
+      ],
+      "tier": "Tier 4",
+      "uncertainty_reduction_score": 0.504,
+      "validation_impact_score": 0.2099
+    },
+    {
+      "alpha_coverage_score": 0.1818,
+      "benefit_score": 0.4089,
+      "blocked_mechanism_count": 2,
+      "blocked_mechanisms_impacted": [
+        "safe_haven_migration",
+        "etf_flow_propagation"
+      ],
+      "burden_score": 0.225,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-008",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.457,
+      "historical_depth_score": 0.35,
+      "institutional_importance_score": 0.5389,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "IAU ETF Shares Outstanding",
+      "operational_complexity_score": 0.25,
+      "optional_with": [],
+      "overall_institutional_priority": 0.4067,
+      "phase1_priority": "P2",
+      "proxy_replacement_score": 0.1667,
+      "required_together": [
+        "DS-007"
+      ],
+      "research_value_score": 0.5361,
+      "roi_score": 1.0,
+      "scientific_value_score": 0.625,
+      "source": "iShares / SEC",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0001",
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Directed cross-asset topology governs information propagation",
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Event/stress topology rewires flows toward safe-haven sinks under policy/geopolitical pressure.",
+        "Flow propagation from ETF cohorts interacts with relay nodes to amplify transition pathways."
+      ],
+      "supported_families": [
+        "FAM-003",
+        "FAM-004"
+      ],
+      "target_mechanisms": [
+        "safe_haven_migration",
+        "etf_flow_propagation"
+      ],
+      "tier": "Tier 3",
+      "uncertainty_reduction_score": 0.5391,
+      "validation_impact_score": 0.2163
+    },
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.4527,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "burden_score": 0.624,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-013",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.85,
+      "future_reuse_score": 0.532,
+      "historical_depth_score": 0.4333,
+      "institutional_importance_score": 0.4695,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.5,
+      "name": "Economic Surprise Index (Citi/Bloomberg)",
+      "operational_complexity_score": 0.25,
+      "optional_with": [
+        "DS-012",
+        "DS-018"
+      ],
+      "overall_institutional_priority": 0.3839,
+      "phase1_priority": "P2",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-005",
+        "DS-006"
+      ],
+      "research_value_score": 0.5757,
+      "roi_score": 0.6062,
+      "scientific_value_score": 0.6917,
+      "source": "Bloomberg (commercial)",
+      "storage_cost_score": 0.3,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Macro pressure and policy surprise transmit through DXY-rate relay channels before broad XAU/USD regime shifts.",
+        "Fast participants (market_makers, macro_hedge_funds, etf_investors) update first and propagate belief updates downstream.",
+        "Central-bank signal shock propagates via rates/FX corridor before regime activation."
+      ],
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "macro_repricing",
+        "expectation_reset",
+        "policy_repricing"
+      ],
+      "tier": "Tier 4",
+      "uncertainty_reduction_score": 0.5576,
+      "validation_impact_score": 0.2788
+    },
+    {
+      "alpha_coverage_score": 0.1818,
+      "benefit_score": 0.3874,
+      "blocked_mechanism_count": 2,
+      "blocked_mechanisms_impacted": [
+        "safe_haven_migration",
+        "adaptive_ecology_shift"
+      ],
+      "burden_score": 0.3214,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-014",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.407,
+      "historical_depth_score": 0.4333,
+      "institutional_importance_score": 0.4514,
+      "licensing_complexity_score": 0.7,
+      "maintenance_cost_score": 0.2,
+      "name": "Central Bank Gold Purchases (IMF/WGC)",
+      "operational_complexity_score": 0.18,
+      "optional_with": [
+        "DS-007",
+        "DS-009"
+      ],
+      "overall_institutional_priority": 0.3738,
+      "phase1_priority": "P2",
+      "proxy_replacement_score": 0.1667,
+      "required_together": [],
+      "research_value_score": 0.503,
+      "roi_score": 0.9101,
+      "scientific_value_score": 0.6167,
+      "source": "IMF IFS / World Gold Council",
+      "storage_cost_score": 0.2,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Event/stress topology rewires flows toward safe-haven sinks under policy/geopolitical pressure.",
+        "Ecology-state shifts modify dominant flow pathways and liquidity absorption capacity."
+      ],
+      "supported_families": [
+        "FAM-003",
+        "FAM-007"
+      ],
+      "target_mechanisms": [
+        "safe_haven_migration",
+        "adaptive_ecology_shift"
+      ],
+      "tier": "Tier 3",
+      "uncertainty_reduction_score": 0.5391,
+      "validation_impact_score": 0.2163
+    },
+    {
+      "alpha_coverage_score": 0.0909,
+      "benefit_score": 0.3625,
+      "blocked_mechanism_count": 1,
+      "blocked_mechanisms_impacted": [
+        "safe_haven_migration"
+      ],
+      "burden_score": 0.2004,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-017",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.25,
+      "future_reuse_score": 0.5045,
+      "historical_depth_score": 1.0,
+      "institutional_importance_score": 0.3582,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "name": "Geopolitical Risk Index (GPR)",
+      "operational_complexity_score": 0.18,
+      "optional_with": [
+        "DS-014"
+      ],
+      "overall_institutional_priority": 0.3671,
+      "phase1_priority": "P2",
+      "proxy_replacement_score": 0.0833,
+      "required_together": [
+        "DS-001",
+        "DS-003"
+      ],
+      "research_value_score": 0.5387,
+      "roi_score": 0.9571,
+      "scientific_value_score": 0.73,
+      "source": "Caldara & Iacoviello (Fed / academic)",
+      "storage_cost_score": 0.2,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Event/stress topology rewires flows toward safe-haven sinks under policy/geopolitical pressure."
+      ],
+      "supported_families": [
+        "FAM-003"
+      ],
+      "target_mechanisms": [
+        "safe_haven_migration"
+      ],
+      "tier": "Tier 3",
+      "uncertainty_reduction_score": 0.4471,
+      "validation_impact_score": 0.1404
+    },
+    {
+      "alpha_coverage_score": 0.2727,
+      "benefit_score": 0.4399,
+      "blocked_mechanism_count": 3,
+      "blocked_mechanisms_impacted": [
+        "information_cascade",
+        "policy_repricing",
+        "expectation_reset"
+      ],
+      "burden_score": 0.84,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-016",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.85,
+      "future_reuse_score": 0.507,
+      "historical_depth_score": 0.2667,
+      "institutional_importance_score": 0.5195,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.8,
+      "name": "News and Event Embeddings (NLP)",
+      "operational_complexity_score": 0.85,
+      "optional_with": [
+        "DS-015"
+      ],
+      "overall_institutional_priority": 0.328,
+      "phase1_priority": "P3",
+      "proxy_replacement_score": 0.25,
+      "required_together": [
+        "DS-005",
+        "DS-006"
+      ],
+      "research_value_score": 0.5456,
+      "roi_score": 0.4681,
+      "scientific_value_score": 0.5708,
+      "source": "Refinitiv / Bloomberg NLP / Custom NLP",
+      "storage_cost_score": 0.75,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0001",
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0010"
+      ],
+      "supported_axioms": [
+        "Directed cross-asset topology governs information propagation",
+        "Topology is regime-dependent but structurally persistent",
+        "Data completeness constrains causal claims"
+      ],
+      "supported_causal_relationships": [
+        "Stable edges (dxy_return_5->dxy_return_20, dxy_return_5->forward_expectation, macro_pressure->dxy_return_20, macro_pressure->forward_expectation) propagate information with regime-dependent intensity.",
+        "Central-bank signal shock propagates via rates/FX corridor before regime activation.",
+        "Fast participants (market_makers, macro_hedge_funds, etf_investors) update first and propagate belief updates downstream."
+      ],
+      "supported_families": [
+        "FAM-004",
+        "FAM-005"
+      ],
+      "target_mechanisms": [
+        "information_cascade",
+        "policy_repricing",
+        "expectation_reset"
+      ],
+      "tier": "Tier 5",
+      "uncertainty_reduction_score": 0.5948,
+      "validation_impact_score": 0.2855
+    },
+    {
+      "alpha_coverage_score": 0.1818,
+      "benefit_score": 0.372,
+      "blocked_mechanism_count": 2,
+      "blocked_mechanisms_impacted": [
+        "decision_cascade",
+        "information_cascade"
+      ],
+      "burden_score": 0.8406,
+      "data_quality_score": 0.78,
+      "dataset_id": "DS-020",
+      "derived_from": [],
+      "direct_unlock_count": 0,
+      "engineering_effort_score": 0.85,
+      "future_reuse_score": 0.3945,
+      "historical_depth_score": 0.2667,
+      "institutional_importance_score": 0.4264,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.8,
+      "name": "Intraday Gold Tick Data (LBMA / CME)",
+      "operational_complexity_score": 0.72,
+      "optional_with": [],
+      "overall_institutional_priority": 0.2801,
+      "phase1_priority": "P3",
+      "proxy_replacement_score": 0.1667,
+      "required_together": [
+        "DS-015",
+        "DS-011"
+      ],
+      "research_value_score": 0.48,
+      "roi_score": 0.3965,
+      "scientific_value_score": 0.5708,
+      "source": "CME / LBMA / Commercial",
+      "storage_cost_score": 0.95,
+      "supported_axiom_ids": [
+        "IKROS-PF1-PRINCIPLE-0001",
+        "IKROS-PF1-PRINCIPLE-0002",
+        "IKROS-PF1-PRINCIPLE-0006"
+      ],
+      "supported_axioms": [
+        "Directed cross-asset topology governs information propagation",
+        "Topology is regime-dependent but structurally persistent",
+        "High trigger sensitivity without calibration degrades transition validity"
+      ],
+      "supported_causal_relationships": [
+        "Cascade initiators (market_makers, macro_hedge_funds, etf_investors) shift strategic network state and transition probabilities.",
+        "Stable edges (dxy_return_5->dxy_return_20, dxy_return_5->forward_expectation, macro_pressure->dxy_return_20, macro_pressure->forward_expectation) propagate information with regime-dependent intensity."
+      ],
+      "supported_families": [
+        "FAM-006"
+      ],
+      "target_mechanisms": [
+        "decision_cascade",
+        "information_cascade"
+      ],
+      "tier": "Tier 5",
+      "uncertainty_reduction_score": 0.5335,
+      "validation_impact_score": 0.2153
+    }
+  ],
+  "ecology_knowledge_graph": {
+    "conclusion_node": {
+      "confidence": 0.78,
+      "label": "DC4 Phase 2 Data Acquisition Prioritization Conclusion",
+      "node_id": "IKROS-DC4P2-CONCLUSION-20260802-0001",
+      "node_type": "RESEARCH_CONCLUSION"
+    },
+    "dataset_nodes": [
+      {
+        "confidence": 0.521,
+        "label": "DC4 Phase 2 Priority DS-001 (Tier 1)",
+        "node_id": "IKROS-DC4P2-DATA-DS001",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.505,
+        "label": "DC4 Phase 2 Priority DS-018 (Tier 1)",
+        "node_id": "IKROS-DC4P2-DATA-DS018",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.4891,
+        "label": "DC4 Phase 2 Priority DS-007 (Tier 1)",
+        "node_id": "IKROS-DC4P2-DATA-DS007",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.4751,
+        "label": "DC4 Phase 2 Priority DS-009 (Tier 1)",
+        "node_id": "IKROS-DC4P2-DATA-DS009",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.4741,
+        "label": "DC4 Phase 2 Priority DS-012 (Tier 1)",
+        "node_id": "IKROS-DC4P2-DATA-DS012",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.4729,
+        "label": "DC4 Phase 2 Priority DS-011 (Tier 1)",
+        "node_id": "IKROS-DC4P2-DATA-DS011",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.4722,
+        "label": "DC4 Phase 2 Priority DS-006 (Tier 4)",
+        "node_id": "IKROS-DC4P2-DATA-DS006",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.4686,
+        "label": "DC4 Phase 2 Priority DS-003 (Tier 1)",
+        "node_id": "IKROS-DC4P2-DATA-DS003",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.4608,
+        "label": "DC4 Phase 2 Priority DS-002 (Tier 4)",
+        "node_id": "IKROS-DC4P2-DATA-DS002",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.4497,
+        "label": "DC4 Phase 2 Priority DS-019 (Tier 1)",
+        "node_id": "IKROS-DC4P2-DATA-DS019",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.4318,
+        "label": "DC4 Phase 2 Priority DS-015 (Tier 4)",
+        "node_id": "IKROS-DC4P2-DATA-DS015",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.4211,
+        "label": "DC4 Phase 2 Priority DS-005 (Tier 4)",
+        "node_id": "IKROS-DC4P2-DATA-DS005",
+        "node_type": "KNOWLEDGE_OBJECT"
+      }
+    ],
+    "edges": [
+      {
+        "confidence": 0.521,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS001",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.505,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS018",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.4891,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS007",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.4751,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS009",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.4741,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS012",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.4729,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS011",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.4722,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS006",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.4686,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS003",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.4608,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS002",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.4497,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS019",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.4318,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS015",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.4211,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4P2-DATA-DS005",
+        "target": "IKROS-DC4P2-CONCLUSION-20260802-0001"
+      }
+    ]
+  },
+  "engineering_cost_report": [
+    {
+      "dataset_id": "DS-001",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.85,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-018",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-007",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-009",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.28,
+      "storage_cost_score": 0.2
+    },
+    {
+      "dataset_id": "DS-012",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-011",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-006",
+      "engineering_effort_score": 0.55,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-003",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-002",
+      "engineering_effort_score": 0.55,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-019",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-015",
+      "engineering_effort_score": 0.55,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.5,
+      "operational_complexity_score": 0.72,
+      "storage_cost_score": 0.75
+    },
+    {
+      "dataset_id": "DS-005",
+      "engineering_effort_score": 0.55,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.5,
+      "operational_complexity_score": 0.85,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-010",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.28,
+      "storage_cost_score": 0.2
+    },
+    {
+      "dataset_id": "DS-004",
+      "engineering_effort_score": 0.55,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-008",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-013",
+      "engineering_effort_score": 0.85,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.5,
+      "operational_complexity_score": 0.25,
+      "storage_cost_score": 0.3
+    },
+    {
+      "dataset_id": "DS-014",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.7,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.18,
+      "storage_cost_score": 0.2
+    },
+    {
+      "dataset_id": "DS-017",
+      "engineering_effort_score": 0.25,
+      "licensing_complexity_score": 0.15,
+      "maintenance_cost_score": 0.2,
+      "operational_complexity_score": 0.18,
+      "storage_cost_score": 0.2
+    },
+    {
+      "dataset_id": "DS-016",
+      "engineering_effort_score": 0.85,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.8,
+      "operational_complexity_score": 0.85,
+      "storage_cost_score": 0.75
+    },
+    {
+      "dataset_id": "DS-020",
+      "engineering_effort_score": 0.85,
+      "licensing_complexity_score": 0.9,
+      "maintenance_cost_score": 0.8,
+      "operational_complexity_score": 0.72,
+      "storage_cost_score": 0.95
+    }
+  ],
+  "institutional_axioms_supported": [
+    "IKROS-PF1-PRINCIPLE-0001",
+    "IKROS-PF1-PRINCIPLE-0002",
+    "IKROS-PF1-PRINCIPLE-0006",
+    "IKROS-PF1-PRINCIPLE-0010"
+  ],
+  "phase": "DISCOVERY_CYCLE_4_PHASE_2",
+  "phase1_reference": {
+    "mechanisms_blocked": 11,
+    "missing_datasets": 20,
+    "state_variables_identified": 72
+  },
+  "ranked_dataset_ids": [
+    "DS-001",
+    "DS-018",
+    "DS-007",
+    "DS-009",
+    "DS-012",
+    "DS-011",
+    "DS-006",
+    "DS-003",
+    "DS-002",
+    "DS-019",
+    "DS-015",
+    "DS-005",
+    "DS-010",
+    "DS-004",
+    "DS-008",
+    "DS-013",
+    "DS-014",
+    "DS-017",
+    "DS-016",
+    "DS-020"
+  ],
+  "scientific_value_matrix": [
+    {
+      "dataset_id": "DS-001",
+      "scientific_value_score": 0.82,
+      "supported_axiom_count": 4,
+      "uncertainty_reduction_score": 0.5421
+    },
+    {
+      "dataset_id": "DS-018",
+      "scientific_value_score": 0.8167,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.5576
+    },
+    {
+      "dataset_id": "DS-007",
+      "scientific_value_score": 0.7483,
+      "supported_axiom_count": 3,
+      "uncertainty_reduction_score": 0.596
+    },
+    {
+      "dataset_id": "DS-009",
+      "scientific_value_score": 0.7833,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.5459
+    },
+    {
+      "dataset_id": "DS-012",
+      "scientific_value_score": 0.7267,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.5576
+    },
+    {
+      "dataset_id": "DS-011",
+      "scientific_value_score": 0.71,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.5796
+    },
+    {
+      "dataset_id": "DS-006",
+      "scientific_value_score": 0.7767,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.5576
+    },
+    {
+      "dataset_id": "DS-003",
+      "scientific_value_score": 0.8083,
+      "supported_axiom_count": 3,
+      "uncertainty_reduction_score": 0.504
+    },
+    {
+      "dataset_id": "DS-002",
+      "scientific_value_score": 0.7767,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.5201
+    },
+    {
+      "dataset_id": "DS-019",
+      "scientific_value_score": 0.7517,
+      "supported_axiom_count": 3,
+      "uncertainty_reduction_score": 0.4778
+    },
+    {
+      "dataset_id": "DS-015",
+      "scientific_value_score": 0.81,
+      "supported_axiom_count": 4,
+      "uncertainty_reduction_score": 0.5618
+    },
+    {
+      "dataset_id": "DS-005",
+      "scientific_value_score": 0.6767,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.5576
+    },
+    {
+      "dataset_id": "DS-010",
+      "scientific_value_score": 0.7167,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.5459
+    },
+    {
+      "dataset_id": "DS-004",
+      "scientific_value_score": 0.7617,
+      "supported_axiom_count": 3,
+      "uncertainty_reduction_score": 0.504
+    },
+    {
+      "dataset_id": "DS-008",
+      "scientific_value_score": 0.625,
+      "supported_axiom_count": 3,
+      "uncertainty_reduction_score": 0.5391
+    },
+    {
+      "dataset_id": "DS-013",
+      "scientific_value_score": 0.6917,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.5576
+    },
+    {
+      "dataset_id": "DS-014",
+      "scientific_value_score": 0.6167,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.5391
+    },
+    {
+      "dataset_id": "DS-017",
+      "scientific_value_score": 0.73,
+      "supported_axiom_count": 2,
+      "uncertainty_reduction_score": 0.4471
+    },
+    {
+      "dataset_id": "DS-016",
+      "scientific_value_score": 0.5708,
+      "supported_axiom_count": 3,
+      "uncertainty_reduction_score": 0.5948
+    },
+    {
+      "dataset_id": "DS-020",
+      "scientific_value_score": 0.5708,
+      "supported_axiom_count": 3,
+      "uncertainty_reduction_score": 0.5335
+    }
+  ],
+  "tier_counts": {
+    "Tier 1": 9,
+    "Tier 2": 0,
+    "Tier 3": 3,
+    "Tier 4": 6,
+    "Tier 5": 2
+  },
+  "title": "Institutional Data Acquisition Prioritization & ROI Program",
+  "top_5_datasets": [
+    "DS-001",
+    "DS-018",
+    "DS-007",
+    "DS-009",
+    "DS-012"
+  ],
+  "validation_readiness_matrix": [
+    {
+      "dataset_dependency_count": 3,
+      "mechanism_type": "cross_asset_transition",
+      "readiness_after_tier1": 0.6667,
+      "required_datasets": [
+        "DS-009",
+        "DS-015",
+        "DS-019"
+      ],
+      "tier1_coverage": 2
+    },
+    {
+      "dataset_dependency_count": 7,
+      "mechanism_type": "macro_repricing",
+      "readiness_after_tier1": 0.4286,
+      "required_datasets": [
+        "DS-002",
+        "DS-005",
+        "DS-006",
+        "DS-012",
+        "DS-013",
+        "DS-018",
+        "DS-019"
+      ],
+      "tier1_coverage": 3
+    },
+    {
+      "dataset_dependency_count": 4,
+      "mechanism_type": "liquidity_withdrawal",
+      "readiness_after_tier1": 0.75,
+      "required_datasets": [
+        "DS-001",
+        "DS-003",
+        "DS-004",
+        "DS-011"
+      ],
+      "tier1_coverage": 3
+    },
+    {
+      "dataset_dependency_count": 3,
+      "mechanism_type": "dealer_inventory",
+      "readiness_after_tier1": 1.0,
+      "required_datasets": [
+        "DS-009",
+        "DS-010",
+        "DS-011"
+      ],
+      "tier1_coverage": 3
+    },
+    {
+      "dataset_dependency_count": 6,
+      "mechanism_type": "expectation_reset",
+      "readiness_after_tier1": 0.3333,
+      "required_datasets": [
+        "DS-005",
+        "DS-006",
+        "DS-012",
+        "DS-013",
+        "DS-016",
+        "DS-018"
+      ],
+      "tier1_coverage": 2
+    },
+    {
+      "dataset_dependency_count": 8,
+      "mechanism_type": "safe_haven_migration",
+      "readiness_after_tier1": 0.375,
+      "required_datasets": [
+        "DS-001",
+        "DS-002",
+        "DS-003",
+        "DS-004",
+        "DS-007",
+        "DS-008",
+        "DS-014",
+        "DS-017"
+      ],
+      "tier1_coverage": 3
+    },
+    {
+      "dataset_dependency_count": 2,
+      "mechanism_type": "etf_flow_propagation",
+      "readiness_after_tier1": 0.5,
+      "required_datasets": [
+        "DS-007",
+        "DS-008"
+      ],
+      "tier1_coverage": 1
+    },
+    {
+      "dataset_dependency_count": 8,
+      "mechanism_type": "policy_repricing",
+      "readiness_after_tier1": 0.375,
+      "required_datasets": [
+        "DS-002",
+        "DS-005",
+        "DS-006",
+        "DS-012",
+        "DS-013",
+        "DS-016",
+        "DS-018",
+        "DS-019"
+      ],
+      "tier1_coverage": 3
+    },
+    {
+      "dataset_dependency_count": 3,
+      "mechanism_type": "decision_cascade",
+      "readiness_after_tier1": 0.3333,
+      "required_datasets": [
+        "DS-011",
+        "DS-015",
+        "DS-020"
+      ],
+      "tier1_coverage": 1
+    },
+    {
+      "dataset_dependency_count": 3,
+      "mechanism_type": "information_cascade",
+      "readiness_after_tier1": 0.0,
+      "required_datasets": [
+        "DS-015",
+        "DS-016",
+        "DS-020"
+      ],
+      "tier1_coverage": 0
+    },
+    {
+      "dataset_dependency_count": 4,
+      "mechanism_type": "adaptive_ecology_shift",
+      "readiness_after_tier1": 0.75,
+      "required_datasets": [
+        "DS-007",
+        "DS-009",
+        "DS-010",
+        "DS-014"
+      ],
+      "tier1_coverage": 3
+    },
+    {
+      "dataset_dependency_count": 2,
+      "mechanism_type": "regime_transition_chain",
+      "readiness_after_tier1": 0.5,
+      "required_datasets": [
+        "DS-001",
+        "DS-015"
+      ],
+      "tier1_coverage": 1
+    }
+  ]
+}

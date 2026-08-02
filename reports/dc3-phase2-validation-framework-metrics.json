@@ -1,0 +1,32 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0027",
+  "dimensions": 20,
+  "framework_ready": true,
+  "graph_edges_created": 20,
+  "graph_nodes_created": 20,
+  "methods": 17,
+  "phase": "DISCOVERY_CYCLE_3_PHASE_2",
+  "promote_any_alpha_now": false,
+  "promotion_levels": 7,
+  "reports": {
+    "campaign_result": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\dc3_phase2_campaign_result.json",
+    "confidence_reports": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\CONFIDENCE_REPORTS.md",
+    "documentation": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\DOCUMENTATION.md",
+    "failure_registry": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\FAILURE_REGISTRY.md",
+    "failure_reports": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\FAILURE_REPORTS.md",
+    "final_report": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\FINAL_REPORT.md",
+    "governed_json_schemas": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\GOVERNED_JSON_SCHEMAS.md",
+    "ikros_integration": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\IKROS_INTEGRATION.md",
+    "institutional_alpha_standard": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\INSTITUTIONAL_ALPHA_STANDARD.md",
+    "methods_json": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\dc3_phase2_validation_framework_methods.json",
+    "promotion_criteria": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\PROMOTION_CRITERIA.md",
+    "promotion_framework": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\PROMOTION_FRAMEWORK.md",
+    "validation_api": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\VALIDATION_API.md",
+    "validation_architecture": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\VALIDATION_ARCHITECTURE.md",
+    "validation_dashboard": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\VALIDATION_DASHBOARD.md",
+    "validation_evidence_registry": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\VALIDATION_EVIDENCE_REGISTRY.md",
+    "validation_registry": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\VALIDATION_REGISTRY.md",
+    "validation_reports": "11-research\\discovery-cycle-3\\phase-2-institutional-alpha-validation-framework\\VALIDATION_REPORTS.md"
+  },
+  "validate_phase1_mechanisms_now": false
+}

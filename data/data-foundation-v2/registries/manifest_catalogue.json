@@ -1,0 +1,93 @@
+[
+  {
+    "checksum": "08c94fe37e8a921d4f427d8180215f6fcc11ddadbc848d60b09cd9501712403d",
+    "dataset_id": "DS-001",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-001\\DF2-DS001-20260801-08c94fe3\\manifest.json",
+    "raw_checksum": "e283e0c0f9264aa8f12e5a8bd9e805b428df03560f9cee8e48b3fb2ab2e4726d",
+    "version_id": "DF2-DS001-20260801-08c94fe3"
+  },
+  {
+    "checksum": "35e90076c2fecfbbd4059da9511c7c2fca8e1a1e20576e16029853a64551c3c9",
+    "dataset_id": "DS-003",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-003\\DF2-DS003-20260801-35e90076\\manifest.json",
+    "raw_checksum": "142cf0266fbba78293014c9fb61c753c0f8ab88dc71207d94ae76f2f6ee26eb1",
+    "version_id": "DF2-DS003-20260801-35e90076"
+  },
+  {
+    "checksum": "d7565c08f19f2561e5543df609fe4b5115e4f10a1736fceb1e491c0c904319ff",
+    "dataset_id": "DS-007",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-007\\DF2-DS007-20260801-d7565c08\\manifest.json",
+    "raw_checksum": "4f1041d8876fbc291ee374724b54e91b29b7cf714ca1c9d559637b91509540bc",
+    "version_id": "DF2-DS007-20260801-d7565c08"
+  },
+  {
+    "checksum": "3d99595ebb4b562054df70205d3ee8206dec7fb96ebe3ae52fca76e26a3f73ac",
+    "dataset_id": "DS-008",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-008\\DF2-DS008-20260801-3d99595e\\manifest.json",
+    "raw_checksum": "4f1041d8876fbc291ee374724b54e91b29b7cf714ca1c9d559637b91509540bc",
+    "version_id": "DF2-DS008-20260801-3d99595e"
+  },
+  {
+    "checksum": "90146ca401f0849b98789908d91b054630def92353350e2ee1e448ff54e41371",
+    "dataset_id": "DS-009",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-009\\DF2-DS009-20260728-90146ca4\\manifest.json",
+    "raw_checksum": "e6feab5e5e0d083b23850af3b7094fece4952a0c8afd41ff82fe59e67a0707c6",
+    "version_id": "DF2-DS009-20260728-90146ca4"
+  },
+  {
+    "checksum": "f26c40e9ef0e2d7870efe267e410f3307246c270b0d778840e232867b93b88c0",
+    "dataset_id": "DS-010",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-010\\DF2-DS010-20260728-f26c40e9\\manifest.json",
+    "raw_checksum": "e6feab5e5e0d083b23850af3b7094fece4952a0c8afd41ff82fe59e67a0707c6",
+    "version_id": "DF2-DS010-20260728-f26c40e9"
+  },
+  {
+    "checksum": "2682d6218c9027fcf477e3ed60f9b3fa1a43d2af1faf7633dc8161ae8873abb5",
+    "dataset_id": "DS-011",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-011\\DF2-DS011-20260801-2682d621\\manifest.json",
+    "raw_checksum": "604ba7203d5d339d45693db8b28d0a5af701ed4dc1f5b17dc5735ca53f06f550",
+    "version_id": "DF2-DS011-20260801-2682d621"
+  },
+  {
+    "checksum": "da2dc1c4e35034b84d10da04dacf8a51408b41077cc147706bb4eca11d901f0b",
+    "dataset_id": "DS-012",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-012\\DF2-DS012-20260801-da2dc1c4\\manifest.json",
+    "raw_checksum": "0bfbfe28e4e82a7d8811302ac76588ec42bfe1b6fd8df122c3f2b84b27f51127",
+    "version_id": "DF2-DS012-20260801-da2dc1c4"
+  },
+  {
+    "checksum": "0567cd202d0941a1dc5fe712823ef3f3dceea8c4d703928f1210d237996a8635",
+    "dataset_id": "DS-014",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-014\\DF2-DS014-20260731-0567cd20\\manifest.json",
+    "raw_checksum": "c6e831ad1ff336938cd7732e1fff98cb06b8011d4824baffda4aecc1e5445027",
+    "version_id": "DF2-DS014-20260731-0567cd20"
+  },
+  {
+    "checksum": "e6e80fabe45edf55f5e43349cbfe23a446d94115244a47f286b5de45dae4be98",
+    "dataset_id": "DS-017",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-017\\DF2-DS017-20260731-e6e80fab\\manifest.json",
+    "raw_checksum": "952612b3efb7343b2ef78b948d329df5098d727aa610c310d93649384e3a6153",
+    "version_id": "DF2-DS017-20260731-e6e80fab"
+  },
+  {
+    "checksum": "a87bcbe79e6f57e99e1c5a7f0e6d91fc33d9c7888a70c7facafc4426df2ec2fd",
+    "dataset_id": "DS-018",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-018\\DF2-DS018-20260801-a87bcbe7\\manifest.json",
+    "raw_checksum": "bfaeaa2d2eca173236ae8f6444f65fcb4d0afb70b912c98c1db79ab1a42da4b5",
+    "version_id": "DF2-DS018-20260801-a87bcbe7"
+  },
+  {
+    "checksum": "746a952a35936e4d4dcb3ee8d82782a2fb5ecece78a3b4934186d000d6735db0",
+    "dataset_id": "DS-019",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-019\\DF2-DS019-20260801-746a952a\\manifest.json",
+    "raw_checksum": "bfaeaa2d2eca173236ae8f6444f65fcb4d0afb70b912c98c1db79ab1a42da4b5",
+    "version_id": "DF2-DS019-20260801-746a952a"
+  },
+  {
+    "checksum": "fdeae205e6cf2958a27b05944908c0e28c730db5c185c5486e099d5896b83363",
+    "dataset_id": "DS-PUB-021",
+    "manifest_path": "data\\data-foundation-v2\\datasets\\DS-PUB-021\\DF2-DSPUB021-20260801-fdeae205\\manifest.json",
+    "raw_checksum": "fdeae205e6cf2958a27b05944908c0e28c730db5c185c5486e099d5896b83363",
+    "version_id": "DF2-DSPUB021-20260801-fdeae205"
+  }
+]

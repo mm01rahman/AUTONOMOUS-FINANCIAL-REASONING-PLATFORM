@@ -1,0 +1,13 @@
+attributes: {}
+confidence: 0.234
+created_at: '2026-08-02T15:13:39.154629+00:00'
+ikros_id: IKROS-DC4-OBS-REGIMETRANS
+label: 'DC4 Observability: regime_transition_chain (20%)'
+node_id: IKROS-DC4-OBS-REGIMETRANS
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

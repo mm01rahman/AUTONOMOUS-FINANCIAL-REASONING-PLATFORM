@@ -23,10 +23,20 @@ def _make_dumper() -> type[yaml.Dumper]:
     return dumper
 
 
+def _normalize_for_yaml(value: object) -> object:
+    if isinstance(value, dict):
+        return {key: _normalize_for_yaml(item) for key, item in value.items()}
+    if isinstance(value, tuple):
+        return [_normalize_for_yaml(item) for item in value]
+    if isinstance(value, list):
+        return [_normalize_for_yaml(item) for item in value]
+    return value
+
+
 def to_yaml(data: dict[str, Any]) -> str:
     """Serialize a dict to a canonical YAML string (deterministic, sorted keys)."""
     return yaml.dump(
-        data,
+        _normalize_for_yaml(data),
         Dumper=_make_dumper(),
         default_flow_style=False,
         sort_keys=True,

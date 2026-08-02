@@ -1,0 +1,47 @@
+{
+  "cadence": "weekly",
+  "checksum_sha256": "f26c40e9ef0e2d7870efe267e410f3307246c270b0d778840e232867b93b88c0",
+  "covered_variables": [
+    "cot_dealers",
+    "dealer_net_position_change"
+  ],
+  "dataset_id": "DS-010",
+  "dataset_name": "COMEX Dealer Net Position",
+  "generated_at": "2026-08-02T00:00:00Z",
+  "provenance": {
+    "fixture_or_remote": "fixture",
+    "retrieved_at": "2026-08-02T00:00:00Z",
+    "source_kind": "public_api",
+    "timezone": "UTC"
+  },
+  "provider": "CFTCProvider",
+  "quality": {
+    "completeness": 1.0,
+    "confidence_score": 0.9502,
+    "coverage": 1.0,
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-07-28T00:00:00Z",
+    "freshness": 0.8571,
+    "missing_rate": 0.0,
+    "record_count": 4,
+    "schema_conformity": 1.0,
+    "start_timestamp": "2026-07-07T00:00:00Z",
+    "timestamp_consistency": 1.0,
+    "validation_score": 0.9762
+  },
+  "raw_checksum_sha256": "e6feab5e5e0d083b23850af3b7094fece4952a0c8afd41ff82fe59e67a0707c6",
+  "row_count": 4,
+  "source": "CFTC COT Disaggregated",
+  "source_url": "https://www.cftc.gov/dea/newcot/Disagg.txt",
+  "storage_path": "data\\data-foundation-v2\\datasets\\DS-010\\DF2-DS010-20260728-f26c40e9\\data.csv",
+  "supported_families": [
+    "FAM-002"
+  ],
+  "supported_mechanisms": [
+    "dealer_inventory",
+    "adaptive_ecology_shift"
+  ],
+  "timezone": "UTC",
+  "version_id": "DF2-DS010-20260728-f26c40e9",
+  "work_package": "DF2-WP-002"
+}

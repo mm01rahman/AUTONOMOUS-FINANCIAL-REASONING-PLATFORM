@@ -1,0 +1,50 @@
+archived_at: null
+capability_refs:
+- IKROS-MEMORY
+confidence: 0.9592
+created_at: '2026-08-02T15:33:16.617085+00:00'
+dependency_ids: []
+entity_type: DatasetQualitySnapshot
+evidence_refs:
+- 11-research\data-foundation-v2\phase-1-institutional-market-data-infrastructure\QUALITY_DASHBOARD.md
+graph_node_ids: []
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0076
+payload:
+  cadence: daily
+  confidence_score: 0.9592
+  covered_variables:
+  - gld_shares_outstanding
+  - gld_etf_flows
+  dataset_id: DS-007
+  domain: etf_positioning
+  manifest_path: data-foundation-v2\datasets\DS-007\DF2-DS007-20260801-d7565c08\manifest.json
+  name: GLD ETF Shares Outstanding
+  provider: ETFHoldingsProvider
+  quality_score: 0.9833
+  storage_path: data\data-foundation-v2\datasets\DS-007\DF2-DS007-20260801-d7565c08\data.csv
+  supported_mechanisms:
+  - safe_haven_migration
+  - etf_flow_propagation
+  - adaptive_ecology_shift
+  version_id: DF2-DS007-20260801-d7565c08
+  work_package: DF2-WP-002
+retired_at: null
+source_ids:
+- DS-007
+spec_refs:
+- SPEC-060
+summary: DS-007 quality 0.98, confidence 0.96.
+tags:
+- dataset-quality
+- ds-007
+tier: T1_EPISODIC
+title: Dataset quality snapshot DS-007
+updated_at: '2026-08-02T15:33:16.617085+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs:
+- WP-IMP-0048

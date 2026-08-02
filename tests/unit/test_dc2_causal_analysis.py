@@ -65,7 +65,11 @@ def test_dc2_phase2_macro_mediation(analysis: dict) -> None:
         assert "interpretation" in info
         for med_name, med_info in info["mediation_by_factor"].items():
             assert med_name in MACRO_MEDIATORS
-            assert med_info["mediation_classification"] in ("FULL_MEDIATION", "PARTIAL_MEDIATION", "DIRECT_EFFECT")
+            assert med_info["mediation_classification"] in (
+                "FULL_MEDIATION",
+                "PARTIAL_MEDIATION",
+                "DIRECT_EFFECT",
+            )
 
 
 def test_dc2_phase2_causal_stability(analysis: dict) -> None:

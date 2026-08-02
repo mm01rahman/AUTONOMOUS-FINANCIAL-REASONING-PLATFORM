@@ -359,7 +359,9 @@ def _participant_profiles(phase3: dict[str, Any]) -> dict[str, dict[str, Any]]:
             source_exposure += float(weight) * max(0.0, node_stats[signal]["net_flow"])
             sink_exposure += float(weight) * max(0.0, -node_stats[signal]["net_flow"])
             relay_exposure += float(weight) * node_stats[signal]["relay_score"]
-            net_influence += float(weight) * (node_stats[signal]["out_strength"] - 0.5 * node_stats[signal]["in_strength"])
+            net_influence += float(weight) * (
+                node_stats[signal]["out_strength"] - 0.5 * node_stats[signal]["in_strength"]
+            )
         aggregate_score = round(net_influence + 0.5 * relay_exposure, 4)
         if aggregate_score > 1.9:
             ecology_role = "ecology_driver"
@@ -391,7 +393,9 @@ def _participant_profiles(phase3: dict[str, Any]) -> dict[str, dict[str, Any]]:
             "liquidity_role": participant["liquidity_role"],
             "capital_role": participant["capital_role"],
             "ecology_role": ecology_role,
-            "expected_behaviour_by_regime": {regime: REGIME_BEHAVIOR_MAP[regime][pid] for regime in REGIME_ORDER},
+            "expected_behaviour_by_regime": {
+                regime: REGIME_BEHAVIOR_MAP[regime][pid] for regime in REGIME_ORDER
+            },
         }
     return profiles
 
@@ -435,13 +439,17 @@ def _interaction_network(profiles: dict[str, dict[str, Any]]) -> dict[str, Any]:
     return {"matrix": matrix, "edges": edges}
 
 
-def _capital_flow_network(profiles: dict[str, dict[str, Any]], phase3: dict[str, Any]) -> dict[str, Any]:
+def _capital_flow_network(
+    profiles: dict[str, dict[str, Any]], phase3: dict[str, Any]
+) -> dict[str, Any]:
     centrality = phase3["centrality_analysis"]["nodes"]
     edges: list[dict[str, Any]] = []
     for pid, profile in profiles.items():
         for signal, weight in cast(dict[str, float], profile["signals"]).items():
             node = centrality.get(signal, {})
-            capital_intensity = round(float(weight) * (0.6 + abs(float(node.get("net_flow", 0.0)))), 4)
+            capital_intensity = round(
+                float(weight) * (0.6 + abs(float(node.get("net_flow", 0.0)))), 4
+            )
             if capital_intensity < 0.35:
                 continue
             edges.append(
@@ -457,16 +465,37 @@ def _capital_flow_network(profiles: dict[str, dict[str, Any]], phase3: dict[str,
     return {"edges": edges}
 
 
-def _liquidity_network(profiles: dict[str, dict[str, Any]], interactions: dict[str, Any]) -> dict[str, Any]:
-    provider_roles = {"liquidity_provider", "balance_sheet_intermediary", "intermediation_core", "policy_anchor"}
-    demand_roles = {"trend_amplifier", "macro_reallocator", "allocation_flow", "fragmented_flow", "stress_allocator"}
+def _liquidity_network(
+    profiles: dict[str, dict[str, Any]], interactions: dict[str, Any]
+) -> dict[str, Any]:
+    provider_roles = {
+        "liquidity_provider",
+        "balance_sheet_intermediary",
+        "intermediation_core",
+        "policy_anchor",
+    }
+    demand_roles = {
+        "trend_amplifier",
+        "macro_reallocator",
+        "allocation_flow",
+        "fragmented_flow",
+        "stress_allocator",
+    }
     edges: list[dict[str, Any]] = []
     for edge in interactions["edges"]:
         source_role = str(profiles[str(edge["source"])]["liquidity_role"])
         target_role = str(profiles[str(edge["target"])]["liquidity_role"])
-        if source_role in provider_roles and target_role in demand_roles and float(edge["interaction_score"]) > 0:
+        if (
+            source_role in provider_roles
+            and target_role in demand_roles
+            and float(edge["interaction_score"]) > 0
+        ):
             liquidity_effect = "provision"
-        elif source_role in demand_roles and target_role in provider_roles and float(edge["interaction_score"]) > 0:
+        elif (
+            source_role in demand_roles
+            and target_role in provider_roles
+            and float(edge["interaction_score"]) > 0
+        ):
             liquidity_effect = "withdrawal_pressure"
         elif float(edge["interaction_score"]) < 0:
             liquidity_effect = "competition"
@@ -484,8 +513,12 @@ def _liquidity_network(profiles: dict[str, dict[str, Any]], interactions: dict[s
 
 
 def _cooperation_competition(interactions: dict[str, Any]) -> dict[str, Any]:
-    cooperation = [edge for edge in interactions["edges"] if float(edge["interaction_score"]) > 0.22]
-    competition = [edge for edge in interactions["edges"] if float(edge["interaction_score"]) < -0.02]
+    cooperation = [
+        edge for edge in interactions["edges"] if float(edge["interaction_score"]) > 0.22
+    ]
+    competition = [
+        edge for edge in interactions["edges"] if float(edge["interaction_score"]) < -0.02
+    ]
     return {"cooperation": cooperation, "competition": competition}
 
 
@@ -519,11 +552,15 @@ def _feedback_loops(interactions: dict[str, Any]) -> list[dict[str, Any]]:
                     "loop_type": "competitive",
                 }
             )
-    loops.sort(key=lambda item: abs(float(item["forward"])) + abs(float(item["backward"])), reverse=True)
+    loops.sort(
+        key=lambda item: abs(float(item["forward"])) + abs(float(item["backward"])), reverse=True
+    )
     return loops
 
 
-def _adaptive_behaviour_model(profiles: dict[str, dict[str, Any]], phase3: dict[str, Any]) -> dict[str, Any]:
+def _adaptive_behaviour_model(
+    profiles: dict[str, dict[str, Any]], phase3: dict[str, Any]
+) -> dict[str, Any]:
     dominant_sources = set(phase3["arb_recommendation"]["dominant_sources"])
     dominant_relays = set(phase3["arb_recommendation"]["dominant_relays"])
     result: dict[str, Any] = {}
@@ -539,14 +576,22 @@ def _adaptive_behaviour_model(profiles: dict[str, dict[str, Any]], phase3: dict[
             "participant": pid,
             "adaptive_trigger": trigger,
             "adaptation_mode": (
-                "reallocate" if profile["capital_role"] in {"tactical_allocator", "defensive_reallocator", "investment_flow"}
-                else "warehouse" if profile["liquidity_role"] in {"intermediation_core", "balance_sheet_intermediary"}
-                else "quote_adjust" if profile["liquidity_role"] == "liquidity_provider"
-                else "rule_scale" if profile["liquidity_role"] == "trend_amplifier"
+                "reallocate"
+                if profile["capital_role"]
+                in {"tactical_allocator", "defensive_reallocator", "investment_flow"}
+                else "warehouse"
+                if profile["liquidity_role"]
+                in {"intermediation_core", "balance_sheet_intermediary"}
+                else "quote_adjust"
+                if profile["liquidity_role"] == "liquidity_provider"
+                else "rule_scale"
+                if profile["liquidity_role"] == "trend_amplifier"
                 else "hedge_rebalance"
             ),
             "regime_sensitivity": (
-                "high" if profile["ecology_role"] in {"ecology_driver", "ecology_relay"} else "moderate"
+                "high"
+                if profile["ecology_role"] in {"ecology_driver", "ecology_relay"}
+                else "moderate"
             ),
         }
     return result
@@ -580,7 +625,10 @@ def _knowledge_graph_payload(
             "target": f"IKROS-PB1-PARTICIPANT-{str(edge['target']).replace('_', '-').upper()}",
             "relation": "RELATED_TO" if float(edge["interaction_score"]) > 0 else "ASSOCIATED_WITH",
             "confidence": round(abs(float(edge["interaction_score"])), 4),
-            "attributes": {"shared_channels": edge["shared_channels"], "relation": edge["relation"]},
+            "attributes": {
+                "shared_channels": edge["shared_channels"],
+                "relation": edge["relation"],
+            },
         }
         for edge in interactions["edges"][:30]
     ]
@@ -592,17 +640,19 @@ def _knowledge_graph_payload(
             "attributes": {"market": "XAU/USD"},
         },
     ]
-    factor_nodes.extend([
-        {
-            "node_id": f"IKROS-PB1-FACTOR-{signal.replace('_', '-').upper()}",
-            "label": CROSS_ASSET_SIGNALS.get(signal, {}).get("title", signal),
-            "node_type": "FACTOR",
-            "attributes": {
-                "market": CROSS_ASSET_SIGNALS.get(signal, {}).get("market", "XAU/USD"),
-            },
-        }
-        for signal in CROSS_ASSET_SIGNALS
-    ])
+    factor_nodes.extend(
+        [
+            {
+                "node_id": f"IKROS-PB1-FACTOR-{signal.replace('_', '-').upper()}",
+                "label": CROSS_ASSET_SIGNALS.get(signal, {}).get("title", signal),
+                "node_type": "FACTOR",
+                "attributes": {
+                    "market": CROSS_ASSET_SIGNALS.get(signal, {}).get("market", "XAU/USD"),
+                },
+            }
+            for signal in CROSS_ASSET_SIGNALS
+        ]
+    )
     factor_edges = [
         {
             "source": f"IKROS-PB1-PARTICIPANT-{str(edge['participant']).replace('_', '-').upper()}",
@@ -677,7 +727,9 @@ def prepare_dc2_program_b_artifacts(repo_root: Path | None = None) -> dict[str, 
     collaboration = _cooperation_competition(interactions)
     feedback_loops = _feedback_loops(interactions)
     adaptive = _adaptive_behaviour_model(profiles, phase3)
-    knowledge_graph = _knowledge_graph_payload(profiles, interactions, capital_flows, liquidity, feedback_loops)
+    knowledge_graph = _knowledge_graph_payload(
+        profiles, interactions, capital_flows, liquidity, feedback_loops
+    )
     recommendations = _recommendations(profiles, interactions, phase3)
 
     analysis = {
@@ -754,21 +806,22 @@ def emit_dc2_program_b_reports(
     profile_blocks = []
     for pid, profile in profiles.items():
         profile_blocks.append(
-            f"""### {profile['label']}
-- **Objectives:** {profile['objectives']}
-- **Constraints:** {profile['constraints']}
-- **Information:** {profile['information']}
-- **Reaction Function:** {profile['reaction_function']}
-- **Typical Positioning:** {profile['typical_positioning']}
-- **Liquidity Effects:** {profile['liquidity_effects']}
-- **Historical Behaviour:** {profile['historical_behaviour']}
-- **Failure Modes:** {profile['failure_modes']}
-- **Ecology Role:** {profile['ecology_role']}
+            f"""### {profile["label"]}
+- **Objectives:** {profile["objectives"]}
+- **Constraints:** {profile["constraints"]}
+- **Information:** {profile["information"]}
+- **Reaction Function:** {profile["reaction_function"]}
+- **Typical Positioning:** {profile["typical_positioning"]}
+- **Liquidity Effects:** {profile["liquidity_effects"]}
+- **Historical Behaviour:** {profile["historical_behaviour"]}
+- **Failure Modes:** {profile["failure_modes"]}
+- **Ecology Role:** {profile["ecology_role"]}
 """
         )
     write_markdown(
         profiles_md,
-        "# Participant Profiles\n## Discovery Cycle 2 Program B Phase 1\n\n" + "\n".join(profile_blocks),
+        "# Participant Profiles\n## Discovery Cycle 2 Program B Phase 1\n\n"
+        + "\n".join(profile_blocks),
     )
     written["participant_profiles"] = str(profiles_md)
 
@@ -790,7 +843,13 @@ def emit_dc2_program_b_reports(
 
     capital_md = out_dir / "CAPITAL_FLOW_ATLAS.md"
     capital_rows: list[list[object]] = [
-        [edge["participant"], edge["market_node"], edge["market"], edge["capital_intensity"], edge["flow_type"]]
+        [
+            edge["participant"],
+            edge["market_node"],
+            edge["market"],
+            edge["capital_intensity"],
+            edge["flow_type"],
+        ]
         for edge in capital_flows["edges"][:30]
     ]
     write_markdown(
@@ -879,7 +938,10 @@ def emit_dc2_program_b_reports(
     )
     written["research_recommendations"] = str(rec_md)
 
-    write_json(out_dir / "institutional_market_ecology_graph.json", analysis["institutional_market_ecology_graph"])
+    write_json(
+        out_dir / "institutional_market_ecology_graph.json",
+        analysis["institutional_market_ecology_graph"],
+    )
     write_json(out_dir / "participant_profiles.json", profiles)
     write_json(out_dir / "interaction_matrix.json", analysis["interaction_matrix"])
     write_json(out_dir / "capital_flow_atlas.json", capital_flows)

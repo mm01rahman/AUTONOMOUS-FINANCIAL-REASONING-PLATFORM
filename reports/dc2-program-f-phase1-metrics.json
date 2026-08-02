@@ -1,0 +1,25 @@
+{
+  "axioms": 4,
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0025",
+  "conditional": 1,
+  "constraints": 7,
+  "graph_edges_created": 14,
+  "graph_nodes_created": 13,
+  "open_questions": 1,
+  "phase": "DC2_PROGRAM_F_PHASE1",
+  "principles_total": 10,
+  "rejected": 2,
+  "reports": {
+    "arb_recommendation": "11-research\\discovery-cycle-2\\research-program-f-phase1\\ARB_RECOMMENDATION.md",
+    "architecture_constraints": "11-research\\discovery-cycle-2\\research-program-f-phase1\\ARCHITECTURE_CONSTRAINTS_FOR_FUTURE_MODELS.md",
+    "campaign_result": "11-research\\discovery-cycle-2\\research-program-f-phase1\\dc2_program_f_campaign_result.json",
+    "classification_summary": "11-research\\discovery-cycle-2\\research-program-f-phase1\\dc2_program_f_classification_summary.json",
+    "evidence_synthesis": "11-research\\discovery-cycle-2\\research-program-f-phase1\\EVIDENCE_SYNTHESIS.md",
+    "institutional_axiom_registry": "11-research\\discovery-cycle-2\\research-program-f-phase1\\INSTITUTIONAL_AXIOM_REGISTRY.md",
+    "institutional_theory_report": "11-research\\discovery-cycle-2\\research-program-f-phase1\\INSTITUTIONAL_THEORY_REPORT.md",
+    "knowledge_consolidation_report": "11-research\\discovery-cycle-2\\research-program-f-phase1\\KNOWLEDGE_CONSOLIDATION_REPORT.md",
+    "open_research_questions": "11-research\\discovery-cycle-2\\research-program-f-phase1\\OPEN_RESEARCH_QUESTIONS.md",
+    "scientific_principle_registry": "11-research\\discovery-cycle-2\\research-program-f-phase1\\SCIENTIFIC_PRINCIPLE_REGISTRY.md"
+  },
+  "supported": 2
+}

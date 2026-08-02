@@ -1,0 +1,39 @@
+{
+  "audit_ids": [
+    "IKROS-CAMPAIGNAUDIT-20260802-0426",
+    "IKROS-CAMPAIGNAUDIT-20260802-0427",
+    "IKROS-CAMPAIGNAUDIT-20260802-0428",
+    "IKROS-CAMPAIGNAUDIT-20260802-0429",
+    "IKROS-CAMPAIGNAUDIT-20260802-0430",
+    "IKROS-CAMPAIGNAUDIT-20260802-0431",
+    "IKROS-CAMPAIGNAUDIT-20260802-0432"
+  ],
+  "blocked_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0154",
+    "IKROS-RESEARCHTASK-20260802-0160"
+  ],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0035",
+  "campaign_type": "RESEARCH_AUDIT",
+  "completed_task_ids": [],
+  "failed_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0150"
+  ],
+  "finished_at": "2026-08-02T15:36:11.958368+00:00",
+  "lifecycle_state": "FAILED",
+  "memory_record_ids": [
+    "IKMEM-T4-20260802-0042"
+  ],
+  "output_refs": [],
+  "progress": {
+    "blocked": 2,
+    "completed": 0,
+    "failed": 1,
+    "percent_complete": 0.0,
+    "skipped": 0,
+    "total": 3
+  },
+  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0035",
+  "skipped_task_ids": [],
+  "started_at": "2026-08-02T15:36:06.360051+00:00",
+  "summary": "Data Foundation V2 Phase 1 Institutional Market Data Infrastructure failed after 1 task failures."
+}

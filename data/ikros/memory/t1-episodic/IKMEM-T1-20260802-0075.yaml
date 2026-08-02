@@ -1,0 +1,48 @@
+archived_at: null
+capability_refs:
+- IKROS-MEMORY
+confidence: 0.9592
+created_at: '2026-08-02T15:33:16.609082+00:00'
+dependency_ids: []
+entity_type: DatasetQualitySnapshot
+evidence_refs:
+- 11-research\data-foundation-v2\phase-1-institutional-market-data-infrastructure\QUALITY_DASHBOARD.md
+graph_node_ids: []
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0075
+payload:
+  cadence: daily
+  confidence_score: 0.9592
+  covered_variables:
+  - ted_spread
+  dataset_id: DS-003
+  domain: macro_stress
+  manifest_path: data-foundation-v2\datasets\DS-003\DF2-DS003-20260801-35e90076\manifest.json
+  name: TED Spread
+  provider: FREDProvider
+  quality_score: 0.9833
+  storage_path: data\data-foundation-v2\datasets\DS-003\DF2-DS003-20260801-35e90076\data.csv
+  supported_mechanisms:
+  - liquidity_withdrawal
+  - safe_haven_migration
+  version_id: DF2-DS003-20260801-35e90076
+  work_package: DF2-WP-001
+retired_at: null
+source_ids:
+- DS-003
+spec_refs:
+- SPEC-060
+summary: DS-003 quality 0.98, confidence 0.96.
+tags:
+- dataset-quality
+- ds-003
+tier: T1_EPISODIC
+title: Dataset quality snapshot DS-003
+updated_at: '2026-08-02T15:33:16.609082+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs:
+- WP-IMP-0048

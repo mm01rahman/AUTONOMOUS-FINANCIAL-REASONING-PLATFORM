@@ -1,0 +1,182 @@
+[
+  {
+    "mechanism": "inventory_unwind",
+    "primary_signal": "yield_10y_change_5",
+    "transition_id": "calm_carry__to__bear_unwind",
+    "trigger_type": "real_rate_shock"
+  },
+  {
+    "mechanism": "inventory_absorption",
+    "primary_signal": "yield_curve_10y_3m",
+    "transition_id": "bear_unwind__to__calm_carry",
+    "trigger_type": "range_stabilization"
+  },
+  {
+    "mechanism": "inventory_absorption",
+    "primary_signal": "yield_curve_10y_3m",
+    "transition_id": "range_compression__to__calm_carry",
+    "trigger_type": "range_stabilization"
+  },
+  {
+    "mechanism": "inventory_absorption",
+    "primary_signal": "yield_curve_10y_3m",
+    "transition_id": "macro_transition__to__calm_carry",
+    "trigger_type": "range_stabilization"
+  },
+  {
+    "mechanism": "liquidity_rebalancing",
+    "primary_signal": "dxy_return_20",
+    "transition_id": "calm_carry__to__range_compression",
+    "trigger_type": "volatility_decay"
+  },
+  {
+    "mechanism": "policy_signal_repricing",
+    "primary_signal": "fed_surprise",
+    "transition_id": "calm_carry__to__macro_transition",
+    "trigger_type": "macro_repricing"
+  },
+  {
+    "mechanism": "trend_amplification",
+    "primary_signal": "forward_expectation",
+    "transition_id": "calm_carry__to__bull_trend",
+    "trigger_type": "trend_reinforcement"
+  },
+  {
+    "mechanism": "inventory_absorption",
+    "primary_signal": "yield_curve_10y_3m",
+    "transition_id": "bull_trend__to__calm_carry",
+    "trigger_type": "range_stabilization"
+  },
+  {
+    "mechanism": "inventory_unwind",
+    "primary_signal": "yield_10y_change_5",
+    "transition_id": "range_compression__to__bear_unwind",
+    "trigger_type": "real_rate_shock"
+  },
+  {
+    "mechanism": "inventory_unwind",
+    "primary_signal": "yield_10y_change_5",
+    "transition_id": "macro_transition__to__bear_unwind",
+    "trigger_type": "real_rate_shock"
+  },
+  {
+    "mechanism": "inventory_unwind",
+    "primary_signal": "yield_10y_change_5",
+    "transition_id": "bull_trend__to__bear_unwind",
+    "trigger_type": "real_rate_shock"
+  },
+  {
+    "mechanism": "liquidity_rebalancing",
+    "primary_signal": "dxy_return_20",
+    "transition_id": "bear_unwind__to__range_compression",
+    "trigger_type": "volatility_decay"
+  },
+  {
+    "mechanism": "policy_signal_repricing",
+    "primary_signal": "fed_surprise",
+    "transition_id": "bear_unwind__to__macro_transition",
+    "trigger_type": "macro_repricing"
+  },
+  {
+    "mechanism": "trend_amplification",
+    "primary_signal": "forward_expectation",
+    "transition_id": "bear_unwind__to__bull_trend",
+    "trigger_type": "trend_reinforcement"
+  },
+  {
+    "mechanism": "policy_signal_repricing",
+    "primary_signal": "fed_surprise",
+    "transition_id": "range_compression__to__macro_transition",
+    "trigger_type": "macro_repricing"
+  },
+  {
+    "mechanism": "trend_amplification",
+    "primary_signal": "forward_expectation",
+    "transition_id": "range_compression__to__bull_trend",
+    "trigger_type": "trend_reinforcement"
+  },
+  {
+    "mechanism": "liquidity_rebalancing",
+    "primary_signal": "dxy_return_20",
+    "transition_id": "macro_transition__to__range_compression",
+    "trigger_type": "volatility_decay"
+  },
+  {
+    "mechanism": "trend_amplification",
+    "primary_signal": "forward_expectation",
+    "transition_id": "macro_transition__to__bull_trend",
+    "trigger_type": "trend_reinforcement"
+  },
+  {
+    "mechanism": "inventory_absorption",
+    "primary_signal": "yield_curve_10y_3m",
+    "transition_id": "crisis_dislocation__to__calm_carry",
+    "trigger_type": "range_stabilization"
+  },
+  {
+    "mechanism": "safe_haven_reallocation",
+    "primary_signal": "geo_severity",
+    "transition_id": "calm_carry__to__crisis_dislocation",
+    "trigger_type": "systemic_stress"
+  },
+  {
+    "mechanism": "liquidity_rebalancing",
+    "primary_signal": "dxy_return_20",
+    "transition_id": "bull_trend__to__range_compression",
+    "trigger_type": "volatility_decay"
+  },
+  {
+    "mechanism": "policy_signal_repricing",
+    "primary_signal": "fed_surprise",
+    "transition_id": "bull_trend__to__macro_transition",
+    "trigger_type": "macro_repricing"
+  },
+  {
+    "mechanism": "inventory_unwind",
+    "primary_signal": "yield_10y_change_5",
+    "transition_id": "crisis_dislocation__to__bear_unwind",
+    "trigger_type": "real_rate_shock"
+  },
+  {
+    "mechanism": "safe_haven_reallocation",
+    "primary_signal": "geo_severity",
+    "transition_id": "bear_unwind__to__crisis_dislocation",
+    "trigger_type": "systemic_stress"
+  },
+  {
+    "mechanism": "safe_haven_reallocation",
+    "primary_signal": "geo_severity",
+    "transition_id": "range_compression__to__crisis_dislocation",
+    "trigger_type": "systemic_stress"
+  },
+  {
+    "mechanism": "safe_haven_reallocation",
+    "primary_signal": "geo_severity",
+    "transition_id": "macro_transition__to__crisis_dislocation",
+    "trigger_type": "systemic_stress"
+  },
+  {
+    "mechanism": "liquidity_rebalancing",
+    "primary_signal": "dxy_return_20",
+    "transition_id": "crisis_dislocation__to__range_compression",
+    "trigger_type": "volatility_decay"
+  },
+  {
+    "mechanism": "policy_signal_repricing",
+    "primary_signal": "fed_surprise",
+    "transition_id": "crisis_dislocation__to__macro_transition",
+    "trigger_type": "macro_repricing"
+  },
+  {
+    "mechanism": "trend_amplification",
+    "primary_signal": "forward_expectation",
+    "transition_id": "crisis_dislocation__to__bull_trend",
+    "trigger_type": "trend_reinforcement"
+  },
+  {
+    "mechanism": "safe_haven_reallocation",
+    "primary_signal": "geo_severity",
+    "transition_id": "bull_trend__to__crisis_dislocation",
+    "trigger_type": "systemic_stress"
+  }
+]

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
+from typing import cast
 
 import numpy as np
 import pandas as pd
@@ -43,15 +44,15 @@ FEATURE_COLUMNS: Sequence[str] = (
 def build_feature_frame(base: pd.DataFrame) -> pd.DataFrame:
     """Build deterministic feature frame and forward-return targets."""
     frame = base.copy()
-    close = frame["close"].astype(float)
-    high = frame["high"].astype(float)
-    low = frame["low"].astype(float)
-    dxy = frame["dxy_close"].astype(float)
-    fed_actual = frame["fed_actual"].astype(float)
-    fed_previous = frame["fed_previous"].astype(float)
-    yield_3m = frame["yield_3m"].astype(float)
-    yield_10y = frame["yield_10y"].astype(float)
-    yield_30y = frame["yield_30y"].astype(float)
+    close = cast(pd.Series, frame["close"].astype(float))
+    high = cast(pd.Series, frame["high"].astype(float))
+    low = cast(pd.Series, frame["low"].astype(float))
+    dxy = cast(pd.Series, frame["dxy_close"].astype(float))
+    fed_actual = cast(pd.Series, frame["fed_actual"].astype(float))
+    fed_previous = cast(pd.Series, frame["fed_previous"].astype(float))
+    yield_3m = cast(pd.Series, frame["yield_3m"].astype(float))
+    yield_10y = cast(pd.Series, frame["yield_10y"].astype(float))
+    yield_30y = cast(pd.Series, frame["yield_30y"].astype(float))
 
     frame["xau_return_1"] = close.pct_change().fillna(0.0)
     frame["xau_return_5"] = close.pct_change(5).fillna(0.0)
@@ -62,7 +63,7 @@ def build_feature_frame(base: pd.DataFrame) -> pd.DataFrame:
     frame["ema_180"] = close.ewm(span=180, adjust=False).mean()
     frame["trend_gap_20_120"] = (frame["ema_20"] / frame["ema_120"] - 1.0).fillna(0.0)
     frame["trend_gap_30_180"] = (frame["ema_30"] / frame["ema_180"] - 1.0).fillna(0.0)
-    frame["range_pct"] = high.sub(low).div(close.replace(0.0, np.nan)).fillna(0.0)
+    frame["range_pct"] = (high - low).div(close.replace(0.0, np.nan)).fillna(0.0)
     frame["range_zscore_20"] = (
         (frame["range_pct"] - frame["range_pct"].rolling(20).mean())
         / frame["range_pct"].rolling(20).std().replace(0.0, np.nan)
@@ -80,10 +81,10 @@ def build_feature_frame(base: pd.DataFrame) -> pd.DataFrame:
     frame["dxy_return_1"] = dxy.pct_change().fillna(0.0)
     frame["dxy_return_5"] = dxy.pct_change(5).fillna(0.0)
     frame["dxy_return_20"] = dxy.pct_change(20).fillna(0.0)
-    frame["yield_curve_10y_3m"] = yield_10y.sub(yield_3m).fillna(0.0)
+    frame["yield_curve_10y_3m"] = (yield_10y - yield_3m).fillna(0.0)
     frame["yield_10y_change_5"] = yield_10y.diff(5).fillna(0.0)
     frame["yield_30y_change_20"] = yield_30y.diff(20).fillna(0.0)
-    frame["fed_surprise"] = fed_actual.sub(fed_previous).fillna(0.0)
+    frame["fed_surprise"] = (fed_actual - fed_previous).fillna(0.0)
     frame["fed_change_5"] = fed_actual.diff(5).fillna(0.0)
     frame["macro_pressure"] = (
         -50.0 * frame["dxy_return_5"]

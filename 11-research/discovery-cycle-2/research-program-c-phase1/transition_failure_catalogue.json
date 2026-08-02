@@ -1,0 +1,872 @@
+[
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      }
+    ],
+    "transition_id": "calm_carry__to__bear_unwind"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      }
+    ],
+    "transition_id": "bear_unwind__to__calm_carry"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      }
+    ],
+    "transition_id": "range_compression__to__calm_carry"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      }
+    ],
+    "transition_id": "macro_transition__to__calm_carry"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Buying tops, selling troughs, liquidity chasing.",
+        "participant": "retail_traders"
+      }
+    ],
+    "transition_id": "calm_carry__to__range_compression"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Policy surprise misread, reserve defense constraints, delayed response to inflation stress.",
+        "participant": "central_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      }
+    ],
+    "transition_id": "calm_carry__to__macro_transition"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Whipsaws, false breakouts, crowded trend reversals.",
+        "participant": "ctas"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+        "participant": "etf_investors"
+      }
+    ],
+    "transition_id": "calm_carry__to__bull_trend"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      }
+    ],
+    "transition_id": "bull_trend__to__calm_carry"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      }
+    ],
+    "transition_id": "range_compression__to__bear_unwind"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      }
+    ],
+    "transition_id": "macro_transition__to__bear_unwind"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      }
+    ],
+    "transition_id": "bull_trend__to__bear_unwind"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Buying tops, selling troughs, liquidity chasing.",
+        "participant": "retail_traders"
+      }
+    ],
+    "transition_id": "bear_unwind__to__range_compression"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Policy surprise misread, reserve defense constraints, delayed response to inflation stress.",
+        "participant": "central_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      }
+    ],
+    "transition_id": "bear_unwind__to__macro_transition"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Whipsaws, false breakouts, crowded trend reversals.",
+        "participant": "ctas"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+        "participant": "etf_investors"
+      }
+    ],
+    "transition_id": "bear_unwind__to__bull_trend"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Policy surprise misread, reserve defense constraints, delayed response to inflation stress.",
+        "participant": "central_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      }
+    ],
+    "transition_id": "range_compression__to__macro_transition"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Whipsaws, false breakouts, crowded trend reversals.",
+        "participant": "ctas"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+        "participant": "etf_investors"
+      }
+    ],
+    "transition_id": "range_compression__to__bull_trend"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Buying tops, selling troughs, liquidity chasing.",
+        "participant": "retail_traders"
+      }
+    ],
+    "transition_id": "macro_transition__to__range_compression"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Whipsaws, false breakouts, crowded trend reversals.",
+        "participant": "ctas"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+        "participant": "etf_investors"
+      }
+    ],
+    "transition_id": "macro_transition__to__bull_trend"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      }
+    ],
+    "transition_id": "crisis_dislocation__to__calm_carry"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+        "participant": "etf_investors"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Crowding into same hedge, late panic allocation, reversal after stress normalization.",
+        "participant": "safe_haven_capital_flows"
+      }
+    ],
+    "transition_id": "calm_carry__to__crisis_dislocation"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Buying tops, selling troughs, liquidity chasing.",
+        "participant": "retail_traders"
+      }
+    ],
+    "transition_id": "bull_trend__to__range_compression"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Policy surprise misread, reserve defense constraints, delayed response to inflation stress.",
+        "participant": "central_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      }
+    ],
+    "transition_id": "bull_trend__to__macro_transition"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      }
+    ],
+    "transition_id": "crisis_dislocation__to__bear_unwind"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+        "participant": "etf_investors"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Crowding into same hedge, late panic allocation, reversal after stress normalization.",
+        "participant": "safe_haven_capital_flows"
+      }
+    ],
+    "transition_id": "bear_unwind__to__crisis_dislocation"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+        "participant": "etf_investors"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Crowding into same hedge, late panic allocation, reversal after stress normalization.",
+        "participant": "safe_haven_capital_flows"
+      }
+    ],
+    "transition_id": "range_compression__to__crisis_dislocation"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+        "participant": "etf_investors"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Crowding into same hedge, late panic allocation, reversal after stress normalization.",
+        "participant": "safe_haven_capital_flows"
+      }
+    ],
+    "transition_id": "macro_transition__to__crisis_dislocation"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+        "participant": "commercial_hedgers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Buying tops, selling troughs, liquidity chasing.",
+        "participant": "retail_traders"
+      }
+    ],
+    "transition_id": "crisis_dislocation__to__range_compression"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Policy surprise misread, reserve defense constraints, delayed response to inflation stress.",
+        "participant": "central_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      }
+    ],
+    "transition_id": "crisis_dislocation__to__macro_transition"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+        "participant": "bullion_banks"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Whipsaws, false breakouts, crowded trend reversals.",
+        "participant": "ctas"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+        "participant": "macro_hedge_funds"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+        "participant": "etf_investors"
+      }
+    ],
+    "transition_id": "crisis_dislocation__to__bull_trend"
+  },
+  {
+    "failure_modes": [
+      {
+        "confidence": 0.92,
+        "failure_category": "information_delay",
+        "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+        "participant": "dealers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+        "participant": "market_makers"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+        "participant": "etf_investors"
+      },
+      {
+        "confidence": 0.92,
+        "failure_category": "cascade_amplification",
+        "failure_mode": "Crowding into same hedge, late panic allocation, reversal after stress normalization.",
+        "participant": "safe_haven_capital_flows"
+      }
+    ],
+    "transition_id": "bull_trend__to__crisis_dislocation"
+  }
+]

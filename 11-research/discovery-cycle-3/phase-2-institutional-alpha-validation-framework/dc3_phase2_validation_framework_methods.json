@@ -1,0 +1,19 @@
+[
+  "walk_forward_validation",
+  "nested_walk_forward",
+  "combinatorial_purged_cross_validation",
+  "monte_carlo",
+  "bootstrap",
+  "sensitivity_analysis",
+  "stress_testing",
+  "historical_replay",
+  "out_of_sample_validation",
+  "probability_of_backtest_overfitting",
+  "deflated_sharpe_ratio",
+  "probabilistic_sharpe_ratio",
+  "whites_reality_check",
+  "spa_test",
+  "concept_drift_detection",
+  "stability_analysis",
+  "failure_replay"
+]

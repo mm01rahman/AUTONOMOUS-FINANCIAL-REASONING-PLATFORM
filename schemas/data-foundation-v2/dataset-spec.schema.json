@@ -1,0 +1,204 @@
+{
+  "$defs": {
+    "DatasetFieldSchema": {
+      "description": "One canonical field in a Tier 1 dataset schema.",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "dtype": {
+          "enum": [
+            "datetime",
+            "float",
+            "int",
+            "str"
+          ],
+          "title": "Dtype",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "nullable": {
+          "default": false,
+          "title": "Nullable",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "dtype",
+        "description"
+      ],
+      "title": "DatasetFieldSchema",
+      "type": "object"
+    }
+  },
+  "description": "Canonical configuration for one Data Foundation V2 dataset.",
+  "properties": {
+    "cadence": {
+      "enum": [
+        "daily",
+        "weekly",
+        "monthly",
+        "derived"
+      ],
+      "title": "Cadence",
+      "type": "string"
+    },
+    "credential_env_vars": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Credential Env Vars",
+      "type": "array"
+    },
+    "dataset_id": {
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "domain": {
+      "title": "Domain",
+      "type": "string"
+    },
+    "history": {
+      "title": "History",
+      "type": "string"
+    },
+    "licensing": {
+      "title": "Licensing",
+      "type": "string"
+    },
+    "market_state_variables": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Market State Variables",
+      "type": "array"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "provider": {
+      "title": "Provider",
+      "type": "string"
+    },
+    "quality_weight": {
+      "default": 0.8,
+      "title": "Quality Weight",
+      "type": "number"
+    },
+    "request_headers": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Request Headers",
+      "type": "object"
+    },
+    "request_params": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Request Params",
+      "type": "object"
+    },
+    "requires_api_key": {
+      "default": false,
+      "title": "Requires Api Key",
+      "type": "boolean"
+    },
+    "schema_fields": {
+      "items": {
+        "$ref": "#/$defs/DatasetFieldSchema"
+      },
+      "title": "Schema Fields",
+      "type": "array"
+    },
+    "slug": {
+      "title": "Slug",
+      "type": "string"
+    },
+    "source": {
+      "title": "Source",
+      "type": "string"
+    },
+    "source_fixture_key": {
+      "title": "Source Fixture Key",
+      "type": "string"
+    },
+    "source_kind": {
+      "enum": [
+        "public_api",
+        "public_file",
+        "derived"
+      ],
+      "title": "Source Kind",
+      "type": "string"
+    },
+    "source_priority": {
+      "default": "P1",
+      "title": "Source Priority",
+      "type": "string"
+    },
+    "source_url": {
+      "default": "",
+      "title": "Source Url",
+      "type": "string"
+    },
+    "supported_axioms": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supported Axioms",
+      "type": "array"
+    },
+    "supported_families": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supported Families",
+      "type": "array"
+    },
+    "supported_mechanisms": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supported Mechanisms",
+      "type": "array"
+    },
+    "timezone": {
+      "default": "UTC",
+      "title": "Timezone",
+      "type": "string"
+    },
+    "work_package": {
+      "title": "Work Package",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "slug",
+    "name",
+    "work_package",
+    "domain",
+    "provider",
+    "source",
+    "licensing",
+    "history",
+    "cadence",
+    "source_kind",
+    "schema_fields",
+    "market_state_variables",
+    "supported_families",
+    "supported_mechanisms",
+    "supported_axioms",
+    "source_fixture_key"
+  ],
+  "title": "DatasetSpec",
+  "type": "object"
+}

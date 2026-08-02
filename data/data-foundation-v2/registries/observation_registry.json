@@ -1,0 +1,216 @@
+[
+  {
+    "family_id": "FAM-004",
+    "mechanism_type": "cross_asset_transition",
+    "newly_observed_variables": [],
+    "observed_after": 3,
+    "observed_before": 3,
+    "proxy_dependence_after": 1,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "real_yield_tip",
+      "cross_asset_topology_weight"
+    ],
+    "required_count": 5,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-001",
+    "mechanism_type": "macro_repricing",
+    "newly_observed_variables": [],
+    "observed_after": 3,
+    "observed_before": 3,
+    "proxy_dependence_after": 1,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "cpi_surprise",
+      "fomc_rate_path",
+      "fed_funds_futures"
+    ],
+    "required_count": 6,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-002",
+    "mechanism_type": "liquidity_withdrawal",
+    "newly_observed_variables": [
+      "vix",
+      "ted_spread"
+    ],
+    "observed_after": 3,
+    "observed_before": 1,
+    "proxy_dependence_after": 0,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "bid_ask_spread_proxy",
+      "fra_ois",
+      "market_depth"
+    ],
+    "required_count": 6,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-002",
+    "mechanism_type": "dealer_inventory",
+    "newly_observed_variables": [
+      "comex_positioning",
+      "cot_dealers",
+      "vol_surface"
+    ],
+    "observed_after": 4,
+    "observed_before": 1,
+    "proxy_dependence_after": 0,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "gold_lease_rate"
+    ],
+    "required_count": 5,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-005",
+    "mechanism_type": "expectation_reset",
+    "newly_observed_variables": [
+      "breakeven_inflation"
+    ],
+    "observed_after": 1,
+    "observed_before": 0,
+    "proxy_dependence_after": 0,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "fed_funds_futures",
+      "sofr_futures",
+      "fomc_meeting_prob",
+      "economic_surprise_index"
+    ],
+    "required_count": 5,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-003",
+    "mechanism_type": "safe_haven_migration",
+    "newly_observed_variables": [
+      "vix",
+      "ted_spread",
+      "gld_etf_flows",
+      "iau_etf_flows",
+      "geopolitical_risk_index"
+    ],
+    "observed_after": 7,
+    "observed_before": 2,
+    "proxy_dependence_after": 0,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "us_treasury_flows"
+    ],
+    "required_count": 8,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-004",
+    "mechanism_type": "etf_flow_propagation",
+    "newly_observed_variables": [
+      "gld_shares_outstanding",
+      "iau_shares_outstanding"
+    ],
+    "observed_after": 2,
+    "observed_before": 0,
+    "proxy_dependence_after": 0,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "etf_nav_premium",
+      "etf_creation_redemption"
+    ],
+    "required_count": 4,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-005",
+    "mechanism_type": "policy_repricing",
+    "newly_observed_variables": [],
+    "observed_after": 0,
+    "observed_before": 0,
+    "proxy_dependence_after": 1,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "fomc_statement_embedding",
+      "fed_funds_futures",
+      "sofr_futures",
+      "dot_plot_surprise",
+      "cpi_actuals"
+    ],
+    "required_count": 5,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-006",
+    "mechanism_type": "decision_cascade",
+    "newly_observed_variables": [
+      "dealer_gamma"
+    ],
+    "observed_after": 1,
+    "observed_before": 0,
+    "proxy_dependence_after": 0,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "order_flow_imbalance",
+      "volume_delta",
+      "trade_aggressor_ratio",
+      "intraday_vol_clustering"
+    ],
+    "required_count": 5,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-004",
+    "mechanism_type": "information_cascade",
+    "newly_observed_variables": [],
+    "observed_after": 1,
+    "observed_before": 1,
+    "proxy_dependence_after": 1,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "news_embedding_velocity",
+      "macro_event_embedding",
+      "directed_edge_weight"
+    ],
+    "required_count": 4,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-007",
+    "mechanism_type": "adaptive_ecology_shift",
+    "newly_observed_variables": [
+      "cot_participant_mix",
+      "dealer_net_position_change",
+      "institutional_flow_direction"
+    ],
+    "observed_after": 3,
+    "observed_before": 0,
+    "proxy_dependence_after": 0,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "etf_vs_futures_ratio"
+    ],
+    "required_count": 4,
+    "still_blocked": true
+  },
+  {
+    "family_id": "FAM-007",
+    "mechanism_type": "regime_transition_chain",
+    "newly_observed_variables": [],
+    "observed_after": 1,
+    "observed_before": 1,
+    "proxy_dependence_after": 1,
+    "proxy_dependence_before": 1,
+    "remaining_unavailable": [
+      "macro_regime_indicator",
+      "vol_regime_indicator",
+      "liquidity_regime_indicator",
+      "flow_regime_indicator",
+      "cross_asset_stress_composite"
+    ],
+    "required_count": 5,
+    "still_blocked": true
+  }
+]

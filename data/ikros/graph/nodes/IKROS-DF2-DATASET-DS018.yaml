@@ -1,0 +1,18 @@
+attributes:
+  covered_variables:
+  - us_treasury_2y_yield
+  - fomc_policy_anchor_public
+  domain: policy_expectations
+  provider: FREDProvider
+confidence: 0.9592
+created_at: '2026-08-02T15:33:14.512596+00:00'
+ikros_id: IKROS-DF2-DATASET-DS018
+label: DS-018 US Treasury 2Y Yield
+node_id: IKROS-DF2-DATASET-DS018
+node_type: DATASET
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

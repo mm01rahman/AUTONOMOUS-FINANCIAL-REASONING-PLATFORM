@@ -1,0 +1,18 @@
+attributes:
+  covered_variables:
+  - comex_positioning_direct
+  - cot_participant_mix
+  domain: institutional_positioning
+  provider: CFTCProvider
+confidence: 0.9502
+created_at: '2026-08-02T15:33:14.511597+00:00'
+ikros_id: IKROS-DF2-DATASET-DS009
+label: DS-009 COMEX Non-Commercial Positioning
+node_id: IKROS-DF2-DATASET-DS009
+node_type: DATASET
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

@@ -1,0 +1,59 @@
+archived_at: null
+capability_refs:
+- IKROS-ORCHESTRATOR
+- IKROS-GRAPH
+- IKROS-MEMORY
+confidence: 0.81
+created_at: '2026-08-02T15:33:16.592082+00:00'
+dependency_ids: []
+entity_type: DataFoundationSummary
+evidence_refs:
+- 11-research\data-foundation-v2\phase-1-institutional-market-data-infrastructure\ARB_RECOMMENDATION_DATA_FOUNDATION_V2_PHASE1.md
+graph_node_ids: []
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260802-0041
+payload:
+  covered_variable_count: 22
+  dataset_count: 13
+  proxy_dependence_reduction: 7
+  remaining_blocked_families:
+  - FAM-001
+  - FAM-002
+  - FAM-003
+  - FAM-004
+  - FAM-005
+  - FAM-006
+  - FAM-007
+retired_at: null
+source_ids:
+- DS-001
+- DS-003
+- DS-012
+- DS-018
+- DS-019
+- DS-007
+- DS-008
+- DS-009
+- DS-010
+- DS-011
+- DS-014
+- DS-017
+- DS-PUB-021
+spec_refs:
+- SPEC-060
+summary: Tier 1 historical market data infrastructure implemented with deterministic
+  ingestion, storage, registries, and dashboards.
+tags:
+- data-foundation
+- tier1
+- institutional-data
+tier: T4_INSTITUTIONAL
+title: Data Foundation V2 Phase 1 institutional summary
+updated_at: '2026-08-02T15:33:16.592082+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs:
+- WP-IMP-0048

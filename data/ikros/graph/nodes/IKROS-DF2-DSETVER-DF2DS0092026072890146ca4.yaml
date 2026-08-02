@@ -1,0 +1,15 @@
+attributes:
+  manifest_path: data-foundation-v2\datasets\DS-009\DF2-DS009-20260728-90146ca4\manifest.json
+  storage_path: data\data-foundation-v2\datasets\DS-009\DF2-DS009-20260728-90146ca4\data.csv
+confidence: 0.9762
+created_at: '2026-08-02T15:33:14.511597+00:00'
+ikros_id: IKROS-DF2-DSETVER-DF2DS0092026072890146ca4
+label: DS-009 version DF2-DS009-20260728-90146ca4
+node_id: IKROS-DF2-DSETVER-DF2DS0092026072890146ca4
+node_type: DATASET_VERSION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

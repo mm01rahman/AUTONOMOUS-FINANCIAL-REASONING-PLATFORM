@@ -1,0 +1,98 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0010",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Cross-Asset Information Cascade Mechanism",
+    "priority_band": "P1",
+    "queue_position": 1
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Safe-Haven Capital Migration Mechanism",
+    "priority_band": "P1",
+    "queue_position": 2
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Institutional Decision Cascade Mechanism",
+    "priority_band": "P1",
+    "queue_position": 3
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0001",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Cross-Asset Relay Pressure Transition Mechanism",
+    "priority_band": "P1",
+    "queue_position": 4
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0011",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Adaptive Ecology Shift Mechanism",
+    "priority_band": "P2",
+    "queue_position": 5
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0004",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Dealer Inventory Redistribution Mechanism",
+    "priority_band": "P2",
+    "queue_position": 6
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0005",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Expectation Reset Mechanism",
+    "priority_band": "P2",
+    "queue_position": 7
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0007",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "ETF Flow Propagation Mechanism",
+    "priority_band": "P2",
+    "queue_position": 8
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0003",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Liquidity Withdrawal Shock Mechanism",
+    "priority_band": "P3",
+    "queue_position": 9
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0002",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Macro Repricing Relay Mechanism",
+    "priority_band": "P3",
+    "queue_position": 10
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0008",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Policy Repricing Chain Mechanism",
+    "priority_band": "P3",
+    "queue_position": 11
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0012",
+    "defer_criteria": "Insufficient evidence completion or architecture-constraint violation.",
+    "entry_criteria": "Scientific support and information-gain thresholds met under governance constraints.",
+    "name": "Institutional Regime Transition Chain Mechanism",
+    "priority_band": "P3",
+    "queue_position": 12
+  }
+]

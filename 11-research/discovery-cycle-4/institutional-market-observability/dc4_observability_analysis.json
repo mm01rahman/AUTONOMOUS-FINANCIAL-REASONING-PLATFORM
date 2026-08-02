@@ -1,0 +1,1835 @@
+{
+  "arb_recommendation": {
+    "immediate_free_acquisitions": [
+      "DS-001",
+      "DS-003",
+      "DS-007",
+      "DS-009",
+      "DS-010",
+      "DS-011",
+      "DS-012",
+      "DS-018",
+      "DS-019"
+    ],
+    "mechanisms_blocked": 11,
+    "observation_completeness_avg": 0.1806,
+    "p1_datasets_recommended": [
+      "DS-001",
+      "DS-002",
+      "DS-003",
+      "DS-004",
+      "DS-005",
+      "DS-006",
+      "DS-007",
+      "DS-009",
+      "DS-010",
+      "DS-011",
+      "DS-012",
+      "DS-015",
+      "DS-018",
+      "DS-019"
+    ],
+    "promote_now": false,
+    "recommended_next_action": "Implement Data Foundation V2 with P1 free datasets (FRED: VIX, TED, Breakeven, TIPS, 2Y yield; CFTC: COT; CBOE: GVZ; SPDR: GLD; WGC: ETF flows). Await ARB approval before implementation.",
+    "scientific_blind_spots": [
+      "instantaneous_flow_data",
+      "dealer_gamma",
+      "directed_edge_weight",
+      "breakeven_inflation",
+      "bid_ask_spread",
+      "gld_shares_outstanding",
+      "news_embedding_velocity",
+      "comex_positioning_direct",
+      "institutional_flow_direction",
+      "gold_lease_rate"
+    ],
+    "validate_additional_now": false
+  },
+  "avg_observation_completeness": 0.1806,
+  "data_foundation_v2_spec": {
+    "governance": "All dataset acquisitions require ARB approval before implementation.",
+    "live_broker_prohibited": true,
+    "offline_only": true,
+    "pipeline_stages": [
+      {
+        "components": [
+          "SourceAdapter",
+          "RetryPolicy",
+          "ChecksumVerifier"
+        ],
+        "description": "Deterministic download from authorised sources; retry logic; checksum verification.",
+        "stage": "ACQUISITION"
+      },
+      {
+        "components": [
+          "SchemaValidator",
+          "RangeChecker",
+          "MissingValueAuditor",
+          "OutlierDetector"
+        ],
+        "description": "Schema validation, range checks, missing-value audits, outlier detection.",
+        "stage": "VALIDATION"
+      },
+      {
+        "components": [
+          "TimestampNormalizer",
+          "UnitConverter",
+          "CalendarAdjuster",
+          "FrequencyHarmonizer"
+        ],
+        "description": "UTC timestamp alignment, unit normalization, calendar adjustment, frequency harmonization.",
+        "stage": "NORMALIZATION"
+      },
+      {
+        "components": [
+          "DataVersionStore",
+          "ContentHasher",
+          "SnapshotRegistry"
+        ],
+        "description": "Immutable versioned snapshots with SHA-256 hash, git-like ancestry, tagged releases.",
+        "stage": "VERSIONING"
+      },
+      {
+        "components": [
+          "MetadataStore",
+          "ProvenanceTracker",
+          "LicenseRegistry"
+        ],
+        "description": "Source provenance, license, acquisition date, data quality score, update cadence.",
+        "stage": "METADATA"
+      },
+      {
+        "components": [
+          "EvidenceEmitter",
+          "IKROSLinker"
+        ],
+        "description": "IKROS evidence linkage: every dataset update creates an evidence record.",
+        "stage": "EVIDENCE_TRACKING"
+      },
+      {
+        "components": [
+          "DataQualityScorer",
+          "CompletenessChecker",
+          "TimelinessMonitor"
+        ],
+        "description": "Automated quality score: completeness \u00d7 timeliness \u00d7 consistency \u00d7 lineage.",
+        "stage": "QUALITY_SCORING"
+      }
+    ],
+    "principles": [
+      "Every dataset must trace to at least one scientific hypothesis.",
+      "All datasets are versioned with SHA-256 content hash.",
+      "All ingestion pipelines are deterministic and reproducible.",
+      "No live broker connections; offline data only.",
+      "All datasets include quality scores, provenance, and update audit trail.",
+      "Time synchronisation: all timestamps normalized to UTC.",
+      "Schema validation is mandatory before any dataset enters the research layer."
+    ],
+    "priority_datasets": [
+      "DS-001",
+      "DS-003",
+      "DS-007",
+      "DS-009",
+      "DS-010",
+      "DS-011",
+      "DS-012",
+      "DS-018",
+      "DS-019"
+    ],
+    "title": "AFRP Data Foundation V2",
+    "version": "2.0.0"
+  },
+  "data_source_registry": [
+    {
+      "api_support": true,
+      "cost": "Free",
+      "coverage": "Macro, rates, credit, money supply, inflation, employment",
+      "datasets": [
+        "VIX",
+        "TED Spread",
+        "Breakeven Inflation",
+        "TIPS Yields",
+        "US Treasury Yields",
+        "M2",
+        "CPI"
+      ],
+      "governance": "Federal Reserve",
+      "historical_depth": "1940s-present",
+      "latency": "T+1 to T+5",
+      "licensing": "Free and open",
+      "name": "FRED (Federal Reserve Economic Data)",
+      "operator": "Federal Reserve Bank of St. Louis",
+      "priority": "P1",
+      "quality": "HIGH",
+      "reliability": "VERY_HIGH",
+      "source_id": "SRC-001"
+    },
+    {
+      "api_support": true,
+      "cost": "Subscription",
+      "coverage": "Futures: gold, rates, FX, equity; SOFR futures, Fed Funds futures, COMEX gold",
+      "datasets": [
+        "COMEX Gold Futures",
+        "SOFR Futures",
+        "Fed Funds Futures",
+        "Eurodollar Futures"
+      ],
+      "governance": "CFTC-regulated",
+      "historical_depth": "1972-present",
+      "latency": "Real-time (commercial), Delayed free",
+      "licensing": "Commercial",
+      "name": "CME Group (CME DataMine)",
+      "operator": "CME Group",
+      "priority": "P1",
+      "quality": "HIGH",
+      "reliability": "VERY_HIGH",
+      "source_id": "SRC-002"
+    },
+    {
+      "api_support": true,
+      "cost": "Free",
+      "coverage": "Futures positioning by participant class: dealers, leveraged, asset managers, small speculators",
+      "datasets": [
+        "COT Legacy",
+        "COT Disaggregated",
+        "COT Financial Traders"
+      ],
+      "governance": "US Government",
+      "historical_depth": "1986-present",
+      "latency": "Weekly (Friday release, Tuesday data)",
+      "licensing": "Free",
+      "name": "CFTC (Commitments of Traders)",
+      "operator": "Commodity Futures Trading Commission",
+      "priority": "P1",
+      "quality": "HIGH",
+      "reliability": "HIGH",
+      "source_id": "SRC-003"
+    },
+    {
+      "api_support": true,
+      "cost": "Free (delayed)",
+      "coverage": "Equity and commodity volatility indices: VIX, GVZ, MOVE",
+      "datasets": [
+        "VIX",
+        "GVZ (Gold VIX)",
+        "VXN",
+        "SKEW"
+      ],
+      "governance": "SEC-regulated",
+      "historical_depth": "1990-present",
+      "latency": "Real-time (delayed free)",
+      "licensing": "Free for historical, commercial for real-time",
+      "name": "CBOE (Chicago Board Options Exchange)",
+      "operator": "Cboe Global Markets",
+      "priority": "P1",
+      "quality": "HIGH",
+      "reliability": "HIGH",
+      "source_id": "SRC-004"
+    },
+    {
+      "api_support": false,
+      "cost": "Free",
+      "coverage": "Gold demand, ETF flows, central bank purchases, supply/demand reports",
+      "datasets": [
+        "ETF Holdings",
+        "Central Bank Purchases",
+        "Mine Supply",
+        "Demand by Sector"
+      ],
+      "governance": "Industry body",
+      "historical_depth": "2000-present",
+      "latency": "Monthly/Quarterly",
+      "licensing": "Free (aggregated)",
+      "name": "World Gold Council (WGC)",
+      "operator": "World Gold Council",
+      "priority": "P1",
+      "quality": "HIGH",
+      "reliability": "HIGH",
+      "source_id": "SRC-005"
+    },
+    {
+      "api_support": true,
+      "cost": "Free (prices)",
+      "coverage": "Gold and silver fixings, clearing statistics, vault holdings",
+      "datasets": [
+        "LBMA Gold Price",
+        "Gold Clearing Statistics",
+        "Vault Holdings"
+      ],
+      "governance": "Industry self-regulatory",
+      "historical_depth": "1968-present",
+      "latency": "Daily / Monthly",
+      "licensing": "Free (prices), restricted (clearing)",
+      "name": "LBMA (London Bullion Market Association)",
+      "operator": "LBMA",
+      "priority": "P2",
+      "quality": "HIGH",
+      "reliability": "HIGH",
+      "source_id": "SRC-006"
+    },
+    {
+      "api_support": true,
+      "cost": "Free",
+      "coverage": "Central bank reserves, gold reserves, IFS database",
+      "datasets": [
+        "Central Bank Gold Reserves",
+        "IFS Macro Data",
+        "COFER"
+      ],
+      "governance": "International",
+      "historical_depth": "1950-present",
+      "latency": "Monthly/Quarterly",
+      "licensing": "Free",
+      "name": "IMF (International Monetary Fund)",
+      "operator": "IMF",
+      "priority": "P2",
+      "quality": "HIGH",
+      "reliability": "HIGH",
+      "source_id": "SRC-007"
+    },
+    {
+      "api_support": true,
+      "cost": "Free starter, paid tiers",
+      "coverage": "Equities, FX, crypto intraday; limited commodities",
+      "datasets": [
+        "Intraday Equity",
+        "FX intraday",
+        "Aggregated bars"
+      ],
+      "governance": "Commercial",
+      "historical_depth": "2004-present",
+      "latency": "Real-time / 15-min delayed (free)",
+      "licensing": "Free tier / Commercial",
+      "name": "Polygon.io",
+      "operator": "Polygon.io",
+      "priority": "P2",
+      "quality": "MEDIUM-HIGH",
+      "reliability": "MEDIUM",
+      "source_id": "SRC-008"
+    },
+    {
+      "api_support": true,
+      "cost": "Mixed",
+      "coverage": "Broad financial data; FRED mirror, COT, futures",
+      "datasets": [
+        "FRED data",
+        "COT mirror",
+        "Commodity futures",
+        "Alternative data"
+      ],
+      "governance": "Nasdaq-operated",
+      "historical_depth": "Varies by dataset",
+      "latency": "T+1 to real-time",
+      "licensing": "Free (many) / Commercial (premium)",
+      "name": "Nasdaq Data Link (Quandl)",
+      "operator": "Nasdaq",
+      "priority": "P2",
+      "quality": "HIGH",
+      "reliability": "HIGH",
+      "source_id": "SRC-009"
+    },
+    {
+      "api_support": false,
+      "cost": "Free",
+      "coverage": "Geopolitical risk index, business conditions index",
+      "datasets": [
+        "GPR Index",
+        "ADS Business Conditions"
+      ],
+      "governance": "Federal Reserve / Academic peer-reviewed",
+      "historical_depth": "1900-present (GPR)",
+      "latency": "Monthly (GPR)",
+      "licensing": "Free (academic)",
+      "name": "Academic Datasets (Caldara-Iacoviello GPR, ADS)",
+      "operator": "Federal Reserve / Academic",
+      "priority": "P2",
+      "quality": "HIGH",
+      "reliability": "HIGH",
+      "source_id": "SRC-010"
+    },
+    {
+      "api_support": true,
+      "cost": "Free",
+      "coverage": "ETF N-PORT filings; holdings, shares outstanding",
+      "datasets": [
+        "GLD Holdings",
+        "IAU Holdings",
+        "ETF N-CEN"
+      ],
+      "governance": "SEC",
+      "historical_depth": "2004-present",
+      "latency": "Monthly (N-PORT lag)",
+      "licensing": "Free",
+      "name": "SEC EDGAR (ETF Holdings)",
+      "operator": "US Securities and Exchange Commission",
+      "priority": "P2",
+      "quality": "HIGH",
+      "reliability": "HIGH",
+      "source_id": "SRC-011"
+    },
+    {
+      "api_support": false,
+      "cost": "Free",
+      "coverage": "GLD daily shares outstanding and NAV",
+      "datasets": [
+        "GLD Shares Outstanding",
+        "GLD NAV",
+        "GLD Premium/Discount"
+      ],
+      "governance": "SEC-regulated",
+      "historical_depth": "2004-present",
+      "latency": "Daily (T+1)",
+      "licensing": "Free (published)",
+      "name": "SPDR ETF (State Street) Direct",
+      "operator": "State Street Global Advisors",
+      "priority": "P1",
+      "quality": "HIGH",
+      "reliability": "HIGH",
+      "source_id": "SRC-012"
+    }
+  ],
+  "dataset_gap_catalogue": [
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-001",
+      "economic_purpose": "Equity implied volatility; safe-haven activation gauge and liquidity stress indicator",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "1990-present",
+      "licensing": "Free (FRED)",
+      "maintenance_cost": "LOW",
+      "name": "VIX Index",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "CBOE / FRED",
+      "supported_families": [
+        "FAM-002",
+        "FAM-003",
+        "FAM-007"
+      ],
+      "update_frequency": "Real-time / Daily close"
+    },
+    {
+      "acquisition_difficulty": "MEDIUM",
+      "dataset_id": "DS-002",
+      "economic_purpose": "US Treasury implied volatility; rates uncertainty and gold safe-haven driver",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "1988-present",
+      "licensing": "Commercial",
+      "maintenance_cost": "LOW",
+      "name": "MOVE Index",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "ICE BofA / Bloomberg",
+      "supported_families": [
+        "FAM-001",
+        "FAM-003",
+        "FAM-005"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-003",
+      "economic_purpose": "Interbank credit risk; systemic stress and liquidity withdrawal proxy",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "1986-present",
+      "licensing": "Free",
+      "maintenance_cost": "LOW",
+      "name": "TED Spread",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "FRED",
+      "supported_families": [
+        "FAM-002",
+        "FAM-003"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "MEDIUM",
+      "dataset_id": "DS-004",
+      "economic_purpose": "Short-term dollar funding stress; direct liquidity stress indicator",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "2000-present",
+      "licensing": "Commercial",
+      "maintenance_cost": "LOW",
+      "name": "FRA/OIS Spread",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "Bloomberg / ICE",
+      "supported_families": [
+        "FAM-002",
+        "FAM-003"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "MEDIUM",
+      "dataset_id": "DS-005",
+      "economic_purpose": "Market-implied rate path; policy repricing and expectation reset driver",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "2018-present",
+      "licensing": "Commercial / Free delayed",
+      "maintenance_cost": "MEDIUM",
+      "name": "SOFR Futures",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "CME",
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "update_frequency": "Real-time / Daily"
+    },
+    {
+      "acquisition_difficulty": "MEDIUM",
+      "dataset_id": "DS-006",
+      "economic_purpose": "FOMC meeting probability; direct policy expectation proxy",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "1988-present",
+      "licensing": "Commercial / Free delayed",
+      "maintenance_cost": "LOW",
+      "name": "Fed Funds Futures",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "CME",
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-007",
+      "economic_purpose": "Institutional gold ETF demand flows; safe-haven and flow propagation signal",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "2004-present",
+      "licensing": "Free",
+      "maintenance_cost": "LOW",
+      "name": "GLD ETF Shares Outstanding",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "SPDR / SEC filings / FRED",
+      "supported_families": [
+        "FAM-003",
+        "FAM-004"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-008",
+      "economic_purpose": "Secondary gold ETF demand; cross-validates GLD signal",
+      "expected_scientific_value": "MEDIUM",
+      "historical_availability": "2005-present",
+      "licensing": "Free",
+      "maintenance_cost": "LOW",
+      "name": "IAU ETF Shares Outstanding",
+      "priority": "P2",
+      "resolution": "Daily",
+      "source": "iShares / SEC",
+      "supported_families": [
+        "FAM-003",
+        "FAM-004"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-009",
+      "economic_purpose": "Speculative gold futures positioning; flow and sentiment indicator",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "1986-present",
+      "licensing": "Free",
+      "maintenance_cost": "LOW",
+      "name": "COMEX Non-Commercial Positioning",
+      "priority": "P1",
+      "resolution": "Weekly",
+      "source": "CFTC COT Report",
+      "supported_families": [
+        "FAM-002",
+        "FAM-004",
+        "FAM-007"
+      ],
+      "update_frequency": "Weekly (COT)"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-010",
+      "economic_purpose": "Dealer inventory pressure; dealer inventory redistribution mechanism",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "2006-present (disaggregated)",
+      "licensing": "Free",
+      "maintenance_cost": "LOW",
+      "name": "COMEX Dealer Net Position",
+      "priority": "P1",
+      "resolution": "Weekly",
+      "source": "CFTC COT Disaggregated",
+      "supported_families": [
+        "FAM-002"
+      ],
+      "update_frequency": "Weekly (COT)"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-011",
+      "economic_purpose": "Gold options implied volatility; vol surface proxy and gamma/vanna estimation",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "2008-present",
+      "licensing": "Free",
+      "maintenance_cost": "LOW",
+      "name": "Gold Volatility Index (GVZ)",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "CBOE",
+      "supported_families": [
+        "FAM-002",
+        "FAM-006"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-012",
+      "economic_purpose": "Real yield computation; gold pricing vs real rates causal mechanism",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "2003-present",
+      "licensing": "Free",
+      "maintenance_cost": "LOW",
+      "name": "Breakeven Inflation Rates (5Y, 10Y)",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "FRED",
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "HIGH",
+      "dataset_id": "DS-013",
+      "economic_purpose": "Macro data surprise; expectation reset and macro repricing trigger",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "2000-present",
+      "licensing": "Commercial",
+      "maintenance_cost": "MEDIUM",
+      "name": "Economic Surprise Index (Citi/Bloomberg)",
+      "priority": "P2",
+      "resolution": "Daily",
+      "source": "Bloomberg (commercial)",
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-014",
+      "economic_purpose": "Institutional structural demand; long-horizon gold price support",
+      "expected_scientific_value": "MEDIUM",
+      "historical_availability": "2000-present",
+      "licensing": "Free (WGC), Subscription (IMF)",
+      "maintenance_cost": "LOW",
+      "name": "Central Bank Gold Purchases (IMF/WGC)",
+      "priority": "P2",
+      "resolution": "Monthly",
+      "source": "IMF IFS / World Gold Council",
+      "supported_families": [
+        "FAM-003",
+        "FAM-007"
+      ],
+      "update_frequency": "Monthly/Quarterly"
+    },
+    {
+      "acquisition_difficulty": "MEDIUM",
+      "dataset_id": "DS-015",
+      "economic_purpose": "Intraday cascade initiator; decision cascade and flow propagation",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "Limited to data provider",
+      "licensing": "Commercial",
+      "maintenance_cost": "MEDIUM",
+      "name": "Order Flow Imbalance Proxy (VWAP deviation)",
+      "priority": "P1",
+      "resolution": "1-min / 5-min",
+      "source": "Polygon / Tiingo / LBMA",
+      "supported_families": [
+        "FAM-004",
+        "FAM-006"
+      ],
+      "update_frequency": "Intraday"
+    },
+    {
+      "acquisition_difficulty": "HIGH",
+      "dataset_id": "DS-016",
+      "economic_purpose": "Information cascade velocity; macro event embedding for policy repricing",
+      "expected_scientific_value": "MEDIUM",
+      "historical_availability": "2010-present (commercial)",
+      "licensing": "Commercial",
+      "maintenance_cost": "HIGH",
+      "name": "News and Event Embeddings (NLP)",
+      "priority": "P3",
+      "resolution": "Event-level",
+      "source": "Refinitiv / Bloomberg NLP / Custom NLP",
+      "supported_families": [
+        "FAM-004",
+        "FAM-005"
+      ],
+      "update_frequency": "Real-time / Daily"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-017",
+      "economic_purpose": "Exogenous safe-haven demand driver; stress topology complement",
+      "expected_scientific_value": "MEDIUM",
+      "historical_availability": "1900-present",
+      "licensing": "Free",
+      "maintenance_cost": "LOW",
+      "name": "Geopolitical Risk Index (GPR)",
+      "priority": "P2",
+      "resolution": "Monthly",
+      "source": "Caldara & Iacoviello (Fed / academic)",
+      "supported_families": [
+        "FAM-003"
+      ],
+      "update_frequency": "Monthly"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-018",
+      "economic_purpose": "Short-end rate; policy sensitivity and gold real-rate anchor",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "1976-present",
+      "licensing": "Free",
+      "maintenance_cost": "LOW",
+      "name": "US Treasury 2Y Yield (FRED)",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "FRED",
+      "supported_families": [
+        "FAM-001",
+        "FAM-005"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "LOW",
+      "dataset_id": "DS-019",
+      "economic_purpose": "Real rate anchor; primary gold pricing causal mechanism",
+      "expected_scientific_value": "HIGH",
+      "historical_availability": "2003-present",
+      "licensing": "Free",
+      "maintenance_cost": "LOW",
+      "name": "TIPS 10Y Real Yield (FRED)",
+      "priority": "P1",
+      "resolution": "Daily",
+      "source": "FRED",
+      "supported_families": [
+        "FAM-001",
+        "FAM-004"
+      ],
+      "update_frequency": "Daily"
+    },
+    {
+      "acquisition_difficulty": "HIGH",
+      "dataset_id": "DS-020",
+      "economic_purpose": "Microstructure; order flow imbalance and cascade detection",
+      "expected_scientific_value": "MEDIUM",
+      "historical_availability": "2010-present (limited)",
+      "licensing": "Commercial",
+      "maintenance_cost": "HIGH",
+      "name": "Intraday Gold Tick Data (LBMA / CME)",
+      "priority": "P3",
+      "resolution": "Tick",
+      "source": "CME / LBMA / Commercial",
+      "supported_families": [
+        "FAM-006"
+      ],
+      "update_frequency": "Intraday"
+    }
+  ],
+  "ecology_knowledge_graph": {
+    "conclusion_node": {
+      "confidence": 0.72,
+      "label": "DC4 Institutional Market Observability Conclusion",
+      "node_id": "IKROS-DC4-CONCLUSION-20260802-0001",
+      "node_type": "RESEARCH_CONCLUSION"
+    },
+    "edges": [
+      {
+        "confidence": 0.594,
+        "relation": "ASSESSED_BY",
+        "source": "cross_asset_transition",
+        "target": "IKROS-DC4-OBS-CROSSASSET"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-CROSSASSET",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.495,
+        "relation": "ASSESSED_BY",
+        "source": "macro_repricing",
+        "target": "IKROS-DC4-OBS-MACROREPRIC"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-MACROREPRIC",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.195,
+        "relation": "ASSESSED_BY",
+        "source": "liquidity_withdrawal",
+        "target": "IKROS-DC4-OBS-LIQUIDITYWI"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-LIQUIDITYWI",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.234,
+        "relation": "ASSESSED_BY",
+        "source": "dealer_inventory",
+        "target": "IKROS-DC4-OBS-DEALERINVEN"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-DEALERINVEN",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.054,
+        "relation": "ASSESSED_BY",
+        "source": "expectation_reset",
+        "target": "IKROS-DC4-OBS-EXPECTATION"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-EXPECTATION",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.2587,
+        "relation": "ASSESSED_BY",
+        "source": "safe_haven_migration",
+        "target": "IKROS-DC4-OBS-SAFEHAVENM"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-SAFEHAVENM",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.0675,
+        "relation": "ASSESSED_BY",
+        "source": "etf_flow_propagation",
+        "target": "IKROS-DC4-OBS-ETFFLOWPRO"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-ETFFLOWPRO",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.054,
+        "relation": "ASSESSED_BY",
+        "source": "policy_repricing",
+        "target": "IKROS-DC4-OBS-POLICYREPRI"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-POLICYREPRI",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.054,
+        "relation": "ASSESSED_BY",
+        "source": "decision_cascade",
+        "target": "IKROS-DC4-OBS-DECISIONCAS"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-DECISIONCAS",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.2925,
+        "relation": "ASSESSED_BY",
+        "source": "information_cascade",
+        "target": "IKROS-DC4-OBS-INFORMATION"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-INFORMATION",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.0675,
+        "relation": "ASSESSED_BY",
+        "source": "adaptive_ecology_shift",
+        "target": "IKROS-DC4-OBS-ADAPTIVEECO"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-ADAPTIVEECO",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.234,
+        "relation": "ASSESSED_BY",
+        "source": "regime_transition_chain",
+        "target": "IKROS-DC4-OBS-REGIMETRANS"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC4-OBS-REGIMETRANS",
+        "target": "IKROS-DC4-CONCLUSION-20260802-0001"
+      }
+    ],
+    "obs_nodes": [
+      {
+        "confidence": 0.594,
+        "label": "DC4 Observability: cross_asset_transition (60%)",
+        "node_id": "IKROS-DC4-OBS-CROSSASSET",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.495,
+        "label": "DC4 Observability: macro_repricing (50%)",
+        "node_id": "IKROS-DC4-OBS-MACROREPRIC",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.195,
+        "label": "DC4 Observability: liquidity_withdrawal (17%)",
+        "node_id": "IKROS-DC4-OBS-LIQUIDITYWI",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.234,
+        "label": "DC4 Observability: dealer_inventory (20%)",
+        "node_id": "IKROS-DC4-OBS-DEALERINVEN",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.054,
+        "label": "DC4 Observability: expectation_reset (0%)",
+        "node_id": "IKROS-DC4-OBS-EXPECTATION",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.2587,
+        "label": "DC4 Observability: safe_haven_migration (25%)",
+        "node_id": "IKROS-DC4-OBS-SAFEHAVENM",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.0675,
+        "label": "DC4 Observability: etf_flow_propagation (0%)",
+        "node_id": "IKROS-DC4-OBS-ETFFLOWPRO",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.054,
+        "label": "DC4 Observability: policy_repricing (0%)",
+        "node_id": "IKROS-DC4-OBS-POLICYREPRI",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.054,
+        "label": "DC4 Observability: decision_cascade (0%)",
+        "node_id": "IKROS-DC4-OBS-DECISIONCAS",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.2925,
+        "label": "DC4 Observability: information_cascade (25%)",
+        "node_id": "IKROS-DC4-OBS-INFORMATION",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.0675,
+        "label": "DC4 Observability: adaptive_ecology_shift (0%)",
+        "node_id": "IKROS-DC4-OBS-ADAPTIVEECO",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.234,
+        "label": "DC4 Observability: regime_transition_chain (20%)",
+        "node_id": "IKROS-DC4-OBS-REGIMETRANS",
+        "node_type": "KNOWLEDGE_OBJECT"
+      }
+    ]
+  },
+  "family_observability": {
+    "FAM-001": {
+      "any_blocked": true,
+      "avg_evidence_completeness": 0.55,
+      "avg_observation_completeness": 0.5,
+      "avg_scientific_confidence_ceiling": 0.495,
+      "family_id": "FAM-001",
+      "mechanism_count": 1,
+      "scientific_readiness": "BLOCKED"
+    },
+    "FAM-002": {
+      "any_blocked": true,
+      "avg_evidence_completeness": 0.2384,
+      "avg_observation_completeness": 0.1834,
+      "avg_scientific_confidence_ceiling": 0.2145,
+      "family_id": "FAM-002",
+      "mechanism_count": 2,
+      "scientific_readiness": "BLOCKED"
+    },
+    "FAM-003": {
+      "any_blocked": true,
+      "avg_evidence_completeness": 0.2875,
+      "avg_observation_completeness": 0.25,
+      "avg_scientific_confidence_ceiling": 0.2587,
+      "family_id": "FAM-003",
+      "mechanism_count": 1,
+      "scientific_readiness": "BLOCKED"
+    },
+    "FAM-004": {
+      "any_blocked": true,
+      "avg_evidence_completeness": 0.3533,
+      "avg_observation_completeness": 0.2833,
+      "avg_scientific_confidence_ceiling": 0.318,
+      "family_id": "FAM-004",
+      "mechanism_count": 3,
+      "scientific_readiness": "BLOCKED"
+    },
+    "FAM-005": {
+      "any_blocked": true,
+      "avg_evidence_completeness": 0.06,
+      "avg_observation_completeness": 0.0,
+      "avg_scientific_confidence_ceiling": 0.054,
+      "family_id": "FAM-005",
+      "mechanism_count": 2,
+      "scientific_readiness": "BLOCKED"
+    },
+    "FAM-006": {
+      "any_blocked": true,
+      "avg_evidence_completeness": 0.06,
+      "avg_observation_completeness": 0.0,
+      "avg_scientific_confidence_ceiling": 0.054,
+      "family_id": "FAM-006",
+      "mechanism_count": 1,
+      "scientific_readiness": "BLOCKED"
+    },
+    "FAM-007": {
+      "any_blocked": true,
+      "avg_evidence_completeness": 0.1675,
+      "avg_observation_completeness": 0.1,
+      "avg_scientific_confidence_ceiling": 0.1507,
+      "family_id": "FAM-007",
+      "mechanism_count": 2,
+      "scientific_readiness": "BLOCKED"
+    }
+  },
+  "feature_expansion_roadmap": [
+    {
+      "causal_purpose": "Volatility-regime conditioning for safe-haven and liquidity mechanisms",
+      "depends_on": [
+        "DS-001",
+        "DS-011"
+      ],
+      "feature_family": "vol_features_v2",
+      "new_features": [
+        "vix_regime",
+        "gvz_term_slope",
+        "vol_risk_premium_gold",
+        "cross_vol_ratio_vix_gvz"
+      ],
+      "research_opportunity": "Test VIX-regime as conditioning variable for safe_haven_migration trigger"
+    },
+    {
+      "causal_purpose": "Real-rate anchor computation and policy repricing detection",
+      "depends_on": [
+        "DS-005",
+        "DS-006",
+        "DS-012",
+        "DS-018",
+        "DS-019"
+      ],
+      "feature_family": "rates_features_v2",
+      "new_features": [
+        "real_yield_tips_10y",
+        "breakeven_inflation_5y",
+        "real_yield_regime",
+        "rate_path_surprise",
+        "yield_curve_slope",
+        "fed_funds_implied_hike"
+      ],
+      "research_opportunity": "Replace rate_diff_proxy with direct real yield feature for macro_repricing and policy_repricing mechanisms"
+    },
+    {
+      "causal_purpose": "Direct ETF flow signal for etf_flow_propagation and safe_haven_migration",
+      "depends_on": [
+        "DS-007",
+        "DS-008"
+      ],
+      "feature_family": "flow_features_v1",
+      "new_features": [
+        "etf_flow_momentum_gld",
+        "etf_nav_premium_gld",
+        "etf_flow_z_score",
+        "institutional_demand_composite"
+      ],
+      "research_opportunity": "Replace gold_price_momentum_as_flow_proxy with direct ETF flow series"
+    },
+    {
+      "causal_purpose": "Positioning pressure and dealer inventory constraint detection",
+      "depends_on": [
+        "DS-009",
+        "DS-010"
+      ],
+      "feature_family": "positioning_features_v1",
+      "new_features": [
+        "cot_dealer_net_z",
+        "cot_leveraged_net_z",
+        "cot_asset_manager_net_z",
+        "cot_crowd_indicator",
+        "speculative_net_pct_oi"
+      ],
+      "research_opportunity": "Validate dealer inventory redistribution mechanism with direct COT dealer positioning"
+    },
+    {
+      "causal_purpose": "Composite systemic stress index for liquidity_withdrawal and safe_haven_migration",
+      "depends_on": [
+        "DS-003",
+        "DS-004"
+      ],
+      "feature_family": "stress_features_v1",
+      "new_features": [
+        "ted_spread_z",
+        "fra_ois_z",
+        "composite_stress_index",
+        "stress_regime_indicator"
+      ],
+      "research_opportunity": "Replace stress_topology_proxy with composite_stress_index for safe_haven_migration"
+    },
+    {
+      "causal_purpose": "Ecology-independent cascade proxy for decision_cascade mechanism",
+      "depends_on": [
+        "DS-011"
+      ],
+      "feature_family": "cascade_proxy_features_v1",
+      "new_features": [
+        "dxy_momentum_divergence",
+        "yield_inversion_speed",
+        "order_flow_imbalance_gvz_proxy",
+        "vol_clustering_score"
+      ],
+      "research_opportunity": "Implement EXP-DC-001: order-flow cascade proxy standalone walk-forward"
+    },
+    {
+      "causal_purpose": "Exogenous safe-haven demand driver from geopolitical risk",
+      "depends_on": [
+        "DS-017"
+      ],
+      "feature_family": "geopolitical_features_v1",
+      "new_features": [
+        "gpr_monthly",
+        "us_political_uncertainty",
+        "global_uncertainty_index_monthly"
+      ],
+      "research_opportunity": "Add geopolitical conditioning to safe_haven_migration mechanism"
+    }
+  ],
+  "market_state_domain_count": 12,
+  "market_state_domains": [
+    {
+      "causal_links": [
+        "CPI surprise \u2192 gold repricing",
+        "NFP surprise \u2192 rate path \u2192 gold"
+      ],
+      "confidence": 0.72,
+      "domain_id": "DOM-001",
+      "name": "Macro",
+      "update_cadence": "Monthly/Weekly",
+      "variables": [
+        "cpi_yoy",
+        "pce_yoy",
+        "nfp_surprise",
+        "gdp_qoq",
+        "unemployment_rate",
+        "economic_surprise_index",
+        "ism_manufacturing",
+        "consumer_confidence"
+      ]
+    },
+    {
+      "causal_links": [
+        "Real yield \u2192 gold price",
+        "Rate path expectation \u2192 gold repricing",
+        "Yield curve inversion \u2192 safe-haven demand"
+      ],
+      "confidence": 0.75,
+      "domain_id": "DOM-002",
+      "name": "Rates",
+      "update_cadence": "Daily",
+      "variables": [
+        "us_2y_yield",
+        "us_10y_yield",
+        "tips_10y_real_yield",
+        "breakeven_inflation_5y",
+        "breakeven_inflation_10y",
+        "fed_funds_futures_implied_rate",
+        "sofr_futures_front",
+        "dot_plot_median"
+      ]
+    },
+    {
+      "causal_links": [
+        "DXY \u2192 gold inverse correlation",
+        "USD safe-haven vs gold safe-haven competition"
+      ],
+      "confidence": 0.78,
+      "domain_id": "DOM-003",
+      "name": "FX",
+      "update_cadence": "Daily",
+      "variables": [
+        "dxy_index",
+        "eur_usd",
+        "usd_jpy",
+        "usd_chf",
+        "usd_cny",
+        "dxy_momentum",
+        "dxy_regime"
+      ]
+    },
+    {
+      "causal_links": [
+        "Spot-future basis \u2192 carry regime",
+        "Lease rate \u2192 supply pressure",
+        "Open interest \u2192 positioning pressure"
+      ],
+      "confidence": 0.8,
+      "domain_id": "DOM-004",
+      "name": "Gold",
+      "update_cadence": "Daily",
+      "variables": [
+        "xau_usd_spot",
+        "xau_usd_1m_future",
+        "xau_usd_3m_future",
+        "gold_lease_rate_1m",
+        "lbma_am_fix",
+        "lbma_pm_fix",
+        "gold_open_interest_comex"
+      ]
+    },
+    {
+      "causal_links": [
+        "VIX spike \u2192 safe-haven demand",
+        "GVZ spike \u2192 gold uncertainty \u2192 positioning change",
+        "MOVE spike \u2192 rates uncertainty \u2192 gold repricing"
+      ],
+      "confidence": 0.7,
+      "domain_id": "DOM-005",
+      "name": "Volatility",
+      "update_cadence": "Daily",
+      "variables": [
+        "vix",
+        "gvz",
+        "move_index",
+        "vxn",
+        "realized_vol_xau_20d",
+        "realized_vol_xau_5d",
+        "vol_regime_indicator"
+      ]
+    },
+    {
+      "causal_links": [
+        "TED spread \u2192 systemic stress \u2192 safe-haven demand",
+        "Credit spread widening \u2192 liquidity withdrawal \u2192 gold demand"
+      ],
+      "confidence": 0.68,
+      "domain_id": "DOM-006",
+      "name": "Credit",
+      "update_cadence": "Daily",
+      "variables": [
+        "ted_spread",
+        "fra_ois_spread",
+        "hy_credit_spread",
+        "ig_credit_spread",
+        "libor_ois_spread"
+      ]
+    },
+    {
+      "causal_links": [
+        "Liquidity contraction \u2192 risk-off \u2192 gold demand",
+        "QE expansion \u2192 inflation expectation \u2192 gold demand"
+      ],
+      "confidence": 0.65,
+      "domain_id": "DOM-007",
+      "name": "Liquidity",
+      "update_cadence": "Weekly/Monthly",
+      "variables": [
+        "fed_balance_sheet",
+        "m2_growth",
+        "repo_rate",
+        "sofr_rate",
+        "excess_reserves",
+        "bank_reserve_requirement"
+      ]
+    },
+    {
+      "causal_links": [
+        "ETF creation \u2192 physical demand \u2192 price pressure",
+        "CB purchases \u2192 long-horizon structural demand"
+      ],
+      "confidence": 0.72,
+      "domain_id": "DOM-008",
+      "name": "Flows",
+      "update_cadence": "Daily/Weekly/Monthly",
+      "variables": [
+        "gld_shares_outstanding",
+        "iau_shares_outstanding",
+        "etf_creation_redemption_net",
+        "central_bank_gold_purchases_monthly",
+        "comex_warehouse_stock_change"
+      ]
+    },
+    {
+      "causal_links": [
+        "Crowded long \u2192 vulnerability to liquidation \u2192 drawdown risk",
+        "Dealer short \u2192 inventory constraint \u2192 bid withdrawal"
+      ],
+      "confidence": 0.7,
+      "domain_id": "DOM-009",
+      "name": "Positioning",
+      "update_cadence": "Weekly",
+      "variables": [
+        "cot_leveraged_net",
+        "cot_asset_manager_net",
+        "cot_dealer_net",
+        "cot_other_reportable_net",
+        "comex_speculative_net_pct_oi"
+      ]
+    },
+    {
+      "causal_links": [
+        "Risk reversal \u2192 directional sentiment",
+        "Dealer gamma \u2192 mechanical market-making flow \u2192 intraday dynamics"
+      ],
+      "confidence": 0.6,
+      "domain_id": "DOM-010",
+      "name": "Options",
+      "update_cadence": "Daily",
+      "variables": [
+        "gold_25d_risk_reversal",
+        "gold_atm_implied_vol",
+        "gvz_term_structure",
+        "dealer_gamma_proxy",
+        "put_call_ratio_gold"
+      ]
+    },
+    {
+      "causal_links": [
+        "Order flow imbalance \u2192 short-term price pressure",
+        "Volume delta \u2192 initiator identification for cascade mechanism"
+      ],
+      "confidence": 0.55,
+      "domain_id": "DOM-011",
+      "name": "Microstructure",
+      "update_cadence": "Intraday",
+      "variables": [
+        "bid_ask_spread_proxy",
+        "volume_delta",
+        "vwap_deviation",
+        "trade_aggressor_ratio",
+        "intraday_vol_clustering"
+      ]
+    },
+    {
+      "causal_links": [
+        "GPR spike \u2192 safe-haven demand surge",
+        "Political uncertainty \u2192 gold allocation increase"
+      ],
+      "confidence": 0.58,
+      "domain_id": "DOM-012",
+      "name": "Geopolitics_Sentiment",
+      "update_cadence": "Monthly/Event-driven",
+      "variables": [
+        "geopolitical_risk_index",
+        "news_macro_event_score",
+        "us_political_uncertainty_index",
+        "global_uncertainty_index"
+      ]
+    }
+  ],
+  "mechanism_count": 12,
+  "mechanisms_blocked_by_observability": 11,
+  "missing_datasets": 20,
+  "new_feature_families": 7,
+  "new_features_total": 30,
+  "observability_matrix": {
+    "adaptive_ecology_shift": {
+      "family": "FAM-007",
+      "observed": [],
+      "proxies": [
+        "vol_regime_proxy"
+      ],
+      "required": [
+        "cot_participant_mix",
+        "etf_vs_futures_ratio",
+        "dealer_net_position_change",
+        "institutional_flow_direction"
+      ],
+      "unavailable": [
+        "cot_participant_mix",
+        "etf_vs_futures_ratio",
+        "dealer_net_position_change",
+        "institutional_flow_direction"
+      ]
+    },
+    "cross_asset_transition": {
+      "family": "FAM-004",
+      "observed": [
+        "dxy_spot",
+        "us_10y_yield",
+        "gold_spot"
+      ],
+      "proxies": [
+        "cross_asset_topology_weight"
+      ],
+      "required": [
+        "dxy_spot",
+        "us_10y_yield",
+        "real_yield_tip",
+        "gold_spot",
+        "cross_asset_topology_weight"
+      ],
+      "unavailable": [
+        "real_yield_tip_direct",
+        "instantaneous_flow_data"
+      ]
+    },
+    "dealer_inventory": {
+      "family": "FAM-002",
+      "observed": [
+        "gold_spot"
+      ],
+      "proxies": [
+        "cot_commercial_proxy"
+      ],
+      "required": [
+        "comex_positioning",
+        "cot_dealers",
+        "gold_lease_rate",
+        "gold_spot",
+        "vol_surface"
+      ],
+      "unavailable": [
+        "comex_positioning_direct",
+        "cot_dealers",
+        "gold_lease_rate",
+        "vol_surface"
+      ]
+    },
+    "decision_cascade": {
+      "family": "FAM-006",
+      "observed": [],
+      "proxies": [
+        "decision_ecology_score_invalid"
+      ],
+      "required": [
+        "order_flow_imbalance",
+        "volume_delta",
+        "trade_aggressor_ratio",
+        "dealer_gamma",
+        "intraday_vol_clustering"
+      ],
+      "unavailable": [
+        "order_flow_imbalance",
+        "volume_delta",
+        "trade_aggressor_ratio",
+        "dealer_gamma"
+      ]
+    },
+    "etf_flow_propagation": {
+      "family": "FAM-004",
+      "observed": [],
+      "proxies": [
+        "gold_price_momentum_as_flow_proxy"
+      ],
+      "required": [
+        "gld_shares_outstanding",
+        "iau_shares_outstanding",
+        "etf_nav_premium",
+        "etf_creation_redemption"
+      ],
+      "unavailable": [
+        "gld_shares_outstanding",
+        "iau_shares_outstanding",
+        "etf_nav_premium",
+        "etf_creation_redemption"
+      ]
+    },
+    "expectation_reset": {
+      "family": "FAM-005",
+      "observed": [],
+      "proxies": [
+        "rate_diff_proxy"
+      ],
+      "required": [
+        "fed_funds_futures",
+        "sofr_futures",
+        "breakeven_inflation",
+        "fomc_meeting_prob",
+        "economic_surprise_index"
+      ],
+      "unavailable": [
+        "fed_funds_futures",
+        "sofr_futures",
+        "breakeven_inflation",
+        "economic_surprise_index"
+      ]
+    },
+    "information_cascade": {
+      "family": "FAM-004",
+      "observed": [
+        "cross_asset_lagged_corr"
+      ],
+      "proxies": [
+        "daily_corr_as_cascade_proxy"
+      ],
+      "required": [
+        "cross_asset_lagged_corr",
+        "news_embedding_velocity",
+        "macro_event_embedding",
+        "directed_edge_weight"
+      ],
+      "unavailable": [
+        "news_embedding_velocity",
+        "macro_event_embedding",
+        "directed_edge_weight"
+      ]
+    },
+    "liquidity_withdrawal": {
+      "family": "FAM-002",
+      "observed": [
+        "gold_volume"
+      ],
+      "proxies": [
+        "vix_via_vol_features"
+      ],
+      "required": [
+        "bid_ask_spread_proxy",
+        "vix",
+        "ted_spread",
+        "fra_ois",
+        "gold_volume",
+        "market_depth"
+      ],
+      "unavailable": [
+        "vix",
+        "ted_spread",
+        "fra_ois",
+        "bid_ask_spread",
+        "order_book_depth"
+      ]
+    },
+    "macro_repricing": {
+      "family": "FAM-001",
+      "observed": [
+        "us_10y_yield",
+        "dxy_spot",
+        "gold_spot"
+      ],
+      "proxies": [
+        "cpi_surprise_proxy_via_cpi_diff"
+      ],
+      "required": [
+        "cpi_surprise",
+        "fomc_rate_path",
+        "us_10y_yield",
+        "dxy_spot",
+        "gold_spot",
+        "fed_funds_futures"
+      ],
+      "unavailable": [
+        "fed_funds_futures",
+        "sofr_futures",
+        "economic_surprise_index"
+      ]
+    },
+    "policy_repricing": {
+      "family": "FAM-005",
+      "observed": [],
+      "proxies": [
+        "rate_change_dummy"
+      ],
+      "required": [
+        "fomc_statement_embedding",
+        "fed_funds_futures",
+        "sofr_futures",
+        "dot_plot_surprise",
+        "cpi_actuals"
+      ],
+      "unavailable": [
+        "fomc_statement_embedding",
+        "fed_funds_futures",
+        "sofr_futures",
+        "dot_plot_surprise"
+      ]
+    },
+    "regime_transition_chain": {
+      "family": "FAM-007",
+      "observed": [
+        "macro_regime_indicator_proxy"
+      ],
+      "proxies": [
+        "price_momentum_regime"
+      ],
+      "required": [
+        "macro_regime_indicator",
+        "vol_regime_indicator",
+        "liquidity_regime_indicator",
+        "flow_regime_indicator",
+        "cross_asset_stress_composite"
+      ],
+      "unavailable": [
+        "vol_regime_indicator",
+        "liquidity_regime_indicator",
+        "flow_regime_indicator",
+        "cross_asset_stress_composite"
+      ]
+    },
+    "safe_haven_migration": {
+      "family": "FAM-003",
+      "observed": [
+        "chf_usd",
+        "jpy_usd"
+      ],
+      "proxies": [
+        "stress_topology_proxy"
+      ],
+      "required": [
+        "vix",
+        "ted_spread",
+        "gld_etf_flows",
+        "iau_etf_flows",
+        "chf_usd",
+        "jpy_usd",
+        "us_treasury_flows",
+        "geopolitical_risk_index"
+      ],
+      "unavailable": [
+        "vix",
+        "ted_spread",
+        "gld_etf_flows",
+        "iau_etf_flows",
+        "geopolitical_risk_index"
+      ]
+    }
+  },
+  "observability_scores": [
+    {
+      "blocked_by_observability": false,
+      "evidence_completeness": 0.66,
+      "expected_uncertainty": 0.34,
+      "family_id": "FAM-004",
+      "mechanism_type": "cross_asset_transition",
+      "observation_completeness": 0.6,
+      "observed_count": 3,
+      "proxy_count": 1,
+      "proxy_dependence": 0.2,
+      "required_count": 5,
+      "scientific_confidence_ceiling": 0.594,
+      "unavailable_count": 2,
+      "validation_readiness": true
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.55,
+      "expected_uncertainty": 0.45,
+      "family_id": "FAM-001",
+      "mechanism_type": "macro_repricing",
+      "observation_completeness": 0.5,
+      "observed_count": 3,
+      "proxy_count": 1,
+      "proxy_dependence": 0.1667,
+      "required_count": 6,
+      "scientific_confidence_ceiling": 0.495,
+      "unavailable_count": 3,
+      "validation_readiness": false
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.2167,
+      "expected_uncertainty": 0.7833,
+      "family_id": "FAM-002",
+      "mechanism_type": "liquidity_withdrawal",
+      "observation_completeness": 0.1667,
+      "observed_count": 1,
+      "proxy_count": 1,
+      "proxy_dependence": 0.1667,
+      "required_count": 6,
+      "scientific_confidence_ceiling": 0.195,
+      "unavailable_count": 5,
+      "validation_readiness": false
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.26,
+      "expected_uncertainty": 0.74,
+      "family_id": "FAM-002",
+      "mechanism_type": "dealer_inventory",
+      "observation_completeness": 0.2,
+      "observed_count": 1,
+      "proxy_count": 1,
+      "proxy_dependence": 0.2,
+      "required_count": 5,
+      "scientific_confidence_ceiling": 0.234,
+      "unavailable_count": 4,
+      "validation_readiness": false
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.06,
+      "expected_uncertainty": 0.94,
+      "family_id": "FAM-005",
+      "mechanism_type": "expectation_reset",
+      "observation_completeness": 0.0,
+      "observed_count": 0,
+      "proxy_count": 1,
+      "proxy_dependence": 0.2,
+      "required_count": 5,
+      "scientific_confidence_ceiling": 0.054,
+      "unavailable_count": 4,
+      "validation_readiness": false
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.2875,
+      "expected_uncertainty": 0.7125,
+      "family_id": "FAM-003",
+      "mechanism_type": "safe_haven_migration",
+      "observation_completeness": 0.25,
+      "observed_count": 2,
+      "proxy_count": 1,
+      "proxy_dependence": 0.125,
+      "required_count": 8,
+      "scientific_confidence_ceiling": 0.2587,
+      "unavailable_count": 5,
+      "validation_readiness": false
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.075,
+      "expected_uncertainty": 0.925,
+      "family_id": "FAM-004",
+      "mechanism_type": "etf_flow_propagation",
+      "observation_completeness": 0.0,
+      "observed_count": 0,
+      "proxy_count": 1,
+      "proxy_dependence": 0.25,
+      "required_count": 4,
+      "scientific_confidence_ceiling": 0.0675,
+      "unavailable_count": 4,
+      "validation_readiness": false
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.06,
+      "expected_uncertainty": 0.94,
+      "family_id": "FAM-005",
+      "mechanism_type": "policy_repricing",
+      "observation_completeness": 0.0,
+      "observed_count": 0,
+      "proxy_count": 1,
+      "proxy_dependence": 0.2,
+      "required_count": 5,
+      "scientific_confidence_ceiling": 0.054,
+      "unavailable_count": 4,
+      "validation_readiness": false
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.06,
+      "expected_uncertainty": 0.94,
+      "family_id": "FAM-006",
+      "mechanism_type": "decision_cascade",
+      "observation_completeness": 0.0,
+      "observed_count": 0,
+      "proxy_count": 1,
+      "proxy_dependence": 0.2,
+      "required_count": 5,
+      "scientific_confidence_ceiling": 0.054,
+      "unavailable_count": 4,
+      "validation_readiness": false
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.325,
+      "expected_uncertainty": 0.675,
+      "family_id": "FAM-004",
+      "mechanism_type": "information_cascade",
+      "observation_completeness": 0.25,
+      "observed_count": 1,
+      "proxy_count": 1,
+      "proxy_dependence": 0.25,
+      "required_count": 4,
+      "scientific_confidence_ceiling": 0.2925,
+      "unavailable_count": 3,
+      "validation_readiness": false
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.075,
+      "expected_uncertainty": 0.925,
+      "family_id": "FAM-007",
+      "mechanism_type": "adaptive_ecology_shift",
+      "observation_completeness": 0.0,
+      "observed_count": 0,
+      "proxy_count": 1,
+      "proxy_dependence": 0.25,
+      "required_count": 4,
+      "scientific_confidence_ceiling": 0.0675,
+      "unavailable_count": 4,
+      "validation_readiness": false
+    },
+    {
+      "blocked_by_observability": true,
+      "evidence_completeness": 0.26,
+      "expected_uncertainty": 0.74,
+      "family_id": "FAM-007",
+      "mechanism_type": "regime_transition_chain",
+      "observation_completeness": 0.2,
+      "observed_count": 1,
+      "proxy_count": 1,
+      "proxy_dependence": 0.2,
+      "required_count": 5,
+      "scientific_confidence_ceiling": 0.234,
+      "unavailable_count": 4,
+      "validation_readiness": false
+    }
+  ],
+  "p1_dataset_count": 14,
+  "p2_dataset_count": 4,
+  "p3_dataset_count": 2,
+  "phase": "DISCOVERY_CYCLE_4",
+  "state_variables_identified": 72,
+  "title": "Institutional Market Observability & Data Expansion Program",
+  "total_observed_variables": 12,
+  "total_required_variables": 62,
+  "total_unavailable_variables": 39
+}

@@ -1,0 +1,39 @@
+{
+  "audit_ids": [
+    "IKROS-CAMPAIGNAUDIT-20260802-0399",
+    "IKROS-CAMPAIGNAUDIT-20260802-0400",
+    "IKROS-CAMPAIGNAUDIT-20260802-0401",
+    "IKROS-CAMPAIGNAUDIT-20260802-0402",
+    "IKROS-CAMPAIGNAUDIT-20260802-0403",
+    "IKROS-CAMPAIGNAUDIT-20260802-0404",
+    "IKROS-CAMPAIGNAUDIT-20260802-0405"
+  ],
+  "blocked_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0145",
+    "IKROS-RESEARCHTASK-20260802-0151"
+  ],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0032",
+  "campaign_type": "RESEARCH_AUDIT",
+  "completed_task_ids": [],
+  "failed_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0141"
+  ],
+  "finished_at": "2026-08-02T15:13:35.067459+00:00",
+  "lifecycle_state": "FAILED",
+  "memory_record_ids": [
+    "IKMEM-T4-20260802-0038"
+  ],
+  "output_refs": [],
+  "progress": {
+    "blocked": 2,
+    "completed": 0,
+    "failed": 1,
+    "percent_complete": 0.0,
+    "skipped": 0,
+    "total": 3
+  },
+  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0032",
+  "skipped_task_ids": [],
+  "started_at": "2026-08-02T15:13:30.133904+00:00",
+  "summary": "DC4 Institutional Market Observability & Data Expansion Program failed after 1 task failures."
+}
