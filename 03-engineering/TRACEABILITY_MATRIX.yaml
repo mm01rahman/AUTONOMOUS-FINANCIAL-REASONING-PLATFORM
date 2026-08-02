@@ -1005,3 +1005,42 @@ requirements:
       - "tests/unit/test_ikros_query.py"
     verified_by:
       - "05-work-packages/WP-IMP-0045/evidence/EXEC-047.yaml"
+
+  - id: "NFR-051"
+    title: "IKROS Research Ingestion Engine shall deterministically load structured Markdown, YAML, and JSON sources into governed IKROS object representations"
+    source: "SPEC-060 §5, §6, §12 (AFRP-WP-IMP-0046)"
+    capability: "IKROS-INGESTION"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/ingestion/loaders.py"
+      - "tools/ikros/ingestion/models.py"
+      - "tools/ikros/ingestion/engine.py"
+      - "tests/unit/test_ikros_ingestion.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0046/evidence/EXEC-048.yaml"
+
+  - id: "NFR-052"
+    title: "IKROS Research Ingestion Engine shall preserve provenance, lineage, duplicate detection, lifecycle validation, and referential integrity while routing registry-backed types through existing registries"
+    source: "SPEC-060 §6, §7, §10, §12 (AFRP-WP-IMP-0046)"
+    capability: "IKROS-INGESTION"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/ingestion/validation.py"
+      - "tools/ikros/ingestion/engine.py"
+      - "docs/ikros/RESEARCH_INGESTION_GUIDE.md"
+      - "tests/unit/test_ikros_ingestion.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0046/evidence/EXEC-048.yaml"
+
+  - id: "NFR-053"
+    title: "IKROS Research Ingestion Engine shall integrate ingested objects with the Knowledge Graph, Research Memory, and Query Engine while emitting deterministic ingestion reports"
+    source: "SPEC-060 §6, §7, §8, §12 (AFRP-WP-IMP-0046)"
+    capability: "IKROS-INGESTION"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/ingestion/persistence.py"
+      - "tools/ikros/ingestion/engine.py"
+      - "tools/ikros/__init__.py"
+      - "tests/unit/test_ikros_ingestion.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0046/evidence/EXEC-048.yaml"

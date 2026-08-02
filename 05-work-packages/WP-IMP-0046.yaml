@@ -1,0 +1,166 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0046"
+capability_id:
+  id: "IKROS-INGESTION"
+  version: "1.0"
+title: "IKROS Foundation — Institutional Research Ingestion Engine"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "KNOWLEDGE"
+  traceability:
+    implements_req: ["NFR-051", "NFR-052", "NFR-053"]
+    trace_sls: "AFRP-WP-IMP-0046-1.0.0"
+    trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('IKROS-QUERY')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/ikros/ingestion/"
+      - "tools/ikros/__init__.py"
+      - "tests/unit/test_ikros_ingestion.py"
+      - "docs/ikros/"
+      - "data/ikros/ingestion/"
+      - "05-work-packages/WP-IMP-0046.yaml"
+      - "05-work-packages/WP-IMP-0046/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    read:
+      - "02-architecture/ikros/"
+      - "03-engineering/"
+      - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+      - "05-work-packages/WP-IMP-0045.yaml"
+      - "05-work-packages/WP-IMP-0045/"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "8h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "02-architecture/ikros/IKROS-INTEGRATION.md"
+    - "02-architecture/ikros/IKROS-GOVERNANCE.md"
+    - "02-architecture/ikros/IKROS-REGISTRIES.md"
+    - "02-architecture/ikros/IKROS-KNOWLEDGE-GRAPH.md"
+    - "02-architecture/ikros/IKROS-MEMORY.md"
+    - "02-architecture/ikros/IKROS-QUERY.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+
+outputs:
+  expected_source_files:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/ingestion/__init__.py"
+    - "tools/ikros/ingestion/models.py"
+    - "tools/ikros/ingestion/loaders.py"
+    - "tools/ikros/ingestion/validation.py"
+    - "tools/ikros/ingestion/persistence.py"
+    - "tools/ikros/ingestion/engine.py"
+  expected_test_files:
+    - "tests/unit/test_ikros_ingestion.py"
+  expected_documentation:
+    - "docs/ikros/RESEARCH_INGESTION_GUIDE.md"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0046/evidence/EXEC-048.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/ingestion/"
+    - "tests/unit/test_ikros_ingestion.py"
+    - "docs/ikros/RESEARCH_INGESTION_GUIDE.md"
+    - "data/ikros/ingestion/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0046/evidence/EXEC-048.yaml"
+
+produces:
+  capability:
+    id: "IKROS-INGESTION"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/ikros/ingestion/"
+    - "tools/ikros/__init__.py"
+    - "tests/unit/test_ikros_ingestion.py"
+    - "docs/ikros/"
+    - "data/ikros/ingestion/"
+    - "05-work-packages/WP-IMP-0046.yaml"
+    - "05-work-packages/WP-IMP-0046/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  non_goals:
+    - "No LLMs."
+    - "No semantic search or embeddings."
+    - "No automatic summarization or autonomous reasoning."
+    - "No autonomous hypothesis generation."
+    - "No Runtime modification."
+    - "No Engineering OS modification."
+
+requirements:
+  institutional_research_ingestion_engine:
+    module: "tools/ikros/ingestion/"
+    rules:
+      - "Implements deterministic structured-document loading for Markdown, YAML, and JSON."
+      - "Extracts governed IKROS objects from explicit structured object blocks and known evidence-record schemas."
+      - "Routes registry-backed types through the existing registries and non-registry types through graph and memory."
+      - "Preserves provenance, lineage, source references, specification references, lifecycle, confidence, and version metadata."
+      - "Rejects duplicate sources, duplicate object content, broken references, and invalid lifecycle states."
+      - "Does not import or modify AFRP Runtime."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0046"
+
+completion:
+  success_requires:
+    - "Institutional Research Ingestion Engine modules implemented under tools/ikros/ingestion/."
+    - "Comprehensive ingestion tests pass."
+    - "IKROS-INGESTION capability added to CAPABILITY_REGISTRY.yaml."
+    - "NFR-051, NFR-052, and NFR-053 added to TRACEABILITY_MATRIX.yaml."
+    - "All quality gates pass (ruff, mypy --strict, pytest, afrp validate/plan/health/evidence)."
+    - "No Runtime behaviour changed."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-SCHEMA: "WPS-1.0 schema violation in WP YAML structure."
+  ERR-INGESTION-INTEGRITY: "Ingestion produces nondeterministic identifiers, fingerprints, routing, or graph/memory integration."
+  ERR-REFERENCE-INTEGRITY: "Ingestion accepts missing dependencies, invalid relationships, or registry bypasses."

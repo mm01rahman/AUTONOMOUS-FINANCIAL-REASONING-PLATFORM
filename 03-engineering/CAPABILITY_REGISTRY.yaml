@@ -524,3 +524,16 @@ capabilities:
       implements_req: ["NFR-048", "NFR-049", "NFR-050"]
       trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004"]
       trace_vvc: "TVM-001"
+
+  # -- Stage Q -- IKROS Research Ingestion ------------------------------------
+  - id: "IKROS-INGESTION"
+    version: "1.0"
+    title: "IKROS Institutional Research Ingestion Engine"
+    owner: "ARB"
+    status: "COMPLETE"
+    depends_on: ["IKROS-QUERY"]
+    work_package: "WP-IMP-0046"
+    traceability:
+      implements_req: ["NFR-051", "NFR-052", "NFR-053"]
+      trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004", "ADR-IKROS-005"]
+      trace_vvc: "TVM-001"
