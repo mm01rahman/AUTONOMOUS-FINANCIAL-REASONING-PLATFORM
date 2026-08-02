@@ -1,0 +1,16 @@
+attributes:
+  description: First institutional ecology model explaining participant interactions
+    behind the cross-asset information network.
+  program: DC2 Program B Phase 1
+confidence: 0.72
+created_at: '2026-08-02T10:44:26.618726+00:00'
+ikros_id: IKROS-PB1-WORLDMODEL-20260802-0001
+label: Institutional Market Ecology Model
+node_id: IKROS-PB1-WORLDMODEL-20260802-0001
+node_type: WORLD_MODEL
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

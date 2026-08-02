@@ -1,0 +1,31 @@
+{
+  "critical_interactions": [
+    "dealers->market_makers",
+    "bullion_banks->dealers",
+    "dealers->bullion_banks",
+    "bullion_banks->commercial_hedgers",
+    "dealers->macro_hedge_funds",
+    "dealers->safe_haven_capital_flows",
+    "bullion_banks->etf_investors",
+    "bullion_banks->ctas"
+  ],
+  "dominant_participants": [
+    "dealers",
+    "bullion_banks",
+    "safe_haven_capital_flows",
+    "macro_hedge_funds",
+    "market_makers"
+  ],
+  "participants": [
+    "central_banks",
+    "commercial_hedgers",
+    "bullion_banks",
+    "dealers",
+    "market_makers",
+    "ctas",
+    "macro_hedge_funds",
+    "etf_investors",
+    "retail_traders",
+    "safe_haven_capital_flows"
+  ]
+}

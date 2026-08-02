@@ -1,0 +1,62 @@
+campaign_tag: ''
+capability_refs: []
+confidence:
+  data: 0.45
+  economic: 0.6
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.55
+  operational: 0.5
+  overall: 0.5228031455905451
+  prior: 0.5
+  replication: 0.0
+  statistical: 0.55
+  validation: 0.5
+entity_type: ResearchQuestion
+ikros_id: IKROS-RQ-20260802-4004
+instrument: XAU/USD
+lifecycle_state: ANSWERED
+lineage:
+  dependencies:
+    datasets: []
+    external_refs: []
+    features: []
+    inputs: []
+    models: []
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: dc2-program-b
+    creation_context: Program B Phase 1 secondary question
+    motivation: How do ETF investors, macro hedge funds, and safe-haven flows propagate
+      capital across the network during different regimes?
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+linked_conclusions:
+- IKROS-RESEARCHCAMPAIGN-20260802-0020
+linked_hypotheses: []
+motivation: How do ETF investors, macro hedge funds, and safe-haven flows propagate
+  capital across the network during different regimes?
+scope: CROSS_ASSET
+spec_refs: []
+time_horizon: 1D
+title: 'DC2-PB1: Capital Flow Network'
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T10:44:27.205670+00:00'
+  confidence_at_time: 0.5228031455905451
+  version: 1.0.0
+work_package_refs: []

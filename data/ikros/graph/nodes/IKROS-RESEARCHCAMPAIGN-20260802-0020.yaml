@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Construct the first institutional market ecology model explaining how
+    heterogeneous participants collectively generate the cross-asset information network
+    and XAU/USD regime transitions.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0020
+confidence: 0.0
+created_at: '2026-08-02T10:41:19.863051+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0020
+label: 'DC2 Program B Phase 1: Institutional Market Ecology Research Program'
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0020
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

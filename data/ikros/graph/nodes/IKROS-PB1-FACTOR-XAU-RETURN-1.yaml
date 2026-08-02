@@ -1,0 +1,14 @@
+attributes:
+  market: XAU/USD
+confidence: 0.65
+created_at: '2026-08-02T10:44:26.618726+00:00'
+ikros_id: IKROS-PB1-FACTOR-XAU-RETURN-1
+label: XAU/USD 1-day return
+node_id: IKROS-PB1-FACTOR-XAU-RETURN-1
+node_type: FACTOR
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

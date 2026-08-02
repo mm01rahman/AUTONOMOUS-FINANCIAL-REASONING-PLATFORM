@@ -1,0 +1,544 @@
+{
+  "edges": [
+    {
+      "liquidity_effect": "balancing",
+      "source": "dealers",
+      "strength": 1.6668,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "bullion_banks",
+      "strength": 1.6446,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "dealers",
+      "strength": 1.4629,
+      "target": "bullion_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "bullion_banks",
+      "strength": 1.4038,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "dealers",
+      "strength": 1.3932,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "dealers",
+      "strength": 1.3582,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "bullion_banks",
+      "strength": 1.3454,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "bullion_banks",
+      "strength": 1.3448,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "bullion_banks",
+      "strength": 1.3241,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "dealers",
+      "strength": 1.3198,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "dealers",
+      "strength": 1.3044,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "dealers",
+      "strength": 1.2575,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "dealers",
+      "strength": 1.254,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "dealers",
+      "strength": 1.2534,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "bullion_banks",
+      "strength": 1.2418,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "macro_hedge_funds",
+      "strength": 1.2277,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "bullion_banks",
+      "strength": 1.1656,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "bullion_banks",
+      "strength": 1.1085,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "bullion_banks",
+      "strength": 1.0701,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "safe_haven_capital_flows",
+      "strength": 1.0694,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "safe_haven_capital_flows",
+      "strength": 1.0491,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "central_banks",
+      "strength": 1.0201,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.9356,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "macro_hedge_funds",
+      "strength": 0.8701,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "market_makers",
+      "strength": 0.8533,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.8358,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.8161,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.8136,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "macro_hedge_funds",
+      "strength": 0.7894,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "macro_hedge_funds",
+      "strength": 0.7832,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "market_makers",
+      "strength": 0.781,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "ctas",
+      "strength": 0.7787,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "ctas",
+      "strength": 0.7753,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "etf_investors",
+      "strength": 0.7572,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "etf_investors",
+      "strength": 0.7323,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "macro_hedge_funds",
+      "strength": 0.7227,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "etf_investors",
+      "strength": 0.7173,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "macro_hedge_funds",
+      "strength": 0.701,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "market_makers",
+      "strength": 0.6981,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.6898,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "ctas",
+      "strength": 0.6827,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "etf_investors",
+      "strength": 0.6746,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "commercial_hedgers",
+      "strength": 0.671,
+      "target": "bullion_banks"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "market_makers",
+      "strength": 0.6704,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "market_makers",
+      "strength": 0.6634,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "market_makers",
+      "strength": 0.6598,
+      "target": "bullion_banks"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "central_banks",
+      "strength": 0.646,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "market_makers",
+      "strength": 0.6442,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.6422,
+      "target": "bullion_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "safe_haven_capital_flows",
+      "strength": 0.6418,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "macro_hedge_funds",
+      "strength": 0.6404,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "macro_hedge_funds",
+      "strength": 0.6374,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "macro_hedge_funds",
+      "strength": 0.6339,
+      "target": "bullion_banks"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "ctas",
+      "strength": 0.6322,
+      "target": "bullion_banks"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "ctas",
+      "strength": 0.622,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "market_makers",
+      "strength": 0.5902,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "etf_investors",
+      "strength": 0.5747,
+      "target": "bullion_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "retail_traders",
+      "strength": 0.5604,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "commercial_hedgers",
+      "strength": 0.5501,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "market_makers",
+      "strength": 0.5387,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "commercial_hedgers",
+      "strength": 0.5385,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "etf_investors",
+      "strength": 0.525,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "retail_traders",
+      "strength": 0.5001,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "ctas",
+      "strength": 0.5,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "ctas",
+      "strength": 0.4625,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "etf_investors",
+      "strength": 0.4536,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "commercial_hedgers",
+      "strength": 0.4355,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "retail_traders",
+      "strength": 0.4278,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "retail_traders",
+      "strength": 0.4208,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "ctas",
+      "strength": 0.4085,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "commercial_hedgers",
+      "strength": 0.4063,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "withdrawal_pressure",
+      "source": "etf_investors",
+      "strength": 0.4051,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "ctas",
+      "strength": 0.3954,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "commercial_hedgers",
+      "strength": 0.3748,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "etf_investors",
+      "strength": 0.3621,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "retail_traders",
+      "strength": 0.3345,
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "commercial_hedgers",
+      "strength": 0.3078,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "retail_traders",
+      "strength": 0.2961,
+      "target": "central_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "central_banks",
+      "strength": 0.2743,
+      "target": "retail_traders"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "retail_traders",
+      "strength": 0.2742,
+      "target": "bullion_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "central_banks",
+      "strength": 0.2713,
+      "target": "commercial_hedgers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "central_banks",
+      "strength": 0.2608,
+      "target": "bullion_banks"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "retail_traders",
+      "strength": 0.2586,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "central_banks",
+      "strength": 0.2521,
+      "target": "dealers"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "central_banks",
+      "strength": 0.2349,
+      "target": "etf_investors"
+    },
+    {
+      "liquidity_effect": "provision",
+      "source": "central_banks",
+      "strength": 0.2233,
+      "target": "ctas"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "commercial_hedgers",
+      "strength": 0.2163,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "central_banks",
+      "strength": 0.2136,
+      "target": "market_makers"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "retail_traders",
+      "strength": 0.2046,
+      "target": "macro_hedge_funds"
+    },
+    {
+      "liquidity_effect": "balancing",
+      "source": "commercial_hedgers",
+      "strength": 0.2032,
+      "target": "safe_haven_capital_flows"
+    }
+  ]
+}

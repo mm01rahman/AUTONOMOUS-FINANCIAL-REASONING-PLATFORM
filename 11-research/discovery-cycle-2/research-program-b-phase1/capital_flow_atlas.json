@@ -1,0 +1,242 @@
+{
+  "edges": [
+    {
+      "capital_intensity": 2.5148,
+      "flow_type": "physical_flow",
+      "market": "Composite",
+      "market_node": "forward_expectation",
+      "participant": "commercial_hedgers"
+    },
+    {
+      "capital_intensity": 2.5148,
+      "flow_type": "inventory_transformer",
+      "market": "Composite",
+      "market_node": "forward_expectation",
+      "participant": "bullion_banks"
+    },
+    {
+      "capital_intensity": 2.2486,
+      "flow_type": "microstructure_provider",
+      "market": "XAU/USD",
+      "market_node": "xau_return_1",
+      "participant": "market_makers"
+    },
+    {
+      "capital_intensity": 2.0621,
+      "flow_type": "tactical_allocator",
+      "market": "DXY",
+      "market_node": "dxy_return_1",
+      "participant": "macro_hedge_funds"
+    },
+    {
+      "capital_intensity": 2.0237,
+      "flow_type": "fragmented_flow",
+      "market": "XAU/USD",
+      "market_node": "xau_return_1",
+      "participant": "retail_traders"
+    },
+    {
+      "capital_intensity": 1.9854,
+      "flow_type": "systematic_flow",
+      "market": "DXY",
+      "market_node": "dxy_return_20",
+      "participant": "ctas"
+    },
+    {
+      "capital_intensity": 1.9475,
+      "flow_type": "inventory_transformer",
+      "market": "DXY",
+      "market_node": "dxy_return_1",
+      "participant": "bullion_banks"
+    },
+    {
+      "capital_intensity": 1.9113,
+      "flow_type": "systematic_flow",
+      "market": "XAU/USD",
+      "market_node": "xau_return_1",
+      "participant": "ctas"
+    },
+    {
+      "capital_intensity": 1.853,
+      "flow_type": "systematic_flow",
+      "market": "Composite",
+      "market_node": "forward_expectation",
+      "participant": "ctas"
+    },
+    {
+      "capital_intensity": 1.853,
+      "flow_type": "investment_flow",
+      "market": "Composite",
+      "market_node": "forward_expectation",
+      "participant": "etf_investors"
+    },
+    {
+      "capital_intensity": 1.7989,
+      "flow_type": "inventory_transformer",
+      "market": "XAU/USD",
+      "market_node": "xau_return_1",
+      "participant": "bullion_banks"
+    },
+    {
+      "capital_intensity": 1.7989,
+      "flow_type": "flow_matcher",
+      "market": "XAU/USD",
+      "market_node": "xau_return_1",
+      "participant": "dealers"
+    },
+    {
+      "capital_intensity": 1.7184,
+      "flow_type": "flow_matcher",
+      "market": "DXY",
+      "market_node": "dxy_return_1",
+      "participant": "dealers"
+    },
+    {
+      "capital_intensity": 1.6865,
+      "flow_type": "investment_flow",
+      "market": "XAU/USD",
+      "market_node": "xau_return_1",
+      "participant": "etf_investors"
+    },
+    {
+      "capital_intensity": 1.4893,
+      "flow_type": "microstructure_provider",
+      "market": "DXY",
+      "market_node": "dxy_return_1",
+      "participant": "market_makers"
+    },
+    {
+      "capital_intensity": 1.4893,
+      "flow_type": "defensive_reallocator",
+      "market": "DXY",
+      "market_node": "dxy_return_1",
+      "participant": "safe_haven_capital_flows"
+    },
+    {
+      "capital_intensity": 1.3492,
+      "flow_type": "physical_flow",
+      "market": "XAU/USD",
+      "market_node": "xau_return_1",
+      "participant": "commercial_hedgers"
+    },
+    {
+      "capital_intensity": 1.0543,
+      "flow_type": "tactical_allocator",
+      "market": "Composite",
+      "market_node": "macro_pressure",
+      "participant": "macro_hedge_funds"
+    },
+    {
+      "capital_intensity": 0.9489,
+      "flow_type": "sovereign_allocator",
+      "market": "Composite",
+      "market_node": "macro_pressure",
+      "participant": "central_banks"
+    },
+    {
+      "capital_intensity": 0.9208,
+      "flow_type": "inventory_transformer",
+      "market": "DXY",
+      "market_node": "dxy_return_5",
+      "participant": "bullion_banks"
+    },
+    {
+      "capital_intensity": 0.8962,
+      "flow_type": "flow_matcher",
+      "market": "Composite",
+      "market_node": "macro_pressure",
+      "participant": "dealers"
+    },
+    {
+      "capital_intensity": 0.8962,
+      "flow_type": "defensive_reallocator",
+      "market": "Composite",
+      "market_node": "macro_pressure",
+      "participant": "safe_haven_capital_flows"
+    },
+    {
+      "capital_intensity": 0.8696,
+      "flow_type": "flow_matcher",
+      "market": "DXY",
+      "market_node": "dxy_return_5",
+      "participant": "dealers"
+    },
+    {
+      "capital_intensity": 0.7228,
+      "flow_type": "defensive_reallocator",
+      "market": "Geopolitical",
+      "market_node": "geo_severity",
+      "participant": "safe_haven_capital_flows"
+    },
+    {
+      "capital_intensity": 0.6,
+      "flow_type": "sovereign_allocator",
+      "market": "US_Treasuries",
+      "market_node": "yield_curve_10y_3m",
+      "participant": "central_banks"
+    },
+    {
+      "capital_intensity": 0.6,
+      "flow_type": "sovereign_allocator",
+      "market": "Economic_Calendar",
+      "market_node": "fed_surprise",
+      "participant": "central_banks"
+    },
+    {
+      "capital_intensity": 0.5782,
+      "flow_type": "investment_flow",
+      "market": "Geopolitical",
+      "market_node": "geo_severity",
+      "participant": "etf_investors"
+    },
+    {
+      "capital_intensity": 0.57,
+      "flow_type": "sovereign_allocator",
+      "market": "US_Treasuries",
+      "market_node": "yield_10y_change_5",
+      "participant": "central_banks"
+    },
+    {
+      "capital_intensity": 0.54,
+      "flow_type": "tactical_allocator",
+      "market": "Economic_Calendar",
+      "market_node": "fed_surprise",
+      "participant": "macro_hedge_funds"
+    },
+    {
+      "capital_intensity": 0.51,
+      "flow_type": "tactical_allocator",
+      "market": "US_Treasuries",
+      "market_node": "yield_10y_change_5",
+      "participant": "macro_hedge_funds"
+    },
+    {
+      "capital_intensity": 0.4698,
+      "flow_type": "fragmented_flow",
+      "market": "Geopolitical",
+      "market_node": "geo_severity",
+      "participant": "retail_traders"
+    },
+    {
+      "capital_intensity": 0.45,
+      "flow_type": "defensive_reallocator",
+      "market": "US_Treasuries",
+      "market_node": "yield_curve_10y_3m",
+      "participant": "safe_haven_capital_flows"
+    },
+    {
+      "capital_intensity": 0.42,
+      "flow_type": "physical_flow",
+      "market": "US_Treasuries",
+      "market_node": "yield_30y_change_20",
+      "participant": "commercial_hedgers"
+    },
+    {
+      "capital_intensity": 0.3975,
+      "flow_type": "microstructure_provider",
+      "market": "Geopolitical",
+      "market_node": "geo_severity",
+      "participant": "market_makers"
+    }
+  ]
+}

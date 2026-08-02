@@ -1,0 +1,14 @@
+attributes:
+  market: US_Treasuries
+confidence: 0.65
+created_at: '2026-08-02T10:44:26.618726+00:00'
+ikros_id: IKROS-PB1-FACTOR-YIELD-30Y-CHANGE-20
+label: 30Y Treasury yield 20-day change
+node_id: IKROS-PB1-FACTOR-YIELD-30Y-CHANGE-20
+node_type: FACTOR
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048
