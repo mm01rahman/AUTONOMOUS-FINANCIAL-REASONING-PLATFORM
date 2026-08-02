@@ -1,0 +1,172 @@
+archived_at: null
+capability_refs:
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T23:29:21.262779+00:00'
+dependency_ids: []
+entity_type: ResearchTaskResult
+evidence_refs: []
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0051
+- IKROS-RESEARCHTASK-20260802-0205
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0100
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0051
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on: []
+    finished_at: '2026-08-02T23:29:21.262085+00:00'
+    kind: RESEARCH_QUESTION
+    max_attempts: 1
+    payload:
+      entity:
+        campaign_tag: ''
+        capability_refs: []
+        confidence:
+          data: 0.73
+          economic: 0.74
+          last_updated: '2026-08-03T00:00:00Z'
+          model: 0.77
+          operational: 0.0
+          overall: 0.7464747150425967
+          prior: 0.76
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        entity_type: ResearchQuestion
+        ikros_id: IKROS-RQ-20260803-0058
+        instrument: XAU/USD
+        lifecycle_state: OPEN
+        lineage:
+          dependencies:
+            datasets: []
+            external_refs: []
+            features: []
+            inputs: []
+            models: []
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-03T00:00:00Z'
+            created_by: program7-market-intelligence
+            creation_context: Generation 4 institutional intelligence bootstrap
+            motivation: Close the real-time market observation-to-research loop without
+              enabling execution.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        linked_conclusions: []
+        linked_hypotheses: []
+        motivation: ''
+        scope: MACRO
+        spec_refs: []
+        time_horizon: ''
+        title: Generation 4 Primary Research Question
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: ResearchQuestion
+    planned_order: 1
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0205
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-RQ-20260803-0058
+      payload:
+        campaign_tag: ''
+        capability_refs: []
+        confidence:
+          data: 0.73
+          economic: 0.74
+          last_updated: '2026-08-03T00:00:00Z'
+          model: 0.77
+          operational: 0.0
+          overall: 0.7464747150425967
+          prior: 0.76
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        entity_type: ResearchQuestion
+        ikros_id: IKROS-RQ-20260803-0058
+        instrument: XAU/USD
+        lifecycle_state: OPEN
+        lineage:
+          dependencies:
+            datasets: []
+            external_refs: []
+            features: []
+            inputs: []
+            models: []
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-03T00:00:00Z'
+            created_by: program7-market-intelligence
+            creation_context: Generation 4 institutional intelligence bootstrap
+            motivation: Close the real-time market observation-to-research loop without
+              enabling execution.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        linked_conclusions: []
+        linked_hypotheses: []
+        motivation: ''
+        scope: MACRO
+        spec_refs: []
+        time_horizon: ''
+        title: Generation 4 Primary Research Question
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T23:29:20.101890+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0205
+    title: Research Question
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0051
+- IKROS-RQ-20260803-0058
+spec_refs:
+- SPEC-060
+summary: RESEARCH_QUESTION COMPLETED
+tags:
+- research-orchestrator
+- research_question
+tier: T1_EPISODIC
+title: 'Generation 4 — Real-Time Institutional Market Intelligence Platform :: Research
+  Question'
+updated_at: '2026-08-02T23:29:21.262779+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs:
+- WP-IMP-0048

@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: HYPOTHESIS_VALIDATION
+  entity_type: ResearchCampaign
+  objective: Continuously observe market state, update beliefs, maintain regime and
+    alpha activation probabilities, revise portfolio recommendations, and open governed
+    research triggers in a non-executing loop.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0051
+confidence: 0.0
+created_at: '2026-08-02T23:29:15.260929+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0051
+label: Generation 4 — Real-Time Institutional Market Intelligence Platform
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0051
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

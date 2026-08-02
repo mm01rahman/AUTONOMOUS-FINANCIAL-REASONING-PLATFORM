@@ -1,0 +1,13 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0592
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0051
+detail: Task EXPERIMENT_REGISTRATION completed
+entry_hash: b86cdb84581fcd5938e434f380d0c858bf4e6e1cdefc3397659fc2594dd20a18
+event_type: TASK_COMPLETED
+new_state: COMPLETED
+output_refs:
+- IKROS-EXP-20260803-0058
+previous_hash: cb7c2215d154428c3e62d5cc7ee157ecc7c27b997fefc7f5182f1b4a7b87c83c
+previous_state: RUNNING
+task_id: IKROS-RESEARCHTASK-20260802-0209
+timestamp: '2026-08-02T23:29:27.457817+00:00'

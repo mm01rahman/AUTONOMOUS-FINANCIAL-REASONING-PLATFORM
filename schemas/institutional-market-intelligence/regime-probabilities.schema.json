@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "BEAR_TREND": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "BULL_TREND": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "LIQUIDITY_CRISIS": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "MACRO_TRANSITION": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "RISK_OFF": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "RISK_ON": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    }
+  },
+  "required": [
+    "BULL_TREND",
+    "BEAR_TREND",
+    "RISK_OFF",
+    "RISK_ON",
+    "MACRO_TRANSITION",
+    "LIQUIDITY_CRISIS"
+  ],
+  "title": "Regime Probabilities",
+  "type": "object"
+}

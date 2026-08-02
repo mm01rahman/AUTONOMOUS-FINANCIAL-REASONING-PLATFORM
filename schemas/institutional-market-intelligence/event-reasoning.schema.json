@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "event_type": {
+      "type": "string"
+    },
+    "immediate_impact": {
+      "type": "number"
+    },
+    "institutional_narrative": {
+      "type": "string"
+    },
+    "medium_term_impact": {
+      "type": "number"
+    },
+    "timestamp": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "timestamp",
+    "event_type",
+    "immediate_impact",
+    "medium_term_impact",
+    "institutional_narrative"
+  ],
+  "title": "Event Reasoning",
+  "type": "object"
+}

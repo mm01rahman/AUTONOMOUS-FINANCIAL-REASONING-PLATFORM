@@ -1,0 +1,902 @@
+[
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9222,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3586,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.6977,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8858,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.3674,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6644,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8639,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.375,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6451,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8515,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.3864,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6367,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8445,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.397,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6335,
+        "vote": "BUY"
+      }
+    ],
+    "timestamp": "2025-01-02T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9217,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3589,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.6973,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8841,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.3682,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.663,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8624,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.3758,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6439,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8494,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.3874,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.635,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8426,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.398,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6319,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-01-10T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.924,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3631,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7011,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.882,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.3742,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.663,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8549,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.3841,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6393,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8472,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.3935,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6349,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8353,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4062,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6275,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-01-22T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9228,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3663,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.701,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8787,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.3784,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6611,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8515,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.3883,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6374,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8433,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.3979,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6326,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8311,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4108,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6249,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-02-03T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9221,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3679,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7009,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8766,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.3806,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6598,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8487,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.3907,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6354,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8409,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4002,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.631,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.828,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4134,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6227,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-02-14T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9261,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.375,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7073,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8727,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.391,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6596,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8367,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4108,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6305,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8359,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.405,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6277,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8157,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4275,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6153,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-02-27T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.925,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3804,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7081,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8693,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.3973,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6584,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8331,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4172,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6291,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8299,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.4124,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6242,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8096,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4349,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6118,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-03-11T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9215,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3815,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.705,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.867,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.3979,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6563,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8305,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.418,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6268,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8294,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.4122,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6237,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8089,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4348,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6111,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-03-24T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9198,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3795,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7026,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8659,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.3957,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6544,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.83,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.4093,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6233,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8292,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4158,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6247,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8091,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.432,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6103,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-04-04T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9204,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3798,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7033,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8651,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.3966,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6539,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8284,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4167,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6242,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8274,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.411,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6212,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8065,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4336,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6083,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-04-21T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9225,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3826,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7064,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.863,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.4012,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6534,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.826,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4214,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6235,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8203,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.4177,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6165,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.7997,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4403,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.6038,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-05-02T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9245,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3889,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7106,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.859,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.41,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6525,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8216,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4304,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6222,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.8098,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.4293,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6101,
+        "vote": "REDUCE"
+      },
+      {
+        "activation_probability": 0.7892,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4519,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.5974,
+        "vote": "REDUCE"
+      }
+    ],
+    "timestamp": "2025-05-16T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9199,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3903,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7065,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8573,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.4103,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6509,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8199,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4307,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6206,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.811,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.4282,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6109,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.7904,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4508,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.5982,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-05-28T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9181,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3885,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7041,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8561,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.4082,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.649,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8186,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4287,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6186,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8117,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.4254,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6106,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.7906,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4482,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.5975,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-06-10T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9163,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3855,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7012,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8558,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.4045,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6474,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8181,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.425,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6169,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8142,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.4205,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6114,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.7929,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4434,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.5981,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-06-23T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9168,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3845,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7014,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.856,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.4037,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6473,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8185,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4241,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6169,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8136,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.42,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6106,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.7924,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4429,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.5974,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-07-08T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9199,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3887,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7059,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.854,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.41,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6475,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.8163,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4306,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.617,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8055,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.429,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6057,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.7845,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4517,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.5926,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-07-21T00:00:00Z"
+  },
+  {
+    "rows": [
+      {
+        "activation_probability": 0.9177,
+        "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+        "degrading": 0.3903,
+        "mechanism": "safe_haven_migration",
+        "state": "active",
+        "strengthening": 0.7043,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8528,
+        "alpha_id": "IKROS-ALPHA-P4-0001",
+        "degrading": 0.4112,
+        "mechanism": "real_yield_dislocation_reversion",
+        "state": "active",
+        "strengthening": 0.6467,
+        "vote": "INCREASE"
+      },
+      {
+        "activation_probability": 0.815,
+        "alpha_id": "IKROS-ALPHA-P4-0002",
+        "degrading": 0.4317,
+        "mechanism": "policy_expectation_repricing",
+        "state": "active",
+        "strengthening": 0.6161,
+        "vote": "BUY"
+      },
+      {
+        "activation_probability": 0.8051,
+        "alpha_id": "IKROS-ALPHA-P4-0003",
+        "degrading": 0.4298,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "state": "active",
+        "strengthening": 0.6055,
+        "vote": "HOLD"
+      },
+      {
+        "activation_probability": 0.7841,
+        "alpha_id": "IKROS-ALPHA-P4-0004",
+        "degrading": 0.4526,
+        "mechanism": "commodity_cross_curve_divergence",
+        "state": "active",
+        "strengthening": 0.5925,
+        "vote": "NO POSITION"
+      }
+    ],
+    "timestamp": "2025-08-04T00:00:00Z"
+  }
+]

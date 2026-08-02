@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "campaign_type": {
+      "type": "string"
+    },
+    "expected_information_gain": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "severity": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "trigger_type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "timestamp",
+    "trigger_type",
+    "severity",
+    "campaign_type",
+    "expected_information_gain"
+  ],
+  "title": "Research Trigger",
+  "type": "object"
+}
