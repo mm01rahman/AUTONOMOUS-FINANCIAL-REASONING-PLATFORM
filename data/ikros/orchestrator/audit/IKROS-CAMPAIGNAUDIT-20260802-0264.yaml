@@ -1,0 +1,12 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0264
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0016
+detail: Campaign failed with tasks ['IKROS-RESEARCHTASK-20260802-0091']
+entry_hash: f23b7a89880387283f4ef5c0502728211e4f27eac049019098ae1889510d586d
+event_type: CAMPAIGN_FAILED
+new_state: FAILED
+output_refs: []
+previous_hash: 565764428cd7cc5fd569aac6aa0d8d56772454737d012f46302080581d2c6ee3
+previous_state: RUNNING
+task_id: null
+timestamp: '2026-08-02T03:20:16.087356+00:00'

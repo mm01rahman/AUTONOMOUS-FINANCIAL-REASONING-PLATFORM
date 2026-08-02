@@ -1,0 +1,86 @@
+[
+  {
+    "expected_contribution": "Equity volatility regime context; synchronization during stress; cross-asset fear transmission.",
+    "gap_severity": "HIGH",
+    "ikros_gap_id": "DC2-GAP-20260802-0001",
+    "market": "VIX"
+  },
+  {
+    "expected_contribution": "Equity-gold correlation and regime interaction; risk-on/risk-off transmission.",
+    "gap_severity": "HIGH",
+    "ikros_gap_id": "DC2-GAP-20260802-0002",
+    "market": "S&P 500"
+  },
+  {
+    "expected_contribution": "Growth-proxy and tech-sector risk appetite signal.",
+    "gap_severity": "MEDIUM",
+    "ikros_gap_id": "DC2-GAP-20260802-0003",
+    "market": "NASDAQ"
+  },
+  {
+    "expected_contribution": "Inflation proxy; commodity bloc co-movement; regime transition signal.",
+    "gap_severity": "HIGH",
+    "ikros_gap_id": "DC2-GAP-20260802-0004",
+    "market": "Crude Oil"
+  },
+  {
+    "expected_contribution": "Industrial metals ratio and gold/silver spread as positioning diagnostic.",
+    "gap_severity": "MEDIUM",
+    "ikros_gap_id": "DC2-GAP-20260802-0005",
+    "market": "Silver"
+  },
+  {
+    "expected_contribution": "Global growth proxy and commodity cycle signal.",
+    "gap_severity": "MEDIUM",
+    "ikros_gap_id": "DC2-GAP-20260802-0006",
+    "market": "Copper"
+  },
+  {
+    "expected_contribution": "Precious metals basket diversification signal.",
+    "gap_severity": "LOW",
+    "ikros_gap_id": "DC2-GAP-20260802-0007",
+    "market": "Platinum"
+  },
+  {
+    "expected_contribution": "Industrial precious metals demand signal.",
+    "gap_severity": "LOW",
+    "ikros_gap_id": "DC2-GAP-20260802-0008",
+    "market": "Palladium"
+  },
+  {
+    "expected_contribution": "DXY component; European macro and ECB policy signal.",
+    "gap_severity": "HIGH",
+    "ikros_gap_id": "DC2-GAP-20260802-0009",
+    "market": "EUR/USD"
+  },
+  {
+    "expected_contribution": "Risk-off safe-haven dynamics; BOJ policy interaction with gold.",
+    "gap_severity": "HIGH",
+    "ikros_gap_id": "DC2-GAP-20260802-0010",
+    "market": "USD/JPY"
+  },
+  {
+    "expected_contribution": "Safe-haven currency co-movement with gold during crisis regimes.",
+    "gap_severity": "MEDIUM",
+    "ikros_gap_id": "DC2-GAP-20260802-0011",
+    "market": "CHF"
+  },
+  {
+    "expected_contribution": "Duration positioning and flight-to-quality flows.",
+    "gap_severity": "HIGH",
+    "ikros_gap_id": "DC2-GAP-20260802-0012",
+    "market": "Bond Futures"
+  },
+  {
+    "expected_contribution": "Institutional positioning and retail flow pressure on gold.",
+    "gap_severity": "HIGH",
+    "ikros_gap_id": "DC2-GAP-20260802-0013",
+    "market": "ETF Flows (GLD)"
+  },
+  {
+    "expected_contribution": "Futures open interest and COT-style positioning for crowding signals.",
+    "gap_severity": "HIGH",
+    "ikros_gap_id": "DC2-GAP-20260802-0014",
+    "market": "COMEX Positioning"
+  }
+]

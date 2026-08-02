@@ -1,0 +1,69 @@
+archived_at: null
+capability_refs:
+- IKROS-ORCHESTRATOR
+confidence: 0.5
+created_at: '2026-08-02T03:11:28.779400+00:00'
+dependency_ids: []
+entity_type: CampaignCompletionReport
+evidence_refs:
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\discovery-cycle-2\research-program-a\dc2_program_a_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0011
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260802-0017
+payload:
+  audit_ids:
+  - IKROS-CAMPAIGNAUDIT-20260802-0221
+  - IKROS-CAMPAIGNAUDIT-20260802-0222
+  - IKROS-CAMPAIGNAUDIT-20260802-0223
+  - IKROS-CAMPAIGNAUDIT-20260802-0224
+  - IKROS-CAMPAIGNAUDIT-20260802-0225
+  - IKROS-CAMPAIGNAUDIT-20260802-0226
+  - IKROS-CAMPAIGNAUDIT-20260802-0227
+  - IKROS-CAMPAIGNAUDIT-20260802-0228
+  blocked_task_ids: []
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0011
+  campaign_type: RESEARCH_AUDIT
+  completed_task_ids:
+  - IKROS-RESEARCHTASK-20260802-0076
+  failed_task_ids:
+  - IKROS-RESEARCHTASK-20260802-0080
+  finished_at: '2026-08-02T03:11:28.744888+00:00'
+  lifecycle_state: FAILED
+  memory_record_ids:
+  - IKMEM-T1-20260802-0073
+  output_refs:
+  - IKROS-RQ-20260802-1001
+  progress:
+    blocked: 0
+    completed: 1
+    failed: 1
+    percent_complete: 33.33
+    skipped: 0
+    total: 3
+  report_id: IKROS-CAMPAIGNREPORT-20260802-0011
+  skipped_task_ids: []
+  started_at: '2026-08-02T03:11:24.932323+00:00'
+  summary: DC2 Research Program A — Cross-Asset Transition Ecology failed after 1
+    task failures.
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0011
+- IKROS-RQ-20260802-1001
+spec_refs:
+- SPEC-060
+summary: DC2 Research Program A — Cross-Asset Transition Ecology failed after 1 task
+  failures.
+tags:
+- research-orchestrator
+- completion-report
+tier: T4_INSTITUTIONAL
+title: Completion report for DC2 Research Program A — Cross-Asset Transition Ecology
+updated_at: '2026-08-02T03:11:28.779400+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs:
+- WP-IMP-0048

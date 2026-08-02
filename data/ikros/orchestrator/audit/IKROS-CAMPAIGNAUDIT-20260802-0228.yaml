@@ -1,0 +1,13 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0228
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0011
+detail: "Task EXPERIMENT_REGISTRATION failed: Experiment IKROS-EXP-20260802-1001 failed\
+  \ validation:\n  - lifecycle_state 'REGISTERED' is not valid for Experiment"
+entry_hash: 9d9b79bea356cd969cb71b8f96936d111acab84e190fcaf75495b07e55788092
+event_type: TASK_FAILED
+new_state: FAILED
+output_refs: []
+previous_hash: 46a4f2bf775b2d390ba178864c73e1f09b0fe719847eb69583c27b3a7096e855
+previous_state: RUNNING
+task_id: IKROS-RESEARCHTASK-20260802-0080
+timestamp: '2026-08-02T03:11:28.244216+00:00'
