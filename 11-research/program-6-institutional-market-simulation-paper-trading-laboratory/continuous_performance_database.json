@@ -1,0 +1,2496 @@
+{
+  "attribution_history": [
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 4.1454,
+          "confidence_contribution": 0.2561,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2585,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.1795,
+          "risk_contribution": 0.0613
+        },
+        {
+          "alpha_contribution": 4.1151,
+          "confidence_contribution": 0.2531,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2605,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.1912,
+          "risk_contribution": 0.0717
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.261,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2376,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1166,
+          "risk_contribution": 0.0626
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.2561,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2268,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.0831,
+          "risk_contribution": 0.0542
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.2582,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2202,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.0702,
+          "risk_contribution": 0.0518
+        }
+      ],
+      "decision": "INCREASE",
+      "timestamp": "2021-01-04T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 2.6291,
+          "confidence_contribution": 0.2668,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.269,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.2093,
+          "risk_contribution": 0.0644
+        },
+        {
+          "alpha_contribution": 1.4718,
+          "confidence_contribution": 0.2623,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2547,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.1545,
+          "risk_contribution": 0.0708
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.2685,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2337,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.103,
+          "risk_contribution": 0.0622
+        },
+        {
+          "alpha_contribution": -0.4181,
+          "confidence_contribution": 0.2633,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2273,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.0805,
+          "risk_contribution": 0.0549
+        },
+        {
+          "alpha_contribution": -0.903,
+          "confidence_contribution": 0.2618,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.206,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.0442,
+          "risk_contribution": 0.049
+        }
+      ],
+      "decision": "NO POSITION",
+      "timestamp": "2021-03-15T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": -1.7343,
+          "confidence_contribution": 0.2821,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2799,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.2102,
+          "risk_contribution": 0.0663
+        },
+        {
+          "alpha_contribution": -1.5165,
+          "confidence_contribution": 0.2772,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2791,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.1898,
+          "risk_contribution": 0.0599
+        },
+        {
+          "alpha_contribution": -1.496,
+          "confidence_contribution": 0.2746,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.263,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.1459,
+          "risk_contribution": 0.065
+        },
+        {
+          "alpha_contribution": -0.8639,
+          "confidence_contribution": 0.2763,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2494,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.1157,
+          "risk_contribution": 0.0531
+        },
+        {
+          "alpha_contribution": -1.4034,
+          "confidence_contribution": 0.2751,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.271,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.1627,
+          "risk_contribution": 0.0573
+        }
+      ],
+      "decision": "BUY",
+      "timestamp": "2021-06-21T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": -3.0468,
+          "confidence_contribution": 0.2926,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2637,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1548,
+          "risk_contribution": 0.067
+        },
+        {
+          "alpha_contribution": -0.0,
+          "confidence_contribution": 0.2819,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2375,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.095,
+          "risk_contribution": 0.0543
+        },
+        {
+          "alpha_contribution": -1.5313,
+          "confidence_contribution": 0.287,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2644,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.1393,
+          "risk_contribution": 0.06
+        },
+        {
+          "alpha_contribution": 1.2682,
+          "confidence_contribution": 0.2807,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2392,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.0981,
+          "risk_contribution": 0.0635
+        },
+        {
+          "alpha_contribution": -0.0,
+          "confidence_contribution": 0.2844,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2466,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.1042,
+          "risk_contribution": 0.0568
+        }
+      ],
+      "decision": "NO POSITION",
+      "timestamp": "2021-09-30T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 3.0932,
+          "confidence_contribution": 0.2963,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2577,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1419,
+          "risk_contribution": 0.0653
+        },
+        {
+          "alpha_contribution": 4.8029,
+          "confidence_contribution": 0.2995,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2873,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.1994,
+          "risk_contribution": 0.0651
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.2825,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2382,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.1009,
+          "risk_contribution": 0.0543
+        },
+        {
+          "alpha_contribution": 4.3521,
+          "confidence_contribution": 0.2867,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2481,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.1103,
+          "risk_contribution": 0.0571
+        },
+        {
+          "alpha_contribution": -0.8265,
+          "confidence_contribution": 0.2786,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2251,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.0759,
+          "risk_contribution": 0.0596
+        }
+      ],
+      "decision": "INCREASE",
+      "timestamp": "2021-12-20T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.2889,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2462,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1389,
+          "risk_contribution": 0.0671
+        },
+        {
+          "alpha_contribution": 7.8372,
+          "confidence_contribution": 0.302,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2854,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.2153,
+          "risk_contribution": 0.0695
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.2765,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2298,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.0947,
+          "risk_contribution": 0.0568
+        },
+        {
+          "alpha_contribution": -3.1639,
+          "confidence_contribution": 0.2679,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2067,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.0616,
+          "risk_contribution": 0.0507
+        },
+        {
+          "alpha_contribution": -3.0346,
+          "confidence_contribution": 0.2632,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2012,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.0538,
+          "risk_contribution": 0.0573
+        }
+      ],
+      "decision": "HOLD",
+      "timestamp": "2022-03-14T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": -4.0253,
+          "confidence_contribution": 0.287,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2765,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.2139,
+          "risk_contribution": 0.0674
+        },
+        {
+          "alpha_contribution": -3.4799,
+          "confidence_contribution": 0.2755,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2725,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.191,
+          "risk_contribution": 0.0603
+        },
+        {
+          "alpha_contribution": -3.3691,
+          "confidence_contribution": 0.2991,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2769,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.1712,
+          "risk_contribution": 0.0603
+        },
+        {
+          "alpha_contribution": -3.2912,
+          "confidence_contribution": 0.2564,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2463,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.1407,
+          "risk_contribution": 0.0627
+        },
+        {
+          "alpha_contribution": -1.8885,
+          "confidence_contribution": 0.2575,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.232,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.1109,
+          "risk_contribution": 0.0509
+        }
+      ],
+      "decision": "BUY",
+      "timestamp": "2022-06-13T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 2.915,
+          "confidence_contribution": 0.287,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2522,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1431,
+          "risk_contribution": 0.0659
+        },
+        {
+          "alpha_contribution": 4.668,
+          "confidence_contribution": 0.3078,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2901,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.2073,
+          "risk_contribution": 0.0676
+        },
+        {
+          "alpha_contribution": 4.0733,
+          "confidence_contribution": 0.2741,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2413,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.1104,
+          "risk_contribution": 0.0571
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.2544,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2254,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.0983,
+          "risk_contribution": 0.0529
+        },
+        {
+          "alpha_contribution": -0.75,
+          "confidence_contribution": 0.2505,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2122,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.0736,
+          "risk_contribution": 0.0578
+        }
+      ],
+      "decision": "INCREASE",
+      "timestamp": "2022-09-27T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.2945,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2499,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1179,
+          "risk_contribution": 0.0633
+        },
+        {
+          "alpha_contribution": 2.9214,
+          "confidence_contribution": 0.264,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2619,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.1747,
+          "risk_contribution": 0.0597
+        },
+        {
+          "alpha_contribution": 2.8981,
+          "confidence_contribution": 0.2606,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2637,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.186,
+          "risk_contribution": 0.0698
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.281,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2361,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.0832,
+          "risk_contribution": 0.0542
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.3139,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2417,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.0741,
+          "risk_contribution": 0.0547
+        }
+      ],
+      "decision": "INCREASE",
+      "timestamp": "2023-01-17T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 2.2773,
+          "confidence_contribution": 0.3062,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2915,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.2129,
+          "risk_contribution": 0.0671
+        },
+        {
+          "alpha_contribution": 1.9623,
+          "confidence_contribution": 0.2929,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2865,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.1894,
+          "risk_contribution": 0.0598
+        },
+        {
+          "alpha_contribution": 1.9269,
+          "confidence_contribution": 0.3253,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2952,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.1723,
+          "risk_contribution": 0.0607
+        },
+        {
+          "alpha_contribution": 1.8688,
+          "confidence_contribution": 0.271,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2607,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.1405,
+          "risk_contribution": 0.0627
+        },
+        {
+          "alpha_contribution": 1.0835,
+          "confidence_contribution": 0.2735,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2483,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.1119,
+          "risk_contribution": 0.0514
+        }
+      ],
+      "decision": "BUY",
+      "timestamp": "2023-04-24T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 3.5521,
+          "confidence_contribution": 0.282,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.276,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.2037,
+          "risk_contribution": 0.0627
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.3115,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2493,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1042,
+          "risk_contribution": 0.0629
+        },
+        {
+          "alpha_contribution": 1.976,
+          "confidence_contribution": 0.2781,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2598,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.1494,
+          "risk_contribution": 0.0685
+        },
+        {
+          "alpha_contribution": -0.5806,
+          "confidence_contribution": 0.298,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2397,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.0805,
+          "risk_contribution": 0.0549
+        },
+        {
+          "alpha_contribution": -1.3396,
+          "confidence_contribution": 0.3288,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2321,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.0473,
+          "risk_contribution": 0.0523
+        }
+      ],
+      "decision": "NO POSITION",
+      "timestamp": "2023-07-10T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": -4.5863,
+          "confidence_contribution": 0.3122,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2663,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1564,
+          "risk_contribution": 0.0677
+        },
+        {
+          "alpha_contribution": -2.3864,
+          "confidence_contribution": 0.3309,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2765,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.1458,
+          "risk_contribution": 0.0628
+        },
+        {
+          "alpha_contribution": -0.0,
+          "confidence_contribution": 0.2954,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.246,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.104,
+          "risk_contribution": 0.0567
+        },
+        {
+          "alpha_contribution": -0.0,
+          "confidence_contribution": 0.2778,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2309,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.0924,
+          "risk_contribution": 0.0528
+        },
+        {
+          "alpha_contribution": 1.8316,
+          "confidence_contribution": 0.2744,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2318,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.0951,
+          "risk_contribution": 0.0615
+        }
+      ],
+      "decision": "INCREASE",
+      "timestamp": "2023-10-02T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 2.4272,
+          "confidence_contribution": 0.317,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2663,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1429,
+          "risk_contribution": 0.0658
+        },
+        {
+          "alpha_contribution": 3.9418,
+          "confidence_contribution": 0.3445,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.3107,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.2099,
+          "risk_contribution": 0.0685
+        },
+        {
+          "alpha_contribution": 3.3729,
+          "confidence_contribution": 0.2988,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2534,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.1097,
+          "risk_contribution": 0.0567
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.2795,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2377,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.098,
+          "risk_contribution": 0.0528
+        },
+        {
+          "alpha_contribution": -0.6232,
+          "confidence_contribution": 0.2733,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2236,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.0734,
+          "risk_contribution": 0.0577
+        }
+      ],
+      "decision": "INCREASE",
+      "timestamp": "2024-01-29T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 6.6199,
+          "confidence_contribution": 0.3476,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.3079,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.2259,
+          "risk_contribution": 0.0729
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.3102,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2548,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1398,
+          "risk_contribution": 0.0676
+        },
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.2893,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2351,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.0942,
+          "risk_contribution": 0.0565
+        },
+        {
+          "alpha_contribution": -2.4702,
+          "confidence_contribution": 0.2656,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2061,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.0597,
+          "risk_contribution": 0.0492
+        },
+        {
+          "alpha_contribution": -2.359,
+          "confidence_contribution": 0.2586,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.1998,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.052,
+          "risk_contribution": 0.0553
+        }
+      ],
+      "decision": "HOLD",
+      "timestamp": "2024-04-15T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 1.9014,
+          "confidence_contribution": 0.3244,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.3017,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.2168,
+          "risk_contribution": 0.0683
+        },
+        {
+          "alpha_contribution": 1.6189,
+          "confidence_contribution": 0.3036,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2929,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.1906,
+          "risk_contribution": 0.0602
+        },
+        {
+          "alpha_contribution": 1.6076,
+          "confidence_contribution": 0.35,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.3052,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.1753,
+          "risk_contribution": 0.0618
+        },
+        {
+          "alpha_contribution": 1.4995,
+          "confidence_contribution": 0.2682,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2591,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.1375,
+          "risk_contribution": 0.0613
+        },
+        {
+          "alpha_contribution": 0.8658,
+          "confidence_contribution": 0.2716,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2458,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.1091,
+          "risk_contribution": 0.0501
+        }
+      ],
+      "decision": "BUY",
+      "timestamp": "2024-07-22T00:00:00+00:00"
+    },
+    {
+      "attribution": [
+        {
+          "alpha_contribution": 0.0,
+          "confidence_contribution": 0.3296,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2563,
+          "mechanism": "real_yield_dislocation_reversion",
+          "regime_contribution": 0.1057,
+          "risk_contribution": 0.0639
+        },
+        {
+          "alpha_contribution": 2.6792,
+          "confidence_contribution": 0.28,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.252,
+          "feature_contribution": 0.2749,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "regime_contribution": 0.2002,
+          "risk_contribution": 0.0616
+        },
+        {
+          "alpha_contribution": 1.4899,
+          "confidence_contribution": 0.2751,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.245,
+          "feature_contribution": 0.2586,
+          "mechanism": "commodity_cross_curve_divergence",
+          "regime_contribution": 0.1468,
+          "risk_contribution": 0.0673
+        },
+        {
+          "alpha_contribution": -0.4474,
+          "confidence_contribution": 0.3085,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2485,
+          "feature_contribution": 0.2438,
+          "mechanism": "policy_expectation_repricing",
+          "regime_contribution": 0.0808,
+          "risk_contribution": 0.0551
+        },
+        {
+          "alpha_contribution": -1.0479,
+          "confidence_contribution": 0.35,
+          "dataset_contribution": 0.3,
+          "evidence_contribution": 0.2625,
+          "feature_contribution": 0.2396,
+          "mechanism": "safe_haven_migration",
+          "regime_contribution": 0.0482,
+          "risk_contribution": 0.0534
+        }
+      ],
+      "decision": "NO POSITION",
+      "timestamp": "2024-10-07T00:00:00+00:00"
+    }
+  ],
+  "confidence_history": [
+    {
+      "confidence": 0.734,
+      "timestamp": "2021-01-04T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.7558,
+      "timestamp": "2021-03-15T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.7916,
+      "timestamp": "2021-06-21T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.8153,
+      "timestamp": "2021-09-30T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.8249,
+      "timestamp": "2021-12-20T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.7992,
+      "timestamp": "2022-03-14T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.786,
+      "timestamp": "2022-06-13T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.785,
+      "timestamp": "2022-09-27T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.808,
+      "timestamp": "2023-01-17T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.8394,
+      "timestamp": "2023-04-24T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.8562,
+      "timestamp": "2023-07-10T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.8518,
+      "timestamp": "2023-10-02T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.8646,
+      "timestamp": "2024-01-29T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.8407,
+      "timestamp": "2024-04-15T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.8673,
+      "timestamp": "2024-07-22T00:00:00+00:00"
+    },
+    {
+      "confidence": 0.8818,
+      "timestamp": "2024-10-07T00:00:00+00:00"
+    }
+  ],
+  "daily_alpha_activity": [
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2189,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2173,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2159,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1807,
+          "mechanism": "policy_expectation_repricing",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1672,
+          "mechanism": "safe_haven_migration",
+          "status": "reduced"
+        }
+      ],
+      "timestamp": "2021-01-04T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.23,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2146,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2145,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1829,
+          "mechanism": "policy_expectation_repricing",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.158,
+          "mechanism": "safe_haven_migration",
+          "status": "reduced"
+        }
+      ],
+      "timestamp": "2021-03-15T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2285,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1998,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1971,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1897,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1849,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        }
+      ],
+      "timestamp": "2021-06-21T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.231,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1938,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1935,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1923,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1894,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        }
+      ],
+      "timestamp": "2021-09-30T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2253,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2099,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.194,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1902,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1806,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "reduced"
+        }
+      ],
+      "timestamp": "2021-12-20T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2315,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2243,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1894,
+          "mechanism": "policy_expectation_repricing",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1811,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1737,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "reduced"
+        }
+      ],
+      "timestamp": "2022-03-14T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2325,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.201,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1946,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1901,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1818,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        }
+      ],
+      "timestamp": "2022-06-13T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2271,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2182,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1904,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.189,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1753,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "reduced"
+        }
+      ],
+      "timestamp": "2022-09-27T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2183,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2131,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2114,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1808,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1764,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        }
+      ],
+      "timestamp": "2023-01-17T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2314,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1994,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1958,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1899,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1835,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        }
+      ],
+      "timestamp": "2023-04-24T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2238,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.217,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2075,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1829,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1688,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        }
+      ],
+      "timestamp": "2023-07-10T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2335,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2025,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.189,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1885,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1865,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        }
+      ],
+      "timestamp": "2023-10-02T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2268,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.221,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1891,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1884,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1747,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "reduced"
+        }
+      ],
+      "timestamp": "2024-01-29T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2353,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.233,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1884,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1756,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1677,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "reduced"
+        }
+      ],
+      "timestamp": "2024-04-15T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2356,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2006,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1992,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1858,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1788,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        }
+      ],
+      "timestamp": "2024-07-22T00:00:00+00:00"
+    },
+    {
+      "activity": [
+        {
+          "allocation_weight": 0.2203,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.22,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2039,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1837,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1721,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        }
+      ],
+      "timestamp": "2024-10-07T00:00:00+00:00"
+    }
+  ],
+  "daily_portfolio": [
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2189,
+          "confidence": 0.7318,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2173,
+          "confidence": 0.7231,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2159,
+          "confidence": 0.7458,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1807,
+          "confidence": 0.7318,
+          "mechanism": "policy_expectation_repricing",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1672,
+          "confidence": 0.7377,
+          "mechanism": "safe_haven_migration",
+          "status": "reduced"
+        }
+      ],
+      "cash": 962866.20918669,
+      "decision": "INCREASE",
+      "equity": 999982.95168669,
+      "regime": "BULL_TREND",
+      "timestamp": "2021-01-04T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.23,
+          "confidence": 0.7623,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2146,
+          "confidence": 0.7495,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2145,
+          "confidence": 0.7671,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1829,
+          "confidence": 0.7523,
+          "mechanism": "policy_expectation_repricing",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.158,
+          "confidence": 0.7479,
+          "mechanism": "safe_haven_migration",
+          "status": "reduced"
+        }
+      ],
+      "cash": 1000187.31910187,
+      "decision": "NO POSITION",
+      "equity": 1000187.31910187,
+      "regime": "RISK_ON",
+      "timestamp": "2021-03-15T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2285,
+          "confidence": 0.806,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1998,
+          "confidence": 0.7919,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1971,
+          "confidence": 0.7846,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1897,
+          "confidence": 0.7895,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1849,
+          "confidence": 0.786,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        }
+      ],
+      "cash": 914714.51784483,
+      "decision": "BUY",
+      "equity": 1000141.69492603,
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2021-06-21T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.231,
+          "confidence": 0.8361,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1938,
+          "confidence": 0.8054,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1935,
+          "confidence": 0.8201,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1923,
+          "confidence": 0.8021,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1894,
+          "confidence": 0.8126,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        }
+      ],
+      "cash": 999511.59774915,
+      "decision": "NO POSITION",
+      "equity": 999511.59774915,
+      "regime": "BEAR_TREND",
+      "timestamp": "2021-09-30T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2253,
+          "confidence": 0.8465,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2099,
+          "confidence": 0.8557,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.194,
+          "confidence": 0.8071,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1902,
+          "confidence": 0.8191,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1806,
+          "confidence": 0.796,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "reduced"
+        }
+      ],
+      "cash": 959899.4880178,
+      "decision": "INCREASE",
+      "equity": 999488.886934,
+      "regime": "RISK_OFF",
+      "timestamp": "2021-12-20T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2315,
+          "confidence": 0.8254,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2243,
+          "confidence": 0.8629,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1894,
+          "confidence": 0.7901,
+          "mechanism": "policy_expectation_repricing",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1811,
+          "confidence": 0.7655,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1737,
+          "confidence": 0.752,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "reduced"
+        }
+      ],
+      "cash": 994041.99073739,
+      "decision": "HOLD",
+      "equity": 1000180.46693006,
+      "regime": "LIQUIDITY_CRISIS",
+      "timestamp": "2022-03-14T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2325,
+          "confidence": 0.8201,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.201,
+          "confidence": 0.7872,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1946,
+          "confidence": 0.8545,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1901,
+          "confidence": 0.7326,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1818,
+          "confidence": 0.7358,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        }
+      ],
+      "cash": 914977.41586148,
+      "decision": "BUY",
+      "equity": 1000087.03980506,
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2022-06-13T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2271,
+          "confidence": 0.8199,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2182,
+          "confidence": 0.8795,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1904,
+          "confidence": 0.783,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.189,
+          "confidence": 0.7269,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1753,
+          "confidence": 0.7158,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "reduced"
+        }
+      ],
+      "cash": 961433.08020853,
+      "decision": "INCREASE",
+      "equity": 1000994.87309453,
+      "regime": "RISK_OFF",
+      "timestamp": "2022-09-27T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2183,
+          "confidence": 0.8414,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2131,
+          "confidence": 0.7544,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2114,
+          "confidence": 0.7445,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1808,
+          "confidence": 0.8028,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1764,
+          "confidence": 0.8968,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        }
+      ],
+      "cash": 963992.52285424,
+      "decision": "INCREASE",
+      "equity": 1001269.59924544,
+      "regime": "BULL_TREND",
+      "timestamp": "2023-01-17T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2314,
+          "confidence": 0.8749,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1994,
+          "confidence": 0.837,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1958,
+          "confidence": 0.9295,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1899,
+          "confidence": 0.7742,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1835,
+          "confidence": 0.7814,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        }
+      ],
+      "cash": 914708.83671411,
+      "decision": "BUY",
+      "equity": 1001430.03752581,
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2023-04-24T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2238,
+          "confidence": 0.8057,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.217,
+          "confidence": 0.8901,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2075,
+          "confidence": 0.7945,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1829,
+          "confidence": 0.8514,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1688,
+          "confidence": 0.9393,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        }
+      ],
+      "cash": 1002081.57614292,
+      "decision": "NO POSITION",
+      "equity": 1002081.57614292,
+      "regime": "RISK_ON",
+      "timestamp": "2023-07-10T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2335,
+          "confidence": 0.8921,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2025,
+          "confidence": 0.9453,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.189,
+          "confidence": 0.844,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1885,
+          "confidence": 0.7936,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1865,
+          "confidence": 0.7839,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        }
+      ],
+      "cash": 968283.82612446,
+      "decision": "INCREASE",
+      "equity": 1002065.9433574,
+      "regime": "BEAR_TREND",
+      "timestamp": "2023-10-02T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2268,
+          "confidence": 0.9057,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.221,
+          "confidence": 0.9842,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1891,
+          "confidence": 0.8537,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1884,
+          "confidence": 0.7986,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1747,
+          "confidence": 0.781,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "reduced"
+        }
+      ],
+      "cash": 962086.89578195,
+      "decision": "INCREASE",
+      "equity": 1002366.84151523,
+      "regime": "RISK_OFF",
+      "timestamp": "2024-01-29T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2353,
+          "confidence": 0.9932,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.233,
+          "confidence": 0.8864,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1884,
+          "confidence": 0.8265,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1756,
+          "confidence": 0.7588,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "reduced"
+        },
+        {
+          "allocation_weight": 0.1677,
+          "confidence": 0.7388,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "reduced"
+        }
+      ],
+      "cash": 996667.48489641,
+      "decision": "HOLD",
+      "equity": 1002910.20757776,
+      "regime": "LIQUIDITY_CRISIS",
+      "timestamp": "2024-04-15T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2356,
+          "confidence": 0.9268,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2006,
+          "confidence": 0.8675,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1992,
+          "confidence": 1.0,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1858,
+          "confidence": 0.7662,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1788,
+          "confidence": 0.7759,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        }
+      ],
+      "cash": 915321.85037699,
+      "decision": "BUY",
+      "equity": 1002897.45981233,
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2024-07-22T00:00:00+00:00"
+    },
+    {
+      "allocation": [
+        {
+          "allocation_weight": 0.2203,
+          "confidence": 0.9417,
+          "mechanism": "real_yield_dislocation_reversion",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.22,
+          "confidence": 0.7999,
+          "mechanism": "etf_flow_accumulation_pressure",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.2039,
+          "confidence": 0.7861,
+          "mechanism": "commodity_cross_curve_divergence",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1837,
+          "confidence": 0.8815,
+          "mechanism": "policy_expectation_repricing",
+          "status": "active"
+        },
+        {
+          "allocation_weight": 0.1721,
+          "confidence": 1.0,
+          "mechanism": "safe_haven_migration",
+          "status": "active"
+        }
+      ],
+      "cash": 1003379.13669921,
+      "decision": "NO POSITION",
+      "equity": 1003379.13669921,
+      "regime": "RISK_ON",
+      "timestamp": "2024-10-07T00:00:00+00:00"
+    }
+  ],
+  "pnl_history": [
+    {
+      "timestamp": "2021-01-04T00:00:00+00:00",
+      "total_pnl": -17.0483
+    },
+    {
+      "timestamp": "2021-03-15T00:00:00+00:00",
+      "total_pnl": 187.3191
+    },
+    {
+      "timestamp": "2021-06-21T00:00:00+00:00",
+      "total_pnl": 141.6949
+    },
+    {
+      "timestamp": "2021-09-30T00:00:00+00:00",
+      "total_pnl": -488.4023
+    },
+    {
+      "timestamp": "2021-12-20T00:00:00+00:00",
+      "total_pnl": -511.1131
+    },
+    {
+      "timestamp": "2022-03-14T00:00:00+00:00",
+      "total_pnl": 180.4669
+    },
+    {
+      "timestamp": "2022-06-13T00:00:00+00:00",
+      "total_pnl": 87.0398
+    },
+    {
+      "timestamp": "2022-09-27T00:00:00+00:00",
+      "total_pnl": 994.8731
+    },
+    {
+      "timestamp": "2023-01-17T00:00:00+00:00",
+      "total_pnl": 1269.5992
+    },
+    {
+      "timestamp": "2023-04-24T00:00:00+00:00",
+      "total_pnl": 1430.0375
+    },
+    {
+      "timestamp": "2023-07-10T00:00:00+00:00",
+      "total_pnl": 2081.5761
+    },
+    {
+      "timestamp": "2023-10-02T00:00:00+00:00",
+      "total_pnl": 2065.9434
+    },
+    {
+      "timestamp": "2024-01-29T00:00:00+00:00",
+      "total_pnl": 2366.8415
+    },
+    {
+      "timestamp": "2024-04-15T00:00:00+00:00",
+      "total_pnl": 2910.2076
+    },
+    {
+      "timestamp": "2024-07-22T00:00:00+00:00",
+      "total_pnl": 2897.4598
+    },
+    {
+      "timestamp": "2024-10-07T00:00:00+00:00",
+      "total_pnl": 3379.1367
+    }
+  ],
+  "portfolio_decisions": [
+    {
+      "decision": "INCREASE",
+      "regime": "BULL_TREND",
+      "timestamp": "2021-01-04T00:00:00+00:00"
+    },
+    {
+      "decision": "NO POSITION",
+      "regime": "RISK_ON",
+      "timestamp": "2021-03-15T00:00:00+00:00"
+    },
+    {
+      "decision": "BUY",
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2021-06-21T00:00:00+00:00"
+    },
+    {
+      "decision": "NO POSITION",
+      "regime": "BEAR_TREND",
+      "timestamp": "2021-09-30T00:00:00+00:00"
+    },
+    {
+      "decision": "INCREASE",
+      "regime": "RISK_OFF",
+      "timestamp": "2021-12-20T00:00:00+00:00"
+    },
+    {
+      "decision": "HOLD",
+      "regime": "LIQUIDITY_CRISIS",
+      "timestamp": "2022-03-14T00:00:00+00:00"
+    },
+    {
+      "decision": "BUY",
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2022-06-13T00:00:00+00:00"
+    },
+    {
+      "decision": "INCREASE",
+      "regime": "RISK_OFF",
+      "timestamp": "2022-09-27T00:00:00+00:00"
+    },
+    {
+      "decision": "INCREASE",
+      "regime": "BULL_TREND",
+      "timestamp": "2023-01-17T00:00:00+00:00"
+    },
+    {
+      "decision": "BUY",
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2023-04-24T00:00:00+00:00"
+    },
+    {
+      "decision": "NO POSITION",
+      "regime": "RISK_ON",
+      "timestamp": "2023-07-10T00:00:00+00:00"
+    },
+    {
+      "decision": "INCREASE",
+      "regime": "BEAR_TREND",
+      "timestamp": "2023-10-02T00:00:00+00:00"
+    },
+    {
+      "decision": "INCREASE",
+      "regime": "RISK_OFF",
+      "timestamp": "2024-01-29T00:00:00+00:00"
+    },
+    {
+      "decision": "HOLD",
+      "regime": "LIQUIDITY_CRISIS",
+      "timestamp": "2024-04-15T00:00:00+00:00"
+    },
+    {
+      "decision": "BUY",
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2024-07-22T00:00:00+00:00"
+    },
+    {
+      "decision": "NO POSITION",
+      "regime": "RISK_ON",
+      "timestamp": "2024-10-07T00:00:00+00:00"
+    }
+  ],
+  "regime_history": [
+    {
+      "regime": "BULL_TREND",
+      "timestamp": "2021-01-04T00:00:00+00:00"
+    },
+    {
+      "regime": "RISK_ON",
+      "timestamp": "2021-03-15T00:00:00+00:00"
+    },
+    {
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2021-06-21T00:00:00+00:00"
+    },
+    {
+      "regime": "BEAR_TREND",
+      "timestamp": "2021-09-30T00:00:00+00:00"
+    },
+    {
+      "regime": "RISK_OFF",
+      "timestamp": "2021-12-20T00:00:00+00:00"
+    },
+    {
+      "regime": "LIQUIDITY_CRISIS",
+      "timestamp": "2022-03-14T00:00:00+00:00"
+    },
+    {
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2022-06-13T00:00:00+00:00"
+    },
+    {
+      "regime": "RISK_OFF",
+      "timestamp": "2022-09-27T00:00:00+00:00"
+    },
+    {
+      "regime": "BULL_TREND",
+      "timestamp": "2023-01-17T00:00:00+00:00"
+    },
+    {
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2023-04-24T00:00:00+00:00"
+    },
+    {
+      "regime": "RISK_ON",
+      "timestamp": "2023-07-10T00:00:00+00:00"
+    },
+    {
+      "regime": "BEAR_TREND",
+      "timestamp": "2023-10-02T00:00:00+00:00"
+    },
+    {
+      "regime": "RISK_OFF",
+      "timestamp": "2024-01-29T00:00:00+00:00"
+    },
+    {
+      "regime": "LIQUIDITY_CRISIS",
+      "timestamp": "2024-04-15T00:00:00+00:00"
+    },
+    {
+      "regime": "MACRO_TRANSITION",
+      "timestamp": "2024-07-22T00:00:00+00:00"
+    },
+    {
+      "regime": "RISK_ON",
+      "timestamp": "2024-10-07T00:00:00+00:00"
+    }
+  ],
+  "risk_history": [
+    {
+      "alerts": [],
+      "concentration": 0.2189,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.01,
+      "portfolio_var": 0.01,
+      "regime_concentration": "BULL_TREND",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.034,
+      "timestamp": "2021-01-04T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.23,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.006,
+      "portfolio_var": 0.006,
+      "regime_concentration": "RISK_ON",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.028,
+      "timestamp": "2021-03-15T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.2285,
+      "confidence_adjusted_drawdown": 0.0001,
+      "expected_shortfall": 0.004,
+      "portfolio_var": 0.004,
+      "regime_concentration": "MACRO_TRANSITION",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.034,
+      "timestamp": "2021-06-21T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.231,
+      "confidence_adjusted_drawdown": 0.0008,
+      "expected_shortfall": 0.007,
+      "portfolio_var": 0.007,
+      "regime_concentration": "BEAR_TREND",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.039,
+      "timestamp": "2021-09-30T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.2253,
+      "confidence_adjusted_drawdown": 0.0008,
+      "expected_shortfall": 0.007,
+      "portfolio_var": 0.007,
+      "regime_concentration": "RISK_OFF",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.047,
+      "timestamp": "2021-12-20T00:00:00+00:00"
+    },
+    {
+      "alerts": [
+        {
+          "code": "RISK-VOLATILITY",
+          "message": "Volatility exceeds limit",
+          "metric": "volatility",
+          "severity": "warning",
+          "threshold": 0.025,
+          "timestamp": "2022-03-14T00:00:00+00:00",
+          "value": 0.028
+        }
+      ],
+      "concentration": 0.2315,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.007,
+      "portfolio_var": 0.007,
+      "regime_concentration": "LIQUIDITY_CRISIS",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.063,
+      "timestamp": "2022-03-14T00:00:00+00:00"
+    },
+    {
+      "alerts": [
+        {
+          "code": "RISK-VOLATILITY",
+          "message": "Volatility exceeds limit",
+          "metric": "volatility",
+          "severity": "warning",
+          "threshold": 0.025,
+          "timestamp": "2022-06-13T00:00:00+00:00",
+          "value": 0.03
+        }
+      ],
+      "concentration": 0.2325,
+      "confidence_adjusted_drawdown": 0.0001,
+      "expected_shortfall": 0.009,
+      "portfolio_var": 0.009,
+      "regime_concentration": "MACRO_TRANSITION",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.069,
+      "timestamp": "2022-06-13T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.2271,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.009,
+      "portfolio_var": 0.009,
+      "regime_concentration": "RISK_OFF",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.051,
+      "timestamp": "2022-09-27T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.2183,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.009,
+      "portfolio_var": 0.009,
+      "regime_concentration": "BULL_TREND",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.035,
+      "timestamp": "2023-01-17T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.2314,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.009,
+      "portfolio_var": 0.009,
+      "regime_concentration": "MACRO_TRANSITION",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.037,
+      "timestamp": "2023-04-24T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.2238,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.009,
+      "portfolio_var": 0.009,
+      "regime_concentration": "RISK_ON",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.029,
+      "timestamp": "2023-07-10T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.2335,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.01,
+      "portfolio_var": 0.01,
+      "regime_concentration": "BEAR_TREND",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.054,
+      "timestamp": "2023-10-02T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.2268,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.01,
+      "portfolio_var": 0.01,
+      "regime_concentration": "RISK_OFF",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.046,
+      "timestamp": "2024-01-29T00:00:00+00:00"
+    },
+    {
+      "alerts": [
+        {
+          "code": "RISK-VOLATILITY",
+          "message": "Volatility exceeds limit",
+          "metric": "volatility",
+          "severity": "warning",
+          "threshold": 0.025,
+          "timestamp": "2024-04-15T00:00:00+00:00",
+          "value": 0.026
+        }
+      ],
+      "concentration": 0.2353,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.01,
+      "portfolio_var": 0.01,
+      "regime_concentration": "LIQUIDITY_CRISIS",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.062,
+      "timestamp": "2024-04-15T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.2356,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.01,
+      "portfolio_var": 0.01,
+      "regime_concentration": "MACRO_TRANSITION",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.044,
+      "timestamp": "2024-07-22T00:00:00+00:00"
+    },
+    {
+      "alerts": [],
+      "concentration": 0.2203,
+      "confidence_adjusted_drawdown": 0.0,
+      "expected_shortfall": 0.01,
+      "portfolio_var": 0.01,
+      "regime_concentration": "RISK_ON",
+      "shared_failure_exposure": [],
+      "tail_exposure": 0.034,
+      "timestamp": "2024-10-07T00:00:00+00:00"
+    }
+  ]
+}

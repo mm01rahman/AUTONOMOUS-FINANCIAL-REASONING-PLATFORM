@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "allocation": {
+      "type": "array"
+    },
+    "cash": {
+      "type": "number"
+    },
+    "decision": {
+      "enum": [
+        "BUY",
+        "SELL",
+        "HOLD",
+        "REDUCE",
+        "INCREASE",
+        "NO POSITION"
+      ],
+      "type": "string"
+    },
+    "equity": {
+      "type": "number"
+    },
+    "timestamp": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "timestamp",
+    "equity",
+    "cash",
+    "allocation",
+    "decision"
+  ],
+  "title": "Portfolio History Entry",
+  "type": "object"
+}

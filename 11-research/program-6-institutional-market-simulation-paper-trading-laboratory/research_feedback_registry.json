@@ -1,0 +1,191 @@
+[
+  {
+    "expected_information_gain": 0.2421,
+    "feedback_id": "IKROS-RF-20220314T000000+0000-safe_h",
+    "ikros_update": "Open Program 6 follow-up investigation for safe_haven_migration.",
+    "mechanism": "safe_haven_migration",
+    "recommended_action": "revalidation_request",
+    "timestamp": "2022-03-14T00:00:00+00:00",
+    "trigger": "drift"
+  },
+  {
+    "expected_information_gain": 0.2997,
+    "feedback_id": "IKROS-RF-20220314T000000+0000-real_y",
+    "ikros_update": "Open Program 6 follow-up investigation for real_yield_dislocation_reversion.",
+    "mechanism": "real_yield_dislocation_reversion",
+    "recommended_action": "research_campaign",
+    "timestamp": "2022-03-14T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.3157,
+    "feedback_id": "IKROS-RF-20220314T000000+0000-policy",
+    "ikros_update": "Open Program 6 follow-up investigation for policy_expectation_repricing.",
+    "mechanism": "policy_expectation_repricing",
+    "recommended_action": "research_campaign",
+    "timestamp": "2022-03-14T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.3413,
+    "feedback_id": "IKROS-RF-20220314T000000+0000-etf_fl",
+    "ikros_update": "Open Program 6 follow-up investigation for etf_flow_accumulation_pressure.",
+    "mechanism": "etf_flow_accumulation_pressure",
+    "recommended_action": "research_campaign",
+    "timestamp": "2022-03-14T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.3462,
+    "feedback_id": "IKROS-RF-20220314T000000+0000-commod",
+    "ikros_update": "Open Program 6 follow-up investigation for commodity_cross_curve_divergence.",
+    "mechanism": "commodity_cross_curve_divergence",
+    "recommended_action": "research_campaign",
+    "timestamp": "2022-03-14T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.3085,
+    "feedback_id": "IKROS-RF-20220613T000000+0000-safe_h",
+    "ikros_update": "Open Program 6 follow-up investigation for safe_haven_migration.",
+    "mechanism": "safe_haven_migration",
+    "recommended_action": "research_campaign",
+    "timestamp": "2022-06-13T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.302,
+    "feedback_id": "IKROS-RF-20220613T000000+0000-real_y",
+    "ikros_update": "Open Program 6 follow-up investigation for real_yield_dislocation_reversion.",
+    "mechanism": "real_yield_dislocation_reversion",
+    "recommended_action": "research_campaign",
+    "timestamp": "2022-06-13T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.2973,
+    "feedback_id": "IKROS-RF-20220613T000000+0000-policy",
+    "ikros_update": "Open Program 6 follow-up investigation for policy_expectation_repricing.",
+    "mechanism": "policy_expectation_repricing",
+    "recommended_action": "research_campaign",
+    "timestamp": "2022-06-13T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.3516,
+    "feedback_id": "IKROS-RF-20220613T000000+0000-etf_fl",
+    "ikros_update": "Open Program 6 follow-up investigation for etf_flow_accumulation_pressure.",
+    "mechanism": "etf_flow_accumulation_pressure",
+    "recommended_action": "research_campaign",
+    "timestamp": "2022-06-13T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.3308,
+    "feedback_id": "IKROS-RF-20220613T000000+0000-commod",
+    "ikros_update": "Open Program 6 follow-up investigation for commodity_cross_curve_divergence.",
+    "mechanism": "commodity_cross_curve_divergence",
+    "recommended_action": "research_campaign",
+    "timestamp": "2022-06-13T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.197,
+    "feedback_id": "IKROS-RF-20220927T000000+0000-policy",
+    "ikros_update": "Open Program 6 follow-up investigation for policy_expectation_repricing.",
+    "mechanism": "policy_expectation_repricing",
+    "recommended_action": "revalidation_request",
+    "timestamp": "2022-09-27T00:00:00+00:00",
+    "trigger": "drift"
+  },
+  {
+    "expected_information_gain": 0.2066,
+    "feedback_id": "IKROS-RF-20220927T000000+0000-etf_fl",
+    "ikros_update": "Open Program 6 follow-up investigation for etf_flow_accumulation_pressure.",
+    "mechanism": "etf_flow_accumulation_pressure",
+    "recommended_action": "revalidation_request",
+    "timestamp": "2022-09-27T00:00:00+00:00",
+    "trigger": "drift"
+  },
+  {
+    "expected_information_gain": 0.2225,
+    "feedback_id": "IKROS-RF-20220927T000000+0000-commod",
+    "ikros_update": "Open Program 6 follow-up investigation for commodity_cross_curve_divergence.",
+    "mechanism": "commodity_cross_curve_divergence",
+    "recommended_action": "revalidation_request",
+    "timestamp": "2022-09-27T00:00:00+00:00",
+    "trigger": "drift"
+  },
+  {
+    "expected_information_gain": 0.2075,
+    "feedback_id": "IKROS-RF-20231002T000000+0000-policy",
+    "ikros_update": "Open Program 6 follow-up investigation for policy_expectation_repricing.",
+    "mechanism": "policy_expectation_repricing",
+    "recommended_action": "revalidation_request",
+    "timestamp": "2023-10-02T00:00:00+00:00",
+    "trigger": "drift"
+  },
+  {
+    "expected_information_gain": 0.2171,
+    "feedback_id": "IKROS-RF-20231002T000000+0000-etf_fl",
+    "ikros_update": "Open Program 6 follow-up investigation for etf_flow_accumulation_pressure.",
+    "mechanism": "etf_flow_accumulation_pressure",
+    "recommended_action": "revalidation_request",
+    "timestamp": "2023-10-02T00:00:00+00:00",
+    "trigger": "drift"
+  },
+  {
+    "expected_information_gain": 0.2139,
+    "feedback_id": "IKROS-RF-20231002T000000+0000-commod",
+    "ikros_update": "Open Program 6 follow-up investigation for commodity_cross_curve_divergence.",
+    "mechanism": "commodity_cross_curve_divergence",
+    "recommended_action": "revalidation_request",
+    "timestamp": "2023-10-02T00:00:00+00:00",
+    "trigger": "drift"
+  },
+  {
+    "expected_information_gain": 0.2319,
+    "feedback_id": "IKROS-RF-20240415T000000+0000-safe_h",
+    "ikros_update": "Open Program 6 follow-up investigation for safe_haven_migration.",
+    "mechanism": "safe_haven_migration",
+    "recommended_action": "revalidation_request",
+    "timestamp": "2024-04-15T00:00:00+00:00",
+    "trigger": "drift"
+  },
+  {
+    "expected_information_gain": 0.2895,
+    "feedback_id": "IKROS-RF-20240415T000000+0000-real_y",
+    "ikros_update": "Open Program 6 follow-up investigation for real_yield_dislocation_reversion.",
+    "mechanism": "real_yield_dislocation_reversion",
+    "recommended_action": "research_campaign",
+    "timestamp": "2024-04-15T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.3055,
+    "feedback_id": "IKROS-RF-20240415T000000+0000-policy",
+    "ikros_update": "Open Program 6 follow-up investigation for policy_expectation_repricing.",
+    "mechanism": "policy_expectation_repricing",
+    "recommended_action": "research_campaign",
+    "timestamp": "2024-04-15T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.3311,
+    "feedback_id": "IKROS-RF-20240415T000000+0000-etf_fl",
+    "ikros_update": "Open Program 6 follow-up investigation for etf_flow_accumulation_pressure.",
+    "mechanism": "etf_flow_accumulation_pressure",
+    "recommended_action": "research_campaign",
+    "timestamp": "2024-04-15T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  },
+  {
+    "expected_information_gain": 0.3359,
+    "feedback_id": "IKROS-RF-20240415T000000+0000-commod",
+    "ikros_update": "Open Program 6 follow-up investigation for commodity_cross_curve_divergence.",
+    "mechanism": "commodity_cross_curve_divergence",
+    "recommended_action": "research_campaign",
+    "timestamp": "2024-04-15T00:00:00+00:00",
+    "trigger": "persistent_degradation"
+  }
+]

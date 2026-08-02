@@ -1,0 +1,626 @@
+[
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2189,
+        "confidence": 0.7318,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2173,
+        "confidence": 0.7231,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2159,
+        "confidence": 0.7458,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1807,
+        "confidence": 0.7318,
+        "mechanism": "policy_expectation_repricing",
+        "status": "reduced"
+      },
+      {
+        "allocation_weight": 0.1672,
+        "confidence": 0.7377,
+        "mechanism": "safe_haven_migration",
+        "status": "reduced"
+      }
+    ],
+    "cash": 962866.20918669,
+    "decision": "INCREASE",
+    "equity": 999982.95168669,
+    "regime": "BULL_TREND",
+    "timestamp": "2021-01-04T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.23,
+        "confidence": 0.7623,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2146,
+        "confidence": 0.7495,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2145,
+        "confidence": 0.7671,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1829,
+        "confidence": 0.7523,
+        "mechanism": "policy_expectation_repricing",
+        "status": "reduced"
+      },
+      {
+        "allocation_weight": 0.158,
+        "confidence": 0.7479,
+        "mechanism": "safe_haven_migration",
+        "status": "reduced"
+      }
+    ],
+    "cash": 1000187.31910187,
+    "decision": "NO POSITION",
+    "equity": 1000187.31910187,
+    "regime": "RISK_ON",
+    "timestamp": "2021-03-15T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2285,
+        "confidence": 0.806,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1998,
+        "confidence": 0.7919,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1971,
+        "confidence": 0.7846,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1897,
+        "confidence": 0.7895,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1849,
+        "confidence": 0.786,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      }
+    ],
+    "cash": 914714.51784483,
+    "decision": "BUY",
+    "equity": 1000141.69492603,
+    "regime": "MACRO_TRANSITION",
+    "timestamp": "2021-06-21T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.231,
+        "confidence": 0.8361,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1938,
+        "confidence": 0.8054,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1935,
+        "confidence": 0.8201,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1923,
+        "confidence": 0.8021,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1894,
+        "confidence": 0.8126,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      }
+    ],
+    "cash": 999511.59774915,
+    "decision": "NO POSITION",
+    "equity": 999511.59774915,
+    "regime": "BEAR_TREND",
+    "timestamp": "2021-09-30T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2253,
+        "confidence": 0.8465,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2099,
+        "confidence": 0.8557,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.194,
+        "confidence": 0.8071,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1902,
+        "confidence": 0.8191,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1806,
+        "confidence": 0.796,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "reduced"
+      }
+    ],
+    "cash": 959899.4880178,
+    "decision": "INCREASE",
+    "equity": 999488.886934,
+    "regime": "RISK_OFF",
+    "timestamp": "2021-12-20T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2315,
+        "confidence": 0.8254,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2243,
+        "confidence": 0.8629,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1894,
+        "confidence": 0.7901,
+        "mechanism": "policy_expectation_repricing",
+        "status": "reduced"
+      },
+      {
+        "allocation_weight": 0.1811,
+        "confidence": 0.7655,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "reduced"
+      },
+      {
+        "allocation_weight": 0.1737,
+        "confidence": 0.752,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "reduced"
+      }
+    ],
+    "cash": 994041.99073739,
+    "decision": "HOLD",
+    "equity": 1000180.46693006,
+    "regime": "LIQUIDITY_CRISIS",
+    "timestamp": "2022-03-14T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2325,
+        "confidence": 0.8201,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.201,
+        "confidence": 0.7872,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1946,
+        "confidence": 0.8545,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1901,
+        "confidence": 0.7326,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1818,
+        "confidence": 0.7358,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      }
+    ],
+    "cash": 914977.41586148,
+    "decision": "BUY",
+    "equity": 1000087.03980506,
+    "regime": "MACRO_TRANSITION",
+    "timestamp": "2022-06-13T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2271,
+        "confidence": 0.8199,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2182,
+        "confidence": 0.8795,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1904,
+        "confidence": 0.783,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.189,
+        "confidence": 0.7269,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "reduced"
+      },
+      {
+        "allocation_weight": 0.1753,
+        "confidence": 0.7158,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "reduced"
+      }
+    ],
+    "cash": 961433.08020853,
+    "decision": "INCREASE",
+    "equity": 1000994.87309453,
+    "regime": "RISK_OFF",
+    "timestamp": "2022-09-27T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2183,
+        "confidence": 0.8414,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2131,
+        "confidence": 0.7544,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2114,
+        "confidence": 0.7445,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1808,
+        "confidence": 0.8028,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1764,
+        "confidence": 0.8968,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      }
+    ],
+    "cash": 963992.52285424,
+    "decision": "INCREASE",
+    "equity": 1001269.59924544,
+    "regime": "BULL_TREND",
+    "timestamp": "2023-01-17T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2314,
+        "confidence": 0.8749,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1994,
+        "confidence": 0.837,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1958,
+        "confidence": 0.9295,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1899,
+        "confidence": 0.7742,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1835,
+        "confidence": 0.7814,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      }
+    ],
+    "cash": 914708.83671411,
+    "decision": "BUY",
+    "equity": 1001430.03752581,
+    "regime": "MACRO_TRANSITION",
+    "timestamp": "2023-04-24T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2238,
+        "confidence": 0.8057,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.217,
+        "confidence": 0.8901,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2075,
+        "confidence": 0.7945,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1829,
+        "confidence": 0.8514,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1688,
+        "confidence": 0.9393,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      }
+    ],
+    "cash": 1002081.57614292,
+    "decision": "NO POSITION",
+    "equity": 1002081.57614292,
+    "regime": "RISK_ON",
+    "timestamp": "2023-07-10T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2335,
+        "confidence": 0.8921,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2025,
+        "confidence": 0.9453,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.189,
+        "confidence": 0.844,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1885,
+        "confidence": 0.7936,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "reduced"
+      },
+      {
+        "allocation_weight": 0.1865,
+        "confidence": 0.7839,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      }
+    ],
+    "cash": 968283.82612446,
+    "decision": "INCREASE",
+    "equity": 1002065.9433574,
+    "regime": "BEAR_TREND",
+    "timestamp": "2023-10-02T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2268,
+        "confidence": 0.9057,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.221,
+        "confidence": 0.9842,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1891,
+        "confidence": 0.8537,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1884,
+        "confidence": 0.7986,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1747,
+        "confidence": 0.781,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "reduced"
+      }
+    ],
+    "cash": 962086.89578195,
+    "decision": "INCREASE",
+    "equity": 1002366.84151523,
+    "regime": "RISK_OFF",
+    "timestamp": "2024-01-29T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2353,
+        "confidence": 0.9932,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.233,
+        "confidence": 0.8864,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1884,
+        "confidence": 0.8265,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1756,
+        "confidence": 0.7588,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "reduced"
+      },
+      {
+        "allocation_weight": 0.1677,
+        "confidence": 0.7388,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "reduced"
+      }
+    ],
+    "cash": 996667.48489641,
+    "decision": "HOLD",
+    "equity": 1002910.20757776,
+    "regime": "LIQUIDITY_CRISIS",
+    "timestamp": "2024-04-15T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2356,
+        "confidence": 0.9268,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2006,
+        "confidence": 0.8675,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1992,
+        "confidence": 1.0,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1858,
+        "confidence": 0.7662,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1788,
+        "confidence": 0.7759,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      }
+    ],
+    "cash": 915321.85037699,
+    "decision": "BUY",
+    "equity": 1002897.45981233,
+    "regime": "MACRO_TRANSITION",
+    "timestamp": "2024-07-22T00:00:00+00:00"
+  },
+  {
+    "allocation": [
+      {
+        "allocation_weight": 0.2203,
+        "confidence": 0.9417,
+        "mechanism": "real_yield_dislocation_reversion",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.22,
+        "confidence": 0.7999,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.2039,
+        "confidence": 0.7861,
+        "mechanism": "commodity_cross_curve_divergence",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1837,
+        "confidence": 0.8815,
+        "mechanism": "policy_expectation_repricing",
+        "status": "active"
+      },
+      {
+        "allocation_weight": 0.1721,
+        "confidence": 1.0,
+        "mechanism": "safe_haven_migration",
+        "status": "active"
+      }
+    ],
+    "cash": 1003379.13669921,
+    "decision": "NO POSITION",
+    "equity": 1003379.13669921,
+    "regime": "RISK_ON",
+    "timestamp": "2024-10-07T00:00:00+00:00"
+  }
+]

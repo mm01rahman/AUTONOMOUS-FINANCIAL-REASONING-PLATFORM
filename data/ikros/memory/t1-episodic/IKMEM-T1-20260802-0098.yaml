@@ -1,0 +1,70 @@
+archived_at: null
+capability_refs:
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T23:17:34.315458+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0205
+entity_type: ResearchTaskResult
+evidence_refs: []
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0050
+- IKROS-RESEARCHTASK-20260802-0209
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0098
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0050
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0205
+    finished_at: '2026-08-02T23:17:34.314455+00:00'
+    kind: STATISTICAL_EVALUATION
+    max_attempts: 1
+    payload: {}
+    planned_order: 9
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0209
+      memory_record_id: null
+      metrics:
+        data_confidence: 0.2
+        effect_size: 0.0
+        experimental_confidence: 0.95
+        p_value: 1.0
+        statistical_confidence: 0.0
+        validation_confidence: 0.0
+      output_refs: []
+      payload:
+        data_confidence: 0.2
+        effect_size: 0.0
+        experimental_confidence: 0.95
+        p_value: 1.0
+        statistical_confidence: 0.0
+        validation_confidence: 0.0
+      selected_ids: []
+    started_at: '2026-08-02T23:17:33.190453+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0209
+    title: Statistical Evaluation
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0050
+spec_refs:
+- SPEC-060
+summary: STATISTICAL_EVALUATION COMPLETED
+tags:
+- research-orchestrator
+- statistical_evaluation
+tier: T1_EPISODIC
+title: 'Program 6 — Institutional Market Simulation & Paper Trading Laboratory ::
+  Statistical Evaluation'
+updated_at: '2026-08-02T23:17:34.315458+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs:
+- WP-IMP-0048

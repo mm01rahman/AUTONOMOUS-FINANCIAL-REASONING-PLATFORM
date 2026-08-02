@@ -1,0 +1,191 @@
+{
+  "preserves_temporal_ordering": true,
+  "replay_rows": [
+    {
+      "event": "post-pandemic growth rebound",
+      "market_return": 0.01,
+      "regime": "BULL_TREND",
+      "replay_mode": "historical_replay",
+      "sequence": 0,
+      "shock": 0.01,
+      "timestamp": "2021-01-04T00:00:00Z",
+      "volatility": 0.012,
+      "xauusd_price": 1893.75
+    },
+    {
+      "event": "ETF accumulation continuation",
+      "market_return": 0.006,
+      "regime": "RISK_ON",
+      "replay_mode": "walk_forward_replay",
+      "sequence": 1,
+      "shock": 0.008,
+      "timestamp": "2021-03-15T00:00:00Z",
+      "volatility": 0.011,
+      "xauusd_price": 1905.1125
+    },
+    {
+      "event": "hawkish central-bank repricing",
+      "market_return": -0.004,
+      "regime": "MACRO_TRANSITION",
+      "replay_mode": "rolling_replay",
+      "sequence": 2,
+      "shock": 0.014,
+      "timestamp": "2021-06-21T00:00:00Z",
+      "volatility": 0.015,
+      "xauusd_price": 1897.492
+    },
+    {
+      "event": "real-yield normalization",
+      "market_return": -0.007,
+      "regime": "BEAR_TREND",
+      "replay_mode": "multi_year_replay",
+      "sequence": 3,
+      "shock": 0.015,
+      "timestamp": "2021-09-30T00:00:00Z",
+      "volatility": 0.016,
+      "xauusd_price": 1884.2096
+    },
+    {
+      "event": "growth scare and safe-haven bid",
+      "market_return": 0.012,
+      "regime": "RISK_OFF",
+      "replay_mode": "regime_replay",
+      "sequence": 4,
+      "shock": 0.025,
+      "timestamp": "2021-12-20T00:00:00Z",
+      "volatility": 0.02,
+      "xauusd_price": 1906.8201
+    },
+    {
+      "event": "geopolitical shock",
+      "market_return": 0.018,
+      "regime": "LIQUIDITY_CRISIS",
+      "replay_mode": "event_replay",
+      "sequence": 5,
+      "shock": 0.04,
+      "timestamp": "2022-03-14T00:00:00Z",
+      "volatility": 0.028,
+      "xauusd_price": 1941.1429
+    },
+    {
+      "event": "inflation surprise and forced repricing",
+      "market_return": -0.009,
+      "regime": "MACRO_TRANSITION",
+      "replay_mode": "shock_replay",
+      "sequence": 6,
+      "shock": 0.045,
+      "timestamp": "2022-06-13T00:00:00Z",
+      "volatility": 0.03,
+      "xauusd_price": 1923.6726
+    },
+    {
+      "event": "USD funding stress session",
+      "market_return": 0.011,
+      "regime": "RISK_OFF",
+      "replay_mode": "session_replay",
+      "sequence": 7,
+      "shock": 0.031,
+      "timestamp": "2022-09-27T00:00:00Z",
+      "volatility": 0.021,
+      "xauusd_price": 1944.833
+    },
+    {
+      "event": "commodity complex divergence",
+      "market_return": 0.007,
+      "regime": "BULL_TREND",
+      "replay_mode": "historical_replay",
+      "sequence": 8,
+      "shock": 0.009,
+      "timestamp": "2023-01-17T00:00:00Z",
+      "volatility": 0.013,
+      "xauusd_price": 1958.4468
+    },
+    {
+      "event": "policy path uncertainty",
+      "market_return": 0.005,
+      "regime": "MACRO_TRANSITION",
+      "replay_mode": "walk_forward_replay",
+      "sequence": 9,
+      "shock": 0.012,
+      "timestamp": "2023-04-24T00:00:00Z",
+      "volatility": 0.014,
+      "xauusd_price": 1968.239
+    },
+    {
+      "event": "ETF persistence with benign growth",
+      "market_return": 0.008,
+      "regime": "RISK_ON",
+      "replay_mode": "rolling_replay",
+      "sequence": 10,
+      "shock": 0.006,
+      "timestamp": "2023-07-10T00:00:00Z",
+      "volatility": 0.01,
+      "xauusd_price": 1983.9849
+    },
+    {
+      "event": "rates shock",
+      "market_return": -0.01,
+      "regime": "BEAR_TREND",
+      "replay_mode": "multi_year_replay",
+      "sequence": 11,
+      "shock": 0.03,
+      "timestamp": "2023-10-02T00:00:00Z",
+      "volatility": 0.022,
+      "xauusd_price": 1964.1451
+    },
+    {
+      "event": "policy credibility stress",
+      "market_return": 0.009,
+      "regime": "RISK_OFF",
+      "replay_mode": "regime_replay",
+      "sequence": 12,
+      "shock": 0.022,
+      "timestamp": "2024-01-29T00:00:00Z",
+      "volatility": 0.018,
+      "xauusd_price": 1981.8224
+    },
+    {
+      "event": "cross-asset de-risking event",
+      "market_return": 0.014,
+      "regime": "LIQUIDITY_CRISIS",
+      "replay_mode": "event_replay",
+      "sequence": 13,
+      "shock": 0.038,
+      "timestamp": "2024-04-15T00:00:00Z",
+      "volatility": 0.026,
+      "xauusd_price": 2009.5679
+    },
+    {
+      "event": "real-rate overshoot",
+      "market_return": 0.004,
+      "regime": "MACRO_TRANSITION",
+      "replay_mode": "shock_replay",
+      "sequence": 14,
+      "shock": 0.018,
+      "timestamp": "2024-07-22T00:00:00Z",
+      "volatility": 0.017,
+      "xauusd_price": 2017.6062
+    },
+    {
+      "event": "session transition accumulation",
+      "market_return": 0.006,
+      "regime": "RISK_ON",
+      "replay_mode": "session_replay",
+      "sequence": 15,
+      "shock": 0.007,
+      "timestamp": "2024-10-07T00:00:00Z",
+      "volatility": 0.012,
+      "xauusd_price": 2029.7118
+    }
+  ],
+  "supported_modes": [
+    "historical_replay",
+    "walk_forward_replay",
+    "rolling_replay",
+    "multi_year_replay",
+    "regime_replay",
+    "event_replay",
+    "shock_replay",
+    "session_replay"
+  ]
+}

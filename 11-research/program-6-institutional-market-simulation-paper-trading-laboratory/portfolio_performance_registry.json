@@ -1,0 +1,12 @@
+{
+  "calmar": 4.8636,
+  "final_equity": 1003379.1367,
+  "max_drawdown": 0.0007,
+  "portfolio_id": "IKROS-PORTFOLIO-P5-0001",
+  "profit_factor": 19.6664,
+  "sharpe": 7.5966,
+  "simulation_steps": 16,
+  "sortino": 12.1531,
+  "total_return": 0.0034,
+  "win_rate": 0.8125
+}

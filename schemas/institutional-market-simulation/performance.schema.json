@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "max_drawdown": {
+      "type": "number"
+    },
+    "sharpe": {
+      "type": "number"
+    },
+    "sortino": {
+      "type": "number"
+    },
+    "total_return": {
+      "type": "number"
+    },
+    "win_rate": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "total_return",
+    "sharpe",
+    "sortino",
+    "max_drawdown",
+    "win_rate"
+  ],
+  "title": "Simulation Performance Summary",
+  "type": "object"
+}
