@@ -1,0 +1,153 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0053"
+capability_id:
+  id: "ALPHA-RESEARCH"
+  version: "1.0"
+title: "Program 3 — Autonomous Institutional Alpha Campaign Engine"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
+    trace_sls: "AFRP-GEN2-WP0053-1.0.0"
+    trace_adr: ["ADR-0001", "ADR-IKROS-001", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "work_package.completed('WP-IMP-0052')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/alpha_research/autonomous_institutional_alpha_campaign_engine.py"
+      - "tools/alpha_research/program3_autonomous_campaign_engine.py"
+      - "tests/unit/test_program3_autonomous_institutional_alpha_campaign_engine.py"
+      - "11-research/program-3-autonomous-institutional-alpha-campaign-engine/"
+      - "data/ikros/graph/"
+      - "data/ikros/orchestrator/audit/"
+      - "data/ikros/orchestrator/campaigns/"
+      - "data/ikros/orchestrator/reports/"
+      - "data/ikros/memory/t1-episodic/"
+      - "data/ikros/memory/t4-institutional/"
+      - "data/ikros/registries/research/"
+      - "data/ikros/registries/experiments/"
+      - "05-work-packages/WP-IMP-0053.yaml"
+    read:
+      - "11-research/program-2-institutional-alpha-research-laboratory/"
+      - "11-research/program-1-institutional-alpha-factory/"
+      - "11-research/generation-2/wp-imp-0050-institutional-alpha-evidence-validation-engine/"
+      - "data/ikros/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "18h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "11-research/program-2-institutional-alpha-research-laboratory/research_director.json"
+    - "11-research/program-2-institutional-alpha-research-laboratory/eig_engine.json"
+    - "11-research/program-1-institutional-alpha-factory/institutional_alpha_registry.json"
+    - "11-research/generation-2/wp-imp-0050-institutional-alpha-evidence-validation-engine/evidence_ledger.json"
+    - "data/ikros/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/alpha_research/autonomous_institutional_alpha_campaign_engine.py"
+    - "tools/alpha_research/program3_autonomous_campaign_engine.py"
+  expected_test_files:
+    - "tests/unit/test_program3_autonomous_institutional_alpha_campaign_engine.py"
+  expected_documentation:
+    - "11-research/program-3-autonomous-institutional-alpha-campaign-engine/"
+  expected_evidence:
+    - "11-research/program-3-autonomous-institutional-alpha-campaign-engine/campaign_archive.json"
+    - "11-research/program-3-autonomous-institutional-alpha-campaign-engine/final_mechanism_states.json"
+    - "11-research/program-3-autonomous-institutional-alpha-campaign-engine/FINAL_REPORT.md"
+
+produces:
+  capability:
+    id: "ALPHA-RESEARCH"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/alpha_research/autonomous_institutional_alpha_campaign_engine.py"
+    - "tools/alpha_research/program3_autonomous_campaign_engine.py"
+    - "tests/unit/test_program3_autonomous_institutional_alpha_campaign_engine.py"
+    - "11-research/program-3-autonomous-institutional-alpha-campaign-engine/"
+    - "data/ikros/graph/"
+    - "data/ikros/orchestrator/audit/"
+    - "data/ikros/orchestrator/campaigns/"
+    - "data/ikros/orchestrator/reports/"
+    - "data/ikros/memory/t1-episodic/"
+    - "data/ikros/memory/t4-institutional/"
+    - "data/ikros/registries/research/"
+    - "data/ikros/registries/experiments/"
+    - "05-work-packages/WP-IMP-0053.yaml"
+  non_goals:
+    - "No Runtime modifications."
+    - "No broker integration."
+    - "No live execution."
+    - "No portfolio construction implementation."
+    - "No return or Sharpe optimization."
+
+requirements:
+  campaign_engine:
+    module: "tools/alpha_research/autonomous_institutional_alpha_campaign_engine.py"
+    rules:
+      - "Operate a deterministic research loop until every current mechanism reaches APPROVED_ALPHA, REJECTED, or BLOCKED_BY_DATA."
+      - "Every campaign must produce plan, research questions, hypotheses, experiments, evidence, results, confidence updates, failure analysis, replication results, committee decision, knowledge updates, future work, metrics, and audit."
+      - "Maintain continuous dashboards for queue, campaigns, evidence, replication, promotion, mechanism, failure, confidence, dataset, observability, and scientific progress."
+      - "Preserve lineage and update IKROS graph and registries through the governed runner."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0053"
+
+completion:
+  success_requires:
+    - "The current alpha inventory is fully resolved into terminal scientific states."
+    - "At least one governed campaign sequence is executed for a near-promotion mechanism."
+    - "Blocked mechanisms are assigned BLOCKED_BY_DATA instead of remaining indefinitely in RESEARCH."
+    - "Campaign archive, confidence evolution, IKROS growth, dashboards, and final report are generated."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-NONDETERMINISTIC: "Campaign results differ across repeated executions."
+  ERR-GOVERNANCE: "A mechanism is promoted without satisfying the governed committee thresholds."
+  ERR-UNRESOLVED: "Any current mechanism remains non-terminal at program completion."

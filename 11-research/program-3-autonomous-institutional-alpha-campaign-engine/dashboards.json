@@ -1,0 +1,134 @@
+{
+  "campaign_dashboard": {
+    "tiles": [
+      [
+        "Campaigns Executed",
+        4
+      ],
+      [
+        "Experiments Executed",
+        14
+      ],
+      [
+        "Terminal Mechanisms",
+        2
+      ]
+    ]
+  },
+  "confidence_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        0.719
+      ],
+      [
+        "decision_cascade",
+        0.544
+      ]
+    ]
+  },
+  "dataset_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        2
+      ],
+      [
+        "decision_cascade",
+        3
+      ]
+    ]
+  },
+  "evidence_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        0.81
+      ],
+      [
+        "decision_cascade",
+        0.58
+      ]
+    ]
+  },
+  "failure_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        0.32
+      ],
+      [
+        "decision_cascade",
+        0.6
+      ]
+    ]
+  },
+  "mechanism_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        "APPROVED_ALPHA"
+      ],
+      [
+        "decision_cascade",
+        "BLOCKED_BY_DATA"
+      ]
+    ]
+  },
+  "observability_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        0.76
+      ],
+      [
+        "decision_cascade",
+        0.67
+      ]
+    ]
+  },
+  "promotion_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        "PROMOTE_TO_APPROVED_ALPHA"
+      ],
+      [
+        "decision_cascade",
+        "RETURN_FOR_DATA_ACQUISITION"
+      ]
+    ]
+  },
+  "replication_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        0.78
+      ],
+      [
+        "decision_cascade",
+        0.0
+      ]
+    ]
+  },
+  "research_queue_dashboard": {
+    "tiles": [
+      [
+        "QUEUE",
+        "RESOLVED"
+      ]
+    ]
+  },
+  "scientific_progress_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        0.85
+      ],
+      [
+        "decision_cascade",
+        0.5
+      ]
+    ]
+  }
+}

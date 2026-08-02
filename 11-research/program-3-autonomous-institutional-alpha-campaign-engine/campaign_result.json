@@ -1,0 +1,53 @@
+{
+  "audit_ids": [
+    "IKROS-CAMPAIGNAUDIT-20260802-0511",
+    "IKROS-CAMPAIGNAUDIT-20260802-0512",
+    "IKROS-CAMPAIGNAUDIT-20260802-0513",
+    "IKROS-CAMPAIGNAUDIT-20260802-0514",
+    "IKROS-CAMPAIGNAUDIT-20260802-0515",
+    "IKROS-CAMPAIGNAUDIT-20260802-0516",
+    "IKROS-CAMPAIGNAUDIT-20260802-0517",
+    "IKROS-CAMPAIGNAUDIT-20260802-0518",
+    "IKROS-CAMPAIGNAUDIT-20260802-0519",
+    "IKROS-CAMPAIGNAUDIT-20260802-0520",
+    "IKROS-CAMPAIGNAUDIT-20260802-0521",
+    "IKROS-CAMPAIGNAUDIT-20260802-0522",
+    "IKROS-CAMPAIGNAUDIT-20260802-0523",
+    "IKROS-CAMPAIGNAUDIT-20260802-0524"
+  ],
+  "blocked_task_ids": [],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0046",
+  "campaign_type": "HYPOTHESIS_VALIDATION",
+  "completed_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0185",
+    "IKROS-RESEARCHTASK-20260802-0189",
+    "IKROS-RESEARCHTASK-20260802-0193",
+    "IKROS-RESEARCHTASK-20260802-0195"
+  ],
+  "failed_task_ids": [],
+  "finished_at": "2026-08-02T22:34:31.907953+00:00",
+  "lifecycle_state": "COMPLETED",
+  "memory_record_ids": [
+    "IKMEM-T1-20260802-0084",
+    "IKMEM-T1-20260802-0085",
+    "IKMEM-T1-20260802-0086",
+    "IKMEM-T1-20260802-0087",
+    "IKMEM-T4-20260802-0053"
+  ],
+  "output_refs": [
+    "IKROS-EXP-20260803-0054",
+    "IKROS-RQ-20260803-0054"
+  ],
+  "progress": {
+    "blocked": 0,
+    "completed": 4,
+    "failed": 0,
+    "percent_complete": 100.0,
+    "skipped": 0,
+    "total": 4
+  },
+  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0046",
+  "skipped_task_ids": [],
+  "started_at": "2026-08-02T22:34:14.655015+00:00",
+  "summary": "Program 3 \u2014 Autonomous Institutional Alpha Campaign Engine completed with 4 completed tasks."
+}

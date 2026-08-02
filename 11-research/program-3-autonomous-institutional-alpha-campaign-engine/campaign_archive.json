@@ -1,0 +1,619 @@
+[
+  {
+    "campaign_audit": {
+      "deterministic": true,
+      "lineage_campaign_count": 1,
+      "lineage_parent_campaigns": []
+    },
+    "campaign_dashboard": {
+      "expected_information_gain": 0.082,
+      "experiments_executed": 4,
+      "terminal_after_campaign": false
+    },
+    "campaign_id": "P3-CAMPAIGN-0001",
+    "campaign_metrics": {
+      "campaign_efficiency": 0.082,
+      "evidence_units_added": 4,
+      "research_throughput": 4
+    },
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "depends_on": [],
+      "engineering_cost": 6,
+      "expected_information_gain": 0.082,
+      "objective": "Temporal stability ablation and stress-window redesign",
+      "research_cost": 10
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity": true,
+        "concept_drift": false,
+        "cross_regime_robustness": false,
+        "economic_rationale": false,
+        "evidence_completeness": true,
+        "explainability": false,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": false,
+        "scientific_validity": false
+      },
+      "decision": "RETURN_FOR_REPLICATION",
+      "terminal_state": "READY_FOR_REVALIDATION"
+    },
+    "confidence_updates": {
+      "delta": 0.032,
+      "history": [
+        0.6,
+        0.618,
+        0.65
+      ]
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "description": "validation_experiment completed for safe_haven_migration with expected information gain 0.0820.",
+        "evidence_id": "P3-CAMPAIGN-0001-EVID-01",
+        "weight": 0.0656
+      },
+      {
+        "category": "SUPPORTING",
+        "description": "ablation_experiment completed for safe_haven_migration with expected information gain 0.0760.",
+        "evidence_id": "P3-CAMPAIGN-0001-EVID-02",
+        "weight": 0.0608
+      },
+      {
+        "category": "MIXED",
+        "description": "regime_specific_study completed for safe_haven_migration with expected information gain 0.0700.",
+        "evidence_id": "P3-CAMPAIGN-0001-EVID-03",
+        "weight": 0.056
+      },
+      {
+        "category": "MIXED",
+        "description": "stress_test completed for safe_haven_migration with expected information gain 0.0640.",
+        "evidence_id": "P3-CAMPAIGN-0001-EVID-04",
+        "weight": 0.0512
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0492,
+        "expected_failure_reduction": 0.0328,
+        "expected_information_gain": 0.082,
+        "expected_scientific_value": 0.0656,
+        "experiment_id": "P3-CAMPAIGN-0001-EXP-01",
+        "experiment_type": "validation_experiment",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0456,
+        "expected_failure_reduction": 0.0304,
+        "expected_information_gain": 0.076,
+        "expected_scientific_value": 0.0608,
+        "experiment_id": "P3-CAMPAIGN-0001-EXP-02",
+        "experiment_type": "ablation_experiment",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.042,
+        "expected_failure_reduction": 0.028,
+        "expected_information_gain": 0.07,
+        "expected_scientific_value": 0.056,
+        "experiment_id": "P3-CAMPAIGN-0001-EXP-03",
+        "experiment_type": "regime_specific_study",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0384,
+        "expected_failure_reduction": 0.0256,
+        "expected_information_gain": 0.064,
+        "expected_scientific_value": 0.0512,
+        "experiment_id": "P3-CAMPAIGN-0001-EXP-04",
+        "experiment_type": "stress_test",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      }
+    ],
+    "failure_analysis": {
+      "assumptions_failed": [
+        "Historical regime segmentation was incomplete.",
+        "Failure severity was overstated before targeted experimentation."
+      ],
+      "assumptions_survived": [
+        "Deterministic campaign execution preserves lineage.",
+        "Scientific governance remains stronger than return optimization."
+      ],
+      "remaining_uncertainty": [
+        "Further experiments required."
+      ]
+    },
+    "future_work": "Continue research queue execution.",
+    "hypotheses": [
+      "safe_haven_migration will improve scientific readiness after temporal_stability campaign."
+    ],
+    "knowledge_updates": [
+      "Temporal-stability evidence improves when regime windows are aligned with institutional stress episodes."
+    ],
+    "mechanism": "safe_haven_migration",
+    "phase": "TEMPORAL_STABILITY",
+    "replication_results": {
+      "independent_confirmations": 2,
+      "independent_failures": 0,
+      "replication_quality_after": 0.62,
+      "replication_quality_before": 0.57
+    },
+    "research_questions": [
+      "What is the highest-value uncertainty blocking safe_haven_migration?",
+      "Which experiment most efficiently improves confidence for safe_haven_migration?"
+    ],
+    "results": {
+      "confidence_after": 0.65,
+      "confidence_before": 0.618,
+      "evidence_completeness_after": 0.73,
+      "evidence_completeness_before": 0.66,
+      "state_after": "READY_FOR_REVALIDATION",
+      "state_before": "RESEARCH"
+    },
+    "selection_reason": "Highest expected information gain for a near-promotion mechanism with known temporal instability and strong observation completeness.",
+    "title": "Temporal stability ablation and stress-window redesign"
+  },
+  {
+    "campaign_audit": {
+      "deterministic": true,
+      "lineage_campaign_count": 2,
+      "lineage_parent_campaigns": [
+        "P3-CAMPAIGN-0001"
+      ]
+    },
+    "campaign_dashboard": {
+      "expected_information_gain": 0.071,
+      "experiments_executed": 4,
+      "terminal_after_campaign": false
+    },
+    "campaign_id": "P3-CAMPAIGN-0002",
+    "campaign_metrics": {
+      "campaign_efficiency": 0.0789,
+      "evidence_units_added": 4,
+      "research_throughput": 4
+    },
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "depends_on": [
+        "P3-CAMPAIGN-0001"
+      ],
+      "engineering_cost": 5,
+      "expected_information_gain": 0.071,
+      "objective": "Cross-regime revalidation and causal refinement",
+      "research_cost": 9
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity": true,
+        "concept_drift": false,
+        "cross_regime_robustness": true,
+        "economic_rationale": true,
+        "evidence_completeness": true,
+        "explainability": true,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": true,
+        "scientific_validity": false
+      },
+      "decision": "RETURN_FOR_RESEARCH",
+      "terminal_state": "PROMOTION_REVIEW"
+    },
+    "confidence_updates": {
+      "delta": 0.028,
+      "history": [
+        0.6,
+        0.618,
+        0.65,
+        0.678
+      ]
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "description": "validation_experiment completed for safe_haven_migration with expected information gain 0.0710.",
+        "evidence_id": "P3-CAMPAIGN-0002-EVID-01",
+        "weight": 0.0568
+      },
+      {
+        "category": "SUPPORTING",
+        "description": "causal_experiment completed for safe_haven_migration with expected information gain 0.0650.",
+        "evidence_id": "P3-CAMPAIGN-0002-EVID-02",
+        "weight": 0.052
+      },
+      {
+        "category": "MIXED",
+        "description": "counterfactual_experiment completed for safe_haven_migration with expected information gain 0.0590.",
+        "evidence_id": "P3-CAMPAIGN-0002-EVID-03",
+        "weight": 0.0472
+      },
+      {
+        "category": "MIXED",
+        "description": "replication_experiment completed for safe_haven_migration with expected information gain 0.0530.",
+        "evidence_id": "P3-CAMPAIGN-0002-EVID-04",
+        "weight": 0.0424
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0426,
+        "expected_failure_reduction": 0.0284,
+        "expected_information_gain": 0.071,
+        "expected_scientific_value": 0.0568,
+        "experiment_id": "P3-CAMPAIGN-0002-EXP-01",
+        "experiment_type": "validation_experiment",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.039,
+        "expected_failure_reduction": 0.026,
+        "expected_information_gain": 0.065,
+        "expected_scientific_value": 0.052,
+        "experiment_id": "P3-CAMPAIGN-0002-EXP-02",
+        "experiment_type": "causal_experiment",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0354,
+        "expected_failure_reduction": 0.0236,
+        "expected_information_gain": 0.059,
+        "expected_scientific_value": 0.0472,
+        "experiment_id": "P3-CAMPAIGN-0002-EXP-03",
+        "experiment_type": "counterfactual_experiment",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0318,
+        "expected_failure_reduction": 0.0212,
+        "expected_information_gain": 0.053,
+        "expected_scientific_value": 0.0424,
+        "experiment_id": "P3-CAMPAIGN-0002-EXP-04",
+        "experiment_type": "replication_experiment",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      }
+    ],
+    "failure_analysis": {
+      "assumptions_failed": [
+        "Failure severity was overstated before targeted experimentation."
+      ],
+      "assumptions_survived": [
+        "Deterministic campaign execution preserves lineage.",
+        "Scientific governance remains stronger than return optimization."
+      ],
+      "remaining_uncertainty": [
+        "Further experiments required."
+      ]
+    },
+    "future_work": "Continue research queue execution.",
+    "hypotheses": [
+      "safe_haven_migration will improve scientific readiness after revalidation campaign."
+    ],
+    "knowledge_updates": [
+      "Temporal-stability evidence improves when regime windows are aligned with institutional stress episodes."
+    ],
+    "mechanism": "safe_haven_migration",
+    "phase": "REVALIDATION",
+    "replication_results": {
+      "independent_confirmations": 2,
+      "independent_failures": 0,
+      "replication_quality_after": 0.7,
+      "replication_quality_before": 0.62
+    },
+    "research_questions": [
+      "What is the highest-value uncertainty blocking safe_haven_migration?",
+      "Which experiment most efficiently improves confidence for safe_haven_migration?"
+    ],
+    "results": {
+      "confidence_after": 0.678,
+      "confidence_before": 0.65,
+      "evidence_completeness_after": 0.78,
+      "evidence_completeness_before": 0.73,
+      "state_after": "PROMOTION_REVIEW",
+      "state_before": "READY_FOR_REVALIDATION"
+    },
+    "selection_reason": "After temporal stabilization, the remaining bottleneck is cross-regime robustness and economic understanding. Revalidation can close both.",
+    "title": "Cross-regime revalidation and causal refinement"
+  },
+  {
+    "campaign_audit": {
+      "deterministic": true,
+      "lineage_campaign_count": 3,
+      "lineage_parent_campaigns": [
+        "P3-CAMPAIGN-0002"
+      ]
+    },
+    "campaign_dashboard": {
+      "expected_information_gain": 0.066,
+      "experiments_executed": 3,
+      "terminal_after_campaign": true
+    },
+    "campaign_id": "P3-CAMPAIGN-0003",
+    "campaign_metrics": {
+      "campaign_efficiency": 0.0943,
+      "evidence_units_added": 3,
+      "research_throughput": 3
+    },
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "depends_on": [
+        "P3-CAMPAIGN-0002"
+      ],
+      "engineering_cost": 3,
+      "expected_information_gain": 0.066,
+      "objective": "Promotion replication and committee review",
+      "research_cost": 7
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity": true,
+        "concept_drift": true,
+        "cross_regime_robustness": true,
+        "economic_rationale": true,
+        "evidence_completeness": true,
+        "explainability": true,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": true,
+        "scientific_validity": true
+      },
+      "decision": "PROMOTE_TO_APPROVED_ALPHA",
+      "terminal_state": "APPROVED_ALPHA"
+    },
+    "confidence_updates": {
+      "delta": 0.041,
+      "history": [
+        0.6,
+        0.618,
+        0.65,
+        0.678,
+        0.719
+      ]
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "description": "replication_experiment completed for safe_haven_migration with expected information gain 0.0660.",
+        "evidence_id": "P3-CAMPAIGN-0003-EVID-01",
+        "weight": 0.0528
+      },
+      {
+        "category": "SUPPORTING",
+        "description": "validation_experiment completed for safe_haven_migration with expected information gain 0.0600.",
+        "evidence_id": "P3-CAMPAIGN-0003-EVID-02",
+        "weight": 0.048
+      },
+      {
+        "category": "MIXED",
+        "description": "stress_test completed for safe_haven_migration with expected information gain 0.0540.",
+        "evidence_id": "P3-CAMPAIGN-0003-EVID-03",
+        "weight": 0.0432
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0396,
+        "expected_failure_reduction": 0.0264,
+        "expected_information_gain": 0.066,
+        "expected_scientific_value": 0.0528,
+        "experiment_id": "P3-CAMPAIGN-0003-EXP-01",
+        "experiment_type": "replication_experiment",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.036,
+        "expected_failure_reduction": 0.024,
+        "expected_information_gain": 0.06,
+        "expected_scientific_value": 0.048,
+        "experiment_id": "P3-CAMPAIGN-0003-EXP-02",
+        "experiment_type": "validation_experiment",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0324,
+        "expected_failure_reduction": 0.0216,
+        "expected_information_gain": 0.054,
+        "expected_scientific_value": 0.0432,
+        "experiment_id": "P3-CAMPAIGN-0003-EXP-03",
+        "experiment_type": "stress_test",
+        "mechanism": "safe_haven_migration",
+        "status": "COMPLETED"
+      }
+    ],
+    "failure_analysis": {
+      "assumptions_failed": [
+        "Historical regime segmentation was incomplete.",
+        "Failure severity was overstated before targeted experimentation."
+      ],
+      "assumptions_survived": [
+        "Deterministic campaign execution preserves lineage.",
+        "Scientific governance remains stronger than return optimization."
+      ],
+      "remaining_uncertainty": [
+        "Long-horizon live-market durability remains untested."
+      ]
+    },
+    "future_work": "Monitor approved mechanism under independent replication cadence.",
+    "hypotheses": [
+      "safe_haven_migration will improve scientific readiness after promotion campaign."
+    ],
+    "knowledge_updates": [
+      "Temporal-stability evidence improves when regime windows are aligned with institutional stress episodes."
+    ],
+    "mechanism": "safe_haven_migration",
+    "phase": "PROMOTION",
+    "replication_results": {
+      "independent_confirmations": 2,
+      "independent_failures": 0,
+      "replication_quality_after": 0.78,
+      "replication_quality_before": 0.7
+    },
+    "research_questions": [
+      "What is the highest-value uncertainty blocking safe_haven_migration?",
+      "Which experiment most efficiently improves confidence for safe_haven_migration?"
+    ],
+    "results": {
+      "confidence_after": 0.719,
+      "confidence_before": 0.678,
+      "evidence_completeness_after": 0.81,
+      "evidence_completeness_before": 0.78,
+      "state_after": "APPROVED_ALPHA",
+      "state_before": "PROMOTION_REVIEW"
+    },
+    "selection_reason": "Mechanism is promotion-eligible pending one final independent replication pass and governed committee review.",
+    "title": "Promotion replication and committee review"
+  },
+  {
+    "campaign_audit": {
+      "deterministic": true,
+      "lineage_campaign_count": 4,
+      "lineage_parent_campaigns": []
+    },
+    "campaign_dashboard": {
+      "expected_information_gain": 0.055,
+      "experiments_executed": 3,
+      "terminal_after_campaign": true
+    },
+    "campaign_id": "P3-CAMPAIGN-0004",
+    "campaign_metrics": {
+      "campaign_efficiency": 0.11,
+      "evidence_units_added": 3,
+      "research_throughput": 3
+    },
+    "campaign_plan": {
+      "dataset_cost": 12,
+      "depends_on": [],
+      "engineering_cost": 4,
+      "expected_information_gain": 0.055,
+      "objective": "Observation-gap investigation and data acquisition review",
+      "research_cost": 5
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity": false,
+        "concept_drift": false,
+        "cross_regime_robustness": false,
+        "economic_rationale": false,
+        "evidence_completeness": false,
+        "explainability": false,
+        "failure_severity": false,
+        "observation_completeness": false,
+        "replication_quality": false,
+        "scientific_validity": false
+      },
+      "decision": "RETURN_FOR_DATA_ACQUISITION",
+      "terminal_state": "BLOCKED_BY_DATA"
+    },
+    "confidence_updates": {
+      "delta": 0.0,
+      "history": [
+        0.59,
+        0.556,
+        0.544
+      ]
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "description": "observation_gap_experiment completed for decision_cascade with expected information gain 0.0550.",
+        "evidence_id": "P3-CAMPAIGN-0004-EVID-01",
+        "weight": 0.044
+      },
+      {
+        "category": "SUPPORTING",
+        "description": "dataset_experiment completed for decision_cascade with expected information gain 0.0490.",
+        "evidence_id": "P3-CAMPAIGN-0004-EVID-02",
+        "weight": 0.0392
+      },
+      {
+        "category": "MIXED",
+        "description": "counterfactual_experiment completed for decision_cascade with expected information gain 0.0430.",
+        "evidence_id": "P3-CAMPAIGN-0004-EVID-03",
+        "weight": 0.0344
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.033,
+        "expected_failure_reduction": 0.022,
+        "expected_information_gain": 0.055,
+        "expected_scientific_value": 0.044,
+        "experiment_id": "P3-CAMPAIGN-0004-EXP-01",
+        "experiment_type": "observation_gap_experiment",
+        "mechanism": "decision_cascade",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0294,
+        "expected_failure_reduction": 0.0196,
+        "expected_information_gain": 0.049,
+        "expected_scientific_value": 0.0392,
+        "experiment_id": "P3-CAMPAIGN-0004-EXP-02",
+        "experiment_type": "dataset_experiment",
+        "mechanism": "decision_cascade",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0258,
+        "expected_failure_reduction": 0.0172,
+        "expected_information_gain": 0.043,
+        "expected_scientific_value": 0.0344,
+        "experiment_id": "P3-CAMPAIGN-0004-EXP-03",
+        "experiment_type": "counterfactual_experiment",
+        "mechanism": "decision_cascade",
+        "status": "COMPLETED"
+      }
+    ],
+    "failure_analysis": {
+      "assumptions_failed": [
+        "Public observations were sufficient for institutional positioning inference."
+      ],
+      "assumptions_survived": [
+        "Deterministic campaign execution preserves lineage.",
+        "Scientific governance remains stronger than return optimization."
+      ],
+      "remaining_uncertainty": [
+        "Public sources do not resolve the required intraday dealer-positioning and institutional inventory-transition observability gaps."
+      ]
+    },
+    "future_work": "Public sources do not resolve the required intraday dealer-positioning and institutional inventory-transition observability gaps.",
+    "hypotheses": [
+      "decision_cascade will improve scientific readiness after data_review campaign."
+    ],
+    "knowledge_updates": [
+      "Observation completeness is a hard scientific gate; proxy-heavy mechanisms cannot be advanced by analysis alone."
+    ],
+    "mechanism": "decision_cascade",
+    "phase": "DATA_REVIEW",
+    "replication_results": {
+      "independent_confirmations": 0,
+      "independent_failures": 1,
+      "replication_quality_after": 0.0,
+      "replication_quality_before": 0.0
+    },
+    "research_questions": [
+      "What is the highest-value uncertainty blocking decision_cascade?",
+      "Which experiment most efficiently improves confidence for decision_cascade?"
+    ],
+    "results": {
+      "confidence_after": 0.544,
+      "confidence_before": 0.556,
+      "evidence_completeness_after": 0.58,
+      "evidence_completeness_before": 0.54,
+      "state_after": "BLOCKED_BY_DATA",
+      "state_before": "RESEARCH"
+    },
+    "selection_reason": "Mechanism cannot advance because the observation gate remains below threshold. Highest-value action is to formalize the data limitation.",
+    "title": "Observation-gap investigation and data acquisition review"
+  }
+]

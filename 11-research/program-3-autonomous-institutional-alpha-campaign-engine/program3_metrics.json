@@ -1,0 +1,33 @@
+{
+  "arb_recommendation": "Program 3 resolved the current alpha inventory. safe_haven_migration advanced through repeated governed campaigns and is now APPROVED_ALPHA. decision_cascade is BLOCKED_BY_DATA with a formal institutional data acquisition requirement. No current mechanism remains unresolved. Await ARB decision on onboarding the approved alpha into downstream portfolio-intelligence programs and on authorizing commercial-quality positioning datasets for the blocked mechanism.",
+  "blocked_by_data_count": 1,
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0046",
+  "campaigns_executed": 4,
+  "experiments_executed": 14,
+  "graph_edges_created": 1,
+  "graph_nodes_created": 0,
+  "program": "AUTONOMOUS_INSTITUTIONAL_ALPHA_CAMPAIGN_ENGINE_PROGRAM_3",
+  "promoted_count": 1,
+  "rejected_count": 0,
+  "report_paths": {
+    "campaign_archive": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\campaign_archive.json",
+    "campaign_result": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\campaign_result.json",
+    "campaign_summary_md": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\CAMPAIGN_SUMMARY.md",
+    "confidence_evolution": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\confidence_evolution.json",
+    "dashboards": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\dashboards.json",
+    "dataset_gaps_discovered": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\dataset_gaps_discovered.json",
+    "final_mechanism_states": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\final_mechanism_states.json",
+    "final_report": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\FINAL_REPORT.md",
+    "final_states_md": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\FINAL_MECHANISM_STATES.md",
+    "ikros_growth": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\ikros_growth.json",
+    "queue_history": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\queue_history.json",
+    "research_economics": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\research_economics.json",
+    "research_queue_md": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\RESEARCH_QUEUE.md",
+    "scientific_principles_learned": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\scientific_principles_learned.json",
+    "scientific_principles_md": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-3-autonomous-institutional-alpha-campaign-engine\\SCIENTIFIC_PRINCIPLES.md"
+  },
+  "terminal_states": {
+    "decision_cascade": "BLOCKED_BY_DATA",
+    "safe_haven_migration": "APPROVED_ALPHA"
+  }
+}

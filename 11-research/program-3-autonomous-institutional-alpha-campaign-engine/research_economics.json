@@ -1,0 +1,11 @@
+{
+  "campaign_efficiency": 0.0685,
+  "dataset_cost": 12,
+  "engineering_cost": 18,
+  "expected_alpha_gain": 0.1507,
+  "expected_confidence_gain": 0.073,
+  "expected_information_gain": 0.274,
+  "expected_roi": 0.0056,
+  "research_cost": 31,
+  "research_throughput": 14
+}
