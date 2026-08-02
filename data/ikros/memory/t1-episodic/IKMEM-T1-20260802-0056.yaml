@@ -1,0 +1,238 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:18:16.016755+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0044
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+- 11-research/phase-g/scientific-validation/SCIENTIFIC_VALIDATION_CAMPAIGN.md
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0005
+- IKROS-RESEARCHTASK-20260802-0045
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0056
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0005
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0044
+    finished_at: '2026-08-02T02:18:16.016755+00:00'
+    kind: HYPOTHESIS_REGISTRATION
+    max_attempts: 1
+    payload:
+      entity:
+        alternative_hypothesis: 'H1: The approved hypothesis set can be scientifically
+          partitioned into rejected, further-research, and promotable outcomes under
+          the governed validation stack.'
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-CONFIDENCE
+        confidence:
+          data: 0.82
+          economic: 0.65
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.71
+          overall: 0.7233167449788394
+          prior: 0.56
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        contradictions: []
+        entity_type: Hypothesis
+        experiments: []
+        ikros_id: IKROS-HYP-20260802-0005
+        lifecycle_state: APPROVED_FOR_TESTING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0005
+            external_refs:
+            - 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-RQ-20260802-0005
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0005-scientific-validation
+            creation_context: Campaign 0005 scientific validation
+            motivation: Represent the governed claim that the approved hypothesis
+              set can be scientifically partitioned into rejected, inconclusive, and
+              promotable states.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        motivating_theses: []
+        null_hypothesis: 'H0: The approved hypothesis set cannot be scientifically
+          partitioned in a reproducible and governed way.'
+        posterior_confidence: 0.0
+        power: 0.8
+        prior_confidence: 0.56
+        significance_level: 0.05
+        source_rq: IKROS-RQ-20260802-0005
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        statement: A governed scientific validation stack can discriminate the approved
+          institutional alpha hypotheses into rejected, inconclusive, and alpha-candidate
+          states without optimization.
+        validations: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: Hypothesis
+    planned_order: 3
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0045
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-HYP-20260802-0005
+      payload:
+        alternative_hypothesis: 'H1: The approved hypothesis set can be scientifically
+          partitioned into rejected, further-research, and promotable outcomes under
+          the governed validation stack.'
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-CONFIDENCE
+        confidence:
+          data: 0.82
+          economic: 0.65
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.71
+          overall: 0.7233167449788394
+          prior: 0.56
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        contradictions: []
+        entity_type: Hypothesis
+        experiments: []
+        ikros_id: IKROS-HYP-20260802-0005
+        lifecycle_state: APPROVED_FOR_TESTING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0005
+            external_refs:
+            - 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-RQ-20260802-0005
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0005-scientific-validation
+            creation_context: Campaign 0005 scientific validation
+            motivation: Represent the governed claim that the approved hypothesis
+              set can be scientifically partitioned into rejected, inconclusive, and
+              promotable states.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        motivating_theses: []
+        null_hypothesis: 'H0: The approved hypothesis set cannot be scientifically
+          partitioned in a reproducible and governed way.'
+        posterior_confidence: 0.0
+        power: 0.8
+        prior_confidence: 0.56
+        significance_level: 0.05
+        source_rq: IKROS-RQ-20260802-0005
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        statement: A governed scientific validation stack can discriminate the approved
+          institutional alpha hypotheses into rejected, inconclusive, and alpha-candidate
+          states without optimization.
+        validations: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T02:18:15.736618+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0045
+    title: Hypothesis Registration
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0005
+- IKROS-HYP-20260802-0005
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: HYPOTHESIS_REGISTRATION COMPLETED
+tags:
+- research-orchestrator
+- hypothesis_registration
+tier: T1_EPISODIC
+title: 'Campaign 0005 Scientific Alpha Validation :: Hypothesis Registration'
+updated_at: '2026-08-02T02:18:16.016755+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

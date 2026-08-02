@@ -1,0 +1,17 @@
+attributes:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0003
+  entity_type: ResearchTask
+  kind: DATASET_SELECTION
+  status: COMPLETED
+confidence: 1.0
+created_at: '2026-08-02T01:51:27.810716+00:00'
+ikros_id: IKROS-RESEARCHTASK-20260802-0028
+label: Dataset Selection
+node_id: IKROS-RESEARCHTASK-20260802-0028
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

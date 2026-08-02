@@ -1,0 +1,22 @@
+attributes:
+  best_regime: calm_carry
+  decision: REJECT
+  feature_name: geo_severity
+  max_score: 1.429165
+  reason: Useful for taxonomy context, but too sparse and unstable as a direct predictive
+    feature.
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\feature_discovery_knowledge.json
+  summary: Rejected from the approved regime-conditioned catalogue.
+confidence: 0.71
+created_at: '2026-08-02T01:51:25.063258+00:00'
+ikros_id: IKROS-KO-20260802-0326
+label: Standalone geopolitical severity review
+node_id: IKROS-KO-20260802-0326
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:51:25.063258+00:00'
+valid_to: null
+wp_refs: []

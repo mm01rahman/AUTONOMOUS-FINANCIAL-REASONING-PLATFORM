@@ -1,0 +1,32 @@
+attributes:
+  accepted_method_id: IKROS-KO-20260802-0209
+  rejected_method_ids:
+  - IKROS-KO-20260802-0202
+  - IKROS-KO-20260802-0203
+  - IKROS-KO-20260802-0205
+  - IKROS-KO-20260802-0207
+  - IKROS-KO-20260802-0208
+  source_kind: VALIDATION_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+  summary: Validation synthesis for the accepted six-state regime taxonomy.
+  utility_metrics:
+    accepted_hit_rate_spread: 0.1422228565085708
+    accepted_return_spread: 0.004942385609214154
+    accepted_stability: 0.7800863033402589
+    trend_volatility_return_spread: 0.0024014028145167335
+    volatility_baseline_return_spread: 0.0012110299879640569
+  validation_type: regime_taxonomy_utility_test
+  verdict: PASS
+confidence: 0.82
+created_at: '2026-08-02T01:43:04.728735+00:00'
+ikros_id: IKROS-VAL-20260802-0002
+label: Campaign 0002 regime utility validation
+node_id: IKROS-VAL-20260802-0002
+node_type: VALIDATION
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:43:04.728735+00:00'
+valid_to: null
+wp_refs: []

@@ -1,0 +1,50 @@
+[
+  {
+    "expected_information_gain": 4.8,
+    "experiment_id": "IKROS-EXP-20260802-0605",
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "objective": "Reconstruct and catalogue every governed macro-to-bull handoff episode to determine whether the edge survives broader historical coverage.",
+    "priority": "P1",
+    "title": "Sparse handoff episode expansion audit"
+  },
+  {
+    "expected_information_gain": 4.6,
+    "experiment_id": "IKROS-EXP-20260802-0606",
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "objective": "Document event ordering, regime label changes, and subsequent trend adoption for each handoff episode without changing the hypothesis definition.",
+    "priority": "P1",
+    "title": "Transition sequence replay book"
+  },
+  {
+    "expected_information_gain": 4.5,
+    "experiment_id": "IKROS-EXP-20260802-0603",
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "objective": "Evaluate bullish and bearish policy-shock branches separately to determine whether one side is carrying the aggregate result.",
+    "priority": "P1",
+    "title": "Macro-transition branch asymmetry audit"
+  },
+  {
+    "expected_information_gain": 4.4,
+    "experiment_id": "IKROS-EXP-20260802-0604",
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "objective": "Compare narrow-range and high-range macro-transition events to isolate noisy post-shock follow-through from genuine repricing continuation.",
+    "priority": "P1",
+    "title": "Wide-range transition contamination study"
+  },
+  {
+    "expected_information_gain": 4.3,
+    "experiment_id": "IKROS-EXP-20260802-0601",
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "objective": "Replay only the persistent bull_trend windows and compare them with transition-overlap windows to quantify contamination from regime exits.",
+    "priority": "P1",
+    "title": "Bull-state persistence replay audit"
+  },
+  {
+    "expected_information_gain": 4.1,
+    "experiment_id": "IKROS-EXP-20260802-0602",
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "objective": "Measure how low-versus-high DXY pressure changes continuation reliability without altering the hypothesis rule.",
+    "priority": "P1",
+    "title": "USD spillover decomposition study"
+  }
+]

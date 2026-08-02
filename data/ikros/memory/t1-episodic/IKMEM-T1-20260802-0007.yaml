@@ -1,0 +1,87 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:27:42.575488+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0006
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/phase_e_final_report.md
+- 11-research/phase-e/phase_e_summary.json
+- EXEC-041
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0001
+- IKROS-RESEARCHTASK-20260802-0007
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0007
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0001
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0006
+    finished_at: '2026-08-02T01:27:42.575488+00:00'
+    kind: FEATURE_SELECTION
+    max_attempts: 1
+    payload:
+      candidate_feature_ids:
+      - IKROS-FEAT-20260802-0001
+      - IKROS-FEAT-20260802-0002
+      - IKROS-FEAT-20260802-0003
+      top_k: 3
+    planned_order: 7
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0007
+      memory_record_id: null
+      metrics:
+        ranked_candidates:
+        - confidence: 0.63
+          identifier: IKROS-FEAT-20260802-0002
+        - confidence: 0.62
+          identifier: IKROS-FEAT-20260802-0003
+        - confidence: 0.61
+          identifier: IKROS-FEAT-20260802-0001
+      output_refs: []
+      payload:
+        candidate_key: candidate_feature_ids
+        selected_ids:
+        - IKROS-FEAT-20260802-0002
+        - IKROS-FEAT-20260802-0003
+        - IKROS-FEAT-20260802-0001
+      selected_ids:
+      - IKROS-FEAT-20260802-0002
+      - IKROS-FEAT-20260802-0003
+      - IKROS-FEAT-20260802-0001
+    started_at: '2026-08-02T01:27:42.527945+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0007
+    title: Feature Selection
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0001
+- IKROS-FEAT-20260802-0002
+- IKROS-FEAT-20260802-0003
+- IKROS-FEAT-20260802-0001
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: FEATURE_SELECTION COMPLETED
+tags:
+- research-orchestrator
+- feature_selection
+tier: T1_EPISODIC
+title: 'Phase G Macro Alpha baseline audit :: Feature Selection'
+updated_at: '2026-08-02T01:27:42.575488+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

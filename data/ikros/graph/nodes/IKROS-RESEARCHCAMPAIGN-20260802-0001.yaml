@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: HYPOTHESIS_VALIDATION
+  entity_type: ResearchCampaign
+  objective: Import the Phase E macro-only evidence into IKROS, validate it against
+    Phase G governance, and preserve the rejection as institutional knowledge.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0001
+confidence: 0.0
+created_at: '2026-08-02T01:27:41.374861+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0001
+label: Phase G Macro Alpha baseline audit
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0001
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

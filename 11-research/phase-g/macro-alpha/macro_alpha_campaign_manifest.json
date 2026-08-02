@@ -1,0 +1,388 @@
+{
+  "campaign": {
+    "title": "Phase G Macro Alpha baseline audit",
+    "objective": "Import the Phase E macro-only evidence into IKROS, validate it against Phase G governance, and preserve the rejection as institutional knowledge.",
+    "campaign_type": "HYPOTHESIS_VALIDATION",
+    "failure_policy": "FAIL_FAST",
+    "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+    "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-INGESTION", "IKROS-CONFIDENCE"],
+    "work_package_refs": [],
+    "evidence_refs": ["EXEC-041", "11-research/phase-e/phase_e_summary.json", "11-research/phase-e/phase_e_final_report.md"]
+  },
+  "ids": {
+    "research_question_id": "IKROS-RQ-20260802-0001",
+    "hypothesis_id": "IKROS-HYP-20260802-0001",
+    "experiment_id": "IKROS-EXP-20260802-0001",
+    "validation_id": "IKROS-VAL-20260802-0001",
+    "alpha_candidate_id": "IKROS-ALPHACAND-20260802-0001",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0001",
+    "research_conclusion_id": "IKROS-CONCL-20260802-0001"
+  },
+  "entities": {
+    "research_question": {
+      "ikros_id": "IKROS-RQ-20260802-0001",
+      "entity_type": "ResearchQuestion",
+      "version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "confidence": {
+        "prior": 0.42,
+        "statistical": 0.42,
+        "economic": 0.57,
+        "data": 0.66,
+        "model": 0.49,
+        "validation": 0.34,
+        "replication": 0.0,
+        "operational": 0.52,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "phase-g-macro-alpha",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Phase G Macro Alpha baseline audit",
+          "motivation": "Begin governed institutional XAU/USD alpha research with the highest-priority macro program."
+        },
+        "dependencies": {
+          "inputs": [],
+          "datasets": ["IKROS-DSV-20260802-0001"],
+          "features": ["IKROS-FEAT-20260802-0001", "IKROS-FEAT-20260802-0002", "IKROS-FEAT-20260802-0003"],
+          "models": [],
+          "external_refs": ["11-research/phase-e/phase_e_summary.json"]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": ["EXEC-041"]
+        }
+      },
+      "spec_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Do macro pressure shocks create durable next-day XAU/USD drift?",
+      "motivation": "Formalize the first institutional Macro Alpha campaign and prevent loss of negative evidence from the prior macro-only baseline.",
+      "scope": "MACRO",
+      "instrument": "XAU/USD",
+      "time_horizon": "1D",
+      "campaign_tag": "PHASE-G-MACRO-001",
+      "linked_hypotheses": [],
+      "linked_conclusions": []
+    },
+    "hypothesis": {
+      "ikros_id": "IKROS-HYP-20260802-0001",
+      "entity_type": "Hypothesis",
+      "version": "1.0.0",
+      "lifecycle_state": "APPROVED_FOR_TESTING",
+      "confidence": {
+        "prior": 0.38,
+        "statistical": 0.32,
+        "economic": 0.58,
+        "data": 0.66,
+        "model": 0.46,
+        "validation": 0.3,
+        "replication": 0.0,
+        "operational": 0.5,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "phase-g-macro-alpha",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Phase G Macro Alpha baseline audit",
+          "motivation": "Convert the macro-only thesis into a formally falsifiable institutional hypothesis."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-RQ-20260802-0001", "IKROS-THESIS-20260802-0001"],
+          "datasets": ["IKROS-DSV-20260802-0001"],
+          "features": ["IKROS-FEAT-20260802-0001", "IKROS-FEAT-20260802-0002", "IKROS-FEAT-20260802-0003"],
+          "models": [],
+          "external_refs": ["11-research/phase-e/phase_e_final_report.md"]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": ["EXEC-041"]
+        }
+      },
+      "spec_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-CONFIDENCE"],
+      "work_package_refs": [],
+      "version_history": [],
+      "statement": "A macro pressure signal combining USD weakness, rates compression, and dovish policy surprise produces durable next-day XAU/USD upside drift.",
+      "null_hypothesis": "H0: The macro pressure signal does not produce durable next-day XAU/USD edge.",
+      "alternative_hypothesis": "H1: The macro pressure signal produces durable next-day XAU/USD edge.",
+      "significance_level": 0.05,
+      "power": 0.8,
+      "prior_confidence": 0.38,
+      "posterior_confidence": 0.0,
+      "source_rq": "IKROS-RQ-20260802-0001",
+      "motivating_theses": ["IKROS-THESIS-20260802-0001"],
+      "experiments": [],
+      "validations": [],
+      "contradictions": []
+    },
+    "experiment": {
+      "ikros_id": "IKROS-EXP-20260802-0001",
+      "entity_type": "Experiment",
+      "version": "1.0.0",
+      "lifecycle_state": "RUNNING",
+      "confidence": {
+        "prior": 0.45,
+        "statistical": 0.34,
+        "economic": 0.58,
+        "data": 0.7,
+        "model": 0.63,
+        "validation": 0.31,
+        "replication": 0.0,
+        "operational": 0.61,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "phase-g-macro-alpha",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Phase G Macro Alpha baseline audit",
+          "motivation": "Replay the prior macro-only evidence under Phase G governance."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-HYP-20260802-0001"],
+          "datasets": ["IKROS-DSV-20260802-0001"],
+          "features": ["IKROS-FEAT-20260802-0001", "IKROS-FEAT-20260802-0002", "IKROS-FEAT-20260802-0003"],
+          "models": ["phase-e-macro-only"],
+          "external_refs": ["11-research/phase-e/promotion_assessment.json"]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": ["EXEC-041"]
+        }
+      },
+      "spec_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-CONFIDENCE"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Phase G Macro Alpha baseline audit experiment",
+      "hypotheses": ["IKROS-HYP-20260802-0001"],
+      "protocol": "Governed baseline audit over the frozen Phase E macro-only candidate with walk-forward, Monte Carlo, contradiction logging, and Phase G advancement criteria.",
+      "dataset_versions": ["IKROS-DSV-20260802-0001"],
+      "feature_versions": ["IKROS-FEAT-20260802-0001", "IKROS-FEAT-20260802-0002", "IKROS-FEAT-20260802-0003"],
+      "parameters": {
+        "strategy_name": "macro_only",
+        "seed": 42,
+        "validation_floor": [
+          "walk_forward",
+          "cpcv",
+          "monte_carlo",
+          "stress",
+          "sensitivity",
+          "dsr",
+          "psr",
+          "wrc",
+          "pbo"
+        ]
+      },
+      "random_seed": 42,
+      "in_sample_start": "",
+      "in_sample_end": "",
+      "out_of_sample_start": "",
+      "out_of_sample_end": "",
+      "reproducibility_hash": "",
+      "git_commit": "752f35c",
+      "completed_at": null,
+      "validations_produced": [],
+      "failures_produced": []
+    }
+  },
+  "task_payloads": {
+    "LITERATURE_INTAKE": {
+      "source_path": "11-research/phase-g/macro-alpha/MACRO_ALPHA_CAMPAIGN.md"
+    },
+    "KNOWLEDGE_REGISTRATION": {
+      "source_path": "11-research/phase-g/macro-alpha/macro_alpha_knowledge.json"
+    },
+    "DATASET_SELECTION": {
+      "candidate_dataset_ids": ["IKROS-DSV-20260802-0001"],
+      "top_k": 1
+    },
+    "FEATURE_SELECTION": {
+      "candidate_feature_ids": [
+        "IKROS-FEAT-20260802-0001",
+        "IKROS-FEAT-20260802-0002",
+        "IKROS-FEAT-20260802-0003"
+      ],
+      "top_k": 3
+    },
+    "VALIDATION_REQUEST": {
+      "source_path": "11-research/phase-g/macro-alpha/macro_alpha_validation_report.json"
+    },
+    "STATISTICAL_EVALUATION": {
+      "p_value": 0.97,
+      "effect_size": 0.08,
+      "consistency_score": 0.05,
+      "sharpe_degradation": 0.8,
+      "overfitting_index": 1.26,
+      "data_quality_grade": "A"
+    },
+    "CONFIDENCE_UPDATE": {
+      "target_id": "IKROS-HYP-20260802-0001",
+      "reason": "Phase G Macro Alpha baseline audit",
+      "evidence": [
+        {
+          "evidence_id": "PHASEG-MACRO-EVID-001",
+          "evidence_type": "SPECIFICATION",
+          "relation": "SUPPORTS",
+          "references": {
+            "specification_ids": ["SPEC-010", "SPEC-012", "SPEC-060"],
+            "dataset_ids": ["IKROS-DSV-20260802-0001"],
+            "feature_ids": ["IKROS-FEAT-20260802-0001", "IKROS-FEAT-20260802-0002", "IKROS-FEAT-20260802-0003"],
+            "capability_ids": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-CONFIDENCE"]
+          },
+          "confidence_weight": 0.6,
+          "independent_source": "phase-g-governance",
+          "temporal_bucket": "2026Q3",
+          "observed_at": "2026-08-02T00:00:00Z",
+          "metrics": {
+            "economic_confidence": 0.58,
+            "experimental_confidence": 0.62,
+            "data_confidence": 0.7,
+            "validation_confidence": 0.65
+          },
+          "notes": "Governed research design is sound even though the baseline may fail."
+        },
+        {
+          "evidence_id": "PHASEG-MACRO-EVID-002",
+          "evidence_type": "EVIDENCE_RECORD",
+          "relation": "SUPPORTS",
+          "references": {
+            "evidence_record_ids": ["EXEC-041"],
+            "work_package_ids": ["WP-IMP-0039"],
+            "capability_ids": ["ALPHA-RESEARCH"],
+            "research_report_ids": ["11-research/phase-e/phase_e_final_report.md"]
+          },
+          "confidence_weight": 0.8,
+          "independent_source": "phase-e-governance",
+          "temporal_bucket": "2026Q3",
+          "observed_at": "2026-08-01T13:52:03Z",
+          "metrics": {
+            "validation_confidence": 0.9,
+            "experimental_confidence": 0.85,
+            "operational_confidence": 0.78,
+            "verdict": "PASS"
+          },
+          "notes": "Phase E execution quality gates passed and the evidence is valid."
+        },
+        {
+          "evidence_id": "PHASEG-MACRO-EVID-003",
+          "evidence_type": "BACKTEST",
+          "relation": "CONTRADICTS",
+          "references": {
+            "experiment_ids": ["IKROS-EXP-20260802-0001"],
+            "dataset_ids": ["IKROS-DSV-20260802-0001"],
+            "feature_ids": ["IKROS-FEAT-20260802-0001"],
+            "validation_ids": ["IKROS-VAL-20260802-0001"],
+            "research_report_ids": ["11-research/phase-e/phase_e_summary.json"],
+            "backtest_ids": ["phase-e-macro-only"],
+            "walk_forward_ids": ["phase-e-wf-macro-only"],
+            "monte_carlo_ids": ["phase-e-mc-macro-only"]
+          },
+          "confidence_weight": 1.0,
+          "contradiction_severity": "MAJOR",
+          "independent_source": "phase-e-results",
+          "temporal_bucket": "2026Q3",
+          "observed_at": "2026-08-01T13:52:03Z",
+          "metrics": {
+            "statistical_confidence": 0.05,
+            "economic_score": 0.25,
+            "data_quality_grade": "A",
+            "validation_confidence": 0.15,
+            "consistency_score": 0.05,
+            "sharpe_degradation": 0.8,
+            "oos_confirmed": false,
+            "walk_forward_sharpe": -1.9781,
+            "ruin_probability": 0.0125,
+            "positive_fold_ratio": 0.0
+          },
+          "notes": "Negative walk-forward Sharpe and failed promotion bars contradict a durable macro-only edge."
+        }
+      ]
+    }
+  },
+  "candidate_confidence_evidence": [
+    {
+      "evidence_id": "PHASEG-MACRO-EVID-002",
+      "evidence_type": "EVIDENCE_RECORD",
+      "relation": "SUPPORTS",
+      "references": {
+        "evidence_record_ids": ["EXEC-041"],
+        "work_package_ids": ["WP-IMP-0039"],
+        "capability_ids": ["ALPHA-RESEARCH"]
+      },
+      "confidence_weight": 0.8,
+      "independent_source": "phase-e-governance",
+      "temporal_bucket": "2026Q3",
+      "observed_at": "2026-08-01T13:52:03Z",
+      "metrics": {
+        "validation_confidence": 0.9,
+        "experimental_confidence": 0.85,
+        "operational_confidence": 0.78,
+        "verdict": "PASS"
+      },
+      "notes": "Execution quality and evidence capture were strong."
+    },
+    {
+      "evidence_id": "PHASEG-MACRO-EVID-003",
+      "evidence_type": "BACKTEST",
+      "relation": "CONTRADICTS",
+      "references": {
+        "experiment_ids": ["IKROS-EXP-20260802-0001"],
+        "dataset_ids": ["IKROS-DSV-20260802-0001"],
+        "feature_ids": ["IKROS-FEAT-20260802-0001"],
+        "validation_ids": ["IKROS-VAL-20260802-0001"],
+        "backtest_ids": ["phase-e-macro-only"],
+        "walk_forward_ids": ["phase-e-wf-macro-only"],
+        "monte_carlo_ids": ["phase-e-mc-macro-only"]
+      },
+      "confidence_weight": 1.0,
+      "contradiction_severity": "MAJOR",
+      "independent_source": "phase-e-results",
+      "temporal_bucket": "2026Q3",
+      "observed_at": "2026-08-01T13:52:03Z",
+      "metrics": {
+        "statistical_confidence": 0.05,
+        "economic_score": 0.25,
+        "data_quality_grade": "A",
+        "validation_confidence": 0.15,
+        "consistency_score": 0.05,
+        "sharpe_degradation": 0.8,
+        "oos_confirmed": false,
+        "walk_forward_sharpe": -1.9781,
+        "ruin_probability": 0.0125,
+        "positive_fold_ratio": 0.0
+      },
+      "notes": "Macro-only candidate failed advancement criteria."
+    }
+  ],
+  "post_run": {
+    "research_question_state": "ANSWERED",
+    "hypothesis_states": ["TESTING", "REFUTED"],
+    "experiment_states": ["COMPLETE", "REVIEWED"],
+    "alpha_rejection_reasons": [
+      "walk-forward out-of-sample edge not positive",
+      "positive fold ratio below governance threshold",
+      "full-sample expectancy not positive",
+      "required Phase G validation components remain incomplete"
+    ]
+  }
+}

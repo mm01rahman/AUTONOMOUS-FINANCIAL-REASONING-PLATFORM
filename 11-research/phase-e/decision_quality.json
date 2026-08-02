@@ -1,0 +1,185 @@
+{
+  "average_regret": 0.02091488634322785,
+  "direction_accuracy": 0.5131116517977832,
+  "runtime_summary": {
+    "actions": {
+      "buy": 21,
+      "sell": 3
+    },
+    "confidence_mean": 0.7910416666666609,
+    "records": 24
+  },
+  "top_regret_trades": [
+    {
+      "actual_return": -0.11859093915687668,
+      "alternative_disagreements": 0,
+      "alternative_votes": {
+        "hybrid": "flat",
+        "liquidity_sweep": "flat",
+        "macro_only": "flat",
+        "mean_reversion": "flat",
+        "trend_following": "flat"
+      },
+      "best_possible_return": 0.11859093915687668,
+      "confidence": 0.7476685277638574,
+      "direction": "short",
+      "entry_at": "2016-01-28T05:00:00+00:00",
+      "entry_reason": "technical:authorized",
+      "regret": 0.23718187831375337
+    },
+    {
+      "actual_return": -0.10990679728466812,
+      "alternative_disagreements": 0,
+      "alternative_votes": {
+        "hybrid": "short",
+        "liquidity_sweep": "flat",
+        "macro_only": "flat",
+        "mean_reversion": "flat",
+        "trend_following": "flat"
+      },
+      "best_possible_return": 0.10990679728466812,
+      "confidence": 0.7459239028168152,
+      "direction": "short",
+      "entry_at": "2016-01-29T05:00:00+00:00",
+      "entry_reason": "technical:authorized",
+      "regret": 0.21981359456933625
+    },
+    {
+      "actual_return": -0.10765550108238231,
+      "alternative_disagreements": 1,
+      "alternative_votes": {
+        "hybrid": "long",
+        "liquidity_sweep": "flat",
+        "macro_only": "long",
+        "mean_reversion": "short",
+        "trend_following": "long"
+      },
+      "best_possible_return": 0.10765550108238231,
+      "confidence": 0.7880352126096228,
+      "direction": "long",
+      "entry_at": "2008-03-18T04:00:00+00:00",
+      "entry_reason": "technical:authorized",
+      "regret": 0.21531100216476462
+    },
+    {
+      "actual_return": -0.09084932919988198,
+      "alternative_disagreements": 1,
+      "alternative_votes": {
+        "hybrid": "long",
+        "liquidity_sweep": "flat",
+        "macro_only": "flat",
+        "mean_reversion": "short",
+        "trend_following": "long"
+      },
+      "best_possible_return": 0.09084932919988198,
+      "confidence": 0.78766669870632,
+      "direction": "long",
+      "entry_at": "2009-12-03T05:00:00+00:00",
+      "entry_reason": "technical:authorized",
+      "regret": 0.18169865839976396
+    },
+    {
+      "actual_return": -0.08803745727070367,
+      "alternative_disagreements": 2,
+      "alternative_votes": {
+        "hybrid": "long",
+        "liquidity_sweep": "flat",
+        "macro_only": "long",
+        "mean_reversion": "flat",
+        "trend_following": "short"
+      },
+      "best_possible_return": 0.08803745727070367,
+      "confidence": 0.716919324391896,
+      "direction": "short",
+      "entry_at": "2003-05-07T04:00:00+00:00",
+      "entry_reason": "technical:authorized",
+      "regret": 0.17607491454140733
+    },
+    {
+      "actual_return": -0.08417381815321856,
+      "alternative_disagreements": 1,
+      "alternative_votes": {
+        "hybrid": "flat",
+        "liquidity_sweep": "flat",
+        "macro_only": "long",
+        "mean_reversion": "flat",
+        "trend_following": "flat"
+      },
+      "best_possible_return": 0.08417381815321856,
+      "confidence": 0.7749697324913334,
+      "direction": "short",
+      "entry_at": "2022-10-31T04:00:00+00:00",
+      "entry_reason": "technical:authorized",
+      "regret": 0.16834763630643712
+    },
+    {
+      "actual_return": -0.08356272755049576,
+      "alternative_disagreements": 2,
+      "alternative_votes": {
+        "hybrid": "short",
+        "liquidity_sweep": "long",
+        "macro_only": "flat",
+        "mean_reversion": "long",
+        "trend_following": "short"
+      },
+      "best_possible_return": 0.08356272755049576,
+      "confidence": 0.7709307960006114,
+      "direction": "short",
+      "entry_at": "2023-10-05T04:00:00+00:00",
+      "entry_reason": "technical:authorized",
+      "regret": 0.16712545510099153
+    },
+    {
+      "actual_return": -0.08321497808510347,
+      "alternative_disagreements": 2,
+      "alternative_votes": {
+        "hybrid": "short",
+        "liquidity_sweep": "long",
+        "macro_only": "flat",
+        "mean_reversion": "long",
+        "trend_following": "short"
+      },
+      "best_possible_return": 0.08321497808510347,
+      "confidence": 0.7605670530365592,
+      "direction": "short",
+      "entry_at": "2023-10-06T04:00:00+00:00",
+      "entry_reason": "technical:authorized",
+      "regret": 0.16642995617020695
+    },
+    {
+      "actual_return": -0.08289647196697425,
+      "alternative_disagreements": 0,
+      "alternative_votes": {
+        "hybrid": "flat",
+        "liquidity_sweep": "flat",
+        "macro_only": "flat",
+        "mean_reversion": "flat",
+        "trend_following": "flat"
+      },
+      "best_possible_return": 0.08289647196697425,
+      "confidence": 0.7726895262674945,
+      "direction": "short",
+      "entry_at": "2016-01-25T05:00:00+00:00",
+      "entry_reason": "technical:authorized",
+      "regret": 0.1657929439339485
+    },
+    {
+      "actual_return": -0.08203772874961679,
+      "alternative_disagreements": 2,
+      "alternative_votes": {
+        "hybrid": "short",
+        "liquidity_sweep": "long",
+        "macro_only": "short",
+        "mean_reversion": "long",
+        "trend_following": "short"
+      },
+      "best_possible_return": 0.08203772874961679,
+      "confidence": 0.7842352934705074,
+      "direction": "short",
+      "entry_at": "2022-11-03T04:00:00+00:00",
+      "entry_reason": "technical:authorized",
+      "regret": 0.16407545749923358
+    }
+  ],
+  "trade_count": 3699
+}

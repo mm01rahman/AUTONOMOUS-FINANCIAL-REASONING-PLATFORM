@@ -1,0 +1,25 @@
+attributes:
+  approved_catalogue: Institutional Regime-Conditioned Feature Catalogue v1
+  approved_taxonomy: Institutional Six-State Overlay Taxonomy v1
+  recommended_hypotheses:
+  - IKROS-HYP-20260802-0401
+  - IKROS-HYP-20260802-0404
+  - IKROS-HYP-20260802-0405
+  - IKROS-HYP-20260802-0402
+  - IKROS-HYP-20260802-0408
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  summary: Institutional methodology for generating hypotheses from the approved taxonomy
+    and approved feature catalogue without validating them.
+confidence: 0.84
+created_at: '2026-08-02T01:59:35.071678+00:00'
+ikros_id: IKROS-KO-20260802-0400
+label: Campaign 0004 hypothesis discovery methodology
+node_id: IKROS-KO-20260802-0400
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:59:35.071678+00:00'
+valid_to: null
+wp_refs: []

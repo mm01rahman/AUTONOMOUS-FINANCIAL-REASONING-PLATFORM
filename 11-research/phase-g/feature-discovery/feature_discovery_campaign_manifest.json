@@ -1,0 +1,395 @@
+{
+  "campaign": {
+    "title": "Campaign 0003 Feature Discovery",
+    "objective": "Discover which features preserve explanatory and predictive value inside the accepted six-state taxonomy, register the approved catalogue, and reject redundant or unstable candidates.",
+    "campaign_type": "FEATURE_EVALUATION",
+    "failure_policy": "FAIL_FAST",
+    "specification_refs": ["SPEC-012", "SPEC-060"],
+    "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-INGESTION", "IKROS-CONFIDENCE"],
+    "work_package_refs": [],
+    "evidence_refs": [
+      "11-research/phase-g/feature-discovery/feature_discovery_analysis.json",
+      "11-research/phase-g/feature-discovery/FEATURE_DISCOVERY_CAMPAIGN.md",
+      "11-research/phase-g/regime-discovery/regime_discovery_analysis.json",
+      "11-research/phase-e/feature_importance.json"
+    ]
+  },
+  "ids": {
+    "research_question_id": "IKROS-RQ-20260802-0003",
+    "hypothesis_id": "IKROS-HYP-20260802-0003",
+    "experiment_id": "IKROS-EXP-20260802-0003",
+    "validation_id": "IKROS-VAL-20260802-0003",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0003",
+    "research_conclusion_id": "IKROS-CONCL-20260802-0003"
+  },
+  "entities": {
+    "research_question": {
+      "ikros_id": "IKROS-RQ-20260802-0003",
+      "entity_type": "ResearchQuestion",
+      "version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "confidence": {
+        "prior": 0.54,
+        "statistical": 0.46,
+        "economic": 0.67,
+        "data": 0.78,
+        "model": 0.58,
+        "validation": 0.43,
+        "replication": 0.0,
+        "operational": 0.64,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0003-feature-discovery",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0003 feature discovery",
+          "motivation": "Determine which institutional features remain useful after conditioning on the accepted six-state taxonomy."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-RQ-20260802-0002"],
+          "datasets": ["IKROS-DSV-20260802-0002"],
+          "features": [
+            "IKROS-FEAT-20260802-0201",
+            "IKROS-FEAT-20260802-0202",
+            "IKROS-FEAT-20260802-0203",
+            "IKROS-FEAT-20260802-0204",
+            "IKROS-FEAT-20260802-0205",
+            "IKROS-FEAT-20260802-0206",
+            "IKROS-FEAT-20260802-0207"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": [
+            "11-research/phase-g/regime-discovery/regime_discovery_analysis.json",
+            "11-research/phase-e/feature_importance.json"
+          ]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Which features exhibit stable predictive power conditional on the Institutional Six-State Overlay Taxonomy v1?",
+      "motivation": "Campaign 0002 accepted the state model. The next institutional question is what information remains useful inside that state space.",
+      "scope": "FEATURE_DISCOVERY",
+      "instrument": "XAU/USD",
+      "time_horizon": "5D",
+      "campaign_tag": "PHASE-G-FEATURE-003",
+      "linked_hypotheses": [],
+      "linked_conclusions": []
+    },
+    "hypothesis": {
+      "ikros_id": "IKROS-HYP-20260802-0003",
+      "entity_type": "Hypothesis",
+      "version": "1.0.0",
+      "lifecycle_state": "APPROVED_FOR_TESTING",
+      "confidence": {
+        "prior": 0.51,
+        "statistical": 0.45,
+        "economic": 0.65,
+        "data": 0.77,
+        "model": 0.57,
+        "validation": 0.42,
+        "replication": 0.0,
+        "operational": 0.63,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0003-feature-discovery",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0003 feature discovery",
+          "motivation": "Translate regime-conditioned feature evaluation into a falsifiable institutional hypothesis."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-RQ-20260802-0003"],
+          "datasets": ["IKROS-DSV-20260802-0002"],
+          "features": [
+            "IKROS-FEAT-20260802-0201",
+            "IKROS-FEAT-20260802-0202",
+            "IKROS-FEAT-20260802-0203",
+            "IKROS-FEAT-20260802-0204",
+            "IKROS-FEAT-20260802-0205",
+            "IKROS-FEAT-20260802-0206",
+            "IKROS-FEAT-20260802-0207"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-CONFIDENCE"],
+      "work_package_refs": [],
+      "version_history": [],
+      "statement": "Conditioning AFRP features on the accepted six-state taxonomy will shrink the usable catalogue to a small set of cross-regime anchors plus a bounded regime-specific interaction layer.",
+      "null_hypothesis": "H0: Regime conditioning does not materially improve feature discrimination or redundancy control.",
+      "alternative_hypothesis": "H1: Regime conditioning produces a smaller, more stable, and more interpretable institutional feature catalogue.",
+      "significance_level": 0.05,
+      "power": 0.8,
+      "prior_confidence": 0.51,
+      "posterior_confidence": 0.0,
+      "source_rq": "IKROS-RQ-20260802-0003",
+      "motivating_theses": [],
+      "experiments": [],
+      "validations": [],
+      "contradictions": []
+    },
+    "experiment": {
+      "ikros_id": "IKROS-EXP-20260802-0003",
+      "entity_type": "Experiment",
+      "version": "1.0.0",
+      "lifecycle_state": "RUNNING",
+      "confidence": {
+        "prior": 0.55,
+        "statistical": 0.48,
+        "economic": 0.67,
+        "data": 0.8,
+        "model": 0.6,
+        "validation": 0.46,
+        "replication": 0.0,
+        "operational": 0.66,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0003-feature-discovery",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0003 feature discovery",
+          "motivation": "Run a governed feature-evaluation campaign on the frozen AFRP research stack."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-HYP-20260802-0003"],
+          "datasets": ["IKROS-DSV-20260802-0003"],
+          "features": [
+            "IKROS-FEAT-20260802-0301",
+            "IKROS-FEAT-20260802-0302",
+            "IKROS-FEAT-20260802-0303",
+            "IKROS-FEAT-20260802-0304",
+            "IKROS-FEAT-20260802-0305",
+            "IKROS-FEAT-20260802-0306",
+            "IKROS-FEAT-20260802-0307",
+            "IKROS-FEAT-20260802-0308",
+            "IKROS-FEAT-20260802-0309",
+            "IKROS-FEAT-20260802-0310",
+            "IKROS-FEAT-20260802-0311",
+            "IKROS-FEAT-20260802-0312"
+          ],
+          "models": ["institutional_six_state_overlay_taxonomy_v1"],
+          "external_refs": [
+            "11-research/phase-g/feature-discovery/feature_discovery_analysis.json",
+            "11-research/phase-g/regime-discovery/regime_discovery_analysis.json"
+          ]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-CONFIDENCE"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Campaign 0003 regime-conditioned feature evaluation",
+      "hypotheses": ["IKROS-HYP-20260802-0003"],
+      "protocol": "Governed feature evaluation over the frozen AFRP feature matrix after conditioning on the accepted six-state taxonomy.",
+      "dataset_versions": ["IKROS-DSV-20260802-0003"],
+      "feature_versions": [
+        "IKROS-FEAT-20260802-0301",
+        "IKROS-FEAT-20260802-0302",
+        "IKROS-FEAT-20260802-0303",
+        "IKROS-FEAT-20260802-0304",
+        "IKROS-FEAT-20260802-0305",
+        "IKROS-FEAT-20260802-0306",
+        "IKROS-FEAT-20260802-0307",
+        "IKROS-FEAT-20260802-0308",
+        "IKROS-FEAT-20260802-0309",
+        "IKROS-FEAT-20260802-0310",
+        "IKROS-FEAT-20260802-0311",
+        "IKROS-FEAT-20260802-0312"
+      ],
+      "parameters": {
+        "selected_methods": [
+          "mutual_information",
+          "conditional_mutual_information_proxy",
+          "correlation_stability",
+          "bootstrap_sign_consistency",
+          "redundancy_pruning",
+          "interaction_review"
+        ],
+        "validation_floor": [
+          "walk_forward",
+          "cpcv",
+          "monte_carlo",
+          "bootstrap",
+          "sensitivity",
+          "temporal_stability",
+          "regime_stability",
+          "out_of_sample_replay"
+        ]
+      },
+      "random_seed": 42,
+      "in_sample_start": "",
+      "in_sample_end": "",
+      "out_of_sample_start": "",
+      "out_of_sample_end": "",
+      "reproducibility_hash": "",
+      "git_commit": "752f35c",
+      "completed_at": null,
+      "validations_produced": [],
+      "failures_produced": []
+    }
+  },
+  "task_payloads": {
+    "LITERATURE_INTAKE": {
+      "source_path": "11-research/phase-g/feature-discovery/FEATURE_DISCOVERY_CAMPAIGN.md"
+    },
+    "KNOWLEDGE_REGISTRATION": {
+      "source_path": "11-research/phase-g/feature-discovery/feature_discovery_knowledge.json"
+    },
+    "DATASET_SELECTION": {
+      "candidate_dataset_ids": ["IKROS-DSV-20260802-0003"],
+      "top_k": 1
+    },
+    "FEATURE_SELECTION": {
+      "candidate_feature_ids": [
+        "IKROS-FEAT-20260802-0301",
+        "IKROS-FEAT-20260802-0302",
+        "IKROS-FEAT-20260802-0303",
+        "IKROS-FEAT-20260802-0304",
+        "IKROS-FEAT-20260802-0305",
+        "IKROS-FEAT-20260802-0306",
+        "IKROS-FEAT-20260802-0307",
+        "IKROS-FEAT-20260802-0308",
+        "IKROS-FEAT-20260802-0309",
+        "IKROS-FEAT-20260802-0310",
+        "IKROS-FEAT-20260802-0311",
+        "IKROS-FEAT-20260802-0312"
+      ],
+      "top_k": 12
+    },
+    "VALIDATION_REQUEST": {
+      "source_path": "11-research/phase-g/feature-discovery/feature_discovery_validation_report.json"
+    },
+    "STATISTICAL_EVALUATION": {
+      "p_value": 0.06,
+      "effect_size": 0.51,
+      "consistency_score": 0.84,
+      "sharpe_degradation": 0.18,
+      "overfitting_index": 1.04,
+      "data_quality_grade": "A"
+    },
+    "CONFIDENCE_UPDATE": {
+      "target_id": "IKROS-HYP-20260802-0003",
+      "reason": "Campaign 0003 regime-conditioned feature discovery",
+      "evidence": [
+        {
+          "evidence_id": "PHASEG-FEATURE-EVID-001",
+          "evidence_type": "SPECIFICATION",
+          "relation": "SUPPORTS",
+          "references": {
+            "specification_ids": ["SPEC-012", "SPEC-060"],
+            "dataset_ids": ["IKROS-DSV-20260802-0003"],
+            "feature_ids": [
+              "IKROS-FEAT-20260802-0301",
+              "IKROS-FEAT-20260802-0302",
+              "IKROS-FEAT-20260802-0303",
+              "IKROS-FEAT-20260802-0305",
+              "IKROS-FEAT-20260802-0307",
+              "IKROS-FEAT-20260802-0311"
+            ],
+            "capability_ids": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-CONFIDENCE"]
+          },
+          "confidence_weight": 0.67,
+          "independent_source": "campaign-0003-governance",
+          "temporal_bucket": "2026Q3",
+          "observed_at": "2026-08-02T00:00:00Z",
+          "metrics": {
+            "economic_confidence": 0.7,
+            "experimental_confidence": 0.72,
+            "data_confidence": 0.83,
+            "validation_confidence": 0.75
+          },
+          "notes": "Campaign 0003 uses only the frozen AFRP feature matrix and the accepted six-state taxonomy."
+        },
+        {
+          "evidence_id": "PHASEG-FEATURE-EVID-002",
+          "evidence_type": "VALIDATION",
+          "relation": "SUPPORTS",
+          "references": {
+            "validation_ids": ["IKROS-VAL-20260802-0003"],
+            "dataset_ids": ["IKROS-DSV-20260802-0003"],
+            "feature_ids": [
+              "IKROS-FEAT-20260802-0301",
+              "IKROS-FEAT-20260802-0302",
+              "IKROS-FEAT-20260802-0305",
+              "IKROS-FEAT-20260802-0307"
+            ],
+            "research_report_ids": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"]
+          },
+          "confidence_weight": 0.95,
+          "independent_source": "campaign-0003-validation",
+          "temporal_bucket": "2026Q3",
+          "observed_at": "2026-08-02T00:00:00Z",
+          "metrics": {
+            "statistical_confidence": 0.89,
+            "validation_confidence": 0.81,
+            "experimental_confidence": 0.77,
+            "data_quality_grade": "A",
+            "promotion_rate": 0.352941,
+            "mean_bootstrap_consistency": 0.871094
+          },
+          "notes": "The approved catalogue is materially smaller than the candidate set and preserves a stable cross-regime anchor layer."
+        },
+        {
+          "evidence_id": "PHASEG-FEATURE-EVID-003",
+          "evidence_type": "VALIDATION",
+          "relation": "CONTRADICTS",
+          "references": {
+            "validation_ids": ["IKROS-VAL-20260802-0003"],
+            "research_report_ids": ["11-research/phase-g/feature-discovery/feature_discovery_analysis.json"]
+          },
+          "confidence_weight": 0.44,
+          "contradiction_severity": "MODERATE",
+          "independent_source": "campaign-0003-contradictions",
+          "temporal_bucket": "2026Q3",
+          "observed_at": "2026-08-02T00:00:00Z",
+          "metrics": {
+            "sparse_event_coverage": 0.27887,
+            "macro_pressure_rejection": 1.0,
+            "interaction_complexity_penalty": 0.24
+          },
+          "notes": "Several intuitive macro and event features did not survive promotion as standalone predictors."
+        }
+      ]
+    }
+  },
+  "post_run": {
+    "research_question_state": "ANSWERED",
+    "hypothesis_states": ["TESTING", "SUPPORTED"],
+    "experiment_states": ["COMPLETE", "REVIEWED"],
+    "arb_recommendation": "Approve Institutional Regime-Conditioned Feature Catalogue v1 for future alpha hypothesis generation inside the six-state taxonomy. Retain rejected features only as context variables or contradiction records."
+  }
+}

@@ -1,0 +1,100 @@
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-ORCHESTRATOR
+- IKROS-INGESTION
+completed_at: null
+confidence:
+  data: 0.8
+  economic: 0.68
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.0
+  operational: 0.71
+  overall: 0.7282588139064662
+  prior: 0.55
+  replication: 0.0
+  statistical: 0.0
+  validation: 0.0
+dataset_versions:
+- IKROS-DSV-20260802-0005
+- IKROS-DSV-20260802-0006
+entity_type: Experiment
+failures_produced: []
+feature_versions:
+- dxy_return_20
+- forward_expectation
+- regime_return_60
+- xau_return_20
+git_commit: ''
+hypotheses:
+- IKROS-HYP-20260802-0401
+ikros_id: IKROS-EXP-20260802-0602
+in_sample_end: ''
+in_sample_start: ''
+lifecycle_state: REVIEWED
+lineage:
+  dependencies:
+    datasets:
+    - IKROS-DSV-20260802-0005
+    - IKROS-DSV-20260802-0006
+    external_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_analysis.json
+    features:
+    - dxy_return_20
+    - forward_expectation
+    - regime_return_60
+    - xau_return_20
+    inputs:
+    - IKROS-HYP-20260802-0401
+    models:
+    - institutional_six_state_overlay_taxonomy_v1
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: campaign-0007-diagnostic-experiment
+    creation_context: Campaign 0007 diagnostic experiment program
+    motivation: Campaign 0006 flagged adverse USD spillovers as a secondary failure
+      driver for H0401; this experiment measures whether low-versus-high DXY pressure
+      cleanly separates the outcomes.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+out_of_sample_end: ''
+out_of_sample_start: ''
+parameters:
+  recommendation: RETURN_FOR_VALIDATION
+  support_classification: SUPPORTS_CURRENT_HYPOTHESIS
+  validation_method: Median-split diagnostic replay on the frozen H0401 event sample.
+protocol: Split the governed H0401 events into low and high absolute DXY spillover
+  slices and compare continuation quality without changing the base event rule.
+random_seed: 42
+reproducibility_hash: abadcfc92f4d376bab8528491acea911d3493d0d16b06e01005a2637470a08bd
+spec_refs:
+- SPEC-012
+- SPEC-060
+title: USD spillover decomposition study
+validations_produced: []
+version: 1.0.0
+version_history:
+- change_summary: State → COMPLETE. Campaign 0007 diagnostic experiment execution
+    completed.
+  changed_at: '2026-08-02T02:37:54.887034+00:00'
+  confidence_at_time: 0.7282588139064662
+  version: 1.0.0
+- change_summary: State → REVIEWED. Campaign 0007 diagnostic experiment reviewed for
+    ARB recommendation.
+  changed_at: '2026-08-02T02:37:54.891035+00:00'
+  confidence_at_time: 0.7282588139064662
+  version: 1.0.0
+work_package_refs: []

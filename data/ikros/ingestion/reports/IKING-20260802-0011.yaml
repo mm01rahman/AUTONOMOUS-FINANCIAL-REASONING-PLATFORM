@@ -1,0 +1,643 @@
+graph_node_ids:
+- IKROS-DSV-20260802-0004
+- IKROS-KO-20260802-0400
+- IKROS-EVIDENCE-20260802-0004
+- IKROS-CONTRA-20260802-0004
+- IKROS-CONCL-20260802-0004
+- IKROS-RQ-20260802-0401
+- IKROS-RQ-20260802-0404
+- IKROS-RQ-20260802-0405
+- IKROS-RQ-20260802-0402
+- IKROS-RQ-20260802-0408
+- IKROS-RQ-20260802-0407
+- IKROS-RQ-20260802-0403
+- IKROS-RQ-20260802-0406
+- IKROS-HYP-20260802-0401
+- IKROS-HYP-20260802-0404
+- IKROS-HYP-20260802-0405
+- IKROS-HYP-20260802-0402
+- IKROS-HYP-20260802-0408
+- IKROS-HYP-20260802-0407
+- IKROS-HYP-20260802-0403
+- IKROS-HYP-20260802-0406
+- IKROS-MECH-20260802-0401
+- IKROS-MECH-20260802-0402
+- IKROS-MECH-20260802-0403
+- IKROS-MECH-20260802-0404
+- IKROS-MECH-20260802-0405
+- IKROS-MECH-20260802-0406
+ingested_at: '2026-08-02T01:59:35.741662+00:00'
+ingestion_id: IKING-20260802-0011
+memory_ids:
+- IKMEM-T2-20260802-0065
+- IKMEM-T2-20260802-0066
+- IKMEM-T1-20260802-0046
+- IKMEM-T2-20260802-0067
+- IKMEM-T4-20260802-0009
+- IKMEM-T2-20260802-0068
+- IKMEM-T2-20260802-0069
+- IKMEM-T2-20260802-0070
+- IKMEM-T2-20260802-0071
+- IKMEM-T2-20260802-0072
+- IKMEM-T2-20260802-0073
+- IKMEM-T2-20260802-0074
+- IKMEM-T2-20260802-0075
+- IKMEM-T2-20260802-0076
+- IKMEM-T2-20260802-0077
+- IKMEM-T2-20260802-0078
+- IKMEM-T2-20260802-0079
+- IKMEM-T2-20260802-0080
+- IKMEM-T2-20260802-0081
+- IKMEM-T2-20260802-0082
+- IKMEM-T2-20260802-0083
+- IKMEM-T2-20260802-0084
+- IKMEM-T2-20260802-0085
+- IKMEM-T2-20260802-0086
+- IKMEM-T2-20260802-0087
+- IKMEM-T2-20260802-0088
+- IKMEM-T2-20260802-0089
+object_fingerprints:
+- '{"attributes": {"feature_catalogue_id": "IKROS-CONCL-20260802-0003", "hypothesis_count":
+  8, "taxonomy_id": "IKROS-CONCL-20260802-0002", "upstream_dataset_version": "IKROS-DSV-20260802-0003"},
+  "capability_refs": [], "confidence": 0.88, "created_at": "2026-08-02T01:59:35.071678+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-DSV-20260802-0004", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "DatasetVersion", "relationships": [], "source_format": "JSON",
+  "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Governed dataset and
+  feature/reference bundle used for hypothesis discovery only.", "title": "Campaign
+  0004 hypothesis discovery dataset reference", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"approved_catalogue": "Institutional Regime-Conditioned Feature
+  Catalogue v1", "approved_taxonomy": "Institutional Six-State Overlay Taxonomy v1",
+  "recommended_hypotheses": ["IKROS-HYP-20260802-0401", "IKROS-HYP-20260802-0404",
+  "IKROS-HYP-20260802-0405", "IKROS-HYP-20260802-0402", "IKROS-HYP-20260802-0408"]},
+  "capability_refs": [], "confidence": 0.84, "created_at": "2026-08-02T01:59:35.071678+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/HYPOTHESIS_DISCOVERY_CAMPAIGN.md"],
+  "identifier": "IKROS-KO-20260802-0400", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Institutional methodology
+  for generating hypotheses from the approved taxonomy and approved feature catalogue
+  without validating them.", "title": "Campaign 0004 hypothesis discovery methodology",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"priority_matrix_size": 8, "recommended_hypotheses": ["IKROS-HYP-20260802-0401",
+  "IKROS-HYP-20260802-0404", "IKROS-HYP-20260802-0405", "IKROS-HYP-20260802-0402",
+  "IKROS-HYP-20260802-0408"], "validation_matrix_size": 8}, "capability_refs": [],
+  "confidence": 0.83, "created_at": "2026-08-02T01:59:35.071678+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-EVIDENCE-20260802-0004", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "Evidence", "relationships": [], "source_format": "JSON", "source_ids":
+  [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Evidence bundle carrying
+  the hypothesis catalogue, mechanism atlas, priority matrix, and validation matrix
+  into IKROS.", "title": "Campaign 0004 hypothesis evidence bundle", "version": "1.0.0",
+  "work_package_refs": []}'
+- '{"attributes": {"reasons": ["macro-only mechanisms were previously rejected", "transition
+  and crisis states remain sparser than calmer regimes", "range-compression hypotheses
+  may have low institutional capacity"]}, "capability_refs": [], "confidence": 0.74,
+  "created_at": "2026-08-02T01:59:35.071678+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-CONTRA-20260802-0004", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "ContradictoryEvidence", "relationships": [], "source_format":
+  "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Contradictions inherited
+  from macro-only rejection, sparse event coverage, and crisis-state uncertainty.",
+  "title": "Campaign 0004 contradiction log", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"catalogue": "Institutional Alpha Hypothesis Catalogue v1", "decision":
+  "ADVANCE_TO_CAMPAIGN_0005", "recommended_hypotheses": ["IKROS-HYP-20260802-0401",
+  "IKROS-HYP-20260802-0404", "IKROS-HYP-20260802-0405", "IKROS-HYP-20260802-0402",
+  "IKROS-HYP-20260802-0408"]}, "capability_refs": [], "confidence": 0.84, "created_at":
+  "2026-08-02T01:59:35.071678+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-CONCL-20260802-0004", "lifecycle_state": "PUBLISHED", "memory_tier":
+  null, "object_type": "ResearchConclusion", "relationships": [], "source_format":
+  "JSON", "source_ids": ["IKROS-CONTRA-20260802-0004", "IKROS-EVIDENCE-20260802-0004"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Campaign 0004 recommends
+  advancing only the highest-priority regime-conditioned hypotheses into Campaign
+  0005.", "title": "Publish the institutional alpha hypothesis catalogue", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"campaign_tag": "PHASE-G-HYPOTHESIS-004", "expected_holding_period":
+  "3-5D", "feature_set": ["regime_return_60", "xau_return_20", "forward_expectation"],
+  "instrument": "XAU/USD", "linked_conclusions": [], "linked_hypotheses": ["IKROS-HYP-20260802-0401"],
+  "motivation": "Reserve diversification, real-yield relief, and trend-following capital
+  can reinforce each other once the tape is already trending higher.", "regime_scope":
+  ["bull_trend"], "scope": "HYPOTHESIS_DISCOVERY", "time_horizon": "5D"}, "capability_refs":
+  [], "confidence": 0.53, "created_at": "2026-08-02T01:59:35.071678+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-RQ-20260802-0401", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "ResearchQuestion", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0401"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Expectation-relief bull
+  continuation", "title": "When bull_trend is already active, does a constructive
+  expectation reset allow XAU/USD continuation rather than exhaustion?", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"campaign_tag": "PHASE-G-HYPOTHESIS-004", "expected_holding_period":
+  "2-5D", "feature_set": ["breakout_60", "trend_gap_20_120", "breakdown_20"], "instrument":
+  "XAU/USD", "linked_conclusions": [], "linked_hypotheses": ["IKROS-HYP-20260802-0404"],
+  "motivation": "In crisis states, gold receives flow from investors seeking collateral
+  resilience and macro hedging, but only some crises produce durable continuation
+  rather than liquidation whipsaw.", "regime_scope": ["crisis_dislocation"], "scope":
+  "HYPOTHESIS_DISCOVERY", "time_horizon": "5D"}, "capability_refs": [], "confidence":
+  0.49, "created_at": "2026-08-02T01:59:35.071678+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-RQ-20260802-0404", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "ResearchQuestion", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0404"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Crisis safe-haven breakout
+  convexity", "title": "Inside crisis_dislocation, do breakout expansion and intermediate
+  trend persistence identify the subset of shocks that produce persistent safe-haven
+  inflows rather than one-day panic noise?", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"campaign_tag": "PHASE-G-HYPOTHESIS-004", "expected_holding_period":
+  "1-3D", "feature_set": ["xau_return_1", "trend_breakout_interaction", "sessionless_event_pressure"],
+  "instrument": "XAU/USD", "linked_conclusions": [], "linked_hypotheses": ["IKROS-HYP-20260802-0405"],
+  "motivation": "Macro announcements can reset inflation, rate, and USD expectations
+  quickly; when the first gold response is confirmed by event pressure and directional
+  structure, follow-through may persist for several sessions.", "regime_scope": ["macro_transition"],
+  "scope": "HYPOTHESIS_DISCOVERY", "time_horizon": "1-5D"}, "capability_refs": [],
+  "confidence": 0.48, "created_at": "2026-08-02T01:59:35.071678+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-RQ-20260802-0405", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "ResearchQuestion", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0405"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Policy-shock repricing
+  continuation", "title": "During macro_transition states, does the first-day gold
+  reaction persist when event pressure and breakout alignment indicate a genuine regime
+  handoff?", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"campaign_tag": "PHASE-G-HYPOTHESIS-004", "expected_holding_period":
+  "3-5D", "feature_set": ["xau_return_20", "regime_vol_20", "trend_gap_30_180"], "instrument":
+  "XAU/USD", "linked_conclusions": [], "linked_hypotheses": ["IKROS-HYP-20260802-0402"],
+  "motivation": "Forced deleveraging and inventory reduction can sustain downside
+  pressure before value-sensitive buyers re-enter the market.", "regime_scope": ["bear_unwind"],
+  "scope": "HYPOTHESIS_DISCOVERY", "time_horizon": "5D"}, "capability_refs": [], "confidence":
+  0.5, "created_at": "2026-08-02T01:59:35.071678+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-RQ-20260802-0402", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "ResearchQuestion", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0402"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Liquidation-pressure
+  bear continuation", "title": "Inside bear_unwind states, do persistent downside
+  path pressure and elevated volatility continue to dominate the next five trading
+  days?", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"campaign_tag": "PHASE-G-HYPOTHESIS-004", "expected_holding_period":
+  "5-10D", "feature_set": ["xau_return_1", "trend_breakout_interaction", "regime_return_60"],
+  "instrument": "XAU/USD", "linked_conclusions": [], "linked_hypotheses": ["IKROS-HYP-20260802-0408"],
+  "motivation": "Some policy and event shocks are not isolated bursts but regime-change
+  catalysts that seed a broader trend followed by slower capital.", "regime_scope":
+  ["macro_transition", "bull_trend"], "scope": "HYPOTHESIS_DISCOVERY", "time_horizon":
+  "5-15D"}, "capability_refs": [], "confidence": 0.45, "created_at": "2026-08-02T01:59:35.071678+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-RQ-20260802-0408", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "ResearchQuestion", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0408"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Transition-to-trend
+  handoff", "title": "Do macro_transition shocks that align with directional breakout
+  structure hand off into later bull_trend continuation rather than fading out?",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"campaign_tag": "PHASE-G-HYPOTHESIS-004", "expected_holding_period":
+  "3-7D", "feature_set": ["breakdown_20", "trend_gap_20_120", "regime_vol_20"], "instrument":
+  "XAU/USD", "linked_conclusions": [], "linked_hypotheses": ["IKROS-HYP-20260802-0407"],
+  "motivation": "Gold can initially be sold for liquidity during stress, then rebound
+  sharply once balance-sheet pressure eases and safe-haven demand returns.", "regime_scope":
+  ["bear_unwind", "crisis_dislocation"], "scope": "HYPOTHESIS_DISCOVERY", "time_horizon":
+  "5-10D"}, "capability_refs": [], "confidence": 0.44, "created_at": "2026-08-02T01:59:35.071678+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-RQ-20260802-0407", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "ResearchQuestion", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0407"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Liquidation-exhaustion
+  rebound", "title": "After extreme selloffs in bear_unwind or crisis_dislocation,
+  do elevated volatility and intermediate-trend stabilization identify rebound windows
+  once forced selling exhausts itself?", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"campaign_tag": "PHASE-G-HYPOTHESIS-004", "expected_holding_period":
+  "5D", "feature_set": ["regime_return_60", "macro_trend_interaction", "regime_vol_20"],
+  "instrument": "XAU/USD", "linked_conclusions": [], "linked_hypotheses": ["IKROS-HYP-20260802-0403"],
+  "motivation": "When volatility is compressed, gold can drift through reserve accumulation
+  and low-urgency macro repricing rather than visible breakout behavior.", "regime_scope":
+  ["calm_carry"], "scope": "HYPOTHESIS_DISCOVERY", "time_horizon": "5-10D"}, "capability_refs":
+  [], "confidence": 0.47, "created_at": "2026-08-02T01:59:35.071678+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-RQ-20260802-0403", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "ResearchQuestion", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0403"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Carry-state accumulation
+  drift", "title": "During calm_carry conditions, does quiet accumulation create a
+  slow positive drift in XAU/USD when macro/trend alignment remains constructive?",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"campaign_tag": "PHASE-G-HYPOTHESIS-004", "expected_holding_period":
+  "2-4D", "feature_set": ["macro_trend_interaction", "forward_expectation", "regime_vol_20"],
+  "instrument": "XAU/USD", "linked_conclusions": [], "linked_hypotheses": ["IKROS-HYP-20260802-0406"],
+  "motivation": "Range-bound markets often absorb macro narrative shocks without broad
+  participation; a low-volatility environment can cause initial impulse to mean revert
+  rather than expand.", "regime_scope": ["range_compression"], "scope": "HYPOTHESIS_DISCOVERY",
+  "time_horizon": "3-5D"}, "capability_refs": [], "confidence": 0.42, "created_at":
+  "2026-08-02T01:59:35.071678+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-RQ-20260802-0406", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "ResearchQuestion", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0406"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Compression-state expectation
+  fade", "title": "In range_compression, do expectation shocks and constructive macro/trend
+  context identify fade opportunities rather than trend continuation?", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"acceptance_criteria": ["directional consistency across bull_trend
+  folds", "stable effect sign after CPCV and Monte Carlo", "economic narrative remains
+  consistent with safe-haven and carry literature"], "advance_to_campaign_0005": true,
+  "alternative_hypothesis": "Reserve diversification, real-yield relief, and trend-following
+  capital can reinforce each other once the tape is already trending higher.", "contradictions":
+  [], "expected_direction": "UP", "expected_holding_period": "3-5D", "expected_horizon":
+  "5D", "experiments": [], "feature_ids": ["IKROS-FEAT-20260802-0301", "IKROS-FEAT-20260802-0302",
+  "IKROS-FEAT-20260802-0304"], "feature_set": ["regime_return_60", "xau_return_20",
+  "forward_expectation"], "knowledge_links": ["IKROS-FEAT-20260802-0301", "IKROS-FEAT-20260802-0302",
+  "IKROS-FEAT-20260802-0304", "IKROS-KO-20260802-0401"], "motivating_theses": [],
+  "null_hypothesis": "The described mechanism does not produce a persistent regime-conditioned
+  predictive relationship.", "posterior_confidence": 0.0, "power": 0.8, "prior_confidence":
+  0.53, "priority_tier": "P1", "regime_scope": ["bull_trend"], "rejection_criteria":
+  ["effect vanishes outside a narrow sample segment", "forward_expectation behaves
+  as a redundant proxy with no incremental hypothesis value", "evidence collapses
+  once trend exhaustion controls are included"], "required_evidence": ["bull_trend
+  fold attribution", "expectation-shock conditioning report", "counterexample review
+  against Campaign 0001 rejection"], "research_question": "When bull_trend is already
+  active, does a constructive expectation reset allow XAU/USD continuation rather
+  than exhaustion?", "significance_level": 0.05, "source_rq": "IKROS-RQ-20260802-0401",
+  "statement": "When bull_trend is already active, does a constructive expectation
+  reset allow XAU/USD continuation rather than exhaustion?", "validation_plan": ["walk_forward
+  validation inside bull_trend windows", "CPCV with regime-preserving folds", "Monte
+  Carlo path reshuffling conditioned on bull_trend membership", "sensitivity to expectation-shock
+  sign changes"], "validations": []}, "capability_refs": [], "confidence": 0.53, "created_at":
+  "2026-08-02T01:59:35.071678+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-HYP-20260802-0401", "lifecycle_state": "APPROVED_FOR_TESTING",
+  "memory_tier": null, "object_type": "Hypothesis", "relationships": [], "source_format":
+  "JSON", "source_ids": ["IKROS-RQ-20260802-0401"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Reserve diversification,
+  real-yield relief, and trend-following capital can reinforce each other once the
+  tape is already trending higher.", "title": "Expectation-relief bull continuation",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"acceptance_criteria": ["breakout-led continuation remains directional
+  across crisis episodes", "trend anchor improves separation of durable vs transient
+  shocks", "historical analogues align with safe-haven flow logic"], "advance_to_campaign_0005":
+  true, "alternative_hypothesis": "In crisis states, gold receives flow from investors
+  seeking collateral resilience and macro hedging, but only some crises produce durable
+  continuation rather than liquidation whipsaw.", "contradictions": [], "expected_direction":
+  "UP", "expected_holding_period": "2-5D", "expected_horizon": "5D", "experiments":
+  [], "feature_ids": ["IKROS-FEAT-20260802-0308", "IKROS-FEAT-20260802-0309", "IKROS-FEAT-20260802-0303"],
+  "feature_set": ["breakout_60", "trend_gap_20_120", "breakdown_20"], "knowledge_links":
+  ["IKROS-FEAT-20260802-0308", "IKROS-FEAT-20260802-0309", "IKROS-FEAT-20260802-0303",
+  "IKROS-KO-20260802-0404"], "motivating_theses": [], "null_hypothesis": "The described
+  mechanism does not produce a persistent regime-conditioned predictive relationship.",
+  "posterior_confidence": 0.0, "power": 0.8, "prior_confidence": 0.49, "priority_tier":
+  "P2", "regime_scope": ["crisis_dislocation"], "rejection_criteria": ["continuation
+  fails after removing a small number of crisis windows", "breakout signal proves
+  indistinguishable from generic volatility spikes", "liquidation whipsaw dominates
+  more often than continuation"], "required_evidence": ["crisis event replay book",
+  "breakout vs volatility discrimination memo", "counterexample log for liquidation
+  whipsaws"], "research_question": "Inside crisis_dislocation, do breakout expansion
+  and intermediate trend persistence identify the subset of shocks that produce persistent
+  safe-haven inflows rather than one-day panic noise?", "significance_level": 0.05,
+  "source_rq": "IKROS-RQ-20260802-0404", "statement": "Inside crisis_dislocation,
+  do breakout expansion and intermediate trend persistence identify the subset of
+  shocks that produce persistent safe-haven inflows rather than one-day panic noise?",
+  "validation_plan": ["event-window walk_forward validation around crisis episodes",
+  "bootstrap conditioned on crisis subtypes", "Monte Carlo sequencing of crisis event
+  order", "stress testing versus immediate post-event reversals"], "validations":
+  []}, "capability_refs": [], "confidence": 0.49, "created_at": "2026-08-02T01:59:35.071678+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-HYP-20260802-0404", "lifecycle_state": "APPROVED_FOR_TESTING",
+  "memory_tier": null, "object_type": "Hypothesis", "relationships": [], "source_format":
+  "JSON", "source_ids": ["IKROS-RQ-20260802-0404"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "In crisis states, gold
+  receives flow from investors seeking collateral resilience and macro hedging, but
+  only some crises produce durable continuation rather than liquidation whipsaw.",
+  "title": "Crisis safe-haven breakout convexity", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"acceptance_criteria": ["continuation sign remains stable across
+  macro-transition subsets", "interaction terms add value beyond xau_return_1 alone",
+  "event-driven narrative remains consistent with policy repricing theory"], "advance_to_campaign_0005":
+  true, "alternative_hypothesis": "Macro announcements can reset inflation, rate,
+  and USD expectations quickly; when the first gold response is confirmed by event
+  pressure and directional structure, follow-through may persist for several sessions.",
+  "contradictions": [], "expected_direction": "CONTINUATION_WITH_INITIAL_SHOCK", "expected_holding_period":
+  "1-3D", "expected_horizon": "1-5D", "experiments": [], "feature_ids": ["IKROS-FEAT-20260802-0310",
+  "IKROS-FEAT-20260802-0311", "IKROS-FEAT-20260802-0312"], "feature_set": ["xau_return_1",
+  "trend_breakout_interaction", "sessionless_event_pressure"], "knowledge_links":
+  ["IKROS-FEAT-20260802-0310", "IKROS-FEAT-20260802-0311", "IKROS-FEAT-20260802-0312",
+  "IKROS-KO-20260802-0405"], "motivating_theses": [], "null_hypothesis": "The described
+  mechanism does not produce a persistent regime-conditioned predictive relationship.",
+  "posterior_confidence": 0.0, "power": 0.8, "prior_confidence": 0.48, "priority_tier":
+  "P2", "regime_scope": ["macro_transition"], "rejection_criteria": ["edge collapses
+  once sparse-event penalties are applied", "continuation is just a proxy for generic
+  short-horizon momentum", "event pressure contributes no incremental explanatory
+  power"], "required_evidence": ["event-synchronous validation book", "interaction
+  ablation report", "sparse-coverage robustness review"], "research_question": "During
+  macro_transition states, does the first-day gold reaction persist when event pressure
+  and breakout alignment indicate a genuine regime handoff?", "significance_level":
+  0.05, "source_rq": "IKROS-RQ-20260802-0405", "statement": "During macro_transition
+  states, does the first-day gold reaction persist when event pressure and breakout
+  alignment indicate a genuine regime handoff?", "validation_plan": ["event-synchronous
+  walk_forward splits", "CPCV around clustered macro-event windows", "sensitivity
+  to shock sign and immediate reversal risk", "Monte Carlo resampling of event sequences"],
+  "validations": []}, "capability_refs": [], "confidence": 0.48, "created_at": "2026-08-02T01:59:35.071678+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-HYP-20260802-0405", "lifecycle_state": "APPROVED_FOR_TESTING",
+  "memory_tier": null, "object_type": "Hypothesis", "relationships": [], "source_format":
+  "JSON", "source_ids": ["IKROS-RQ-20260802-0405"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Macro announcements
+  can reset inflation, rate, and USD expectations quickly; when the first gold response
+  is confirmed by event pressure and directional structure, follow-through may persist
+  for several sessions.", "title": "Policy-shock repricing continuation", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"acceptance_criteria": ["consistent downside sign in unwind folds",
+  "effect survives volatility decile perturbations", "trend persistence remains explanatory
+  after redundancy controls"], "advance_to_campaign_0005": true, "alternative_hypothesis":
+  "Forced deleveraging and inventory reduction can sustain downside pressure before
+  value-sensitive buyers re-enter the market.", "contradictions": [], "expected_direction":
+  "DOWN", "expected_holding_period": "3-5D", "expected_horizon": "5D", "experiments":
+  [], "feature_ids": ["IKROS-FEAT-20260802-0302", "IKROS-FEAT-20260802-0305", "IKROS-FEAT-20260802-0306"],
+  "feature_set": ["xau_return_20", "regime_vol_20", "trend_gap_30_180"], "knowledge_links":
+  ["IKROS-FEAT-20260802-0302", "IKROS-FEAT-20260802-0305", "IKROS-FEAT-20260802-0306",
+  "IKROS-KO-20260802-0402"], "motivating_theses": [], "null_hypothesis": "The described
+  mechanism does not produce a persistent regime-conditioned predictive relationship.",
+  "posterior_confidence": 0.0, "power": 0.8, "prior_confidence": 0.5, "priority_tier":
+  "P2", "regime_scope": ["bear_unwind"], "rejection_criteria": ["continuation fails
+  once crisis overlap is excluded", "trend_gap_30_180 behaves as a weak bystander
+  rather than a mechanism variable", "volatility contribution is unstable across folds"],
+  "required_evidence": ["unwind-segment validation panel", "volatility-decile stress
+  report", "transition-overlap contradiction log"], "research_question": "Inside bear_unwind
+  states, do persistent downside path pressure and elevated volatility continue to
+  dominate the next five trading days?", "significance_level": 0.05, "source_rq":
+  "IKROS-RQ-20260802-0402", "statement": "Inside bear_unwind states, do persistent
+  downside path pressure and elevated volatility continue to dominate the next five
+  trading days?", "validation_plan": ["walk_forward validation restricted to bear_unwind
+  segments", "CPCV across non-overlapping unwind episodes", "stress testing around
+  major macro announcements and shock dates", "sensitivity to volatility deceleration"],
+  "validations": []}, "capability_refs": [], "confidence": 0.5, "created_at": "2026-08-02T01:59:35.072679+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-HYP-20260802-0402", "lifecycle_state": "APPROVED_FOR_TESTING",
+  "memory_tier": null, "object_type": "Hypothesis", "relationships": [], "source_format":
+  "JSON", "source_ids": ["IKROS-RQ-20260802-0402"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Forced deleveraging
+  and inventory reduction can sustain downside pressure before value-sensitive buyers
+  re-enter the market.", "title": "Liquidation-pressure bear continuation", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"acceptance_criteria": ["handoff cases separate cleanly from failed
+  transitions", "medium-horizon anchor adds incremental value over event-only continuation",
+  "cross-state mechanism remains economically coherent"], "advance_to_campaign_0005":
+  true, "alternative_hypothesis": "Some policy and event shocks are not isolated bursts
+  but regime-change catalysts that seed a broader trend followed by slower capital.",
+  "contradictions": [], "expected_direction": "UP_IF_TRANSITION_RESOLVES_CONSTRUCTIVELY",
+  "expected_holding_period": "5-10D", "expected_horizon": "5-15D", "experiments":
+  [], "feature_ids": ["IKROS-FEAT-20260802-0310", "IKROS-FEAT-20260802-0311", "IKROS-FEAT-20260802-0301"],
+  "feature_set": ["xau_return_1", "trend_breakout_interaction", "regime_return_60"],
+  "knowledge_links": ["IKROS-FEAT-20260802-0310", "IKROS-FEAT-20260802-0311", "IKROS-FEAT-20260802-0301",
+  "IKROS-KO-20260802-0408"], "motivating_theses": [], "null_hypothesis": "The described
+  mechanism does not produce a persistent regime-conditioned predictive relationship.",
+  "posterior_confidence": 0.0, "power": 0.8, "prior_confidence": 0.45, "priority_tier":
+  "P2", "regime_scope": ["macro_transition", "bull_trend"], "rejection_criteria":
+  ["handoff cases are too rare for institutional follow-up", "signal is redundant
+  with H0401 or H0405", "transition ordering uncertainty collapses reproducibility"],
+  "required_evidence": ["transition-handoff event log", "cross-state redundancy review",
+  "sequence-sensitivity report"], "research_question": "Do macro_transition shocks
+  that align with directional breakout structure hand off into later bull_trend continuation
+  rather than fading out?", "significance_level": 0.05, "source_rq": "IKROS-RQ-20260802-0408",
+  "statement": "Do macro_transition shocks that align with directional breakout structure
+  hand off into later bull_trend continuation rather than fading out?", "validation_plan":
+  ["state-transition walk_forward validation", "CPCV preserving transition-to-bull
+  handoff sequences", "sensitivity to the duration of the handoff window", "Monte
+  Carlo over transition ordering"], "validations": []}, "capability_refs": [], "confidence":
+  0.45, "created_at": "2026-08-02T01:59:35.072679+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-HYP-20260802-0408", "lifecycle_state": "APPROVED_FOR_TESTING",
+  "memory_tier": null, "object_type": "Hypothesis", "relationships": [], "source_format":
+  "JSON", "source_ids": ["IKROS-RQ-20260802-0408"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Some policy and event
+  shocks are not isolated bursts but regime-change catalysts that seed a broader trend
+  followed by slower capital.", "title": "Transition-to-trend handoff", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"acceptance_criteria": ["rebound sign persists across multiple
+  stress analogues", "exhaustion controls improve signal quality over raw breakdown
+  alone", "rebound timing remains reproducible enough for scientific follow-up"],
+  "advance_to_campaign_0005": false, "alternative_hypothesis": "Gold can initially
+  be sold for liquidity during stress, then rebound sharply once balance-sheet pressure
+  eases and safe-haven demand returns.", "contradictions": [], "expected_direction":
+  "UP_AFTER_EXTREME_STRESS", "expected_holding_period": "3-7D", "expected_horizon":
+  "5-10D", "experiments": [], "feature_ids": ["IKROS-FEAT-20260802-0303", "IKROS-FEAT-20260802-0309",
+  "IKROS-FEAT-20260802-0305"], "feature_set": ["breakdown_20", "trend_gap_20_120",
+  "regime_vol_20"], "knowledge_links": ["IKROS-FEAT-20260802-0303", "IKROS-FEAT-20260802-0309",
+  "IKROS-FEAT-20260802-0305", "IKROS-KO-20260802-0407"], "motivating_theses": [],
+  "null_hypothesis": "The described mechanism does not produce a persistent regime-conditioned
+  predictive relationship.", "posterior_confidence": 0.0, "power": 0.8, "prior_confidence":
+  0.44, "priority_tier": "P3", "regime_scope": ["bear_unwind", "crisis_dislocation"],
+  "rejection_criteria": ["rebound depends on a single crisis window", "timing uncertainty
+  overwhelms institutional usefulness", "bear continuation dominates even after exhaustion
+  controls"], "required_evidence": ["episode replay archive", "rebound-timing sensitivity
+  note", "continuation-vs-reversal contradiction analysis"], "research_question":
+  "After extreme selloffs in bear_unwind or crisis_dislocation, do elevated volatility
+  and intermediate-trend stabilization identify rebound windows once forced selling
+  exhausts itself?", "significance_level": 0.05, "source_rq": "IKROS-RQ-20260802-0407",
+  "statement": "After extreme selloffs in bear_unwind or crisis_dislocation, do elevated
+  volatility and intermediate-trend stabilization identify rebound windows once forced
+  selling exhausts itself?", "validation_plan": ["episode-based walk_forward validation
+  around extreme selloffs", "Monte Carlo sequencing of stress and rebound episodes",
+  "stress testing against extended liquidation paths", "sensitivity to rebound timing
+  lag"], "validations": []}, "capability_refs": [], "confidence": 0.44, "created_at":
+  "2026-08-02T01:59:35.072679+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-HYP-20260802-0407", "lifecycle_state": "APPROVED_FOR_TESTING",
+  "memory_tier": null, "object_type": "Hypothesis", "relationships": [], "source_format":
+  "JSON", "source_ids": ["IKROS-RQ-20260802-0407"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Gold can initially be
+  sold for liquidity during stress, then rebound sharply once balance-sheet pressure
+  eases and safe-haven demand returns.", "title": "Liquidation-exhaustion rebound",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"acceptance_criteria": ["drift sign remains stable across calm_carry
+  folds", "interaction term contributes incremental explanatory value over regime_return_60
+  alone", "calm_carry episodes remain economically interpretable"], "advance_to_campaign_0005":
+  false, "alternative_hypothesis": "When volatility is compressed, gold can drift
+  through reserve accumulation and low-urgency macro repricing rather than visible
+  breakout behavior.", "contradictions": [], "expected_direction": "UP", "expected_holding_period":
+  "5D", "expected_horizon": "5-10D", "experiments": [], "feature_ids": ["IKROS-FEAT-20260802-0301",
+  "IKROS-FEAT-20260802-0307", "IKROS-FEAT-20260802-0305"], "feature_set": ["regime_return_60",
+  "macro_trend_interaction", "regime_vol_20"], "knowledge_links": ["IKROS-FEAT-20260802-0301",
+  "IKROS-FEAT-20260802-0307", "IKROS-FEAT-20260802-0305", "IKROS-KO-20260802-0403"],
+  "motivating_theses": [], "null_hypothesis": "The described mechanism does not produce
+  a persistent regime-conditioned predictive relationship.", "posterior_confidence":
+  0.0, "power": 0.8, "prior_confidence": 0.47, "priority_tier": "P3", "regime_scope":
+  ["calm_carry"], "rejection_criteria": ["signal disappears after transition controls",
+  "volatility compression merely suppresses all directional information", "macro_trend_interaction
+  proves too weak outside a single historical window"], "required_evidence": ["calm_carry
+  bootstrap report", "interaction ablation note", "transition-sensitivity contradiction
+  review"], "research_question": "During calm_carry conditions, does quiet accumulation
+  create a slow positive drift in XAU/USD when macro/trend alignment remains constructive?",
+  "significance_level": 0.05, "source_rq": "IKROS-RQ-20260802-0403", "statement":
+  "During calm_carry conditions, does quiet accumulation create a slow positive drift
+  in XAU/USD when macro/trend alignment remains constructive?", "validation_plan":
+  ["walk_forward tests on calm_carry windows", "bootstrap around low-volatility subsamples",
+  "sensitivity to transition breakpoints into macro_transition", "capacity and turnover
+  diagnostics deferred to later campaigns"], "validations": []}, "capability_refs":
+  [], "confidence": 0.47, "created_at": "2026-08-02T01:59:35.072679+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-HYP-20260802-0403", "lifecycle_state": "APPROVED_FOR_TESTING",
+  "memory_tier": null, "object_type": "Hypothesis", "relationships": [], "source_format":
+  "JSON", "source_ids": ["IKROS-RQ-20260802-0403"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "When volatility is compressed,
+  gold can drift through reserve accumulation and low-urgency macro repricing rather
+  than visible breakout behavior.", "title": "Carry-state accumulation drift", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"acceptance_criteria": ["fade direction remains more stable than
+  continuation direction", "range assumption survives transition diagnostics", "narrative
+  shocks can be economically explained as inventory rebalancing rather than trend
+  starts"], "advance_to_campaign_0005": false, "alternative_hypothesis": "Range-bound
+  markets often absorb macro narrative shocks without broad participation; a low-volatility
+  environment can cause initial impulse to mean revert rather than expand.", "contradictions":
+  [], "expected_direction": "MEAN_REVERT_WITHIN_RANGE", "expected_holding_period":
+  "2-4D", "expected_horizon": "3-5D", "experiments": [], "feature_ids": ["IKROS-FEAT-20260802-0307",
+  "IKROS-FEAT-20260802-0304", "IKROS-FEAT-20260802-0305"], "feature_set": ["macro_trend_interaction",
+  "forward_expectation", "regime_vol_20"], "knowledge_links": ["IKROS-FEAT-20260802-0307",
+  "IKROS-FEAT-20260802-0304", "IKROS-FEAT-20260802-0305", "IKROS-KO-20260802-0406"],
+  "motivating_theses": [], "null_hypothesis": "The described mechanism does not produce
+  a persistent regime-conditioned predictive relationship.", "posterior_confidence":
+  0.0, "power": 0.8, "prior_confidence": 0.42, "priority_tier": "P3", "regime_scope":
+  ["range_compression"], "rejection_criteria": ["breakout contamination dominates
+  the sample", "expected edge amplitude is too low for institutional usefulness",
+  "forward_expectation adds no incremental explanatory value over volatility alone"],
+  "required_evidence": ["compression-window replay set", "breakout contamination analysis",
+  "transition contradiction memo"], "research_question": "In range_compression, do
+  expectation shocks and constructive macro/trend context identify fade opportunities
+  rather than trend continuation?", "significance_level": 0.05, "source_rq": "IKROS-RQ-20260802-0406",
+  "statement": "In range_compression, do expectation shocks and constructive macro/trend
+  context identify fade opportunities rather than trend continuation?", "validation_plan":
+  ["walk_forward validation on compression windows only", "sensitivity to breakout
+  false-positive detection", "bootstrap on low-volatility subsamples", "transition
+  audit into macro_transition and bull_trend states"], "validations": []}, "capability_refs":
+  [], "confidence": 0.42, "created_at": "2026-08-02T01:59:35.072679+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-HYP-20260802-0406", "lifecycle_state": "APPROVED_FOR_TESTING",
+  "memory_tier": null, "object_type": "Hypothesis", "relationships": [], "source_format":
+  "JSON", "source_ids": ["IKROS-RQ-20260802-0406"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Range-bound markets
+  often absorb macro narrative shocks without broad participation; a low-volatility
+  environment can cause initial impulse to mean revert rather than expand.", "title":
+  "Compression-state expectation fade", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"participants": ["trend followers", "macro allocators", "reserve
+  managers"], "supporting_hypotheses": ["IKROS-HYP-20260802-0401", "IKROS-HYP-20260802-0408"]},
+  "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:59:35.072679+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-MECH-20260802-0401", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0401", "IKROS-HYP-20260802-0408"], "source_kind":
+  "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Persistent medium-horizon
+  path dependence is reinforced by expectation relief and slower capital participation.",
+  "title": "Trend-following continuation", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"participants": ["levered funds", "risk desks", "liquidity providers"],
+  "supporting_hypotheses": ["IKROS-HYP-20260802-0402", "IKROS-HYP-20260802-0407"]},
+  "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:59:35.072679+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-MECH-20260802-0402", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0402", "IKROS-HYP-20260802-0407"], "source_kind":
+  "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Forced deleveraging
+  can create downside continuation before exhaustion and rebound dynamics appear.",
+  "title": "Liquidation reflexivity", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"participants": ["hedgers", "safe-haven allocators", "global macro
+  desks"], "supporting_hypotheses": ["IKROS-HYP-20260802-0404", "IKROS-HYP-20260802-0407"]},
+  "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:59:35.072679+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-MECH-20260802-0403", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0404", "IKROS-HYP-20260802-0407"], "source_kind":
+  "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Shock states selectively
+  transform into durable safe-haven flow when breakout and trend structure align.",
+  "title": "Safe-haven convexity", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"participants": ["event traders", "CTAs", "cross-asset discretionary
+  desks"], "supporting_hypotheses": ["IKROS-HYP-20260802-0405", "IKROS-HYP-20260802-0408"]},
+  "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T01:59:35.072679+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-MECH-20260802-0404", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0405", "IKROS-HYP-20260802-0408"], "source_kind":
+  "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Macro-event repricing
+  transitions from short-horizon response into broader directional participation.",
+  "title": "Policy repricing handoff", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"participants": ["reserve managers", "slow-frequency macro capital"],
+  "supporting_hypotheses": ["IKROS-HYP-20260802-0403"]}, "capability_refs": [], "confidence":
+  0.8, "created_at": "2026-08-02T01:59:35.072679+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-MECH-20260802-0405", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0403"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Quiet reserve and macro
+  accumulation can generate drift before the crowd recognizes a new trend.", "title":
+  "Low-volatility accumulation", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"participants": ["range traders", "options desks", "inventory balancers"],
+  "supporting_hypotheses": ["IKROS-HYP-20260802-0406"]}, "capability_refs": [], "confidence":
+  0.8, "created_at": "2026-08-02T01:59:35.072679+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"],
+  "identifier": "IKROS-MECH-20260802-0406", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-HYP-20260802-0406"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Narrative shocks can
+  fade in compressed states when participation is too shallow to create expansion.",
+  "title": "Compression-state mean reversion", "version": "1.0.0", "work_package_refs":
+  []}'
+object_ids:
+- IKROS-DSV-20260802-0004
+- IKROS-KO-20260802-0400
+- IKROS-EVIDENCE-20260802-0004
+- IKROS-CONTRA-20260802-0004
+- IKROS-CONCL-20260802-0004
+- IKROS-RQ-20260802-0401
+- IKROS-RQ-20260802-0404
+- IKROS-RQ-20260802-0405
+- IKROS-RQ-20260802-0402
+- IKROS-RQ-20260802-0408
+- IKROS-RQ-20260802-0407
+- IKROS-RQ-20260802-0403
+- IKROS-RQ-20260802-0406
+- IKROS-HYP-20260802-0401
+- IKROS-HYP-20260802-0404
+- IKROS-HYP-20260802-0405
+- IKROS-HYP-20260802-0402
+- IKROS-HYP-20260802-0408
+- IKROS-HYP-20260802-0407
+- IKROS-HYP-20260802-0403
+- IKROS-HYP-20260802-0406
+- IKROS-MECH-20260802-0401
+- IKROS-MECH-20260802-0402
+- IKROS-MECH-20260802-0403
+- IKROS-MECH-20260802-0404
+- IKROS-MECH-20260802-0405
+- IKROS-MECH-20260802-0406
+source_format: JSON
+source_hash: 08070043f71cc3a0c18ab36ed7c77c3060f73de4d6724c3326410bc98641ac17
+source_kind: INTERNAL_RESEARCH_REPORT
+source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+source_version: 1.0.0
+status: INGESTED
+warnings: []

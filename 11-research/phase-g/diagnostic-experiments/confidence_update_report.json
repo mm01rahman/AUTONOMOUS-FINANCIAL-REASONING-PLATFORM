@@ -1,0 +1,26 @@
+[
+  {
+    "campaign_0006_confidence": 0.4633,
+    "campaign_0007_confidence": 0.5133,
+    "confidence_change": 0.05,
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "rationale": "Campaign 0007 isolated the dominant contamination channels with governed evidence and reduced uncertainty enough to justify another full validation pass without changing the hypothesis definition.",
+    "recommendation": "RETURN_FOR_VALIDATION"
+  },
+  {
+    "campaign_0006_confidence": 0.4134,
+    "campaign_0007_confidence": 0.4534,
+    "confidence_change": 0.04,
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "rationale": "Campaign 0007 isolated the dominant contamination channels with governed evidence and reduced uncertainty enough to justify another full validation pass without changing the hypothesis definition.",
+    "recommendation": "RETURN_FOR_VALIDATION"
+  },
+  {
+    "campaign_0006_confidence": 0.2582,
+    "campaign_0007_confidence": 0.2682,
+    "confidence_change": 0.01,
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "rationale": "Campaign 0007 expanded the governed handoff sample and showed the sign remains positive, but the remaining sequencing gap and limited structural dominance still block a return to formal validation.",
+    "recommendation": "REMAIN_IN_TESTING"
+  }
+]

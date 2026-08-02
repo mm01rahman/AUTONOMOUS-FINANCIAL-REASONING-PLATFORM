@@ -1,0 +1,43 @@
+archived_at: null
+capability_refs: []
+confidence: 0.81
+created_at: '2026-08-02T02:18:18.804215+00:00'
+dependency_ids: []
+entity_type: Validation
+evidence_refs:
+- 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+graph_node_ids:
+- IKROS-VAL-20260802-0005
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0058
+payload:
+  attributes:
+    further_research_count: 3
+    promoted_count: 0
+    rejected_count: 2
+  lifecycle_state: COMPLETE
+  source_format: JSON
+  source_kind: VALIDATION_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_validation_report.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-VAL-20260802-0005
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Institutional scientific validation summary for the approved Campaign 0005
+  hypothesis set.
+tags:
+- validation
+- validation_report
+- ingested
+tier: T1_EPISODIC
+title: Campaign 0005 umbrella validation
+updated_at: '2026-08-02T02:18:18.804215+00:00'
+valid_from: '2026-08-02T02:18:18.804215+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

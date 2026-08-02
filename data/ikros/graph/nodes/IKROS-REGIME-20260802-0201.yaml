@@ -1,0 +1,17 @@
+attributes:
+  regime_label: bull_trend
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+  summary: Persistent upside structure with supportive macro context.
+confidence: 0.84
+created_at: '2026-08-02T01:43:01.847413+00:00'
+ikros_id: IKROS-REGIME-20260802-0201
+label: Bull Trend Expansion
+node_id: IKROS-REGIME-20260802-0201
+node_type: REGIME
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:43:01.847413+00:00'
+valid_to: null
+wp_refs: []

@@ -1,0 +1,26 @@
+{
+  "snapshot": {
+    "timestamp": "2026-01-01T01:55:00+00:00",
+    "cash": 62678.1919706,
+    "equity": 100008.9119706,
+    "gross_exposure": 37330.72,
+    "net_exposure": 37330.72,
+    "leverage": 0.37327393,
+    "realized_pnl": -3.06231411,
+    "unrealized_pnl": 40.14268557,
+    "total_pnl": 8.9119706,
+    "drawdown": 0.0
+  },
+  "performance": {
+    "total_return": 0.00011798579278643473,
+    "sharpe": -15.688425962334614,
+    "sortino": -19.362685915224137,
+    "calmar": 0.9619836727349408,
+    "win_rate": 0.08333333333333333,
+    "profit_factor": 0.05912547157421052,
+    "max_drawdown": 0.0001226484358627403,
+    "exposure_mean": 18159.105
+  },
+  "risk_alerts": [],
+  "status": "healthy"
+}

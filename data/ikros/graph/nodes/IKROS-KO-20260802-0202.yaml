@@ -1,0 +1,18 @@
+attributes:
+  decision: REJECT
+  reason: Latent-state inference is harder to govern and did not justify additional
+    complexity.
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+  summary: Rejected as the institutional state model for Campaign 0002.
+confidence: 0.56
+created_at: '2026-08-02T01:43:01.847413+00:00'
+ikros_id: IKROS-KO-20260802-0202
+label: Hidden Markov Model method review
+node_id: IKROS-KO-20260802-0202
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-02T01:43:01.847413+00:00'
+valid_to: null
+wp_refs: []

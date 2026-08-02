@@ -1,0 +1,582 @@
+{
+  "assessment_ids": {
+    "hypothesis": "ICA-20260802-0004"
+  },
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0003",
+  "experiment": {
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-ORCHESTRATOR",
+      "IKROS-CONFIDENCE"
+    ],
+    "completed_at": null,
+    "confidence": {
+      "data": 0.8,
+      "economic": 0.67,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.6,
+      "operational": 0.66,
+      "overall": 0.6004495275495615,
+      "prior": 0.55,
+      "replication": 0.0,
+      "statistical": 0.48,
+      "validation": 0.46
+    },
+    "dataset_versions": [
+      "IKROS-DSV-20260802-0003"
+    ],
+    "entity_type": "Experiment",
+    "failures_produced": [],
+    "feature_versions": [
+      "IKROS-FEAT-20260802-0301",
+      "IKROS-FEAT-20260802-0302",
+      "IKROS-FEAT-20260802-0303",
+      "IKROS-FEAT-20260802-0304",
+      "IKROS-FEAT-20260802-0305",
+      "IKROS-FEAT-20260802-0306",
+      "IKROS-FEAT-20260802-0307",
+      "IKROS-FEAT-20260802-0308",
+      "IKROS-FEAT-20260802-0309",
+      "IKROS-FEAT-20260802-0310",
+      "IKROS-FEAT-20260802-0311",
+      "IKROS-FEAT-20260802-0312"
+    ],
+    "git_commit": "752f35c",
+    "hypotheses": [
+      "IKROS-HYP-20260802-0003"
+    ],
+    "ikros_id": "IKROS-EXP-20260802-0003",
+    "in_sample_end": "",
+    "in_sample_start": "",
+    "lifecycle_state": "REVIEWED",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0003"
+        ],
+        "external_refs": [
+          "11-research/phase-g/feature-discovery/feature_discovery_analysis.json",
+          "11-research/phase-g/regime-discovery/regime_discovery_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0307",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "inputs": [
+          "IKROS-HYP-20260802-0003"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0003-feature-discovery",
+        "creation_context": "Campaign 0003 feature discovery",
+        "motivation": "Run a governed feature-evaluation campaign on the frozen AFRP research stack."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "out_of_sample_end": "",
+    "out_of_sample_start": "",
+    "parameters": {
+      "selected_methods": [
+        "mutual_information",
+        "conditional_mutual_information_proxy",
+        "correlation_stability",
+        "bootstrap_sign_consistency",
+        "redundancy_pruning",
+        "interaction_review"
+      ],
+      "validation_floor": [
+        "walk_forward",
+        "cpcv",
+        "monte_carlo",
+        "bootstrap",
+        "sensitivity",
+        "temporal_stability",
+        "regime_stability",
+        "out_of_sample_replay"
+      ]
+    },
+    "protocol": "Governed feature evaluation over the frozen AFRP feature matrix after conditioning on the accepted six-state taxonomy.",
+    "random_seed": 42,
+    "reproducibility_hash": "b35ebad05f7136f1c1a1cc6b6e4be9578a8fef6eb500c78bfc4abe875e3cc53b",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "title": "Campaign 0003 regime-conditioned feature evaluation",
+    "validations_produced": [
+      "IKROS-VAL-20260802-0003"
+    ],
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:51:35.083021+00:00",
+        "confidence_at_time": 0.6004495275495615,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 COMPLETE.",
+        "changed_at": "2026-08-02T01:51:35.087023+00:00",
+        "confidence_at_time": 0.6004495275495615,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 REVIEWED.",
+        "changed_at": "2026-08-02T01:51:35.091021+00:00",
+        "confidence_at_time": 0.6004495275495615,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  },
+  "hypothesis": {
+    "alternative_hypothesis": "H1: Regime conditioning produces a smaller, more stable, and more interpretable institutional feature catalogue.",
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-CONFIDENCE"
+    ],
+    "confidence": {
+      "data": 0.7084503078276166,
+      "economic": 0.5599999999999999,
+      "last_updated": "2026-08-02T01:51:32.119978+00:00",
+      "model": 0.607750219876869,
+      "operational": 0.504,
+      "overall": 0.5348487827313038,
+      "prior": 0.51,
+      "replication": 0.2267749515409686,
+      "statistical": 0.7120000000000001,
+      "validation": 0.6381002638522428
+    },
+    "contradictions": [],
+    "entity_type": "Hypothesis",
+    "experiments": [
+      "IKROS-EXP-20260802-0003"
+    ],
+    "ikros_id": "IKROS-HYP-20260802-0003",
+    "lifecycle_state": "SUPPORTED",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0002"
+        ],
+        "external_refs": [
+          "11-research/phase-g/feature-discovery/feature_discovery_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0201",
+          "IKROS-FEAT-20260802-0202",
+          "IKROS-FEAT-20260802-0203",
+          "IKROS-FEAT-20260802-0204",
+          "IKROS-FEAT-20260802-0205",
+          "IKROS-FEAT-20260802-0206",
+          "IKROS-FEAT-20260802-0207"
+        ],
+        "inputs": [
+          "IKROS-RQ-20260802-0003"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [
+          "IKROS-EXP-20260802-0003"
+        ],
+        "validated_by": [
+          "IKROS-VAL-20260802-0003"
+        ]
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0003-feature-discovery",
+        "creation_context": "Campaign 0003 feature discovery",
+        "motivation": "Translate regime-conditioned feature evaluation into a falsifiable institutional hypothesis."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "motivating_theses": [],
+    "null_hypothesis": "H0: Regime conditioning does not materially improve feature discrimination or redundancy control.",
+    "posterior_confidence": 0.5348487827313038,
+    "power": 0.8,
+    "prior_confidence": 0.51,
+    "significance_level": 0.05,
+    "source_rq": "IKROS-RQ-20260802-0003",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "statement": "Conditioning AFRP features on the accepted six-state taxonomy will shrink the usable catalogue to a small set of cross-regime anchors plus a bounded regime-specific interaction layer.",
+    "validations": [
+      "IKROS-VAL-20260802-0003"
+    ],
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:51:32.151486+00:00",
+        "confidence_at_time": 0.569089031494146,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:51:35.057508+00:00",
+        "confidence_at_time": 0.5348487827313038,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:51:35.060507+00:00",
+        "confidence_at_time": 0.5348487827313038,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:51:35.063509+00:00",
+        "confidence_at_time": 0.5348487827313038,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:51:35.066507+00:00",
+        "confidence_at_time": 0.5348487827313038,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 TESTING. Campaign 0003 regime-conditioned evidence supports the approved catalogue.",
+        "changed_at": "2026-08-02T01:51:35.070509+00:00",
+        "confidence_at_time": 0.5348487827313038,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 SUPPORTED. Campaign 0003 regime-conditioned evidence supports the approved catalogue.",
+        "changed_at": "2026-08-02T01:51:35.075023+00:00",
+        "confidence_at_time": 0.5348487827313038,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:51:35.079022+00:00",
+        "confidence_at_time": 0.5348487827313038,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  },
+  "progress": {
+    "blocked": 0,
+    "completed": 11,
+    "failed": 0,
+    "percent_complete": 100.0,
+    "skipped": 0,
+    "total": 11
+  },
+  "report": {
+    "audit_ids": [
+      "IKROS-CAMPAIGNAUDIT-20260802-0075",
+      "IKROS-CAMPAIGNAUDIT-20260802-0076",
+      "IKROS-CAMPAIGNAUDIT-20260802-0077",
+      "IKROS-CAMPAIGNAUDIT-20260802-0078",
+      "IKROS-CAMPAIGNAUDIT-20260802-0079",
+      "IKROS-CAMPAIGNAUDIT-20260802-0080",
+      "IKROS-CAMPAIGNAUDIT-20260802-0081",
+      "IKROS-CAMPAIGNAUDIT-20260802-0082",
+      "IKROS-CAMPAIGNAUDIT-20260802-0083",
+      "IKROS-CAMPAIGNAUDIT-20260802-0084",
+      "IKROS-CAMPAIGNAUDIT-20260802-0085",
+      "IKROS-CAMPAIGNAUDIT-20260802-0086",
+      "IKROS-CAMPAIGNAUDIT-20260802-0087",
+      "IKROS-CAMPAIGNAUDIT-20260802-0088",
+      "IKROS-CAMPAIGNAUDIT-20260802-0089",
+      "IKROS-CAMPAIGNAUDIT-20260802-0090",
+      "IKROS-CAMPAIGNAUDIT-20260802-0091",
+      "IKROS-CAMPAIGNAUDIT-20260802-0092",
+      "IKROS-CAMPAIGNAUDIT-20260802-0093",
+      "IKROS-CAMPAIGNAUDIT-20260802-0094",
+      "IKROS-CAMPAIGNAUDIT-20260802-0095",
+      "IKROS-CAMPAIGNAUDIT-20260802-0096",
+      "IKROS-CAMPAIGNAUDIT-20260802-0097",
+      "IKROS-CAMPAIGNAUDIT-20260802-0098",
+      "IKROS-CAMPAIGNAUDIT-20260802-0099",
+      "IKROS-CAMPAIGNAUDIT-20260802-0100",
+      "IKROS-CAMPAIGNAUDIT-20260802-0101",
+      "IKROS-CAMPAIGNAUDIT-20260802-0102",
+      "IKROS-CAMPAIGNAUDIT-20260802-0103",
+      "IKROS-CAMPAIGNAUDIT-20260802-0104",
+      "IKROS-CAMPAIGNAUDIT-20260802-0105",
+      "IKROS-CAMPAIGNAUDIT-20260802-0106",
+      "IKROS-CAMPAIGNAUDIT-20260802-0107",
+      "IKROS-CAMPAIGNAUDIT-20260802-0108",
+      "IKROS-CAMPAIGNAUDIT-20260802-0109"
+    ],
+    "blocked_task_ids": [],
+    "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0003",
+    "campaign_type": "FEATURE_EVALUATION",
+    "completed_task_ids": [
+      "IKROS-RESEARCHTASK-20260802-0023",
+      "IKROS-RESEARCHTASK-20260802-0024",
+      "IKROS-RESEARCHTASK-20260802-0025",
+      "IKROS-RESEARCHTASK-20260802-0026",
+      "IKROS-RESEARCHTASK-20260802-0027",
+      "IKROS-RESEARCHTASK-20260802-0028",
+      "IKROS-RESEARCHTASK-20260802-0029",
+      "IKROS-RESEARCHTASK-20260802-0030",
+      "IKROS-RESEARCHTASK-20260802-0031",
+      "IKROS-RESEARCHTASK-20260802-0032",
+      "IKROS-RESEARCHTASK-20260802-0033"
+    ],
+    "failed_task_ids": [],
+    "finished_at": "2026-08-02T01:51:34.139187+00:00",
+    "lifecycle_state": "COMPLETED",
+    "memory_record_ids": [
+      "IKMEM-T1-20260802-0030",
+      "IKMEM-T1-20260802-0031",
+      "IKMEM-T1-20260802-0032",
+      "IKMEM-T1-20260802-0033",
+      "IKMEM-T1-20260802-0034",
+      "IKMEM-T1-20260802-0035",
+      "IKMEM-T1-20260802-0036",
+      "IKMEM-T1-20260802-0039",
+      "IKMEM-T1-20260802-0040",
+      "IKMEM-T1-20260802-0042",
+      "IKMEM-T1-20260802-0043",
+      "IKMEM-T4-20260802-0008"
+    ],
+    "output_refs": [
+      "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\FEATURE_DISCOVERY_CAMPAIGN.md",
+      "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_knowledge.json",
+      "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_discovery_validation_report.json",
+      "FEATURE_DISCOVERY_CAMPAIGN",
+      "ICA-20260802-0004",
+      "IKROS-CONCL-20260802-0003",
+      "IKROS-CONTRA-20260802-0003",
+      "IKROS-DS-20260802-0003",
+      "IKROS-DSV-20260802-0003",
+      "IKROS-EVIDENCE-20260802-0003",
+      "IKROS-EXP-20260802-0003",
+      "IKROS-FEAT-20260802-0301",
+      "IKROS-FEAT-20260802-0302",
+      "IKROS-FEAT-20260802-0303",
+      "IKROS-FEAT-20260802-0304",
+      "IKROS-FEAT-20260802-0305",
+      "IKROS-FEAT-20260802-0306",
+      "IKROS-FEAT-20260802-0307",
+      "IKROS-FEAT-20260802-0308",
+      "IKROS-FEAT-20260802-0309",
+      "IKROS-FEAT-20260802-0310",
+      "IKROS-FEAT-20260802-0311",
+      "IKROS-FEAT-20260802-0312",
+      "IKROS-FF-20260802-0301",
+      "IKROS-HYP-20260802-0003",
+      "IKROS-KO-20260802-0003",
+      "IKROS-KO-20260802-0301",
+      "IKROS-KO-20260802-0321",
+      "IKROS-KO-20260802-0322",
+      "IKROS-KO-20260802-0323",
+      "IKROS-KO-20260802-0324",
+      "IKROS-KO-20260802-0325",
+      "IKROS-KO-20260802-0326",
+      "IKROS-KO-20260802-0327",
+      "IKROS-RQ-20260802-0003",
+      "IKROS-VAL-20260802-0003",
+      "feature_discovery_knowledge",
+      "feature_discovery_validation_report"
+    ],
+    "progress": {
+      "blocked": 0,
+      "completed": 11,
+      "failed": 0,
+      "percent_complete": 100.0,
+      "skipped": 0,
+      "total": 11
+    },
+    "report_id": "IKROS-CAMPAIGNREPORT-20260802-0003",
+    "skipped_task_ids": [],
+    "started_at": "2026-08-02T01:51:22.892856+00:00",
+    "summary": "Campaign 0003 Feature Discovery completed with 11 completed tasks."
+  },
+  "report_paths": {
+    "confidence_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\CONFIDENCE_REPORT.md",
+    "feature_importance_atlas_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_importance_atlas.json",
+    "feature_importance_atlas_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\FEATURE_IMPORTANCE_ATLAS.md",
+    "feature_interaction_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_interaction_matrix.json",
+    "feature_interaction_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\FEATURE_INTERACTION_MATRIX.md",
+    "feature_stability_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\feature_stability_report.json",
+    "feature_stability_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\FEATURE_STABILITY_REPORT.md",
+    "final_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\FEATURE_DISCOVERY_FINAL_CAMPAIGN_REPORT.md",
+    "promoted_feature_registry_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\promoted_feature_registry.json",
+    "promoted_feature_registry_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\PROMOTED_FEATURE_REGISTRY.md",
+    "redundancy_analysis_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\redundancy_analysis.json",
+    "redundancy_analysis_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\REDUNDANCY_ANALYSIS.md",
+    "regime_feature_matrix_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\regime_feature_matrix.json",
+    "regime_feature_matrix_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\REGIME_FEATURE_MATRIX.md",
+    "rejected_feature_registry_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\rejected_feature_registry.json",
+    "rejected_feature_registry_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\REJECTED_FEATURE_REGISTRY.md"
+  },
+  "research_question": {
+    "campaign_tag": "PHASE-G-FEATURE-003",
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-ORCHESTRATOR"
+    ],
+    "confidence": {
+      "data": 0.78,
+      "economic": 0.67,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.58,
+      "operational": 0.64,
+      "overall": 0.5807652332945916,
+      "prior": 0.54,
+      "replication": 0.0,
+      "statistical": 0.46,
+      "validation": 0.43
+    },
+    "entity_type": "ResearchQuestion",
+    "ikros_id": "IKROS-RQ-20260802-0003",
+    "instrument": "XAU/USD",
+    "lifecycle_state": "ANSWERED",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0002"
+        ],
+        "external_refs": [
+          "11-research/phase-g/regime-discovery/regime_discovery_analysis.json",
+          "11-research/phase-e/feature_importance.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0201",
+          "IKROS-FEAT-20260802-0202",
+          "IKROS-FEAT-20260802-0203",
+          "IKROS-FEAT-20260802-0204",
+          "IKROS-FEAT-20260802-0205",
+          "IKROS-FEAT-20260802-0206",
+          "IKROS-FEAT-20260802-0207"
+        ],
+        "inputs": [
+          "IKROS-RQ-20260802-0002"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0003-feature-discovery",
+        "creation_context": "Campaign 0003 feature discovery",
+        "motivation": "Determine which institutional features remain useful after conditioning on the accepted six-state taxonomy."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "linked_conclusions": [
+      "IKROS-CONCL-20260802-0003"
+    ],
+    "linked_hypotheses": [
+      "IKROS-HYP-20260802-0003"
+    ],
+    "motivation": "Campaign 0002 accepted the state model. The next institutional question is what information remains useful inside that state space.",
+    "scope": "FEATURE_DISCOVERY",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "time_horizon": "5D",
+    "title": "Which features exhibit stable predictive power conditional on the Institutional Six-State Overlay Taxonomy v1?",
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:51:35.046503+00:00",
+        "confidence_at_time": 0.5807652332945916,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:51:35.050503+00:00",
+        "confidence_at_time": 0.5807652332945916,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 ANSWERED. Campaign 0003 feature catalogue review completed.",
+        "changed_at": "2026-08-02T01:51:35.053504+00:00",
+        "confidence_at_time": 0.5807652332945916,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  },
+  "validation_summary": {
+    "approved_catalogue": "Institutional Regime-Conditioned Feature Catalogue v1",
+    "approved_feature_count": 12,
+    "arb_recommendation": "Approve Institutional Regime-Conditioned Feature Catalogue v1 for future alpha hypothesis generation inside the six-state taxonomy. Retain rejected features only as context variables or contradiction records.",
+    "conclusion_id": "IKROS-CONCL-20260802-0003",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0003",
+    "validation_id": "IKROS-VAL-20260802-0003"
+  }
+}

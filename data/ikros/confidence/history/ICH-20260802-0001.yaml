@@ -1,0 +1,43 @@
+assessment_id: ICA-20260802-0001
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-ORCHESTRATOR
+history_id: ICH-20260802-0001
+new_confidence:
+  data: 0.42
+  economic: 0.348
+  experimental: 0.46799999999999997
+  last_updated: '2026-08-02T01:27:43.539398+00:00'
+  operational: 0.46799999999999997
+  overall: 0.0
+  prior: 0.38
+  replication: 0.0
+  statistical: 0.192
+  validation: 0.4943478260869565
+operator: ikros-confidence-engine
+previous_confidence:
+  data: 0.66
+  economic: 0.58
+  experimental: 0.46
+  last_updated: '2026-08-02T00:00:00Z'
+  operational: 0.5
+  overall: 0.0
+  prior: 0.38
+  replication: 0.0
+  statistical: 0.32
+  validation: 0.3
+reason: Phase G Macro Alpha baseline audit
+specification_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+supporting_evidence:
+- PHASEG-MACRO-EVID-001
+- PHASEG-MACRO-EVID-002
+- PHASEG-MACRO-EVID-003
+target_id: IKROS-HYP-20260802-0001
+target_type: Hypothesis
+timestamp: '2026-08-02T01:27:43.539398+00:00'
+work_package_refs:
+- WP-IMP-0039

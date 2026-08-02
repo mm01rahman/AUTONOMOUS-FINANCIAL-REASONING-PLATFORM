@@ -1,0 +1,58 @@
+archived_at: null
+capability_refs: []
+confidence: 0.42
+created_at: '2026-08-02T01:59:35.071678+00:00'
+dependency_ids: []
+entity_type: ResearchQuestion
+evidence_refs:
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-RQ-20260802-0406
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0075
+payload:
+  attributes:
+    campaign_tag: PHASE-G-HYPOTHESIS-004
+    expected_holding_period: 2-4D
+    feature_set:
+    - macro_trend_interaction
+    - forward_expectation
+    - regime_vol_20
+    instrument: XAU/USD
+    linked_conclusions: []
+    linked_hypotheses:
+    - IKROS-HYP-20260802-0406
+    motivation: Range-bound markets often absorb macro narrative shocks without broad
+      participation; a low-volatility environment can cause initial impulse to mean
+      revert rather than expand.
+    regime_scope:
+    - range_compression
+    scope: HYPOTHESIS_DISCOVERY
+    time_horizon: 3-5D
+  lifecycle_state: ACTIVE
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-RQ-20260802-0406
+- IKROS-HYP-20260802-0406
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Compression-state expectation fade
+tags:
+- researchquestion
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: In range_compression, do expectation shocks and constructive macro/trend context
+  identify fade opportunities rather than trend continuation?
+updated_at: '2026-08-02T01:59:35.071678+00:00'
+valid_from: '2026-08-02T01:59:35.071678+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

@@ -1,0 +1,133 @@
+attributes:
+  alternative_hypothesis: 'H1: The accepted deterministic taxonomy improves validation
+    separation, confidence calibration, and hypothesis ranking utility.'
+  capability_refs:
+  - ALPHA-RESEARCH
+  - IKROS-CONFIDENCE
+  confidence:
+    data: 0.72
+    economic: 0.61
+    last_updated: '2026-08-02T00:00:00Z'
+    model: 0.58
+    operational: 0.62
+    overall: 0.5482791661008908
+    prior: 0.48
+    replication: 0.0
+    statistical: 0.43
+    validation: 0.4
+  confidence_assessment:
+    assessed_confidence:
+      data: 0.7071150442477877
+      economic: 0.5490285714285714
+      experimental: 0.5871681415929204
+      last_updated: '2026-08-02T01:43:06.214218+00:00'
+      operational: 0.496
+      overall: 0.2267749515409686
+      prior: 0.48
+      replication: 0.2267749515409686
+      statistical: 0.7360000000000001
+      validation: 0.6175575221238939
+    assessment_id: ICA-20260802-0003
+    contradiction_resolution:
+      contradiction_multiplier: 0.8
+      recommended_action: PEER_REVIEW
+      requires_review: false
+      severity_counts:
+        MODERATE: 1
+    quality:
+      contradiction_count: 1
+      contradiction_score: 0.8
+      dataset_diversity: 1
+      dataset_diversity_score: 0.25
+      evidence_freshness: 1.0
+      independent_validations: 1
+      independent_validations_score: 0.3333333333333333
+      out_of_sample_confirmations: 0
+      out_of_sample_score: 0.0
+      overall_quality: 0.4416802022759544
+      regime_diversity: 0
+      regime_diversity_score: 0.0
+      replication_count: 1
+      replication_score: 0.28346868942621073
+      research_maturity: 0.5
+      temporal_diversity: 1
+      temporal_diversity_score: 0.25
+      validation_completeness: 1.0
+    updated_at: '2026-08-02T01:43:06.214218+00:00'
+  contradictions: []
+  entity_type: Hypothesis
+  experiments: []
+  ikros_id: IKROS-HYP-20260802-0002
+  lifecycle_state: APPROVED_FOR_TESTING
+  lineage:
+    dependencies:
+      datasets:
+      - IKROS-DSV-20260802-0002
+      external_refs:
+      - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+      features:
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+      - IKROS-FEAT-20260802-0207
+      inputs:
+      - IKROS-RQ-20260802-0002
+      models:
+      - deterministic_macro_overlay_taxonomy
+    evidence:
+      contradicting: []
+      ers_records: []
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T00:00:00Z'
+      created_by: campaign-0002-regime-discovery
+      creation_context: Campaign 0002 regime discovery
+      motivation: Translate the regime-discovery program into a falsifiable institutional
+        hypothesis.
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  motivating_theses: []
+  null_hypothesis: 'H0: A richer deterministic taxonomy does not improve XAU/USD research
+    quality relative to simpler baselines.'
+  posterior_confidence: 0.0
+  power: 0.8
+  prior_confidence: 0.48
+  significance_level: 0.05
+  source_rq: IKROS-RQ-20260802-0002
+  spec_refs:
+  - SPEC-010
+  - SPEC-012
+  - SPEC-060
+  statement: A deterministic six-state overlay taxonomy defined by volatility, macro-transition
+    pressure, and trend persistence improves XAU/USD research quality relative to
+    volatility-only baselines.
+  validations: []
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.2267749515409686
+created_at: '2026-08-02T00:00:00Z'
+ikros_id: IKROS-HYP-20260802-0002
+label: IKROS-HYP-20260802-0002
+node_id: IKROS-HYP-20260802-0002
+node_type: HYPOTHESIS
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

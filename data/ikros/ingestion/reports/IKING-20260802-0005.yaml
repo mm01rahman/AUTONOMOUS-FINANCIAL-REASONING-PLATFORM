@@ -1,0 +1,381 @@
+graph_node_ids:
+- IKROS-DS-20260802-0002
+- IKROS-DSV-20260802-0002
+- IKROS-KO-20260802-0201
+- IKROS-FF-20260802-0201
+- IKROS-FEAT-20260802-0201
+- IKROS-FEAT-20260802-0202
+- IKROS-FEAT-20260802-0203
+- IKROS-FEAT-20260802-0204
+- IKROS-FEAT-20260802-0205
+- IKROS-FEAT-20260802-0206
+- IKROS-FEAT-20260802-0207
+- IKROS-KO-20260802-0202
+- IKROS-KO-20260802-0203
+- IKROS-KO-20260802-0204
+- IKROS-KO-20260802-0205
+- IKROS-KO-20260802-0206
+- IKROS-KO-20260802-0207
+- IKROS-KO-20260802-0208
+- IKROS-KO-20260802-0209
+- IKROS-REGIME-20260802-0201
+- IKROS-REGIME-20260802-0202
+- IKROS-REGIME-20260802-0203
+- IKROS-REGIME-20260802-0204
+- IKROS-REGIME-20260802-0205
+- IKROS-REGIME-20260802-0206
+- IKROS-KO-20260802-0210
+- IKROS-KO-20260802-0211
+ingested_at: '2026-08-02T01:43:02.109179+00:00'
+ingestion_id: IKING-20260802-0005
+memory_ids:
+- IKMEM-T2-20260802-0011
+- IKMEM-T2-20260802-0012
+- IKMEM-T2-20260802-0013
+- IKMEM-T2-20260802-0014
+- IKMEM-T2-20260802-0015
+- IKMEM-T2-20260802-0016
+- IKMEM-T2-20260802-0017
+- IKMEM-T2-20260802-0018
+- IKMEM-T2-20260802-0019
+- IKMEM-T2-20260802-0020
+- IKMEM-T2-20260802-0021
+- IKMEM-T2-20260802-0022
+- IKMEM-T2-20260802-0023
+- IKMEM-T2-20260802-0024
+- IKMEM-T2-20260802-0025
+- IKMEM-T2-20260802-0026
+- IKMEM-T2-20260802-0027
+- IKMEM-T2-20260802-0028
+- IKMEM-T2-20260802-0029
+- IKMEM-T2-20260802-0030
+- IKMEM-T2-20260802-0031
+- IKMEM-T2-20260802-0032
+- IKMEM-T2-20260802-0033
+- IKMEM-T2-20260802-0034
+- IKMEM-T2-20260802-0035
+- IKMEM-T2-20260802-0036
+- IKMEM-T2-20260802-0037
+object_fingerprints:
+- '{"attributes": {"coverage_rows": 6257, "granularity": "1D", "instrument": "XAU/USD",
+  "provenance_note": "Derived from the frozen Phase E governed data foundation."},
+  "capability_refs": [], "confidence": 0.9, "created_at": "2026-08-02T01:43:01.845909+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-e/phase_e_summary.json"],
+  "identifier": "IKROS-DS-20260802-0002", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "Dataset", "relationships": [], "source_format": "JSON", "source_ids":
+  [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Governed
+  daily XAU/USD research dataset used for regime discovery synthesis.", "title": "Campaign
+  0002 governed XAU/USD regime dataset", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"coverage_rows": 6257, "feature_count": 7, "version_label": "campaign-0002-regime-discovery"},
+  "capability_refs": [], "confidence": 0.88, "created_at": "2026-08-02T01:43:01.845909+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-DSV-20260802-0002", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "DatasetVersion", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-DS-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"], "summary": "Dataset
+  snapshot used by the regime discovery synthesis and taxonomy utility test.", "title":
+  "Campaign 0002 regime discovery dataset snapshot", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"references": ["Hamilton regime switching", "Hidden Markov Models",
+  "Gaussian Mixture Models", "Bayesian change point detection", "Adaptive Markets
+  Hypothesis", "Commodity and safe-haven regime literature"]}, "capability_refs":
+  [], "confidence": 0.81, "created_at": "2026-08-02T01:43:01.845909+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/regime-discovery/REGIME_DISCOVERY_CAMPAIGN.md"],
+  "identifier": "IKROS-KO-20260802-0201", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Institutional literature
+  review spanning state-space, clustering, change-point, and adaptive-market approaches.",
+  "title": "Campaign 0002 literature review", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"description": "Core state variables required by the deterministic
+  regime overlay taxonomy.", "member_features": ["IKROS-FEAT-20260802-0201", "IKROS-FEAT-20260802-0202",
+  "IKROS-FEAT-20260802-0203", "IKROS-FEAT-20260802-0204", "IKROS-FEAT-20260802-0205",
+  "IKROS-FEAT-20260802-0206", "IKROS-FEAT-20260802-0207"], "name": "regime_state_variables"},
+  "capability_refs": [], "confidence": 0.79, "created_at": "2026-08-02T01:43:01.845909+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+  "identifier": "IKROS-FF-20260802-0201", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "FeatureFamily", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Feature family used
+  to define the accepted institutional state model.", "title": "Regime discovery state
+  variables", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"classification": "useful", "family_id": "IKROS-FF-20260802-0201",
+  "information_content": 0.43001285, "name": "regime_vol_20", "stability_score": 0.4421828482},
+  "capability_refs": [], "confidence": 0.84, "created_at": "2026-08-02T01:43:01.845909+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+  "identifier": "IKROS-FEAT-20260802-0201", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Primary volatility state
+  variable for regime partitioning.", "title": "20-bar realized volatility", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"classification": "state_variable", "family_id": "IKROS-FF-20260802-0201",
+  "name": "trend_gap_30_180"}, "capability_refs": [], "confidence": 0.78, "created_at":
+  "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0202", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Trend persistence state
+  variable for bull and bear regime separation.", "title": "30/180 trend gap", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"classification": "context_variable", "family_id": "IKROS-FF-20260802-0201",
+  "information_content": 0.43901187, "name": "macro_pressure", "redundancy_note":
+  "Redundant as a standalone alpha feature but useful as a regime-defining context
+  variable."}, "capability_refs": [], "confidence": 0.72, "created_at": "2026-08-02T01:43:01.847413+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+  "identifier": "IKROS-FEAT-20260802-0203", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Macro transition state
+  variable that contextualizes policy and USD pressure.", "title": "Macro pressure
+  composite", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"classification": "state_variable", "family_id": "IKROS-FF-20260802-0201",
+  "name": "behavioral_stretch"}, "capability_refs": [], "confidence": 0.71, "created_at":
+  "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0204", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Stretch score used to
+  identify dislocation and exhaustion conditions.", "title": "Behavioral stretch",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"family_id": "IKROS-FF-20260802-0201", "name": "breakout_60"},
+  "capability_refs": [], "confidence": 0.69, "created_at": "2026-08-02T01:43:01.847413+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0205", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Breakout state variable
+  confirming bull trend expansion.", "title": "60-bar breakout", "version": "1.0.0",
+  "work_package_refs": []}'
+- '{"attributes": {"family_id": "IKROS-FF-20260802-0201", "name": "breakdown_20"},
+  "capability_refs": [], "confidence": 0.69, "created_at": "2026-08-02T01:43:01.847413+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0206", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Breakdown state variable
+  confirming bear trend unwind.", "title": "20-bar breakdown", "version": "1.0.0",
+  "work_package_refs": []}'
+- '{"attributes": {"family_id": "IKROS-FF-20260802-0201", "name": "geo_active"}, "capability_refs":
+  [], "confidence": 0.74, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-FEAT-20260802-0207", "lifecycle_state": "VALIDATED", "memory_tier":
+  null, "object_type": "Feature", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-DSV-20260802-0002"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Binary event overlay
+  used to identify crisis dislocation.", "title": "Geopolitical activation flag",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"decision": "REJECT", "reason": "Latent-state inference is harder
+  to govern and did not justify additional complexity."}, "capability_refs": [], "confidence":
+  0.56, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+  "IKROS-KO-20260802-0202", "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type":
+  "KnowledgeObject", "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-KO-20260802-0201"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-060"], "summary": "Rejected as the institutional state
+  model for Campaign 0002.", "title": "Hidden Markov Model method review", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"decision": "REJECT", "reason": "No evidence that mixture complexity
+  improves institutional utility beyond deterministic overlays."}, "capability_refs":
+  [], "confidence": 0.55, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0203", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-KO-20260802-0201"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-060"], "summary": "Rejected as the institutional state
+  model for Campaign 0002.", "title": "Gaussian Mixture Model method review", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"decision": "DEFER", "reason": "Promising for later refinement,
+  but not required for Campaign 0002 acceptance."}, "capability_refs": [], "confidence":
+  0.61, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+  "IKROS-KO-20260802-0204", "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type":
+  "KnowledgeObject", "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-KO-20260802-0201"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-060"], "summary": "Deferred for future refinement once
+  the institutional baseline taxonomy is established.", "title": "Hierarchical clustering
+  method review", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"decision": "REJECT", "reason": "The abstraction cost is not justified
+  for the current research objective."}, "capability_refs": [], "confidence": 0.54,
+  "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+  "IKROS-KO-20260802-0205", "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type":
+  "KnowledgeObject", "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-KO-20260802-0201"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-060"], "summary": "Rejected as the institutional state
+  model for Campaign 0002.", "title": "Spectral clustering method review", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"decision": "DEFER", "reason": "Useful for future transition refinement,
+  but incomplete as the sole institutional taxonomy."}, "capability_refs": [], "confidence":
+  0.64, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+  "IKROS-KO-20260802-0206", "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type":
+  "KnowledgeObject", "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-KO-20260802-0201"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-060"], "summary": "Deferred for later transition-refinement
+  studies.", "title": "Bayesian change point detection method review", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"decision": "REJECT", "reason": "Outlier-sensitive clusters did
+  not improve interpretability enough for institutional use."}, "capability_refs":
+  [], "confidence": 0.53, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0207", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-KO-20260802-0201"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-060"], "summary": "Rejected as the institutional state
+  model for Campaign 0002.", "title": "Density-based clustering method review", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"decision": "REJECT", "hit_rate_spread": 0.04837854955652099, "return_spread":
+  0.0012110299879640569, "stability": 0.9354323158062969}, "capability_refs": [],
+  "confidence": 0.77, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0208", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-FF-20260802-0201"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-060"], "summary": "Executed and rejected because it
+  under-separates research outcomes.", "title": "Volatility-state baseline review",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"decision": "ACCEPT", "hit_rate_spread": 0.1422228565085708, "return_spread":
+  0.004942385609214154, "stability": 0.7800863033402589, "taxonomy_name": "Institutional
+  Six-State Overlay Taxonomy v1"}, "capability_refs": [], "confidence": 0.86, "created_at":
+  "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0209", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-FF-20260802-0201", "IKROS-KO-20260802-0201"], "source_kind":
+  "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Accepted as the institutional
+  state model for future AFRP research.", "title": "Accepted deterministic macro-event
+  overlay taxonomy", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"regime_label": "bull_trend"}, "capability_refs": [], "confidence":
+  0.84, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+  "IKROS-REGIME-20260802-0201", "lifecycle_state": "ACTIVE", "memory_tier": null,
+  "object_type": "Regime", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Persistent upside structure
+  with supportive macro context.", "title": "Bull Trend Expansion", "version": "1.0.0",
+  "work_package_refs": []}'
+- '{"attributes": {"regime_label": "bear_unwind"}, "capability_refs": [], "confidence":
+  0.76, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+  "IKROS-REGIME-20260802-0202", "lifecycle_state": "ACTIVE", "memory_tier": null,
+  "object_type": "Regime", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Persistent downside
+  structure without full crisis dislocation.", "title": "Bear Trend Unwind", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"regime_label": "calm_carry"}, "capability_refs": [], "confidence":
+  0.74, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+  "IKROS-REGIME-20260802-0203", "lifecycle_state": "ACTIVE", "memory_tier": null,
+  "object_type": "Regime", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Low-volatility accumulation
+  state with slower information release.", "title": "Calm Carry Accumulation", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"regime_label": "crisis_dislocation"}, "capability_refs": [], "confidence":
+  0.81, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+  "IKROS-REGIME-20260802-0204", "lifecycle_state": "ACTIVE", "memory_tier": null,
+  "object_type": "Regime", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "High-volatility stress
+  state where edge persistence degrades.", "title": "Crisis Dislocation", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"regime_label": "macro_transition"}, "capability_refs": [], "confidence":
+  0.82, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+  "IKROS-REGIME-20260802-0205", "lifecycle_state": "ACTIVE", "memory_tier": null,
+  "object_type": "Regime", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Policy and cross-asset
+  transition state that changes the ranking of research hypotheses.", "title": "Macro
+  Policy Transition", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"regime_label": "range_compression"}, "capability_refs": [], "confidence":
+  0.78, "created_at": "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs":
+  ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"], "identifier":
+  "IKROS-REGIME-20260802-0206", "lifecycle_state": "ACTIVE", "memory_tier": null,
+  "object_type": "Regime", "relationships": [], "source_format": "JSON", "source_ids":
+  ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+  "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Institutional default
+  state outside crisis and explicit transition regimes.", "title": "Range Compression",
+  "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"stability": 0.7800863033402589, "taxonomy_name": "Institutional
+  Six-State Overlay Taxonomy v1"}, "capability_refs": [], "confidence": 0.79, "created_at":
+  "2026-08-02T01:43:01.847413+00:00", "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0210", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-REGIME-20260802-0201", "IKROS-REGIME-20260802-0202", "IKROS-REGIME-20260802-0203",
+  "IKROS-REGIME-20260802-0204", "IKROS-REGIME-20260802-0205", "IKROS-REGIME-20260802-0206"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-060"], "summary": "Transition probabilities for the
+  accepted six-state taxonomy.", "title": "Institutional transition matrix v1", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"atlas_windows": ["gfc_2008", "gold_bull_2011", "gold_collapse_2013",
+  "covid_2020", "inflation_2022", "rate_cycle_2024", "historical_2025", "available_2026"]},
+  "capability_refs": [], "confidence": 0.77, "created_at": "2026-08-02T01:43:01.847413+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+  "identifier": "IKROS-KO-20260802-0211", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-KO-20260802-0209"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\regime_discovery_knowledge.json",
+  "specification_refs": ["SPEC-060"], "summary": "Historical windows mapped to the
+  accepted taxonomy.", "title": "Historical regime atlas", "version": "1.0.0", "work_package_refs":
+  []}'
+object_ids:
+- IKROS-DS-20260802-0002
+- IKROS-DSV-20260802-0002
+- IKROS-KO-20260802-0201
+- IKROS-FF-20260802-0201
+- IKROS-FEAT-20260802-0201
+- IKROS-FEAT-20260802-0202
+- IKROS-FEAT-20260802-0203
+- IKROS-FEAT-20260802-0204
+- IKROS-FEAT-20260802-0205
+- IKROS-FEAT-20260802-0206
+- IKROS-FEAT-20260802-0207
+- IKROS-KO-20260802-0202
+- IKROS-KO-20260802-0203
+- IKROS-KO-20260802-0204
+- IKROS-KO-20260802-0205
+- IKROS-KO-20260802-0206
+- IKROS-KO-20260802-0207
+- IKROS-KO-20260802-0208
+- IKROS-KO-20260802-0209
+- IKROS-REGIME-20260802-0201
+- IKROS-REGIME-20260802-0202
+- IKROS-REGIME-20260802-0203
+- IKROS-REGIME-20260802-0204
+- IKROS-REGIME-20260802-0205
+- IKROS-REGIME-20260802-0206
+- IKROS-KO-20260802-0210
+- IKROS-KO-20260802-0211
+source_format: JSON
+source_hash: 3e72fd0fec35787db87993063a4c541cbaa037b858ca878fbea0e162eb5c46d8
+source_kind: INTERNAL_RESEARCH_REPORT
+source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+source_version: 1.0.0
+status: INGESTED
+warnings: []

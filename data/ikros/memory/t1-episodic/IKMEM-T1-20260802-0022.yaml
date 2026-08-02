@@ -1,0 +1,112 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:43:04.151686+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0017
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/feature_importance.json
+- 11-research/phase-e/regime_adaptation.json
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- 11-research/regime_analysis.md
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0002
+- IKROS-RESEARCHTASK-20260802-0018
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0022
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0002
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0017
+    finished_at: '2026-08-02T01:43:04.151686+00:00'
+    kind: FEATURE_SELECTION
+    max_attempts: 1
+    payload:
+      candidate_feature_ids:
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+      - IKROS-FEAT-20260802-0207
+      top_k: 7
+    planned_order: 7
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0018
+      memory_record_id: null
+      metrics:
+        ranked_candidates:
+        - confidence: 0.84
+          identifier: IKROS-FEAT-20260802-0201
+        - confidence: 0.78
+          identifier: IKROS-FEAT-20260802-0202
+        - confidence: 0.74
+          identifier: IKROS-FEAT-20260802-0207
+        - confidence: 0.72
+          identifier: IKROS-FEAT-20260802-0203
+        - confidence: 0.71
+          identifier: IKROS-FEAT-20260802-0204
+        - confidence: 0.69
+          identifier: IKROS-FEAT-20260802-0205
+        - confidence: 0.69
+          identifier: IKROS-FEAT-20260802-0206
+      output_refs: []
+      payload:
+        candidate_key: candidate_feature_ids
+        selected_ids:
+        - IKROS-FEAT-20260802-0201
+        - IKROS-FEAT-20260802-0202
+        - IKROS-FEAT-20260802-0207
+        - IKROS-FEAT-20260802-0203
+        - IKROS-FEAT-20260802-0204
+        - IKROS-FEAT-20260802-0205
+        - IKROS-FEAT-20260802-0206
+      selected_ids:
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0207
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+    started_at: '2026-08-02T01:43:04.039764+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0018
+    title: Feature Selection
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0002
+- IKROS-FEAT-20260802-0201
+- IKROS-FEAT-20260802-0202
+- IKROS-FEAT-20260802-0207
+- IKROS-FEAT-20260802-0203
+- IKROS-FEAT-20260802-0204
+- IKROS-FEAT-20260802-0205
+- IKROS-FEAT-20260802-0206
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: FEATURE_SELECTION COMPLETED
+tags:
+- research-orchestrator
+- feature_selection
+tier: T1_EPISODIC
+title: 'Campaign 0002 Regime Discovery :: Feature Selection'
+updated_at: '2026-08-02T01:43:04.151686+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

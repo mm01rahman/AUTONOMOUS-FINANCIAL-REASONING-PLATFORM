@@ -1,0 +1,171 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0040"
+capability_id:
+  id: "SPEC-LIBRARY"
+  version: "1.0"
+title: "Institutional Specification Intake & Canonical Specification Library"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "GOVERNANCE"
+  traceability:
+    implements_req: ["NFR-033", "NFR-034", "NFR-035"]
+    trace_sls: "AFRP-WP-IMP-0040-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('ALPHA-RESEARCH')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "specs/"
+      - "05-work-packages/WP-IMP-0040.yaml"
+      - "05-work-packages/WP-IMP-0040/"
+      - "10-release/SPEC_LIBRARY_COMPLETION_REPORT.md"
+      - "10-release/SPEC_LIBRARY_EVIDENCE_RECORD.yaml"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    read:
+      - "00-governance/"
+      - "02-architecture/"
+      - "03-engineering/"
+      - "04-ai-framework/"
+      - "05-work-packages/"
+
+execution:
+  priority: "high"
+  estimated_complexity: "medium"
+  estimated_duration: "4h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "00-governance/000_ENGINEERING_CONSTITUTION.md"
+    - "02-architecture/"
+    - "03-engineering/"
+    - "04-ai-framework/"
+
+outputs:
+  expected_source_files:
+    - "specs/README.md"
+    - "specs/registry/SPECIFICATION_REGISTRY.yaml"
+    - "specs/registry/SPECIFICATION_HIERARCHY.md"
+    - "specs/registry/SPECIFICATION_DEPENDENCY_GRAPH.md"
+    - "specs/registry/CONFORMANCE_MATRIX.md"
+    - "specs/policies/VERSIONING_POLICY.md"
+    - "specs/policies/REPOSITORY_ORGANIZATION_STANDARD.md"
+    - "specs/00-constitution/SPEC-000-INSTITUTIONAL-CONSTITUTION.md"
+    - "specs/01-architecture/SPEC-001-SYSTEM-ARCHITECTURE.md"
+    - "specs/01-architecture/SPEC-002-RUNTIME-ARCHITECTURE.md"
+    - "specs/01-architecture/SPEC-003-MATHEMATICAL-FOUNDATION.md"
+    - "specs/01-architecture/SPEC-004-REFERENCE-SPECIFICATION.md"
+    - "specs/01-architecture/SPEC-005-PRODUCTION-ENGINEERING-ARCHITECTURE.md"
+    - "specs/02-research/SPEC-010-RESEARCH-STANDARD-RS10.md"
+    - "specs/02-research/SPEC-011-GOLD-MARKET-SPECIFICATION.md"
+    - "specs/02-research/SPEC-012-ALPHA-DISCOVERY-BIBLE.md"
+    - "specs/02-research/SPEC-013-ALPHA-VALIDATION-FRAMEWORK.md"
+    - "specs/02-research/SPEC-014-FEATURE-ENGINEERING-STANDARD.md"
+    - "specs/02-research/SPEC-015-FINANCIAL-REASONING-FRAMEWORK.md"
+    - "specs/03-engineering/SPEC-020-ENGINEERING-OPERATING-SYSTEM.md"
+    - "specs/03-engineering/SPEC-021-IMPLEMENTATION-GUIDE.md"
+    - "specs/04-runtime/SPEC-030-MULTI-AGENT-ARCHITECTURE.md"
+    - "specs/04-runtime/SPEC-031-MEMORY-KNOWLEDGE-ARCHITECTURE.md"
+    - "specs/04-runtime/SPEC-032-AUTONOMOUS-LEARNING-EVOLUTION.md"
+    - "specs/04-runtime/SPEC-033-RISK-INTELLIGENCE-PORTFOLIO.md"
+    - "specs/04-runtime/SPEC-034-SIMULATION-DIGITAL-TWIN.md"
+    - "specs/05-validation/SPEC-040-VALIDATION-FRAMEWORK.md"
+    - "specs/06-operations/SPEC-050-OPERATIONAL-ARCHITECTURE.md"
+    - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0040/evidence/EXEC-042.yaml"
+
+execution_results:
+  source_files_modified:
+    - "specs/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0040/evidence/EXEC-042.yaml"
+
+produces:
+  capability:
+    id: "SPEC-LIBRARY"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "specs/"
+    - "05-work-packages/WP-IMP-0040.yaml"
+    - "05-work-packages/WP-IMP-0040/"
+    - "10-release/SPEC_LIBRARY_COMPLETION_REPORT.md"
+    - "10-release/SPEC_LIBRARY_EVIDENCE_RECORD.yaml"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  non_goals:
+    - "No Runtime modification."
+    - "No Engineering OS modification."
+    - "No implementation of new capabilities."
+    - "No IKROS implementation (blocked until ARB approves SPEC-060)."
+
+requirements:
+  spec_library_governance:
+    module: "specs/"
+    rules:
+      - "All 22 specification documents must be created under specs/ hierarchy."
+      - "SPECIFICATION_REGISTRY.yaml must catalog all 22 specs with full metadata."
+      - "CONFORMANCE_MATRIX.md must provide objective ARB audit coverage assessment."
+      - "VERSIONING_POLICY.md must define full spec lifecycle (Draft→Archived)."
+      - "SPEC-060 (IKROS) must be imported from external ARB document."
+      - "CAPABILITY_REGISTRY.yaml must include SPEC-LIBRARY as terminal capability."
+      - "TRACEABILITY_MATRIX.yaml must include NFR-033, NFR-034, NFR-035."
+      - "No Python source files may be created or modified."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0040"
+
+completion:
+  success_requires:
+    - "All 22 specification documents created under specs/."
+    - "SPECIFICATION_REGISTRY.yaml contains all 22 specifications with full metadata."
+    - "CONFORMANCE_MATRIX.md provides ARB-quality conformance assessment."
+    - "SPEC-LIBRARY capability added to CAPABILITY_REGISTRY.yaml (40 total)."
+    - "NFR-033, NFR-034, NFR-035 added to TRACEABILITY_MATRIX.yaml."
+    - "All quality gates pass."
+    - "No runtime behaviour changed."
+
+failure_modes:
+  ERR-RUNTIME: "Documentation-only WP — any runtime change is an automatic failure."
+  ERR-TVM-DUPE: "TVM duplicate IDs: verify NFR-033/034/035 are unique before inserting."
+  ERR-SCHEMA: "WPS-1.0 schema violation in WP YAML structure."

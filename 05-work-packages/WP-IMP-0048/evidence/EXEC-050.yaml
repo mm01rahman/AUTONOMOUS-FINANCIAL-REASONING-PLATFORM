@@ -1,0 +1,99 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-050"
+work_package_id: "WP-IMP-0048"
+capability:
+  id: "IKROS-ORCHESTRATOR"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-02T02:00:00Z"
+  finished_at: "2026-08-02T03:30:00Z"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-08-02T03:30:00Z"
+      note: "IKROS Institutional Research Orchestrator implementation complete. Repository-wide quality gates passing, Runtime unchanged."
+preconditions:
+  - predicate: "capability.complete('IKROS-CONFIDENCE')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "tools/ikros/orchestrator/"
+    - "tools/ikros/__init__.py"
+    - "tests/unit/test_ikros_orchestrator.py"
+    - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+    - "data/ikros/orchestrator/"
+    - "05-work-packages/WP-IMP-0048.yaml"
+    - "05-work-packages/WP-IMP-0048/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  files_modified:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/orchestrator/__init__.py"
+    - "tools/ikros/orchestrator/models.py"
+    - "tools/ikros/orchestrator/persistence.py"
+    - "tools/ikros/orchestrator/validation.py"
+    - "tools/ikros/orchestrator/engine.py"
+    - "tests/unit/test_ikros_orchestrator.py"
+    - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check ."
+    result: "PASS"
+    detail: "All checks passed across the repository."
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+    result: "PASS"
+    detail: "Success: no issues found in 227 source files."
+  - gate: "pytest"
+    command: "uv run pytest -q --tb=short"
+    result: "PASS"
+    detail: "Full repository test suite passes with 0 failures."
+  - gate: "afrp_validate"
+    command: "uv run afrp validate"
+    result: "PASS"
+    detail: "violations: 0; fit_002, fit_004, and fit_006 all PASS."
+  - gate: "afrp_plan"
+    command: "uv run afrp plan"
+    result: "PASS"
+    detail: "48 capabilities total; graph acyclic; IKROS-ORCHESTRATOR complete as terminal node."
+  - gate: "afrp_health"
+    command: "uv run afrp health"
+    result: "PASS"
+    detail: "94/94 requirements covered (100.0%); 48/48 capabilities complete; 82.3% lines."
+  - gate: "afrp_evidence"
+    command: "uv run afrp evidence --wp WP-IMP-0048"
+    result: "PASS"
+    detail: "fit_005 PASS; boundary compliance verified."
+artifacts:
+  source_files:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/orchestrator/__init__.py"
+    - "tools/ikros/orchestrator/models.py"
+    - "tools/ikros/orchestrator/persistence.py"
+    - "tools/ikros/orchestrator/validation.py"
+    - "tools/ikros/orchestrator/engine.py"
+  test_files:
+    - "tests/unit/test_ikros_orchestrator.py"
+  documentation:
+    - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "PENDING_ARB"
+  review_note: >
+    IKROS Institutional Research Orchestrator implementation is complete and
+    bounded to deterministic campaign modeling, scheduling, dependency
+    resolution, failure handling, completion reporting, audit logging, and
+    registry/graph/memory/query/backtest integration. Repository-wide ruff,
+    mypy --strict, pytest, afrp validate, afrp plan, afrp health, and afrp
+    evidence all pass. No Runtime or Engineering OS changes.

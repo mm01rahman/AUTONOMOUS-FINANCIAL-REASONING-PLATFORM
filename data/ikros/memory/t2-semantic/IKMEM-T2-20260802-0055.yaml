@@ -1,0 +1,50 @@
+archived_at: null
+capability_refs: []
+confidence: 0.8
+created_at: '2026-08-02T01:51:25.063258+00:00'
+dependency_ids: []
+entity_type: Feature
+evidence_refs:
+- 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+graph_node_ids:
+- IKROS-FEAT-20260802-0312
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0055
+payload:
+  attributes:
+    approved_regimes:
+    - macro_transition
+    classification: regime_specific
+    economic_rationale: Event counts matter only when they amplify an already material
+      macro-pressure shift.
+    family_id: IKROS-FF-20260802-0301
+    max_score: 2.386009
+    mean_score: 0.970465
+    name: sessionless_event_pressure
+    robust_regime_count: 5
+  lifecycle_state: VALIDATED
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\feature_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-FEAT-20260802-0312
+- IKROS-DSV-20260802-0003
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Sparse event-pressure interaction reserved for macro-transition campaigns.
+tags:
+- feature
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Event pressure interaction
+updated_at: '2026-08-02T01:51:25.063258+00:00'
+valid_from: '2026-08-02T01:51:25.063258+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

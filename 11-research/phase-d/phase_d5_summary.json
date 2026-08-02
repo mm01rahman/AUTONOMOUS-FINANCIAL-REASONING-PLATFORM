@@ -1,0 +1,87 @@
+{
+  "baseline": {
+    "readiness": "FAIL",
+    "risk_alert_count": 23,
+    "risk_codes": {
+      "RISK-CONCENTRATION": 23
+    },
+    "total_return": 0.00011798579278643473,
+    "sharpe": -15.688425962334614,
+    "sortino": -19.362685915224137,
+    "calmar": 0.9619836727349408,
+    "win_rate": 0.08333333333333333,
+    "profit_factor": 0.05912547157421052,
+    "max_drawdown": 0.0001226484358627403,
+    "exposure_mean": 18159.105,
+    "final_equity": 100008.9119706,
+    "final_gross_exposure": 37330.72,
+    "status_counts": {
+      "partial": 6,
+      "failed": 4,
+      "filled": 14
+    },
+    "trend_counts": {
+      "down": 3,
+      "up": 21
+    },
+    "decision_log_records": 24,
+    "decision_log_checksum": "9d4c65dcf8e1e1d3ba42ec28ef3634ce9551f939f45eedfea2c6f252b889123b",
+    "confidence_mean": 0.7910416666666606,
+    "confidence_min": 0.7849999999999,
+    "confidence_max": 0.8550000000000637,
+    "max_latency_ms": 50,
+    "mean_latency_ms": 42.34615384615385
+  },
+  "after": {
+    "readiness": "PASS",
+    "risk_alert_count": 0,
+    "risk_codes": {},
+    "total_return": 0.00011798579278643473,
+    "sharpe": -15.688425962334614,
+    "sortino": -19.362685915224137,
+    "calmar": 0.9619836727349408,
+    "win_rate": 0.08333333333333333,
+    "profit_factor": 0.05912547157421052,
+    "max_drawdown": 0.0001226484358627403,
+    "exposure_mean": 18159.105,
+    "final_equity": 100008.9119706,
+    "final_gross_exposure": 37330.72,
+    "status_counts": {
+      "partial": 6,
+      "failed": 4,
+      "filled": 14
+    },
+    "trend_counts": {
+      "down": 3,
+      "up": 21
+    },
+    "decision_log_records": 24,
+    "decision_log_checksum": "9d4c65dcf8e1e1d3ba42ec28ef3634ce9551f939f45eedfea2c6f252b889123b",
+    "confidence_mean": 0.7910416666666606,
+    "confidence_min": 0.7849999999999,
+    "confidence_max": 0.8550000000000637,
+    "max_latency_ms": 50,
+    "mean_latency_ms": 42.34615384615385
+  },
+  "phase_b": {
+    "runtime_deterministic": true,
+    "replay_checksum": "9742f494fdfc3515e8b0e323af38d4ed73ecb039f6eeb671be7903a99ca8e079",
+    "decision_p99_ms": 0.2545,
+    "regression_passed": true
+  },
+  "phase_c": {
+    "afrp_total_return": -0.837081,
+    "afrp_sharpe": -0.4611,
+    "afrp_max_drawdown": 0.900253,
+    "best_benchmark": "buy_and_hold",
+    "best_benchmark_return": 3.824562
+  },
+  "pre_fix_root_observation": {
+    "observed_at": "2026-08-01T19:17:00+06:00",
+    "decision_log_lines": 48,
+    "decision_log_unique_sequences": 24,
+    "decision_log_digest_records": 24,
+    "decision_log_file_sha256": "44d7850d25be5634e527037043d3f0b24e83a1dfdd674f72ea952b76ba156370",
+    "decision_log_digest_checksum": "9d4c65dcf8e1e1d3ba42ec28ef3634ce9551f939f45eedfea2c6f252b889123b"
+  }
+}

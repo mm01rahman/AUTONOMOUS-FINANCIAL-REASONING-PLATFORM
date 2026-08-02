@@ -1,0 +1,104 @@
+attributes:
+  alternative_hypothesis: 'H1: The macro pressure signal produces durable next-day
+    XAU/USD edge.'
+  capability_refs:
+  - ALPHA-RESEARCH
+  - IKROS-CONFIDENCE
+  confidence:
+    data: 0.66
+    economic: 0.58
+    last_updated: '2026-08-02T00:00:00Z'
+    model: 0.46
+    operational: 0.5
+    overall: 0.45133100205913185
+    prior: 0.38
+    replication: 0.0
+    statistical: 0.32
+    validation: 0.3
+  confidence_assessment:
+    assessed_confidence:
+      data: 0.2377695
+      economic: 0.2017695
+      experimental: 0.3055275
+      last_updated: '2026-08-02T01:27:44.627889+00:00'
+      operational: 0.299637
+      overall: 0.0
+      prior: 0.38
+      replication: 0.0
+      statistical: 0.1237695
+      validation: 0.32290891304347824
+    updated_at: '2026-08-02T01:27:44.627889+00:00'
+  contradictions: []
+  entity_type: Hypothesis
+  experiments: []
+  ikros_id: IKROS-HYP-20260802-0001
+  lifecycle_state: APPROVED_FOR_TESTING
+  lineage:
+    dependencies:
+      datasets:
+      - IKROS-DSV-20260802-0001
+      external_refs:
+      - 11-research/phase-e/phase_e_final_report.md
+      features:
+      - IKROS-FEAT-20260802-0001
+      - IKROS-FEAT-20260802-0002
+      - IKROS-FEAT-20260802-0003
+      inputs:
+      - IKROS-RQ-20260802-0001
+      - IKROS-THESIS-20260802-0001
+      models: []
+    evidence:
+      contradicting: []
+      ers_records:
+      - EXEC-041
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T00:00:00Z'
+      created_by: phase-g-macro-alpha
+      creation_context: Phase G Macro Alpha baseline audit
+      motivation: Convert the macro-only thesis into a formally falsifiable institutional
+        hypothesis.
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  motivating_theses:
+  - IKROS-THESIS-20260802-0001
+  null_hypothesis: 'H0: The macro pressure signal does not produce durable next-day
+    XAU/USD edge.'
+  posterior_confidence: 0.0
+  power: 0.8
+  prior_confidence: 0.38
+  significance_level: 0.05
+  source_rq: IKROS-RQ-20260802-0001
+  spec_refs:
+  - SPEC-010
+  - SPEC-012
+  - SPEC-060
+  statement: A macro pressure signal combining USD weakness, rates compression, and
+    dovish policy surprise produces durable next-day XAU/USD upside drift.
+  validations: []
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.0
+created_at: '2026-08-02T00:00:00Z'
+ikros_id: IKROS-HYP-20260802-0001
+label: IKROS-HYP-20260802-0001
+node_id: IKROS-HYP-20260802-0001
+node_type: HYPOTHESIS
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

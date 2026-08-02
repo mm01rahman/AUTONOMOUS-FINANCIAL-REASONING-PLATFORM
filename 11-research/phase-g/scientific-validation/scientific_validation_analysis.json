@@ -1,0 +1,2815 @@
+{
+  "alpha_candidate_registry": [],
+  "campaign": {
+    "arb_recommendation": "ARB recommendation: reject hypotheses IKROS-HYP-20260802-0402, IKROS-HYP-20260802-0404; retain IKROS-HYP-20260802-0401, IKROS-HYP-20260802-0405, IKROS-HYP-20260802-0408 for refinement-focused follow-up research; promote none to Alpha Candidate status only after they satisfy the full institutional scientific validation standard.",
+    "further_research_count": 3,
+    "governed_feature_catalogue": "Institutional Feature Catalogue v1",
+    "governed_taxonomy": "Institutional Six-State Overlay Taxonomy v1",
+    "methodology_notes": [
+      "Validation rules remained deterministic and used only the approved Phase G taxonomy and approved Phase G feature catalogue.",
+      "No parameter search, entry optimization, exit optimization, or new infrastructure was introduced.",
+      "PBO is reported as not applicable because Campaign 0005 used fixed governed rules instead of a model-selection workflow.",
+      "White's Reality Check is approximated over bounded sensitivity variants to control for threshold snooping inside each fixed rule family."
+    ],
+    "promoted_count": 0,
+    "rejected_count": 2,
+    "title": "Campaign 0005 Scientific Alpha Validation",
+    "validated_hypotheses": [
+      "IKROS-HYP-20260802-0401",
+      "IKROS-HYP-20260802-0402",
+      "IKROS-HYP-20260802-0404",
+      "IKROS-HYP-20260802-0405",
+      "IKROS-HYP-20260802-0408"
+    ],
+    "validated_hypothesis_count": 5
+  },
+  "confidence_update_report": [
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "outcome": "REQUIRES_FURTHER_RESEARCH",
+      "prior_confidence": 0.53,
+      "suggested_posterior_confidence": 0.5433
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "outcome": "REJECTED",
+      "prior_confidence": 0.5,
+      "suggested_posterior_confidence": 0.08
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "outcome": "REJECTED",
+      "prior_confidence": 0.49,
+      "suggested_posterior_confidence": 0.098
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "outcome": "REQUIRES_FURTHER_RESEARCH",
+      "prior_confidence": 0.48,
+      "suggested_posterior_confidence": 0.4934
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "outcome": "REQUIRES_FURTHER_RESEARCH",
+      "prior_confidence": 0.45,
+      "suggested_posterior_confidence": 0.4582
+    }
+  ],
+  "contradictory_evidence_report": [
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "severity": "MODERATE",
+      "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "severity": "MAJOR",
+      "summary": "Observed mean return did not preserve the expected directional sign."
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "severity": "MAJOR",
+      "summary": "Observed mean return did not preserve the expected directional sign."
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "severity": "MODERATE",
+      "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "severity": "MODERATE",
+      "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+    }
+  ],
+  "cpcv_report": [
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "mean_split_return": 0.0023,
+      "positive_split_ratio": 0.6667,
+      "split_count": 15,
+      "splits": [
+        {
+          "event_count": 8,
+          "mean_return": 0.0087,
+          "test_blocks": [
+            0,
+            1
+          ],
+          "win_rate": 0.625
+        },
+        {
+          "event_count": 3,
+          "mean_return": -0.0031,
+          "test_blocks": [
+            0,
+            2
+          ],
+          "win_rate": 0.3333
+        },
+        {
+          "event_count": 1,
+          "mean_return": -0.0166,
+          "test_blocks": [
+            0,
+            3
+          ],
+          "win_rate": 0.0
+        },
+        {
+          "event_count": 5,
+          "mean_return": -0.008,
+          "test_blocks": [
+            0,
+            4
+          ],
+          "win_rate": 0.2
+        },
+        {
+          "event_count": 11,
+          "mean_return": 0.0048,
+          "test_blocks": [
+            0,
+            5
+          ],
+          "win_rate": 0.5455
+        },
+        {
+          "event_count": 9,
+          "mean_return": 0.0104,
+          "test_blocks": [
+            1,
+            2
+          ],
+          "win_rate": 0.6667
+        },
+        {
+          "event_count": 7,
+          "mean_return": 0.0124,
+          "test_blocks": [
+            1,
+            3
+          ],
+          "win_rate": 0.7143
+        },
+        {
+          "event_count": 11,
+          "mean_return": 0.0057,
+          "test_blocks": [
+            1,
+            4
+          ],
+          "win_rate": 0.5455
+        },
+        {
+          "event_count": 17,
+          "mean_return": 0.0092,
+          "test_blocks": [
+            1,
+            5
+          ],
+          "win_rate": 0.6471
+        },
+        {
+          "event_count": 2,
+          "mean_return": 0.0036,
+          "test_blocks": [
+            2,
+            3
+          ],
+          "win_rate": 0.5
+        },
+        {
+          "event_count": 6,
+          "mean_return": -0.0027,
+          "test_blocks": [
+            2,
+            4
+          ],
+          "win_rate": 0.3333
+        },
+        {
+          "event_count": 12,
+          "mean_return": 0.0064,
+          "test_blocks": [
+            2,
+            5
+          ],
+          "win_rate": 0.5833
+        },
+        {
+          "event_count": 4,
+          "mean_return": -0.0059,
+          "test_blocks": [
+            3,
+            4
+          ],
+          "win_rate": 0.25
+        },
+        {
+          "event_count": 10,
+          "mean_return": 0.007,
+          "test_blocks": [
+            3,
+            5
+          ],
+          "win_rate": 0.6
+        },
+        {
+          "event_count": 14,
+          "mean_return": 0.0033,
+          "test_blocks": [
+            4,
+            5
+          ],
+          "win_rate": 0.5
+        }
+      ],
+      "worst_split_return": -0.0166
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "mean_split_return": -0.0047,
+      "positive_split_ratio": 0.3571,
+      "split_count": 14,
+      "splits": [
+        {
+          "event_count": 20,
+          "mean_return": -0.0004,
+          "test_blocks": [
+            0,
+            2
+          ],
+          "win_rate": 0.5
+        },
+        {
+          "event_count": 15,
+          "mean_return": 0.0067,
+          "test_blocks": [
+            0,
+            3
+          ],
+          "win_rate": 0.7333
+        },
+        {
+          "event_count": 3,
+          "mean_return": -0.0169,
+          "test_blocks": [
+            0,
+            4
+          ],
+          "win_rate": 0.0
+        },
+        {
+          "event_count": 5,
+          "mean_return": -0.0147,
+          "test_blocks": [
+            0,
+            5
+          ],
+          "win_rate": 0.2
+        },
+        {
+          "event_count": 20,
+          "mean_return": -0.0004,
+          "test_blocks": [
+            1,
+            2
+          ],
+          "win_rate": 0.5
+        },
+        {
+          "event_count": 15,
+          "mean_return": 0.0067,
+          "test_blocks": [
+            1,
+            3
+          ],
+          "win_rate": 0.7333
+        },
+        {
+          "event_count": 3,
+          "mean_return": -0.0169,
+          "test_blocks": [
+            1,
+            4
+          ],
+          "win_rate": 0.0
+        },
+        {
+          "event_count": 5,
+          "mean_return": -0.0147,
+          "test_blocks": [
+            1,
+            5
+          ],
+          "win_rate": 0.2
+        },
+        {
+          "event_count": 35,
+          "mean_return": 0.0026,
+          "test_blocks": [
+            2,
+            3
+          ],
+          "win_rate": 0.6
+        },
+        {
+          "event_count": 23,
+          "mean_return": -0.0025,
+          "test_blocks": [
+            2,
+            4
+          ],
+          "win_rate": 0.4348
+        },
+        {
+          "event_count": 25,
+          "mean_return": -0.0033,
+          "test_blocks": [
+            2,
+            5
+          ],
+          "win_rate": 0.44
+        },
+        {
+          "event_count": 18,
+          "mean_return": 0.0028,
+          "test_blocks": [
+            3,
+            4
+          ],
+          "win_rate": 0.6111
+        },
+        {
+          "event_count": 20,
+          "mean_return": 0.0013,
+          "test_blocks": [
+            3,
+            5
+          ],
+          "win_rate": 0.6
+        },
+        {
+          "event_count": 8,
+          "mean_return": -0.0155,
+          "test_blocks": [
+            4,
+            5
+          ],
+          "win_rate": 0.125
+        }
+      ],
+      "worst_split_return": -0.0169
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "mean_split_return": -0.0009,
+      "positive_split_ratio": 0.4444,
+      "split_count": 9,
+      "splits": [
+        {
+          "event_count": 4,
+          "mean_return": -0.0044,
+          "test_blocks": [
+            0,
+            2
+          ],
+          "win_rate": 0.5
+        },
+        {
+          "event_count": 1,
+          "mean_return": 0.0032,
+          "test_blocks": [
+            0,
+            4
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 4,
+          "mean_return": -0.0044,
+          "test_blocks": [
+            1,
+            2
+          ],
+          "win_rate": 0.5
+        },
+        {
+          "event_count": 1,
+          "mean_return": 0.0032,
+          "test_blocks": [
+            1,
+            4
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 4,
+          "mean_return": -0.0044,
+          "test_blocks": [
+            2,
+            3
+          ],
+          "win_rate": 0.5
+        },
+        {
+          "event_count": 5,
+          "mean_return": -0.0029,
+          "test_blocks": [
+            2,
+            4
+          ],
+          "win_rate": 0.6
+        },
+        {
+          "event_count": 4,
+          "mean_return": -0.0044,
+          "test_blocks": [
+            2,
+            5
+          ],
+          "win_rate": 0.5
+        },
+        {
+          "event_count": 1,
+          "mean_return": 0.0032,
+          "test_blocks": [
+            3,
+            4
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 1,
+          "mean_return": 0.0032,
+          "test_blocks": [
+            4,
+            5
+          ],
+          "win_rate": 1.0
+        }
+      ],
+      "worst_split_return": -0.0044
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "mean_split_return": 0.0017,
+      "positive_split_ratio": 0.8,
+      "split_count": 15,
+      "splits": [
+        {
+          "event_count": 37,
+          "mean_return": 0.0013,
+          "test_blocks": [
+            0,
+            1
+          ],
+          "win_rate": 0.5135
+        },
+        {
+          "event_count": 44,
+          "mean_return": 0.0001,
+          "test_blocks": [
+            0,
+            2
+          ],
+          "win_rate": 0.5
+        },
+        {
+          "event_count": 38,
+          "mean_return": -0.0014,
+          "test_blocks": [
+            0,
+            3
+          ],
+          "win_rate": 0.4211
+        },
+        {
+          "event_count": 32,
+          "mean_return": 0.0002,
+          "test_blocks": [
+            0,
+            4
+          ],
+          "win_rate": 0.4375
+        },
+        {
+          "event_count": 35,
+          "mean_return": 0.0016,
+          "test_blocks": [
+            0,
+            5
+          ],
+          "win_rate": 0.4857
+        },
+        {
+          "event_count": 37,
+          "mean_return": 0.0027,
+          "test_blocks": [
+            1,
+            2
+          ],
+          "win_rate": 0.6216
+        },
+        {
+          "event_count": 31,
+          "mean_return": 0.0012,
+          "test_blocks": [
+            1,
+            3
+          ],
+          "win_rate": 0.5484
+        },
+        {
+          "event_count": 25,
+          "mean_return": 0.004,
+          "test_blocks": [
+            1,
+            4
+          ],
+          "win_rate": 0.6
+        },
+        {
+          "event_count": 28,
+          "mean_return": 0.0053,
+          "test_blocks": [
+            1,
+            5
+          ],
+          "win_rate": 0.6429
+        },
+        {
+          "event_count": 38,
+          "mean_return": -0.0001,
+          "test_blocks": [
+            2,
+            3
+          ],
+          "win_rate": 0.5263
+        },
+        {
+          "event_count": 32,
+          "mean_return": 0.0019,
+          "test_blocks": [
+            2,
+            4
+          ],
+          "win_rate": 0.5625
+        },
+        {
+          "event_count": 35,
+          "mean_return": 0.0031,
+          "test_blocks": [
+            2,
+            5
+          ],
+          "win_rate": 0.6
+        },
+        {
+          "event_count": 26,
+          "mean_return": -0.0,
+          "test_blocks": [
+            3,
+            4
+          ],
+          "win_rate": 0.4615
+        },
+        {
+          "event_count": 29,
+          "mean_return": 0.0016,
+          "test_blocks": [
+            3,
+            5
+          ],
+          "win_rate": 0.5172
+        },
+        {
+          "event_count": 23,
+          "mean_return": 0.0047,
+          "test_blocks": [
+            4,
+            5
+          ],
+          "win_rate": 0.5652
+        }
+      ],
+      "worst_split_return": -0.0014
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "mean_split_return": 0.0146,
+      "positive_split_ratio": 0.7857,
+      "split_count": 14,
+      "splits": [
+        {
+          "event_count": 5,
+          "mean_return": -0.003,
+          "test_blocks": [
+            0,
+            1
+          ],
+          "win_rate": 0.6
+        },
+        {
+          "event_count": 2,
+          "mean_return": 0.0232,
+          "test_blocks": [
+            0,
+            2
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 1,
+          "mean_return": 0.0038,
+          "test_blocks": [
+            0,
+            3
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 2,
+          "mean_return": 0.0139,
+          "test_blocks": [
+            0,
+            4
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 1,
+          "mean_return": 0.0038,
+          "test_blocks": [
+            0,
+            5
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 5,
+          "mean_return": 0.0048,
+          "test_blocks": [
+            1,
+            2
+          ],
+          "win_rate": 0.6
+        },
+        {
+          "event_count": 4,
+          "mean_return": -0.0047,
+          "test_blocks": [
+            1,
+            3
+          ],
+          "win_rate": 0.5
+        },
+        {
+          "event_count": 5,
+          "mean_return": 0.0011,
+          "test_blocks": [
+            1,
+            4
+          ],
+          "win_rate": 0.6
+        },
+        {
+          "event_count": 4,
+          "mean_return": -0.0047,
+          "test_blocks": [
+            1,
+            5
+          ],
+          "win_rate": 0.5
+        },
+        {
+          "event_count": 1,
+          "mean_return": 0.0426,
+          "test_blocks": [
+            2,
+            3
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 2,
+          "mean_return": 0.0333,
+          "test_blocks": [
+            2,
+            4
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 1,
+          "mean_return": 0.0426,
+          "test_blocks": [
+            2,
+            5
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 1,
+          "mean_return": 0.0241,
+          "test_blocks": [
+            3,
+            4
+          ],
+          "win_rate": 1.0
+        },
+        {
+          "event_count": 1,
+          "mean_return": 0.0241,
+          "test_blocks": [
+            4,
+            5
+          ],
+          "win_rate": 1.0
+        }
+      ],
+      "worst_split_return": -0.0047
+    }
+  ],
+  "cross_regime_performance_report": [
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "persistent_event_count": 7,
+      "persistent_mean_return": 0.0298,
+      "scope_regime": "Bull Trend",
+      "transition_event_count": 17,
+      "transition_fragility": "HIGH",
+      "transition_mean_return": -0.005
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "persistent_event_count": 17,
+      "persistent_mean_return": 0.011,
+      "scope_regime": "Bear Unwind",
+      "transition_event_count": 26,
+      "transition_fragility": "HIGH",
+      "transition_mean_return": -0.0084
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "persistent_event_count": 3,
+      "persistent_mean_return": -0.0127,
+      "scope_regime": "Crisis Dislocation",
+      "transition_event_count": 2,
+      "transition_fragility": "LOW",
+      "transition_mean_return": 0.0117
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "persistent_event_count": 20,
+      "persistent_mean_return": 0.0146,
+      "scope_regime": "Macro Transition",
+      "transition_event_count": 79,
+      "transition_fragility": "HIGH",
+      "transition_mean_return": -0.0016
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "persistent_event_count": 0,
+      "persistent_mean_return": 0.0,
+      "scope_regime": "Macro Transition",
+      "transition_event_count": 7,
+      "transition_fragility": "ELEVATED",
+      "transition_mean_return": 0.0074
+    }
+  ],
+  "failure_analysis": [
+    {
+      "dominant_failure_mode": "MODERATE",
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "key_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+      "outcome": "REQUIRES_FURTHER_RESEARCH",
+      "title": "Expectation-relief bull continuation"
+    },
+    {
+      "dominant_failure_mode": "MAJOR",
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "key_reason": "Observed mean return did not preserve the expected directional sign.",
+      "outcome": "REJECTED",
+      "title": "Liquidation-pressure bear continuation"
+    },
+    {
+      "dominant_failure_mode": "MAJOR",
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "key_reason": "Observed mean return did not preserve the expected directional sign.",
+      "outcome": "REJECTED",
+      "title": "Crisis safe-haven breakout convexity"
+    },
+    {
+      "dominant_failure_mode": "MODERATE",
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "key_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+      "outcome": "REQUIRES_FURTHER_RESEARCH",
+      "title": "Policy-shock repricing continuation"
+    },
+    {
+      "dominant_failure_mode": "MODERATE",
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "key_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+      "outcome": "REQUIRES_FURTHER_RESEARCH",
+      "title": "Transition-to-trend handoff"
+    }
+  ],
+  "hypothesis_validations": [
+    {
+      "bootstrap": {
+        "bootstrap_mean": 0.0051,
+        "mean_ci_high": 0.0136,
+        "mean_ci_low": -0.0035,
+        "probability_positive": 0.833
+      },
+      "confidence_prior": 0.53,
+      "contradictions": [
+        {
+          "severity": "MODERATE",
+          "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+        }
+      ],
+      "cpcv": {
+        "mean_split_return": 0.0023,
+        "positive_split_ratio": 0.6667,
+        "split_count": 15,
+        "splits": [
+          {
+            "event_count": 8,
+            "mean_return": 0.0087,
+            "test_blocks": [
+              0,
+              1
+            ],
+            "win_rate": 0.625
+          },
+          {
+            "event_count": 3,
+            "mean_return": -0.0031,
+            "test_blocks": [
+              0,
+              2
+            ],
+            "win_rate": 0.3333
+          },
+          {
+            "event_count": 1,
+            "mean_return": -0.0166,
+            "test_blocks": [
+              0,
+              3
+            ],
+            "win_rate": 0.0
+          },
+          {
+            "event_count": 5,
+            "mean_return": -0.008,
+            "test_blocks": [
+              0,
+              4
+            ],
+            "win_rate": 0.2
+          },
+          {
+            "event_count": 11,
+            "mean_return": 0.0048,
+            "test_blocks": [
+              0,
+              5
+            ],
+            "win_rate": 0.5455
+          },
+          {
+            "event_count": 9,
+            "mean_return": 0.0104,
+            "test_blocks": [
+              1,
+              2
+            ],
+            "win_rate": 0.6667
+          },
+          {
+            "event_count": 7,
+            "mean_return": 0.0124,
+            "test_blocks": [
+              1,
+              3
+            ],
+            "win_rate": 0.7143
+          },
+          {
+            "event_count": 11,
+            "mean_return": 0.0057,
+            "test_blocks": [
+              1,
+              4
+            ],
+            "win_rate": 0.5455
+          },
+          {
+            "event_count": 17,
+            "mean_return": 0.0092,
+            "test_blocks": [
+              1,
+              5
+            ],
+            "win_rate": 0.6471
+          },
+          {
+            "event_count": 2,
+            "mean_return": 0.0036,
+            "test_blocks": [
+              2,
+              3
+            ],
+            "win_rate": 0.5
+          },
+          {
+            "event_count": 6,
+            "mean_return": -0.0027,
+            "test_blocks": [
+              2,
+              4
+            ],
+            "win_rate": 0.3333
+          },
+          {
+            "event_count": 12,
+            "mean_return": 0.0064,
+            "test_blocks": [
+              2,
+              5
+            ],
+            "win_rate": 0.5833
+          },
+          {
+            "event_count": 4,
+            "mean_return": -0.0059,
+            "test_blocks": [
+              3,
+              4
+            ],
+            "win_rate": 0.25
+          },
+          {
+            "event_count": 10,
+            "mean_return": 0.007,
+            "test_blocks": [
+              3,
+              5
+            ],
+            "win_rate": 0.6
+          },
+          {
+            "event_count": 14,
+            "mean_return": 0.0033,
+            "test_blocks": [
+              4,
+              5
+            ],
+            "win_rate": 0.5
+          }
+        ],
+        "worst_split_return": -0.0166
+      },
+      "cross_regime_stability": {
+        "persistent_event_count": 7,
+        "persistent_mean_return": 0.0298,
+        "transition_event_count": 17,
+        "transition_fragility": "HIGH",
+        "transition_mean_return": -0.005
+      },
+      "decision": {
+        "key_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+        "outcome": "REQUIRES_FURTHER_RESEARCH",
+        "rationale": "Held some positive signal, but the evidence stack remained insufficiently decisive or too sparse for promotion."
+      },
+      "economic_rationale": "Reserve diversification, real-yield relief, and trend-following capital can reinforce each other once the tape is already trending higher.",
+      "event_count": 24,
+      "expected_direction": "UP",
+      "expected_holding_period": "3-5D",
+      "expected_horizon": "5D",
+      "feature_set": [
+        "regime_return_60",
+        "xau_return_20",
+        "forward_expectation"
+      ],
+      "holding_period_days": 3,
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "monte_carlo": {
+        "median_total_return": 0.1333,
+        "p05_total_return": -0.0759,
+        "p95_total_return": 0.3782,
+        "paths": 500.0,
+        "ruin_probability": 0.026
+      },
+      "out_of_sample_replay": {
+        "event_count": 10,
+        "mean_return": 0.007,
+        "win_rate": 0.6
+      },
+      "probability_of_backtest_overfitting": {
+        "applicable": false,
+        "justification": "Campaign 0005 used fixed deterministic rules and did not rank parameterized models.",
+        "status": "NOT_APPLICABLE"
+      },
+      "regime_scope": [
+        "bull_trend"
+      ],
+      "research_question": "When bull_trend is already active, does a constructive expectation reset allow XAU/USD continuation rather than exhaustion?",
+      "sensitivity": {
+        "positive_variant_ratio": 1.0,
+        "variant_return_range": 0.0011,
+        "variants": [
+          {
+            "event_count": 14,
+            "mean_return": 0.0062,
+            "profile": "conservative"
+          },
+          {
+            "event_count": 24,
+            "mean_return": 0.0051,
+            "profile": "base"
+          },
+          {
+            "event_count": 32,
+            "mean_return": 0.0053,
+            "profile": "permissive"
+          }
+        ],
+        "white_reality_check_p_value": 0.32
+      },
+      "statistics": {
+        "branch_alignment_score": 1.0,
+        "deflated_sharpe_ratio": 0.0013,
+        "effect_size": 0.2015,
+        "mean_return": 0.0051,
+        "median_return": 0.0033,
+        "one_sided_p_value": 0.1618,
+        "probabilistic_sharpe_ratio": 0.8266,
+        "sample_volatility": 0.0255,
+        "t_statistic": 0.987,
+        "trade_sharpe": 0.2015,
+        "win_rate": 0.5417
+      },
+      "stress_testing": {
+        "scenarios": [
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "global_financial_crisis"
+          },
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "gold_liquidation_2013"
+          },
+          {
+            "event_count": 1,
+            "mean_return": -0.0194,
+            "scenario": "pandemic_2020"
+          },
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "inflation_repricing_2022"
+          }
+        ],
+        "worst_mean_return": -0.0194
+      },
+      "suggested_posterior_confidence": 0.5433,
+      "temporal_stability": {
+        "concept_drift_score": 0.4208,
+        "early_mean_return": 0.0087,
+        "late_mean_return": 0.0066,
+        "mid_mean_return": 0.0001,
+        "sign_change_count": 0
+      },
+      "title": "Expectation-relief bull continuation",
+      "validation_rule": "Enter long inside bull_trend when forward_expectation is below the in-regime median while regime_return_60 and xau_return_20 remain above their in-regime medians.",
+      "walk_forward": {
+        "aggregate_mean_return": 0.0051,
+        "aggregate_win_rate": 0.5417,
+        "fold_count": 4,
+        "folds": [
+          {
+            "end": "2008-01-08T05:00:00+00:00",
+            "event_count": 6,
+            "fold_id": 1,
+            "mean_return": 0.0013,
+            "start": "2005-10-11T04:00:00+00:00",
+            "win_rate": 0.5
+          },
+          {
+            "end": "2019-08-14T04:00:00+00:00",
+            "event_count": 6,
+            "fold_id": 2,
+            "mean_return": 0.0096,
+            "start": "2009-11-13T05:00:00+00:00",
+            "win_rate": 0.5
+          },
+          {
+            "end": "2024-09-26T04:00:00+00:00",
+            "event_count": 6,
+            "fold_id": 3,
+            "mean_return": -0.0045,
+            "start": "2019-08-23T04:00:00+00:00",
+            "win_rate": 0.5
+          },
+          {
+            "end": "2026-01-20T05:00:00+00:00",
+            "event_count": 6,
+            "fold_id": 4,
+            "mean_return": 0.0141,
+            "start": "2025-09-22T04:00:00+00:00",
+            "win_rate": 0.6667
+          }
+        ],
+        "positive_fold_ratio": 0.75
+      },
+      "white_reality_check": {
+        "approx_p_value": 0.32,
+        "best_variant_mean_return": 0.0062
+      }
+    },
+    {
+      "bootstrap": {
+        "bootstrap_mean": -0.0007,
+        "mean_ci_high": 0.0055,
+        "mean_ci_low": -0.0065,
+        "probability_positive": 0.42
+      },
+      "confidence_prior": 0.5,
+      "contradictions": [
+        {
+          "severity": "MAJOR",
+          "summary": "Observed mean return did not preserve the expected directional sign."
+        },
+        {
+          "severity": "MODERATE",
+          "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+        },
+        {
+          "severity": "MAJOR",
+          "summary": "Recent out-of-sample replay did not confirm the expected sign."
+        },
+        {
+          "severity": "MODERATE",
+          "summary": "Sensitivity variants did not preserve the expected sign with sufficient stability."
+        }
+      ],
+      "cpcv": {
+        "mean_split_return": -0.0047,
+        "positive_split_ratio": 0.3571,
+        "split_count": 14,
+        "splits": [
+          {
+            "event_count": 20,
+            "mean_return": -0.0004,
+            "test_blocks": [
+              0,
+              2
+            ],
+            "win_rate": 0.5
+          },
+          {
+            "event_count": 15,
+            "mean_return": 0.0067,
+            "test_blocks": [
+              0,
+              3
+            ],
+            "win_rate": 0.7333
+          },
+          {
+            "event_count": 3,
+            "mean_return": -0.0169,
+            "test_blocks": [
+              0,
+              4
+            ],
+            "win_rate": 0.0
+          },
+          {
+            "event_count": 5,
+            "mean_return": -0.0147,
+            "test_blocks": [
+              0,
+              5
+            ],
+            "win_rate": 0.2
+          },
+          {
+            "event_count": 20,
+            "mean_return": -0.0004,
+            "test_blocks": [
+              1,
+              2
+            ],
+            "win_rate": 0.5
+          },
+          {
+            "event_count": 15,
+            "mean_return": 0.0067,
+            "test_blocks": [
+              1,
+              3
+            ],
+            "win_rate": 0.7333
+          },
+          {
+            "event_count": 3,
+            "mean_return": -0.0169,
+            "test_blocks": [
+              1,
+              4
+            ],
+            "win_rate": 0.0
+          },
+          {
+            "event_count": 5,
+            "mean_return": -0.0147,
+            "test_blocks": [
+              1,
+              5
+            ],
+            "win_rate": 0.2
+          },
+          {
+            "event_count": 35,
+            "mean_return": 0.0026,
+            "test_blocks": [
+              2,
+              3
+            ],
+            "win_rate": 0.6
+          },
+          {
+            "event_count": 23,
+            "mean_return": -0.0025,
+            "test_blocks": [
+              2,
+              4
+            ],
+            "win_rate": 0.4348
+          },
+          {
+            "event_count": 25,
+            "mean_return": -0.0033,
+            "test_blocks": [
+              2,
+              5
+            ],
+            "win_rate": 0.44
+          },
+          {
+            "event_count": 18,
+            "mean_return": 0.0028,
+            "test_blocks": [
+              3,
+              4
+            ],
+            "win_rate": 0.6111
+          },
+          {
+            "event_count": 20,
+            "mean_return": 0.0013,
+            "test_blocks": [
+              3,
+              5
+            ],
+            "win_rate": 0.6
+          },
+          {
+            "event_count": 8,
+            "mean_return": -0.0155,
+            "test_blocks": [
+              4,
+              5
+            ],
+            "win_rate": 0.125
+          }
+        ],
+        "worst_split_return": -0.0169
+      },
+      "cross_regime_stability": {
+        "persistent_event_count": 17,
+        "persistent_mean_return": 0.011,
+        "transition_event_count": 26,
+        "transition_fragility": "HIGH",
+        "transition_mean_return": -0.0084
+      },
+      "decision": {
+        "key_reason": "Observed mean return did not preserve the expected directional sign.",
+        "outcome": "REJECTED",
+        "rationale": "Rejected because directional evidence failed to survive the institutional validation floor."
+      },
+      "economic_rationale": "Forced deleveraging and inventory reduction can sustain downside pressure before value-sensitive buyers re-enter the market.",
+      "event_count": 43,
+      "expected_direction": "DOWN",
+      "expected_holding_period": "3-5D",
+      "expected_horizon": "5D",
+      "feature_set": [
+        "xau_return_20",
+        "regime_vol_20",
+        "trend_gap_30_180"
+      ],
+      "holding_period_days": 5,
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "monte_carlo": {
+        "median_total_return": -0.0411,
+        "p05_total_return": -0.2543,
+        "p95_total_return": 0.2529,
+        "paths": 500.0,
+        "ruin_probability": 0.348
+      },
+      "out_of_sample_replay": {
+        "event_count": 6,
+        "mean_return": -0.0145,
+        "win_rate": 0.1667
+      },
+      "probability_of_backtest_overfitting": {
+        "applicable": false,
+        "justification": "Campaign 0005 used fixed deterministic rules and did not rank parameterized models.",
+        "status": "NOT_APPLICABLE"
+      },
+      "regime_scope": [
+        "bear_unwind"
+      ],
+      "research_question": "Inside bear_unwind states, do persistent downside path pressure and elevated volatility continue to dominate the next five trading days?",
+      "sensitivity": {
+        "positive_variant_ratio": 0.0,
+        "variant_return_range": 0.0002,
+        "variants": [
+          {
+            "event_count": 30,
+            "mean_return": -0.0009,
+            "profile": "conservative"
+          },
+          {
+            "event_count": 43,
+            "mean_return": -0.0007,
+            "profile": "base"
+          },
+          {
+            "event_count": 56,
+            "mean_return": -0.0008,
+            "profile": "permissive"
+          }
+        ],
+        "white_reality_check_p_value": 0.92
+      },
+      "statistics": {
+        "branch_alignment_score": 1.0,
+        "deflated_sharpe_ratio": 0.0,
+        "effect_size": -0.0315,
+        "mean_return": -0.0007,
+        "median_return": 0.0003,
+        "one_sided_p_value": 0.5819,
+        "probabilistic_sharpe_ratio": 0.4196,
+        "sample_volatility": 0.0234,
+        "t_statistic": -0.2067,
+        "trade_sharpe": -0.0315,
+        "win_rate": 0.5116
+      },
+      "stress_testing": {
+        "scenarios": [
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "global_financial_crisis"
+          },
+          {
+            "event_count": 6,
+            "mean_return": 0.0051,
+            "scenario": "gold_liquidation_2013"
+          },
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "pandemic_2020"
+          },
+          {
+            "event_count": 4,
+            "mean_return": -0.0107,
+            "scenario": "inflation_repricing_2022"
+          }
+        ],
+        "worst_mean_return": -0.0107
+      },
+      "suggested_posterior_confidence": 0.08,
+      "temporal_stability": {
+        "concept_drift_score": 3.7983,
+        "early_mean_return": -0.0051,
+        "late_mean_return": -0.0024,
+        "mid_mean_return": 0.0054,
+        "sign_change_count": 2
+      },
+      "title": "Liquidation-pressure bear continuation",
+      "validation_rule": "Enter short inside bear_unwind when xau_return_20 and trend_gap_30_180 remain below their in-regime medians while regime_vol_20 is above its in-regime median.",
+      "walk_forward": {
+        "aggregate_mean_return": -0.0007,
+        "aggregate_win_rate": 0.5116,
+        "fold_count": 4,
+        "folds": [
+          {
+            "end": "2013-06-27T04:00:00+00:00",
+            "event_count": 10,
+            "fold_id": 1,
+            "mean_return": 0.0016,
+            "start": "2012-05-16T04:00:00+00:00",
+            "win_rate": 0.4
+          },
+          {
+            "end": "2014-05-09T04:00:00+00:00",
+            "event_count": 11,
+            "fold_id": 2,
+            "mean_return": -0.0026,
+            "start": "2013-07-08T04:00:00+00:00",
+            "win_rate": 0.5455
+          },
+          {
+            "end": "2016-11-23T05:00:00+00:00",
+            "event_count": 11,
+            "fold_id": 3,
+            "mean_return": 0.0086,
+            "start": "2014-05-27T04:00:00+00:00",
+            "win_rate": 0.8182
+          },
+          {
+            "end": "2026-06-29T04:00:00+00:00",
+            "event_count": 11,
+            "fold_id": 4,
+            "mean_return": -0.0103,
+            "start": "2016-12-02T05:00:00+00:00",
+            "win_rate": 0.2727
+          }
+        ],
+        "positive_fold_ratio": 0.25
+      },
+      "white_reality_check": {
+        "approx_p_value": 0.92,
+        "best_variant_mean_return": -0.0007
+      }
+    },
+    {
+      "bootstrap": {
+        "bootstrap_mean": -0.0028,
+        "mean_ci_high": 0.0097,
+        "mean_ci_low": -0.0169,
+        "probability_positive": 0.374
+      },
+      "confidence_prior": 0.49,
+      "contradictions": [
+        {
+          "severity": "MAJOR",
+          "summary": "Observed mean return did not preserve the expected directional sign."
+        },
+        {
+          "severity": "MODERATE",
+          "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+        },
+        {
+          "severity": "MODERATE",
+          "summary": "Sensitivity variants did not preserve the expected sign with sufficient stability."
+        }
+      ],
+      "cpcv": {
+        "mean_split_return": -0.0009,
+        "positive_split_ratio": 0.4444,
+        "split_count": 9,
+        "splits": [
+          {
+            "event_count": 4,
+            "mean_return": -0.0044,
+            "test_blocks": [
+              0,
+              2
+            ],
+            "win_rate": 0.5
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0032,
+            "test_blocks": [
+              0,
+              4
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 4,
+            "mean_return": -0.0044,
+            "test_blocks": [
+              1,
+              2
+            ],
+            "win_rate": 0.5
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0032,
+            "test_blocks": [
+              1,
+              4
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 4,
+            "mean_return": -0.0044,
+            "test_blocks": [
+              2,
+              3
+            ],
+            "win_rate": 0.5
+          },
+          {
+            "event_count": 5,
+            "mean_return": -0.0029,
+            "test_blocks": [
+              2,
+              4
+            ],
+            "win_rate": 0.6
+          },
+          {
+            "event_count": 4,
+            "mean_return": -0.0044,
+            "test_blocks": [
+              2,
+              5
+            ],
+            "win_rate": 0.5
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0032,
+            "test_blocks": [
+              3,
+              4
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0032,
+            "test_blocks": [
+              4,
+              5
+            ],
+            "win_rate": 1.0
+          }
+        ],
+        "worst_split_return": -0.0044
+      },
+      "cross_regime_stability": {
+        "persistent_event_count": 3,
+        "persistent_mean_return": -0.0127,
+        "transition_event_count": 2,
+        "transition_fragility": "LOW",
+        "transition_mean_return": 0.0117
+      },
+      "decision": {
+        "key_reason": "Observed mean return did not preserve the expected directional sign.",
+        "outcome": "REJECTED",
+        "rationale": "Rejected because directional evidence failed to survive the institutional validation floor."
+      },
+      "economic_rationale": "In crisis states, gold receives flow from investors seeking collateral resilience and macro hedging, but only some crises produce durable continuation rather than liquidation whipsaw.",
+      "event_count": 5,
+      "expected_direction": "UP",
+      "expected_holding_period": "2-5D",
+      "expected_horizon": "5D",
+      "feature_set": [
+        "breakout_60",
+        "trend_gap_20_120",
+        "breakdown_20"
+      ],
+      "holding_period_days": 3,
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "monte_carlo": {
+        "median_total_return": -0.0152,
+        "p05_total_return": -0.0823,
+        "p95_total_return": 0.045,
+        "paths": 500.0,
+        "ruin_probability": 0.014
+      },
+      "out_of_sample_replay": {
+        "event_count": 0,
+        "mean_return": 0.0,
+        "win_rate": 0.0
+      },
+      "probability_of_backtest_overfitting": {
+        "applicable": false,
+        "justification": "Campaign 0005 used fixed deterministic rules and did not rank parameterized models.",
+        "status": "NOT_APPLICABLE"
+      },
+      "regime_scope": [
+        "crisis_dislocation"
+      ],
+      "research_question": "Inside crisis_dislocation, do breakout expansion and intermediate trend persistence identify the subset of shocks that produce persistent safe-haven inflows rather than one-day panic noise?",
+      "sensitivity": {
+        "positive_variant_ratio": 0.3333,
+        "variant_return_range": 0.0129,
+        "variants": [
+          {
+            "event_count": 3,
+            "mean_return": 0.0028,
+            "profile": "conservative"
+          },
+          {
+            "event_count": 5,
+            "mean_return": -0.0029,
+            "profile": "base"
+          },
+          {
+            "event_count": 15,
+            "mean_return": -0.0101,
+            "profile": "permissive"
+          }
+        ],
+        "white_reality_check_p_value": 0.742
+      },
+      "statistics": {
+        "branch_alignment_score": 1.0,
+        "deflated_sharpe_ratio": 0.0226,
+        "effect_size": -0.1474,
+        "mean_return": -0.0029,
+        "median_return": 0.0032,
+        "one_sided_p_value": 0.6292,
+        "probabilistic_sharpe_ratio": 0.3832,
+        "sample_volatility": 0.0197,
+        "t_statistic": -0.3296,
+        "trade_sharpe": -0.1474,
+        "win_rate": 0.6
+      },
+      "stress_testing": {
+        "scenarios": [
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "global_financial_crisis"
+          },
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "gold_liquidation_2013"
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0032,
+            "scenario": "pandemic_2020"
+          },
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "inflation_repricing_2022"
+          }
+        ],
+        "worst_mean_return": 0.0
+      },
+      "suggested_posterior_confidence": 0.098,
+      "temporal_stability": {
+        "concept_drift_score": 1.6302,
+        "early_mean_return": -0.0209,
+        "late_mean_return": -0.0113,
+        "mid_mean_return": 0.0145,
+        "sign_change_count": 2
+      },
+      "title": "Crisis safe-haven breakout convexity",
+      "validation_rule": "Enter long inside crisis_dislocation when breakout_60 exceeds the upper in-regime quartile, trend_gap_20_120 is above the in-regime median, and breakdown_20 remains below the in-regime median.",
+      "walk_forward": {
+        "aggregate_mean_return": -0.0029,
+        "aggregate_win_rate": 0.6,
+        "fold_count": 4,
+        "folds": [
+          {
+            "end": "2010-11-12T05:00:00+00:00",
+            "event_count": 1,
+            "fold_id": 1,
+            "mean_return": -0.0209,
+            "start": "2010-11-12T05:00:00+00:00",
+            "win_rate": 0.0
+          },
+          {
+            "end": "2010-11-24T05:00:00+00:00",
+            "event_count": 1,
+            "fold_id": 2,
+            "mean_return": 0.0088,
+            "start": "2010-11-24T05:00:00+00:00",
+            "win_rate": 1.0
+          },
+          {
+            "end": "2010-12-01T05:00:00+00:00",
+            "event_count": 1,
+            "fold_id": 3,
+            "mean_return": 0.0202,
+            "start": "2010-12-01T05:00:00+00:00",
+            "win_rate": 1.0
+          },
+          {
+            "end": "2020-05-05T04:00:00+00:00",
+            "event_count": 2,
+            "fold_id": 4,
+            "mean_return": -0.0113,
+            "start": "2011-09-14T04:00:00+00:00",
+            "win_rate": 0.5
+          }
+        ],
+        "positive_fold_ratio": 0.5
+      },
+      "white_reality_check": {
+        "approx_p_value": 0.742,
+        "best_variant_mean_return": 0.0028
+      }
+    },
+    {
+      "bootstrap": {
+        "bootstrap_mean": 0.0017,
+        "mean_ci_high": 0.0048,
+        "mean_ci_low": -0.0013,
+        "probability_positive": 0.835
+      },
+      "confidence_prior": 0.48,
+      "contradictions": [
+        {
+          "severity": "MODERATE",
+          "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+        }
+      ],
+      "cpcv": {
+        "mean_split_return": 0.0017,
+        "positive_split_ratio": 0.8,
+        "split_count": 15,
+        "splits": [
+          {
+            "event_count": 37,
+            "mean_return": 0.0013,
+            "test_blocks": [
+              0,
+              1
+            ],
+            "win_rate": 0.5135
+          },
+          {
+            "event_count": 44,
+            "mean_return": 0.0001,
+            "test_blocks": [
+              0,
+              2
+            ],
+            "win_rate": 0.5
+          },
+          {
+            "event_count": 38,
+            "mean_return": -0.0014,
+            "test_blocks": [
+              0,
+              3
+            ],
+            "win_rate": 0.4211
+          },
+          {
+            "event_count": 32,
+            "mean_return": 0.0002,
+            "test_blocks": [
+              0,
+              4
+            ],
+            "win_rate": 0.4375
+          },
+          {
+            "event_count": 35,
+            "mean_return": 0.0016,
+            "test_blocks": [
+              0,
+              5
+            ],
+            "win_rate": 0.4857
+          },
+          {
+            "event_count": 37,
+            "mean_return": 0.0027,
+            "test_blocks": [
+              1,
+              2
+            ],
+            "win_rate": 0.6216
+          },
+          {
+            "event_count": 31,
+            "mean_return": 0.0012,
+            "test_blocks": [
+              1,
+              3
+            ],
+            "win_rate": 0.5484
+          },
+          {
+            "event_count": 25,
+            "mean_return": 0.004,
+            "test_blocks": [
+              1,
+              4
+            ],
+            "win_rate": 0.6
+          },
+          {
+            "event_count": 28,
+            "mean_return": 0.0053,
+            "test_blocks": [
+              1,
+              5
+            ],
+            "win_rate": 0.6429
+          },
+          {
+            "event_count": 38,
+            "mean_return": -0.0001,
+            "test_blocks": [
+              2,
+              3
+            ],
+            "win_rate": 0.5263
+          },
+          {
+            "event_count": 32,
+            "mean_return": 0.0019,
+            "test_blocks": [
+              2,
+              4
+            ],
+            "win_rate": 0.5625
+          },
+          {
+            "event_count": 35,
+            "mean_return": 0.0031,
+            "test_blocks": [
+              2,
+              5
+            ],
+            "win_rate": 0.6
+          },
+          {
+            "event_count": 26,
+            "mean_return": -0.0,
+            "test_blocks": [
+              3,
+              4
+            ],
+            "win_rate": 0.4615
+          },
+          {
+            "event_count": 29,
+            "mean_return": 0.0016,
+            "test_blocks": [
+              3,
+              5
+            ],
+            "win_rate": 0.5172
+          },
+          {
+            "event_count": 23,
+            "mean_return": 0.0047,
+            "test_blocks": [
+              4,
+              5
+            ],
+            "win_rate": 0.5652
+          }
+        ],
+        "worst_split_return": -0.0014
+      },
+      "cross_regime_stability": {
+        "persistent_event_count": 20,
+        "persistent_mean_return": 0.0146,
+        "transition_event_count": 79,
+        "transition_fragility": "HIGH",
+        "transition_mean_return": -0.0016
+      },
+      "decision": {
+        "key_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+        "outcome": "REQUIRES_FURTHER_RESEARCH",
+        "rationale": "Held some positive signal, but the evidence stack remained insufficiently decisive or too sparse for promotion."
+      },
+      "economic_rationale": "Macro announcements can reset inflation, rate, and USD expectations quickly; when the first gold response is confirmed by event pressure and directional structure, follow-through may persist for several sessions.",
+      "event_count": 99,
+      "expected_direction": "CONTINUATION_WITH_INITIAL_SHOCK",
+      "expected_holding_period": "1-3D",
+      "expected_horizon": "1-5D",
+      "feature_set": [
+        "xau_return_1",
+        "trend_breakout_interaction",
+        "sessionless_event_pressure"
+      ],
+      "holding_period_days": 3,
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "monte_carlo": {
+        "median_total_return": 0.1787,
+        "p05_total_return": -0.1338,
+        "p95_total_return": 0.5961,
+        "paths": 500.0,
+        "ruin_probability": 0.08
+      },
+      "out_of_sample_replay": {
+        "event_count": 16,
+        "mean_return": 0.0066,
+        "win_rate": 0.6875
+      },
+      "probability_of_backtest_overfitting": {
+        "applicable": false,
+        "justification": "Campaign 0005 used fixed deterministic rules and did not rank parameterized models.",
+        "status": "NOT_APPLICABLE"
+      },
+      "regime_scope": [
+        "macro_transition"
+      ],
+      "research_question": "During macro_transition states, does the first-day gold reaction persist when event pressure and breakout alignment indicate a genuine regime handoff?",
+      "sensitivity": {
+        "positive_variant_ratio": 1.0,
+        "variant_return_range": 0.0014,
+        "variants": [
+          {
+            "event_count": 84,
+            "mean_return": 0.0003,
+            "profile": "conservative"
+          },
+          {
+            "event_count": 99,
+            "mean_return": 0.0017,
+            "profile": "base"
+          },
+          {
+            "event_count": 115,
+            "mean_return": 0.0004,
+            "profile": "permissive"
+          }
+        ],
+        "white_reality_check_p_value": 0.474
+      },
+      "statistics": {
+        "branch_alignment_score": 1.0,
+        "deflated_sharpe_ratio": 0.0,
+        "effect_size": 0.0919,
+        "mean_return": 0.0017,
+        "median_return": 0.0029,
+        "one_sided_p_value": 0.1804,
+        "probabilistic_sharpe_ratio": 0.8197,
+        "sample_volatility": 0.0184,
+        "t_statistic": 0.9139,
+        "trade_sharpe": 0.0919,
+        "win_rate": 0.5354
+      },
+      "stress_testing": {
+        "scenarios": [
+          {
+            "event_count": 1,
+            "mean_return": 0.0031,
+            "scenario": "global_financial_crisis"
+          },
+          {
+            "event_count": 3,
+            "mean_return": -0.0027,
+            "scenario": "gold_liquidation_2013"
+          },
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "pandemic_2020"
+          },
+          {
+            "event_count": 8,
+            "mean_return": 0.0029,
+            "scenario": "inflation_repricing_2022"
+          }
+        ],
+        "worst_mean_return": -0.0027
+      },
+      "suggested_posterior_confidence": 0.4934,
+      "temporal_stability": {
+        "concept_drift_score": 1.6971,
+        "early_mean_return": 0.0014,
+        "late_mean_return": 0.0043,
+        "mid_mean_return": -0.0006,
+        "sign_change_count": 2
+      },
+      "title": "Policy-shock repricing continuation",
+      "validation_rule": "Inside macro_transition, follow the sign of xau_return_1 only when the absolute gold shock, sessionless_event_pressure, and trend_breakout_interaction all align in sign.",
+      "walk_forward": {
+        "aggregate_mean_return": 0.0017,
+        "aggregate_win_rate": 0.5354,
+        "fold_count": 4,
+        "folds": [
+          {
+            "end": "2006-01-30T05:00:00+00:00",
+            "event_count": 24,
+            "fold_id": 1,
+            "mean_return": 0.0007,
+            "start": "2001-09-19T04:00:00+00:00",
+            "win_rate": 0.4583
+          },
+          {
+            "end": "2011-05-11T04:00:00+00:00",
+            "event_count": 25,
+            "fold_id": 2,
+            "mean_return": 0.0021,
+            "start": "2006-04-18T04:00:00+00:00",
+            "win_rate": 0.64
+          },
+          {
+            "end": "2017-01-17T05:00:00+00:00",
+            "event_count": 25,
+            "fold_id": 3,
+            "mean_return": -0.0017,
+            "start": "2011-07-25T04:00:00+00:00",
+            "win_rate": 0.44
+          },
+          {
+            "end": "2026-01-23T05:00:00+00:00",
+            "event_count": 25,
+            "fold_id": 4,
+            "mean_return": 0.0055,
+            "start": "2017-03-16T04:00:00+00:00",
+            "win_rate": 0.6
+          }
+        ],
+        "positive_fold_ratio": 0.5
+      },
+      "white_reality_check": {
+        "approx_p_value": 0.474,
+        "best_variant_mean_return": 0.0017
+      }
+    },
+    {
+      "bootstrap": {
+        "bootstrap_mean": 0.0084,
+        "mean_ci_high": 0.0347,
+        "mean_ci_low": -0.0219,
+        "probability_positive": 0.705
+      },
+      "confidence_prior": 0.45,
+      "contradictions": [
+        {
+          "severity": "MODERATE",
+          "summary": "Bootstrap confidence interval continued to include non-positive mean outcomes."
+        }
+      ],
+      "cpcv": {
+        "mean_split_return": 0.0146,
+        "positive_split_ratio": 0.7857,
+        "split_count": 14,
+        "splits": [
+          {
+            "event_count": 5,
+            "mean_return": -0.003,
+            "test_blocks": [
+              0,
+              1
+            ],
+            "win_rate": 0.6
+          },
+          {
+            "event_count": 2,
+            "mean_return": 0.0232,
+            "test_blocks": [
+              0,
+              2
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0038,
+            "test_blocks": [
+              0,
+              3
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 2,
+            "mean_return": 0.0139,
+            "test_blocks": [
+              0,
+              4
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0038,
+            "test_blocks": [
+              0,
+              5
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 5,
+            "mean_return": 0.0048,
+            "test_blocks": [
+              1,
+              2
+            ],
+            "win_rate": 0.6
+          },
+          {
+            "event_count": 4,
+            "mean_return": -0.0047,
+            "test_blocks": [
+              1,
+              3
+            ],
+            "win_rate": 0.5
+          },
+          {
+            "event_count": 5,
+            "mean_return": 0.0011,
+            "test_blocks": [
+              1,
+              4
+            ],
+            "win_rate": 0.6
+          },
+          {
+            "event_count": 4,
+            "mean_return": -0.0047,
+            "test_blocks": [
+              1,
+              5
+            ],
+            "win_rate": 0.5
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0426,
+            "test_blocks": [
+              2,
+              3
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 2,
+            "mean_return": 0.0333,
+            "test_blocks": [
+              2,
+              4
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0426,
+            "test_blocks": [
+              2,
+              5
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0241,
+            "test_blocks": [
+              3,
+              4
+            ],
+            "win_rate": 1.0
+          },
+          {
+            "event_count": 1,
+            "mean_return": 0.0241,
+            "test_blocks": [
+              4,
+              5
+            ],
+            "win_rate": 1.0
+          }
+        ],
+        "worst_split_return": -0.0047
+      },
+      "cross_regime_stability": {
+        "persistent_event_count": 0,
+        "persistent_mean_return": 0.0,
+        "transition_event_count": 7,
+        "transition_fragility": "ELEVATED",
+        "transition_mean_return": 0.0074
+      },
+      "decision": {
+        "key_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+        "outcome": "REQUIRES_FURTHER_RESEARCH",
+        "rationale": "Held some positive signal, but the evidence stack remained insufficiently decisive or too sparse for promotion."
+      },
+      "economic_rationale": "Some policy and event shocks are not isolated bursts but regime-change catalysts that seed a broader trend followed by slower capital.",
+      "event_count": 7,
+      "expected_direction": "UP_IF_TRANSITION_RESOLVES_CONSTRUCTIVELY",
+      "expected_holding_period": "5-10D",
+      "expected_horizon": "5-15D",
+      "feature_set": [
+        "xau_return_1",
+        "trend_breakout_interaction",
+        "regime_return_60"
+      ],
+      "holding_period_days": 5,
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "monte_carlo": {
+        "median_total_return": 0.0666,
+        "p05_total_return": -0.1435,
+        "p95_total_return": 0.2603,
+        "paths": 500.0,
+        "ruin_probability": 0.082
+      },
+      "out_of_sample_replay": {
+        "event_count": 0,
+        "mean_return": 0.0,
+        "win_rate": 0.0
+      },
+      "probability_of_backtest_overfitting": {
+        "applicable": false,
+        "justification": "Campaign 0005 used fixed deterministic rules and did not rank parameterized models.",
+        "status": "NOT_APPLICABLE"
+      },
+      "regime_scope": [
+        "macro_transition",
+        "bull_trend"
+      ],
+      "research_question": "Do macro_transition shocks that align with directional breakout structure hand off into later bull_trend continuation rather than fading out?",
+      "sensitivity": {
+        "positive_variant_ratio": 1.0,
+        "variant_return_range": 0.0001,
+        "variants": [
+          {
+            "event_count": 7,
+            "mean_return": 0.0074,
+            "profile": "conservative"
+          },
+          {
+            "event_count": 7,
+            "mean_return": 0.0074,
+            "profile": "base"
+          },
+          {
+            "event_count": 9,
+            "mean_return": 0.0073,
+            "profile": "permissive"
+          }
+        ],
+        "white_reality_check_p_value": 0.716
+      },
+      "statistics": {
+        "branch_alignment_score": 1.0,
+        "deflated_sharpe_ratio": 0.0508,
+        "effect_size": 0.1527,
+        "mean_return": 0.0074,
+        "median_return": 0.024,
+        "one_sided_p_value": 0.3431,
+        "probabilistic_sharpe_ratio": 0.6408,
+        "sample_volatility": 0.0485,
+        "t_statistic": 0.4041,
+        "trade_sharpe": 0.1527,
+        "win_rate": 0.7143
+      },
+      "stress_testing": {
+        "scenarios": [
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "global_financial_crisis"
+          },
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "gold_liquidation_2013"
+          },
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "pandemic_2020"
+          },
+          {
+            "event_count": 0,
+            "mean_return": 0.0,
+            "scenario": "inflation_repricing_2022"
+          }
+        ],
+        "worst_mean_return": 0.0
+      },
+      "suggested_posterior_confidence": 0.4582,
+      "temporal_stability": {
+        "concept_drift_score": 1.3675,
+        "early_mean_return": -0.0154,
+        "late_mean_return": -0.003,
+        "mid_mean_return": 0.0458,
+        "sign_change_count": 2
+      },
+      "title": "Transition-to-trend handoff",
+      "validation_rule": "Enter long when a macro_transition day is immediately followed by bull_trend, xau_return_1 stays positive, trend_breakout_interaction remains above zero, and regime_return_60 is above the bull-trend in-regime median.",
+      "walk_forward": {
+        "aggregate_mean_return": 0.0074,
+        "aggregate_win_rate": 0.7143,
+        "fold_count": 4,
+        "folds": [
+          {
+            "end": "2003-01-27T05:00:00+00:00",
+            "event_count": 1,
+            "fold_id": 1,
+            "mean_return": 0.0038,
+            "start": "2003-01-27T05:00:00+00:00",
+            "win_rate": 1.0
+          },
+          {
+            "end": "2006-05-04T04:00:00+00:00",
+            "event_count": 2,
+            "fold_id": 2,
+            "mean_return": 0.0165,
+            "start": "2006-01-31T05:00:00+00:00",
+            "win_rate": 0.5
+          },
+          {
+            "end": "2009-12-02T05:00:00+00:00",
+            "event_count": 2,
+            "fold_id": 3,
+            "mean_return": -0.0258,
+            "start": "2009-11-11T05:00:00+00:00",
+            "win_rate": 0.5
+          },
+          {
+            "end": "2020-07-31T04:00:00+00:00",
+            "event_count": 2,
+            "fold_id": 4,
+            "mean_return": 0.0333,
+            "start": "2011-08-16T04:00:00+00:00",
+            "win_rate": 1.0
+          }
+        ],
+        "positive_fold_ratio": 0.75
+      },
+      "white_reality_check": {
+        "approx_p_value": 0.716,
+        "best_variant_mean_return": 0.0074
+      }
+    }
+  ],
+  "monte_carlo_report": [
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "median_total_return": 0.1333,
+      "p05_total_return": -0.0759,
+      "p95_total_return": 0.3782,
+      "paths": 500.0,
+      "ruin_probability": 0.026
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "median_total_return": -0.0411,
+      "p05_total_return": -0.2543,
+      "p95_total_return": 0.2529,
+      "paths": 500.0,
+      "ruin_probability": 0.348
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "median_total_return": -0.0152,
+      "p05_total_return": -0.0823,
+      "p95_total_return": 0.045,
+      "paths": 500.0,
+      "ruin_probability": 0.014
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "median_total_return": 0.1787,
+      "p05_total_return": -0.1338,
+      "p95_total_return": 0.5961,
+      "paths": 500.0,
+      "ruin_probability": 0.08
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "median_total_return": 0.0666,
+      "p05_total_return": -0.1435,
+      "p95_total_return": 0.2603,
+      "paths": 500.0,
+      "ruin_probability": 0.082
+    }
+  ],
+  "rejected_hypothesis_registry": [
+    {
+      "bootstrap_probability_positive": 0.42,
+      "direction_accuracy": 0.5116,
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "mean_return": -0.0007,
+      "promotion_score": 0.08,
+      "rejection_reason": "Observed mean return did not preserve the expected directional sign.",
+      "sharpe_oos": -0.0315,
+      "title": "Liquidation-pressure bear continuation"
+    },
+    {
+      "bootstrap_probability_positive": 0.374,
+      "direction_accuracy": 0.6,
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "mean_return": -0.0029,
+      "promotion_score": 0.098,
+      "rejection_reason": "Observed mean return did not preserve the expected directional sign.",
+      "sharpe_oos": -0.1474,
+      "title": "Crisis safe-haven breakout convexity"
+    }
+  ],
+  "sensitivity_report": [
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "pbo_status": "NOT_APPLICABLE",
+      "positive_variant_ratio": 1.0,
+      "variant_return_range": 0.0011,
+      "variants": [
+        {
+          "event_count": 14,
+          "mean_return": 0.0062,
+          "profile": "conservative"
+        },
+        {
+          "event_count": 24,
+          "mean_return": 0.0051,
+          "profile": "base"
+        },
+        {
+          "event_count": 32,
+          "mean_return": 0.0053,
+          "profile": "permissive"
+        }
+      ],
+      "white_reality_check_p_value": 0.32
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "pbo_status": "NOT_APPLICABLE",
+      "positive_variant_ratio": 0.0,
+      "variant_return_range": 0.0002,
+      "variants": [
+        {
+          "event_count": 30,
+          "mean_return": -0.0009,
+          "profile": "conservative"
+        },
+        {
+          "event_count": 43,
+          "mean_return": -0.0007,
+          "profile": "base"
+        },
+        {
+          "event_count": 56,
+          "mean_return": -0.0008,
+          "profile": "permissive"
+        }
+      ],
+      "white_reality_check_p_value": 0.92
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "pbo_status": "NOT_APPLICABLE",
+      "positive_variant_ratio": 0.3333,
+      "variant_return_range": 0.0129,
+      "variants": [
+        {
+          "event_count": 3,
+          "mean_return": 0.0028,
+          "profile": "conservative"
+        },
+        {
+          "event_count": 5,
+          "mean_return": -0.0029,
+          "profile": "base"
+        },
+        {
+          "event_count": 15,
+          "mean_return": -0.0101,
+          "profile": "permissive"
+        }
+      ],
+      "white_reality_check_p_value": 0.742
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "pbo_status": "NOT_APPLICABLE",
+      "positive_variant_ratio": 1.0,
+      "variant_return_range": 0.0014,
+      "variants": [
+        {
+          "event_count": 84,
+          "mean_return": 0.0003,
+          "profile": "conservative"
+        },
+        {
+          "event_count": 99,
+          "mean_return": 0.0017,
+          "profile": "base"
+        },
+        {
+          "event_count": 115,
+          "mean_return": 0.0004,
+          "profile": "permissive"
+        }
+      ],
+      "white_reality_check_p_value": 0.474
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "pbo_status": "NOT_APPLICABLE",
+      "positive_variant_ratio": 1.0,
+      "variant_return_range": 0.0001,
+      "variants": [
+        {
+          "event_count": 7,
+          "mean_return": 0.0074,
+          "profile": "conservative"
+        },
+        {
+          "event_count": 7,
+          "mean_return": 0.0074,
+          "profile": "base"
+        },
+        {
+          "event_count": 9,
+          "mean_return": 0.0073,
+          "profile": "permissive"
+        }
+      ],
+      "white_reality_check_p_value": 0.716
+    }
+  ],
+  "validation_matrix": [
+    {
+      "bootstrap_probability_positive": 0.833,
+      "event_count": 24,
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "mean_return": 0.0051,
+      "outcome": "REQUIRES_FURTHER_RESEARCH",
+      "psr": 0.8266,
+      "title": "Expectation-relief bull continuation",
+      "walk_forward_positive_fold_ratio": 0.75
+    },
+    {
+      "bootstrap_probability_positive": 0.42,
+      "event_count": 43,
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "mean_return": -0.0007,
+      "outcome": "REJECTED",
+      "psr": 0.4196,
+      "title": "Liquidation-pressure bear continuation",
+      "walk_forward_positive_fold_ratio": 0.25
+    },
+    {
+      "bootstrap_probability_positive": 0.374,
+      "event_count": 5,
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "mean_return": -0.0029,
+      "outcome": "REJECTED",
+      "psr": 0.3832,
+      "title": "Crisis safe-haven breakout convexity",
+      "walk_forward_positive_fold_ratio": 0.5
+    },
+    {
+      "bootstrap_probability_positive": 0.835,
+      "event_count": 99,
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "mean_return": 0.0017,
+      "outcome": "REQUIRES_FURTHER_RESEARCH",
+      "psr": 0.8197,
+      "title": "Policy-shock repricing continuation",
+      "walk_forward_positive_fold_ratio": 0.5
+    },
+    {
+      "bootstrap_probability_positive": 0.705,
+      "event_count": 7,
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "mean_return": 0.0074,
+      "outcome": "REQUIRES_FURTHER_RESEARCH",
+      "psr": 0.6408,
+      "title": "Transition-to-trend handoff",
+      "walk_forward_positive_fold_ratio": 0.75
+    }
+  ],
+  "validation_protocol": {
+    "bootstrap": "1,000 event-return bootstrap means",
+    "concept_drift": "Early-vs-late event mean drift",
+    "cpcv": "Six contiguous time blocks with two-block held-out combinations and a holding-period embargo approximation",
+    "monte_carlo": "Event-return bootstrap path simulation",
+    "probability_of_backtest_overfitting": "Not applicable because no parameter search or model ranking occurred",
+    "sensitivity": "Conservative, base, and permissive threshold variants",
+    "stress_testing": [
+      "global_financial_crisis",
+      "gold_liquidation_2013",
+      "pandemic_2020",
+      "inflation_repricing_2022"
+    ],
+    "walk_forward": "Four chronological event folds"
+  },
+  "walk_forward_report": [
+    {
+      "aggregate_mean_return": 0.0051,
+      "aggregate_win_rate": 0.5417,
+      "fold_count": 4,
+      "folds": [
+        {
+          "end": "2008-01-08T05:00:00+00:00",
+          "event_count": 6,
+          "fold_id": 1,
+          "mean_return": 0.0013,
+          "start": "2005-10-11T04:00:00+00:00",
+          "win_rate": 0.5
+        },
+        {
+          "end": "2019-08-14T04:00:00+00:00",
+          "event_count": 6,
+          "fold_id": 2,
+          "mean_return": 0.0096,
+          "start": "2009-11-13T05:00:00+00:00",
+          "win_rate": 0.5
+        },
+        {
+          "end": "2024-09-26T04:00:00+00:00",
+          "event_count": 6,
+          "fold_id": 3,
+          "mean_return": -0.0045,
+          "start": "2019-08-23T04:00:00+00:00",
+          "win_rate": 0.5
+        },
+        {
+          "end": "2026-01-20T05:00:00+00:00",
+          "event_count": 6,
+          "fold_id": 4,
+          "mean_return": 0.0141,
+          "start": "2025-09-22T04:00:00+00:00",
+          "win_rate": 0.6667
+        }
+      ],
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "positive_fold_ratio": 0.75
+    },
+    {
+      "aggregate_mean_return": -0.0007,
+      "aggregate_win_rate": 0.5116,
+      "fold_count": 4,
+      "folds": [
+        {
+          "end": "2013-06-27T04:00:00+00:00",
+          "event_count": 10,
+          "fold_id": 1,
+          "mean_return": 0.0016,
+          "start": "2012-05-16T04:00:00+00:00",
+          "win_rate": 0.4
+        },
+        {
+          "end": "2014-05-09T04:00:00+00:00",
+          "event_count": 11,
+          "fold_id": 2,
+          "mean_return": -0.0026,
+          "start": "2013-07-08T04:00:00+00:00",
+          "win_rate": 0.5455
+        },
+        {
+          "end": "2016-11-23T05:00:00+00:00",
+          "event_count": 11,
+          "fold_id": 3,
+          "mean_return": 0.0086,
+          "start": "2014-05-27T04:00:00+00:00",
+          "win_rate": 0.8182
+        },
+        {
+          "end": "2026-06-29T04:00:00+00:00",
+          "event_count": 11,
+          "fold_id": 4,
+          "mean_return": -0.0103,
+          "start": "2016-12-02T05:00:00+00:00",
+          "win_rate": 0.2727
+        }
+      ],
+      "hypothesis_id": "IKROS-HYP-20260802-0402",
+      "positive_fold_ratio": 0.25
+    },
+    {
+      "aggregate_mean_return": -0.0029,
+      "aggregate_win_rate": 0.6,
+      "fold_count": 4,
+      "folds": [
+        {
+          "end": "2010-11-12T05:00:00+00:00",
+          "event_count": 1,
+          "fold_id": 1,
+          "mean_return": -0.0209,
+          "start": "2010-11-12T05:00:00+00:00",
+          "win_rate": 0.0
+        },
+        {
+          "end": "2010-11-24T05:00:00+00:00",
+          "event_count": 1,
+          "fold_id": 2,
+          "mean_return": 0.0088,
+          "start": "2010-11-24T05:00:00+00:00",
+          "win_rate": 1.0
+        },
+        {
+          "end": "2010-12-01T05:00:00+00:00",
+          "event_count": 1,
+          "fold_id": 3,
+          "mean_return": 0.0202,
+          "start": "2010-12-01T05:00:00+00:00",
+          "win_rate": 1.0
+        },
+        {
+          "end": "2020-05-05T04:00:00+00:00",
+          "event_count": 2,
+          "fold_id": 4,
+          "mean_return": -0.0113,
+          "start": "2011-09-14T04:00:00+00:00",
+          "win_rate": 0.5
+        }
+      ],
+      "hypothesis_id": "IKROS-HYP-20260802-0404",
+      "positive_fold_ratio": 0.5
+    },
+    {
+      "aggregate_mean_return": 0.0017,
+      "aggregate_win_rate": 0.5354,
+      "fold_count": 4,
+      "folds": [
+        {
+          "end": "2006-01-30T05:00:00+00:00",
+          "event_count": 24,
+          "fold_id": 1,
+          "mean_return": 0.0007,
+          "start": "2001-09-19T04:00:00+00:00",
+          "win_rate": 0.4583
+        },
+        {
+          "end": "2011-05-11T04:00:00+00:00",
+          "event_count": 25,
+          "fold_id": 2,
+          "mean_return": 0.0021,
+          "start": "2006-04-18T04:00:00+00:00",
+          "win_rate": 0.64
+        },
+        {
+          "end": "2017-01-17T05:00:00+00:00",
+          "event_count": 25,
+          "fold_id": 3,
+          "mean_return": -0.0017,
+          "start": "2011-07-25T04:00:00+00:00",
+          "win_rate": 0.44
+        },
+        {
+          "end": "2026-01-23T05:00:00+00:00",
+          "event_count": 25,
+          "fold_id": 4,
+          "mean_return": 0.0055,
+          "start": "2017-03-16T04:00:00+00:00",
+          "win_rate": 0.6
+        }
+      ],
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "positive_fold_ratio": 0.5
+    },
+    {
+      "aggregate_mean_return": 0.0074,
+      "aggregate_win_rate": 0.7143,
+      "fold_count": 4,
+      "folds": [
+        {
+          "end": "2003-01-27T05:00:00+00:00",
+          "event_count": 1,
+          "fold_id": 1,
+          "mean_return": 0.0038,
+          "start": "2003-01-27T05:00:00+00:00",
+          "win_rate": 1.0
+        },
+        {
+          "end": "2006-05-04T04:00:00+00:00",
+          "event_count": 2,
+          "fold_id": 2,
+          "mean_return": 0.0165,
+          "start": "2006-01-31T05:00:00+00:00",
+          "win_rate": 0.5
+        },
+        {
+          "end": "2009-12-02T05:00:00+00:00",
+          "event_count": 2,
+          "fold_id": 3,
+          "mean_return": -0.0258,
+          "start": "2009-11-11T05:00:00+00:00",
+          "win_rate": 0.5
+        },
+        {
+          "end": "2020-07-31T04:00:00+00:00",
+          "event_count": 2,
+          "fold_id": 4,
+          "mean_return": 0.0333,
+          "start": "2011-08-16T04:00:00+00:00",
+          "win_rate": 1.0
+        }
+      ],
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "positive_fold_ratio": 0.75
+    }
+  ]
+}

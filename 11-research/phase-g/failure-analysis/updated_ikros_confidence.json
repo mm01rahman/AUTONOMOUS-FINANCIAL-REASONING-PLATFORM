@@ -1,0 +1,23 @@
+[
+  {
+    "analysis_adjusted_confidence": 0.4633,
+    "confidence_change": -0.08,
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "prior_confidence": 0.5433,
+    "reason": "Campaign 0006 reduced confidence where failure drivers remained unresolved, while preserving a small credit for surviving directional signal and clearer failure attribution."
+  },
+  {
+    "analysis_adjusted_confidence": 0.4134,
+    "confidence_change": -0.08,
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "prior_confidence": 0.4934,
+    "reason": "Campaign 0006 reduced confidence where failure drivers remained unresolved, while preserving a small credit for surviving directional signal and clearer failure attribution."
+  },
+  {
+    "analysis_adjusted_confidence": 0.2582,
+    "confidence_change": -0.2,
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "prior_confidence": 0.4582,
+    "reason": "Campaign 0006 reduced confidence where failure drivers remained unresolved, while preserving a small credit for surviving directional signal and clearer failure attribution."
+  }
+]

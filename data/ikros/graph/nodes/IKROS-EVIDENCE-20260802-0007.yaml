@@ -1,0 +1,28 @@
+attributes:
+  experiment_ids:
+  - IKROS-EXP-20260802-0601
+  - IKROS-EXP-20260802-0602
+  - IKROS-EXP-20260802-0603
+  - IKROS-EXP-20260802-0604
+  - IKROS-EXP-20260802-0605
+  - IKROS-EXP-20260802-0606
+  recommendations:
+    IKROS-HYP-20260802-0401: RETURN_FOR_VALIDATION
+    IKROS-HYP-20260802-0405: RETURN_FOR_VALIDATION
+    IKROS-HYP-20260802-0408: REMAIN_IN_TESTING
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+  summary: Evidence bundle covering the six diagnostic experiments, updated research
+    gaps, confidence updates, and the recommendation matrix.
+confidence: 0.82
+created_at: '2026-08-02T02:37:46.459254+00:00'
+ikros_id: IKROS-EVIDENCE-20260802-0007
+label: Campaign 0007 diagnostic evidence bundle
+node_id: IKROS-EVIDENCE-20260802-0007
+node_type: EVIDENCE
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T02:37:46.459254+00:00'
+valid_to: null
+wp_refs: []

@@ -1,0 +1,71 @@
+archived_at: null
+capability_refs: []
+confidence: 0.85
+created_at: '2026-08-02T01:51:29.789925+00:00'
+dependency_ids:
+- IKROS-RQ-20260802-0003
+entity_type: ResearchConclusion
+evidence_refs:
+- 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+graph_node_ids:
+- IKROS-CONCL-20260802-0003
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260802-0007
+payload:
+  attributes:
+    approved_catalogue: Institutional Regime-Conditioned Feature Catalogue v1
+    approved_feature_ids:
+    - IKROS-FEAT-20260802-0301
+    - IKROS-FEAT-20260802-0302
+    - IKROS-FEAT-20260802-0303
+    - IKROS-FEAT-20260802-0304
+    - IKROS-FEAT-20260802-0305
+    - IKROS-FEAT-20260802-0306
+    - IKROS-FEAT-20260802-0307
+    - IKROS-FEAT-20260802-0308
+    - IKROS-FEAT-20260802-0309
+    - IKROS-FEAT-20260802-0310
+    - IKROS-FEAT-20260802-0311
+    - IKROS-FEAT-20260802-0312
+    decision: APPROVE_FEATURE_CATALOGUE
+    recommendation: Approve Institutional Regime-Conditioned Feature Catalogue v1
+      for future hypothesis generation. Retain macro pressure, geo severity, and event
+      counts as context variables, but do not promote them as standalone predictive
+      features.
+    rejected_feature_ids:
+    - IKROS-KO-20260802-0321
+    - IKROS-KO-20260802-0322
+    - IKROS-KO-20260802-0323
+    - IKROS-KO-20260802-0324
+    - IKROS-KO-20260802-0325
+    - IKROS-KO-20260802-0326
+    - IKROS-KO-20260802-0327
+  lifecycle_state: PUBLISHED
+  source_format: JSON
+  source_kind: VALIDATION_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\feature_discovery_validation_report.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-CONCL-20260802-0003
+- IKROS-CONTRA-20260802-0003
+- IKROS-HYP-20260802-0003
+- IKROS-VAL-20260802-0003
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Campaign 0003 recommends the approved feature catalogue for future alpha
+  hypothesis generation inside the six-state taxonomy.
+tags:
+- researchconclusion
+- validation_report
+- ingested
+tier: T4_INSTITUTIONAL
+title: Approve the regime-conditioned feature catalogue
+updated_at: '2026-08-02T01:51:29.789925+00:00'
+valid_from: '2026-08-02T01:51:29.789925+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

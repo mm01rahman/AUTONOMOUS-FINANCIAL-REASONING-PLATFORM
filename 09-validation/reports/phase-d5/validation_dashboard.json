@@ -1,0 +1,135 @@
+{
+  "generated_at": "2026-08-01T13:17:51.507830+00:00",
+  "runtime": {
+    "deterministic": true,
+    "replay_checksum": "9742f494fdfc3515e8b0e323af38d4ed73ecb039f6eeb671be7903a99ca8e079",
+    "expected_checksum": "9742f494fdfc3515e8b0e323af38d4ed73ecb039f6eeb671be7903a99ca8e079",
+    "layer_results": [
+      {
+        "layer_id": "L1",
+        "passed": true,
+        "detail": "features=8"
+      },
+      {
+        "layer_id": "L2",
+        "passed": true,
+        "detail": "quorum=6"
+      },
+      {
+        "layer_id": "L3",
+        "passed": true,
+        "detail": "epistemic_uncertainty=0.010975"
+      },
+      {
+        "layer_id": "L4",
+        "passed": true,
+        "detail": "candidate_ru=0.000000"
+      },
+      {
+        "layer_id": "L5",
+        "passed": true,
+        "detail": "verdict=3"
+      },
+      {
+        "layer_id": "L6",
+        "passed": true,
+        "detail": "validated via separate math/statistical checks"
+      }
+    ],
+    "world_state_uncertainty": 0.010974632411,
+    "policy_null_trade": false,
+    "failures": []
+  },
+  "mathematics": {
+    "checks": [
+      {
+        "name": "PCR5 mass conservation",
+        "passed": true,
+        "detail": "sum=1.000000000000, conflict=0.160000000000"
+      },
+      {
+        "name": "Reliability discounting bounds",
+        "passed": true,
+        "detail": "sum=1.000000000000"
+      },
+      {
+        "name": "Pignistic transform normalization",
+        "passed": true,
+        "detail": "sum=1.000000000000"
+      },
+      {
+        "name": "Brier score and calibration bounds",
+        "passed": true,
+        "detail": "brier=0.140000, weights={'L2-MAC': 0.9299999999999999}"
+      },
+      {
+        "name": "Replay world mass sum",
+        "passed": true,
+        "detail": "sum=0.999999999999"
+      }
+    ],
+    "failures": []
+  },
+  "stress": {
+    "cases": [
+      {
+        "case_id": "STRESS-001",
+        "passed": true,
+        "detail": "total feed loss -> DEGRADED + a_null"
+      },
+      {
+        "case_id": "STRESS-002",
+        "passed": true,
+        "detail": "scenario_paths=64"
+      },
+      {
+        "case_id": "STRESS-003",
+        "passed": true,
+        "detail": "decision_p99=0.1309ms"
+      },
+      {
+        "case_id": "STRESS-004",
+        "passed": true,
+        "detail": "long replay deterministic checksum"
+      }
+    ],
+    "failures": []
+  },
+  "performance": {
+    "replay_speed_events_per_sec": 12577.29837752673,
+    "decision_p99_ms": 0.2545,
+    "throughput_paths": 64,
+    "benchmark_samples": 180,
+    "passed": true
+  },
+  "statistics": {
+    "sharpe_ratio": 0.22963979982068555,
+    "sortino_ratio": 0.4763321661268475,
+    "calmar_ratio": 6.92638785909795,
+    "profit_factor": 1.7771027023787362,
+    "max_drawdown": 0.0010068281290916343,
+    "win_rate": 0.609375,
+    "expectancy": 2.7673341811368995e-05,
+    "brier_score": 0.23914581014540603,
+    "calibration_error": 0.3796503675888464,
+    "decision_accuracy": 0.609375,
+    "precision": 0.609375,
+    "recall": 0.609375,
+    "policy_rejection_rate": 1.0
+  },
+  "regression": {
+    "scenario_count": 14,
+    "runtime_failures": [],
+    "math_failures": [],
+    "stress_failures": [],
+    "performance_passed": true,
+    "deterministic_passed": true,
+    "statistical_snapshot": {
+      "sharpe_ratio": 0.22963979982068555,
+      "sortino_ratio": 0.4763321661268475,
+      "max_drawdown": 0.0010068281290916343,
+      "brier_score": 0.23914581014540603
+    },
+    "passed": true
+  }
+}

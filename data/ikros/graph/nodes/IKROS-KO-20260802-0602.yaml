@@ -1,0 +1,26 @@
+attributes:
+  expected_information_gain: 3.9
+  hypothesis_id: IKROS-HYP-20260802-0405
+  secondary_root_causes:
+  - bootstrap uncertainty remained too wide for promotion
+  - edge weakened outside the cleanest in-regime subset
+  - temporal adaptation and sign instability weakened repeatability
+  - at least one rule component behaved as redundant rather than additive
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_knowledge.json
+  summary: The policy-shock thesis contains a real but shallow edge; it degrades when
+    macro-transition events expand into noisy, high-range follow-through and when
+    the regime handoff remains unresolved after the first shock day.
+  updated_confidence: 0.4134
+confidence: 0.4134
+created_at: '2026-08-02T02:28:53.148775+00:00'
+ikros_id: IKROS-KO-20260802-0602
+label: IKROS-HYP-20260802-0405 root cause card
+node_id: IKROS-KO-20260802-0602
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T02:28:53.148775+00:00'
+valid_to: null
+wp_refs: []

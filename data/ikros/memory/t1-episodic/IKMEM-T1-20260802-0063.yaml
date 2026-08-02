@@ -1,0 +1,263 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:28:53.802800+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0066
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/failure-analysis/FAILURE_ANALYSIS_CAMPAIGN.md
+- 11-research/phase-g/scientific-validation/SCIENTIFIC_VALIDATION_FINAL_CAMPAIGN_REPORT.md
+- 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0009
+- IKROS-RESEARCHTASK-20260802-0068
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0063
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0009
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0066
+    finished_at: '2026-08-02T02:28:53.802800+00:00'
+    kind: KNOWLEDGE_REGISTRATION
+    max_attempts: 1
+    payload:
+      source_path: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_knowledge.json
+    planned_order: 2
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0068
+      memory_record_id: null
+      metrics:
+        graph_node_ids:
+        - IKROS-DSV-20260802-0006
+        - IKROS-KO-20260802-0600
+        - IKROS-EVIDENCE-20260802-0006
+        - IKROS-CONTRA-20260802-0006
+        - IKROS-KO-20260802-0606
+        - IKROS-KO-20260802-0601
+        - IKROS-KO-20260802-0602
+        - IKROS-KO-20260802-0603
+        ingestion_status: INGESTED
+        memory_ids:
+        - IKMEM-T2-20260802-0094
+        - IKMEM-T2-20260802-0095
+        - IKMEM-T1-20260802-0062
+        - IKMEM-T2-20260802-0096
+        - IKMEM-T2-20260802-0097
+        - IKMEM-T2-20260802-0098
+        - IKMEM-T2-20260802-0099
+        - IKMEM-T2-20260802-0100
+      output_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_knowledge.json
+      - IKROS-CONTRA-20260802-0006
+      - IKROS-DSV-20260802-0006
+      - IKROS-EVIDENCE-20260802-0006
+      - IKROS-KO-20260802-0600
+      - IKROS-KO-20260802-0601
+      - IKROS-KO-20260802-0602
+      - IKROS-KO-20260802-0603
+      - IKROS-KO-20260802-0606
+      - failure_analysis_knowledge
+      payload:
+        graph_node_ids:
+        - IKROS-DSV-20260802-0006
+        - IKROS-KO-20260802-0600
+        - IKROS-EVIDENCE-20260802-0006
+        - IKROS-CONTRA-20260802-0006
+        - IKROS-KO-20260802-0606
+        - IKROS-KO-20260802-0601
+        - IKROS-KO-20260802-0602
+        - IKROS-KO-20260802-0603
+        ingested_at: '2026-08-02T02:28:53.795795+00:00'
+        ingestion_id: IKING-20260802-0014
+        memory_ids:
+        - IKMEM-T2-20260802-0094
+        - IKMEM-T2-20260802-0095
+        - IKMEM-T1-20260802-0062
+        - IKMEM-T2-20260802-0096
+        - IKMEM-T2-20260802-0097
+        - IKMEM-T2-20260802-0098
+        - IKMEM-T2-20260802-0099
+        - IKMEM-T2-20260802-0100
+        object_fingerprints:
+        - '{"attributes": {"retained_hypothesis_count": 3, "source_validation_campaign":
+          "IKROS-EXP-20260802-0005"}, "capability_refs": [], "confidence": 0.88, "created_at":
+          "2026-08-02T02:28:53.148775+00:00", "dependency_ids": [], "evidence_refs":
+          ["11-research/phase-g/failure-analysis/failure_analysis_analysis.json"],
+          "identifier": "IKROS-DSV-20260802-0006", "lifecycle_state": "VALIDATED",
+          "memory_tier": null, "object_type": "DatasetVersion", "relationships": [],
+          "source_format": "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT",
+          "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\failure-analysis\\failure_analysis_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Failure-analysis
+          snapshot combining the frozen validation frame with Campaign 0005 retained-hypothesis
+          diagnostics.", "title": "Campaign 0006 failure analysis dataset reference",
+          "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"mean_adjusted_confidence": 0.3783, "retained_hypotheses":
+          ["IKROS-HYP-20260802-0401", "IKROS-HYP-20260802-0405", "IKROS-HYP-20260802-0408"]},
+          "capability_refs": [], "confidence": 0.83, "created_at": "2026-08-02T02:28:53.148775+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/failure-analysis/ALPHA_FAILURE_ATLAS.md"],
+          "identifier": "IKROS-KO-20260802-0600", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\failure-analysis\\failure_analysis_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Institutional
+          methodology for explaining why retained hypotheses failed promotion without
+          changing their definitions.", "title": "Campaign 0006 failure-analysis methodology",
+          "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"retained_hypotheses": ["IKROS-HYP-20260802-0401", "IKROS-HYP-20260802-0405",
+          "IKROS-HYP-20260802-0408"], "root_cause_count": 3}, "capability_refs": [],
+          "confidence": 0.81, "created_at": "2026-08-02T02:28:53.148775+00:00", "dependency_ids":
+          [], "evidence_refs": ["11-research/phase-g/failure-analysis/failure_analysis_analysis.json"],
+          "identifier": "IKROS-EVIDENCE-20260802-0006", "lifecycle_state": "ACTIVE",
+          "memory_tier": null, "object_type": "Evidence", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\failure-analysis\\failure_analysis_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Evidence bundle
+          carrying the failure atlas, root-cause catalogue, research gaps, experiment
+          backlog, and confidence update report.", "title": "Campaign 0006 failure-analysis
+          evidence bundle", "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"primary_failures": ["The continuation thesis is strongest
+          only while bull_trend persists; negative transition windows and adverse
+          USD spillovers diluted a positive but modest core effect below the institutional
+          promotion floor.", "The policy-shock thesis contains a real but shallow
+          edge; it degrades when macro-transition events expand into noisy, high-range
+          follow-through and when the regime handoff remains unresolved after the
+          first shock day.", "The handoff thesis never failed on direction, but the
+          sample is too sparse and too transition-specific to satisfy institutional
+          replication standards; most explanatory power comes from identifying the
+          rare macro-to-trend handoff itself, not from the added confirmation filters."],
+          "retained_hypotheses": ["IKROS-HYP-20260802-0401", "IKROS-HYP-20260802-0405",
+          "IKROS-HYP-20260802-0408"]}, "capability_refs": [], "confidence": 0.76,
+          "created_at": "2026-08-02T02:28:53.148775+00:00", "dependency_ids": [],
+          "evidence_refs": ["11-research/phase-g/failure-analysis/failure_analysis_analysis.json"],
+          "identifier": "IKROS-CONTRA-20260802-0006", "lifecycle_state": "ACTIVE",
+          "memory_tier": null, "object_type": "ContradictoryEvidence", "relationships":
+          [], "source_format": "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT",
+          "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\failure-analysis\\failure_analysis_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Contradiction
+          bundle explaining why retained hypotheses remained below the institutional
+          promotion standard.", "title": "Campaign 0006 contradiction bundle", "version":
+          "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"recommended_experiments": ["IKROS-EXP-20260802-0605",
+          "IKROS-EXP-20260802-0606", "IKROS-EXP-20260802-0603", "IKROS-EXP-20260802-0604",
+          "IKROS-EXP-20260802-0601", "IKROS-EXP-20260802-0602"], "retained_hypotheses":
+          ["IKROS-HYP-20260802-0401", "IKROS-HYP-20260802-0405", "IKROS-HYP-20260802-0408"]},
+          "capability_refs": [], "confidence": 0.8, "created_at": "2026-08-02T02:28:53.148775+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/failure-analysis/FAILURE_ANALYSIS_FINAL_CAMPAIGN_REPORT.md"],
+          "identifier": "IKROS-KO-20260802-0606", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\failure-analysis\\failure_analysis_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "ARB recommendation:
+          preserve the retained hypothesis set unchanged, treat IKROS-HYP-20260802-0401
+          and IKROS-HYP-20260802-0405 as transition-fragility refinement cases, treat
+          IKROS-HYP-20260802-0408 as a sparse-episode coverage case, and execute only
+          the recommended diagnostic experiments before Campaign 0007.", "title":
+          "Campaign 0006 final conclusion", "version": "1.0.0", "work_package_refs":
+          []}'
+        - '{"attributes": {"expected_information_gain": 4.03, "hypothesis_id": "IKROS-HYP-20260802-0401",
+          "secondary_root_causes": ["bootstrap uncertainty remained too wide for promotion",
+          "edge weakened outside the cleanest in-regime subset"], "updated_confidence":
+          0.4633}, "capability_refs": [], "confidence": 0.4633, "created_at": "2026-08-02T02:28:53.148775+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/failure-analysis/ALPHA_FAILURE_ATLAS.md"],
+          "identifier": "IKROS-KO-20260802-0601", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\failure-analysis\\failure_analysis_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "The continuation
+          thesis is strongest only while bull_trend persists; negative transition
+          windows and adverse USD spillovers diluted a positive but modest core effect
+          below the institutional promotion floor.", "title": "IKROS-HYP-20260802-0401
+          root cause card", "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"expected_information_gain": 3.9, "hypothesis_id": "IKROS-HYP-20260802-0405",
+          "secondary_root_causes": ["bootstrap uncertainty remained too wide for promotion",
+          "edge weakened outside the cleanest in-regime subset", "temporal adaptation
+          and sign instability weakened repeatability", "at least one rule component
+          behaved as redundant rather than additive"], "updated_confidence": 0.4134},
+          "capability_refs": [], "confidence": 0.4134, "created_at": "2026-08-02T02:28:53.148775+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/failure-analysis/ALPHA_FAILURE_ATLAS.md"],
+          "identifier": "IKROS-KO-20260802-0602", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\failure-analysis\\failure_analysis_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "The policy-shock
+          thesis contains a real but shallow edge; it degrades when macro-transition
+          events expand into noisy, high-range follow-through and when the regime
+          handoff remains unresolved after the first shock day.", "title": "IKROS-HYP-20260802-0405
+          root cause card", "version": "1.0.0", "work_package_refs": []}'
+        - '{"attributes": {"expected_information_gain": 5.0, "hypothesis_id": "IKROS-HYP-20260802-0408",
+          "secondary_root_causes": ["bootstrap uncertainty remained too wide for promotion",
+          "edge weakened outside the cleanest in-regime subset", "temporal adaptation
+          and sign instability weakened repeatability", "no recent holdout evidence
+          existed for institutional replay", "at least one rule component behaved
+          as redundant rather than additive"], "updated_confidence": 0.2582}, "capability_refs":
+          [], "confidence": 0.2582, "created_at": "2026-08-02T02:28:53.148775+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/failure-analysis/ALPHA_FAILURE_ATLAS.md"],
+          "identifier": "IKROS-KO-20260802-0603", "lifecycle_state": "ACTIVE", "memory_tier":
+          null, "object_type": "KnowledgeObject", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\failure-analysis\\failure_analysis_knowledge.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "The handoff
+          thesis never failed on direction, but the sample is too sparse and too transition-specific
+          to satisfy institutional replication standards; most explanatory power comes
+          from identifying the rare macro-to-trend handoff itself, not from the added
+          confirmation filters.", "title": "IKROS-HYP-20260802-0408 root cause card",
+          "version": "1.0.0", "work_package_refs": []}'
+        object_ids:
+        - IKROS-DSV-20260802-0006
+        - IKROS-KO-20260802-0600
+        - IKROS-EVIDENCE-20260802-0006
+        - IKROS-CONTRA-20260802-0006
+        - IKROS-KO-20260802-0606
+        - IKROS-KO-20260802-0601
+        - IKROS-KO-20260802-0602
+        - IKROS-KO-20260802-0603
+        source_format: JSON
+        source_hash: 4501e976f5f812310ff689da5d9cf0f02ff02e35176116c8498f8b9fd02fc6f8
+        source_kind: INTERNAL_RESEARCH_REPORT
+        source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_knowledge.json
+        source_version: 1.0.0
+        status: INGESTED
+        warnings: []
+      selected_ids: []
+    started_at: '2026-08-02T02:28:52.727091+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0068
+    title: Knowledge Registration
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0009
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_knowledge.json
+- IKROS-CONTRA-20260802-0006
+- IKROS-DSV-20260802-0006
+- IKROS-EVIDENCE-20260802-0006
+- IKROS-KO-20260802-0600
+- IKROS-KO-20260802-0601
+- IKROS-KO-20260802-0602
+- IKROS-KO-20260802-0603
+- IKROS-KO-20260802-0606
+- failure_analysis_knowledge
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: KNOWLEDGE_REGISTRATION COMPLETED
+tags:
+- research-orchestrator
+- knowledge_registration
+tier: T1_EPISODIC
+title: 'Campaign 0006 Institutional Alpha Failure Analysis :: Knowledge Registration'
+updated_at: '2026-08-02T02:28:53.802800+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

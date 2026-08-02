@@ -1,0 +1,148 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-FIX-0002"
+capability_id:
+  id: "PAPER-SHADOW-EXEC"
+  version: "1.0"
+title: "Calibrate Phase D single-asset concentration monitoring"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-027"]
+    trace_sls: "AFRP-PHASE-D-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('PAPER-SHADOW-EXEC')"
+
+resources:
+  cpu: "low"
+  memory: "512MB"
+  network: false
+  filesystem:
+    write:
+      - "tools/paper_trading/risk.py"
+      - "tools/paper_trading/orchestrator.py"
+      - "tests/unit/test_paper_trading_modules.py"
+      - "docs/research/PHASE_D_PAPER_TRADING.md"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+      - "CHANGELOG.md"
+      - "05-work-packages/WP-FIX-0002.yaml"
+      - "05-work-packages/WP-FIX-0002/evidence/EXEC-039.yaml"
+      - "11-research/phase-d/"
+    read:
+      - "05-work-packages/WP-IMP-0038.yaml"
+      - "11-research/phase-d/risk_alerts.json"
+      - "11-research/phase-d/runtime_health.json"
+      - "11-research/phase-d/decision_log.jsonl"
+
+execution:
+  priority: "high"
+  estimated_complexity: "small"
+  estimated_duration: "2h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "tools/paper_trading/risk.py"
+    - "tools/paper_trading/orchestrator.py"
+    - "11-research/phase-d/risk_alerts.json"
+    - "11-research/phase-d/decision_log.jsonl"
+
+outputs:
+  expected_source_files:
+    - "tools/paper_trading/risk.py"
+    - "tools/paper_trading/orchestrator.py"
+    - "tests/unit/test_paper_trading_modules.py"
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "CHANGELOG.md"
+    - "11-research/phase-d/"
+  expected_evidence:
+    - "05-work-packages/WP-FIX-0002/evidence/EXEC-039.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/paper_trading/risk.py"
+    - "tools/paper_trading/orchestrator.py"
+    - "tests/unit/test_paper_trading_modules.py"
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "CHANGELOG.md"
+    - "11-research/phase-d/"
+  evidence_generated:
+    - "05-work-packages/WP-FIX-0002/evidence/EXEC-039.yaml"
+
+produces:
+  capability:
+    id: "PAPER-SHADOW-EXEC"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/paper_trading/risk.py"
+    - "tools/paper_trading/orchestrator.py"
+    - "tests/unit/test_paper_trading_modules.py"
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "CHANGELOG.md"
+    - "05-work-packages/WP-FIX-0002.yaml"
+    - "05-work-packages/WP-FIX-0002/evidence/EXEC-039.yaml"
+    - "11-research/phase-d/"
+  non_goals:
+    - "No runtime architecture changes."
+    - "No broker integration or feature expansion."
+    - "No weakening of gross exposure, leverage, drawdown, volatility, or confidence-drift limits."
+
+requirements:
+  d5_002_risk_calibration:
+    classification: "Configuration Defect"
+    problem_statement: "Phase D shadow execution trades only XAUUSD, but the concentration monitor treated every non-flat single-position book as concentration=1.0 and generated 23 warning alerts even though gross exposure, leverage, drawdown, and position notional stayed within configured limits."
+    affected_capabilities:
+      - "PAPER-SHADOW-EXEC"
+    evidence:
+      - "11-research/phase-d/d5-baseline/risk_alerts.json"
+      - "11-research/phase-d/d5-baseline/runtime_health.json"
+      - "11-research/phase-d/d5-baseline/decision_log.jsonl"
+    proposed_correction:
+      - "When per-position notionals are supplied, compute concentration from the largest position weight rather than abs(net)/gross."
+      - "Suppress concentration alerts for single-position books while leaving all other risk limits unchanged."
+      - "Have the orchestrator pass actual open-position notionals into the risk monitor."
+    acceptance_criteria:
+      - "The 24-iteration, seed-42 paper trading replay emits zero concentration alerts when only one XAUUSD position is active."
+      - "Multi-position books still emit concentration alerts when the largest weight exceeds 0.70."
+      - "Decision-log checksum and portfolio path remain deterministic."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check tools/paper_trading/risk.py tools/paper_trading/orchestrator.py tests/unit/test_paper_trading_modules.py"
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools/paper_trading/risk.py tools/paper_trading/orchestrator.py tests/unit/test_paper_trading_modules.py"
+  pytest_scoped:
+    required: true
+    command: "uv run pytest tests/unit/test_paper_trading_modules.py -q"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+
+completion:
+  success_requires:
+    - "False-positive concentration readiness failures are removed for the approved single-instrument Phase D scope."
+    - "All other risk controls remain enforceable."
+
+failure_modes:
+  ERR-CONCENTRATION-FALSE-POSITIVE: "Single-instrument paper books are still marked degraded solely because gross and net exposure are equal."
+
+execution_prompt: |
+  Implement WP-FIX-0002 strictly within bounded_files and preserve the approved Phase D architecture and runtime contracts.

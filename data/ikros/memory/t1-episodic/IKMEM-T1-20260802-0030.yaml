@@ -1,0 +1,214 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:51:23.385588+00:00'
+dependency_ids: []
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/feature_importance.json
+- 11-research/phase-g/feature-discovery/FEATURE_DISCOVERY_CAMPAIGN.md
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\feature_discovery_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0003
+- IKROS-RESEARCHTASK-20260802-0023
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0030
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0003
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on: []
+    finished_at: '2026-08-02T01:51:23.384589+00:00'
+    kind: RESEARCH_QUESTION
+    max_attempts: 1
+    payload:
+      entity:
+        campaign_tag: PHASE-G-FEATURE-003
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        confidence:
+          data: 0.78
+          economic: 0.67
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.58
+          operational: 0.64
+          overall: 0.5807652332945916
+          prior: 0.54
+          replication: 0.0
+          statistical: 0.46
+          validation: 0.43
+        entity_type: ResearchQuestion
+        ikros_id: IKROS-RQ-20260802-0003
+        instrument: XAU/USD
+        lifecycle_state: ACTIVE
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0002
+            external_refs:
+            - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+            - 11-research/phase-e/feature_importance.json
+            features:
+            - IKROS-FEAT-20260802-0201
+            - IKROS-FEAT-20260802-0202
+            - IKROS-FEAT-20260802-0203
+            - IKROS-FEAT-20260802-0204
+            - IKROS-FEAT-20260802-0205
+            - IKROS-FEAT-20260802-0206
+            - IKROS-FEAT-20260802-0207
+            inputs:
+            - IKROS-RQ-20260802-0002
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0003-feature-discovery
+            creation_context: Campaign 0003 feature discovery
+            motivation: Determine which institutional features remain useful after
+              conditioning on the accepted six-state taxonomy.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        linked_conclusions: []
+        linked_hypotheses: []
+        motivation: Campaign 0002 accepted the state model. The next institutional
+          question is what information remains useful inside that state space.
+        scope: FEATURE_DISCOVERY
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        time_horizon: 5D
+        title: Which features exhibit stable predictive power conditional on the Institutional
+          Six-State Overlay Taxonomy v1?
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: ResearchQuestion
+    planned_order: 1
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0023
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-RQ-20260802-0003
+      payload:
+        campaign_tag: PHASE-G-FEATURE-003
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        confidence:
+          data: 0.78
+          economic: 0.67
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.58
+          operational: 0.64
+          overall: 0.5807652332945916
+          prior: 0.54
+          replication: 0.0
+          statistical: 0.46
+          validation: 0.43
+        entity_type: ResearchQuestion
+        ikros_id: IKROS-RQ-20260802-0003
+        instrument: XAU/USD
+        lifecycle_state: ACTIVE
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0002
+            external_refs:
+            - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+            - 11-research/phase-e/feature_importance.json
+            features:
+            - IKROS-FEAT-20260802-0201
+            - IKROS-FEAT-20260802-0202
+            - IKROS-FEAT-20260802-0203
+            - IKROS-FEAT-20260802-0204
+            - IKROS-FEAT-20260802-0205
+            - IKROS-FEAT-20260802-0206
+            - IKROS-FEAT-20260802-0207
+            inputs:
+            - IKROS-RQ-20260802-0002
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0003-feature-discovery
+            creation_context: Campaign 0003 feature discovery
+            motivation: Determine which institutional features remain useful after
+              conditioning on the accepted six-state taxonomy.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        linked_conclusions: []
+        linked_hypotheses: []
+        motivation: Campaign 0002 accepted the state model. The next institutional
+          question is what information remains useful inside that state space.
+        scope: FEATURE_DISCOVERY
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        time_horizon: 5D
+        title: Which features exhibit stable predictive power conditional on the Institutional
+          Six-State Overlay Taxonomy v1?
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T01:51:23.222013+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0023
+    title: Research Question
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0003
+- IKROS-RQ-20260802-0003
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: RESEARCH_QUESTION COMPLETED
+tags:
+- research-orchestrator
+- research_question
+tier: T1_EPISODIC
+title: 'Campaign 0003 Feature Discovery :: Research Question'
+updated_at: '2026-08-02T01:51:23.385588+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

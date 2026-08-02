@@ -1,0 +1,163 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0037"
+capability_id:
+  id: "QUANT-BACKTEST"
+  version: "1.0"
+title: "Implement Phase C Quantitative Research & Backtesting Platform"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-022", "NFR-023", "NFR-024"]
+    trace_sls: "AFRP-PHASE-C-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('PHASEB-VV')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/backtest/"
+      - "tests/unit/test_backtest_engine.py"
+      - "tests/unit/test_backtest_benchmarks.py"
+      - "11-research/"
+      - "docs/research/PHASE_C_BACKTEST.md"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+      - "05-work-packages/WP-IMP-0037.yaml"
+      - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+      - "pyproject.toml"
+    read:
+      - "06-runtime/"
+      - "03-engineering/"
+      - "C:/Users/mm01r/AFRP-Datasets/processed/"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "xlarge"
+  estimated_duration: "8h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "tools/system_gate.py"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "pyproject.toml"
+
+outputs:
+  expected_source_files:
+    - "tools/backtest/__init__.py"
+    - "tools/backtest/engine.py"
+    - "tools/backtest/benchmarks.py"
+    - "tools/backtest/costs.py"
+    - "tools/backtest/metrics.py"
+    - "tools/backtest/regimes.py"
+    - "tools/backtest/reports.py"
+    - "tools/backtest/campaign.py"
+    - "tools/backtest/cli.py"
+    - "tests/unit/test_backtest_engine.py"
+    - "tests/unit/test_backtest_benchmarks.py"
+    - "docs/research/PHASE_C_BACKTEST.md"
+    - "11-research/backtesting_report.md"
+    - "11-research/benchmark_comparison.md"
+    - "11-research/regime_analysis.md"
+    - "11-research/robustness_report.md"
+    - "11-research/sensitivity_report.md"
+    - "11-research/trade_analysis.md"
+    - "11-research/performance_report.md"
+    - "11-research/executive_summary.md"
+    - "11-research/results/afrp_vs_benchmarks.json"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/backtest/"
+    - "tests/unit/test_backtest_engine.py"
+    - "tests/unit/test_backtest_benchmarks.py"
+    - "11-research/"
+    - "docs/research/PHASE_C_BACKTEST.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "pyproject.toml"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+
+produces:
+  capability:
+    id: "QUANT-BACKTEST"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/backtest/"
+    - "tests/unit/test_backtest_engine.py"
+    - "tests/unit/test_backtest_benchmarks.py"
+    - "11-research/"
+    - "docs/research/PHASE_C_BACKTEST.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "05-work-packages/WP-IMP-0037.yaml"
+    - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+    - "pyproject.toml"
+  non_goals:
+    - "No live broker integration."
+    - "No real-time signal generation."
+    - "No forward testing."
+
+requirements:
+  quant_backtest:
+    module: "tools/backtest"
+    rules:
+      - "Engine must be deterministic under identical inputs."
+      - "All 8 historical regimes must be evaluated."
+      - "6 benchmark strategies must be compared."
+      - "Execution costs must be applied to all results."
+      - "Reports must be written to 11-research/."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+
+completion:
+  success_requires:
+    - "All quality gates pass."
+    - "777+ tests passing."
+    - "8 regime evaluations complete."
+    - "6 benchmark comparisons complete."
+    - "9 research reports generated."
+
+failure_modes:
+  ERR-DATA: "OHLCV data unavailable — falls back to synthetic data."
+  ERR-PIPELINE: "Runtime pipeline call fails — uses rule-based signal fallback."
+  ERR-PERF: "Campaign runs too slowly — reduce dataset size."

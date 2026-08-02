@@ -1,0 +1,97 @@
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-ORCHESTRATOR
+- IKROS-INGESTION
+completed_at: null
+confidence:
+  data: 0.8
+  economic: 0.68
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.0
+  operational: 0.71
+  overall: 0.7282588139064662
+  prior: 0.55
+  replication: 0.0
+  statistical: 0.0
+  validation: 0.0
+dataset_versions:
+- IKROS-DSV-20260802-0005
+- IKROS-DSV-20260802-0006
+entity_type: Experiment
+failures_produced: []
+feature_versions:
+- xau_return_1
+- sessionless_event_pressure
+- trend_breakout_interaction
+git_commit: ''
+hypotheses:
+- IKROS-HYP-20260802-0405
+ikros_id: IKROS-EXP-20260802-0603
+in_sample_end: ''
+in_sample_start: ''
+lifecycle_state: REVIEWED
+lineage:
+  dependencies:
+    datasets:
+    - IKROS-DSV-20260802-0005
+    - IKROS-DSV-20260802-0006
+    external_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_analysis.json
+    features:
+    - xau_return_1
+    - sessionless_event_pressure
+    - trend_breakout_interaction
+    inputs:
+    - IKROS-HYP-20260802-0405
+    models:
+    - institutional_six_state_overlay_taxonomy_v1
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: campaign-0007-diagnostic-experiment
+    creation_context: Campaign 0007 diagnostic experiment program
+    motivation: Campaign 0006 concluded that H0405 was real but shallow, with likely
+      branch imbalance hidden inside the aggregate event result.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+out_of_sample_end: ''
+out_of_sample_start: ''
+parameters:
+  recommendation: RETURN_FOR_VALIDATION
+  support_classification: SUPPORTS_WITH_ASYMMETRY
+  validation_method: Branch-level diagnostic replay on the frozen H0405 event sample.
+protocol: Replay the governed H0405 event set and evaluate bullish- and bearish-shock
+  branches separately while preserving the original continuation rule.
+random_seed: 42
+reproducibility_hash: f877f5802ada7d255b94021c92fb0e22b775db0dd5c8cfd8f4b34d1ae2205d4c
+spec_refs:
+- SPEC-012
+- SPEC-060
+title: Macro-transition branch asymmetry audit
+validations_produced: []
+version: 1.0.0
+version_history:
+- change_summary: State → COMPLETE. Campaign 0007 diagnostic experiment execution
+    completed.
+  changed_at: '2026-08-02T02:37:54.907034+00:00'
+  confidence_at_time: 0.7282588139064662
+  version: 1.0.0
+- change_summary: State → REVIEWED. Campaign 0007 diagnostic experiment reviewed for
+    ARB recommendation.
+  changed_at: '2026-08-02T02:37:54.911043+00:00'
+  confidence_at_time: 0.7282588139064662
+  version: 1.0.0
+work_package_refs: []

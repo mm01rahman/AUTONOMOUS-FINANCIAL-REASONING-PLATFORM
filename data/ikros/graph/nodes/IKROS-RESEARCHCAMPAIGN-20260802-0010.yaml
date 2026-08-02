@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Execute the six governed diagnostic experiments from Campaign 0006, reduce
+    uncertainty around the retained hypotheses, and produce the next-step ARB recommendation
+    without modifying any hypothesis definition.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0010
+confidence: 0.0
+created_at: '2026-08-02T02:37:42.857861+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0010
+label: Campaign 0007 Institutional Diagnostic Experiment Program
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0010
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

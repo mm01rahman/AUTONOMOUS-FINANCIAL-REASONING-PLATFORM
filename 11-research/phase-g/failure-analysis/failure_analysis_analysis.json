@@ -1,0 +1,1213 @@
+{
+  "alpha_failure_atlas": [
+    {
+      "analysis_adjusted_confidence": 0.4633,
+      "expected_information_gain": 4.03,
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "root_cause": "The continuation thesis is strongest only while bull_trend persists; negative transition windows and adverse USD spillovers diluted a positive but modest core effect below the institutional promotion floor.",
+      "title": "Expectation-relief bull continuation"
+    },
+    {
+      "analysis_adjusted_confidence": 0.4134,
+      "expected_information_gain": 3.9,
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "root_cause": "The policy-shock thesis contains a real but shallow edge; it degrades when macro-transition events expand into noisy, high-range follow-through and when the regime handoff remains unresolved after the first shock day.",
+      "title": "Policy-shock repricing continuation"
+    },
+    {
+      "analysis_adjusted_confidence": 0.2582,
+      "expected_information_gain": 5.0,
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "root_cause": "The handoff thesis never failed on direction, but the sample is too sparse and too transition-specific to satisfy institutional replication standards; most explanatory power comes from identifying the rare macro-to-trend handoff itself, not from the added confirmation filters.",
+      "title": "Transition-to-trend handoff"
+    }
+  ],
+  "campaign": {
+    "alpha_failure_atlas": "Institutional Alpha Failure Atlas v1",
+    "arb_recommendation": "ARB recommendation: preserve the retained hypothesis set unchanged, treat IKROS-HYP-20260802-0401 and IKROS-HYP-20260802-0405 as transition-fragility refinement cases, treat IKROS-HYP-20260802-0408 as a sparse-episode coverage case, and execute only the recommended diagnostic experiments before Campaign 0007.",
+    "completed_hypothesis_count": 3,
+    "mean_adjusted_confidence": 0.3783,
+    "retained_hypotheses": [
+      "IKROS-HYP-20260802-0401",
+      "IKROS-HYP-20260802-0405",
+      "IKROS-HYP-20260802-0408"
+    ],
+    "title": "Campaign 0006 Institutional Alpha Failure Analysis & Hypothesis Refinement"
+  },
+  "lineage_updates": [
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "linked_reports": [
+        "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+        "11-research/phase-g/failure-analysis/ALPHA_FAILURE_ATLAS.md"
+      ],
+      "new_contradictory_evidence_id": "IKROS-CONTRA-20260802-0006",
+      "new_evidence_id": "IKROS-EVIDENCE-20260802-0006",
+      "new_experiment_id": "IKROS-EXP-20260802-0006"
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "linked_reports": [
+        "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+        "11-research/phase-g/failure-analysis/ALPHA_FAILURE_ATLAS.md"
+      ],
+      "new_contradictory_evidence_id": "IKROS-CONTRA-20260802-0006",
+      "new_evidence_id": "IKROS-EVIDENCE-20260802-0006",
+      "new_experiment_id": "IKROS-EXP-20260802-0006"
+    },
+    {
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "linked_reports": [
+        "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+        "11-research/phase-g/failure-analysis/ALPHA_FAILURE_ATLAS.md"
+      ],
+      "new_contradictory_evidence_id": "IKROS-CONTRA-20260802-0006",
+      "new_evidence_id": "IKROS-EVIDENCE-20260802-0006",
+      "new_experiment_id": "IKROS-EXP-20260802-0006"
+    }
+  ],
+  "recommended_experiment_backlog": [
+    {
+      "expected_information_gain": 4.8,
+      "experiment_id": "IKROS-EXP-20260802-0605",
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "objective": "Reconstruct and catalogue every governed macro-to-bull handoff episode to determine whether the edge survives broader historical coverage.",
+      "priority": "P1",
+      "title": "Sparse handoff episode expansion audit"
+    },
+    {
+      "expected_information_gain": 4.6,
+      "experiment_id": "IKROS-EXP-20260802-0606",
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "objective": "Document event ordering, regime label changes, and subsequent trend adoption for each handoff episode without changing the hypothesis definition.",
+      "priority": "P1",
+      "title": "Transition sequence replay book"
+    },
+    {
+      "expected_information_gain": 4.5,
+      "experiment_id": "IKROS-EXP-20260802-0603",
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "objective": "Evaluate bullish and bearish policy-shock branches separately to determine whether one side is carrying the aggregate result.",
+      "priority": "P1",
+      "title": "Macro-transition branch asymmetry audit"
+    },
+    {
+      "expected_information_gain": 4.4,
+      "experiment_id": "IKROS-EXP-20260802-0604",
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "objective": "Compare narrow-range and high-range macro-transition events to isolate noisy post-shock follow-through from genuine repricing continuation.",
+      "priority": "P1",
+      "title": "Wide-range transition contamination study"
+    },
+    {
+      "expected_information_gain": 4.3,
+      "experiment_id": "IKROS-EXP-20260802-0601",
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "objective": "Replay only the persistent bull_trend windows and compare them with transition-overlap windows to quantify contamination from regime exits.",
+      "priority": "P1",
+      "title": "Bull-state persistence replay audit"
+    },
+    {
+      "expected_information_gain": 4.1,
+      "experiment_id": "IKROS-EXP-20260802-0602",
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "objective": "Measure how low-versus-high DXY pressure changes continuation reliability without altering the hypothesis rule.",
+      "priority": "P1",
+      "title": "USD spillover decomposition study"
+    }
+  ],
+  "research_gap_analysis": [
+    {
+      "affected_hypotheses": "IKROS-HYP-20260802-0408",
+      "research_value": 5.0,
+      "severity": "HIGH",
+      "summary": "Only a very small number of governed handoff episodes exist, leaving no meaningful out-of-sample replay coverage in the recent sample.",
+      "theme": "Episode coverage"
+    },
+    {
+      "affected_hypotheses": "IKROS-HYP-20260802-0408",
+      "research_value": 5.0,
+      "severity": "HIGH",
+      "summary": "The frozen daily research frame cannot resolve whether the macro shock, liquidity transfer, and trend confirmation occurred in a causally coherent sequence.",
+      "theme": "Intraday transition structure"
+    },
+    {
+      "affected_hypotheses": "IKROS-HYP-20260802-0408",
+      "research_value": 5.0,
+      "severity": "MEDIUM",
+      "summary": "No governed systematic-positioning proxy exists to tell whether trend followers actually took over after the initial macro shock.",
+      "theme": "Participant adoption"
+    },
+    {
+      "affected_hypotheses": "IKROS-HYP-20260802-0401",
+      "research_value": 4.03,
+      "severity": "MEDIUM",
+      "summary": "The frozen regime stack does not isolate crisis-overlap bull windows beyond the top-level taxonomy, leaving tail episodes pooled with cleaner continuation states.",
+      "theme": "Crisis overlap labelling"
+    },
+    {
+      "affected_hypotheses": "IKROS-HYP-20260802-0401",
+      "research_value": 4.03,
+      "severity": "MEDIUM",
+      "summary": "Forward expectation is present, but there is no richer governed decomposition separating real-yield relief from USD weakness and reserve-demand impulses.",
+      "theme": "Cross-asset macro decomposition"
+    },
+    {
+      "affected_hypotheses": "IKROS-HYP-20260802-0401",
+      "research_value": 4.03,
+      "severity": "HIGH",
+      "summary": "No governed CTA positioning, futures crowding, or ETF-flow series exists to distinguish clean trend continuation from overcrowded bull exhaustion.",
+      "theme": "Participant crowding and positioning"
+    },
+    {
+      "affected_hypotheses": "IKROS-HYP-20260802-0405",
+      "research_value": 3.9,
+      "severity": "HIGH",
+      "summary": "There is no governed intraday ordering between rates, USD, and gold reactions, so the study cannot tell whether gold is leading or simply following a broader repricing wave.",
+      "theme": "Cross-asset sequencing"
+    },
+    {
+      "affected_hypotheses": "IKROS-HYP-20260802-0405",
+      "research_value": 3.9,
+      "severity": "HIGH",
+      "summary": "The frozen stack lacks richer governed distinctions between scheduled policy decisions, surprise macro prints, and disorderly headlines inside macro_transition.",
+      "theme": "Event taxonomy granularity"
+    },
+    {
+      "affected_hypotheses": "IKROS-HYP-20260802-0405",
+      "research_value": 3.9,
+      "severity": "MEDIUM",
+      "summary": "Range and event-pressure proxies exist, but no governed session-depth or spread proxy distinguishes orderly follow-through from illiquid headline noise.",
+      "theme": "Liquidity and event-quality proxies"
+    }
+  ],
+  "retained_hypotheses": [
+    {
+      "alternative_economic_explanations": [
+        "Observed continuation may reflect generic benign-USD carry conditions rather than a distinct expectation-relief mechanism.",
+        "The few crisis-overlap bull windows can overwhelm otherwise constructive expectation resets and make the thesis look weaker than the pure bull-trend episodes."
+      ],
+      "campaign_0005_reference": {
+        "bootstrap": {
+          "bootstrap_mean": 0.0051,
+          "mean_ci_high": 0.0136,
+          "mean_ci_low": -0.0035,
+          "probability_positive": 0.833
+        },
+        "cross_regime_stability": {
+          "persistent_event_count": 7,
+          "persistent_mean_return": 0.0298,
+          "transition_event_count": 17,
+          "transition_fragility": "HIGH",
+          "transition_mean_return": -0.005
+        },
+        "out_of_sample_replay": {
+          "event_count": 10,
+          "mean_return": 0.007,
+          "win_rate": 0.6
+        },
+        "statistics": {
+          "branch_alignment_score": 1.0,
+          "deflated_sharpe_ratio": 0.0013,
+          "effect_size": 0.2015,
+          "mean_return": 0.0051,
+          "median_return": 0.0033,
+          "one_sided_p_value": 0.1618,
+          "probabilistic_sharpe_ratio": 0.8266,
+          "sample_volatility": 0.0255,
+          "t_statistic": 0.987,
+          "trade_sharpe": 0.2015,
+          "win_rate": 0.5417
+        },
+        "walk_forward": {
+          "aggregate_mean_return": 0.0051,
+          "aggregate_win_rate": 0.5417,
+          "fold_count": 4,
+          "positive_fold_ratio": 0.75
+        }
+      },
+      "computed_diagnostics": {
+        "monte_carlo": {
+          "median_total_return": 0.1333,
+          "p05_total_return": -0.0759,
+          "p95_total_return": 0.3782,
+          "paths": 500.0,
+          "ruin_probability": 0.026
+        },
+        "sensitivity": {
+          "positive_variant_ratio": 1.0,
+          "variant_return_range": 0.0011,
+          "variants": [
+            {
+              "event_count": 14,
+              "mean_return": 0.0062,
+              "profile": "conservative"
+            },
+            {
+              "event_count": 24,
+              "mean_return": 0.0051,
+              "profile": "base"
+            },
+            {
+              "event_count": 32,
+              "mean_return": 0.0053,
+              "profile": "permissive"
+            }
+          ],
+          "white_reality_check_p_value": 0.32
+        },
+        "stress_testing": {
+          "scenarios": [
+            {
+              "event_count": 0,
+              "mean_return": 0.0,
+              "scenario": "global_financial_crisis"
+            },
+            {
+              "event_count": 0,
+              "mean_return": 0.0,
+              "scenario": "gold_liquidation_2013"
+            },
+            {
+              "event_count": 1,
+              "mean_return": -0.0194,
+              "scenario": "pandemic_2020"
+            },
+            {
+              "event_count": 0,
+              "mean_return": 0.0,
+              "scenario": "inflation_repricing_2022"
+            }
+          ],
+          "worst_mean_return": -0.0194
+        }
+      },
+      "dependence_analysis": {
+        "cross_asset_dependence": {
+          "event_count": 24,
+          "high_mean_return": -0.0033,
+          "interpretation": "Higher-pressure slice weakened average continuation.",
+          "low_mean_return": 0.0136,
+          "median": 0.0053,
+          "split_available": true
+        },
+        "liquidity_dependence": {
+          "range": {
+            "event_count": 24,
+            "high_mean_return": 0.0071,
+            "interpretation": "Higher-pressure slice carried stronger average continuation.",
+            "low_mean_return": 0.0031,
+            "median": 0.0192,
+            "split_available": true
+          },
+          "volatility": {
+            "event_count": 24,
+            "high_mean_return": 0.0085,
+            "interpretation": "Higher-pressure slice carried stronger average continuation.",
+            "low_mean_return": 0.0018,
+            "median": 0.0086,
+            "split_available": true
+          }
+        },
+        "macro_dependence": {
+          "event_count": 24,
+          "high_mean_return": 0.0025,
+          "interpretation": "Higher-pressure slice weakened average continuation.",
+          "low_mean_return": 0.0077,
+          "median": 0.2219,
+          "split_available": true
+        }
+      },
+      "evidence_matrix": [
+        {
+          "dimension": "Statistical signal",
+          "implication": "Positive direction survived, but statistical amplitude remained below promotion strength.",
+          "signal": "mean=0.0051, t=0.9870, p=0.1618"
+        },
+        {
+          "dimension": "Bootstrap robustness",
+          "implication": "Confidence interval still touched non-positive territory.",
+          "signal": "CI=[-0.0035, 0.0136], P(>0)=0.8330"
+        },
+        {
+          "dimension": "Regime dependence",
+          "implication": "Performance was not equally portable across clean persistent states and transition-overlap states.",
+          "signal": "persistent=0.0298, transition=-0.0050, fragility=HIGH"
+        },
+        {
+          "dimension": "Temporal degradation",
+          "implication": "Temporal stability weakened enough to block institutional promotion.",
+          "signal": "drift=0.4208, sign_changes=0"
+        },
+        {
+          "dimension": "Out-of-sample replay",
+          "implication": "Recent replay support existed only where event coverage was sufficient.",
+          "signal": "events=10, mean=0.0070, win=0.6000"
+        },
+        {
+          "dimension": "Monte Carlo resilience",
+          "implication": "Path-level variation still exposed a non-trivial downside tail even where the average event sign stayed positive.",
+          "signal": "median=0.1333, downside_p05=-0.0759"
+        },
+        {
+          "dimension": "Sensitivity",
+          "implication": "Threshold variants kept the sign positive, but robustness alone was not enough to offset weak aggregate evidence.",
+          "signal": "positive_variant_ratio=1.0000, return_range=0.0011"
+        },
+        {
+          "dimension": "Cross-asset dependence",
+          "implication": "Higher-pressure slice weakened average continuation.",
+          "signal": "DXY low=0.0136, DXY high=-0.0033"
+        },
+        {
+          "dimension": "Stress windows",
+          "implication": "Stress episodes remained too sparse or too uneven to establish institutional robustness on their own.",
+          "signal": "worst_window_mean=-0.0194"
+        },
+        {
+          "dimension": "Feature interaction gaps",
+          "implication": "Some rule components remained critical, while others looked redundant or over-restrictive.",
+          "signal": "forward_expectation_low=BINDING, regime_return_high=OVER_RESTRICTIVE, xau_return_high=SUPPORTING"
+        }
+      ],
+      "expected_information_gain": {
+        "rationale": "Information gain is highest where uncertainty is still material, event coverage is thin, and missing-data gaps directly block mechanism discrimination.",
+        "score": 4.03
+      },
+      "failure_tree": [
+        {
+          "evidence": "Mean return 0.0051, win rate 0.5417.",
+          "level": "Root",
+          "node": "Institutional promotion failure"
+        },
+        {
+          "evidence": "Transition fragility=HIGH, transition mean=-0.0050.",
+          "level": "Primary",
+          "node": "Regime fragility"
+        },
+        {
+          "evidence": "Concept drift=0.4208, sign changes=0.",
+          "level": "Primary",
+          "node": "Temporal degradation"
+        },
+        {
+          "evidence": "Redundant or over-restrictive conditions: regime_return_high.",
+          "level": "Secondary",
+          "node": "Feature interaction weakness"
+        }
+      ],
+      "feature_gap_analysis": [
+        {
+          "base_mean_return": 0.0051,
+          "classification": "BINDING",
+          "condition": "forward_expectation_low",
+          "dropped_condition_event_count": 46,
+          "dropped_condition_mean_return": 0.0034,
+          "interpretation": "Removing forward_expectation_low materially weakened the average event return (0.0051 -> 0.0034)."
+        },
+        {
+          "base_mean_return": 0.0051,
+          "classification": "OVER_RESTRICTIVE",
+          "condition": "regime_return_high",
+          "dropped_condition_event_count": 37,
+          "dropped_condition_mean_return": 0.006,
+          "interpretation": "Removing regime_return_high preserved or improved the mean return while broadening coverage, suggesting that the filter may be too tight."
+        },
+        {
+          "base_mean_return": 0.0051,
+          "classification": "SUPPORTING",
+          "condition": "xau_return_high",
+          "dropped_condition_event_count": 32,
+          "dropped_condition_mean_return": 0.0039,
+          "interpretation": "Removing xau_return_high changed the result modestly, so the condition still helps explain the mechanism even if it is not the sole driver."
+        }
+      ],
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "missing_data_assessment": [
+        {
+          "gap_id": "gap-0401-crowding",
+          "missing_artifact": "No governed CTA positioning, futures crowding, or ETF-flow series exists to distinguish clean trend continuation from overcrowded bull exhaustion.",
+          "severity": "HIGH",
+          "theme": "Participant crowding and positioning"
+        },
+        {
+          "gap_id": "gap-0401-real-yields",
+          "missing_artifact": "Forward expectation is present, but there is no richer governed decomposition separating real-yield relief from USD weakness and reserve-demand impulses.",
+          "severity": "MEDIUM",
+          "theme": "Cross-asset macro decomposition"
+        },
+        {
+          "gap_id": "gap-0401-crisis-overlap",
+          "missing_artifact": "The frozen regime stack does not isolate crisis-overlap bull windows beyond the top-level taxonomy, leaving tail episodes pooled with cleaner continuation states.",
+          "severity": "MEDIUM",
+          "theme": "Crisis overlap labelling"
+        }
+      ],
+      "recommended_additional_experiments": [
+        {
+          "expected_information_gain": 4.3,
+          "experiment_id": "IKROS-EXP-20260802-0601",
+          "objective": "Replay only the persistent bull_trend windows and compare them with transition-overlap windows to quantify contamination from regime exits.",
+          "priority": "P1",
+          "title": "Bull-state persistence replay audit"
+        },
+        {
+          "expected_information_gain": 4.1,
+          "experiment_id": "IKROS-EXP-20260802-0602",
+          "objective": "Measure how low-versus-high DXY pressure changes continuation reliability without altering the hypothesis rule.",
+          "priority": "P1",
+          "title": "USD spillover decomposition study"
+        }
+      ],
+      "recommended_refinements": [
+        "Retain the hypothesis statement but require future validation runs to report bull-state persistence separately from transition-overlap windows.",
+        "Treat DXY and expectation relief as a conditioning panel, not a single blended success criterion, so adverse USD spillovers are visible rather than hidden inside the aggregate result.",
+        "Require a dedicated exhaustion-versus-continuation replay pack for pandemic-style shock windows before reconsidering institutional promotion."
+      ],
+      "root_cause_analysis": {
+        "primary_root_cause": "The continuation thesis is strongest only while bull_trend persists; negative transition windows and adverse USD spillovers diluted a positive but modest core effect below the institutional promotion floor.",
+        "secondary_root_causes": [
+          "bootstrap uncertainty remained too wide for promotion",
+          "edge weakened outside the cleanest in-regime subset"
+        ]
+      },
+      "title": "Expectation-relief bull continuation",
+      "updated_confidence": {
+        "analysis_adjusted_confidence": 0.4633,
+        "campaign_0005_confidence": 0.5433,
+        "confidence_change": -0.08,
+        "rationale": "Campaign 0006 reduced confidence where failure drivers remained unresolved, while preserving a small credit for surviving directional signal and clearer failure attribution."
+      },
+      "validation_context": {
+        "campaign_0005_outcome": "REQUIRES_FURTHER_RESEARCH",
+        "campaign_0005_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+        "event_count": 24,
+        "holding_period_days": 3
+      },
+      "validation_weaknesses": [
+        "One-sided statistical significance remained below the institutional bar.",
+        "Bootstrap confidence interval continued to include non-positive outcomes."
+      ]
+    },
+    {
+      "alternative_economic_explanations": [
+        "The retained edge may be generic post-event drift rather than specifically policy repricing continuation.",
+        "The event-alignment rule may be capturing broad directional coherence while the explicit event-magnitude threshold adds little incremental information."
+      ],
+      "campaign_0005_reference": {
+        "bootstrap": {
+          "bootstrap_mean": 0.0017,
+          "mean_ci_high": 0.0048,
+          "mean_ci_low": -0.0013,
+          "probability_positive": 0.835
+        },
+        "cross_regime_stability": {
+          "persistent_event_count": 20,
+          "persistent_mean_return": 0.0146,
+          "transition_event_count": 79,
+          "transition_fragility": "HIGH",
+          "transition_mean_return": -0.0016
+        },
+        "out_of_sample_replay": {
+          "event_count": 16,
+          "mean_return": 0.0066,
+          "win_rate": 0.6875
+        },
+        "statistics": {
+          "branch_alignment_score": 1.0,
+          "deflated_sharpe_ratio": 0.0,
+          "effect_size": 0.0919,
+          "mean_return": 0.0017,
+          "median_return": 0.0029,
+          "one_sided_p_value": 0.1804,
+          "probabilistic_sharpe_ratio": 0.8197,
+          "sample_volatility": 0.0184,
+          "t_statistic": 0.9139,
+          "trade_sharpe": 0.0919,
+          "win_rate": 0.5354
+        },
+        "walk_forward": {
+          "aggregate_mean_return": 0.0017,
+          "aggregate_win_rate": 0.5354,
+          "fold_count": 4,
+          "positive_fold_ratio": 0.5
+        }
+      },
+      "computed_diagnostics": {
+        "monte_carlo": {
+          "median_total_return": 0.1787,
+          "p05_total_return": -0.1338,
+          "p95_total_return": 0.5961,
+          "paths": 500.0,
+          "ruin_probability": 0.08
+        },
+        "sensitivity": {
+          "positive_variant_ratio": 1.0,
+          "variant_return_range": 0.0014,
+          "variants": [
+            {
+              "event_count": 84,
+              "mean_return": 0.0003,
+              "profile": "conservative"
+            },
+            {
+              "event_count": 99,
+              "mean_return": 0.0017,
+              "profile": "base"
+            },
+            {
+              "event_count": 115,
+              "mean_return": 0.0004,
+              "profile": "permissive"
+            }
+          ],
+          "white_reality_check_p_value": 0.474
+        },
+        "stress_testing": {
+          "scenarios": [
+            {
+              "event_count": 1,
+              "mean_return": 0.0031,
+              "scenario": "global_financial_crisis"
+            },
+            {
+              "event_count": 3,
+              "mean_return": -0.0027,
+              "scenario": "gold_liquidation_2013"
+            },
+            {
+              "event_count": 0,
+              "mean_return": 0.0,
+              "scenario": "pandemic_2020"
+            },
+            {
+              "event_count": 8,
+              "mean_return": 0.0029,
+              "scenario": "inflation_repricing_2022"
+            }
+          ],
+          "worst_mean_return": -0.0027
+        }
+      },
+      "dependence_analysis": {
+        "cross_asset_dependence": {
+          "event_count": 99,
+          "high_mean_return": 0.0005,
+          "interpretation": "Higher-pressure slice weakened average continuation.",
+          "low_mean_return": 0.0029,
+          "median": 0.0213,
+          "split_available": true
+        },
+        "liquidity_dependence": {
+          "range": {
+            "event_count": 99,
+            "high_mean_return": -0.0023,
+            "interpretation": "Higher-pressure slice weakened average continuation.",
+            "low_mean_return": 0.0056,
+            "median": 0.0122,
+            "split_available": true
+          },
+          "volatility": {
+            "event_count": 99,
+            "high_mean_return": 0.0023,
+            "interpretation": "Higher-pressure slice carried stronger average continuation.",
+            "low_mean_return": 0.0011,
+            "median": 0.0095,
+            "split_available": true
+          }
+        },
+        "macro_dependence": {
+          "branch_asymmetry": [
+            {
+              "branch": "bearish_shock",
+              "event_count": 8,
+              "mean_return": 0.0031,
+              "win_rate": 0.625
+            },
+            {
+              "branch": "bullish_shock",
+              "event_count": 91,
+              "mean_return": 0.0016,
+              "win_rate": 0.5275
+            }
+          ],
+          "event_count": 99,
+          "high_mean_return": 0.0036,
+          "interpretation": "Higher-pressure slice carried stronger average continuation.",
+          "low_mean_return": -0.0002,
+          "median": 0.9009,
+          "split_available": true
+        }
+      },
+      "evidence_matrix": [
+        {
+          "dimension": "Statistical signal",
+          "implication": "Positive direction survived, but statistical amplitude remained below promotion strength.",
+          "signal": "mean=0.0017, t=0.9139, p=0.1804"
+        },
+        {
+          "dimension": "Bootstrap robustness",
+          "implication": "Confidence interval still touched non-positive territory.",
+          "signal": "CI=[-0.0013, 0.0048], P(>0)=0.8350"
+        },
+        {
+          "dimension": "Regime dependence",
+          "implication": "Performance was not equally portable across clean persistent states and transition-overlap states.",
+          "signal": "persistent=0.0146, transition=-0.0016, fragility=HIGH"
+        },
+        {
+          "dimension": "Temporal degradation",
+          "implication": "Temporal stability weakened enough to block institutional promotion.",
+          "signal": "drift=1.6971, sign_changes=2"
+        },
+        {
+          "dimension": "Out-of-sample replay",
+          "implication": "Recent replay support existed only where event coverage was sufficient.",
+          "signal": "events=16, mean=0.0066, win=0.6875"
+        },
+        {
+          "dimension": "Monte Carlo resilience",
+          "implication": "Path-level variation still exposed a non-trivial downside tail even where the average event sign stayed positive.",
+          "signal": "median=0.1787, downside_p05=-0.1338"
+        },
+        {
+          "dimension": "Sensitivity",
+          "implication": "Threshold variants kept the sign positive, but robustness alone was not enough to offset weak aggregate evidence.",
+          "signal": "positive_variant_ratio=1.0000, return_range=0.0014"
+        },
+        {
+          "dimension": "Cross-asset dependence",
+          "implication": "Higher-pressure slice weakened average continuation.",
+          "signal": "DXY low=0.0029, DXY high=0.0005"
+        },
+        {
+          "dimension": "Stress windows",
+          "implication": "Stress episodes remained too sparse or too uneven to establish institutional robustness on their own.",
+          "signal": "worst_window_mean=-0.0027"
+        },
+        {
+          "dimension": "Feature interaction gaps",
+          "implication": "Some rule components remained critical, while others looked redundant or over-restrictive.",
+          "signal": "shock_abs=BINDING, event_abs=REDUNDANT, trend_align=SUPPORTING, event_align=BINDING"
+        }
+      ],
+      "expected_information_gain": {
+        "rationale": "Information gain is highest where uncertainty is still material, event coverage is thin, and missing-data gaps directly block mechanism discrimination.",
+        "score": 3.9
+      },
+      "failure_tree": [
+        {
+          "evidence": "Mean return 0.0017, win rate 0.5354.",
+          "level": "Root",
+          "node": "Institutional promotion failure"
+        },
+        {
+          "evidence": "Transition fragility=HIGH, transition mean=-0.0016.",
+          "level": "Primary",
+          "node": "Regime fragility"
+        },
+        {
+          "evidence": "Concept drift=1.6971, sign changes=2.",
+          "level": "Primary",
+          "node": "Temporal degradation"
+        },
+        {
+          "evidence": "Redundant or over-restrictive conditions: event_abs.",
+          "level": "Secondary",
+          "node": "Feature interaction weakness"
+        }
+      ],
+      "feature_gap_analysis": [
+        {
+          "base_mean_return": 0.0017,
+          "classification": "BINDING",
+          "condition": "shock_abs",
+          "dropped_condition_event_count": 146,
+          "dropped_condition_mean_return": 0.0001,
+          "interpretation": "Removing shock_abs materially weakened the average event return (0.0017 -> 0.0001)."
+        },
+        {
+          "base_mean_return": 0.0017,
+          "classification": "REDUNDANT",
+          "condition": "event_abs",
+          "dropped_condition_event_count": 99,
+          "dropped_condition_mean_return": 0.0017,
+          "interpretation": "Removing event_abs left the mean return essentially unchanged, implying that the condition is not adding independent information."
+        },
+        {
+          "base_mean_return": 0.0017,
+          "classification": "SUPPORTING",
+          "condition": "trend_align",
+          "dropped_condition_event_count": 167,
+          "dropped_condition_mean_return": 0.0011,
+          "interpretation": "Removing trend_align changed the result modestly, so the condition still helps explain the mechanism even if it is not the sole driver."
+        },
+        {
+          "base_mean_return": 0.0017,
+          "classification": "BINDING",
+          "condition": "event_align",
+          "dropped_condition_event_count": 176,
+          "dropped_condition_mean_return": -0.0004,
+          "interpretation": "Removing event_align materially weakened the average event return (0.0017 -> -0.0004)."
+        }
+      ],
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "missing_data_assessment": [
+        {
+          "gap_id": "gap-0405-event-taxonomy",
+          "missing_artifact": "The frozen stack lacks richer governed distinctions between scheduled policy decisions, surprise macro prints, and disorderly headlines inside macro_transition.",
+          "severity": "HIGH",
+          "theme": "Event taxonomy granularity"
+        },
+        {
+          "gap_id": "gap-0405-rates-ordering",
+          "missing_artifact": "There is no governed intraday ordering between rates, USD, and gold reactions, so the study cannot tell whether gold is leading or simply following a broader repricing wave.",
+          "severity": "HIGH",
+          "theme": "Cross-asset sequencing"
+        },
+        {
+          "gap_id": "gap-0405-liquidity-quality",
+          "missing_artifact": "Range and event-pressure proxies exist, but no governed session-depth or spread proxy distinguishes orderly follow-through from illiquid headline noise.",
+          "severity": "MEDIUM",
+          "theme": "Liquidity and event-quality proxies"
+        }
+      ],
+      "recommended_additional_experiments": [
+        {
+          "expected_information_gain": 4.5,
+          "experiment_id": "IKROS-EXP-20260802-0603",
+          "objective": "Evaluate bullish and bearish policy-shock branches separately to determine whether one side is carrying the aggregate result.",
+          "priority": "P1",
+          "title": "Macro-transition branch asymmetry audit"
+        },
+        {
+          "expected_information_gain": 4.4,
+          "experiment_id": "IKROS-EXP-20260802-0604",
+          "objective": "Compare narrow-range and high-range macro-transition events to isolate noisy post-shock follow-through from genuine repricing continuation.",
+          "priority": "P1",
+          "title": "Wide-range transition contamination study"
+        }
+      ],
+      "recommended_refinements": [
+        "Retain the hypothesis statement but split future reporting into bullish and bearish policy-shock branches so event asymmetry is measured rather than averaged away.",
+        "Treat the sign-alignment condition as the critical validation gate and downgrade the standalone event-magnitude threshold to a diagnostic panel unless new evidence shows it adds information.",
+        "Require future validation to segment narrow-range follow-through from wide-range post-shock turbulence before any promotion review."
+      ],
+      "root_cause_analysis": {
+        "primary_root_cause": "The policy-shock thesis contains a real but shallow edge; it degrades when macro-transition events expand into noisy, high-range follow-through and when the regime handoff remains unresolved after the first shock day.",
+        "secondary_root_causes": [
+          "bootstrap uncertainty remained too wide for promotion",
+          "edge weakened outside the cleanest in-regime subset",
+          "temporal adaptation and sign instability weakened repeatability",
+          "at least one rule component behaved as redundant rather than additive"
+        ]
+      },
+      "title": "Policy-shock repricing continuation",
+      "updated_confidence": {
+        "analysis_adjusted_confidence": 0.4134,
+        "campaign_0005_confidence": 0.4934,
+        "confidence_change": -0.08,
+        "rationale": "Campaign 0006 reduced confidence where failure drivers remained unresolved, while preserving a small credit for surviving directional signal and clearer failure attribution."
+      },
+      "validation_context": {
+        "campaign_0005_outcome": "REQUIRES_FURTHER_RESEARCH",
+        "campaign_0005_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+        "event_count": 99,
+        "holding_period_days": 3
+      },
+      "validation_weaknesses": [
+        "One-sided statistical significance remained below the institutional bar.",
+        "Bootstrap confidence interval continued to include non-positive outcomes.",
+        "Walk-forward fold positivity was not strong enough for institutional promotion."
+      ]
+    },
+    {
+      "alternative_economic_explanations": [
+        "The observed positive windows may be ordinary bull-trend persistence that happens to follow a macro_transition label rather than a distinct handoff mechanism.",
+        "A handful of high-magnitude historical regime changes may dominate the result and make the transition logic appear more stable than it really is."
+      ],
+      "campaign_0005_reference": {
+        "bootstrap": {
+          "bootstrap_mean": 0.0084,
+          "mean_ci_high": 0.0347,
+          "mean_ci_low": -0.0219,
+          "probability_positive": 0.705
+        },
+        "cross_regime_stability": {
+          "persistent_event_count": 0,
+          "persistent_mean_return": 0.0,
+          "transition_event_count": 7,
+          "transition_fragility": "ELEVATED",
+          "transition_mean_return": 0.0074
+        },
+        "out_of_sample_replay": {
+          "event_count": 0,
+          "mean_return": 0.0,
+          "win_rate": 0.0
+        },
+        "statistics": {
+          "branch_alignment_score": 1.0,
+          "deflated_sharpe_ratio": 0.0508,
+          "effect_size": 0.1527,
+          "mean_return": 0.0074,
+          "median_return": 0.024,
+          "one_sided_p_value": 0.3431,
+          "probabilistic_sharpe_ratio": 0.6408,
+          "sample_volatility": 0.0485,
+          "t_statistic": 0.4041,
+          "trade_sharpe": 0.1527,
+          "win_rate": 0.7143
+        },
+        "walk_forward": {
+          "aggregate_mean_return": 0.0074,
+          "aggregate_win_rate": 0.7143,
+          "fold_count": 4,
+          "positive_fold_ratio": 0.75
+        }
+      },
+      "computed_diagnostics": {
+        "monte_carlo": {
+          "median_total_return": 0.0666,
+          "p05_total_return": -0.1435,
+          "p95_total_return": 0.2603,
+          "paths": 500.0,
+          "ruin_probability": 0.082
+        },
+        "sensitivity": {
+          "positive_variant_ratio": 1.0,
+          "variant_return_range": 0.0001,
+          "variants": [
+            {
+              "event_count": 7,
+              "mean_return": 0.0074,
+              "profile": "conservative"
+            },
+            {
+              "event_count": 7,
+              "mean_return": 0.0074,
+              "profile": "base"
+            },
+            {
+              "event_count": 9,
+              "mean_return": 0.0073,
+              "profile": "permissive"
+            }
+          ],
+          "white_reality_check_p_value": 0.716
+        },
+        "stress_testing": {
+          "scenarios": [
+            {
+              "event_count": 0,
+              "mean_return": 0.0,
+              "scenario": "global_financial_crisis"
+            },
+            {
+              "event_count": 0,
+              "mean_return": 0.0,
+              "scenario": "gold_liquidation_2013"
+            },
+            {
+              "event_count": 0,
+              "mean_return": 0.0,
+              "scenario": "pandemic_2020"
+            },
+            {
+              "event_count": 0,
+              "mean_return": 0.0,
+              "scenario": "inflation_repricing_2022"
+            }
+          ],
+          "worst_mean_return": 0.0
+        }
+      },
+      "dependence_analysis": {
+        "cross_asset_dependence": {
+          "event_count": 7,
+          "high_mean_return": 0.0318,
+          "interpretation": "Higher-pressure slice carried stronger average continuation.",
+          "low_mean_return": -0.0109,
+          "median": 0.0242,
+          "split_available": true
+        },
+        "liquidity_dependence": {
+          "range": {
+            "event_count": 7,
+            "high_mean_return": -0.003,
+            "interpretation": "Higher-pressure slice weakened average continuation.",
+            "low_mean_return": 0.0152,
+            "median": 0.0135,
+            "split_available": true
+          },
+          "volatility": {
+            "event_count": 7,
+            "high_mean_return": 0.0252,
+            "interpretation": "Higher-pressure slice carried stronger average continuation.",
+            "low_mean_return": -0.0059,
+            "median": 0.0101,
+            "split_available": true
+          }
+        },
+        "macro_dependence": {
+          "event_count": 7,
+          "high_mean_return": 0.0235,
+          "interpretation": "Higher-pressure slice carried stronger average continuation.",
+          "low_mean_return": -0.0047,
+          "median": 0.511,
+          "split_available": true
+        }
+      },
+      "evidence_matrix": [
+        {
+          "dimension": "Statistical signal",
+          "implication": "Positive direction survived, but statistical amplitude remained below promotion strength.",
+          "signal": "mean=0.0074, t=0.4041, p=0.3431"
+        },
+        {
+          "dimension": "Bootstrap robustness",
+          "implication": "Confidence interval still touched non-positive territory.",
+          "signal": "CI=[-0.0219, 0.0347], P(>0)=0.7050"
+        },
+        {
+          "dimension": "Regime dependence",
+          "implication": "Performance was not equally portable across clean persistent states and transition-overlap states.",
+          "signal": "persistent=0.0000, transition=0.0074, fragility=ELEVATED"
+        },
+        {
+          "dimension": "Temporal degradation",
+          "implication": "Temporal stability weakened enough to block institutional promotion.",
+          "signal": "drift=1.3675, sign_changes=2"
+        },
+        {
+          "dimension": "Out-of-sample replay",
+          "implication": "Recent replay support existed only where event coverage was sufficient.",
+          "signal": "events=0, mean=0.0000, win=0.0000"
+        },
+        {
+          "dimension": "Monte Carlo resilience",
+          "implication": "Path-level variation still exposed a non-trivial downside tail even where the average event sign stayed positive.",
+          "signal": "median=0.0666, downside_p05=-0.1435"
+        },
+        {
+          "dimension": "Sensitivity",
+          "implication": "Threshold variants kept the sign positive, but robustness alone was not enough to offset weak aggregate evidence.",
+          "signal": "positive_variant_ratio=1.0000, return_range=0.0001"
+        },
+        {
+          "dimension": "Cross-asset dependence",
+          "implication": "Higher-pressure slice carried stronger average continuation.",
+          "signal": "DXY low=-0.0109, DXY high=0.0318"
+        },
+        {
+          "dimension": "Stress windows",
+          "implication": "Stress episodes remained too sparse or too uneven to establish institutional robustness on their own.",
+          "signal": "worst_window_mean=0.0000"
+        },
+        {
+          "dimension": "Feature interaction gaps",
+          "implication": "Some rule components remained critical, while others looked redundant or over-restrictive.",
+          "signal": "prior_macro_transition=BINDING, xau_return_positive=REDUNDANT, trend_breakout_positive=REDUNDANT, regime_return_high=OVER_RESTRICTIVE"
+        }
+      ],
+      "expected_information_gain": {
+        "rationale": "Information gain is highest where uncertainty is still material, event coverage is thin, and missing-data gaps directly block mechanism discrimination.",
+        "score": 5.0
+      },
+      "failure_tree": [
+        {
+          "evidence": "Mean return 0.0074, win rate 0.7143.",
+          "level": "Root",
+          "node": "Institutional promotion failure"
+        },
+        {
+          "evidence": "Transition fragility=ELEVATED, transition mean=0.0074.",
+          "level": "Primary",
+          "node": "Regime fragility"
+        },
+        {
+          "evidence": "Concept drift=1.3675, sign changes=2.",
+          "level": "Primary",
+          "node": "Temporal degradation"
+        },
+        {
+          "evidence": "Redundant or over-restrictive conditions: xau_return_positive, trend_breakout_positive, regime_return_high.",
+          "level": "Secondary",
+          "node": "Feature interaction weakness"
+        },
+        {
+          "evidence": "Too few handoff episodes existed to satisfy replication and out-of-sample replay requirements.",
+          "level": "Secondary",
+          "node": "Episode scarcity"
+        }
+      ],
+      "feature_gap_analysis": [
+        {
+          "base_mean_return": 0.0074,
+          "classification": "BINDING",
+          "condition": "prior_macro_transition",
+          "dropped_condition_event_count": 55,
+          "dropped_condition_mean_return": 0.0051,
+          "interpretation": "Removing prior_macro_transition materially weakened the average event return (0.0074 -> 0.0051)."
+        },
+        {
+          "base_mean_return": 0.0074,
+          "classification": "REDUNDANT",
+          "condition": "xau_return_positive",
+          "dropped_condition_event_count": 7,
+          "dropped_condition_mean_return": 0.0074,
+          "interpretation": "Removing xau_return_positive left the mean return essentially unchanged, implying that the condition is not adding independent information."
+        },
+        {
+          "base_mean_return": 0.0074,
+          "classification": "REDUNDANT",
+          "condition": "trend_breakout_positive",
+          "dropped_condition_event_count": 7,
+          "dropped_condition_mean_return": 0.0074,
+          "interpretation": "Removing trend_breakout_positive left the mean return essentially unchanged, implying that the condition is not adding independent information."
+        },
+        {
+          "base_mean_return": 0.0074,
+          "classification": "OVER_RESTRICTIVE",
+          "condition": "regime_return_high",
+          "dropped_condition_event_count": 18,
+          "dropped_condition_mean_return": 0.0087,
+          "interpretation": "Removing regime_return_high preserved or improved the mean return while broadening coverage, suggesting that the filter may be too tight."
+        }
+      ],
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "missing_data_assessment": [
+        {
+          "gap_id": "gap-0408-sample-depth",
+          "missing_artifact": "Only a very small number of governed handoff episodes exist, leaving no meaningful out-of-sample replay coverage in the recent sample.",
+          "severity": "HIGH",
+          "theme": "Episode coverage"
+        },
+        {
+          "gap_id": "gap-0408-session-sequencing",
+          "missing_artifact": "The frozen daily research frame cannot resolve whether the macro shock, liquidity transfer, and trend confirmation occurred in a causally coherent sequence.",
+          "severity": "HIGH",
+          "theme": "Intraday transition structure"
+        },
+        {
+          "gap_id": "gap-0408-positioning",
+          "missing_artifact": "No governed systematic-positioning proxy exists to tell whether trend followers actually took over after the initial macro shock.",
+          "severity": "MEDIUM",
+          "theme": "Participant adoption"
+        }
+      ],
+      "recommended_additional_experiments": [
+        {
+          "expected_information_gain": 4.8,
+          "experiment_id": "IKROS-EXP-20260802-0605",
+          "objective": "Reconstruct and catalogue every governed macro-to-bull handoff episode to determine whether the edge survives broader historical coverage.",
+          "priority": "P1",
+          "title": "Sparse handoff episode expansion audit"
+        },
+        {
+          "expected_information_gain": 4.6,
+          "experiment_id": "IKROS-EXP-20260802-0606",
+          "objective": "Document event ordering, regime label changes, and subsequent trend adoption for each handoff episode without changing the hypothesis definition.",
+          "priority": "P1",
+          "title": "Transition sequence replay book"
+        }
+      ],
+      "recommended_refinements": [
+        "Retain the hypothesis statement but require future work to treat macro-to-trend handoffs as a sparse episode class with dedicated episode accounting rather than a generic fold-based sample.",
+        "Remove redundant confirmation filters from future diagnostics and focus on validating whether the prior macro-transition label itself is the scarce source of information.",
+        "Require any future validation to document why no recent out-of-sample handoff episodes exist before interpreting the absence of holdout evidence as weakness or strength."
+      ],
+      "root_cause_analysis": {
+        "primary_root_cause": "The handoff thesis never failed on direction, but the sample is too sparse and too transition-specific to satisfy institutional replication standards; most explanatory power comes from identifying the rare macro-to-trend handoff itself, not from the added confirmation filters.",
+        "secondary_root_causes": [
+          "bootstrap uncertainty remained too wide for promotion",
+          "edge weakened outside the cleanest in-regime subset",
+          "temporal adaptation and sign instability weakened repeatability",
+          "no recent holdout evidence existed for institutional replay",
+          "at least one rule component behaved as redundant rather than additive"
+        ]
+      },
+      "title": "Transition-to-trend handoff",
+      "updated_confidence": {
+        "analysis_adjusted_confidence": 0.2582,
+        "campaign_0005_confidence": 0.4582,
+        "confidence_change": -0.2,
+        "rationale": "Campaign 0006 reduced confidence where failure drivers remained unresolved, while preserving a small credit for surviving directional signal and clearer failure attribution."
+      },
+      "validation_context": {
+        "campaign_0005_outcome": "REQUIRES_FURTHER_RESEARCH",
+        "campaign_0005_reason": "Bootstrap confidence interval continued to include non-positive mean outcomes.",
+        "event_count": 7,
+        "holding_period_days": 5
+      },
+      "validation_weaknesses": [
+        "One-sided statistical significance remained below the institutional bar.",
+        "Bootstrap confidence interval continued to include non-positive outcomes.",
+        "No recent out-of-sample replay events were available.",
+        "Event coverage was too sparse for reliable replication."
+      ]
+    }
+  ],
+  "root_cause_catalogue": [
+    {
+      "confidence_change": 0.4633,
+      "expected_information_gain": 4.03,
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "primary_root_cause": "The continuation thesis is strongest only while bull_trend persists; negative transition windows and adverse USD spillovers diluted a positive but modest core effect below the institutional promotion floor.",
+      "secondary_root_causes": [
+        "bootstrap uncertainty remained too wide for promotion",
+        "edge weakened outside the cleanest in-regime subset"
+      ],
+      "title": "Expectation-relief bull continuation"
+    },
+    {
+      "confidence_change": 0.4134,
+      "expected_information_gain": 3.9,
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "primary_root_cause": "The policy-shock thesis contains a real but shallow edge; it degrades when macro-transition events expand into noisy, high-range follow-through and when the regime handoff remains unresolved after the first shock day.",
+      "secondary_root_causes": [
+        "bootstrap uncertainty remained too wide for promotion",
+        "edge weakened outside the cleanest in-regime subset",
+        "temporal adaptation and sign instability weakened repeatability",
+        "at least one rule component behaved as redundant rather than additive"
+      ],
+      "title": "Policy-shock repricing continuation"
+    },
+    {
+      "confidence_change": 0.2582,
+      "expected_information_gain": 5.0,
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "primary_root_cause": "The handoff thesis never failed on direction, but the sample is too sparse and too transition-specific to satisfy institutional replication standards; most explanatory power comes from identifying the rare macro-to-trend handoff itself, not from the added confirmation filters.",
+      "secondary_root_causes": [
+        "bootstrap uncertainty remained too wide for promotion",
+        "edge weakened outside the cleanest in-regime subset",
+        "temporal adaptation and sign instability weakened repeatability",
+        "no recent holdout evidence existed for institutional replay",
+        "at least one rule component behaved as redundant rather than additive"
+      ],
+      "title": "Transition-to-trend handoff"
+    }
+  ],
+  "updated_confidence": [
+    {
+      "analysis_adjusted_confidence": 0.4633,
+      "confidence_change": -0.08,
+      "hypothesis_id": "IKROS-HYP-20260802-0401",
+      "prior_confidence": 0.5433,
+      "reason": "Campaign 0006 reduced confidence where failure drivers remained unresolved, while preserving a small credit for surviving directional signal and clearer failure attribution."
+    },
+    {
+      "analysis_adjusted_confidence": 0.4134,
+      "confidence_change": -0.08,
+      "hypothesis_id": "IKROS-HYP-20260802-0405",
+      "prior_confidence": 0.4934,
+      "reason": "Campaign 0006 reduced confidence where failure drivers remained unresolved, while preserving a small credit for surviving directional signal and clearer failure attribution."
+    },
+    {
+      "analysis_adjusted_confidence": 0.2582,
+      "confidence_change": -0.2,
+      "hypothesis_id": "IKROS-HYP-20260802-0408",
+      "prior_confidence": 0.4582,
+      "reason": "Campaign 0006 reduced confidence where failure drivers remained unresolved, while preserving a small credit for surviving directional signal and clearer failure attribution."
+    }
+  ]
+}

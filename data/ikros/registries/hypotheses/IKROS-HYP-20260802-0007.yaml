@@ -1,0 +1,107 @@
+alternative_hypothesis: 'H1: The authorized diagnostic experiments materially reduce
+  uncertainty and support a governed next-step recommendation for each retained hypothesis.'
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+confidence:
+  data: 0.82
+  economic: 0.69
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.0
+  operational: 0.72
+  overall: 0.7413076465172295
+  prior: 0.56
+  replication: 0.0
+  statistical: 0.0
+  validation: 0.0
+contradictions: []
+entity_type: Hypothesis
+experiments:
+- IKROS-EXP-20260802-0007
+ikros_id: IKROS-HYP-20260802-0007
+lifecycle_state: INCONCLUSIVE
+lineage:
+  dependencies:
+    datasets:
+    - IKROS-DSV-20260802-0007
+    external_refs:
+    - 11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json
+    features:
+    - IKROS-FEAT-20260802-0301
+    - IKROS-FEAT-20260802-0302
+    - IKROS-FEAT-20260802-0303
+    - IKROS-FEAT-20260802-0304
+    - IKROS-FEAT-20260802-0305
+    - IKROS-FEAT-20260802-0306
+    - IKROS-FEAT-20260802-0308
+    - IKROS-FEAT-20260802-0309
+    - IKROS-FEAT-20260802-0310
+    - IKROS-FEAT-20260802-0311
+    - IKROS-FEAT-20260802-0312
+    inputs:
+    - IKROS-RQ-20260802-0007
+    models:
+    - institutional_six_state_overlay_taxonomy_v1
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in:
+    - IKROS-EXP-20260802-0007
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: campaign-0007-diagnostic-experiments
+    creation_context: Campaign 0007 diagnostic experiment program
+    motivation: Represent the governed claim that the authorized diagnostic experiments
+      can materially reduce uncertainty and determine the next scientific step for
+      the retained hypotheses.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+motivating_theses: []
+null_hypothesis: 'H0: The authorized diagnostic experiments do not materially reduce
+  uncertainty around the retained hypotheses.'
+posterior_confidence: 0.7413076465172295
+power: 0.8
+prior_confidence: 0.56
+significance_level: 0.05
+source_rq: IKROS-RQ-20260802-0007
+spec_refs:
+- SPEC-012
+- SPEC-060
+statement: The six Campaign 0006 diagnostic experiments can reduce uncertainty enough
+  to determine whether each retained hypothesis should remain in testing, return for
+  validation, or be rejected.
+validations: []
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.827517+00:00'
+  confidence_at_time: 0.7413076465172295
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.831518+00:00'
+  confidence_at_time: 0.7413076465172295
+  version: 1.0.0
+- change_summary: State → TESTING. Campaign 0007 entered governed diagnostic experimentation.
+  changed_at: '2026-08-02T02:37:54.834517+00:00'
+  confidence_at_time: 0.7413076465172295
+  version: 1.0.0
+- change_summary: State → INCONCLUSIVE. Campaign 0007 completed the diagnostic experiment
+    program.
+  changed_at: '2026-08-02T02:37:54.838517+00:00'
+  confidence_at_time: 0.7413076465172295
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.842517+00:00'
+  confidence_at_time: 0.7413076465172295
+  version: 1.0.0
+work_package_refs: []

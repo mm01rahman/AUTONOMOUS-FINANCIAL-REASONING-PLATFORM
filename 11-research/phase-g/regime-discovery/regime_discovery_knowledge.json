@@ -1,0 +1,458 @@
+{
+  "metadata": {
+    "source_kind": "INTERNAL_RESEARCH_REPORT",
+    "title": "Campaign 0002 regime discovery knowledge pack",
+    "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+    "evidence_refs": [
+      "11-research/phase-e/phase_e_summary.json",
+      "11-research/phase-e/regime_adaptation.json",
+      "11-research/phase-e/feature_importance.json",
+      "11-research/regime_analysis.md"
+    ]
+  },
+  "ikros_objects": [
+    {
+      "identifier": "IKROS-DS-20260802-0002",
+      "type": "Dataset",
+      "title": "Campaign 0002 governed XAU/USD regime dataset",
+      "summary": "Governed daily XAU/USD research dataset used for regime discovery synthesis.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.9,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/phase_e_summary.json"],
+      "attributes": {
+        "instrument": "XAU/USD",
+        "granularity": "1D",
+        "coverage_rows": 6257,
+        "provenance_note": "Derived from the frozen Phase E governed data foundation."
+      }
+    },
+    {
+      "identifier": "IKROS-DSV-20260802-0002",
+      "type": "DatasetVersion",
+      "title": "Campaign 0002 regime discovery dataset snapshot",
+      "summary": "Dataset snapshot used by the regime discovery synthesis and taxonomy utility test.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.88,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-DS-20260802-0002"],
+      "attributes": {
+        "version_label": "campaign-0002-regime-discovery",
+        "feature_count": 7,
+        "coverage_rows": 6257
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0201",
+      "type": "KnowledgeObject",
+      "title": "Campaign 0002 literature review",
+      "summary": "Institutional literature review spanning state-space, clustering, change-point, and adaptive-market approaches.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.81,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/REGIME_DISCOVERY_CAMPAIGN.md"],
+      "attributes": {
+        "references": [
+          "Hamilton regime switching",
+          "Hidden Markov Models",
+          "Gaussian Mixture Models",
+          "Bayesian change point detection",
+          "Adaptive Markets Hypothesis",
+          "Commodity and safe-haven regime literature"
+        ]
+      }
+    },
+    {
+      "identifier": "IKROS-FF-20260802-0201",
+      "type": "FeatureFamily",
+      "title": "Regime discovery state variables",
+      "summary": "Feature family used to define the accepted institutional state model.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.79,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+      "source_ids": ["IKROS-DSV-20260802-0002"],
+      "attributes": {
+        "name": "regime_state_variables",
+        "description": "Core state variables required by the deterministic regime overlay taxonomy.",
+        "member_features": [
+          "IKROS-FEAT-20260802-0201",
+          "IKROS-FEAT-20260802-0202",
+          "IKROS-FEAT-20260802-0203",
+          "IKROS-FEAT-20260802-0204",
+          "IKROS-FEAT-20260802-0205",
+          "IKROS-FEAT-20260802-0206",
+          "IKROS-FEAT-20260802-0207"
+        ]
+      }
+    },
+    {
+      "identifier": "IKROS-FEAT-20260802-0201",
+      "type": "Feature",
+      "title": "20-bar realized volatility",
+      "summary": "Primary volatility state variable for regime partitioning.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.84,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+      "source_ids": ["IKROS-DSV-20260802-0002"],
+      "attributes": {
+        "name": "regime_vol_20",
+        "family_id": "IKROS-FF-20260802-0201",
+        "classification": "useful",
+        "information_content": 0.43001285,
+        "stability_score": 0.4421828482
+      }
+    },
+    {
+      "identifier": "IKROS-FEAT-20260802-0202",
+      "type": "Feature",
+      "title": "30/180 trend gap",
+      "summary": "Trend persistence state variable for bull and bear regime separation.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.78,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-DSV-20260802-0002"],
+      "attributes": {
+        "name": "trend_gap_30_180",
+        "family_id": "IKROS-FF-20260802-0201",
+        "classification": "state_variable"
+      }
+    },
+    {
+      "identifier": "IKROS-FEAT-20260802-0203",
+      "type": "Feature",
+      "title": "Macro pressure composite",
+      "summary": "Macro transition state variable that contextualizes policy and USD pressure.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.72,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+      "source_ids": ["IKROS-DSV-20260802-0002"],
+      "attributes": {
+        "name": "macro_pressure",
+        "family_id": "IKROS-FF-20260802-0201",
+        "classification": "context_variable",
+        "information_content": 0.43901187,
+        "redundancy_note": "Redundant as a standalone alpha feature but useful as a regime-defining context variable."
+      }
+    },
+    {
+      "identifier": "IKROS-FEAT-20260802-0204",
+      "type": "Feature",
+      "title": "Behavioral stretch",
+      "summary": "Stretch score used to identify dislocation and exhaustion conditions.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.71,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-DSV-20260802-0002"],
+      "attributes": {
+        "name": "behavioral_stretch",
+        "family_id": "IKROS-FF-20260802-0201",
+        "classification": "state_variable"
+      }
+    },
+    {
+      "identifier": "IKROS-FEAT-20260802-0205",
+      "type": "Feature",
+      "title": "60-bar breakout",
+      "summary": "Breakout state variable confirming bull trend expansion.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.69,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-DSV-20260802-0002"],
+      "attributes": {
+        "name": "breakout_60",
+        "family_id": "IKROS-FF-20260802-0201"
+      }
+    },
+    {
+      "identifier": "IKROS-FEAT-20260802-0206",
+      "type": "Feature",
+      "title": "20-bar breakdown",
+      "summary": "Breakdown state variable confirming bear trend unwind.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.69,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-DSV-20260802-0002"],
+      "attributes": {
+        "name": "breakdown_20",
+        "family_id": "IKROS-FF-20260802-0201"
+      }
+    },
+    {
+      "identifier": "IKROS-FEAT-20260802-0207",
+      "type": "Feature",
+      "title": "Geopolitical activation flag",
+      "summary": "Binary event overlay used to identify crisis dislocation.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.74,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-DSV-20260802-0002"],
+      "attributes": {
+        "name": "geo_active",
+        "family_id": "IKROS-FF-20260802-0201"
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0202",
+      "type": "KnowledgeObject",
+      "title": "Hidden Markov Model method review",
+      "summary": "Rejected as the institutional state model for Campaign 0002.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.56,
+      "specification_refs": ["SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0201"],
+      "attributes": {
+        "decision": "REJECT",
+        "reason": "Latent-state inference is harder to govern and did not justify additional complexity."
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0203",
+      "type": "KnowledgeObject",
+      "title": "Gaussian Mixture Model method review",
+      "summary": "Rejected as the institutional state model for Campaign 0002.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.55,
+      "specification_refs": ["SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0201"],
+      "attributes": {
+        "decision": "REJECT",
+        "reason": "No evidence that mixture complexity improves institutional utility beyond deterministic overlays."
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0204",
+      "type": "KnowledgeObject",
+      "title": "Hierarchical clustering method review",
+      "summary": "Deferred for future refinement once the institutional baseline taxonomy is established.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.61,
+      "specification_refs": ["SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0201"],
+      "attributes": {
+        "decision": "DEFER",
+        "reason": "Promising for later refinement, but not required for Campaign 0002 acceptance."
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0205",
+      "type": "KnowledgeObject",
+      "title": "Spectral clustering method review",
+      "summary": "Rejected as the institutional state model for Campaign 0002.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.54,
+      "specification_refs": ["SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0201"],
+      "attributes": {
+        "decision": "REJECT",
+        "reason": "The abstraction cost is not justified for the current research objective."
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0206",
+      "type": "KnowledgeObject",
+      "title": "Bayesian change point detection method review",
+      "summary": "Deferred for later transition-refinement studies.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.64,
+      "specification_refs": ["SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0201"],
+      "attributes": {
+        "decision": "DEFER",
+        "reason": "Useful for future transition refinement, but incomplete as the sole institutional taxonomy."
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0207",
+      "type": "KnowledgeObject",
+      "title": "Density-based clustering method review",
+      "summary": "Rejected as the institutional state model for Campaign 0002.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.53,
+      "specification_refs": ["SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0201"],
+      "attributes": {
+        "decision": "REJECT",
+        "reason": "Outlier-sensitive clusters did not improve interpretability enough for institutional use."
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0208",
+      "type": "KnowledgeObject",
+      "title": "Volatility-state baseline review",
+      "summary": "Executed and rejected because it under-separates research outcomes.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.77,
+      "specification_refs": ["SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-FF-20260802-0201"],
+      "attributes": {
+        "decision": "REJECT",
+        "return_spread": 0.0012110299879640569,
+        "hit_rate_spread": 0.04837854955652099,
+        "stability": 0.9354323158062969
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0209",
+      "type": "KnowledgeObject",
+      "title": "Accepted deterministic macro-event overlay taxonomy",
+      "summary": "Accepted as the institutional state model for future AFRP research.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.86,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-FF-20260802-0201", "IKROS-KO-20260802-0201"],
+      "attributes": {
+        "decision": "ACCEPT",
+        "taxonomy_name": "Institutional Six-State Overlay Taxonomy v1",
+        "return_spread": 0.004942385609214154,
+        "hit_rate_spread": 0.1422228565085708,
+        "stability": 0.7800863033402589
+      }
+    },
+    {
+      "identifier": "IKROS-REGIME-20260802-0201",
+      "type": "Regime",
+      "title": "Bull Trend Expansion",
+      "summary": "Persistent upside structure with supportive macro context.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.84,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0209"],
+      "attributes": {
+        "regime_label": "bull_trend"
+      }
+    },
+    {
+      "identifier": "IKROS-REGIME-20260802-0202",
+      "type": "Regime",
+      "title": "Bear Trend Unwind",
+      "summary": "Persistent downside structure without full crisis dislocation.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.76,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0209"],
+      "attributes": {
+        "regime_label": "bear_unwind"
+      }
+    },
+    {
+      "identifier": "IKROS-REGIME-20260802-0203",
+      "type": "Regime",
+      "title": "Calm Carry Accumulation",
+      "summary": "Low-volatility accumulation state with slower information release.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.74,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0209"],
+      "attributes": {
+        "regime_label": "calm_carry"
+      }
+    },
+    {
+      "identifier": "IKROS-REGIME-20260802-0204",
+      "type": "Regime",
+      "title": "Crisis Dislocation",
+      "summary": "High-volatility stress state where edge persistence degrades.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.81,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0209"],
+      "attributes": {
+        "regime_label": "crisis_dislocation"
+      }
+    },
+    {
+      "identifier": "IKROS-REGIME-20260802-0205",
+      "type": "Regime",
+      "title": "Macro Policy Transition",
+      "summary": "Policy and cross-asset transition state that changes the ranking of research hypotheses.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.82,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0209"],
+      "attributes": {
+        "regime_label": "macro_transition"
+      }
+    },
+    {
+      "identifier": "IKROS-REGIME-20260802-0206",
+      "type": "Regime",
+      "title": "Range Compression",
+      "summary": "Institutional default state outside crisis and explicit transition regimes.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.78,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0209"],
+      "attributes": {
+        "regime_label": "range_compression"
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0210",
+      "type": "KnowledgeObject",
+      "title": "Institutional transition matrix v1",
+      "summary": "Transition probabilities for the accepted six-state taxonomy.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.79,
+      "specification_refs": ["SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": [
+        "IKROS-REGIME-20260802-0201",
+        "IKROS-REGIME-20260802-0202",
+        "IKROS-REGIME-20260802-0203",
+        "IKROS-REGIME-20260802-0204",
+        "IKROS-REGIME-20260802-0205",
+        "IKROS-REGIME-20260802-0206"
+      ],
+      "attributes": {
+        "taxonomy_name": "Institutional Six-State Overlay Taxonomy v1",
+        "stability": 0.7800863033402589
+      }
+    },
+    {
+      "identifier": "IKROS-KO-20260802-0211",
+      "type": "KnowledgeObject",
+      "title": "Historical regime atlas",
+      "summary": "Historical windows mapped to the accepted taxonomy.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.77,
+      "specification_refs": ["SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-KO-20260802-0209"],
+      "attributes": {
+        "atlas_windows": [
+          "gfc_2008",
+          "gold_bull_2011",
+          "gold_collapse_2013",
+          "covid_2020",
+          "inflation_2022",
+          "rate_cycle_2024",
+          "historical_2025",
+          "available_2026"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:28:59.446524+00:00'
+dependency_ids: []
+entity_type: CampaignCompletionReport
+evidence_refs:
+- 11-research/phase-g/failure-analysis/FAILURE_ANALYSIS_CAMPAIGN.md
+- 11-research/phase-g/scientific-validation/SCIENTIFIC_VALIDATION_FINAL_CAMPAIGN_REPORT.md
+- 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0009
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260802-0015
+payload:
+  audit_ids:
+  - IKROS-CAMPAIGNAUDIT-20260802-0183
+  - IKROS-CAMPAIGNAUDIT-20260802-0184
+  - IKROS-CAMPAIGNAUDIT-20260802-0185
+  - IKROS-CAMPAIGNAUDIT-20260802-0186
+  - IKROS-CAMPAIGNAUDIT-20260802-0187
+  - IKROS-CAMPAIGNAUDIT-20260802-0188
+  - IKROS-CAMPAIGNAUDIT-20260802-0189
+  - IKROS-CAMPAIGNAUDIT-20260802-0190
+  - IKROS-CAMPAIGNAUDIT-20260802-0191
+  - IKROS-CAMPAIGNAUDIT-20260802-0192
+  - IKROS-CAMPAIGNAUDIT-20260802-0193
+  - IKROS-CAMPAIGNAUDIT-20260802-0194
+  - IKROS-CAMPAIGNAUDIT-20260802-0195
+  - IKROS-CAMPAIGNAUDIT-20260802-0196
+  - IKROS-CAMPAIGNAUDIT-20260802-0197
+  - IKROS-CAMPAIGNAUDIT-20260802-0198
+  - IKROS-CAMPAIGNAUDIT-20260802-0199
+  blocked_task_ids: []
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0009
+  campaign_type: RESEARCH_AUDIT
+  completed_task_ids:
+  - IKROS-RESEARCHTASK-20260802-0066
+  - IKROS-RESEARCHTASK-20260802-0068
+  - IKROS-RESEARCHTASK-20260802-0069
+  - IKROS-RESEARCHTASK-20260802-0070
+  - IKROS-RESEARCHTASK-20260802-0076
+  failed_task_ids: []
+  finished_at: '2026-08-02T02:28:59.420524+00:00'
+  lifecycle_state: COMPLETED
+  memory_record_ids:
+  - IKMEM-T1-20260802-0061
+  - IKMEM-T1-20260802-0063
+  - IKMEM-T1-20260802-0064
+  - IKMEM-T1-20260802-0065
+  - IKMEM-T1-20260802-0066
+  output_refs:
+  - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_knowledge.json
+  - IKROS-CONTRA-20260802-0006
+  - IKROS-DSV-20260802-0006
+  - IKROS-EVIDENCE-20260802-0006
+  - IKROS-EXP-20260802-0006
+  - IKROS-HYP-20260802-0006
+  - IKROS-KO-20260802-0600
+  - IKROS-KO-20260802-0601
+  - IKROS-KO-20260802-0602
+  - IKROS-KO-20260802-0603
+  - IKROS-KO-20260802-0606
+  - IKROS-RQ-20260802-0006
+  - failure_analysis_knowledge
+  progress:
+    blocked: 0
+    completed: 5
+    failed: 0
+    percent_complete: 100.0
+    skipped: 0
+    total: 5
+  report_id: IKROS-CAMPAIGNREPORT-20260802-0009
+  skipped_task_ids: []
+  started_at: '2026-08-02T02:28:50.601104+00:00'
+  summary: Campaign 0006 Institutional Alpha Failure Analysis completed with 5 completed
+    tasks.
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0009
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_knowledge.json
+- IKROS-CONTRA-20260802-0006
+- IKROS-DSV-20260802-0006
+- IKROS-EVIDENCE-20260802-0006
+- IKROS-EXP-20260802-0006
+- IKROS-HYP-20260802-0006
+- IKROS-KO-20260802-0600
+- IKROS-KO-20260802-0601
+- IKROS-KO-20260802-0602
+- IKROS-KO-20260802-0603
+- IKROS-KO-20260802-0606
+- IKROS-RQ-20260802-0006
+- failure_analysis_knowledge
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Campaign 0006 Institutional Alpha Failure Analysis completed with 5 completed
+  tasks.
+tags:
+- research-orchestrator
+- completion-report
+tier: T4_INSTITUTIONAL
+title: Completion report for Campaign 0006 Institutional Alpha Failure Analysis
+updated_at: '2026-08-02T02:28:59.446524+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

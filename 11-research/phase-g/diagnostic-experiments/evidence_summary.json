@@ -1,0 +1,44 @@
+[
+  {
+    "experiment_id": "IKROS-EXP-20260802-0601",
+    "key_finding": "Persistent bull windows delivered +2.98% average event return with a 100% win rate across 7 governed events.",
+    "support_classification": "SUPPORTS_CURRENT_HYPOTHESIS",
+    "target_hypothesis": "IKROS-HYP-20260802-0401",
+    "uncertainty_reduction": "HIGH"
+  },
+  {
+    "experiment_id": "IKROS-EXP-20260802-0602",
+    "key_finding": "Low-DXY-spillover H0401 events returned +1.36% on average across 12 events.",
+    "support_classification": "SUPPORTS_CURRENT_HYPOTHESIS",
+    "target_hypothesis": "IKROS-HYP-20260802-0401",
+    "uncertainty_reduction": "MEDIUM"
+  },
+  {
+    "experiment_id": "IKROS-EXP-20260802-0603",
+    "key_finding": "Bearish policy-shock branches produced +0.31% average continuation with a 62.5% win rate, but only across 8 events.",
+    "support_classification": "SUPPORTS_WITH_ASYMMETRY",
+    "target_hypothesis": "IKROS-HYP-20260802-0405",
+    "uncertainty_reduction": "MEDIUM"
+  },
+  {
+    "experiment_id": "IKROS-EXP-20260802-0604",
+    "key_finding": "Narrow-range macro-transition events returned +0.56% on average with a 60% win rate across 50 events.",
+    "support_classification": "SUPPORTS_CURRENT_HYPOTHESIS",
+    "target_hypothesis": "IKROS-HYP-20260802-0405",
+    "uncertainty_reduction": "HIGH"
+  },
+  {
+    "experiment_id": "IKROS-EXP-20260802-0605",
+    "key_finding": "Broadening H0408 to all governed macro-to-bull handoff episodes increased coverage from 7 to 18 events without losing directional sign.",
+    "support_classification": "SUPPORTS_WITH_SCOPE_EXPANSION",
+    "target_hypothesis": "IKROS-HYP-20260802-0408",
+    "uncertainty_reduction": "HIGH"
+  },
+  {
+    "experiment_id": "IKROS-EXP-20260802-0606",
+    "key_finding": "The most common broadened H0408 path was a clean bull_trend continuation, but only 4 times.",
+    "support_classification": "MIXED_SUPPORT",
+    "target_hypothesis": "IKROS-HYP-20260802-0408",
+    "uncertainty_reduction": "MEDIUM"
+  }
+]

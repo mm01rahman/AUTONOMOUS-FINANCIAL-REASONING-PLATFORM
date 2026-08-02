@@ -1,0 +1,771 @@
+schema_version: "1.0"
+registry_id: "SPECIFICATION_REGISTRY"
+authority: "Architecture Review Board (ARB)"
+generated_at: "2026-08-02"
+work_package: "WP-IMP-0040"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Canonical AFRP Specification Registry
+# Every AFRP specification is catalogued here with complete metadata.
+# Status values: Draft | Review | Approved | Implemented | Validated | Deprecated | Archived
+# Import status: Imported | Pending_Import | Derived
+# ─────────────────────────────────────────────────────────────────────────────
+
+specifications:
+
+  # ── Level 0 — Institutional Constitution ───────────────────────────────────
+  - spec_id: "SPEC-000"
+    title: "Institutional Constitution"
+    version: "1.0"
+    level: 0
+    status: "Approved"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "Unanimous ARB + Principal Architect"
+    repository_location: "specs/00-constitution/SPEC-000-INSTITUTIONAL-CONSTITUTION.md"
+    canonical_source: "00-governance/000_ENGINEERING_CONSTITUTION.md"
+    spec_id_internal: "CPG-00 / GOV-001 / GOV-002"
+    dependencies: []
+    superseded_documents: []
+    related_capabilities:
+      - "GOV-BASELINE"
+    related_work_packages:
+      - "WP-IMP-0040"
+    related_evidence:
+      - "EXEC-042"
+    related_tests: []
+    related_adrs:
+      - "ADR-0001"
+    related_runtime_modules: []
+    notes: "Foundation of the entire AFRP governance framework. Immutable."
+
+  # ── Level 1 — Architecture Specifications ──────────────────────────────────
+  - spec_id: "SPEC-001"
+    title: "System Architecture"
+    version: "1.0"
+    level: 1
+    status: "Approved"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/01-architecture/SPEC-001-SYSTEM-ARCHITECTURE.md"
+    canonical_source: "02-architecture/100_SYSTEM_ARCHITECTURE.md"
+    spec_id_internal: "ARCH-001 / ARCH-002"
+    dependencies: ["SPEC-000"]
+    superseded_documents: []
+    related_capabilities:
+      - "GOV-BASELINE"
+      - "EOS-ORCHESTRATOR"
+    related_work_packages:
+      - "WP-IMP-0040"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_validator.py"
+    related_adrs:
+      - "ADR-0001"
+    related_runtime_modules: []
+    notes: "Defines three-product architecture, NFR-001..010, FIT-001..008, EDR-001..012."
+
+  - spec_id: "SPEC-002"
+    title: "Runtime Architecture"
+    version: "1.0"
+    level: 1
+    status: "Approved"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/01-architecture/SPEC-002-RUNTIME-ARCHITECTURE.md"
+    canonical_source: "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+    spec_id_internal: "RUN-001 / RUN-002 / SYS-03"
+    dependencies: ["SPEC-001"]
+    superseded_documents: []
+    related_capabilities:
+      - "L1-ING"
+      - "L1-FST"
+      - "L1-RDB"
+      - "L1-MEM"
+      - "L2-BASE"
+      - "L2-MAC"
+      - "L2-MIC"
+      - "L2-LIQ"
+      - "L2-REG"
+      - "L2-FOR"
+      - "L2-BEH"
+      - "L3-WRM"
+      - "L3-SIM"
+      - "L4-FUS"
+      - "L4-DEC"
+      - "L4-VAL"
+      - "L5-EXE"
+      - "L6-OPT"
+    related_work_packages:
+      - "WP-RT-1001"
+      - "WP-RT-1018"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_layer*.py"
+    related_adrs:
+      - "ADR-0001"
+    related_runtime_modules:
+      - "06-runtime/afrp_runtime/layer1"
+      - "06-runtime/afrp_runtime/layer2"
+      - "06-runtime/afrp_runtime/layer3"
+      - "06-runtime/afrp_runtime/layer4"
+      - "06-runtime/afrp_runtime/layer5"
+      - "06-runtime/afrp_runtime/layer6"
+    notes: "Governs all six runtime layers, state machine SYS-03, and CIO taxonomy."
+
+  - spec_id: "SPEC-003"
+    title: "Mathematical Foundation"
+    version: "1.0"
+    level: 1
+    status: "Approved"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/01-architecture/SPEC-003-MATHEMATICAL-FOUNDATION.md"
+    canonical_source: "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+    spec_id_internal: "MATH-001"
+    dependencies: ["SPEC-001"]
+    superseded_documents: []
+    related_capabilities:
+      - "L2-BASE"
+      - "L3-WRM"
+      - "L3-SIM"
+      - "L4-FUS"
+      - "L4-DEC"
+      - "L4-VAL"
+    related_work_packages: []
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_layer2.py"
+      - "tests/unit/test_layer3.py"
+      - "tests/unit/test_layer4.py"
+    related_adrs:
+      - "ADR-0001"
+    related_runtime_modules:
+      - "06-runtime/afrp_runtime/layer2"
+      - "06-runtime/afrp_runtime/layer3"
+      - "06-runtime/afrp_runtime/layer4"
+    notes: "DSmT PCR5, cognitive manifold, trajectory entropy, utility optimization."
+
+  - spec_id: "SPEC-004"
+    title: "Reference Specification"
+    version: "1.0"
+    level: 1
+    status: "Approved"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/01-architecture/SPEC-004-REFERENCE-SPECIFICATION.md"
+    canonical_source: "02-architecture/200_REFERENCE_SPECIFICATION.md"
+    spec_id_internal: "REF-001"
+    dependencies: ["SPEC-001", "SPEC-002"]
+    superseded_documents: []
+    related_capabilities:
+      - "RT-PROTO-ANNOTATIONS"
+      - "RT-PROTO-ENVELOPE"
+      - "RT-PROTO-CIO"
+    related_work_packages:
+      - "WP-IMP-0009"
+      - "WP-IMP-0010"
+      - "WP-IMP-0011"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_contracts.py"
+    related_adrs:
+      - "ADR-0001"
+    related_runtime_modules:
+      - "proto/afrp/v1/"
+      - "06-runtime/afrp_runtime/contracts"
+    notes: "CognitiveEnvelope, CIO-01..12, WPS-1.0 / ERS-1.0 schemas, EGP-2.0 protocol."
+
+  - spec_id: "SPEC-005"
+    title: "Production Engineering Architecture"
+    version: "0.0"
+    level: 1
+    status: "Pending_Import"
+    import_status: "Pending_Import"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/01-architecture/SPEC-005-PRODUCTION-ENGINEERING-ARCHITECTURE.md"
+    canonical_source: null
+    spec_id_internal: "PROD-001"
+    dependencies: ["SPEC-001", "SPEC-002"]
+    superseded_documents: []
+    related_capabilities:
+      - "OPS-DEPLOY"
+    related_work_packages: []
+    related_evidence: []
+    related_tests: []
+    related_adrs: []
+    related_runtime_modules:
+      - "08-operations/docker"
+      - "08-operations/policies"
+    notes: >
+      PENDING IMPORT. Production deployment architecture including HA clustering,
+      mTLS/SPIFFE, Vault integration, Kubernetes manifests, and operational SLOs
+      must be imported from external documentation.
+
+  # ── Level 2 — Research Specifications ──────────────────────────────────────
+  - spec_id: "SPEC-010"
+    title: "Research Standard RS-1.0"
+    version: "0.5"
+    level: 2
+    status: "Draft"
+    import_status: "Derived"
+    owner: "RESEARCH"
+    approval_authority: "Principal Quantitative Researcher"
+    repository_location: "specs/02-research/SPEC-010-RESEARCH-STANDARD-RS10.md"
+    canonical_source: null
+    spec_id_internal: "RS-1.0"
+    dependencies: ["SPEC-000", "SPEC-001"]
+    superseded_documents: []
+    related_capabilities:
+      - "RESEARCH-HARNESS"
+      - "QUANT-BACKTEST"
+      - "PAPER-SHADOW-EXEC"
+      - "ALPHA-RESEARCH"
+    related_work_packages:
+      - "WP-IMP-0031"
+      - "WP-IMP-0037"
+      - "WP-IMP-0038"
+      - "WP-IMP-0039"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_backtest.py"
+      - "tests/unit/test_alpha_research.py"
+    related_adrs: []
+    related_runtime_modules:
+      - "07-research/afrp_research"
+      - "tools/backtest"
+      - "tools/alpha_research"
+      - "tools/paper_trading"
+    notes: >
+      DRAFT. Institutional research methodology standard. Governs hypothesis formation,
+      experiment design, walk-forward validation, anti-overfitting policy, and
+      promotion criteria. Derived from Phase C/D/E methodology currently implicit
+      in research tools. Requires formal ARB review and approval.
+
+  - spec_id: "SPEC-011"
+    title: "Gold Market Specification"
+    version: "0.0"
+    level: 2
+    status: "Pending_Import"
+    import_status: "Pending_Import"
+    owner: "RESEARCH"
+    approval_authority: "Principal Quantitative Researcher"
+    repository_location: "specs/02-research/SPEC-011-GOLD-MARKET-SPECIFICATION.md"
+    canonical_source: null
+    spec_id_internal: "GOLD-001"
+    dependencies: ["SPEC-010"]
+    superseded_documents: []
+    related_capabilities:
+      - "L1-ING"
+      - "L1-FST"
+      - "L2-MAC"
+      - "L2-MIC"
+      - "L2-LIQ"
+    related_work_packages: []
+    related_evidence: []
+    related_tests: []
+    related_adrs: []
+    related_runtime_modules:
+      - "06-runtime/afrp_runtime/layer1"
+      - "06-runtime/afrp_runtime/layer2"
+    notes: >
+      PENDING IMPORT. XAU/USD market microstructure, trading session definitions,
+      liquidity profiles, macroeconomic drivers (DXY, real rates, geopolitical risk),
+      and instrument-specific behavioural properties. Research evidence exists in
+      AFRP-Datasets and 11-research/ but no formal specification document.
+
+  - spec_id: "SPEC-012"
+    title: "XAU/USD Alpha Discovery Bible"
+    version: "0.0"
+    level: 2
+    status: "Pending_Import"
+    import_status: "Pending_Import"
+    owner: "RESEARCH"
+    approval_authority: "Principal Quantitative Researcher"
+    repository_location: "specs/02-research/SPEC-012-ALPHA-DISCOVERY-BIBLE.md"
+    canonical_source: null
+    spec_id_internal: "ALPHA-BIBLE-001"
+    dependencies: ["SPEC-010", "SPEC-011"]
+    superseded_documents: []
+    related_capabilities:
+      - "ALPHA-RESEARCH"
+    related_work_packages:
+      - "WP-IMP-0039"
+    related_evidence: []
+    related_tests: []
+    related_adrs: []
+    related_runtime_modules:
+      - "tools/alpha_research"
+    notes: >
+      PENDING IMPORT. The definitive catalogue of evaluated and candidate alpha
+      signals for XAU/USD including: trend following, mean reversion, liquidity sweep,
+      macro-only, technical-only, and hybrid hypotheses. Phase E results exist
+      (all strategies FAIL promotion) but no formal spec document.
+
+  - spec_id: "SPEC-013"
+    title: "Alpha Validation Framework"
+    version: "0.5"
+    level: 2
+    status: "Draft"
+    import_status: "Derived"
+    owner: "RESEARCH"
+    approval_authority: "Principal Quantitative Researcher"
+    repository_location: "specs/02-research/SPEC-013-ALPHA-VALIDATION-FRAMEWORK.md"
+    canonical_source: null
+    spec_id_internal: "AVF-1.0"
+    dependencies: ["SPEC-010", "SPEC-003"]
+    superseded_documents: []
+    related_capabilities:
+      - "PHASEB-VV"
+      - "QUANT-BACKTEST"
+      - "ALPHA-RESEARCH"
+    related_work_packages:
+      - "WP-IMP-0036"
+      - "WP-IMP-0037"
+      - "WP-IMP-0039"
+    related_evidence:
+      - "EXEC-036"
+      - "EXEC-037"
+      - "EXEC-041"
+    related_tests:
+      - "tests/unit/test_phaseb_verification.py"
+      - "tests/unit/test_backtest_benchmarks.py"
+      - "tests/unit/test_alpha_research.py"
+    related_adrs: []
+    related_runtime_modules:
+      - "tools/verification"
+      - "tools/backtest"
+      - "tools/alpha_research"
+    notes: >
+      DRAFT. Defines validation gates for alpha promotion: Sharpe > 0.5, positive
+      full-sample expectancy, walk-forward positive fold ratio > 0.6, Monte Carlo
+      ruin probability < 5%. Phase B V&V framework (WP-IMP-0036) partially implements this.
+      Formal spec document required.
+
+  - spec_id: "SPEC-014"
+    title: "Feature Engineering Standard"
+    version: "0.5"
+    level: 2
+    status: "Draft"
+    import_status: "Derived"
+    owner: "RESEARCH"
+    approval_authority: "Principal Quantitative Researcher"
+    repository_location: "specs/02-research/SPEC-014-FEATURE-ENGINEERING-STANDARD.md"
+    canonical_source: null
+    spec_id_internal: "FES-1.0"
+    dependencies: ["SPEC-002", "SPEC-010", "SPEC-011"]
+    superseded_documents: []
+    related_capabilities:
+      - "L1-FST"
+      - "L2-BASE"
+      - "L2-MAC"
+      - "L2-MIC"
+      - "L2-LIQ"
+      - "L2-REG"
+      - "L2-FOR"
+      - "L2-BEH"
+    related_work_packages:
+      - "WP-RT-1002"
+      - "WP-RT-1005"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_layer1.py"
+      - "tests/unit/test_layer2.py"
+    related_adrs: []
+    related_runtime_modules:
+      - "06-runtime/afrp_runtime/layer1"
+      - "06-runtime/afrp_runtime/layer2"
+    notes: >
+      DRAFT. Feature taxonomy (macro, micro, liquidity, regime, forward, behavioral),
+      normalization rules, stationarity requirements, and feature-to-CIO-02 mapping.
+      Implicit in Layer 1/2 implementation but no formal specification document.
+
+  - spec_id: "SPEC-015"
+    title: "Financial Reasoning Framework"
+    version: "0.5"
+    level: 2
+    status: "Draft"
+    import_status: "Derived"
+    owner: "RESEARCH"
+    approval_authority: "Principal Quantitative Researcher"
+    repository_location: "specs/02-research/SPEC-015-FINANCIAL-REASONING-FRAMEWORK.md"
+    canonical_source: "02-architecture/130_MATHEMATICAL_FOUNDATION.md"
+    spec_id_internal: "FRF-1.0"
+    dependencies: ["SPEC-003", "SPEC-010"]
+    superseded_documents: []
+    related_capabilities:
+      - "L3-WRM"
+      - "L4-FUS"
+      - "L4-DEC"
+      - "L4-VAL"
+    related_work_packages:
+      - "WP-RT-1012"
+      - "WP-RT-1014"
+      - "WP-RT-1015"
+      - "WP-RT-1016"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_layer3.py"
+      - "tests/unit/test_layer4.py"
+    related_adrs: []
+    related_runtime_modules:
+      - "06-runtime/afrp_runtime/layer3"
+      - "06-runtime/afrp_runtime/layer4"
+    notes: >
+      DRAFT. Epistemic belief formation, DSmT PCR5 fusion, risk-adjusted utility,
+      feasible set projection, No-Trade safety policy. Mathematical content in
+      MATH-001 but no dedicated reasoning framework specification.
+
+  # ── Level 3 — Engineering Specifications ───────────────────────────────────
+  - spec_id: "SPEC-020"
+    title: "Engineering Operating System"
+    version: "1.0"
+    level: 3
+    status: "Approved"
+    import_status: "Derived"
+    owner: "EOS-CLI"
+    approval_authority: "Lead Engineer"
+    repository_location: "specs/03-engineering/SPEC-020-ENGINEERING-OPERATING-SYSTEM.md"
+    canonical_source: "03-engineering/120_ENGINEERING_OPERATING_SYSTEM.md"
+    spec_id_internal: "EOS-001 / EOS-002 / EOS-003"
+    dependencies: ["SPEC-001"]
+    superseded_documents: []
+    related_capabilities:
+      - "EOS-BOOT"
+      - "EOS-CONTEXT"
+      - "EOS-GRAPH"
+      - "EOS-VALIDATOR"
+      - "EOS-EVIDENCE"
+      - "EOS-HEALTH"
+      - "EOS-ORCHESTRATOR"
+    related_work_packages:
+      - "WP-IMP-0001"
+      - "WP-IMP-0003"
+      - "WP-IMP-0004"
+      - "WP-IMP-0005"
+      - "WP-IMP-0006"
+      - "WP-IMP-0007"
+      - "WP-IMP-0008"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_bootloader.py"
+      - "tests/unit/test_graph.py"
+      - "tests/unit/test_validator.py"
+      - "tests/unit/test_evidence.py"
+      - "tests/unit/test_health.py"
+      - "tests/unit/test_orchestrator.py"
+    related_adrs:
+      - "ADR-0001"
+    related_runtime_modules:
+      - "tools/afrp-cli"
+    notes: "Complete EOS toolchain. All capabilities COMPLETE."
+
+  - spec_id: "SPEC-021"
+    title: "Implementation Guide"
+    version: "1.0"
+    level: 3
+    status: "Approved"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "Lead Engineer"
+    repository_location: "specs/03-engineering/SPEC-021-IMPLEMENTATION-GUIDE.md"
+    canonical_source: "03-engineering/300_IMPLEMENTATION_GUIDE.md"
+    spec_id_internal: "IMP-001"
+    dependencies: ["SPEC-020"]
+    superseded_documents: []
+    related_capabilities:
+      - "EOS-ORCHESTRATOR"
+    related_work_packages:
+      - "WP-IMP-0040"
+    related_evidence:
+      - "EXEC-042"
+    related_tests: []
+    related_adrs: []
+    related_runtime_modules: []
+    notes: "Guides AI agents through EGP-2.0 execution cycle."
+
+  # ── Level 4 — Runtime / Implementation Specifications ─────────────────────
+  - spec_id: "SPEC-030"
+    title: "Multi-Agent Architecture"
+    version: "1.0"
+    level: 4
+    status: "Approved"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/04-runtime/SPEC-030-MULTI-AGENT-ARCHITECTURE.md"
+    canonical_source: "02-architecture/110_RUNTIME_ARCHITECTURE.md"
+    spec_id_internal: "RUN-002 / SLS-200"
+    dependencies: ["SPEC-002", "SPEC-003", "SPEC-004"]
+    superseded_documents: []
+    related_capabilities:
+      - "L2-BASE"
+      - "L2-MAC"
+      - "L2-MIC"
+      - "L2-LIQ"
+      - "L2-REG"
+      - "L2-FOR"
+      - "L2-BEH"
+    related_work_packages:
+      - "WP-RT-1005"
+      - "WP-RT-1006"
+      - "WP-RT-1007"
+      - "WP-RT-1008"
+      - "WP-RT-1009"
+      - "WP-RT-1010"
+      - "WP-RT-1011"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_layer2.py"
+    related_adrs:
+      - "ADR-0001"
+    related_runtime_modules:
+      - "06-runtime/afrp_runtime/layer2"
+    notes: >
+      Six domain agents: Macro, Microstructure, Liquidity, Regime, Forward, Behavioral.
+      All fully implemented and COMPLETE.
+
+  - spec_id: "SPEC-031"
+    title: "Memory & Knowledge Architecture"
+    version: "0.5"
+    level: 4
+    status: "Draft"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/04-runtime/SPEC-031-MEMORY-KNOWLEDGE-ARCHITECTURE.md"
+    canonical_source: null
+    spec_id_internal: "MEM-001"
+    dependencies: ["SPEC-002", "SPEC-060"]
+    superseded_documents: []
+    related_capabilities:
+      - "L1-MEM"
+      - "L1-RDB"
+      - "L6-OPT"
+    related_work_packages:
+      - "WP-RT-1004"
+      - "WP-RT-1018"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_layer1.py"
+      - "tests/unit/test_layer6.py"
+    related_adrs: []
+    related_runtime_modules:
+      - "06-runtime/afrp_runtime/layer1"
+      - "06-runtime/afrp_runtime/layer6"
+    notes: >
+      DRAFT. Runtime memory: vector store (CIO-12), relational DB (CIO-10), episodic
+      embeddings (L6-OPT). Full institutional knowledge architecture per IKROS
+      specification (SPEC-060) NOT YET IMPLEMENTED. Current implementation is
+      operational memory only; research/institutional memory absent.
+
+  - spec_id: "SPEC-032"
+    title: "Autonomous Learning & Evolution"
+    version: "0.5"
+    level: 4
+    status: "Draft"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/04-runtime/SPEC-032-AUTONOMOUS-LEARNING-EVOLUTION.md"
+    canonical_source: null
+    spec_id_internal: "LEARN-001"
+    dependencies: ["SPEC-002", "SPEC-003"]
+    superseded_documents: []
+    related_capabilities:
+      - "L6-OPT"
+    related_work_packages:
+      - "WP-RT-1018"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_layer6.py"
+    related_adrs: []
+    related_runtime_modules:
+      - "06-runtime/afrp_runtime/layer6"
+    notes: >
+      DRAFT. Brier scoring, CIO-11 calibration weights, CIO-12 episodic embeddings.
+      Online calibration loop implemented (L6-OPT COMPLETE). Autonomous strategy
+      evolution, self-modification, meta-learning NOT IMPLEMENTED. Requires IKROS.
+
+  - spec_id: "SPEC-033"
+    title: "Risk Intelligence & Portfolio Construction"
+    version: "0.5"
+    level: 4
+    status: "Draft"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/04-runtime/SPEC-033-RISK-INTELLIGENCE-PORTFOLIO.md"
+    canonical_source: null
+    spec_id_internal: "RISK-001"
+    dependencies: ["SPEC-002", "SPEC-003"]
+    superseded_documents: []
+    related_capabilities:
+      - "L4-DEC"
+      - "L4-VAL"
+      - "L5-EXE"
+    related_work_packages:
+      - "WP-RT-1015"
+      - "WP-RT-1016"
+      - "WP-RT-1017"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_layer4.py"
+      - "tests/unit/test_layer5.py"
+    related_adrs: []
+    related_runtime_modules:
+      - "06-runtime/afrp_runtime/layer4"
+      - "06-runtime/afrp_runtime/layer5"
+    notes: >
+      DRAFT. Risk-adjusted utility optimization (L4-DEC), policy projection onto
+      feasible set (L4-VAL, MP-01..05), order state machine and portfolio state
+      (L5-EXE). Runtime implementation COMPLETE. Formal portfolio construction
+      specification (multi-asset, Kelly sizing, drawdown control) MISSING.
+
+  - spec_id: "SPEC-034"
+    title: "Simulation & Digital Twin"
+    version: "0.3"
+    level: 4
+    status: "Draft"
+    import_status: "Derived"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/04-runtime/SPEC-034-SIMULATION-DIGITAL-TWIN.md"
+    canonical_source: null
+    spec_id_internal: "SIM-001"
+    dependencies: ["SPEC-002", "SPEC-003"]
+    superseded_documents: []
+    related_capabilities:
+      - "L3-SIM"
+    related_work_packages:
+      - "WP-RT-1013"
+    related_evidence:
+      - "EXEC-042"
+    related_tests:
+      - "tests/unit/test_layer3.py"
+    related_adrs: []
+    related_runtime_modules:
+      - "06-runtime/afrp_runtime/layer3"
+    notes: >
+      DRAFT. Scenario simulator (L3-SIM): Sigma_EWM trajectory distributions, Shannon
+      entropy, CIO-05A. COMPLETE as runtime prototype. Full Digital Twin specification
+      (market mechanics model, tick-level simulation, synthetic data generation)
+      NOT IMPLEMENTED. Major gap for advanced research.
+
+  # ── Level 5 — Validation Specifications ────────────────────────────────────
+  - spec_id: "SPEC-040"
+    title: "Validation Framework"
+    version: "1.0"
+    level: 5
+    status: "Approved"
+    import_status: "Derived"
+    owner: "VALIDATION"
+    approval_authority: "ARB"
+    repository_location: "specs/05-validation/SPEC-040-VALIDATION-FRAMEWORK.md"
+    canonical_source: null
+    spec_id_internal: "VF-1.0"
+    dependencies: ["SPEC-001", "SPEC-002"]
+    superseded_documents: []
+    related_capabilities:
+      - "SYSTEM-VALIDATION"
+      - "PHASEB-VV"
+    related_work_packages:
+      - "WP-IMP-0033"
+      - "WP-IMP-0036"
+    related_evidence:
+      - "EXEC-031"
+      - "EXEC-036"
+    related_tests:
+      - "tests/unit/test_phaseb_verification.py"
+      - "tests/integration/test_system_replay.py"
+    related_adrs: []
+    related_runtime_modules:
+      - "tools/verification"
+      - "tools/system_gate.py"
+    notes: >
+      APPROVED. FIT-008 deterministic replay, 14 validation scenarios, Phase B V&V
+      framework. Statistically validated Sharpe, Sortino, Calmar, MDD, Brier metrics.
+      Historical campaign (Phase B2) pending.
+
+  # ── Level 6 — Operational Specifications ───────────────────────────────────
+  - spec_id: "SPEC-050"
+    title: "Operational Architecture"
+    version: "0.3"
+    level: 6
+    status: "Pending_Import"
+    import_status: "Pending_Import"
+    owner: "OPS"
+    approval_authority: "ARB"
+    repository_location: "specs/06-operations/SPEC-050-OPERATIONAL-ARCHITECTURE.md"
+    canonical_source: null
+    spec_id_internal: "OPS-001"
+    dependencies: ["SPEC-001", "SPEC-002"]
+    superseded_documents: []
+    related_capabilities:
+      - "OPS-DEPLOY"
+    related_work_packages:
+      - "WP-IMP-0032"
+    related_evidence:
+      - "EXEC-042"
+    related_tests: []
+    related_adrs: []
+    related_runtime_modules:
+      - "08-operations/docker"
+      - "08-operations/policies"
+    notes: >
+      PENDING IMPORT. Docker deployment configurations and policies exist in
+      08-operations/ but no formal operational specification document. Must define
+      HA clustering, mTLS SPIFFE/SPIRE, Vault secrets, monitoring SLOs.
+
+  # ── Level 7 — Knowledge & Intelligence Specifications ─────────────────────
+  - spec_id: "SPEC-060"
+    title: "IKROS — Institutional Knowledge & Research Operating System Architecture"
+    version: "0.9"
+    level: 7
+    status: "Draft"
+    import_status: "Imported"
+    owner: "ARB"
+    approval_authority: "ARB"
+    repository_location: "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+    canonical_source: "AFRP-IKROS-ARCH-1.0.0 (external)"
+    spec_id_internal: "IKROS-ARCH-1.0"
+    dependencies:
+      - "SPEC-000"
+      - "SPEC-001"
+      - "SPEC-010"
+      - "SPEC-013"
+      - "SPEC-031"
+      - "SPEC-032"
+    superseded_documents: []
+    related_capabilities: []
+    related_work_packages:
+      - "WP-IMP-0041"
+    related_evidence: []
+    related_tests: []
+    related_adrs: []
+    related_runtime_modules: []
+    notes: >
+      IMPORTED from AFRP-IKROS-ARCH-1.0.0 (external ARB document). Defines complete
+      institutional knowledge system: ontology, knowledge graph, registries (Research,
+      Hypothesis, Dataset, Feature, Factor, Experiment, Validation, Model, Alpha,
+      Failure, Literature, Decision, Knowledge), research lifecycle, memory architecture,
+      lineage, confidence/uncertainty model, governance, query system, and integrations.
+      AWAITING ARB APPROVAL before WP-IMP-0041 (IKROS Architecture) begins.
+      This is the highest-priority unimplemented specification.

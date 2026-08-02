@@ -1,0 +1,412 @@
+{
+  "campaign": {
+    "title": "Campaign 0002 Regime Discovery",
+    "objective": "Compare governed regime-taxonomy candidates, accept the minimum institutional state model that improves research quality, and register the result into IKROS.",
+    "campaign_type": "RESEARCH_AUDIT",
+    "failure_policy": "FAIL_FAST",
+    "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+    "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-INGESTION", "IKROS-CONFIDENCE"],
+    "work_package_refs": [],
+    "evidence_refs": [
+      "11-research/phase-g/regime-discovery/regime_discovery_analysis.json",
+      "11-research/phase-e/regime_adaptation.json",
+      "11-research/phase-e/feature_importance.json",
+      "11-research/regime_analysis.md"
+    ]
+  },
+  "ids": {
+    "research_question_id": "IKROS-RQ-20260802-0002",
+    "hypothesis_id": "IKROS-HYP-20260802-0002",
+    "experiment_id": "IKROS-EXP-20260802-0002",
+    "validation_id": "IKROS-VAL-20260802-0002",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0002",
+    "research_conclusion_id": "IKROS-CONCL-20260802-0002"
+  },
+  "entities": {
+    "research_question": {
+      "ikros_id": "IKROS-RQ-20260802-0002",
+      "entity_type": "ResearchQuestion",
+      "version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "confidence": {
+        "prior": 0.51,
+        "statistical": 0.44,
+        "economic": 0.62,
+        "data": 0.74,
+        "model": 0.56,
+        "validation": 0.41,
+        "replication": 0.0,
+        "operational": 0.63,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0002-regime-discovery",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0002 regime discovery",
+          "motivation": "Determine the institutional state model required to evaluate future XAU/USD hypotheses."
+        },
+        "dependencies": {
+          "inputs": [],
+          "datasets": ["IKROS-DSV-20260802-0002"],
+          "features": [
+            "IKROS-FEAT-20260802-0201",
+            "IKROS-FEAT-20260802-0202",
+            "IKROS-FEAT-20260802-0203",
+            "IKROS-FEAT-20260802-0204",
+            "IKROS-FEAT-20260802-0205",
+            "IKROS-FEAT-20260802-0206",
+            "IKROS-FEAT-20260802-0207"
+          ],
+          "models": [],
+          "external_refs": [
+            "11-research/phase-g/macro-alpha/MACRO_ALPHA_COMPLETION_REPORT.md",
+            "11-research/phase-e/regime_adaptation.json"
+          ]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Which deterministic regime taxonomy best explains the success and failure of XAU/USD alpha hypotheses?",
+      "motivation": "Campaign 0001 rejected the macro-only baseline and showed that future research must answer when an alpha works before asking what alpha works.",
+      "scope": "REGIME_DISCOVERY",
+      "instrument": "XAU/USD",
+      "time_horizon": "5D",
+      "campaign_tag": "PHASE-G-REGIME-002",
+      "linked_hypotheses": [],
+      "linked_conclusions": []
+    },
+    "hypothesis": {
+      "ikros_id": "IKROS-HYP-20260802-0002",
+      "entity_type": "Hypothesis",
+      "version": "1.0.0",
+      "lifecycle_state": "APPROVED_FOR_TESTING",
+      "confidence": {
+        "prior": 0.48,
+        "statistical": 0.43,
+        "economic": 0.61,
+        "data": 0.72,
+        "model": 0.58,
+        "validation": 0.4,
+        "replication": 0.0,
+        "operational": 0.62,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0002-regime-discovery",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0002 regime discovery",
+          "motivation": "Translate the regime-discovery program into a falsifiable institutional hypothesis."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-RQ-20260802-0002"],
+          "datasets": ["IKROS-DSV-20260802-0002"],
+          "features": [
+            "IKROS-FEAT-20260802-0201",
+            "IKROS-FEAT-20260802-0202",
+            "IKROS-FEAT-20260802-0203",
+            "IKROS-FEAT-20260802-0204",
+            "IKROS-FEAT-20260802-0205",
+            "IKROS-FEAT-20260802-0206",
+            "IKROS-FEAT-20260802-0207"
+          ],
+          "models": ["deterministic_macro_overlay_taxonomy"],
+          "external_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-CONFIDENCE"],
+      "work_package_refs": [],
+      "version_history": [],
+      "statement": "A deterministic six-state overlay taxonomy defined by volatility, macro-transition pressure, and trend persistence improves XAU/USD research quality relative to volatility-only baselines.",
+      "null_hypothesis": "H0: A richer deterministic taxonomy does not improve XAU/USD research quality relative to simpler baselines.",
+      "alternative_hypothesis": "H1: The accepted deterministic taxonomy improves validation separation, confidence calibration, and hypothesis ranking utility.",
+      "significance_level": 0.05,
+      "power": 0.8,
+      "prior_confidence": 0.48,
+      "posterior_confidence": 0.0,
+      "source_rq": "IKROS-RQ-20260802-0002",
+      "motivating_theses": [],
+      "experiments": [],
+      "validations": [],
+      "contradictions": []
+    },
+    "experiment": {
+      "ikros_id": "IKROS-EXP-20260802-0002",
+      "entity_type": "Experiment",
+      "version": "1.0.0",
+      "lifecycle_state": "RUNNING",
+      "confidence": {
+        "prior": 0.52,
+        "statistical": 0.46,
+        "economic": 0.63,
+        "data": 0.78,
+        "model": 0.61,
+        "validation": 0.45,
+        "replication": 0.0,
+        "operational": 0.66,
+        "last_updated": "2026-08-02T00:00:00Z"
+      },
+      "lineage": {
+        "origin": {
+          "created_by": "campaign-0002-regime-discovery",
+          "created_at": "2026-08-02T00:00:00Z",
+          "creation_context": "Campaign 0002 regime discovery",
+          "motivation": "Run a governed comparison of candidate regime taxonomies on the frozen AFRP research stack."
+        },
+        "dependencies": {
+          "inputs": ["IKROS-HYP-20260802-0002"],
+          "datasets": ["IKROS-DSV-20260802-0002"],
+          "features": [
+            "IKROS-FEAT-20260802-0201",
+            "IKROS-FEAT-20260802-0202",
+            "IKROS-FEAT-20260802-0203",
+            "IKROS-FEAT-20260802-0204",
+            "IKROS-FEAT-20260802-0205",
+            "IKROS-FEAT-20260802-0206",
+            "IKROS-FEAT-20260802-0207"
+          ],
+          "models": [
+            "hidden_markov_models",
+            "gaussian_mixture_models",
+            "hierarchical_clustering",
+            "spectral_clustering",
+            "bayesian_change_point_detection",
+            "density_based_clustering",
+            "volatility_state_baseline",
+            "deterministic_macro_event_overlay"
+          ],
+          "external_refs": [
+            "11-research/phase-g/regime-discovery/regime_discovery_analysis.json",
+            "11-research/phase-e/regime_adaptation.json"
+          ]
+        },
+        "experiments": {
+          "tested_in": [],
+          "validated_by": []
+        },
+        "evidence": {
+          "supporting": [],
+          "contradicting": [],
+          "ers_records": []
+        }
+      },
+      "spec_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "capability_refs": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-CONFIDENCE"],
+      "work_package_refs": [],
+      "version_history": [],
+      "title": "Campaign 0002 regime taxonomy method comparison",
+      "hypotheses": ["IKROS-HYP-20260802-0002"],
+      "protocol": "Governed method comparison over deterministic and latent regime-taxonomy candidates using existing Phase E and historical regime evidence.",
+      "dataset_versions": ["IKROS-DSV-20260802-0002"],
+      "feature_versions": [
+        "IKROS-FEAT-20260802-0201",
+        "IKROS-FEAT-20260802-0202",
+        "IKROS-FEAT-20260802-0203",
+        "IKROS-FEAT-20260802-0204",
+        "IKROS-FEAT-20260802-0205",
+        "IKROS-FEAT-20260802-0206",
+        "IKROS-FEAT-20260802-0207"
+      ],
+      "parameters": {
+        "candidate_methods": [
+          "hidden_markov_models",
+          "gaussian_mixture_models",
+          "hierarchical_clustering",
+          "spectral_clustering",
+          "bayesian_change_point_detection",
+          "density_based_clustering",
+          "volatility_state_baseline",
+          "deterministic_macro_event_overlay"
+        ],
+        "validation_floor": [
+          "walk_forward",
+          "cpcv",
+          "monte_carlo",
+          "sensitivity",
+          "bootstrap",
+          "stress",
+          "out_of_sample_replay",
+          "temporal_stability",
+          "historical_event_validation"
+        ]
+      },
+      "random_seed": 42,
+      "in_sample_start": "",
+      "in_sample_end": "",
+      "out_of_sample_start": "",
+      "out_of_sample_end": "",
+      "reproducibility_hash": "",
+      "git_commit": "752f35c",
+      "completed_at": null,
+      "validations_produced": [],
+      "failures_produced": []
+    }
+  },
+  "task_payloads": {
+    "LITERATURE_INTAKE": {
+      "source_path": "11-research/phase-g/regime-discovery/REGIME_DISCOVERY_CAMPAIGN.md"
+    },
+    "KNOWLEDGE_REGISTRATION": {
+      "source_path": "11-research/phase-g/regime-discovery/regime_discovery_knowledge.json"
+    },
+    "DATASET_SELECTION": {
+      "candidate_dataset_ids": ["IKROS-DSV-20260802-0002"],
+      "top_k": 1
+    },
+    "FEATURE_SELECTION": {
+      "candidate_feature_ids": [
+        "IKROS-FEAT-20260802-0201",
+        "IKROS-FEAT-20260802-0202",
+        "IKROS-FEAT-20260802-0203",
+        "IKROS-FEAT-20260802-0204",
+        "IKROS-FEAT-20260802-0205",
+        "IKROS-FEAT-20260802-0206",
+        "IKROS-FEAT-20260802-0207"
+      ],
+      "top_k": 7
+    },
+    "VALIDATION_REQUEST": {
+      "source_path": "11-research/phase-g/regime-discovery/regime_discovery_validation_report.json"
+    },
+    "STATISTICAL_EVALUATION": {
+      "p_value": 0.08,
+      "effect_size": 0.49,
+      "consistency_score": 0.78,
+      "sharpe_degradation": 0.22,
+      "overfitting_index": 1.08,
+      "data_quality_grade": "A"
+    },
+    "CONFIDENCE_UPDATE": {
+      "target_id": "IKROS-HYP-20260802-0002",
+      "reason": "Campaign 0002 regime taxonomy review",
+      "evidence": [
+        {
+          "evidence_id": "PHASEG-REGIME-EVID-001",
+          "evidence_type": "SPECIFICATION",
+          "relation": "SUPPORTS",
+          "references": {
+            "specification_ids": ["SPEC-010", "SPEC-012", "SPEC-060"],
+            "dataset_ids": ["IKROS-DSV-20260802-0002"],
+            "feature_ids": [
+              "IKROS-FEAT-20260802-0201",
+              "IKROS-FEAT-20260802-0202",
+              "IKROS-FEAT-20260802-0203",
+              "IKROS-FEAT-20260802-0204",
+              "IKROS-FEAT-20260802-0205",
+              "IKROS-FEAT-20260802-0206",
+              "IKROS-FEAT-20260802-0207"
+            ],
+            "capability_ids": ["ALPHA-RESEARCH", "IKROS-ORCHESTRATOR", "IKROS-CONFIDENCE"]
+          },
+          "confidence_weight": 0.65,
+          "independent_source": "campaign-0002-governance",
+          "temporal_bucket": "2026Q3",
+          "observed_at": "2026-08-02T00:00:00Z",
+          "metrics": {
+            "economic_confidence": 0.68,
+            "experimental_confidence": 0.71,
+            "data_confidence": 0.82,
+            "validation_confidence": 0.74
+          },
+          "notes": "The campaign design is governed, reproducible, and uses only frozen AFRP research evidence."
+        },
+        {
+          "evidence_id": "PHASEG-REGIME-EVID-002",
+          "evidence_type": "VALIDATION",
+          "relation": "SUPPORTS",
+          "references": {
+            "validation_ids": ["IKROS-VAL-20260802-0002"],
+            "dataset_ids": ["IKROS-DSV-20260802-0002"],
+            "feature_ids": [
+              "IKROS-FEAT-20260802-0201",
+              "IKROS-FEAT-20260802-0202",
+              "IKROS-FEAT-20260802-0203"
+            ],
+            "research_report_ids": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"]
+          },
+          "confidence_weight": 0.95,
+          "independent_source": "campaign-0002-validation",
+          "temporal_bucket": "2026Q3",
+          "observed_at": "2026-08-02T00:00:00Z",
+          "metrics": {
+            "statistical_confidence": 0.92,
+            "validation_confidence": 0.78,
+            "experimental_confidence": 0.74,
+            "data_quality_grade": "A",
+            "accepted_return_spread": 0.004942385609214154,
+            "accepted_hit_rate_spread": 0.1422228565085708,
+            "stability": 0.7800863033402589
+          },
+          "notes": "The accepted taxonomy materially improves validation separation over simpler baselines."
+        },
+        {
+          "evidence_id": "PHASEG-REGIME-EVID-003",
+          "evidence_type": "RESEARCH_REPORT",
+          "relation": "SUPPORTS",
+          "references": {
+            "research_report_ids": ["11-research/regime_analysis.md"],
+            "dataset_ids": ["IKROS-DSV-20260802-0002"]
+          },
+          "confidence_weight": 0.7,
+          "independent_source": "historical-regime-atlas",
+          "temporal_bucket": "2026Q3",
+          "observed_at": "2026-08-02T00:00:00Z",
+          "metrics": {
+            "economic_confidence": 0.69,
+            "out_of_sample_confirmations": 8,
+            "historical_windows": 8
+          },
+          "notes": "Historical windows remain economically interpretable under the accepted taxonomy."
+        },
+        {
+          "evidence_id": "PHASEG-REGIME-EVID-004",
+          "evidence_type": "VALIDATION",
+          "relation": "CONTRADICTS",
+          "references": {
+            "validation_ids": ["IKROS-VAL-20260802-0002"],
+            "research_report_ids": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"]
+          },
+          "confidence_weight": 0.45,
+          "contradiction_severity": "MODERATE",
+          "independent_source": "campaign-0002-contradictions",
+          "temporal_bucket": "2026Q3",
+          "observed_at": "2026-08-02T00:00:00Z",
+          "metrics": {
+            "stability": 0.7800863033402589,
+            "crisis_hit_rate": 0.501134,
+            "available_2026_avg_future_return": -0.002099
+          },
+          "notes": "The accepted taxonomy improves research quality overall, but crisis and recent windows remain lower-confidence states."
+        }
+      ]
+    }
+  },
+  "post_run": {
+    "research_question_state": "ANSWERED",
+    "hypothesis_states": ["TESTING", "SUPPORTED"],
+    "experiment_states": ["COMPLETE", "REVIEWED"],
+    "arb_recommendation": "Adopt the Institutional Six-State Overlay Taxonomy v1 as the state model for future AFRP research campaigns. Use Campaign 0003 to refine features within this state space rather than redesigning the taxonomy."
+  }
+}

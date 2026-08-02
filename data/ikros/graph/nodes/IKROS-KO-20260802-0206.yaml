@@ -1,0 +1,18 @@
+attributes:
+  decision: DEFER
+  reason: Useful for future transition refinement, but incomplete as the sole institutional
+    taxonomy.
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+  summary: Deferred for later transition-refinement studies.
+confidence: 0.64
+created_at: '2026-08-02T01:43:01.847413+00:00'
+ikros_id: IKROS-KO-20260802-0206
+label: Bayesian change point detection method review
+node_id: IKROS-KO-20260802-0206
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-02T01:43:01.847413+00:00'
+valid_to: null
+wp_refs: []

@@ -1,0 +1,138 @@
+alternative_hypothesis: Some policy and event shocks are not isolated bursts but regime-change
+  catalysts that seed a broader trend followed by slower capital.
+capability_refs: []
+confidence:
+  data: 0.45
+  economic: 0.45
+  last_updated: '2026-08-02T01:59:35.161722+00:00'
+  model: 0.0
+  operational: 0.0
+  overall: 0.45
+  prior: 0.45
+  replication: 0.45
+  statistical: 0.45
+  validation: 0.45
+contradictions: []
+entity_type: Hypothesis
+experiments:
+- IKROS-EXP-20260802-0005
+- IKROS-EXP-20260802-0006
+- IKROS-EXP-20260802-0605
+- IKROS-EXP-20260802-0606
+ikros_id: IKROS-HYP-20260802-0408
+lifecycle_state: INCONCLUSIVE
+lineage:
+  dependencies:
+    datasets: []
+    external_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+    features: []
+    inputs:
+    - IKROS-RQ-20260802-0408
+    models: []
+  evidence:
+    contradicting: []
+    ers_records:
+    - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+    supporting: []
+  experiments:
+    tested_in:
+    - IKROS-EXP-20260802-0005
+    - IKROS-EXP-20260802-0006
+    - IKROS-EXP-20260802-0605
+    - IKROS-EXP-20260802-0606
+    validated_by:
+    - IKROS-VAL-20260802-0408
+  origin:
+    created_at: '2026-08-02T01:59:35.072679+00:00'
+    created_by: ikros-ingestion-engine
+    creation_context: INTERNAL_RESEARCH_REPORT
+    motivation: Ingested from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+motivating_theses: []
+null_hypothesis: The described mechanism does not produce a persistent regime-conditioned
+  predictive relationship.
+posterior_confidence: 0.2682
+power: 0.8
+prior_confidence: 0.45
+significance_level: 0.05
+source_rq: IKROS-RQ-20260802-0408
+spec_refs:
+- SPEC-012
+- SPEC-060
+statement: Do macro_transition shocks that align with directional breakout structure
+  hand off into later bull_trend continuation rather than fading out?
+validations:
+- IKROS-VAL-20260802-0408
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.294915+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.297916+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.300915+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.304915+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: State → TESTING. Campaign 0005 began subordinate hypothesis validation.
+  changed_at: '2026-08-02T02:19:46.307918+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: State → INCONCLUSIVE. Campaign 0005 kept the hypothesis in further-research
+    status.
+  changed_at: '2026-08-02T02:19:46.311925+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:19:46.315920+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.775004+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.779003+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.784004+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.936095+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.941091+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.958092+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.962101+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:37:54.989610+00:00'
+  confidence_at_time: 0.45
+  version: 1.0.0
+work_package_refs: []

@@ -1,0 +1,118 @@
+alternative_hypothesis: 'H1: The accepted deterministic taxonomy improves validation
+  separation, confidence calibration, and hypothesis ranking utility.'
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+confidence:
+  data: 0.7071150442477877
+  economic: 0.5490285714285714
+  last_updated: '2026-08-02T01:43:06.214218+00:00'
+  model: 0.5871681415929204
+  operational: 0.496
+  overall: 0.529398595984834
+  prior: 0.48
+  replication: 0.2267749515409686
+  statistical: 0.7360000000000001
+  validation: 0.6175575221238939
+contradictions: []
+entity_type: Hypothesis
+experiments:
+- IKROS-EXP-20260802-0002
+ikros_id: IKROS-HYP-20260802-0002
+lifecycle_state: SUPPORTED
+lineage:
+  dependencies:
+    datasets:
+    - IKROS-DSV-20260802-0002
+    external_refs:
+    - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+    features:
+    - IKROS-FEAT-20260802-0201
+    - IKROS-FEAT-20260802-0202
+    - IKROS-FEAT-20260802-0203
+    - IKROS-FEAT-20260802-0204
+    - IKROS-FEAT-20260802-0205
+    - IKROS-FEAT-20260802-0206
+    - IKROS-FEAT-20260802-0207
+    inputs:
+    - IKROS-RQ-20260802-0002
+    models:
+    - deterministic_macro_overlay_taxonomy
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in:
+    - IKROS-EXP-20260802-0002
+    validated_by:
+    - IKROS-VAL-20260802-0002
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: campaign-0002-regime-discovery
+    creation_context: Campaign 0002 regime discovery
+    motivation: Translate the regime-discovery program into a falsifiable institutional
+      hypothesis.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+motivating_theses: []
+null_hypothesis: 'H0: A richer deterministic taxonomy does not improve XAU/USD research
+  quality relative to simpler baselines.'
+posterior_confidence: 0.529398595984834
+power: 0.8
+prior_confidence: 0.48
+significance_level: 0.05
+source_rq: IKROS-RQ-20260802-0002
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+statement: A deterministic six-state overlay taxonomy defined by volatility, macro-transition
+  pressure, and trend persistence improves XAU/USD research quality relative to volatility-only
+  baselines.
+validations:
+- IKROS-VAL-20260802-0002
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T01:43:06.235220+00:00'
+  confidence_at_time: 0.5482791661008908
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:43:08.131943+00:00'
+  confidence_at_time: 0.529398595984834
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:43:08.135945+00:00'
+  confidence_at_time: 0.529398595984834
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:43:08.138943+00:00'
+  confidence_at_time: 0.529398595984834
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:43:08.142944+00:00'
+  confidence_at_time: 0.529398595984834
+  version: 1.0.0
+- change_summary: State → TESTING. Campaign 0002 regime utility evidence supports
+    the taxonomy.
+  changed_at: '2026-08-02T01:43:08.146943+00:00'
+  confidence_at_time: 0.529398595984834
+  version: 1.0.0
+- change_summary: State → SUPPORTED. Campaign 0002 regime utility evidence supports
+    the taxonomy.
+  changed_at: '2026-08-02T01:43:08.150943+00:00'
+  confidence_at_time: 0.529398595984834
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:43:08.154947+00:00'
+  confidence_at_time: 0.529398595984834
+  version: 1.0.0
+work_package_refs: []

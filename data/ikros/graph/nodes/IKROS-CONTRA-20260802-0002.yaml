@@ -1,0 +1,25 @@
+attributes:
+  contradicts:
+  - IKROS-HYP-20260802-0002
+  reasons:
+  - volatility-only baseline under-separated outcomes
+  - latent-state families did not justify extra governance complexity
+  - crisis dislocation remains a weak-confidence research state
+  severity: MODERATE
+  source_kind: VALIDATION_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+  summary: The simplest and most complex candidate methods both failed institutional
+    acceptance for Campaign 0002.
+confidence: 0.73
+created_at: '2026-08-02T01:43:04.728735+00:00'
+ikros_id: IKROS-CONTRA-20260802-0002
+label: Volatility-only and latent-state method contradiction
+node_id: IKROS-CONTRA-20260802-0002
+node_type: EVIDENCE
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:43:04.728735+00:00'
+valid_to: null
+wp_refs: []

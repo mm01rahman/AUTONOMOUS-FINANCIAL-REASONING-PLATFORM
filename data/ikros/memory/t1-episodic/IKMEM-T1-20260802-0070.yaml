@@ -1,0 +1,237 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:37:48.954757+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0073
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_PROGRAM.md
+- 11-research/phase-g/failure-analysis/failure_analysis_analysis.json
+- 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0010
+- IKROS-RESEARCHTASK-20260802-0074
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0070
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0010
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0073
+    finished_at: '2026-08-02T02:37:48.953756+00:00'
+    kind: HYPOTHESIS_REGISTRATION
+    max_attempts: 1
+    payload:
+      entity:
+        alternative_hypothesis: 'H1: The authorized diagnostic experiments materially
+          reduce uncertainty and support a governed next-step recommendation for each
+          retained hypothesis.'
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-INGESTION
+        confidence:
+          data: 0.82
+          economic: 0.69
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.72
+          overall: 0.7413076465172295
+          prior: 0.56
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        contradictions: []
+        entity_type: Hypothesis
+        experiments: []
+        ikros_id: IKROS-HYP-20260802-0007
+        lifecycle_state: APPROVED_FOR_TESTING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0007
+            external_refs:
+            - 11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-RQ-20260802-0007
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0007-diagnostic-experiments
+            creation_context: Campaign 0007 diagnostic experiment program
+            motivation: Represent the governed claim that the authorized diagnostic
+              experiments can materially reduce uncertainty and determine the next
+              scientific step for the retained hypotheses.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        motivating_theses: []
+        null_hypothesis: 'H0: The authorized diagnostic experiments do not materially
+          reduce uncertainty around the retained hypotheses.'
+        posterior_confidence: 0.0
+        power: 0.8
+        prior_confidence: 0.56
+        significance_level: 0.05
+        source_rq: IKROS-RQ-20260802-0007
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        statement: The six Campaign 0006 diagnostic experiments can reduce uncertainty
+          enough to determine whether each retained hypothesis should remain in testing,
+          return for validation, or be rejected.
+        validations: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: Hypothesis
+    planned_order: 3
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0074
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-HYP-20260802-0007
+      payload:
+        alternative_hypothesis: 'H1: The authorized diagnostic experiments materially
+          reduce uncertainty and support a governed next-step recommendation for each
+          retained hypothesis.'
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-INGESTION
+        confidence:
+          data: 0.82
+          economic: 0.69
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.72
+          overall: 0.7413076465172295
+          prior: 0.56
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        contradictions: []
+        entity_type: Hypothesis
+        experiments: []
+        ikros_id: IKROS-HYP-20260802-0007
+        lifecycle_state: APPROVED_FOR_TESTING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0007
+            external_refs:
+            - 11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-RQ-20260802-0007
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0007-diagnostic-experiments
+            creation_context: Campaign 0007 diagnostic experiment program
+            motivation: Represent the governed claim that the authorized diagnostic
+              experiments can materially reduce uncertainty and determine the next
+              scientific step for the retained hypotheses.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        motivating_theses: []
+        null_hypothesis: 'H0: The authorized diagnostic experiments do not materially
+          reduce uncertainty around the retained hypotheses.'
+        posterior_confidence: 0.0
+        power: 0.8
+        prior_confidence: 0.56
+        significance_level: 0.05
+        source_rq: IKROS-RQ-20260802-0007
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        statement: The six Campaign 0006 diagnostic experiments can reduce uncertainty
+          enough to determine whether each retained hypothesis should remain in testing,
+          return for validation, or be rejected.
+        validations: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T02:37:48.560137+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0074
+    title: Hypothesis Registration
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0010
+- IKROS-HYP-20260802-0007
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: HYPOTHESIS_REGISTRATION COMPLETED
+tags:
+- research-orchestrator
+- hypothesis_registration
+tier: T1_EPISODIC
+title: 'Campaign 0007 Institutional Diagnostic Experiment Program :: Hypothesis Registration'
+updated_at: '2026-08-02T02:37:48.954757+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

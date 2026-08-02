@@ -1,0 +1,28 @@
+graph_node_ids:
+- IKROS-KO-20260802-0002
+ingested_at: '2026-08-02T01:43:01.466067+00:00'
+ingestion_id: IKING-20260802-0004
+memory_ids:
+- IKMEM-T2-20260802-0010
+object_fingerprints:
+- '{"attributes": {"document_metadata": {}, "section_names": ["Acceptance criteria",
+  "Campaign 0002 \u2014 Regime Discovery for XAU/USD", "Expected deliverables", "Governed
+  inputs", "Hypothesis", "Method comparison floor", "Mission", "Research question"]},
+  "capability_refs": [], "confidence": 0.6, "created_at": "2026-08-02T01:43:01.361409+00:00",
+  "dependency_ids": [], "evidence_refs": [], "identifier": "IKROS-KO-20260802-0002",
+  "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type": "KnowledgeObject",
+  "relationships": [], "source_format": "MARKDOWN", "source_ids": [], "source_kind":
+  "MARKDOWN", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\regime-discovery\\REGIME_DISCOVERY_CAMPAIGN.md",
+  "specification_refs": ["SPEC-060"], "summary": "Determine the minimum institutional
+  market-state representation that improves XAU/USD\nresearch quality without modifying
+  the frozen Runtime or IKROS architecture.", "title": "Campaign 0002 \u2014 Regime
+  Discovery for XAU/USD", "version": "1.0.0", "work_package_refs": []}'
+object_ids:
+- IKROS-KO-20260802-0002
+source_format: MARKDOWN
+source_hash: 89108b0b6b146e382fa255c24075234c1f146862417acd0fd5daa7296c6d5d50
+source_kind: MARKDOWN
+source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\REGIME_DISCOVERY_CAMPAIGN.md
+source_version: 1.0.0
+status: INGESTED
+warnings: []

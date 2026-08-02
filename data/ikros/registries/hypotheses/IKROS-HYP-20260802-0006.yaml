@@ -1,0 +1,106 @@
+alternative_hypothesis: 'H1: The retained hypotheses'' non-promotion can be explained
+  through deterministic root-cause analysis and evidence-gap assessment.'
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+confidence:
+  data: 0.81
+  economic: 0.68
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.0
+  operational: 0.71
+  overall: 0.731280669325121
+  prior: 0.55
+  replication: 0.0
+  statistical: 0.0
+  validation: 0.0
+contradictions: []
+entity_type: Hypothesis
+experiments:
+- IKROS-EXP-20260802-0006
+ikros_id: IKROS-HYP-20260802-0006
+lifecycle_state: INCONCLUSIVE
+lineage:
+  dependencies:
+    datasets:
+    - IKROS-DSV-20260802-0006
+    external_refs:
+    - 11-research/phase-g/failure-analysis/failure_analysis_analysis.json
+    features:
+    - IKROS-FEAT-20260802-0301
+    - IKROS-FEAT-20260802-0302
+    - IKROS-FEAT-20260802-0303
+    - IKROS-FEAT-20260802-0304
+    - IKROS-FEAT-20260802-0305
+    - IKROS-FEAT-20260802-0306
+    - IKROS-FEAT-20260802-0308
+    - IKROS-FEAT-20260802-0309
+    - IKROS-FEAT-20260802-0310
+    - IKROS-FEAT-20260802-0311
+    - IKROS-FEAT-20260802-0312
+    inputs:
+    - IKROS-RQ-20260802-0006
+    models:
+    - institutional_six_state_overlay_taxonomy_v1
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in:
+    - IKROS-EXP-20260802-0006
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: campaign-0006-failure-analysis
+    creation_context: Campaign 0006 failure analysis
+    motivation: Represent the governed claim that the retained hypotheses' promotion
+      failures can be explained through deterministic root-cause analysis.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+motivating_theses: []
+null_hypothesis: 'H0: The retained hypotheses'' non-promotion cannot be explained
+  in a governed, reproducible way.'
+posterior_confidence: 0.731280669325121
+power: 0.8
+prior_confidence: 0.55
+significance_level: 0.05
+source_rq: IKROS-RQ-20260802-0006
+spec_refs:
+- SPEC-012
+- SPEC-060
+statement: A governed failure-analysis pass can identify the dominant non-promotion
+  drivers for the retained institutional hypotheses without changing the hypotheses
+  themselves.
+validations: []
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.720003+00:00'
+  confidence_at_time: 0.731280669325121
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.724008+00:00'
+  confidence_at_time: 0.731280669325121
+  version: 1.0.0
+- change_summary: State → TESTING. Campaign 0006 entered governed failure analysis.
+  changed_at: '2026-08-02T02:29:00.728010+00:00'
+  confidence_at_time: 0.731280669325121
+  version: 1.0.0
+- change_summary: State → INCONCLUSIVE. Campaign 0006 completed the governed failure-analysis
+    pass.
+  changed_at: '2026-08-02T02:29:00.731002+00:00'
+  confidence_at_time: 0.731280669325121
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T02:29:00.735003+00:00'
+  confidence_at_time: 0.731280669325121
+  version: 1.0.0
+work_package_refs: []

@@ -1,0 +1,32 @@
+attributes:
+  primary_failures:
+  - The continuation thesis is strongest only while bull_trend persists; negative
+    transition windows and adverse USD spillovers diluted a positive but modest core
+    effect below the institutional promotion floor.
+  - The policy-shock thesis contains a real but shallow edge; it degrades when macro-transition
+    events expand into noisy, high-range follow-through and when the regime handoff
+    remains unresolved after the first shock day.
+  - The handoff thesis never failed on direction, but the sample is too sparse and
+    too transition-specific to satisfy institutional replication standards; most explanatory
+    power comes from identifying the rare macro-to-trend handoff itself, not from
+    the added confirmation filters.
+  retained_hypotheses:
+  - IKROS-HYP-20260802-0401
+  - IKROS-HYP-20260802-0405
+  - IKROS-HYP-20260802-0408
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\failure-analysis\failure_analysis_knowledge.json
+  summary: Contradiction bundle explaining why retained hypotheses remained below
+    the institutional promotion standard.
+confidence: 0.76
+created_at: '2026-08-02T02:28:53.148775+00:00'
+ikros_id: IKROS-CONTRA-20260802-0006
+label: Campaign 0006 contradiction bundle
+node_id: IKROS-CONTRA-20260802-0006
+node_type: EVIDENCE
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T02:28:53.148775+00:00'
+valid_to: null
+wp_refs: []

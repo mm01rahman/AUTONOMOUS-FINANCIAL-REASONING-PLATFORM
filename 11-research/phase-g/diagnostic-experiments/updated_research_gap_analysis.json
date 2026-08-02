@@ -1,0 +1,65 @@
+[
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "theme": "Participant crowding and positioning",
+    "updated_assessment": "Campaign 0007 explained transition and USD contamination, but it did not add a governed positioning proxy to separate healthy continuation from overcrowded bull exhaustion."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "severity": "MEDIUM",
+    "status": "PARTIALLY_RESOLVED",
+    "theme": "Cross-asset macro decomposition",
+    "updated_assessment": "USD spillover intensity now explains part of the failure, but richer real-yield decomposition remains outside the frozen dataset stack."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "severity": "MEDIUM",
+    "status": "PARTIALLY_RESOLVED",
+    "theme": "Crisis overlap labelling",
+    "updated_assessment": "Persistent-versus-transition replay confirmed that overlap windows are the main contamination source, but the regime stack still cannot isolate crisis-overlap episodes more finely."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "theme": "Cross-asset sequencing",
+    "updated_assessment": "Branch and range diagnostics improved understanding, but the experiment program still cannot determine whether gold led or followed the broader repricing wave."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "theme": "Event taxonomy granularity",
+    "updated_assessment": "The governed stack still pools heterogeneous macro-transition events together, limiting how precisely H0405 can be explained across event types."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "severity": "MEDIUM",
+    "status": "PARTIALLY_RESOLVED",
+    "theme": "Liquidity and event-quality proxies",
+    "updated_assessment": "Wide-range contamination is now documented clearly, but no richer governed liquidity-quality proxy exists beyond the frozen range and event-pressure measures."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "severity": "HIGH",
+    "status": "PARTIALLY_RESOLVED",
+    "theme": "Episode coverage",
+    "updated_assessment": "Campaign 0007 expanded the governed handoff universe from 7 to 18 episodes, reducing uncertainty, but coverage remains too thin for institutional re-validation."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "theme": "Intraday transition structure",
+    "updated_assessment": "Daily sequence replay improved path accounting, but the absence of governed intraday ordering data still blocks decisive causal interpretation."
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "theme": "Participant adoption",
+    "updated_assessment": "The diagnostic program still lacks a governed proxy showing when slower trend-following capital truly adopts the handoff after the macro shock."
+  }
+]

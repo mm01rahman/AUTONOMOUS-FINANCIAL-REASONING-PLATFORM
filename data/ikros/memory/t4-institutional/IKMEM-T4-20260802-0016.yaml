@@ -1,0 +1,120 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:37:53.368903+00:00'
+dependency_ids: []
+entity_type: CampaignCompletionReport
+evidence_refs:
+- 11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_PROGRAM.md
+- 11-research/phase-g/failure-analysis/failure_analysis_analysis.json
+- 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0010
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260802-0016
+payload:
+  audit_ids:
+  - IKROS-CAMPAIGNAUDIT-20260802-0202
+  - IKROS-CAMPAIGNAUDIT-20260802-0203
+  - IKROS-CAMPAIGNAUDIT-20260802-0204
+  - IKROS-CAMPAIGNAUDIT-20260802-0205
+  - IKROS-CAMPAIGNAUDIT-20260802-0206
+  - IKROS-CAMPAIGNAUDIT-20260802-0207
+  - IKROS-CAMPAIGNAUDIT-20260802-0208
+  - IKROS-CAMPAIGNAUDIT-20260802-0209
+  - IKROS-CAMPAIGNAUDIT-20260802-0210
+  - IKROS-CAMPAIGNAUDIT-20260802-0211
+  - IKROS-CAMPAIGNAUDIT-20260802-0212
+  - IKROS-CAMPAIGNAUDIT-20260802-0213
+  - IKROS-CAMPAIGNAUDIT-20260802-0214
+  - IKROS-CAMPAIGNAUDIT-20260802-0215
+  - IKROS-CAMPAIGNAUDIT-20260802-0216
+  - IKROS-CAMPAIGNAUDIT-20260802-0217
+  - IKROS-CAMPAIGNAUDIT-20260802-0218
+  blocked_task_ids: []
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0010
+  campaign_type: RESEARCH_AUDIT
+  completed_task_ids:
+  - IKROS-RESEARCHTASK-20260802-0071
+  - IKROS-RESEARCHTASK-20260802-0073
+  - IKROS-RESEARCHTASK-20260802-0074
+  - IKROS-RESEARCHTASK-20260802-0075
+  - IKROS-RESEARCHTASK-20260802-0081
+  failed_task_ids: []
+  finished_at: '2026-08-02T02:37:53.340380+00:00'
+  lifecycle_state: COMPLETED
+  memory_record_ids:
+  - IKMEM-T1-20260802-0067
+  - IKMEM-T1-20260802-0069
+  - IKMEM-T1-20260802-0070
+  - IKMEM-T1-20260802-0071
+  - IKMEM-T1-20260802-0072
+  output_refs:
+  - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+  - IKROS-CONTRA-20260802-0007
+  - IKROS-DSV-20260802-0007
+  - IKROS-EVIDENCE-20260802-0007
+  - IKROS-EXP-20260802-0007
+  - IKROS-HYP-20260802-0007
+  - IKROS-KO-20260802-0700
+  - IKROS-KO-20260802-0701
+  - IKROS-KO-20260802-0702
+  - IKROS-KO-20260802-0703
+  - IKROS-KO-20260802-0704
+  - IKROS-KO-20260802-0705
+  - IKROS-KO-20260802-0706
+  - IKROS-KO-20260802-0707
+  - IKROS-RQ-20260802-0007
+  - diagnostic_experiment_knowledge
+  progress:
+    blocked: 0
+    completed: 5
+    failed: 0
+    percent_complete: 100.0
+    skipped: 0
+    total: 5
+  report_id: IKROS-CAMPAIGNREPORT-20260802-0010
+  skipped_task_ids: []
+  started_at: '2026-08-02T02:37:43.683129+00:00'
+  summary: Campaign 0007 Institutional Diagnostic Experiment Program completed with
+    5 completed tasks.
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0010
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+- IKROS-CONTRA-20260802-0007
+- IKROS-DSV-20260802-0007
+- IKROS-EVIDENCE-20260802-0007
+- IKROS-EXP-20260802-0007
+- IKROS-HYP-20260802-0007
+- IKROS-KO-20260802-0700
+- IKROS-KO-20260802-0701
+- IKROS-KO-20260802-0702
+- IKROS-KO-20260802-0703
+- IKROS-KO-20260802-0704
+- IKROS-KO-20260802-0705
+- IKROS-KO-20260802-0706
+- IKROS-KO-20260802-0707
+- IKROS-RQ-20260802-0007
+- diagnostic_experiment_knowledge
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Campaign 0007 Institutional Diagnostic Experiment Program completed with
+  5 completed tasks.
+tags:
+- research-orchestrator
+- completion-report
+tier: T4_INSTITUTIONAL
+title: Completion report for Campaign 0007 Institutional Diagnostic Experiment Program
+updated_at: '2026-08-02T02:37:53.368903+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

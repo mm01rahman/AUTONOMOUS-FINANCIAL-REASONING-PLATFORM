@@ -1,0 +1,642 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0001",
+  "report": {
+    "report_id": "IKROS-CAMPAIGNREPORT-20260802-0001",
+    "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0001",
+    "campaign_type": "HYPOTHESIS_VALIDATION",
+    "lifecycle_state": "COMPLETED",
+    "started_at": "2026-08-02T01:27:41.449090+00:00",
+    "finished_at": "2026-08-02T01:27:44.162256+00:00",
+    "progress": {
+      "total": 11,
+      "completed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "blocked": 0,
+      "percent_complete": 100.0
+    },
+    "completed_task_ids": [
+      "IKROS-RESEARCHTASK-20260802-0001",
+      "IKROS-RESEARCHTASK-20260802-0002",
+      "IKROS-RESEARCHTASK-20260802-0003",
+      "IKROS-RESEARCHTASK-20260802-0004",
+      "IKROS-RESEARCHTASK-20260802-0005",
+      "IKROS-RESEARCHTASK-20260802-0006",
+      "IKROS-RESEARCHTASK-20260802-0007",
+      "IKROS-RESEARCHTASK-20260802-0008",
+      "IKROS-RESEARCHTASK-20260802-0009",
+      "IKROS-RESEARCHTASK-20260802-0010",
+      "IKROS-RESEARCHTASK-20260802-0011"
+    ],
+    "failed_task_ids": [],
+    "skipped_task_ids": [],
+    "blocked_task_ids": [],
+    "output_refs": [
+      "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\MACRO_ALPHA_CAMPAIGN.md",
+      "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_knowledge.json",
+      "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_validation_report.json",
+      "ICA-20260802-0001",
+      "IKROS-ALPHACAND-20260802-0001",
+      "IKROS-CONCL-20260802-0001",
+      "IKROS-CONTRA-20260802-0001",
+      "IKROS-DS-20260802-0001",
+      "IKROS-DSV-20260802-0001",
+      "IKROS-EVIDENCE-20260802-0001",
+      "IKROS-EXP-20260802-0001",
+      "IKROS-FEAT-20260802-0001",
+      "IKROS-FEAT-20260802-0002",
+      "IKROS-FEAT-20260802-0003",
+      "IKROS-FF-20260802-0001",
+      "IKROS-HYP-20260802-0001",
+      "IKROS-KO-20260802-0001",
+      "IKROS-REGIME-20260802-0001",
+      "IKROS-RQ-20260802-0001",
+      "IKROS-THESIS-20260802-0001",
+      "IKROS-VAL-20260802-0001",
+      "MACRO_ALPHA_CAMPAIGN",
+      "macro_alpha_knowledge",
+      "macro_alpha_validation_report"
+    ],
+    "memory_record_ids": [
+      "IKMEM-T1-20260802-0001",
+      "IKMEM-T1-20260802-0002",
+      "IKMEM-T1-20260802-0003",
+      "IKMEM-T1-20260802-0004",
+      "IKMEM-T1-20260802-0005",
+      "IKMEM-T1-20260802-0006",
+      "IKMEM-T1-20260802-0007",
+      "IKMEM-T1-20260802-0010",
+      "IKMEM-T1-20260802-0011",
+      "IKMEM-T1-20260802-0013",
+      "IKMEM-T1-20260802-0014",
+      "IKMEM-T4-20260802-0004"
+    ],
+    "audit_ids": [
+      "IKROS-CAMPAIGNAUDIT-20260802-0001",
+      "IKROS-CAMPAIGNAUDIT-20260802-0002",
+      "IKROS-CAMPAIGNAUDIT-20260802-0003",
+      "IKROS-CAMPAIGNAUDIT-20260802-0004",
+      "IKROS-CAMPAIGNAUDIT-20260802-0005",
+      "IKROS-CAMPAIGNAUDIT-20260802-0006",
+      "IKROS-CAMPAIGNAUDIT-20260802-0007",
+      "IKROS-CAMPAIGNAUDIT-20260802-0008",
+      "IKROS-CAMPAIGNAUDIT-20260802-0009",
+      "IKROS-CAMPAIGNAUDIT-20260802-0010",
+      "IKROS-CAMPAIGNAUDIT-20260802-0011",
+      "IKROS-CAMPAIGNAUDIT-20260802-0012",
+      "IKROS-CAMPAIGNAUDIT-20260802-0013",
+      "IKROS-CAMPAIGNAUDIT-20260802-0014",
+      "IKROS-CAMPAIGNAUDIT-20260802-0015",
+      "IKROS-CAMPAIGNAUDIT-20260802-0016",
+      "IKROS-CAMPAIGNAUDIT-20260802-0017",
+      "IKROS-CAMPAIGNAUDIT-20260802-0018",
+      "IKROS-CAMPAIGNAUDIT-20260802-0019",
+      "IKROS-CAMPAIGNAUDIT-20260802-0020",
+      "IKROS-CAMPAIGNAUDIT-20260802-0021",
+      "IKROS-CAMPAIGNAUDIT-20260802-0022",
+      "IKROS-CAMPAIGNAUDIT-20260802-0023",
+      "IKROS-CAMPAIGNAUDIT-20260802-0024",
+      "IKROS-CAMPAIGNAUDIT-20260802-0025",
+      "IKROS-CAMPAIGNAUDIT-20260802-0026",
+      "IKROS-CAMPAIGNAUDIT-20260802-0027",
+      "IKROS-CAMPAIGNAUDIT-20260802-0028",
+      "IKROS-CAMPAIGNAUDIT-20260802-0029",
+      "IKROS-CAMPAIGNAUDIT-20260802-0030",
+      "IKROS-CAMPAIGNAUDIT-20260802-0031",
+      "IKROS-CAMPAIGNAUDIT-20260802-0032",
+      "IKROS-CAMPAIGNAUDIT-20260802-0033",
+      "IKROS-CAMPAIGNAUDIT-20260802-0034",
+      "IKROS-CAMPAIGNAUDIT-20260802-0035"
+    ],
+    "summary": "Phase G Macro Alpha baseline audit completed with 11 completed tasks."
+  },
+  "progress": {
+    "total": 11,
+    "completed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "blocked": 0,
+    "percent_complete": 100.0
+  },
+  "research_question": {
+    "ikros_id": "IKROS-RQ-20260802-0001",
+    "entity_type": "ResearchQuestion",
+    "version": "1.0.0",
+    "lifecycle_state": "ANSWERED",
+    "confidence": {
+      "prior": 0.42,
+      "statistical": 0.42,
+      "economic": 0.57,
+      "data": 0.66,
+      "model": 0.49,
+      "validation": 0.34,
+      "replication": 0.0,
+      "operational": 0.52,
+      "overall": 0.48909257569319964,
+      "last_updated": "2026-08-02T00:00:00Z"
+    },
+    "lineage": {
+      "origin": {
+        "created_by": "phase-g-macro-alpha",
+        "created_at": "2026-08-02T00:00:00Z",
+        "creation_context": "Phase G Macro Alpha baseline audit",
+        "motivation": "Begin governed institutional XAU/USD alpha research with the highest-priority macro program."
+      },
+      "dependencies": {
+        "inputs": [],
+        "datasets": [
+          "IKROS-DSV-20260802-0001"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0001",
+          "IKROS-FEAT-20260802-0002",
+          "IKROS-FEAT-20260802-0003"
+        ],
+        "models": [],
+        "external_refs": [
+          "11-research/phase-e/phase_e_summary.json"
+        ]
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "evidence": {
+        "supporting": [],
+        "contradicting": [],
+        "ers_records": [
+          "EXEC-041"
+        ]
+      },
+      "successors": {
+        "refined_by": null,
+        "superseded_by": null,
+        "inspired": []
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      }
+    },
+    "spec_refs": [
+      "SPEC-010",
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-ORCHESTRATOR"
+    ],
+    "work_package_refs": [],
+    "version_history": [
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.525891+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.48909257569319964
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.529891+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.48909257569319964
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.532890+00:00",
+        "change_summary": "State \u2192 ANSWERED. Phase G Macro Alpha baseline review completed.",
+        "confidence_at_time": 0.48909257569319964
+      }
+    ],
+    "title": "Do macro pressure shocks create durable next-day XAU/USD drift?",
+    "motivation": "Formalize the first institutional Macro Alpha campaign and prevent loss of negative evidence from the prior macro-only baseline.",
+    "scope": "MACRO",
+    "instrument": "XAU/USD",
+    "time_horizon": "1D",
+    "campaign_tag": "PHASE-G-MACRO-001",
+    "linked_hypotheses": [
+      "IKROS-HYP-20260802-0001"
+    ],
+    "linked_conclusions": [
+      "IKROS-CONCL-20260802-0001"
+    ]
+  },
+  "hypothesis": {
+    "ikros_id": "IKROS-HYP-20260802-0001",
+    "entity_type": "Hypothesis",
+    "version": "1.0.0",
+    "lifecycle_state": "REFUTED",
+    "confidence": {
+      "prior": 0.38,
+      "statistical": 0.1237695,
+      "economic": 0.2017695,
+      "data": 0.2377695,
+      "model": 0.3055275,
+      "validation": 0.32290891304347824,
+      "replication": 0.0,
+      "operational": 0.299637,
+      "overall": 0.2366238482224464,
+      "last_updated": "2026-08-02T01:27:44.627889+00:00"
+    },
+    "lineage": {
+      "origin": {
+        "created_by": "phase-g-macro-alpha",
+        "created_at": "2026-08-02T00:00:00Z",
+        "creation_context": "Phase G Macro Alpha baseline audit",
+        "motivation": "Convert the macro-only thesis into a formally falsifiable institutional hypothesis."
+      },
+      "dependencies": {
+        "inputs": [
+          "IKROS-RQ-20260802-0001",
+          "IKROS-THESIS-20260802-0001"
+        ],
+        "datasets": [
+          "IKROS-DSV-20260802-0001"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0001",
+          "IKROS-FEAT-20260802-0002",
+          "IKROS-FEAT-20260802-0003"
+        ],
+        "models": [],
+        "external_refs": [
+          "11-research/phase-e/phase_e_final_report.md"
+        ]
+      },
+      "experiments": {
+        "tested_in": [
+          "IKROS-EXP-20260802-0001"
+        ],
+        "validated_by": [
+          "IKROS-VAL-20260802-0001"
+        ]
+      },
+      "evidence": {
+        "supporting": [],
+        "contradicting": [],
+        "ers_records": [
+          "EXEC-041"
+        ]
+      },
+      "successors": {
+        "refined_by": null,
+        "superseded_by": null,
+        "inspired": []
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      }
+    },
+    "spec_refs": [
+      "SPEC-010",
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-CONFIDENCE"
+    ],
+    "work_package_refs": [],
+    "version_history": [
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:43.539398+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.45133100205913185
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.536891+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.3805768346333486
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.539892+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.3805768346333486
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.542892+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.3805768346333486
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.546892+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.3805768346333486
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.550890+00:00",
+        "change_summary": "State \u2192 TESTING. Phase E macro-only evidence contradicts the thesis.",
+        "confidence_at_time": 0.3805768346333486
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.554891+00:00",
+        "change_summary": "State \u2192 REFUTED. Phase E macro-only evidence contradicts the thesis.",
+        "confidence_at_time": 0.3805768346333486
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.558892+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.3805768346333486
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.627889+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.3805768346333486
+      }
+    ],
+    "statement": "A macro pressure signal combining USD weakness, rates compression, and dovish policy surprise produces durable next-day XAU/USD upside drift.",
+    "null_hypothesis": "H0: The macro pressure signal does not produce durable next-day XAU/USD edge.",
+    "alternative_hypothesis": "H1: The macro pressure signal produces durable next-day XAU/USD edge.",
+    "significance_level": 0.05,
+    "power": 0.8,
+    "prior_confidence": 0.38,
+    "posterior_confidence": 0.0,
+    "source_rq": "IKROS-RQ-20260802-0001",
+    "motivating_theses": [
+      "IKROS-THESIS-20260802-0001"
+    ],
+    "experiments": [
+      "IKROS-EXP-20260802-0001"
+    ],
+    "validations": [
+      "IKROS-VAL-20260802-0001"
+    ],
+    "contradictions": []
+  },
+  "experiment": {
+    "ikros_id": "IKROS-EXP-20260802-0001",
+    "entity_type": "Experiment",
+    "version": "1.0.0",
+    "lifecycle_state": "REVIEWED",
+    "confidence": {
+      "prior": 0.45,
+      "statistical": 0.19776950000000001,
+      "economic": 0.3177695,
+      "data": 0.3777695,
+      "model": 0.3865275,
+      "validation": 0.23073500000000002,
+      "replication": 0.0,
+      "operational": 0.370637,
+      "overall": 0.30370842814411275,
+      "last_updated": "2026-08-02T01:27:44.613890+00:00"
+    },
+    "lineage": {
+      "origin": {
+        "created_by": "phase-g-macro-alpha",
+        "created_at": "2026-08-02T00:00:00Z",
+        "creation_context": "Phase G Macro Alpha baseline audit",
+        "motivation": "Replay the prior macro-only evidence under Phase G governance."
+      },
+      "dependencies": {
+        "inputs": [
+          "IKROS-HYP-20260802-0001"
+        ],
+        "datasets": [
+          "IKROS-DSV-20260802-0001"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0001",
+          "IKROS-FEAT-20260802-0002",
+          "IKROS-FEAT-20260802-0003"
+        ],
+        "models": [
+          "phase-e-macro-only"
+        ],
+        "external_refs": [
+          "11-research/phase-e/promotion_assessment.json"
+        ]
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "evidence": {
+        "supporting": [],
+        "contradicting": [],
+        "ers_records": [
+          "EXEC-041"
+        ]
+      },
+      "successors": {
+        "refined_by": null,
+        "superseded_by": null,
+        "inspired": []
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      }
+    },
+    "spec_refs": [
+      "SPEC-010",
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-ORCHESTRATOR",
+      "IKROS-CONFIDENCE"
+    ],
+    "work_package_refs": [],
+    "version_history": [
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.563892+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.5042812702869367
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.566895+00:00",
+        "change_summary": "State \u2192 COMPLETE.",
+        "confidence_at_time": 0.5042812702869367
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.570896+00:00",
+        "change_summary": "State \u2192 REVIEWED.",
+        "confidence_at_time": 0.5042812702869367
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.613890+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.5042812702869367
+      }
+    ],
+    "title": "Phase G Macro Alpha baseline audit experiment",
+    "hypotheses": [
+      "IKROS-HYP-20260802-0001"
+    ],
+    "protocol": "Governed baseline audit over the frozen Phase E macro-only candidate with walk-forward, Monte Carlo, contradiction logging, and Phase G advancement criteria.",
+    "dataset_versions": [
+      "IKROS-DSV-20260802-0001"
+    ],
+    "feature_versions": [
+      "IKROS-FEAT-20260802-0001",
+      "IKROS-FEAT-20260802-0002",
+      "IKROS-FEAT-20260802-0003"
+    ],
+    "parameters": {
+      "seed": 42,
+      "strategy_name": "macro_only",
+      "validation_floor": [
+        "walk_forward",
+        "cpcv",
+        "monte_carlo",
+        "stress",
+        "sensitivity",
+        "dsr",
+        "psr",
+        "wrc",
+        "pbo"
+      ]
+    },
+    "random_seed": 42,
+    "in_sample_start": "",
+    "in_sample_end": "",
+    "out_of_sample_start": "",
+    "out_of_sample_end": "",
+    "reproducibility_hash": "7900a14c0f6a211d54cd816c813d85690e0d9e0e25600626ab3c1a6fa6ba370e",
+    "git_commit": "752f35c",
+    "completed_at": null,
+    "validations_produced": [
+      "IKROS-VAL-20260802-0001"
+    ],
+    "failures_produced": []
+  },
+  "alpha_candidate": {
+    "ikros_id": "IKROS-ALPHACAND-20260802-0001",
+    "entity_type": "AlphaCandidate",
+    "version": "1.0.0",
+    "lifecycle_state": "REJECTED",
+    "confidence": {
+      "prior": 0.33,
+      "statistical": 0.198,
+      "economic": 0.198,
+      "data": 0.198,
+      "model": 0.51,
+      "validation": 0.54,
+      "replication": 0.0,
+      "operational": 0.46799999999999997,
+      "overall": 0.3162526888230916,
+      "last_updated": "2026-08-02T01:27:44.593889+00:00"
+    },
+    "lineage": {
+      "origin": {
+        "created_by": "ikros-ingestion-engine",
+        "created_at": "2026-08-02T01:27:42.840118+00:00",
+        "creation_context": "VALIDATION_REPORT",
+        "motivation": "Ingested from C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_validation_report.json"
+      },
+      "dependencies": {
+        "inputs": [
+          "IKROS-EXP-20260802-0001",
+          "IKROS-HYP-20260802-0001"
+        ],
+        "datasets": [],
+        "features": [],
+        "models": [],
+        "external_refs": [
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\macro_alpha_validation_report.json"
+        ]
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "evidence": {
+        "supporting": [],
+        "contradicting": [],
+        "ers_records": [
+          "11-research/phase-e/phase_e_summary.json",
+          "EXEC-041"
+        ]
+      },
+      "successors": {
+        "refined_by": null,
+        "superseded_by": null,
+        "inspired": []
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      }
+    },
+    "spec_refs": [
+      "SPEC-010",
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "capability_refs": [],
+    "work_package_refs": [],
+    "version_history": [
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.632890+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.33
+      },
+      {
+        "version": "1.0.0",
+        "changed_at": "2026-08-02T01:27:44.751891+00:00",
+        "change_summary": "Field update",
+        "confidence_at_time": 0.3162526888230916
+      }
+    ],
+    "name": "macro_only_baseline",
+    "strategy_type": "MACRO",
+    "sharpe_oos": -1.9781,
+    "max_drawdown": 0.04441,
+    "direction_accuracy": 0.0,
+    "win_rate": 0.0,
+    "promotion_score": 0.0,
+    "promotion_status": "REJECTED",
+    "rejection_reasons": [
+      "walk-forward out-of-sample edge not positive",
+      "positive fold ratio below governance threshold",
+      "full-sample expectancy not positive",
+      "required Phase G validation components remain incomplete"
+    ],
+    "backtests": [
+      "phase-e-macro-only"
+    ],
+    "walk_forwards": [
+      "phase-e-wf-macro-only"
+    ],
+    "monte_carlos": [
+      "phase-e-mc-macro-only"
+    ],
+    "implements_hypotheses": [
+      "IKROS-HYP-20260802-0001"
+    ]
+  },
+  "assessment_ids": {
+    "candidate": "ICA-20260802-0002",
+    "hypothesis": "ICA-20260802-0001"
+  },
+  "validation_summary": {
+    "conclusion_id": "IKROS-CONCL-20260802-0001",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0001",
+    "validation_id": "IKROS-VAL-20260802-0001",
+    "promotion_decision": "REJECTED"
+  }
+}

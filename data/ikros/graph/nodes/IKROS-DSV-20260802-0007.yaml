@@ -1,0 +1,19 @@
+attributes:
+  diagnostic_experiment_count: 6
+  retained_hypothesis_count: 3
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+  summary: Diagnostic experiment snapshot built on the frozen validation frame plus
+    Campaign 0006 failure-analysis outputs.
+confidence: 0.89
+created_at: '2026-08-02T02:37:46.459254+00:00'
+ikros_id: IKROS-DSV-20260802-0007
+label: Campaign 0007 diagnostic dataset reference
+node_id: IKROS-DSV-20260802-0007
+node_type: DATASET_VERSION
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T02:37:46.459254+00:00'
+valid_to: null
+wp_refs: []

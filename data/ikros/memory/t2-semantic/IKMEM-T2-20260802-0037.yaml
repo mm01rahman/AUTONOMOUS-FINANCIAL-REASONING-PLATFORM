@@ -1,0 +1,48 @@
+archived_at: null
+capability_refs: []
+confidence: 0.77
+created_at: '2026-08-02T01:43:01.847413+00:00'
+dependency_ids: []
+entity_type: KnowledgeObject
+evidence_refs:
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+graph_node_ids:
+- IKROS-KO-20260802-0211
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0037
+payload:
+  attributes:
+    atlas_windows:
+    - gfc_2008
+    - gold_bull_2011
+    - gold_collapse_2013
+    - covid_2020
+    - inflation_2022
+    - rate_cycle_2024
+    - historical_2025
+    - available_2026
+  lifecycle_state: ACTIVE
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-KO-20260802-0211
+- IKROS-KO-20260802-0209
+spec_refs:
+- SPEC-060
+summary: Historical windows mapped to the accepted taxonomy.
+tags:
+- knowledgeobject
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Historical regime atlas
+updated_at: '2026-08-02T01:43:01.847413+00:00'
+valid_from: '2026-08-02T01:43:01.847413+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

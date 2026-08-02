@@ -1,0 +1,67 @@
+campaign_tag: PHASE-G-HYPOTHESIS-004
+capability_refs: []
+confidence:
+  data: 0.49
+  economic: 0.49
+  last_updated: '2026-08-02T01:59:35.130211+00:00'
+  model: 0.0
+  operational: 0.0
+  overall: 0.48999999999999994
+  prior: 0.49
+  replication: 0.49
+  statistical: 0.49
+  validation: 0.49
+entity_type: ResearchQuestion
+ikros_id: IKROS-RQ-20260802-0404
+instrument: XAU/USD
+lifecycle_state: ACTIVE
+lineage:
+  dependencies:
+    datasets: []
+    external_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+    features: []
+    inputs:
+    - IKROS-HYP-20260802-0404
+    models: []
+  evidence:
+    contradicting: []
+    ers_records:
+    - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T01:59:35.071678+00:00'
+    created_by: ikros-ingestion-engine
+    creation_context: INTERNAL_RESEARCH_REPORT
+    motivation: In crisis states, gold receives flow from investors seeking collateral
+      resilience and macro hedging, but only some crises produce durable continuation
+      rather than liquidation whipsaw.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+linked_conclusions: []
+linked_hypotheses:
+- IKROS-HYP-20260802-0404
+motivation: In crisis states, gold receives flow from investors seeking collateral
+  resilience and macro hedging, but only some crises produce durable continuation
+  rather than liquidation whipsaw.
+scope: HYPOTHESIS_DISCOVERY
+spec_refs:
+- SPEC-012
+- SPEC-060
+time_horizon: 5D
+title: Inside crisis_dislocation, do breakout expansion and intermediate trend persistence
+  identify the subset of shocks that produce persistent safe-haven inflows rather
+  than one-day panic noise?
+version: 1.0.0
+version_history: []
+work_package_refs: []

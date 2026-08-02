@@ -1,0 +1,100 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-046"
+work_package_id: "WP-IMP-0044"
+capability:
+  id: "IKROS-MEMORY"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-02T00:00:00Z"
+  finished_at: "2026-08-02T00:28:00Z"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-08-02T00:28:00Z"
+      note: "IKROS Institutional Research Memory implementation complete. 7 memory modules, 46 memory tests, repository-wide quality gates passing, Runtime unchanged."
+preconditions:
+  - predicate: "capability.complete('IKROS-GRAPH')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "tools/ikros/memory/"
+    - "tools/ikros/__init__.py"
+    - "tests/unit/test_ikros_memory.py"
+    - "docs/ikros/"
+    - "data/ikros/memory/"
+    - "05-work-packages/WP-IMP-0044.yaml"
+    - "05-work-packages/WP-IMP-0044/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  files_modified:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/memory/__init__.py"
+    - "tools/ikros/memory/models.py"
+    - "tools/ikros/memory/core.py"
+    - "tools/ikros/memory/retrieval.py"
+    - "tools/ikros/memory/validation.py"
+    - "tools/ikros/memory/persistence.py"
+    - "tests/unit/test_ikros_memory.py"
+    - "docs/ikros/RESEARCH_MEMORY_GUIDE.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check ."
+    result: "PASS"
+    detail: "All checks passed across the repository."
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+    result: "PASS"
+    detail: "Success: no issues found in 199 source files."
+  - gate: "pytest"
+    command: "uv run pytest -q --tb=short"
+    result: "PASS"
+    detail: "Full repository test suite passes with 0 failures."
+  - gate: "afrp_validate"
+    command: "uv run afrp validate"
+    result: "PASS"
+    detail: "violations: 0; fit_002, fit_004, and fit_006 all PASS."
+  - gate: "afrp_plan"
+    command: "uv run afrp plan"
+    result: "PASS"
+    detail: "44 capabilities total; graph acyclic; IKROS-MEMORY complete as terminal node."
+  - gate: "afrp_health"
+    command: "uv run afrp health"
+    result: "PASS"
+    detail: "82/82 requirements covered (100.0%); 44/44 capabilities complete."
+  - gate: "afrp_evidence"
+    command: "uv run afrp evidence --wp WP-IMP-0044"
+    result: "PASS"
+    detail: "fit_005 PASS; boundary compliance verified."
+artifacts:
+  source_files:
+    - "tools/ikros/__init__.py"
+    - "tools/ikros/memory/__init__.py"
+    - "tools/ikros/memory/models.py"
+    - "tools/ikros/memory/core.py"
+    - "tools/ikros/memory/retrieval.py"
+    - "tools/ikros/memory/validation.py"
+    - "tools/ikros/memory/persistence.py"
+  test_files:
+    - "tests/unit/test_ikros_memory.py"
+  documentation:
+    - "docs/ikros/RESEARCH_MEMORY_GUIDE.md"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "PENDING_ARB"
+  review_note: >
+    IKROS Institutional Research Memory implementation complete. Scope is
+    limited to the six-tier deterministic memory foundation, lifecycle,
+    consolidation, retrieval, validation, and YAML persistence. Repository-wide
+    ruff, mypy --strict, pytest, afrp validate, afrp plan, afrp health, and
+    afrp evidence all pass. No Runtime or Engineering OS changes.

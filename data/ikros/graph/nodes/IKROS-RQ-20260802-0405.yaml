@@ -1,0 +1,80 @@
+attributes:
+  campaign_tag: PHASE-G-HYPOTHESIS-004
+  capability_refs: []
+  confidence:
+    data: 0.48
+    economic: 0.48
+    last_updated: '2026-08-02T01:59:35.133711+00:00'
+    model: 0.0
+    operational: 0.0
+    overall: 0.48
+    prior: 0.48
+    replication: 0.48
+    statistical: 0.48
+    validation: 0.48
+  entity_type: ResearchQuestion
+  ikros_id: IKROS-RQ-20260802-0405
+  instrument: XAU/USD
+  lifecycle_state: ACTIVE
+  lineage:
+    dependencies:
+      datasets: []
+      external_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+      features: []
+      inputs:
+      - IKROS-HYP-20260802-0405
+      models: []
+    evidence:
+      contradicting: []
+      ers_records:
+      - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T01:59:35.071678+00:00'
+      created_by: ikros-ingestion-engine
+      creation_context: INTERNAL_RESEARCH_REPORT
+      motivation: Macro announcements can reset inflation, rate, and USD expectations
+        quickly; when the first gold response is confirmed by event pressure and directional
+        structure, follow-through may persist for several sessions.
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  linked_conclusions: []
+  linked_hypotheses:
+  - IKROS-HYP-20260802-0405
+  motivation: Macro announcements can reset inflation, rate, and USD expectations
+    quickly; when the first gold response is confirmed by event pressure and directional
+    structure, follow-through may persist for several sessions.
+  scope: HYPOTHESIS_DISCOVERY
+  spec_refs:
+  - SPEC-012
+  - SPEC-060
+  time_horizon: 1-5D
+  title: During macro_transition states, does the first-day gold reaction persist
+    when event pressure and breakout alignment indicate a genuine regime handoff?
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.48
+created_at: '2026-08-02T01:59:35.071678+00:00'
+ikros_id: IKROS-RQ-20260802-0405
+label: During macro_transition states, does the first-day gold reaction persist when
+  event pressure and breakout alignment indicate a genuine regime handoff?
+node_id: IKROS-RQ-20260802-0405
+node_type: RESEARCH_QUESTION
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:59:35.071678+00:00'
+valid_to: null
+wp_refs: []

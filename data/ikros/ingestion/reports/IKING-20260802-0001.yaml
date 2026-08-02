@@ -1,0 +1,28 @@
+graph_node_ids:
+- IKROS-KO-20260802-0001
+ingested_at: '2026-08-02T01:27:41.593539+00:00'
+ingestion_id: IKING-20260802-0001
+memory_ids:
+- IKMEM-T2-20260802-0001
+object_fingerprints:
+- '{"attributes": {"document_metadata": {}, "section_names": ["Acceptance criteria",
+  "Campaign identity", "Datasets", "Deterministic decision", "Economic rationale",
+  "Expected deliverables", "Expected mechanism", "Experiment design", "Failure criteria",
+  "Hypothesis", "Macro Alpha Campaign", "Required evidence", "Research question",
+  "Statistical tests and decision surfaces", "Supporting literature and institutional
+  sources", "Validation methodology"]}, "capability_refs": [], "confidence": 0.6,
+  "created_at": "2026-08-02T01:27:41.581539+00:00", "dependency_ids": [], "evidence_refs":
+  [], "identifier": "IKROS-KO-20260802-0001", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "MARKDOWN",
+  "source_ids": [], "source_kind": "MARKDOWN", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\MACRO_ALPHA_CAMPAIGN.md",
+  "specification_refs": ["SPEC-060"], "summary": "MARKDOWN imported from C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\MACRO_ALPHA_CAMPAIGN.md",
+  "title": "Macro Alpha Campaign", "version": "1.0.0", "work_package_refs": []}'
+object_ids:
+- IKROS-KO-20260802-0001
+source_format: MARKDOWN
+source_hash: e5b4e56d0578c40c4fe65f1acc5f41248cee5fe25b30581ce6e4bc602e380e41
+source_kind: MARKDOWN
+source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\MACRO_ALPHA_CAMPAIGN.md
+source_version: 1.0.0
+status: INGESTED
+warnings: []

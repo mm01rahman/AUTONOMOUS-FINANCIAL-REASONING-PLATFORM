@@ -1,0 +1,82 @@
+campaign_tag: PHASE-G-MACRO-001
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-ORCHESTRATOR
+confidence:
+  data: 0.66
+  economic: 0.57
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.49
+  operational: 0.52
+  overall: 0.48909257569319964
+  prior: 0.42
+  replication: 0.0
+  statistical: 0.42
+  validation: 0.34
+entity_type: ResearchQuestion
+ikros_id: IKROS-RQ-20260802-0001
+instrument: XAU/USD
+lifecycle_state: ANSWERED
+lineage:
+  dependencies:
+    datasets:
+    - IKROS-DSV-20260802-0001
+    external_refs:
+    - 11-research/phase-e/phase_e_summary.json
+    features:
+    - IKROS-FEAT-20260802-0001
+    - IKROS-FEAT-20260802-0002
+    - IKROS-FEAT-20260802-0003
+    inputs: []
+    models: []
+  evidence:
+    contradicting: []
+    ers_records:
+    - EXEC-041
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: phase-g-macro-alpha
+    creation_context: Phase G Macro Alpha baseline audit
+    motivation: Begin governed institutional XAU/USD alpha research with the highest-priority
+      macro program.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+linked_conclusions:
+- IKROS-CONCL-20260802-0001
+linked_hypotheses:
+- IKROS-HYP-20260802-0001
+motivation: Formalize the first institutional Macro Alpha campaign and prevent loss
+  of negative evidence from the prior macro-only baseline.
+scope: MACRO
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+time_horizon: 1D
+title: Do macro pressure shocks create durable next-day XAU/USD drift?
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:44.525891+00:00'
+  confidence_at_time: 0.48909257569319964
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:44.529891+00:00'
+  confidence_at_time: 0.48909257569319964
+  version: 1.0.0
+- change_summary: State → ANSWERED. Phase G Macro Alpha baseline review completed.
+  changed_at: '2026-08-02T01:27:44.532890+00:00'
+  confidence_at_time: 0.48909257569319964
+  version: 1.0.0
+work_package_refs: []

@@ -1,0 +1,55 @@
+archived_at: null
+capability_refs: []
+confidence: 0.6
+created_at: '2026-08-02T01:27:41.581539+00:00'
+dependency_ids: []
+entity_type: KnowledgeObject
+evidence_refs: []
+graph_node_ids:
+- IKROS-KO-20260802-0001
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0001
+payload:
+  attributes:
+    document_metadata: {}
+    section_names:
+    - Acceptance criteria
+    - Campaign identity
+    - Datasets
+    - Deterministic decision
+    - Economic rationale
+    - Expected deliverables
+    - Expected mechanism
+    - Experiment design
+    - Failure criteria
+    - Hypothesis
+    - Macro Alpha Campaign
+    - Required evidence
+    - Research question
+    - Statistical tests and decision surfaces
+    - Supporting literature and institutional sources
+    - Validation methodology
+  lifecycle_state: ACTIVE
+  source_format: MARKDOWN
+  source_kind: MARKDOWN
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\MACRO_ALPHA_CAMPAIGN.md
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-KO-20260802-0001
+spec_refs:
+- SPEC-060
+summary: MARKDOWN imported from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\MACRO_ALPHA_CAMPAIGN.md
+tags:
+- knowledgeobject
+- markdown
+- ingested
+tier: T2_SEMANTIC
+title: Macro Alpha Campaign
+updated_at: '2026-08-02T01:27:41.581539+00:00'
+valid_from: '2026-08-02T01:27:41.581539+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

@@ -1,0 +1,106 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:27:41.595544+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0001
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/phase_e_final_report.md
+- 11-research/phase-e/phase_e_summary.json
+- EXEC-041
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0001
+- IKROS-RESEARCHTASK-20260802-0002
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0002
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0001
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0001
+    finished_at: '2026-08-02T01:27:41.595544+00:00'
+    kind: LITERATURE_INTAKE
+    max_attempts: 1
+    payload:
+      source_path: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\MACRO_ALPHA_CAMPAIGN.md
+    planned_order: 2
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0002
+      memory_record_id: null
+      metrics:
+        graph_node_ids:
+        - IKROS-KO-20260802-0001
+        ingestion_status: INGESTED
+        memory_ids:
+        - IKMEM-T2-20260802-0001
+      output_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\MACRO_ALPHA_CAMPAIGN.md
+      - IKROS-KO-20260802-0001
+      - MACRO_ALPHA_CAMPAIGN
+      payload:
+        graph_node_ids:
+        - IKROS-KO-20260802-0001
+        ingested_at: '2026-08-02T01:27:41.593539+00:00'
+        ingestion_id: IKING-20260802-0001
+        memory_ids:
+        - IKMEM-T2-20260802-0001
+        object_fingerprints:
+        - '{"attributes": {"document_metadata": {}, "section_names": ["Acceptance
+          criteria", "Campaign identity", "Datasets", "Deterministic decision", "Economic
+          rationale", "Expected deliverables", "Expected mechanism", "Experiment design",
+          "Failure criteria", "Hypothesis", "Macro Alpha Campaign", "Required evidence",
+          "Research question", "Statistical tests and decision surfaces", "Supporting
+          literature and institutional sources", "Validation methodology"]}, "capability_refs":
+          [], "confidence": 0.6, "created_at": "2026-08-02T01:27:41.581539+00:00",
+          "dependency_ids": [], "evidence_refs": [], "identifier": "IKROS-KO-20260802-0001",
+          "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type": "KnowledgeObject",
+          "relationships": [], "source_format": "MARKDOWN", "source_ids": [], "source_kind":
+          "MARKDOWN", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\MACRO_ALPHA_CAMPAIGN.md",
+          "specification_refs": ["SPEC-060"], "summary": "MARKDOWN imported from C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\macro-alpha\\MACRO_ALPHA_CAMPAIGN.md",
+          "title": "Macro Alpha Campaign", "version": "1.0.0", "work_package_refs":
+          []}'
+        object_ids:
+        - IKROS-KO-20260802-0001
+        source_format: MARKDOWN
+        source_hash: e5b4e56d0578c40c4fe65f1acc5f41248cee5fe25b30581ce6e4bc602e380e41
+        source_kind: MARKDOWN
+        source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\MACRO_ALPHA_CAMPAIGN.md
+        source_version: 1.0.0
+        status: INGESTED
+        warnings: []
+      selected_ids: []
+    started_at: '2026-08-02T01:27:41.559118+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0002
+    title: Literature Intake
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0001
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\MACRO_ALPHA_CAMPAIGN.md
+- IKROS-KO-20260802-0001
+- MACRO_ALPHA_CAMPAIGN
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: LITERATURE_INTAKE COMPLETED
+tags:
+- research-orchestrator
+- literature_intake
+tier: T1_EPISODIC
+title: 'Phase G Macro Alpha baseline audit :: Literature Intake'
+updated_at: '2026-08-02T01:27:41.595544+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-08-01T13:18:12.114676+00:00",
+  "runtime": {
+    "loops_completed": 24,
+    "gateway_mode": "provider-interface-live-sim",
+    "broker_calls": 0,
+    "runtime_frozen_respected": true
+  },
+  "performance": {
+    "total_return": 0.00011798579278643473,
+    "sharpe": -15.688425962334614,
+    "sortino": -19.362685915224137,
+    "calmar": 0.9619836727349408,
+    "win_rate": 0.08333333333333333,
+    "profit_factor": 0.05912547157421052,
+    "max_drawdown": 0.0001226484358627403,
+    "exposure_mean": 18159.105
+  }
+}

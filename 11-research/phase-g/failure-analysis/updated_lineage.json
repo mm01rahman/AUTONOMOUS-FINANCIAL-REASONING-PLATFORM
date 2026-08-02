@@ -1,0 +1,32 @@
+[
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "linked_reports": [
+      "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+      "11-research/phase-g/failure-analysis/ALPHA_FAILURE_ATLAS.md"
+    ],
+    "new_contradictory_evidence_id": "IKROS-CONTRA-20260802-0006",
+    "new_evidence_id": "IKROS-EVIDENCE-20260802-0006",
+    "new_experiment_id": "IKROS-EXP-20260802-0006"
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "linked_reports": [
+      "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+      "11-research/phase-g/failure-analysis/ALPHA_FAILURE_ATLAS.md"
+    ],
+    "new_contradictory_evidence_id": "IKROS-CONTRA-20260802-0006",
+    "new_evidence_id": "IKROS-EVIDENCE-20260802-0006",
+    "new_experiment_id": "IKROS-EXP-20260802-0006"
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "linked_reports": [
+      "11-research/phase-g/failure-analysis/failure_analysis_analysis.json",
+      "11-research/phase-g/failure-analysis/ALPHA_FAILURE_ATLAS.md"
+    ],
+    "new_contradictory_evidence_id": "IKROS-CONTRA-20260802-0006",
+    "new_evidence_id": "IKROS-EVIDENCE-20260802-0006",
+    "new_experiment_id": "IKROS-EXP-20260802-0006"
+  }
+]

@@ -1,0 +1,66 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 0.5
+created_at: '2026-08-02T02:19:45.098036+00:00'
+dependency_ids: []
+entity_type: CampaignCompletionReport
+evidence_refs:
+- 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+- 11-research/phase-g/scientific-validation/SCIENTIFIC_VALIDATION_CAMPAIGN.md
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0008
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260802-0014
+payload:
+  audit_ids:
+  - IKROS-CAMPAIGNAUDIT-20260802-0176
+  - IKROS-CAMPAIGNAUDIT-20260802-0177
+  - IKROS-CAMPAIGNAUDIT-20260802-0178
+  - IKROS-CAMPAIGNAUDIT-20260802-0179
+  - IKROS-CAMPAIGNAUDIT-20260802-0180
+  blocked_task_ids: []
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0008
+  campaign_type: HYPOTHESIS_VALIDATION
+  completed_task_ids: []
+  failed_task_ids:
+  - IKROS-RESEARCHTASK-20260802-0060
+  finished_at: '2026-08-02T02:19:45.074032+00:00'
+  lifecycle_state: FAILED
+  memory_record_ids: []
+  output_refs: []
+  progress:
+    blocked: 0
+    completed: 0
+    failed: 1
+    percent_complete: 0.0
+    skipped: 0
+    total: 6
+  report_id: IKROS-CAMPAIGNREPORT-20260802-0008
+  skipped_task_ids: []
+  started_at: '2026-08-02T02:19:43.320064+00:00'
+  summary: Campaign 0005 Scientific Alpha Validation failed after 1 task failures.
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0008
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Campaign 0005 Scientific Alpha Validation failed after 1 task failures.
+tags:
+- research-orchestrator
+- completion-report
+tier: T4_INSTITUTIONAL
+title: Completion report for Campaign 0005 Scientific Alpha Validation
+updated_at: '2026-08-02T02:19:45.098036+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

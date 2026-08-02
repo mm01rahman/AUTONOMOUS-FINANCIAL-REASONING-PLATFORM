@@ -1,0 +1,105 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:51:24.344451+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0023
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/feature_importance.json
+- 11-research/phase-g/feature-discovery/FEATURE_DISCOVERY_CAMPAIGN.md
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\feature_discovery_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0003
+- IKROS-RESEARCHTASK-20260802-0024
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0031
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0003
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0023
+    finished_at: '2026-08-02T01:51:24.344451+00:00'
+    kind: LITERATURE_INTAKE
+    max_attempts: 1
+    payload:
+      source_path: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\FEATURE_DISCOVERY_CAMPAIGN.md
+    planned_order: 2
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0024
+      memory_record_id: null
+      metrics:
+        graph_node_ids:
+        - IKROS-KO-20260802-0003
+        ingestion_status: INGESTED
+        memory_ids:
+        - IKMEM-T2-20260802-0039
+      output_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\FEATURE_DISCOVERY_CAMPAIGN.md
+      - FEATURE_DISCOVERY_CAMPAIGN
+      - IKROS-KO-20260802-0003
+      payload:
+        graph_node_ids:
+        - IKROS-KO-20260802-0003
+        ingested_at: '2026-08-02T01:51:24.342450+00:00'
+        ingestion_id: IKING-20260802-0007
+        memory_ids:
+        - IKMEM-T2-20260802-0039
+        object_fingerprints:
+        - '{"attributes": {"document_metadata": {}, "section_names": ["Acceptance
+          criteria", "Campaign 0003 - Institutional Feature Discovery Within the Six-State
+          Market Taxonomy", "Candidate feature sources", "Economic rationale", "Experiment
+          design", "Failure criteria", "Governed datasets", "Hypotheses", "Required
+          evidence", "Research question", "Supporting literature", "Validation methodology"]},
+          "capability_refs": [], "confidence": 0.6, "created_at": "2026-08-02T01:51:24.090871+00:00",
+          "dependency_ids": [], "evidence_refs": [], "identifier": "IKROS-KO-20260802-0003",
+          "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type": "KnowledgeObject",
+          "relationships": [], "source_format": "MARKDOWN", "source_ids": [], "source_kind":
+          "MARKDOWN", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\FEATURE_DISCOVERY_CAMPAIGN.md",
+          "specification_refs": ["SPEC-060"], "summary": "MARKDOWN imported from C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\FEATURE_DISCOVERY_CAMPAIGN.md",
+          "title": "Campaign 0003 - Institutional Feature Discovery Within the Six-State
+          Market Taxonomy", "version": "1.0.0", "work_package_refs": []}'
+        object_ids:
+        - IKROS-KO-20260802-0003
+        source_format: MARKDOWN
+        source_hash: 7caf3a0e8fbd806e832c6507f1616f10a7e4ec67f51540095825e970b503730a
+        source_kind: MARKDOWN
+        source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\FEATURE_DISCOVERY_CAMPAIGN.md
+        source_version: 1.0.0
+        status: INGESTED
+        warnings: []
+      selected_ids: []
+    started_at: '2026-08-02T01:51:23.905309+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0024
+    title: Literature Intake
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0003
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\FEATURE_DISCOVERY_CAMPAIGN.md
+- FEATURE_DISCOVERY_CAMPAIGN
+- IKROS-KO-20260802-0003
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: LITERATURE_INTAKE COMPLETED
+tags:
+- research-orchestrator
+- literature_intake
+tier: T1_EPISODIC
+title: 'Campaign 0003 Feature Discovery :: Literature Intake'
+updated_at: '2026-08-02T01:51:24.344451+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

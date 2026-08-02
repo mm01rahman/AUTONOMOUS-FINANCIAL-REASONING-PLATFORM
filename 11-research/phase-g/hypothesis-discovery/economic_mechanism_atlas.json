@@ -1,0 +1,83 @@
+[
+  {
+    "description": "Persistent medium-horizon path dependence is reinforced by expectation relief and slower capital participation.",
+    "identifier": "IKROS-MECH-20260802-0401",
+    "name": "Trend-following continuation",
+    "participants": [
+      "trend followers",
+      "macro allocators",
+      "reserve managers"
+    ],
+    "supporting_hypotheses": [
+      "IKROS-HYP-20260802-0401",
+      "IKROS-HYP-20260802-0408"
+    ]
+  },
+  {
+    "description": "Forced deleveraging can create downside continuation before exhaustion and rebound dynamics appear.",
+    "identifier": "IKROS-MECH-20260802-0402",
+    "name": "Liquidation reflexivity",
+    "participants": [
+      "levered funds",
+      "risk desks",
+      "liquidity providers"
+    ],
+    "supporting_hypotheses": [
+      "IKROS-HYP-20260802-0402",
+      "IKROS-HYP-20260802-0407"
+    ]
+  },
+  {
+    "description": "Shock states selectively transform into durable safe-haven flow when breakout and trend structure align.",
+    "identifier": "IKROS-MECH-20260802-0403",
+    "name": "Safe-haven convexity",
+    "participants": [
+      "hedgers",
+      "safe-haven allocators",
+      "global macro desks"
+    ],
+    "supporting_hypotheses": [
+      "IKROS-HYP-20260802-0404",
+      "IKROS-HYP-20260802-0407"
+    ]
+  },
+  {
+    "description": "Macro-event repricing transitions from short-horizon response into broader directional participation.",
+    "identifier": "IKROS-MECH-20260802-0404",
+    "name": "Policy repricing handoff",
+    "participants": [
+      "event traders",
+      "CTAs",
+      "cross-asset discretionary desks"
+    ],
+    "supporting_hypotheses": [
+      "IKROS-HYP-20260802-0405",
+      "IKROS-HYP-20260802-0408"
+    ]
+  },
+  {
+    "description": "Quiet reserve and macro accumulation can generate drift before the crowd recognizes a new trend.",
+    "identifier": "IKROS-MECH-20260802-0405",
+    "name": "Low-volatility accumulation",
+    "participants": [
+      "reserve managers",
+      "slow-frequency macro capital"
+    ],
+    "supporting_hypotheses": [
+      "IKROS-HYP-20260802-0403"
+    ]
+  },
+  {
+    "description": "Narrative shocks can fade in compressed states when participation is too shallow to create expansion.",
+    "identifier": "IKROS-MECH-20260802-0406",
+    "name": "Compression-state mean reversion",
+    "participants": [
+      "range traders",
+      "options desks",
+      "inventory balancers"
+    ],
+    "supporting_hypotheses": [
+      "IKROS-HYP-20260802-0406"
+    ]
+  }
+]

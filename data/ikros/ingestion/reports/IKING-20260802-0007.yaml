@@ -1,0 +1,28 @@
+graph_node_ids:
+- IKROS-KO-20260802-0003
+ingested_at: '2026-08-02T01:51:24.342450+00:00'
+ingestion_id: IKING-20260802-0007
+memory_ids:
+- IKMEM-T2-20260802-0039
+object_fingerprints:
+- '{"attributes": {"document_metadata": {}, "section_names": ["Acceptance criteria",
+  "Campaign 0003 - Institutional Feature Discovery Within the Six-State Market Taxonomy",
+  "Candidate feature sources", "Economic rationale", "Experiment design", "Failure
+  criteria", "Governed datasets", "Hypotheses", "Required evidence", "Research question",
+  "Supporting literature", "Validation methodology"]}, "capability_refs": [], "confidence":
+  0.6, "created_at": "2026-08-02T01:51:24.090871+00:00", "dependency_ids": [], "evidence_refs":
+  [], "identifier": "IKROS-KO-20260802-0003", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "MARKDOWN",
+  "source_ids": [], "source_kind": "MARKDOWN", "source_reference": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\FEATURE_DISCOVERY_CAMPAIGN.md",
+  "specification_refs": ["SPEC-060"], "summary": "MARKDOWN imported from C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\feature-discovery\\FEATURE_DISCOVERY_CAMPAIGN.md",
+  "title": "Campaign 0003 - Institutional Feature Discovery Within the Six-State Market
+  Taxonomy", "version": "1.0.0", "work_package_refs": []}'
+object_ids:
+- IKROS-KO-20260802-0003
+source_format: MARKDOWN
+source_hash: 7caf3a0e8fbd806e832c6507f1616f10a7e4ec67f51540095825e970b503730a
+source_kind: MARKDOWN
+source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\feature-discovery\FEATURE_DISCOVERY_CAMPAIGN.md
+source_version: 1.0.0
+status: INGESTED
+warnings: []

@@ -1,0 +1,9 @@
+# Sensitivity Report
+
+| Hypothesis | Positive Variant Ratio | Variant Return Range | WRC p-value | PBO |
+| --- | --- | --- | --- | --- |
+| IKROS-HYP-20260802-0401 | 1.0000 | 0.0011 | 0.3200 | NOT_APPLICABLE |
+| IKROS-HYP-20260802-0402 | 0.0000 | 0.0002 | 0.9200 | NOT_APPLICABLE |
+| IKROS-HYP-20260802-0404 | 0.3333 | 0.0129 | 0.7420 | NOT_APPLICABLE |
+| IKROS-HYP-20260802-0405 | 1.0000 | 0.0014 | 0.4740 | NOT_APPLICABLE |
+| IKROS-HYP-20260802-0408 | 1.0000 | 0.0001 | 0.7160 | NOT_APPLICABLE |

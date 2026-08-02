@@ -1,0 +1,23 @@
+attributes:
+  participants:
+  - range traders
+  - options desks
+  - inventory balancers
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  summary: Narrative shocks can fade in compressed states when participation is too
+    shallow to create expansion.
+  supporting_hypotheses:
+  - IKROS-HYP-20260802-0406
+confidence: 0.8
+created_at: '2026-08-02T01:59:35.072679+00:00'
+ikros_id: IKROS-MECH-20260802-0406
+label: Compression-state mean reversion
+node_id: IKROS-MECH-20260802-0406
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:59:35.072679+00:00'
+valid_to: null
+wp_refs: []

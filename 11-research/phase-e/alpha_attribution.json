@@ -1,0 +1,56 @@
+[
+  {
+    "component": "Macro",
+    "delta_expectancy": -0.3587000000000007,
+    "delta_sharpe": 0.16310000000000002,
+    "delta_total_return": -0.005819000000000005
+  },
+  {
+    "component": "Microstructure",
+    "delta_expectancy": -0.14349999999999952,
+    "delta_sharpe": 0.01330000000000009,
+    "delta_total_return": -0.013719000000000009
+  },
+  {
+    "component": "Liquidity",
+    "delta_expectancy": -0.15060000000000073,
+    "delta_sharpe": -0.0512999999999999,
+    "delta_total_return": -0.01675800000000001
+  },
+  {
+    "component": "Regime",
+    "delta_expectancy": -1.0115999999999996,
+    "delta_sharpe": 0.009100000000000108,
+    "delta_total_return": -0.03200599999999999
+  },
+  {
+    "component": "Forward Expectations",
+    "delta_expectancy": 0.046499999999999986,
+    "delta_sharpe": 0.03289999999999971,
+    "delta_total_return": 0.005024000000000001
+  },
+  {
+    "component": "Behavioral",
+    "delta_expectancy": 0.1095000000000006,
+    "delta_sharpe": -0.10450000000000004,
+    "delta_total_return": -0.008454000000000003
+  },
+  {
+    "component": "World Model Fusion",
+    "delta_expectancy": 4.1431000000000004,
+    "delta_sharpe": -1.2109,
+    "delta_total_return": -0.10437600000000001
+  },
+  {
+    "component": "Utility Optimizer",
+    "delta_expectancy": 6.6297999999999995,
+    "delta_sharpe": -1.7037,
+    "delta_total_return": -0.40502099999999996
+  },
+  {
+    "component": "Policy Engine",
+    "delta_expectancy": -3.3598,
+    "delta_sharpe": -0.2067000000000001,
+    "delta_total_return": -0.06585300000000001
+  }
+]

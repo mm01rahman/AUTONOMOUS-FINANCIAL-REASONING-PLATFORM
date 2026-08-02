@@ -1,0 +1,182 @@
+{
+  "ikros_objects": [
+    {
+      "attributes": {
+        "approved_feature_ids": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0307",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "mean_bootstrap_consistency": 0.865017,
+        "promotion_rate": 0.35294117647058826,
+        "rejected_feature_ids": [
+          "IKROS-KO-20260802-0321",
+          "IKROS-KO-20260802-0322",
+          "IKROS-KO-20260802-0323",
+          "IKROS-KO-20260802-0324",
+          "IKROS-KO-20260802-0325",
+          "IKROS-KO-20260802-0326",
+          "IKROS-KO-20260802-0327"
+        ],
+        "validation_type": "regime_conditioned_feature_discovery",
+        "verdict": "PASS"
+      },
+      "confidence": 0.83,
+      "dependency_ids": [
+        "IKROS-HYP-20260802-0003"
+      ],
+      "evidence_refs": [
+        "11-research/phase-g/feature-discovery/feature_discovery_analysis.json"
+      ],
+      "identifier": "IKROS-VAL-20260802-0003",
+      "lifecycle_state": "COMPLETE",
+      "source_ids": [
+        "IKROS-EXP-20260802-0003"
+      ],
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Validation synthesis for the approved regime-conditioned feature catalogue.",
+      "title": "Campaign 0003 regime-conditioned feature validation",
+      "type": "Validation"
+    },
+    {
+      "attributes": {
+        "approved_feature_count": 12,
+        "cross_regime_robust_features": [
+          "regime_return_60",
+          "xau_return_20",
+          "breakdown_20",
+          "forward_expectation",
+          "regime_vol_20",
+          "trend_gap_30_180",
+          "macro_trend_interaction",
+          "breakout_60",
+          "trend_gap_20_120",
+          "xau_return_1",
+          "trend_breakout_interaction",
+          "sessionless_event_pressure"
+        ],
+        "rejected_feature_count": 7
+      },
+      "confidence": 0.85,
+      "evidence_refs": [
+        "11-research/phase-g/feature-discovery/feature_discovery_analysis.json"
+      ],
+      "identifier": "IKROS-EVIDENCE-20260802-0003",
+      "lifecycle_state": "ACTIVE",
+      "source_ids": [
+        "IKROS-VAL-20260802-0003"
+      ],
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Evidence bundle carrying the regime feature matrix, stability report, and redundancy decisions into IKROS.",
+      "title": "Campaign 0003 feature evidence bundle",
+      "type": "Evidence"
+    },
+    {
+      "attributes": {
+        "contradicts": [
+          "IKROS-HYP-20260802-0003"
+        ],
+        "reasons": [
+          "Standalone macro pressure remained explanatory context rather than predictive signal.",
+          "Sparse event features failed stability thresholds outside transition windows.",
+          "Several cross-asset returns were pruned as redundant duplicates."
+        ],
+        "severity": "MODERATE"
+      },
+      "confidence": 0.74,
+      "evidence_refs": [
+        "11-research/phase-g/feature-discovery/feature_discovery_analysis.json"
+      ],
+      "identifier": "IKROS-CONTRA-20260802-0003",
+      "lifecycle_state": "ACTIVE",
+      "source_ids": [
+        "IKROS-VAL-20260802-0003",
+        "IKROS-EXP-20260802-0003"
+      ],
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Documents why several intuitive macro and event features were not promoted as standalone predictors.",
+      "title": "Campaign 0003 feature contradiction log",
+      "type": "ContradictoryEvidence"
+    },
+    {
+      "attributes": {
+        "approved_catalogue": "Institutional Regime-Conditioned Feature Catalogue v1",
+        "approved_feature_ids": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0307",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "decision": "APPROVE_FEATURE_CATALOGUE",
+        "recommendation": "Approve Institutional Regime-Conditioned Feature Catalogue v1 for future hypothesis generation. Retain macro pressure, geo severity, and event counts as context variables, but do not promote them as standalone predictive features.",
+        "rejected_feature_ids": [
+          "IKROS-KO-20260802-0321",
+          "IKROS-KO-20260802-0322",
+          "IKROS-KO-20260802-0323",
+          "IKROS-KO-20260802-0324",
+          "IKROS-KO-20260802-0325",
+          "IKROS-KO-20260802-0326",
+          "IKROS-KO-20260802-0327"
+        ]
+      },
+      "confidence": 0.85,
+      "dependency_ids": [
+        "IKROS-RQ-20260802-0003"
+      ],
+      "evidence_refs": [
+        "11-research/phase-g/feature-discovery/feature_discovery_analysis.json"
+      ],
+      "identifier": "IKROS-CONCL-20260802-0003",
+      "lifecycle_state": "PUBLISHED",
+      "source_ids": [
+        "IKROS-HYP-20260802-0003",
+        "IKROS-VAL-20260802-0003",
+        "IKROS-CONTRA-20260802-0003"
+      ],
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Campaign 0003 recommends the approved feature catalogue for future alpha hypothesis generation inside the six-state taxonomy.",
+      "title": "Approve the regime-conditioned feature catalogue",
+      "type": "ResearchConclusion"
+    }
+  ],
+  "metadata": {
+    "evidence_refs": [
+      "11-research/phase-g/feature-discovery/feature_discovery_analysis.json"
+    ],
+    "source_kind": "VALIDATION_REPORT",
+    "specification_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "title": "Campaign 0003 feature discovery validation synthesis"
+  }
+}

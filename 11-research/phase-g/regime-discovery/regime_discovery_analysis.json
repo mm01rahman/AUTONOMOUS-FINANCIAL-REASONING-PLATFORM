@@ -1,0 +1,384 @@
+{
+  "campaign_tag": "PHASE-G-REGIME-002",
+  "validation_metrics": {
+    "p_value": 0.08,
+    "effect_size": 0.49,
+    "consistency_score": 0.78,
+    "sharpe_degradation": 0.22,
+    "overfitting_index": 1.08,
+    "data_quality_grade": "A"
+  },
+  "utility_test": {
+    "volatility_baseline_return_spread": 0.0012110299879640569,
+    "volatility_baseline_hit_spread": 0.04837854955652099,
+    "trend_volatility_return_spread": 0.0024014028145167335,
+    "trend_volatility_hit_spread": 0.06790818900285855,
+    "macro_overlay_return_spread": 0.004942385609214154,
+    "macro_overlay_hit_spread": 0.1422228565085708,
+    "macro_overlay_stability": 0.7800863033402589
+  },
+  "candidate_methods": [
+    {
+      "method_id": "IKROS-KO-20260802-0202",
+      "name": "Hidden Markov Models",
+      "family": "latent_state",
+      "executed_on_frozen_stack": false,
+      "determinism_score": 3,
+      "interpretability_score": 2,
+      "cost_score": 2,
+      "stability_score": 3,
+      "utility_score": 2,
+      "institutional_suitability_score": 2,
+      "decision": "REJECT",
+      "reason": "Latent-state inference is harder to govern and did not justify additional method complexity on the frozen stack."
+    },
+    {
+      "method_id": "IKROS-KO-20260802-0203",
+      "name": "Gaussian Mixture Models",
+      "family": "probabilistic_clustering",
+      "executed_on_frozen_stack": false,
+      "determinism_score": 3,
+      "interpretability_score": 2,
+      "cost_score": 3,
+      "stability_score": 2,
+      "utility_score": 2,
+      "institutional_suitability_score": 2,
+      "decision": "REJECT",
+      "reason": "Elliptical latent clusters were not needed to explain the observed regime utility differences."
+    },
+    {
+      "method_id": "IKROS-KO-20260802-0204",
+      "name": "Hierarchical Clustering",
+      "family": "distance_clustering",
+      "executed_on_frozen_stack": false,
+      "determinism_score": 4,
+      "interpretability_score": 3,
+      "cost_score": 3,
+      "stability_score": 3,
+      "utility_score": 3,
+      "institutional_suitability_score": 3,
+      "decision": "DEFER",
+      "reason": "Promising for later refinement, but the current evidence already supports a simpler institutional taxonomy."
+    },
+    {
+      "method_id": "IKROS-KO-20260802-0205",
+      "name": "Spectral Clustering",
+      "family": "graph_clustering",
+      "executed_on_frozen_stack": false,
+      "determinism_score": 3,
+      "interpretability_score": 2,
+      "cost_score": 2,
+      "stability_score": 2,
+      "utility_score": 2,
+      "institutional_suitability_score": 2,
+      "decision": "REJECT",
+      "reason": "The added abstraction was not justified for the current governed research objective."
+    },
+    {
+      "method_id": "IKROS-KO-20260802-0206",
+      "name": "Bayesian Change Point Detection",
+      "family": "structural_breaks",
+      "executed_on_frozen_stack": false,
+      "determinism_score": 4,
+      "interpretability_score": 4,
+      "cost_score": 3,
+      "stability_score": 3,
+      "utility_score": 3,
+      "institutional_suitability_score": 4,
+      "decision": "DEFER",
+      "reason": "Useful for later transition refinement, but insufficiently complete as the primary institutional taxonomy by itself."
+    },
+    {
+      "method_id": "IKROS-KO-20260802-0207",
+      "name": "Density-based Clustering",
+      "family": "density_clustering",
+      "executed_on_frozen_stack": false,
+      "determinism_score": 4,
+      "interpretability_score": 2,
+      "cost_score": 3,
+      "stability_score": 2,
+      "utility_score": 2,
+      "institutional_suitability_score": 2,
+      "decision": "REJECT",
+      "reason": "Outlier-sensitive clusters did not offer a clear institutional interpretation advantage."
+    },
+    {
+      "method_id": "IKROS-KO-20260802-0208",
+      "name": "Volatility-State Baseline",
+      "family": "deterministic_rule_taxonomy",
+      "executed_on_frozen_stack": true,
+      "determinism_score": 5,
+      "interpretability_score": 5,
+      "cost_score": 5,
+      "stability_score": 5,
+      "utility_score": 2,
+      "institutional_suitability_score": 4,
+      "decision": "REJECT",
+      "reason": "Too coarse. It under-separates research outcomes and leaves macro-transition behavior hidden.",
+      "utility_metrics": {
+        "return_spread": 0.0012110299879640569,
+        "hit_rate_spread": 0.04837854955652099,
+        "stability": 0.9354323158062969
+      }
+    },
+    {
+      "method_id": "IKROS-KO-20260802-0209",
+      "name": "Deterministic Macro-Event Overlay Taxonomy",
+      "family": "deterministic_rule_taxonomy",
+      "executed_on_frozen_stack": true,
+      "determinism_score": 5,
+      "interpretability_score": 5,
+      "cost_score": 5,
+      "stability_score": 4,
+      "utility_score": 5,
+      "institutional_suitability_score": 5,
+      "decision": "ACCEPT",
+      "reason": "Best balance of utility, interpretability, and frozen-stack compatibility.",
+      "utility_metrics": {
+        "return_spread": 0.004942385609214154,
+        "hit_rate_spread": 0.1422228565085708,
+        "stability": 0.7800863033402589
+      }
+    }
+  ],
+  "accepted_taxonomy": {
+    "name": "Institutional Six-State Overlay Taxonomy v1",
+    "stability": 0.7800863033402589,
+    "regimes": [
+      {
+        "identifier": "IKROS-REGIME-20260802-0201",
+        "label": "bull_trend",
+        "institutional_name": "Bull Trend Expansion",
+        "count": 286,
+        "avg_future_return": 0.005604,
+        "median_future_return": 0.00849,
+        "hit_rate": 0.643357,
+        "avg_volatility": 0.009158,
+        "avg_macro_pressure": 0.188846,
+        "avg_trend_gap": 0.087921,
+        "economic_rationale": "Gold trends most cleanly when persistence, liquidity support, and macro pressure align in the same direction.",
+        "market_mechanics": "Breakouts are reinforced rather than faded, and validation quality improves because directional structure dominates noise.",
+        "dominant_participants": "Trend followers, macro allocators, momentum-driven discretionary flows",
+        "typical_backdrop": "Supportive USD and rates backdrop with persistent upside structure",
+        "liquidity_profile": "Orderly and supportive",
+        "volatility_profile": "Moderate and controlled",
+        "transition_triggers": ["sustained breakout", "positive macro pressure", "stable volatility"],
+        "failure_modes": ["late breakout exhaustion", "macro shock reversal"],
+        "historical_examples": ["2003-01-03 to 2003-01-16", "2005-11-28 to 2005-12-12", "2025-09-02 to 2025-09-16"]
+      },
+      {
+        "identifier": "IKROS-REGIME-20260802-0202",
+        "label": "bear_unwind",
+        "institutional_name": "Bear Trend Unwind",
+        "count": 854,
+        "avg_future_return": 0.001037,
+        "median_future_return": 0.003081,
+        "hit_rate": 0.562061,
+        "avg_volatility": 0.008387,
+        "avg_macro_pressure": -0.064681,
+        "avg_trend_gap": -0.018034,
+        "economic_rationale": "Weak persistent structure forces gold research to distinguish between orderly unwind and true crisis behavior.",
+        "market_mechanics": "Negative trend persistence remains present, but not every downtrend carries the same validation penalty.",
+        "dominant_participants": "Systematic trend followers, directional macro sellers, hedgers",
+        "typical_backdrop": "USD firmness or rates pressure with fading gold demand",
+        "liquidity_profile": "Adequate but one-sided",
+        "volatility_profile": "Below crisis but directionally persistent",
+        "transition_triggers": ["breakdown persistence", "negative trend gap", "fading macro support"],
+        "failure_modes": ["violent reversal", "event-driven squeeze"],
+        "historical_examples": ["2013-11-08 to 2013-12-31", "2018-05-29 to 2018-07-05", "2018-07-09 to 2018-08-23"]
+      },
+      {
+        "identifier": "IKROS-REGIME-20260802-0203",
+        "label": "calm_carry",
+        "institutional_name": "Calm Carry Accumulation",
+        "count": 752,
+        "avg_future_return": 0.002541,
+        "median_future_return": 0.001809,
+        "hit_rate": 0.546543,
+        "avg_volatility": 0.006209,
+        "avg_macro_pressure": 0.084622,
+        "avg_trend_gap": 0.024891,
+        "economic_rationale": "Low-volatility environments compress noise and allow slow information accumulation without crisis dislocation.",
+        "market_mechanics": "Signals persist longer, but payoff asymmetry is smaller than in true bull trend expansion.",
+        "dominant_participants": "Carry allocators, reserve managers, low-turnover macro funds",
+        "typical_backdrop": "Calm policy environment and muted USD/rates shocks",
+        "liquidity_profile": "Deep and orderly",
+        "volatility_profile": "Low",
+        "transition_triggers": ["volatility compression", "absence of major event stress", "stable trend backdrop"],
+        "failure_modes": ["false calm before event shock", "range stagnation"],
+        "historical_examples": ["2017-07-17 to 2017-09-01", "2018-12-03 to 2019-01-18", "2019-11-29 to 2020-01-17"]
+      },
+      {
+        "identifier": "IKROS-REGIME-20260802-0204",
+        "label": "crisis_dislocation",
+        "institutional_name": "Crisis Dislocation",
+        "count": 441,
+        "avg_future_return": 0.000661,
+        "median_future_return": 0.000183,
+        "hit_rate": 0.501134,
+        "avg_volatility": 0.01842,
+        "avg_macro_pressure": 0.025072,
+        "avg_trend_gap": 0.0355,
+        "economic_rationale": "Crisis periods create large moves but poor research reliability unless treated as a separate state.",
+        "market_mechanics": "Volatility dominates signal quality, and contradictions increase because edge persistence degrades.",
+        "dominant_participants": "Forced de-risking, macro hedgers, crisis liquidity takers",
+        "typical_backdrop": "Stress episodes, geopolitical escalation, or policy disorder",
+        "liquidity_profile": "Fragmented and shock-prone",
+        "volatility_profile": "High and unstable",
+        "transition_triggers": ["volatility spike", "geopolitical activation", "behavioral stretch extremes"],
+        "failure_modes": ["signal inversion", "execution instability"],
+        "historical_examples": ["2008-09-15 to 2009-01-16", "2011-09-06 to 2011-12-23", "2012-06-01 to 2012-07-19"]
+      },
+      {
+        "identifier": "IKROS-REGIME-20260802-0205",
+        "label": "macro_transition",
+        "institutional_name": "Macro Policy Transition",
+        "count": 814,
+        "avg_future_return": 0.003169,
+        "median_future_return": 0.00323,
+        "hit_rate": 0.565111,
+        "avg_volatility": 0.010441,
+        "avg_macro_pressure": 0.183361,
+        "avg_trend_gap": 0.035503,
+        "economic_rationale": "Policy and cross-asset shocks change the information content of gold faster than trend-only taxonomies capture.",
+        "market_mechanics": "Macro pressure and event stress alter the ranking of candidate hypotheses and explain why macro-only signals fail when isolated.",
+        "dominant_participants": "Macro funds, discretionary central-bank watchers, event-driven allocators",
+        "typical_backdrop": "Policy repricing, real-yield shifts, DXY transitions",
+        "liquidity_profile": "Tradable but sensitive to event timing",
+        "volatility_profile": "Moderate with event spikes",
+        "transition_triggers": ["macro pressure extremes", "policy surprise", "event density"],
+        "failure_modes": ["false event follow-through", "short-lived narrative shift"],
+        "historical_examples": ["2002-06-20 to 2002-07-01", "2003-04-30 to 2003-05-12", "2009-03-16 to 2009-04-01"]
+      },
+      {
+        "identifier": "IKROS-REGIME-20260802-0206",
+        "label": "range_compression",
+        "institutional_name": "Range Compression",
+        "count": 3110,
+        "avg_future_return": 0.002618,
+        "median_future_return": 0.003336,
+        "hit_rate": 0.554984,
+        "avg_volatility": 0.011004,
+        "avg_macro_pressure": 0.036872,
+        "avg_trend_gap": 0.042269,
+        "economic_rationale": "Most research time is spent outside explicit crisis or event transitions, so a broad compression state is required as the institutional default.",
+        "market_mechanics": "Signals are weaker than in bull trend expansion but more reliable than in crisis dislocation.",
+        "dominant_participants": "Balanced macro books, range traders, hedging flows",
+        "typical_backdrop": "No dominant macro shock and no clean breakout persistence",
+        "liquidity_profile": "Normal",
+        "volatility_profile": "Moderate",
+        "transition_triggers": ["absence of extreme macro pressure", "trend ambiguity", "mid-range volatility"],
+        "failure_modes": ["hidden transition starting inside the range", "feature redundancy"],
+        "historical_examples": ["2006-07-19 to 2006-10-03", "2024-05-28 to 2024-08-02", "2025-10-21 to 2025-12-18"]
+      }
+    ],
+    "transition_matrix": {
+      "bear_unwind": {
+        "bear_unwind": 0.822014,
+        "bull_trend": 0.0,
+        "calm_carry": 0.023419,
+        "crisis_dislocation": 0.008197,
+        "macro_transition": 0.057377,
+        "range_compression": 0.088993
+      },
+      "bull_trend": {
+        "bear_unwind": 0.0,
+        "bull_trend": 0.506993,
+        "calm_carry": 0.048951,
+        "crisis_dislocation": 0.006993,
+        "macro_transition": 0.083916,
+        "range_compression": 0.353147
+      },
+      "calm_carry": {
+        "bear_unwind": 0.030585,
+        "bull_trend": 0.023936,
+        "calm_carry": 0.796543,
+        "crisis_dislocation": 0.0,
+        "macro_transition": 0.050532,
+        "range_compression": 0.098404
+      },
+      "crisis_dislocation": {
+        "bear_unwind": 0.002268,
+        "bull_trend": 0.0,
+        "calm_carry": 0.0,
+        "crisis_dislocation": 0.950113,
+        "macro_transition": 0.00907,
+        "range_compression": 0.038549
+      },
+      "macro_transition": {
+        "bear_unwind": 0.065111,
+        "bull_trend": 0.023342,
+        "calm_carry": 0.050369,
+        "crisis_dislocation": 0.003686,
+        "macro_transition": 0.535627,
+        "range_compression": 0.321867
+      },
+      "range_compression": {
+        "bear_unwind": 0.024124,
+        "bull_trend": 0.033451,
+        "calm_carry": 0.025088,
+        "crisis_dislocation": 0.003216,
+        "macro_transition": 0.084271,
+        "range_compression": 0.829849
+      }
+    }
+  },
+  "historical_atlas": [
+    {
+      "window_id": "gfc_2008",
+      "label": "2008 Financial Crisis",
+      "dominant_regime": "range_compression",
+      "dominant_share": 0.5,
+      "avg_future_return": 0.001049
+    },
+    {
+      "window_id": "gold_bull_2011",
+      "label": "2011 Gold Bull Market",
+      "dominant_regime": "crisis_dislocation",
+      "dominant_share": 0.3651,
+      "avg_future_return": 0.003478
+    },
+    {
+      "window_id": "gold_collapse_2013",
+      "label": "2013 Gold Collapse",
+      "dominant_regime": "bear_unwind",
+      "dominant_share": 0.4821,
+      "avg_future_return": -0.005599
+    },
+    {
+      "window_id": "covid_2020",
+      "label": "2020 COVID",
+      "dominant_regime": "crisis_dislocation",
+      "dominant_share": 0.3532,
+      "avg_future_return": 0.004681
+    },
+    {
+      "window_id": "inflation_2022",
+      "label": "2022 Inflation Cycle",
+      "dominant_regime": "range_compression",
+      "dominant_share": 0.4382,
+      "avg_future_return": 0.000748
+    },
+    {
+      "window_id": "rate_cycle_2024",
+      "label": "2024 Rate Cycle",
+      "dominant_regime": "range_compression",
+      "dominant_share": 0.6892,
+      "avg_future_return": 0.005373
+    },
+    {
+      "window_id": "historical_2025",
+      "label": "2025 Historical",
+      "dominant_regime": "range_compression",
+      "dominant_share": 0.6733,
+      "avg_future_return": 0.010473
+    },
+    {
+      "window_id": "available_2026",
+      "label": "2026 Available",
+      "dominant_regime": "range_compression",
+      "dominant_share": 0.7929,
+      "avg_future_return": -0.002099
+    }
+  ]
+}

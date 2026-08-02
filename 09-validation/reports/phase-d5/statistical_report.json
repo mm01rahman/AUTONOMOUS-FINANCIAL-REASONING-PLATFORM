@@ -1,0 +1,15 @@
+{
+  "sharpe_ratio": 0.22963979982068555,
+  "sortino_ratio": 0.4763321661268475,
+  "calmar_ratio": 6.92638785909795,
+  "profit_factor": 1.7771027023787362,
+  "max_drawdown": 0.0010068281290916343,
+  "win_rate": 0.609375,
+  "expectancy": 2.7673341811368995e-05,
+  "brier_score": 0.23914581014540603,
+  "calibration_error": 0.3796503675888464,
+  "decision_accuracy": 0.609375,
+  "precision": 0.609375,
+  "recall": 0.609375,
+  "policy_rejection_rate": 1.0
+}

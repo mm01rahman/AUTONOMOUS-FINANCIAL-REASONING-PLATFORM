@@ -1,0 +1,127 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:37:52.449026+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0075
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_PROGRAM.md
+- 11-research/phase-g/failure-analysis/failure_analysis_analysis.json
+- 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0010
+- IKROS-RESEARCHTASK-20260802-0081
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0072
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0010
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0075
+    finished_at: '2026-08-02T02:37:52.449026+00:00'
+    kind: FINAL_REPORT
+    max_attempts: 1
+    payload: {}
+    planned_order: 5
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0081
+      memory_record_id: null
+      metrics:
+        blocked_task_ids: []
+        completed_task_ids:
+        - IKROS-RESEARCHTASK-20260802-0071
+        - IKROS-RESEARCHTASK-20260802-0073
+        - IKROS-RESEARCHTASK-20260802-0074
+        - IKROS-RESEARCHTASK-20260802-0075
+        failed_task_ids: []
+        progress:
+          blocked: 0
+          completed: 4
+          failed: 0
+          percent_complete: 80.0
+          skipped: 0
+          total: 5
+      output_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+      - IKROS-CONTRA-20260802-0007
+      - IKROS-DSV-20260802-0007
+      - IKROS-EVIDENCE-20260802-0007
+      - IKROS-EXP-20260802-0007
+      - IKROS-HYP-20260802-0007
+      - IKROS-KO-20260802-0700
+      - IKROS-KO-20260802-0701
+      - IKROS-KO-20260802-0702
+      - IKROS-KO-20260802-0703
+      - IKROS-KO-20260802-0704
+      - IKROS-KO-20260802-0705
+      - IKROS-KO-20260802-0706
+      - IKROS-KO-20260802-0707
+      - IKROS-RQ-20260802-0007
+      - diagnostic_experiment_knowledge
+      payload:
+        campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0010
+        outputs:
+        - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+        - IKROS-CONTRA-20260802-0007
+        - IKROS-DSV-20260802-0007
+        - IKROS-EVIDENCE-20260802-0007
+        - IKROS-EXP-20260802-0007
+        - IKROS-HYP-20260802-0007
+        - IKROS-KO-20260802-0700
+        - IKROS-KO-20260802-0701
+        - IKROS-KO-20260802-0702
+        - IKROS-KO-20260802-0703
+        - IKROS-KO-20260802-0704
+        - IKROS-KO-20260802-0705
+        - IKROS-KO-20260802-0706
+        - IKROS-KO-20260802-0707
+        - IKROS-RQ-20260802-0007
+        - diagnostic_experiment_knowledge
+      selected_ids: []
+    started_at: '2026-08-02T02:37:52.065365+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0081
+    title: Final Report
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0010
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+- IKROS-CONTRA-20260802-0007
+- IKROS-DSV-20260802-0007
+- IKROS-EVIDENCE-20260802-0007
+- IKROS-EXP-20260802-0007
+- IKROS-HYP-20260802-0007
+- IKROS-KO-20260802-0700
+- IKROS-KO-20260802-0701
+- IKROS-KO-20260802-0702
+- IKROS-KO-20260802-0703
+- IKROS-KO-20260802-0704
+- IKROS-KO-20260802-0705
+- IKROS-KO-20260802-0706
+- IKROS-KO-20260802-0707
+- IKROS-RQ-20260802-0007
+- diagnostic_experiment_knowledge
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: FINAL_REPORT COMPLETED
+tags:
+- research-orchestrator
+- final_report
+tier: T1_EPISODIC
+title: 'Campaign 0007 Institutional Diagnostic Experiment Program :: Final Report'
+updated_at: '2026-08-02T02:37:52.449026+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

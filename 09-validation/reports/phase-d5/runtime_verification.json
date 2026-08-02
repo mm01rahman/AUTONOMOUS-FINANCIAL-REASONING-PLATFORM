@@ -1,0 +1,40 @@
+{
+  "deterministic": true,
+  "replay_checksum": "9742f494fdfc3515e8b0e323af38d4ed73ecb039f6eeb671be7903a99ca8e079",
+  "expected_checksum": "9742f494fdfc3515e8b0e323af38d4ed73ecb039f6eeb671be7903a99ca8e079",
+  "layer_results": [
+    {
+      "layer_id": "L1",
+      "passed": true,
+      "detail": "features=8"
+    },
+    {
+      "layer_id": "L2",
+      "passed": true,
+      "detail": "quorum=6"
+    },
+    {
+      "layer_id": "L3",
+      "passed": true,
+      "detail": "epistemic_uncertainty=0.010975"
+    },
+    {
+      "layer_id": "L4",
+      "passed": true,
+      "detail": "candidate_ru=0.000000"
+    },
+    {
+      "layer_id": "L5",
+      "passed": true,
+      "detail": "verdict=3"
+    },
+    {
+      "layer_id": "L6",
+      "passed": true,
+      "detail": "validated via separate math/statistical checks"
+    }
+  ],
+  "world_state_uncertainty": 0.010974632411,
+  "policy_null_trade": false,
+  "failures": []
+}

@@ -1,0 +1,84 @@
+backtests:
+- phase-e-macro-only
+capability_refs: []
+confidence:
+  data: 0.198
+  economic: 0.198
+  last_updated: '2026-08-02T01:27:44.593889+00:00'
+  model: 0.51
+  operational: 0.46799999999999997
+  overall: 0.3162526888230916
+  prior: 0.33
+  replication: 0.0
+  statistical: 0.198
+  validation: 0.54
+direction_accuracy: 0.0
+entity_type: AlphaCandidate
+ikros_id: IKROS-ALPHACAND-20260802-0001
+implements_hypotheses:
+- IKROS-HYP-20260802-0001
+lifecycle_state: REJECTED
+lineage:
+  dependencies:
+    datasets: []
+    external_refs:
+    - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_validation_report.json
+    features: []
+    inputs:
+    - IKROS-EXP-20260802-0001
+    - IKROS-HYP-20260802-0001
+    models: []
+  evidence:
+    contradicting: []
+    ers_records:
+    - 11-research/phase-e/phase_e_summary.json
+    - EXEC-041
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T01:27:42.840118+00:00'
+    created_by: ikros-ingestion-engine
+    creation_context: VALIDATION_REPORT
+    motivation: Ingested from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_validation_report.json
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+max_drawdown: 0.04441
+monte_carlos:
+- phase-e-mc-macro-only
+name: macro_only_baseline
+promotion_score: 0.0
+promotion_status: REJECTED
+rejection_reasons:
+- walk-forward out-of-sample edge not positive
+- positive fold ratio below governance threshold
+- full-sample expectancy not positive
+- required Phase G validation components remain incomplete
+sharpe_oos: -1.9781
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+strategy_type: MACRO
+version: 1.0.0
+version_history:
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:44.632890+00:00'
+  confidence_at_time: 0.33
+  version: 1.0.0
+- change_summary: Field update
+  changed_at: '2026-08-02T01:27:44.751891+00:00'
+  confidence_at_time: 0.3162526888230916
+  version: 1.0.0
+walk_forwards:
+- phase-e-wf-macro-only
+win_rate: 0.0
+work_package_refs: []

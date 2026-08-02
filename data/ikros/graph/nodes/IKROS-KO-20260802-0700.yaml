@@ -1,0 +1,29 @@
+attributes:
+  authorized_experiments:
+  - IKROS-EXP-20260802-0601
+  - IKROS-EXP-20260802-0602
+  - IKROS-EXP-20260802-0603
+  - IKROS-EXP-20260802-0604
+  - IKROS-EXP-20260802-0605
+  - IKROS-EXP-20260802-0606
+  remain_in_testing:
+  - IKROS-HYP-20260802-0408
+  return_for_validation:
+  - IKROS-HYP-20260802-0401
+  - IKROS-HYP-20260802-0405
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+  summary: Governed methodology for reducing uncertainty around retained hypotheses
+    through diagnostic experiments without changing hypothesis definitions.
+confidence: 0.84
+created_at: '2026-08-02T02:37:46.459254+00:00'
+ikros_id: IKROS-KO-20260802-0700
+label: Campaign 0007 diagnostic methodology
+node_id: IKROS-KO-20260802-0700
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T02:37:46.459254+00:00'
+valid_to: null
+wp_refs: []

@@ -1,0 +1,45 @@
+archived_at: null
+capability_refs: []
+confidence: 0.88
+created_at: '2026-08-02T01:27:41.710581+00:00'
+dependency_ids: []
+entity_type: DatasetVersion
+evidence_refs:
+- 11-research/phase-e/phase_e_summary.json
+graph_node_ids:
+- IKROS-DSV-20260802-0001
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0003
+payload:
+  attributes:
+    checksum_status: upstream_dataset_checksum_not_embedded_in_repository
+    feature_count: 29
+    phase_e_summary_sha256: bba4276f52f51cf5e8d895159066219d79cb98f7cc1900f81cc7afcefe89c65d
+    version_label: phase-e-baseline
+  lifecycle_state: VALIDATED
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-DSV-20260802-0001
+- IKROS-DS-20260802-0001
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: Deterministic dataset snapshot referenced by the Macro Alpha baseline audit.
+tags:
+- datasetversion
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Phase E Macro Alpha dataset snapshot
+updated_at: '2026-08-02T01:27:41.710581+00:00'
+valid_from: '2026-08-02T01:27:41.710581+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "source_kind": "INTERNAL_RESEARCH_REPORT",
+    "title": "Phase G Macro Alpha knowledge pack",
+    "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+    "evidence_refs": [
+      "EXEC-041",
+      "11-research/phase-e/phase_e_summary.json",
+      "11-research/phase-e/phase_e_final_report.md"
+    ]
+  },
+  "ikros_objects": [
+    {
+      "identifier": "IKROS-DS-20260802-0001",
+      "type": "Dataset",
+      "title": "Canonical XAU/USD daily research dataset",
+      "summary": "Phase E daily XAU/USD research dataset with macro proxy joins.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.9,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/phase_e_summary.json"],
+      "attributes": {
+        "instrument": "XAU/USD",
+        "granularity": "1D",
+        "coverage_rows": 6257,
+        "source_path_hint": "C:\\Users\\mm01r\\AFRP-Datasets\\processed\\xauusd\\xauusd_1d.parquet",
+        "provenance_note": "Canonical data foundation path referenced by the Phase C/D/E research stack."
+      }
+    },
+    {
+      "identifier": "IKROS-DSV-20260802-0001",
+      "type": "DatasetVersion",
+      "title": "Phase E Macro Alpha dataset snapshot",
+      "summary": "Deterministic dataset snapshot referenced by the Macro Alpha baseline audit.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.88,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/phase_e_summary.json"],
+      "source_ids": ["IKROS-DS-20260802-0001"],
+      "attributes": {
+        "version_label": "phase-e-baseline",
+        "feature_count": 29,
+        "phase_e_summary_sha256": "e80874de2b531fd2c6a4adc91019fa0e40348a4ee1ec2d3b5e4e9cdd7111d6b1",
+        "checksum_status": "upstream_dataset_checksum_not_embedded_in_repository"
+      }
+    },
+    {
+      "identifier": "IKROS-THESIS-20260802-0001",
+      "type": "EconomicThesis",
+      "title": "Gold responds to macro pressure",
+      "summary": "USD weakness, falling rates, and dovish surprise should support next-day gold returns.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.52,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/phase_e_final_report.md"],
+      "relationships": [
+        {
+          "edge_type": "ASSOCIATED_WITH",
+          "target_id": "IKROS-REGIME-20260802-0001",
+          "direction": "out",
+          "confidence": 0.6
+        }
+      ],
+      "attributes": {
+        "mechanism": "Macro pressure lowers the relative opportunity cost of gold and supports defensive demand.",
+        "horizon": "next_day"
+      }
+    },
+    {
+      "identifier": "IKROS-REGIME-20260802-0001",
+      "type": "Regime",
+      "title": "Rate-sensitive macro transition regime",
+      "summary": "A regime defined by rate compression, softer USD, and policy sensitivity.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.57,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/regime_adaptation.json"],
+      "attributes": {
+        "regime_label": "macro_transition",
+        "requires_regime_adaptation": true
+      }
+    },
+    {
+      "identifier": "IKROS-FF-20260802-0001",
+      "type": "FeatureFamily",
+      "title": "Macro pressure feature family",
+      "summary": "Feature family combining USD, rates, and policy-surprise inputs.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.58,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+      "source_ids": ["IKROS-THESIS-20260802-0001"],
+      "attributes": {
+        "name": "macro_pressure_family",
+        "description": "Macro proxy features used by the Phase E macro-only baseline.",
+        "member_features": [
+          "IKROS-FEAT-20260802-0001",
+          "IKROS-FEAT-20260802-0002",
+          "IKROS-FEAT-20260802-0003"
+        ]
+      }
+    },
+    {
+      "identifier": "IKROS-FEAT-20260802-0001",
+      "type": "Feature",
+      "title": "Macro pressure composite",
+      "summary": "Composite macro pressure score used in the Phase E macro-only candidate.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.61,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+      "source_ids": ["IKROS-DSV-20260802-0001", "IKROS-THESIS-20260802-0001"],
+      "attributes": {
+        "name": "macro_pressure",
+        "family_id": "IKROS-FF-20260802-0001",
+        "computation": "Composite score over DXY, rates, and policy surprise proxies.",
+        "inputs": ["dxy_return_20", "yield_curve_10y_3m", "fed_surprise"],
+        "lookback": "20 bars",
+        "normalization": "z-score",
+        "stationarity": "UNKNOWN",
+        "information_content": 0.44,
+        "stability_score": 0.39
+      }
+    },
+    {
+      "identifier": "IKROS-FEAT-20260802-0002",
+      "type": "Feature",
+      "title": "DXY 20-bar return",
+      "summary": "USD proxy input used by the macro pressure family.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.63,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+      "source_ids": ["IKROS-DSV-20260802-0001"],
+      "attributes": {
+        "name": "dxy_return_20",
+        "family_id": "IKROS-FF-20260802-0001",
+        "computation": "20-bar return of the DXY proxy series.",
+        "inputs": ["dxy"],
+        "lookback": "20 bars",
+        "normalization": "raw_return",
+        "stationarity": "UNKNOWN",
+        "information_content": 0.31,
+        "stability_score": 0.48
+      }
+    },
+    {
+      "identifier": "IKROS-FEAT-20260802-0003",
+      "type": "Feature",
+      "title": "Yield curve 10Y-3M spread",
+      "summary": "Rates proxy input used by the macro pressure family.",
+      "lifecycle_state": "VALIDATED",
+      "confidence": 0.62,
+      "specification_refs": ["SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-e/feature_importance.json"],
+      "source_ids": ["IKROS-DSV-20260802-0001"],
+      "attributes": {
+        "name": "yield_curve_10y_3m",
+        "family_id": "IKROS-FF-20260802-0001",
+        "computation": "10Y minus 3M yield spread proxy.",
+        "inputs": ["us10y", "us3m"],
+        "lookback": "spot",
+        "normalization": "level",
+        "stationarity": "UNKNOWN",
+        "information_content": 0.29,
+        "stability_score": 0.46
+      }
+    }
+  ]
+}

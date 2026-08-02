@@ -1,0 +1,130 @@
+attributes:
+  capability_refs:
+  - ALPHA-RESEARCH
+  - IKROS-ORCHESTRATOR
+  - IKROS-CONFIDENCE
+  completed_at: null
+  confidence:
+    data: 0.8
+    economic: 0.67
+    last_updated: '2026-08-02T00:00:00Z'
+    model: 0.6
+    operational: 0.66
+    overall: 0.6004495275495615
+    prior: 0.55
+    replication: 0.0
+    statistical: 0.48
+    validation: 0.46
+  dataset_versions:
+  - IKROS-DSV-20260802-0003
+  entity_type: Experiment
+  failures_produced: []
+  feature_versions:
+  - IKROS-FEAT-20260802-0301
+  - IKROS-FEAT-20260802-0302
+  - IKROS-FEAT-20260802-0303
+  - IKROS-FEAT-20260802-0304
+  - IKROS-FEAT-20260802-0305
+  - IKROS-FEAT-20260802-0306
+  - IKROS-FEAT-20260802-0307
+  - IKROS-FEAT-20260802-0308
+  - IKROS-FEAT-20260802-0309
+  - IKROS-FEAT-20260802-0310
+  - IKROS-FEAT-20260802-0311
+  - IKROS-FEAT-20260802-0312
+  git_commit: 752f35c
+  hypotheses:
+  - IKROS-HYP-20260802-0003
+  ikros_id: IKROS-EXP-20260802-0003
+  in_sample_end: ''
+  in_sample_start: ''
+  lifecycle_state: RUNNING
+  lineage:
+    dependencies:
+      datasets:
+      - IKROS-DSV-20260802-0003
+      external_refs:
+      - 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+      - 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+      features:
+      - IKROS-FEAT-20260802-0301
+      - IKROS-FEAT-20260802-0302
+      - IKROS-FEAT-20260802-0303
+      - IKROS-FEAT-20260802-0304
+      - IKROS-FEAT-20260802-0305
+      - IKROS-FEAT-20260802-0306
+      - IKROS-FEAT-20260802-0307
+      - IKROS-FEAT-20260802-0308
+      - IKROS-FEAT-20260802-0309
+      - IKROS-FEAT-20260802-0310
+      - IKROS-FEAT-20260802-0311
+      - IKROS-FEAT-20260802-0312
+      inputs:
+      - IKROS-HYP-20260802-0003
+      models:
+      - institutional_six_state_overlay_taxonomy_v1
+    evidence:
+      contradicting: []
+      ers_records: []
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T00:00:00Z'
+      created_by: campaign-0003-feature-discovery
+      creation_context: Campaign 0003 feature discovery
+      motivation: Run a governed feature-evaluation campaign on the frozen AFRP research
+        stack.
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  out_of_sample_end: ''
+  out_of_sample_start: ''
+  parameters:
+    selected_methods:
+    - mutual_information
+    - conditional_mutual_information_proxy
+    - correlation_stability
+    - bootstrap_sign_consistency
+    - redundancy_pruning
+    - interaction_review
+    validation_floor:
+    - walk_forward
+    - cpcv
+    - monte_carlo
+    - bootstrap
+    - sensitivity
+    - temporal_stability
+    - regime_stability
+    - out_of_sample_replay
+  protocol: Governed feature evaluation over the frozen AFRP feature matrix after
+    conditioning on the accepted six-state taxonomy.
+  random_seed: 42
+  reproducibility_hash: b35ebad05f7136f1c1a1cc6b6e4be9578a8fef6eb500c78bfc4abe875e3cc53b
+  spec_refs:
+  - SPEC-012
+  - SPEC-060
+  title: Campaign 0003 regime-conditioned feature evaluation
+  validations_produced: []
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.6004495275495615
+created_at: '2026-08-02T00:00:00Z'
+ikros_id: IKROS-EXP-20260802-0003
+label: Campaign 0003 regime-conditioned feature evaluation
+node_id: IKROS-EXP-20260802-0003
+node_type: EXPERIMENT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

@@ -1,0 +1,44 @@
+[
+  {
+    "approved_regimes": [
+      "calm_carry",
+      "range_compression"
+    ],
+    "decision": "PROMOTE",
+    "feature": "macro_trend_interaction",
+    "max_score": 3.754065,
+    "mean_score": 1.235388
+  },
+  {
+    "approved_regimes": [
+      "macro_transition"
+    ],
+    "decision": "PROMOTE",
+    "feature": "trend_breakout_interaction",
+    "max_score": 2.486626,
+    "mean_score": 1.155253
+  },
+  {
+    "approved_regimes": [
+      "macro_transition"
+    ],
+    "decision": "PROMOTE",
+    "feature": "sessionless_event_pressure",
+    "max_score": 2.386009,
+    "mean_score": 0.970465
+  },
+  {
+    "approved_regimes": [],
+    "decision": "REJECT",
+    "feature": "vol_macro_interaction",
+    "max_score": 2.525046,
+    "mean_score": 0.974569
+  },
+  {
+    "approved_regimes": [],
+    "decision": "REJECT",
+    "feature": "stress_momentum_interaction",
+    "max_score": 0.414607,
+    "mean_score": -0.001522
+  }
+]

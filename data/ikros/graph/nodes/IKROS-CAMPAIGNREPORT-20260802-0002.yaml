@@ -1,0 +1,17 @@
+attributes:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0002
+  entity_type: CampaignCompletionReport
+  lifecycle_state: COMPLETED
+confidence: 1.0
+created_at: '2026-08-02T01:43:07.499198+00:00'
+ikros_id: IKROS-CAMPAIGNREPORT-20260802-0002
+label: Campaign 0002 Regime Discovery completion report
+node_id: IKROS-CAMPAIGNREPORT-20260802-0002
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

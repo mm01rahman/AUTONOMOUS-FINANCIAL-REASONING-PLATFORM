@@ -1,0 +1,39 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-042-REL"
+work_package_id: "WP-IMP-0040"
+capability:
+  id: "SPEC-LIBRARY"
+  version: "1.0"
+generated_at: "2026-08-02T04:00:00Z"
+
+summary:
+  deliverables_produced: 10
+  specifications_created: 22
+  specifications_fully_imported: 9
+  specifications_draft: 10
+  specifications_pending_import: 3
+  specifications_imported_awaiting_approval: 1
+  registry_entries: 22
+  hierarchy_levels: 8
+  conformance_matrix_entries: 22
+  overall_repository_coverage_percent: 78
+  overall_specification_coverage_percent: 52
+  overall_research_coverage_percent: 41
+
+key_findings:
+  - "Canonical Specification Library established in specs/ directory"
+  - "SPEC-060 (IKROS Architecture) imported from AFRP-IKROS-ARCH-1.0.0"
+  - "ARB Conformance Audit completed: 78% overall coverage"
+  - "Critical gap: IKROS absent (Article IX violation)"
+  - "All Phase E alpha strategies fail promotion (avg Sharpe -0.22)"
+  - "SPEC-011, SPEC-012 pending import from external documentation"
+  - "NFR-002 and NFR-006 formally uncovered (pre-live risk)"
+
+runtime_modified: false
+eos_modified: false
+quality_gates_passed: true
+boundary_compliant: true
+
+verdict:
+  review_status: "PENDING_ARB"
+  notes: "Awaiting ARB review of SPEC-060 (IKROS) before WP-IMP-0041 can begin."

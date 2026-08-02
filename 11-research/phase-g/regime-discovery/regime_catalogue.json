@@ -1,0 +1,194 @@
+[
+  {
+    "avg_future_return": 0.005604,
+    "avg_macro_pressure": 0.188846,
+    "avg_trend_gap": 0.087921,
+    "avg_volatility": 0.009158,
+    "count": 286,
+    "dominant_participants": "Trend followers, macro allocators, momentum-driven discretionary flows",
+    "economic_rationale": "Gold trends most cleanly when persistence, liquidity support, and macro pressure align in the same direction.",
+    "failure_modes": [
+      "late breakout exhaustion",
+      "macro shock reversal"
+    ],
+    "historical_examples": [
+      "2003-01-03 to 2003-01-16",
+      "2005-11-28 to 2005-12-12",
+      "2025-09-02 to 2025-09-16"
+    ],
+    "hit_rate": 0.643357,
+    "identifier": "IKROS-REGIME-20260802-0201",
+    "institutional_name": "Bull Trend Expansion",
+    "label": "bull_trend",
+    "liquidity_profile": "Orderly and supportive",
+    "market_mechanics": "Breakouts are reinforced rather than faded, and validation quality improves because directional structure dominates noise.",
+    "median_future_return": 0.00849,
+    "transition_triggers": [
+      "sustained breakout",
+      "positive macro pressure",
+      "stable volatility"
+    ],
+    "typical_backdrop": "Supportive USD and rates backdrop with persistent upside structure",
+    "volatility_profile": "Moderate and controlled"
+  },
+  {
+    "avg_future_return": 0.001037,
+    "avg_macro_pressure": -0.064681,
+    "avg_trend_gap": -0.018034,
+    "avg_volatility": 0.008387,
+    "count": 854,
+    "dominant_participants": "Systematic trend followers, directional macro sellers, hedgers",
+    "economic_rationale": "Weak persistent structure forces gold research to distinguish between orderly unwind and true crisis behavior.",
+    "failure_modes": [
+      "violent reversal",
+      "event-driven squeeze"
+    ],
+    "historical_examples": [
+      "2013-11-08 to 2013-12-31",
+      "2018-05-29 to 2018-07-05",
+      "2018-07-09 to 2018-08-23"
+    ],
+    "hit_rate": 0.562061,
+    "identifier": "IKROS-REGIME-20260802-0202",
+    "institutional_name": "Bear Trend Unwind",
+    "label": "bear_unwind",
+    "liquidity_profile": "Adequate but one-sided",
+    "market_mechanics": "Negative trend persistence remains present, but not every downtrend carries the same validation penalty.",
+    "median_future_return": 0.003081,
+    "transition_triggers": [
+      "breakdown persistence",
+      "negative trend gap",
+      "fading macro support"
+    ],
+    "typical_backdrop": "USD firmness or rates pressure with fading gold demand",
+    "volatility_profile": "Below crisis but directionally persistent"
+  },
+  {
+    "avg_future_return": 0.002541,
+    "avg_macro_pressure": 0.084622,
+    "avg_trend_gap": 0.024891,
+    "avg_volatility": 0.006209,
+    "count": 752,
+    "dominant_participants": "Carry allocators, reserve managers, low-turnover macro funds",
+    "economic_rationale": "Low-volatility environments compress noise and allow slow information accumulation without crisis dislocation.",
+    "failure_modes": [
+      "false calm before event shock",
+      "range stagnation"
+    ],
+    "historical_examples": [
+      "2017-07-17 to 2017-09-01",
+      "2018-12-03 to 2019-01-18",
+      "2019-11-29 to 2020-01-17"
+    ],
+    "hit_rate": 0.546543,
+    "identifier": "IKROS-REGIME-20260802-0203",
+    "institutional_name": "Calm Carry Accumulation",
+    "label": "calm_carry",
+    "liquidity_profile": "Deep and orderly",
+    "market_mechanics": "Signals persist longer, but payoff asymmetry is smaller than in true bull trend expansion.",
+    "median_future_return": 0.001809,
+    "transition_triggers": [
+      "volatility compression",
+      "absence of major event stress",
+      "stable trend backdrop"
+    ],
+    "typical_backdrop": "Calm policy environment and muted USD/rates shocks",
+    "volatility_profile": "Low"
+  },
+  {
+    "avg_future_return": 0.000661,
+    "avg_macro_pressure": 0.025072,
+    "avg_trend_gap": 0.0355,
+    "avg_volatility": 0.01842,
+    "count": 441,
+    "dominant_participants": "Forced de-risking, macro hedgers, crisis liquidity takers",
+    "economic_rationale": "Crisis periods create large moves but poor research reliability unless treated as a separate state.",
+    "failure_modes": [
+      "signal inversion",
+      "execution instability"
+    ],
+    "historical_examples": [
+      "2008-09-15 to 2009-01-16",
+      "2011-09-06 to 2011-12-23",
+      "2012-06-01 to 2012-07-19"
+    ],
+    "hit_rate": 0.501134,
+    "identifier": "IKROS-REGIME-20260802-0204",
+    "institutional_name": "Crisis Dislocation",
+    "label": "crisis_dislocation",
+    "liquidity_profile": "Fragmented and shock-prone",
+    "market_mechanics": "Volatility dominates signal quality, and contradictions increase because edge persistence degrades.",
+    "median_future_return": 0.000183,
+    "transition_triggers": [
+      "volatility spike",
+      "geopolitical activation",
+      "behavioral stretch extremes"
+    ],
+    "typical_backdrop": "Stress episodes, geopolitical escalation, or policy disorder",
+    "volatility_profile": "High and unstable"
+  },
+  {
+    "avg_future_return": 0.003169,
+    "avg_macro_pressure": 0.183361,
+    "avg_trend_gap": 0.035503,
+    "avg_volatility": 0.010441,
+    "count": 814,
+    "dominant_participants": "Macro funds, discretionary central-bank watchers, event-driven allocators",
+    "economic_rationale": "Policy and cross-asset shocks change the information content of gold faster than trend-only taxonomies capture.",
+    "failure_modes": [
+      "false event follow-through",
+      "short-lived narrative shift"
+    ],
+    "historical_examples": [
+      "2002-06-20 to 2002-07-01",
+      "2003-04-30 to 2003-05-12",
+      "2009-03-16 to 2009-04-01"
+    ],
+    "hit_rate": 0.565111,
+    "identifier": "IKROS-REGIME-20260802-0205",
+    "institutional_name": "Macro Policy Transition",
+    "label": "macro_transition",
+    "liquidity_profile": "Tradable but sensitive to event timing",
+    "market_mechanics": "Macro pressure and event stress alter the ranking of candidate hypotheses and explain why macro-only signals fail when isolated.",
+    "median_future_return": 0.00323,
+    "transition_triggers": [
+      "macro pressure extremes",
+      "policy surprise",
+      "event density"
+    ],
+    "typical_backdrop": "Policy repricing, real-yield shifts, DXY transitions",
+    "volatility_profile": "Moderate with event spikes"
+  },
+  {
+    "avg_future_return": 0.002618,
+    "avg_macro_pressure": 0.036872,
+    "avg_trend_gap": 0.042269,
+    "avg_volatility": 0.011004,
+    "count": 3110,
+    "dominant_participants": "Balanced macro books, range traders, hedging flows",
+    "economic_rationale": "Most research time is spent outside explicit crisis or event transitions, so a broad compression state is required as the institutional default.",
+    "failure_modes": [
+      "hidden transition starting inside the range",
+      "feature redundancy"
+    ],
+    "historical_examples": [
+      "2006-07-19 to 2006-10-03",
+      "2024-05-28 to 2024-08-02",
+      "2025-10-21 to 2025-12-18"
+    ],
+    "hit_rate": 0.554984,
+    "identifier": "IKROS-REGIME-20260802-0206",
+    "institutional_name": "Range Compression",
+    "label": "range_compression",
+    "liquidity_profile": "Normal",
+    "market_mechanics": "Signals are weaker than in bull trend expansion but more reliable than in crisis dislocation.",
+    "median_future_return": 0.003336,
+    "transition_triggers": [
+      "absence of extreme macro pressure",
+      "trend ambiguity",
+      "mid-range volatility"
+    ],
+    "typical_backdrop": "No dominant macro shock and no clean breakout persistence",
+    "volatility_profile": "Moderate"
+  }
+]

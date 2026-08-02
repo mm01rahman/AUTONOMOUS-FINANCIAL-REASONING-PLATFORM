@@ -1,0 +1,75 @@
+attributes:
+  capability_refs: []
+  confidence:
+    data: 0.79
+    economic: 0.79
+    last_updated: '2026-08-02T01:43:01.860418+00:00'
+    model: 0.0
+    operational: 0.0
+    overall: 0.79
+    prior: 0.79
+    replication: 0.79
+    statistical: 0.79
+    validation: 0.79
+  description: Core state variables required by the deterministic regime overlay taxonomy.
+  entity_type: FeatureFamily
+  ikros_id: IKROS-FF-20260802-0201
+  lifecycle_state: VALIDATED
+  lineage:
+    dependencies:
+      datasets: []
+      external_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+      features: []
+      inputs:
+      - IKROS-DSV-20260802-0002
+      models: []
+    evidence:
+      contradicting: []
+      ers_records:
+      - 11-research/phase-e/feature_importance.json
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T01:43:01.845909+00:00'
+      created_by: ikros-ingestion-engine
+      creation_context: INTERNAL_RESEARCH_REPORT
+      motivation: Ingested from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  member_features:
+  - IKROS-FEAT-20260802-0201
+  - IKROS-FEAT-20260802-0202
+  - IKROS-FEAT-20260802-0203
+  - IKROS-FEAT-20260802-0204
+  - IKROS-FEAT-20260802-0205
+  - IKROS-FEAT-20260802-0206
+  - IKROS-FEAT-20260802-0207
+  name: regime_state_variables
+  spec_refs:
+  - SPEC-012
+  - SPEC-060
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.79
+created_at: '2026-08-02T01:43:01.845909+00:00'
+ikros_id: IKROS-FF-20260802-0201
+label: Regime discovery state variables
+node_id: IKROS-FF-20260802-0201
+node_type: FEATURE_FAMILY
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:43:01.845909+00:00'
+valid_to: null
+wp_refs: []

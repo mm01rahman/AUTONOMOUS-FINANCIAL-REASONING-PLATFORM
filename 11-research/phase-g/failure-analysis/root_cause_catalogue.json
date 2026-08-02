@@ -1,0 +1,40 @@
+[
+  {
+    "confidence_change": 0.4633,
+    "expected_information_gain": 4.03,
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "primary_root_cause": "The continuation thesis is strongest only while bull_trend persists; negative transition windows and adverse USD spillovers diluted a positive but modest core effect below the institutional promotion floor.",
+    "secondary_root_causes": [
+      "bootstrap uncertainty remained too wide for promotion",
+      "edge weakened outside the cleanest in-regime subset"
+    ],
+    "title": "Expectation-relief bull continuation"
+  },
+  {
+    "confidence_change": 0.4134,
+    "expected_information_gain": 3.9,
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "primary_root_cause": "The policy-shock thesis contains a real but shallow edge; it degrades when macro-transition events expand into noisy, high-range follow-through and when the regime handoff remains unresolved after the first shock day.",
+    "secondary_root_causes": [
+      "bootstrap uncertainty remained too wide for promotion",
+      "edge weakened outside the cleanest in-regime subset",
+      "temporal adaptation and sign instability weakened repeatability",
+      "at least one rule component behaved as redundant rather than additive"
+    ],
+    "title": "Policy-shock repricing continuation"
+  },
+  {
+    "confidence_change": 0.2582,
+    "expected_information_gain": 5.0,
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "primary_root_cause": "The handoff thesis never failed on direction, but the sample is too sparse and too transition-specific to satisfy institutional replication standards; most explanatory power comes from identifying the rare macro-to-trend handoff itself, not from the added confirmation filters.",
+    "secondary_root_causes": [
+      "bootstrap uncertainty remained too wide for promotion",
+      "edge weakened outside the cleanest in-regime subset",
+      "temporal adaptation and sign instability weakened repeatability",
+      "no recent holdout evidence existed for institutional replay",
+      "at least one rule component behaved as redundant rather than additive"
+    ],
+    "title": "Transition-to-trend handoff"
+  }
+]

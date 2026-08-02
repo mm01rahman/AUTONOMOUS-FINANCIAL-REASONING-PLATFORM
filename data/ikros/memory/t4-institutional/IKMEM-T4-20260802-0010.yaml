@@ -1,0 +1,171 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:59:42.506208+00:00'
+dependency_ids: []
+entity_type: CampaignCompletionReport
+evidence_refs:
+- 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+- 11-research/phase-g/hypothesis-discovery/HYPOTHESIS_DISCOVERY_CAMPAIGN.md
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0004
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260802-0010
+payload:
+  audit_ids:
+  - IKROS-CAMPAIGNAUDIT-20260802-0112
+  - IKROS-CAMPAIGNAUDIT-20260802-0113
+  - IKROS-CAMPAIGNAUDIT-20260802-0114
+  - IKROS-CAMPAIGNAUDIT-20260802-0115
+  - IKROS-CAMPAIGNAUDIT-20260802-0116
+  - IKROS-CAMPAIGNAUDIT-20260802-0117
+  - IKROS-CAMPAIGNAUDIT-20260802-0118
+  - IKROS-CAMPAIGNAUDIT-20260802-0119
+  - IKROS-CAMPAIGNAUDIT-20260802-0120
+  - IKROS-CAMPAIGNAUDIT-20260802-0121
+  - IKROS-CAMPAIGNAUDIT-20260802-0122
+  - IKROS-CAMPAIGNAUDIT-20260802-0123
+  - IKROS-CAMPAIGNAUDIT-20260802-0124
+  - IKROS-CAMPAIGNAUDIT-20260802-0125
+  - IKROS-CAMPAIGNAUDIT-20260802-0126
+  - IKROS-CAMPAIGNAUDIT-20260802-0127
+  - IKROS-CAMPAIGNAUDIT-20260802-0128
+  - IKROS-CAMPAIGNAUDIT-20260802-0129
+  - IKROS-CAMPAIGNAUDIT-20260802-0130
+  - IKROS-CAMPAIGNAUDIT-20260802-0131
+  - IKROS-CAMPAIGNAUDIT-20260802-0132
+  - IKROS-CAMPAIGNAUDIT-20260802-0133
+  - IKROS-CAMPAIGNAUDIT-20260802-0134
+  - IKROS-CAMPAIGNAUDIT-20260802-0135
+  - IKROS-CAMPAIGNAUDIT-20260802-0136
+  - IKROS-CAMPAIGNAUDIT-20260802-0137
+  blocked_task_ids: []
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0004
+  campaign_type: LITERATURE_REVIEW
+  completed_task_ids:
+  - IKROS-RESEARCHTASK-20260802-0034
+  - IKROS-RESEARCHTASK-20260802-0035
+  - IKROS-RESEARCHTASK-20260802-0036
+  - IKROS-RESEARCHTASK-20260802-0037
+  - IKROS-RESEARCHTASK-20260802-0038
+  - IKROS-RESEARCHTASK-20260802-0039
+  - IKROS-RESEARCHTASK-20260802-0040
+  - IKROS-RESEARCHTASK-20260802-0044
+  failed_task_ids: []
+  finished_at: '2026-08-02T01:59:42.489203+00:00'
+  lifecycle_state: COMPLETED
+  memory_record_ids:
+  - IKMEM-T1-20260802-0044
+  - IKMEM-T1-20260802-0045
+  - IKMEM-T1-20260802-0047
+  - IKMEM-T1-20260802-0048
+  - IKMEM-T1-20260802-0049
+  - IKMEM-T1-20260802-0050
+  - IKMEM-T1-20260802-0051
+  - IKMEM-T1-20260802-0052
+  output_refs:
+  - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\HYPOTHESIS_DISCOVERY_CAMPAIGN.md
+  - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  - HYPOTHESIS_DISCOVERY_CAMPAIGN
+  - IKROS-CONCL-20260802-0004
+  - IKROS-CONTRA-20260802-0004
+  - IKROS-DSV-20260802-0004
+  - IKROS-EVIDENCE-20260802-0004
+  - IKROS-EXP-20260802-0004
+  - IKROS-HYP-20260802-0004
+  - IKROS-HYP-20260802-0401
+  - IKROS-HYP-20260802-0402
+  - IKROS-HYP-20260802-0403
+  - IKROS-HYP-20260802-0404
+  - IKROS-HYP-20260802-0405
+  - IKROS-HYP-20260802-0406
+  - IKROS-HYP-20260802-0407
+  - IKROS-HYP-20260802-0408
+  - IKROS-KO-20260802-0004
+  - IKROS-KO-20260802-0400
+  - IKROS-MECH-20260802-0401
+  - IKROS-MECH-20260802-0402
+  - IKROS-MECH-20260802-0403
+  - IKROS-MECH-20260802-0404
+  - IKROS-MECH-20260802-0405
+  - IKROS-MECH-20260802-0406
+  - IKROS-RQ-20260802-0004
+  - IKROS-RQ-20260802-0401
+  - IKROS-RQ-20260802-0402
+  - IKROS-RQ-20260802-0403
+  - IKROS-RQ-20260802-0404
+  - IKROS-RQ-20260802-0405
+  - IKROS-RQ-20260802-0406
+  - IKROS-RQ-20260802-0407
+  - IKROS-RQ-20260802-0408
+  - hypothesis_discovery_knowledge
+  progress:
+    blocked: 0
+    completed: 8
+    failed: 0
+    percent_complete: 100.0
+    skipped: 0
+    total: 8
+  report_id: IKROS-CAMPAIGNREPORT-20260802-0004
+  skipped_task_ids: []
+  started_at: '2026-08-02T01:59:31.970463+00:00'
+  summary: Campaign 0004 Hypothesis Discovery completed with 8 completed tasks.
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0004
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\HYPOTHESIS_DISCOVERY_CAMPAIGN.md
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+- HYPOTHESIS_DISCOVERY_CAMPAIGN
+- IKROS-CONCL-20260802-0004
+- IKROS-CONTRA-20260802-0004
+- IKROS-DSV-20260802-0004
+- IKROS-EVIDENCE-20260802-0004
+- IKROS-EXP-20260802-0004
+- IKROS-HYP-20260802-0004
+- IKROS-HYP-20260802-0401
+- IKROS-HYP-20260802-0402
+- IKROS-HYP-20260802-0403
+- IKROS-HYP-20260802-0404
+- IKROS-HYP-20260802-0405
+- IKROS-HYP-20260802-0406
+- IKROS-HYP-20260802-0407
+- IKROS-HYP-20260802-0408
+- IKROS-KO-20260802-0004
+- IKROS-KO-20260802-0400
+- IKROS-MECH-20260802-0401
+- IKROS-MECH-20260802-0402
+- IKROS-MECH-20260802-0403
+- IKROS-MECH-20260802-0404
+- IKROS-MECH-20260802-0405
+- IKROS-MECH-20260802-0406
+- IKROS-RQ-20260802-0004
+- IKROS-RQ-20260802-0401
+- IKROS-RQ-20260802-0402
+- IKROS-RQ-20260802-0403
+- IKROS-RQ-20260802-0404
+- IKROS-RQ-20260802-0405
+- IKROS-RQ-20260802-0406
+- IKROS-RQ-20260802-0407
+- IKROS-RQ-20260802-0408
+- hypothesis_discovery_knowledge
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Campaign 0004 Hypothesis Discovery completed with 8 completed tasks.
+tags:
+- research-orchestrator
+- completion-report
+tier: T4_INSTITUTIONAL
+title: Completion report for Campaign 0004 Hypothesis Discovery
+updated_at: '2026-08-02T01:59:42.506208+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

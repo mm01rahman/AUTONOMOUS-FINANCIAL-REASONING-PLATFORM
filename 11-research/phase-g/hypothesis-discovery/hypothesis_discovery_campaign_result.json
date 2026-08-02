@@ -1,0 +1,525 @@
+{
+  "assessment_ids": {},
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0004",
+  "catalogue_summary": {
+    "arb_recommendation": "Publish Institutional Alpha Hypothesis Catalogue v1 and advance only the highest-priority candidates into Campaign 0005 for scientific validation. Do not backtest or optimize within Campaign 0004.",
+    "conclusion_id": "IKROS-CONCL-20260802-0004",
+    "contradictory_evidence_id": "IKROS-CONTRA-20260802-0004",
+    "evidence_id": "IKROS-EVIDENCE-20260802-0004",
+    "hypothesis_catalogue": "Institutional Alpha Hypothesis Catalogue v1",
+    "recommended_hypotheses": [
+      "IKROS-HYP-20260802-0401",
+      "IKROS-HYP-20260802-0404",
+      "IKROS-HYP-20260802-0405",
+      "IKROS-HYP-20260802-0402",
+      "IKROS-HYP-20260802-0408"
+    ]
+  },
+  "experiment": {
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-ORCHESTRATOR"
+    ],
+    "completed_at": null,
+    "confidence": {
+      "data": 0.81,
+      "economic": 0.65,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.0,
+      "operational": 0.71,
+      "overall": 0.7203643988764685,
+      "prior": 0.54,
+      "replication": 0.0,
+      "statistical": 0.0,
+      "validation": 0.0
+    },
+    "dataset_versions": [
+      "IKROS-DSV-20260802-0004"
+    ],
+    "entity_type": "Experiment",
+    "failures_produced": [],
+    "feature_versions": [
+      "IKROS-FEAT-20260802-0301",
+      "IKROS-FEAT-20260802-0302",
+      "IKROS-FEAT-20260802-0303",
+      "IKROS-FEAT-20260802-0304",
+      "IKROS-FEAT-20260802-0305",
+      "IKROS-FEAT-20260802-0306",
+      "IKROS-FEAT-20260802-0307",
+      "IKROS-FEAT-20260802-0308",
+      "IKROS-FEAT-20260802-0309",
+      "IKROS-FEAT-20260802-0310",
+      "IKROS-FEAT-20260802-0311",
+      "IKROS-FEAT-20260802-0312"
+    ],
+    "git_commit": "752f35c",
+    "hypotheses": [
+      "IKROS-HYP-20260802-0004"
+    ],
+    "ikros_id": "IKROS-EXP-20260802-0004",
+    "in_sample_end": "",
+    "in_sample_start": "",
+    "lifecycle_state": "REVIEWED",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0004"
+        ],
+        "external_refs": [
+          "11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0307",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "inputs": [
+          "IKROS-HYP-20260802-0004"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0004-hypothesis-discovery",
+        "creation_context": "Campaign 0004 hypothesis discovery",
+        "motivation": "Synthesize and register the institutional hypothesis catalogue plus future validation designs."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "out_of_sample_end": "",
+    "out_of_sample_start": "",
+    "parameters": {
+      "deliverables": [
+        "institutional_hypothesis_catalogue",
+        "hypothesis_cards",
+        "mechanism_atlas",
+        "priority_matrix",
+        "validation_matrix"
+      ],
+      "generation_constraints": [
+        "no backtesting",
+        "no validation",
+        "no parameter tuning",
+        "use only approved taxonomy and approved feature catalogue"
+      ]
+    },
+    "protocol": "Catalogue approved feature combinations, map them to economic mechanisms and regimes, define future validation plans, and rank them for Campaign 0005 without performing validation or optimization.",
+    "random_seed": 42,
+    "reproducibility_hash": "389e7f0e8fa0f70b0f365d65d989705d7b0646797f718ec23a24f30996b78d7c",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "title": "Campaign 0004 institutional hypothesis synthesis",
+    "validations_produced": [],
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "State \u2192 COMPLETE.",
+        "changed_at": "2026-08-02T01:59:43.506477+00:00",
+        "confidence_at_time": 0.7203643988764685,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 REVIEWED.",
+        "changed_at": "2026-08-02T01:59:43.510477+00:00",
+        "confidence_at_time": 0.7203643988764685,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  },
+  "hypothesis": {
+    "alternative_hypothesis": "H1: The approved taxonomy and feature catalogue support a reproducible, institutionally useful hypothesis backlog for Campaign 0005.",
+    "capability_refs": [
+      "ALPHA-RESEARCH"
+    ],
+    "confidence": {
+      "data": 0.79,
+      "economic": 0.64,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.0,
+      "operational": 0.69,
+      "overall": 0.7039665962112065,
+      "prior": 0.52,
+      "replication": 0.0,
+      "statistical": 0.0,
+      "validation": 0.0
+    },
+    "contradictions": [],
+    "entity_type": "Hypothesis",
+    "experiments": [
+      "IKROS-EXP-20260802-0004"
+    ],
+    "ikros_id": "IKROS-HYP-20260802-0004",
+    "lifecycle_state": "TESTING",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0004"
+        ],
+        "external_refs": [
+          "11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0307",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "inputs": [
+          "IKROS-RQ-20260802-0004"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [
+          "IKROS-EXP-20260802-0004"
+        ],
+        "validated_by": []
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0004-hypothesis-discovery",
+        "creation_context": "Campaign 0004 hypothesis discovery",
+        "motivation": "Represent the governed claim that a bounded catalogue of institutional hypotheses can be defined without performing validation prematurely."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "motivating_theses": [],
+    "null_hypothesis": "H0: The approved taxonomy and feature catalogue do not support a meaningful institutional hypothesis backlog.",
+    "posterior_confidence": 0.0,
+    "power": 0.8,
+    "prior_confidence": 0.52,
+    "significance_level": 0.05,
+    "source_rq": "IKROS-RQ-20260802-0004",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "statement": "A bounded, economically explainable set of regime-conditioned XAU/USD hypotheses can be generated from the approved taxonomy and feature catalogue without tuning or backtesting.",
+    "validations": [],
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:59:43.495475+00:00",
+        "confidence_at_time": 0.7039665962112065,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:59:43.499476+00:00",
+        "confidence_at_time": 0.7039665962112065,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 TESTING. Campaign 0004 produced a governed hypothesis catalogue awaiting validation.",
+        "changed_at": "2026-08-02T01:59:43.502475+00:00",
+        "confidence_at_time": 0.7039665962112065,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  },
+  "progress": {
+    "blocked": 0,
+    "completed": 8,
+    "failed": 0,
+    "percent_complete": 100.0,
+    "skipped": 0,
+    "total": 8
+  },
+  "report": {
+    "audit_ids": [
+      "IKROS-CAMPAIGNAUDIT-20260802-0112",
+      "IKROS-CAMPAIGNAUDIT-20260802-0113",
+      "IKROS-CAMPAIGNAUDIT-20260802-0114",
+      "IKROS-CAMPAIGNAUDIT-20260802-0115",
+      "IKROS-CAMPAIGNAUDIT-20260802-0116",
+      "IKROS-CAMPAIGNAUDIT-20260802-0117",
+      "IKROS-CAMPAIGNAUDIT-20260802-0118",
+      "IKROS-CAMPAIGNAUDIT-20260802-0119",
+      "IKROS-CAMPAIGNAUDIT-20260802-0120",
+      "IKROS-CAMPAIGNAUDIT-20260802-0121",
+      "IKROS-CAMPAIGNAUDIT-20260802-0122",
+      "IKROS-CAMPAIGNAUDIT-20260802-0123",
+      "IKROS-CAMPAIGNAUDIT-20260802-0124",
+      "IKROS-CAMPAIGNAUDIT-20260802-0125",
+      "IKROS-CAMPAIGNAUDIT-20260802-0126",
+      "IKROS-CAMPAIGNAUDIT-20260802-0127",
+      "IKROS-CAMPAIGNAUDIT-20260802-0128",
+      "IKROS-CAMPAIGNAUDIT-20260802-0129",
+      "IKROS-CAMPAIGNAUDIT-20260802-0130",
+      "IKROS-CAMPAIGNAUDIT-20260802-0131",
+      "IKROS-CAMPAIGNAUDIT-20260802-0132",
+      "IKROS-CAMPAIGNAUDIT-20260802-0133",
+      "IKROS-CAMPAIGNAUDIT-20260802-0134",
+      "IKROS-CAMPAIGNAUDIT-20260802-0135",
+      "IKROS-CAMPAIGNAUDIT-20260802-0136",
+      "IKROS-CAMPAIGNAUDIT-20260802-0137"
+    ],
+    "blocked_task_ids": [],
+    "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0004",
+    "campaign_type": "LITERATURE_REVIEW",
+    "completed_task_ids": [
+      "IKROS-RESEARCHTASK-20260802-0034",
+      "IKROS-RESEARCHTASK-20260802-0035",
+      "IKROS-RESEARCHTASK-20260802-0036",
+      "IKROS-RESEARCHTASK-20260802-0037",
+      "IKROS-RESEARCHTASK-20260802-0038",
+      "IKROS-RESEARCHTASK-20260802-0039",
+      "IKROS-RESEARCHTASK-20260802-0040",
+      "IKROS-RESEARCHTASK-20260802-0044"
+    ],
+    "failed_task_ids": [],
+    "finished_at": "2026-08-02T01:59:42.489203+00:00",
+    "lifecycle_state": "COMPLETED",
+    "memory_record_ids": [
+      "IKMEM-T1-20260802-0044",
+      "IKMEM-T1-20260802-0045",
+      "IKMEM-T1-20260802-0047",
+      "IKMEM-T1-20260802-0048",
+      "IKMEM-T1-20260802-0049",
+      "IKMEM-T1-20260802-0050",
+      "IKMEM-T1-20260802-0051",
+      "IKMEM-T1-20260802-0052",
+      "IKMEM-T4-20260802-0010"
+    ],
+    "output_refs": [
+      "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\HYPOTHESIS_DISCOVERY_CAMPAIGN.md",
+      "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_discovery_knowledge.json",
+      "HYPOTHESIS_DISCOVERY_CAMPAIGN",
+      "IKROS-CONCL-20260802-0004",
+      "IKROS-CONTRA-20260802-0004",
+      "IKROS-DSV-20260802-0004",
+      "IKROS-EVIDENCE-20260802-0004",
+      "IKROS-EXP-20260802-0004",
+      "IKROS-HYP-20260802-0004",
+      "IKROS-HYP-20260802-0401",
+      "IKROS-HYP-20260802-0402",
+      "IKROS-HYP-20260802-0403",
+      "IKROS-HYP-20260802-0404",
+      "IKROS-HYP-20260802-0405",
+      "IKROS-HYP-20260802-0406",
+      "IKROS-HYP-20260802-0407",
+      "IKROS-HYP-20260802-0408",
+      "IKROS-KO-20260802-0004",
+      "IKROS-KO-20260802-0400",
+      "IKROS-MECH-20260802-0401",
+      "IKROS-MECH-20260802-0402",
+      "IKROS-MECH-20260802-0403",
+      "IKROS-MECH-20260802-0404",
+      "IKROS-MECH-20260802-0405",
+      "IKROS-MECH-20260802-0406",
+      "IKROS-RQ-20260802-0004",
+      "IKROS-RQ-20260802-0401",
+      "IKROS-RQ-20260802-0402",
+      "IKROS-RQ-20260802-0403",
+      "IKROS-RQ-20260802-0404",
+      "IKROS-RQ-20260802-0405",
+      "IKROS-RQ-20260802-0406",
+      "IKROS-RQ-20260802-0407",
+      "IKROS-RQ-20260802-0408",
+      "hypothesis_discovery_knowledge"
+    ],
+    "progress": {
+      "blocked": 0,
+      "completed": 8,
+      "failed": 0,
+      "percent_complete": 100.0,
+      "skipped": 0,
+      "total": 8
+    },
+    "report_id": "IKROS-CAMPAIGNREPORT-20260802-0004",
+    "skipped_task_ids": [],
+    "started_at": "2026-08-02T01:59:31.970463+00:00",
+    "summary": "Campaign 0004 Hypothesis Discovery completed with 8 completed tasks."
+  },
+  "report_paths": {
+    "dependency_graph_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\hypothesis_dependency_graph.json",
+    "dependency_graph_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\HYPOTHESIS_DEPENDENCY_GRAPH.md",
+    "economic_mechanism_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\economic_mechanism_atlas.json",
+    "economic_mechanism_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\ECONOMIC_MECHANISM_ATLAS.md",
+    "final_report_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\HYPOTHESIS_DISCOVERY_FINAL_CAMPAIGN_REPORT.md",
+    "hypothesis_cards_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\HYPOTHESIS_CARDS.md",
+    "hypothesis_catalogue_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\institutional_alpha_hypothesis_catalogue_v1.json",
+    "hypothesis_catalogue_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\INSTITUTIONAL_ALPHA_HYPOTHESIS_CATALOGUE_V1.md",
+    "priority_matrix_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\research_priority_matrix.json",
+    "priority_matrix_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\RESEARCH_PRIORITY_MATRIX.md",
+    "validation_matrix_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\expected_validation_matrix.json",
+    "validation_matrix_markdown": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\hypothesis-discovery\\EXPECTED_VALIDATION_MATRIX.md"
+  },
+  "research_question": {
+    "campaign_tag": "PHASE-G-HYPOTHESIS-004",
+    "capability_refs": [
+      "ALPHA-RESEARCH",
+      "IKROS-ORCHESTRATOR"
+    ],
+    "confidence": {
+      "data": 0.8,
+      "economic": 0.66,
+      "last_updated": "2026-08-02T00:00:00Z",
+      "model": 0.0,
+      "operational": 0.7,
+      "overall": 0.7176466372625586,
+      "prior": 0.56,
+      "replication": 0.0,
+      "statistical": 0.0,
+      "validation": 0.0
+    },
+    "entity_type": "ResearchQuestion",
+    "ikros_id": "IKROS-RQ-20260802-0004",
+    "instrument": "XAU/USD",
+    "lifecycle_state": "ANSWERED",
+    "lineage": {
+      "dependencies": {
+        "datasets": [
+          "IKROS-DSV-20260802-0003"
+        ],
+        "external_refs": [
+          "11-research/phase-g/feature-discovery/feature_discovery_analysis.json",
+          "11-research/phase-g/regime-discovery/regime_discovery_analysis.json"
+        ],
+        "features": [
+          "IKROS-FEAT-20260802-0301",
+          "IKROS-FEAT-20260802-0302",
+          "IKROS-FEAT-20260802-0303",
+          "IKROS-FEAT-20260802-0304",
+          "IKROS-FEAT-20260802-0305",
+          "IKROS-FEAT-20260802-0306",
+          "IKROS-FEAT-20260802-0307",
+          "IKROS-FEAT-20260802-0308",
+          "IKROS-FEAT-20260802-0309",
+          "IKROS-FEAT-20260802-0310",
+          "IKROS-FEAT-20260802-0311",
+          "IKROS-FEAT-20260802-0312"
+        ],
+        "inputs": [
+          "IKROS-RQ-20260802-0002",
+          "IKROS-RQ-20260802-0003"
+        ],
+        "models": [
+          "institutional_six_state_overlay_taxonomy_v1"
+        ]
+      },
+      "evidence": {
+        "contradicting": [],
+        "ers_records": [],
+        "supporting": []
+      },
+      "experiments": {
+        "tested_in": [],
+        "validated_by": []
+      },
+      "origin": {
+        "created_at": "2026-08-02T00:00:00Z",
+        "created_by": "campaign-0004-hypothesis-discovery",
+        "creation_context": "Campaign 0004 hypothesis discovery",
+        "motivation": "Determine which approved feature combinations deserve formal scientific validation next."
+      },
+      "retirement": {
+        "retired_at": null,
+        "retired_by": null,
+        "retirement_reason": null,
+        "successor_id": null
+      },
+      "successors": {
+        "inspired": [],
+        "refined_by": null,
+        "superseded_by": null
+      }
+    },
+    "linked_conclusions": [
+      "IKROS-CONCL-20260802-0004"
+    ],
+    "linked_hypotheses": [
+      "IKROS-HYP-20260802-0004"
+    ],
+    "motivation": "Campaign 0004 converts the approved feature catalogue into a governed research backlog without validating or optimizing candidates.",
+    "scope": "HYPOTHESIS_DISCOVERY",
+    "spec_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "time_horizon": "5D",
+    "title": "Which combinations of approved features form economically plausible, statistically testable, regime-conditioned alpha hypotheses?",
+    "version": "1.0.0",
+    "version_history": [
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:59:43.485477+00:00",
+        "confidence_at_time": 0.7176466372625586,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "Field update",
+        "changed_at": "2026-08-02T01:59:43.489477+00:00",
+        "confidence_at_time": 0.7176466372625586,
+        "version": "1.0.0"
+      },
+      {
+        "change_summary": "State \u2192 ANSWERED. Campaign 0004 hypothesis catalogue completed.",
+        "changed_at": "2026-08-02T01:59:43.492475+00:00",
+        "confidence_at_time": 0.7176466372625586,
+        "version": "1.0.0"
+      }
+    ],
+    "work_package_refs": []
+  }
+}

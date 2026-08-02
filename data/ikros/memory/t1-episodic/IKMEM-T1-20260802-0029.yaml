@@ -1,0 +1,213 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:43:07.106048+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0021
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/feature_importance.json
+- 11-research/phase-e/regime_adaptation.json
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- 11-research/regime_analysis.md
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0002
+- IKROS-RESEARCHTASK-20260802-0022
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0029
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0002
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0021
+    finished_at: '2026-08-02T01:43:07.106048+00:00'
+    kind: FINAL_REPORT
+    max_attempts: 1
+    payload: {}
+    planned_order: 11
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0022
+      memory_record_id: null
+      metrics:
+        blocked_task_ids: []
+        completed_task_ids:
+        - IKROS-RESEARCHTASK-20260802-0012
+        - IKROS-RESEARCHTASK-20260802-0013
+        - IKROS-RESEARCHTASK-20260802-0014
+        - IKROS-RESEARCHTASK-20260802-0015
+        - IKROS-RESEARCHTASK-20260802-0016
+        - IKROS-RESEARCHTASK-20260802-0017
+        - IKROS-RESEARCHTASK-20260802-0018
+        - IKROS-RESEARCHTASK-20260802-0019
+        - IKROS-RESEARCHTASK-20260802-0020
+        - IKROS-RESEARCHTASK-20260802-0021
+        failed_task_ids: []
+        progress:
+          blocked: 0
+          completed: 10
+          failed: 0
+          percent_complete: 90.91
+          skipped: 0
+          total: 11
+      output_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\REGIME_DISCOVERY_CAMPAIGN.md
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+      - ICA-20260802-0003
+      - IKROS-CONCL-20260802-0002
+      - IKROS-CONTRA-20260802-0002
+      - IKROS-DS-20260802-0002
+      - IKROS-DSV-20260802-0002
+      - IKROS-EVIDENCE-20260802-0002
+      - IKROS-EXP-20260802-0002
+      - IKROS-FEAT-20260802-0201
+      - IKROS-FEAT-20260802-0202
+      - IKROS-FEAT-20260802-0203
+      - IKROS-FEAT-20260802-0204
+      - IKROS-FEAT-20260802-0205
+      - IKROS-FEAT-20260802-0206
+      - IKROS-FEAT-20260802-0207
+      - IKROS-FF-20260802-0201
+      - IKROS-HYP-20260802-0002
+      - IKROS-KO-20260802-0002
+      - IKROS-KO-20260802-0201
+      - IKROS-KO-20260802-0202
+      - IKROS-KO-20260802-0203
+      - IKROS-KO-20260802-0204
+      - IKROS-KO-20260802-0205
+      - IKROS-KO-20260802-0206
+      - IKROS-KO-20260802-0207
+      - IKROS-KO-20260802-0208
+      - IKROS-KO-20260802-0209
+      - IKROS-KO-20260802-0210
+      - IKROS-KO-20260802-0211
+      - IKROS-REGIME-20260802-0201
+      - IKROS-REGIME-20260802-0202
+      - IKROS-REGIME-20260802-0203
+      - IKROS-REGIME-20260802-0204
+      - IKROS-REGIME-20260802-0205
+      - IKROS-REGIME-20260802-0206
+      - IKROS-RQ-20260802-0002
+      - IKROS-VAL-20260802-0002
+      - REGIME_DISCOVERY_CAMPAIGN
+      - regime_discovery_knowledge
+      - regime_discovery_validation_report
+      payload:
+        campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0002
+        outputs:
+        - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\REGIME_DISCOVERY_CAMPAIGN.md
+        - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+        - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+        - ICA-20260802-0003
+        - IKROS-CONCL-20260802-0002
+        - IKROS-CONTRA-20260802-0002
+        - IKROS-DS-20260802-0002
+        - IKROS-DSV-20260802-0002
+        - IKROS-EVIDENCE-20260802-0002
+        - IKROS-EXP-20260802-0002
+        - IKROS-FEAT-20260802-0201
+        - IKROS-FEAT-20260802-0202
+        - IKROS-FEAT-20260802-0203
+        - IKROS-FEAT-20260802-0204
+        - IKROS-FEAT-20260802-0205
+        - IKROS-FEAT-20260802-0206
+        - IKROS-FEAT-20260802-0207
+        - IKROS-FF-20260802-0201
+        - IKROS-HYP-20260802-0002
+        - IKROS-KO-20260802-0002
+        - IKROS-KO-20260802-0201
+        - IKROS-KO-20260802-0202
+        - IKROS-KO-20260802-0203
+        - IKROS-KO-20260802-0204
+        - IKROS-KO-20260802-0205
+        - IKROS-KO-20260802-0206
+        - IKROS-KO-20260802-0207
+        - IKROS-KO-20260802-0208
+        - IKROS-KO-20260802-0209
+        - IKROS-KO-20260802-0210
+        - IKROS-KO-20260802-0211
+        - IKROS-REGIME-20260802-0201
+        - IKROS-REGIME-20260802-0202
+        - IKROS-REGIME-20260802-0203
+        - IKROS-REGIME-20260802-0204
+        - IKROS-REGIME-20260802-0205
+        - IKROS-REGIME-20260802-0206
+        - IKROS-RQ-20260802-0002
+        - IKROS-VAL-20260802-0002
+        - REGIME_DISCOVERY_CAMPAIGN
+        - regime_discovery_knowledge
+        - regime_discovery_validation_report
+      selected_ids: []
+    started_at: '2026-08-02T01:43:06.971987+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0022
+    title: Final Report
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0002
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\REGIME_DISCOVERY_CAMPAIGN.md
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+- ICA-20260802-0003
+- IKROS-CONCL-20260802-0002
+- IKROS-CONTRA-20260802-0002
+- IKROS-DS-20260802-0002
+- IKROS-DSV-20260802-0002
+- IKROS-EVIDENCE-20260802-0002
+- IKROS-EXP-20260802-0002
+- IKROS-FEAT-20260802-0201
+- IKROS-FEAT-20260802-0202
+- IKROS-FEAT-20260802-0203
+- IKROS-FEAT-20260802-0204
+- IKROS-FEAT-20260802-0205
+- IKROS-FEAT-20260802-0206
+- IKROS-FEAT-20260802-0207
+- IKROS-FF-20260802-0201
+- IKROS-HYP-20260802-0002
+- IKROS-KO-20260802-0002
+- IKROS-KO-20260802-0201
+- IKROS-KO-20260802-0202
+- IKROS-KO-20260802-0203
+- IKROS-KO-20260802-0204
+- IKROS-KO-20260802-0205
+- IKROS-KO-20260802-0206
+- IKROS-KO-20260802-0207
+- IKROS-KO-20260802-0208
+- IKROS-KO-20260802-0209
+- IKROS-KO-20260802-0210
+- IKROS-KO-20260802-0211
+- IKROS-REGIME-20260802-0201
+- IKROS-REGIME-20260802-0202
+- IKROS-REGIME-20260802-0203
+- IKROS-REGIME-20260802-0204
+- IKROS-REGIME-20260802-0205
+- IKROS-REGIME-20260802-0206
+- IKROS-RQ-20260802-0002
+- IKROS-VAL-20260802-0002
+- REGIME_DISCOVERY_CAMPAIGN
+- regime_discovery_knowledge
+- regime_discovery_validation_report
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: FINAL_REPORT COMPLETED
+tags:
+- research-orchestrator
+- final_report
+tier: T1_EPISODIC
+title: 'Campaign 0002 Regime Discovery :: Final Report'
+updated_at: '2026-08-02T01:43:07.106048+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

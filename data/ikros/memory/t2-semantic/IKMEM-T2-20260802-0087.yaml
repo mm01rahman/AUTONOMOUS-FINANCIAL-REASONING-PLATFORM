@@ -1,0 +1,49 @@
+archived_at: null
+capability_refs: []
+confidence: 0.8
+created_at: '2026-08-02T01:59:35.072679+00:00'
+dependency_ids: []
+entity_type: KnowledgeObject
+evidence_refs:
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-MECH-20260802-0404
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0087
+payload:
+  attributes:
+    participants:
+    - event traders
+    - CTAs
+    - cross-asset discretionary desks
+    supporting_hypotheses:
+    - IKROS-HYP-20260802-0405
+    - IKROS-HYP-20260802-0408
+  lifecycle_state: ACTIVE
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-MECH-20260802-0404
+- IKROS-HYP-20260802-0405
+- IKROS-HYP-20260802-0408
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Macro-event repricing transitions from short-horizon response into broader
+  directional participation.
+tags:
+- knowledgeobject
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Policy repricing handoff
+updated_at: '2026-08-02T01:59:35.072679+00:00'
+valid_from: '2026-08-02T01:59:35.072679+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

@@ -1,0 +1,25 @@
+attributes:
+  rejected: []
+  remain_in_testing:
+  - IKROS-HYP-20260802-0408
+  return_for_validation:
+  - IKROS-HYP-20260802-0401
+  - IKROS-HYP-20260802-0405
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_knowledge.json
+  summary: Return IKROS-HYP-20260802-0401 and IKROS-HYP-20260802-0405 to governed
+    validation with explicit persistence, branch, and contamination panels; keep IKROS-HYP-20260802-0408
+    in testing until broader episode coverage and richer sequencing evidence are available;
+    reject none at this stage.
+confidence: 0.81
+created_at: '2026-08-02T02:37:46.459254+00:00'
+ikros_id: IKROS-KO-20260802-0707
+label: Campaign 0007 final conclusion
+node_id: IKROS-KO-20260802-0707
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T02:37:46.459254+00:00'
+valid_to: null
+wp_refs: []

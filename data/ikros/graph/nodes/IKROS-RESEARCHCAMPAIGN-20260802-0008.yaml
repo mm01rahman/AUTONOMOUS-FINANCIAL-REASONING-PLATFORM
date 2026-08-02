@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: HYPOTHESIS_VALIDATION
+  entity_type: ResearchCampaign
+  objective: Scientifically validate the approved regime-conditioned institutional
+    alpha hypotheses and partition them into rejected, further-research, and alpha-candidate
+    buckets without optimization.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0008
+confidence: 0.0
+created_at: '2026-08-02T02:19:42.554250+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0008
+label: Campaign 0005 Scientific Alpha Validation
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0008
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs: []

@@ -1,0 +1,162 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0039"
+capability_id:
+  id: "ALPHA-RESEARCH"
+  version: "1.0"
+title: "Implement Phase E Alpha Research & Strategy Evolution Framework"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
+    trace_sls: "AFRP-PHASE-E-1.0.0"
+    trace_adr: ["ADR-0001"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "capability.complete('PAPER-SHADOW-EXEC')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/alpha_research/"
+      - "tools/alpha_research_run.py"
+      - "tests/unit/test_alpha_research.py"
+      - "docs/research/PHASE_E_ALPHA_RESEARCH.md"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+      - "CHANGELOG.md"
+      - "05-work-packages/WP-IMP-0039.yaml"
+      - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+      - "11-research/phase-e/"
+    read:
+      - "tools/backtest/"
+      - "tools/paper_trading/"
+      - "tools/verification/"
+      - "tools/system_gate.py"
+      - "11-research/"
+      - "docs/research/"
+      - "03-engineering/"
+      - "05-work-packages/"
+
+execution:
+  priority: "critical"
+  estimated_complexity: "large"
+  estimated_duration: "8h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "tools/backtest/"
+    - "tools/paper_trading/"
+    - "tools/verification/"
+    - "11-research/phase-d/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/alpha_research/__init__.py"
+    - "tools/alpha_research/models.py"
+    - "tools/alpha_research/data.py"
+    - "tools/alpha_research/features.py"
+    - "tools/alpha_research/strategies.py"
+    - "tools/alpha_research/backtester.py"
+    - "tools/alpha_research/optimization.py"
+    - "tools/alpha_research/analysis.py"
+    - "tools/alpha_research/reporting.py"
+    - "tools/alpha_research/cli.py"
+    - "tools/alpha_research_run.py"
+    - "tests/unit/test_alpha_research.py"
+    - "docs/research/PHASE_E_ALPHA_RESEARCH.md"
+    - "CHANGELOG.md"
+    - "11-research/phase-e/"
+  expected_evidence:
+    - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+
+execution_results:
+  source_files_modified:
+    - "tools/alpha_research/"
+    - "tools/alpha_research_run.py"
+    - "tests/unit/test_alpha_research.py"
+    - "docs/research/PHASE_E_ALPHA_RESEARCH.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "CHANGELOG.md"
+  evidence_generated:
+    - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+
+produces:
+  capability:
+    id: "ALPHA-RESEARCH"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/alpha_research/"
+    - "tools/alpha_research_run.py"
+    - "tests/unit/test_alpha_research.py"
+    - "docs/research/PHASE_E_ALPHA_RESEARCH.md"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "CHANGELOG.md"
+    - "05-work-packages/WP-IMP-0039.yaml"
+    - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+    - "11-research/phase-e/"
+  non_goals:
+    - "No runtime redesign."
+    - "No architecture redesign."
+    - "No broker integration."
+    - "No live trading."
+    - "No production-readiness implementation beyond research promotion recommendations."
+
+requirements:
+  phase_e_alpha_research:
+    module: "tools/alpha_research"
+    rules:
+      - "Alpha attribution must cover Macro, Microstructure, Liquidity, Regime, Forward Expectations, Behavioral, World Model Fusion, Utility Optimizer, and Policy Engine."
+      - "Strategy research must evaluate Trend Following, Mean Reversion, Liquidity Sweep, Macro-only, Technical-only, and Hybrid candidates."
+      - "Parameter optimisation must penalize overfitting and record walk-forward / Monte Carlo / regime evidence."
+      - "Promotion outputs must remain research-only and reproducibly linked to governed evidence."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+
+completion:
+  success_requires:
+    - "All quality gates pass."
+    - "Phase E reports and machine-readable artifacts are generated under 11-research/phase-e/."
+    - "Promotion assessments are reproducible and evidence-linked."
+
+failure_modes:
+  ERR-DATA: "Required official local datasets unavailable or malformed."
+  ERR-EDGE: "Candidate strategies fail governance thresholds for promotion."
+  ERR-DRIFT: "Feature drift or overfitting evidence invalidates promotion."

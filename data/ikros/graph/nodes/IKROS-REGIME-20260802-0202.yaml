@@ -1,0 +1,17 @@
+attributes:
+  regime_label: bear_unwind
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+  summary: Persistent downside structure without full crisis dislocation.
+confidence: 0.76
+created_at: '2026-08-02T01:43:01.847413+00:00'
+ikros_id: IKROS-REGIME-20260802-0202
+label: Bear Trend Unwind
+node_id: IKROS-REGIME-20260802-0202
+node_type: REGIME
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:43:01.847413+00:00'
+valid_to: null
+wp_refs: []

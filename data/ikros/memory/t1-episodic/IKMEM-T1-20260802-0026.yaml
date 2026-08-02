@@ -1,0 +1,77 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:43:05.580462+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0019
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/feature_importance.json
+- 11-research/phase-e/regime_adaptation.json
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+- 11-research/regime_analysis.md
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0002
+- IKROS-RESEARCHTASK-20260802-0020
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0026
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0002
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0019
+    finished_at: '2026-08-02T01:43:05.580462+00:00'
+    kind: STATISTICAL_EVALUATION
+    max_attempts: 1
+    payload:
+      consistency_score: 0.78
+      data_quality_grade: A
+      effect_size: 0.49
+      overfitting_index: 1.08
+      p_value: 0.08
+      sharpe_degradation: 0.22
+    planned_order: 9
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0020
+      memory_record_id: null
+      metrics: &id001
+        data_confidence: 0.9
+        effect_size: 0.49
+        experimental_confidence: 0.95
+        p_value: 0.08
+        statistical_confidence: 0.92
+        validation_confidence: 0.6942
+      output_refs: []
+      payload: *id001
+      selected_ids: []
+    started_at: '2026-08-02T01:43:05.454416+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0020
+    title: Statistical Evaluation
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0002
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: STATISTICAL_EVALUATION COMPLETED
+tags:
+- research-orchestrator
+- statistical_evaluation
+tier: T1_EPISODIC
+title: 'Campaign 0002 Regime Discovery :: Statistical Evaluation'
+updated_at: '2026-08-02T01:43:05.580462+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

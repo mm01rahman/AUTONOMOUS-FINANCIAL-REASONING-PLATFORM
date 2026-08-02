@@ -1,0 +1,266 @@
+{
+  "ikros_objects": [
+    {
+      "attributes": {
+        "diagnostic_experiment_count": 6,
+        "retained_hypothesis_count": 3
+      },
+      "confidence": 0.89,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json"
+      ],
+      "identifier": "IKROS-DSV-20260802-0007",
+      "lifecycle_state": "VALIDATED",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Diagnostic experiment snapshot built on the frozen validation frame plus Campaign 0006 failure-analysis outputs.",
+      "title": "Campaign 0007 diagnostic dataset reference",
+      "type": "DatasetVersion"
+    },
+    {
+      "attributes": {
+        "authorized_experiments": [
+          "IKROS-EXP-20260802-0601",
+          "IKROS-EXP-20260802-0602",
+          "IKROS-EXP-20260802-0603",
+          "IKROS-EXP-20260802-0604",
+          "IKROS-EXP-20260802-0605",
+          "IKROS-EXP-20260802-0606"
+        ],
+        "remain_in_testing": [
+          "IKROS-HYP-20260802-0408"
+        ],
+        "return_for_validation": [
+          "IKROS-HYP-20260802-0401",
+          "IKROS-HYP-20260802-0405"
+        ]
+      },
+      "confidence": 0.84,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"
+      ],
+      "identifier": "IKROS-KO-20260802-0700",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Governed methodology for reducing uncertainty around retained hypotheses through diagnostic experiments without changing hypothesis definitions.",
+      "title": "Campaign 0007 diagnostic methodology",
+      "type": "KnowledgeObject"
+    },
+    {
+      "attributes": {
+        "experiment_ids": [
+          "IKROS-EXP-20260802-0601",
+          "IKROS-EXP-20260802-0602",
+          "IKROS-EXP-20260802-0603",
+          "IKROS-EXP-20260802-0604",
+          "IKROS-EXP-20260802-0605",
+          "IKROS-EXP-20260802-0606"
+        ],
+        "recommendations": {
+          "IKROS-HYP-20260802-0401": "RETURN_FOR_VALIDATION",
+          "IKROS-HYP-20260802-0405": "RETURN_FOR_VALIDATION",
+          "IKROS-HYP-20260802-0408": "REMAIN_IN_TESTING"
+        }
+      },
+      "confidence": 0.82,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json"
+      ],
+      "identifier": "IKROS-EVIDENCE-20260802-0007",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Evidence bundle covering the six diagnostic experiments, updated research gaps, confidence updates, and the recommendation matrix.",
+      "title": "Campaign 0007 diagnostic evidence bundle",
+      "type": "Evidence"
+    },
+    {
+      "attributes": {
+        "open_gaps": [
+          "Participant crowding and positioning",
+          "Cross-asset sequencing",
+          "Event taxonomy granularity",
+          "Intraday transition structure",
+          "Participant adoption"
+        ]
+      },
+      "confidence": 0.79,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/UPDATED_RESEARCH_GAP_ANALYSIS.md"
+      ],
+      "identifier": "IKROS-CONTRA-20260802-0007",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Contradiction bundle documenting the remaining factors that still block institutional promotion or re-validation for the retained hypotheses.",
+      "title": "Campaign 0007 contradiction bundle",
+      "type": "ContradictoryEvidence"
+    },
+    {
+      "attributes": {
+        "rejected": [],
+        "remain_in_testing": [
+          "IKROS-HYP-20260802-0408"
+        ],
+        "return_for_validation": [
+          "IKROS-HYP-20260802-0401",
+          "IKROS-HYP-20260802-0405"
+        ]
+      },
+      "confidence": 0.81,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_FINAL_CAMPAIGN_REPORT.md"
+      ],
+      "identifier": "IKROS-KO-20260802-0707",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Return IKROS-HYP-20260802-0401 and IKROS-HYP-20260802-0405 to governed validation with explicit persistence, branch, and contamination panels; keep IKROS-HYP-20260802-0408 in testing until broader episode coverage and richer sequencing evidence are available; reject none at this stage.",
+      "title": "Campaign 0007 final conclusion",
+      "type": "KnowledgeObject"
+    },
+    {
+      "attributes": {
+        "hypothesis_id": "IKROS-HYP-20260802-0401",
+        "recommendation": "RETURN_FOR_VALIDATION",
+        "support_classification": "SUPPORTS_CURRENT_HYPOTHESIS"
+      },
+      "confidence": 0.78,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"
+      ],
+      "identifier": "IKROS-KO-20260802-0701",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Persistent bull windows delivered +2.98% average event return with a 100% win rate across 7 governed events.",
+      "title": "IKROS-EXP-20260802-0601 diagnostic finding",
+      "type": "KnowledgeObject"
+    },
+    {
+      "attributes": {
+        "hypothesis_id": "IKROS-HYP-20260802-0401",
+        "recommendation": "RETURN_FOR_VALIDATION",
+        "support_classification": "SUPPORTS_CURRENT_HYPOTHESIS"
+      },
+      "confidence": 0.78,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"
+      ],
+      "identifier": "IKROS-KO-20260802-0702",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Low-DXY-spillover H0401 events returned +1.36% on average across 12 events.",
+      "title": "IKROS-EXP-20260802-0602 diagnostic finding",
+      "type": "KnowledgeObject"
+    },
+    {
+      "attributes": {
+        "hypothesis_id": "IKROS-HYP-20260802-0405",
+        "recommendation": "RETURN_FOR_VALIDATION",
+        "support_classification": "SUPPORTS_WITH_ASYMMETRY"
+      },
+      "confidence": 0.78,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"
+      ],
+      "identifier": "IKROS-KO-20260802-0703",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Bearish policy-shock branches produced +0.31% average continuation with a 62.5% win rate, but only across 8 events.",
+      "title": "IKROS-EXP-20260802-0603 diagnostic finding",
+      "type": "KnowledgeObject"
+    },
+    {
+      "attributes": {
+        "hypothesis_id": "IKROS-HYP-20260802-0405",
+        "recommendation": "RETURN_FOR_VALIDATION",
+        "support_classification": "SUPPORTS_CURRENT_HYPOTHESIS"
+      },
+      "confidence": 0.78,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"
+      ],
+      "identifier": "IKROS-KO-20260802-0704",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Narrow-range macro-transition events returned +0.56% on average with a 60% win rate across 50 events.",
+      "title": "IKROS-EXP-20260802-0604 diagnostic finding",
+      "type": "KnowledgeObject"
+    },
+    {
+      "attributes": {
+        "hypothesis_id": "IKROS-HYP-20260802-0408",
+        "recommendation": "REMAIN_IN_TESTING",
+        "support_classification": "SUPPORTS_WITH_SCOPE_EXPANSION"
+      },
+      "confidence": 0.78,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"
+      ],
+      "identifier": "IKROS-KO-20260802-0705",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "Broadening H0408 to all governed macro-to-bull handoff episodes increased coverage from 7 to 18 events without losing directional sign.",
+      "title": "IKROS-EXP-20260802-0605 diagnostic finding",
+      "type": "KnowledgeObject"
+    },
+    {
+      "attributes": {
+        "hypothesis_id": "IKROS-HYP-20260802-0408",
+        "recommendation": "REMAIN_IN_TESTING",
+        "support_classification": "MIXED_SUPPORT"
+      },
+      "confidence": 0.78,
+      "evidence_refs": [
+        "11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md"
+      ],
+      "identifier": "IKROS-KO-20260802-0706",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-012",
+        "SPEC-060"
+      ],
+      "summary": "The most common broadened H0408 path was a clean bull_trend continuation, but only 4 times.",
+      "title": "IKROS-EXP-20260802-0606 diagnostic finding",
+      "type": "KnowledgeObject"
+    }
+  ],
+  "metadata": {
+    "evidence_refs": [
+      "11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_REPORT.md",
+      "11-research/phase-g/diagnostic-experiments/RECOMMENDATION_MATRIX.md"
+    ],
+    "source_kind": "INTERNAL_RESEARCH_REPORT",
+    "specification_refs": [
+      "SPEC-012",
+      "SPEC-060"
+    ],
+    "title": "Campaign 0007 diagnostic experiment knowledge pack"
+  }
+}

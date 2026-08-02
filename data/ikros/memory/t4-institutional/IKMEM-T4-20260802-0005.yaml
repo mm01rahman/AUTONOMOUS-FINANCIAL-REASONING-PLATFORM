@@ -1,0 +1,56 @@
+archived_at: null
+capability_refs: []
+confidence: 0.84
+created_at: '2026-08-02T01:43:04.728735+00:00'
+dependency_ids:
+- IKROS-RQ-20260802-0002
+entity_type: ResearchConclusion
+evidence_refs:
+- 11-research/phase-g/regime-discovery/regime_discovery_analysis.json
+graph_node_ids:
+- IKROS-CONCL-20260802-0002
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260802-0005
+payload:
+  attributes:
+    accepted_taxonomy: Institutional Six-State Overlay Taxonomy v1
+    decision: ACCEPT_TAXONOMY
+    recommendation: Adopt the accepted taxonomy as the institutional state model for
+      future AFRP research and use Campaign 0003 to refine features inside this state
+      space.
+    rejected_methods:
+    - Hidden Markov Models
+    - Gaussian Mixture Models
+    - Spectral Clustering
+    - Density-based Clustering
+    - Volatility-State Baseline
+  lifecycle_state: PUBLISHED
+  source_format: JSON
+  source_kind: VALIDATION_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_validation_report.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-CONCL-20260802-0002
+- IKROS-CONTRA-20260802-0002
+- IKROS-HYP-20260802-0002
+- IKROS-VAL-20260802-0002
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: Campaign 0002 recommends the accepted six-state taxonomy as the institutional
+  state model for future AFRP research.
+tags:
+- researchconclusion
+- validation_report
+- ingested
+tier: T4_INSTITUTIONAL
+title: Adopt the institutional six-state overlay taxonomy
+updated_at: '2026-08-02T01:43:04.728735+00:00'
+valid_from: '2026-08-02T01:43:04.728735+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

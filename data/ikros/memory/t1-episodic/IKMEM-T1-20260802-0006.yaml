@@ -1,0 +1,75 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T01:27:42.351857+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0005
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-e/phase_e_final_report.md
+- 11-research/phase-e/phase_e_summary.json
+- EXEC-041
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0001
+- IKROS-RESEARCHTASK-20260802-0006
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0006
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0001
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0005
+    finished_at: '2026-08-02T01:27:42.351857+00:00'
+    kind: DATASET_SELECTION
+    max_attempts: 1
+    payload:
+      candidate_dataset_ids:
+      - IKROS-DSV-20260802-0001
+      top_k: 1
+    planned_order: 6
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0006
+      memory_record_id: null
+      metrics:
+        ranked_candidates:
+        - confidence: 0.88
+          identifier: IKROS-DSV-20260802-0001
+      output_refs: []
+      payload:
+        candidate_key: candidate_dataset_ids
+        selected_ids:
+        - IKROS-DSV-20260802-0001
+      selected_ids:
+      - IKROS-DSV-20260802-0001
+    started_at: '2026-08-02T01:27:42.307343+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0006
+    title: Dataset Selection
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0001
+- IKROS-DSV-20260802-0001
+spec_refs:
+- SPEC-010
+- SPEC-012
+- SPEC-060
+summary: DATASET_SELECTION COMPLETED
+tags:
+- research-orchestrator
+- dataset_selection
+tier: T1_EPISODIC
+title: 'Phase G Macro Alpha baseline audit :: Dataset Selection'
+updated_at: '2026-08-02T01:27:42.351857+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

@@ -1,0 +1,295 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:37:50.736827+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0074
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/diagnostic-experiments/DIAGNOSTIC_EXPERIMENT_PROGRAM.md
+- 11-research/phase-g/failure-analysis/failure_analysis_analysis.json
+- 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\diagnostic-experiments\diagnostic_experiment_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0010
+- IKROS-RESEARCHTASK-20260802-0075
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0071
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0010
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0074
+    finished_at: '2026-08-02T02:37:50.736827+00:00'
+    kind: EXPERIMENT_REGISTRATION
+    max_attempts: 1
+    payload:
+      entity:
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        - IKROS-INGESTION
+        completed_at: null
+        confidence:
+          data: 0.83
+          economic: 0.69
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.73
+          overall: 0.7477389682749352
+          prior: 0.57
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        dataset_versions:
+        - IKROS-DSV-20260802-0007
+        entity_type: Experiment
+        failures_produced: []
+        feature_versions:
+        - IKROS-FEAT-20260802-0301
+        - IKROS-FEAT-20260802-0302
+        - IKROS-FEAT-20260802-0303
+        - IKROS-FEAT-20260802-0304
+        - IKROS-FEAT-20260802-0305
+        - IKROS-FEAT-20260802-0306
+        - IKROS-FEAT-20260802-0308
+        - IKROS-FEAT-20260802-0309
+        - IKROS-FEAT-20260802-0310
+        - IKROS-FEAT-20260802-0311
+        - IKROS-FEAT-20260802-0312
+        git_commit: ''
+        hypotheses:
+        - IKROS-HYP-20260802-0401
+        - IKROS-HYP-20260802-0405
+        - IKROS-HYP-20260802-0408
+        ikros_id: IKROS-EXP-20260802-0007
+        in_sample_end: ''
+        in_sample_start: ''
+        lifecycle_state: RUNNING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0007
+            external_refs:
+            - 11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json
+            - 11-research/phase-g/failure-analysis/failure_analysis_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-HYP-20260802-0007
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0007-diagnostic-experiments
+            creation_context: Campaign 0007 diagnostic experiment program
+            motivation: Execute only the six governed diagnostic experiments authorized
+              by Campaign 0006.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        out_of_sample_end: ''
+        out_of_sample_start: ''
+        parameters:
+          authorized_experiments:
+          - IKROS-EXP-20260802-0601
+          - IKROS-EXP-20260802-0602
+          - IKROS-EXP-20260802-0603
+          - IKROS-EXP-20260802-0604
+          - IKROS-EXP-20260802-0605
+          - IKROS-EXP-20260802-0606
+          governance_constraints:
+          - no runtime changes
+          - no infrastructure changes
+          - no new hypotheses
+          - no parameter optimization
+          - no promotion
+        protocol: Execute the six governed diagnostic experiments from Campaign 0006
+          using the frozen validation frame and retained-hypothesis evidence stack.
+        random_seed: 42
+        reproducibility_hash: 0b24e9f664d2d055d98fa88ac982c17a0eba0a911e842f10dbef8415a02e305f
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        title: Campaign 0007 institutional diagnostic experiment program
+        validations_produced: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: Experiment
+    planned_order: 4
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0075
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-EXP-20260802-0007
+      payload:
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        - IKROS-INGESTION
+        completed_at: null
+        confidence:
+          data: 0.83
+          economic: 0.69
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.73
+          overall: 0.7477389682749352
+          prior: 0.57
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        dataset_versions:
+        - IKROS-DSV-20260802-0007
+        entity_type: Experiment
+        failures_produced: []
+        feature_versions:
+        - IKROS-FEAT-20260802-0301
+        - IKROS-FEAT-20260802-0302
+        - IKROS-FEAT-20260802-0303
+        - IKROS-FEAT-20260802-0304
+        - IKROS-FEAT-20260802-0305
+        - IKROS-FEAT-20260802-0306
+        - IKROS-FEAT-20260802-0308
+        - IKROS-FEAT-20260802-0309
+        - IKROS-FEAT-20260802-0310
+        - IKROS-FEAT-20260802-0311
+        - IKROS-FEAT-20260802-0312
+        git_commit: ''
+        hypotheses:
+        - IKROS-HYP-20260802-0401
+        - IKROS-HYP-20260802-0405
+        - IKROS-HYP-20260802-0408
+        ikros_id: IKROS-EXP-20260802-0007
+        in_sample_end: ''
+        in_sample_start: ''
+        lifecycle_state: RUNNING
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0007
+            external_refs:
+            - 11-research/phase-g/diagnostic-experiments/diagnostic_experiment_analysis.json
+            - 11-research/phase-g/failure-analysis/failure_analysis_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-HYP-20260802-0007
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0007-diagnostic-experiments
+            creation_context: Campaign 0007 diagnostic experiment program
+            motivation: Execute only the six governed diagnostic experiments authorized
+              by Campaign 0006.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        out_of_sample_end: ''
+        out_of_sample_start: ''
+        parameters:
+          authorized_experiments:
+          - IKROS-EXP-20260802-0601
+          - IKROS-EXP-20260802-0602
+          - IKROS-EXP-20260802-0603
+          - IKROS-EXP-20260802-0604
+          - IKROS-EXP-20260802-0605
+          - IKROS-EXP-20260802-0606
+          governance_constraints:
+          - no runtime changes
+          - no infrastructure changes
+          - no new hypotheses
+          - no parameter optimization
+          - no promotion
+        protocol: Execute the six governed diagnostic experiments from Campaign 0006
+          using the frozen validation frame and retained-hypothesis evidence stack.
+        random_seed: 42
+        reproducibility_hash: 0b24e9f664d2d055d98fa88ac982c17a0eba0a911e842f10dbef8415a02e305f
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        title: Campaign 0007 institutional diagnostic experiment program
+        validations_produced: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T02:37:50.309151+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0075
+    title: Experiment Registration
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0010
+- IKROS-EXP-20260802-0007
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: EXPERIMENT_REGISTRATION COMPLETED
+tags:
+- research-orchestrator
+- experiment_registration
+tier: T1_EPISODIC
+title: 'Campaign 0007 Institutional Diagnostic Experiment Program :: Experiment Registration'
+updated_at: '2026-08-02T02:37:50.736827+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

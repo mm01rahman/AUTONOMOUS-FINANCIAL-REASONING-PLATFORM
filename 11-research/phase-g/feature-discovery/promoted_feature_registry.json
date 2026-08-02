@@ -1,0 +1,213 @@
+[
+  {
+    "approved_regimes": [
+      "bull_trend",
+      "calm_carry"
+    ],
+    "category": "cross_regime_anchor",
+    "economic_rationale": "Medium-horizon path dependence remains informative once the institutional regime is known.",
+    "feature": "regime_return_60",
+    "identifier": "IKROS-FEAT-20260802-0301",
+    "max_score": 5.804079,
+    "mean_bootstrap_consistency": 0.947917,
+    "mean_correlation_stability": 0.126844,
+    "mean_drift_score": 0.132985,
+    "mean_score": 2.266615,
+    "robust_regime_count": 6,
+    "summary": "Cross-regime anchor summarizing medium-horizon gold context after conditioning on the six-state taxonomy.",
+    "title": "60-bar regime return anchor"
+  },
+  {
+    "approved_regimes": [
+      "bull_trend",
+      "bear_unwind"
+    ],
+    "category": "cross_regime_anchor",
+    "economic_rationale": "Twenty-bar return pressure captures the direction and exhaustion of the current gold move.",
+    "feature": "xau_return_20",
+    "identifier": "IKROS-FEAT-20260802-0302",
+    "max_score": 5.735729,
+    "mean_bootstrap_consistency": 0.958333,
+    "mean_correlation_stability": 0.108923,
+    "mean_drift_score": 0.143004,
+    "mean_score": 2.420681,
+    "robust_regime_count": 6,
+    "summary": "Cross-regime return anchor identifying whether the current state is extended or resetting.",
+    "title": "20-bar XAU/USD return context"
+  },
+  {
+    "approved_regimes": [
+      "bull_trend",
+      "crisis_dislocation"
+    ],
+    "category": "cross_regime_anchor",
+    "economic_rationale": "Short downside stress continues to separate fragile rallies from durable ones.",
+    "feature": "breakdown_20",
+    "identifier": "IKROS-FEAT-20260802-0303",
+    "max_score": 5.252243,
+    "mean_bootstrap_consistency": 0.864583,
+    "mean_correlation_stability": 0.116389,
+    "mean_drift_score": 0.220666,
+    "mean_score": 1.595132,
+    "robust_regime_count": 5,
+    "summary": "Drawdown and liquidation diagnostic that remains informative in bull, crisis, and compression states.",
+    "title": "20-bar breakdown persistence"
+  },
+  {
+    "approved_regimes": [
+      "bull_trend",
+      "range_compression"
+    ],
+    "category": "regime_specific",
+    "economic_rationale": "Expectation repricing is informative when macro states dominate cross-asset capital rotation.",
+    "feature": "forward_expectation",
+    "identifier": "IKROS-FEAT-20260802-0304",
+    "max_score": 4.421733,
+    "mean_bootstrap_consistency": 0.885417,
+    "mean_correlation_stability": 0.146412,
+    "mean_drift_score": 0.329614,
+    "mean_score": 1.206005,
+    "robust_regime_count": 5,
+    "summary": "Expectation proxy used where USD and rate repricing matter more than pure gold momentum.",
+    "title": "Forward expectation spread"
+  },
+  {
+    "approved_regimes": [
+      "bear_unwind",
+      "calm_carry",
+      "range_compression"
+    ],
+    "category": "cross_regime_anchor",
+    "economic_rationale": "Risk transfer speed remains one of the few universally informative state variables.",
+    "feature": "regime_vol_20",
+    "identifier": "IKROS-FEAT-20260802-0305",
+    "max_score": 3.588049,
+    "mean_bootstrap_consistency": 0.838542,
+    "mean_correlation_stability": 0.155614,
+    "mean_drift_score": 0.398361,
+    "mean_score": 1.288821,
+    "robust_regime_count": 4,
+    "summary": "Volatility anchor preserved in every regime, even when its directional sign changes.",
+    "title": "20-bar regime volatility"
+  },
+  {
+    "approved_regimes": [
+      "bear_unwind"
+    ],
+    "category": "regime_specific",
+    "economic_rationale": "Long-horizon trend persistence matters most when a downside unwind must be distinguished from noise.",
+    "feature": "trend_gap_30_180",
+    "identifier": "IKROS-FEAT-20260802-0306",
+    "max_score": 2.268214,
+    "mean_bootstrap_consistency": 0.802083,
+    "mean_correlation_stability": 0.139836,
+    "mean_drift_score": 0.311253,
+    "mean_score": 1.453452,
+    "robust_regime_count": 5,
+    "summary": "Long/short trend separation approved primarily for unwind diagnostics.",
+    "title": "30/180 trend persistence gap"
+  },
+  {
+    "approved_regimes": [
+      "calm_carry",
+      "range_compression"
+    ],
+    "category": "cross_regime_anchor",
+    "economic_rationale": "Macro pressure only becomes economically useful once paired with the prevailing directional trend.",
+    "feature": "macro_trend_interaction",
+    "identifier": "IKROS-FEAT-20260802-0307",
+    "max_score": 3.754065,
+    "mean_bootstrap_consistency": 0.963542,
+    "mean_correlation_stability": 0.142867,
+    "mean_drift_score": 0.227613,
+    "mean_score": 1.235388,
+    "robust_regime_count": 5,
+    "summary": "Interaction term combining macro pressure with trend persistence to suppress misleading standalone macro signals.",
+    "title": "Macro/trend interaction"
+  },
+  {
+    "approved_regimes": [
+      "crisis_dislocation"
+    ],
+    "category": "regime_specific",
+    "economic_rationale": "Breakout distance becomes critical only when crisis liquidity shocks stretch the tape.",
+    "feature": "breakout_60",
+    "identifier": "IKROS-FEAT-20260802-0308",
+    "max_score": 7.139034,
+    "mean_bootstrap_consistency": 0.760417,
+    "mean_correlation_stability": 0.091383,
+    "mean_drift_score": 0.18821,
+    "mean_score": 1.928689,
+    "robust_regime_count": 5,
+    "summary": "Crisis-state expansion feature used to distinguish continuation from dislocation exhaustion.",
+    "title": "60-bar breakout expansion"
+  },
+  {
+    "approved_regimes": [
+      "crisis_dislocation"
+    ],
+    "category": "cross_regime_anchor",
+    "economic_rationale": "Intermediate trend slope helps distinguish shock continuation from rapid mean reversion.",
+    "feature": "trend_gap_20_120",
+    "identifier": "IKROS-FEAT-20260802-0309",
+    "max_score": 4.10289,
+    "mean_bootstrap_consistency": 0.84375,
+    "mean_correlation_stability": 0.127353,
+    "mean_drift_score": 0.186052,
+    "mean_score": 1.695724,
+    "robust_regime_count": 5,
+    "summary": "Intermediate trend anchor promoted for crisis and unwind contexts with high path dependence.",
+    "title": "20/120 trend slope gap"
+  },
+  {
+    "approved_regimes": [
+      "macro_transition"
+    ],
+    "category": "regime_specific",
+    "economic_rationale": "Immediate gold response is most informative when policy or event transitions reset positioning.",
+    "feature": "xau_return_1",
+    "identifier": "IKROS-FEAT-20260802-0310",
+    "max_score": 1.491782,
+    "mean_bootstrap_consistency": 0.755208,
+    "mean_correlation_stability": 0.069835,
+    "mean_drift_score": 0.075332,
+    "mean_score": 0.70773,
+    "robust_regime_count": 5,
+    "summary": "Short-horizon reaction feature approved only for transition states.",
+    "title": "1-bar XAU/USD reaction"
+  },
+  {
+    "approved_regimes": [
+      "macro_transition"
+    ],
+    "category": "regime_specific",
+    "economic_rationale": "Breakout information is only investable when aligned with a broader directional structure.",
+    "feature": "trend_breakout_interaction",
+    "identifier": "IKROS-FEAT-20260802-0311",
+    "max_score": 2.486626,
+    "mean_bootstrap_consistency": 0.796875,
+    "mean_correlation_stability": 0.138908,
+    "mean_drift_score": 0.258511,
+    "mean_score": 1.155253,
+    "robust_regime_count": 5,
+    "summary": "Regime-specific interaction term that isolates event-driven continuation from ordinary trend following.",
+    "title": "Trend/breakout interaction"
+  },
+  {
+    "approved_regimes": [
+      "macro_transition"
+    ],
+    "category": "regime_specific",
+    "economic_rationale": "Event counts matter only when they amplify an already material macro-pressure shift.",
+    "feature": "sessionless_event_pressure",
+    "identifier": "IKROS-FEAT-20260802-0312",
+    "max_score": 2.386009,
+    "mean_bootstrap_consistency": 0.963542,
+    "mean_correlation_stability": 0.117376,
+    "mean_drift_score": 0.191905,
+    "mean_score": 0.970465,
+    "robust_regime_count": 5,
+    "summary": "Sparse event-pressure interaction reserved for macro-transition campaigns.",
+    "title": "Event pressure interaction"
+  }
+]

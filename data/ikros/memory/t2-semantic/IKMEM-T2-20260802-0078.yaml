@@ -1,0 +1,98 @@
+archived_at: null
+capability_refs: []
+confidence: 0.48
+created_at: '2026-08-02T01:59:35.071678+00:00'
+dependency_ids: []
+entity_type: Hypothesis
+evidence_refs:
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+graph_node_ids:
+- IKROS-HYP-20260802-0405
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0078
+payload:
+  attributes:
+    acceptance_criteria:
+    - continuation sign remains stable across macro-transition subsets
+    - interaction terms add value beyond xau_return_1 alone
+    - event-driven narrative remains consistent with policy repricing theory
+    advance_to_campaign_0005: true
+    alternative_hypothesis: Macro announcements can reset inflation, rate, and USD
+      expectations quickly; when the first gold response is confirmed by event pressure
+      and directional structure, follow-through may persist for several sessions.
+    contradictions: []
+    expected_direction: CONTINUATION_WITH_INITIAL_SHOCK
+    expected_holding_period: 1-3D
+    expected_horizon: 1-5D
+    experiments: []
+    feature_ids:
+    - IKROS-FEAT-20260802-0310
+    - IKROS-FEAT-20260802-0311
+    - IKROS-FEAT-20260802-0312
+    feature_set:
+    - xau_return_1
+    - trend_breakout_interaction
+    - sessionless_event_pressure
+    knowledge_links:
+    - IKROS-FEAT-20260802-0310
+    - IKROS-FEAT-20260802-0311
+    - IKROS-FEAT-20260802-0312
+    - IKROS-KO-20260802-0405
+    motivating_theses: []
+    null_hypothesis: The described mechanism does not produce a persistent regime-conditioned
+      predictive relationship.
+    posterior_confidence: 0.0
+    power: 0.8
+    prior_confidence: 0.48
+    priority_tier: P2
+    regime_scope:
+    - macro_transition
+    rejection_criteria:
+    - edge collapses once sparse-event penalties are applied
+    - continuation is just a proxy for generic short-horizon momentum
+    - event pressure contributes no incremental explanatory power
+    required_evidence:
+    - event-synchronous validation book
+    - interaction ablation report
+    - sparse-coverage robustness review
+    research_question: During macro_transition states, does the first-day gold reaction
+      persist when event pressure and breakout alignment indicate a genuine regime
+      handoff?
+    significance_level: 0.05
+    source_rq: IKROS-RQ-20260802-0405
+    statement: During macro_transition states, does the first-day gold reaction persist
+      when event pressure and breakout alignment indicate a genuine regime handoff?
+    validation_plan:
+    - event-synchronous walk_forward splits
+    - CPCV around clustered macro-event windows
+    - sensitivity to shock sign and immediate reversal risk
+    - Monte Carlo resampling of event sequences
+    validations: []
+  lifecycle_state: APPROVED_FOR_TESTING
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\hypothesis-discovery\hypothesis_discovery_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-HYP-20260802-0405
+- IKROS-RQ-20260802-0405
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Macro announcements can reset inflation, rate, and USD expectations quickly;
+  when the first gold response is confirmed by event pressure and directional structure,
+  follow-through may persist for several sessions.
+tags:
+- hypothesis
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Policy-shock repricing continuation
+updated_at: '2026-08-02T01:59:35.071678+00:00'
+valid_from: '2026-08-02T01:59:35.071678+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

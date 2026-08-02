@@ -1,0 +1,222 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:18:12.858510+00:00'
+dependency_ids: []
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+- 11-research/phase-g/scientific-validation/SCIENTIFIC_VALIDATION_CAMPAIGN.md
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0005
+- IKROS-RESEARCHTASK-20260802-0042
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0053
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0005
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on: []
+    finished_at: '2026-08-02T02:18:12.858510+00:00'
+    kind: RESEARCH_QUESTION
+    max_attempts: 1
+    payload:
+      entity:
+        campaign_tag: PHASE-G-VALIDATION-005
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        confidence:
+          data: 0.82
+          economic: 0.68
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.72
+          overall: 0.737709009036208
+          prior: 0.58
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        entity_type: ResearchQuestion
+        ikros_id: IKROS-RQ-20260802-0005
+        instrument: XAU/USD
+        lifecycle_state: ACTIVE
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0005
+            external_refs:
+            - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+            - 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-RQ-20260802-0004
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0005-scientific-validation
+            creation_context: Campaign 0005 scientific validation
+            motivation: Determine which approved institutional hypotheses survive
+              governed scientific validation and which should be rejected or refined.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        linked_conclusions: []
+        linked_hypotheses: []
+        motivation: Campaign 0004 approved the hypothesis catalogue. Campaign 0005
+          now validates the authorized subset without strategy optimization.
+        scope: SCIENTIFIC_VALIDATION
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        time_horizon: 1D-10D
+        title: Which approved regime-conditioned alpha hypotheses survive institutional
+          scientific validation?
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: ResearchQuestion
+    planned_order: 1
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0042
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-RQ-20260802-0005
+      payload:
+        campaign_tag: PHASE-G-VALIDATION-005
+        capability_refs:
+        - ALPHA-RESEARCH
+        - IKROS-ORCHESTRATOR
+        confidence:
+          data: 0.82
+          economic: 0.68
+          last_updated: '2026-08-02T00:00:00Z'
+          model: 0.0
+          operational: 0.72
+          overall: 0.737709009036208
+          prior: 0.58
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        entity_type: ResearchQuestion
+        ikros_id: IKROS-RQ-20260802-0005
+        instrument: XAU/USD
+        lifecycle_state: ACTIVE
+        lineage:
+          dependencies:
+            datasets:
+            - IKROS-DSV-20260802-0005
+            external_refs:
+            - 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+            - 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+            features:
+            - IKROS-FEAT-20260802-0301
+            - IKROS-FEAT-20260802-0302
+            - IKROS-FEAT-20260802-0303
+            - IKROS-FEAT-20260802-0304
+            - IKROS-FEAT-20260802-0305
+            - IKROS-FEAT-20260802-0306
+            - IKROS-FEAT-20260802-0308
+            - IKROS-FEAT-20260802-0309
+            - IKROS-FEAT-20260802-0310
+            - IKROS-FEAT-20260802-0311
+            - IKROS-FEAT-20260802-0312
+            inputs:
+            - IKROS-RQ-20260802-0004
+            models:
+            - institutional_six_state_overlay_taxonomy_v1
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-02T00:00:00Z'
+            created_by: campaign-0005-scientific-validation
+            creation_context: Campaign 0005 scientific validation
+            motivation: Determine which approved institutional hypotheses survive
+              governed scientific validation and which should be rejected or refined.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        linked_conclusions: []
+        linked_hypotheses: []
+        motivation: Campaign 0004 approved the hypothesis catalogue. Campaign 0005
+          now validates the authorized subset without strategy optimization.
+        scope: SCIENTIFIC_VALIDATION
+        spec_refs:
+        - SPEC-012
+        - SPEC-060
+        time_horizon: 1D-10D
+        title: Which approved regime-conditioned alpha hypotheses survive institutional
+          scientific validation?
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T02:18:12.582886+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0042
+    title: Research Question
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0005
+- IKROS-RQ-20260802-0005
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: RESEARCH_QUESTION COMPLETED
+tags:
+- research-orchestrator
+- research_question
+tier: T1_EPISODIC
+title: 'Campaign 0005 Scientific Alpha Validation :: Research Question'
+updated_at: '2026-08-02T02:18:12.858510+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

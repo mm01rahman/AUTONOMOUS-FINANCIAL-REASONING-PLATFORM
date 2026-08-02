@@ -1,0 +1,77 @@
+attributes:
+  capability_refs: []
+  computation: 20-bar return of the DXY proxy series.
+  confidence:
+    data: 0.63
+    economic: 0.63
+    last_updated: '2026-08-02T01:27:41.718619+00:00'
+    model: 0.0
+    operational: 0.0
+    overall: 0.63
+    prior: 0.63
+    replication: 0.63
+    statistical: 0.63
+    validation: 0.63
+  entity_type: Feature
+  family_id: IKROS-FF-20260802-0001
+  ikros_id: IKROS-FEAT-20260802-0002
+  information_content: 0.31
+  inputs:
+  - dxy
+  lifecycle_state: VALIDATED
+  lineage:
+    dependencies:
+      datasets: []
+      external_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_knowledge.json
+      features: []
+      inputs:
+      - IKROS-DSV-20260802-0001
+      models: []
+    evidence:
+      contradicting: []
+      ers_records:
+      - 11-research/phase-e/feature_importance.json
+      supporting: []
+    experiments:
+      tested_in: []
+      validated_by: []
+    origin:
+      created_at: '2026-08-02T01:27:41.710581+00:00'
+      created_by: ikros-ingestion-engine
+      creation_context: INTERNAL_RESEARCH_REPORT
+      motivation: Ingested from C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\macro-alpha\macro_alpha_knowledge.json
+    retirement:
+      retired_at: null
+      retired_by: null
+      retirement_reason: null
+      successor_id: null
+    successors:
+      inspired: []
+      refined_by: null
+      superseded_by: null
+  lookback: 20 bars
+  name: dxy_return_20
+  normalization: raw_return
+  spec_refs:
+  - SPEC-012
+  - SPEC-060
+  stability_score: 0.48
+  stationarity: UNKNOWN
+  superseded_by: null
+  used_in_experiments: []
+  version: 1.0.0
+  version_history: []
+  work_package_refs: []
+confidence: 0.63
+created_at: '2026-08-02T01:27:41.710581+00:00'
+ikros_id: IKROS-FEAT-20260802-0002
+label: DXY 20-bar return
+node_id: IKROS-FEAT-20260802-0002
+node_type: FEATURE
+spec_refs:
+- SPEC-012
+- SPEC-060
+valid_from: '2026-08-02T01:27:41.710581+00:00'
+valid_to: null
+wp_refs: []

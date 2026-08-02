@@ -1,0 +1,122 @@
+[
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0401",
+    "pbo_status": "NOT_APPLICABLE",
+    "positive_variant_ratio": 1.0,
+    "variant_return_range": 0.0011,
+    "variants": [
+      {
+        "event_count": 14,
+        "mean_return": 0.0062,
+        "profile": "conservative"
+      },
+      {
+        "event_count": 24,
+        "mean_return": 0.0051,
+        "profile": "base"
+      },
+      {
+        "event_count": 32,
+        "mean_return": 0.0053,
+        "profile": "permissive"
+      }
+    ],
+    "white_reality_check_p_value": 0.32
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0402",
+    "pbo_status": "NOT_APPLICABLE",
+    "positive_variant_ratio": 0.0,
+    "variant_return_range": 0.0002,
+    "variants": [
+      {
+        "event_count": 30,
+        "mean_return": -0.0009,
+        "profile": "conservative"
+      },
+      {
+        "event_count": 43,
+        "mean_return": -0.0007,
+        "profile": "base"
+      },
+      {
+        "event_count": 56,
+        "mean_return": -0.0008,
+        "profile": "permissive"
+      }
+    ],
+    "white_reality_check_p_value": 0.92
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0404",
+    "pbo_status": "NOT_APPLICABLE",
+    "positive_variant_ratio": 0.3333,
+    "variant_return_range": 0.0129,
+    "variants": [
+      {
+        "event_count": 3,
+        "mean_return": 0.0028,
+        "profile": "conservative"
+      },
+      {
+        "event_count": 5,
+        "mean_return": -0.0029,
+        "profile": "base"
+      },
+      {
+        "event_count": 15,
+        "mean_return": -0.0101,
+        "profile": "permissive"
+      }
+    ],
+    "white_reality_check_p_value": 0.742
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0405",
+    "pbo_status": "NOT_APPLICABLE",
+    "positive_variant_ratio": 1.0,
+    "variant_return_range": 0.0014,
+    "variants": [
+      {
+        "event_count": 84,
+        "mean_return": 0.0003,
+        "profile": "conservative"
+      },
+      {
+        "event_count": 99,
+        "mean_return": 0.0017,
+        "profile": "base"
+      },
+      {
+        "event_count": 115,
+        "mean_return": 0.0004,
+        "profile": "permissive"
+      }
+    ],
+    "white_reality_check_p_value": 0.474
+  },
+  {
+    "hypothesis_id": "IKROS-HYP-20260802-0408",
+    "pbo_status": "NOT_APPLICABLE",
+    "positive_variant_ratio": 1.0,
+    "variant_return_range": 0.0001,
+    "variants": [
+      {
+        "event_count": 7,
+        "mean_return": 0.0074,
+        "profile": "conservative"
+      },
+      {
+        "event_count": 7,
+        "mean_return": 0.0074,
+        "profile": "base"
+      },
+      {
+        "event_count": 9,
+        "mean_return": 0.0073,
+        "profile": "permissive"
+      }
+    ],
+    "white_reality_check_p_value": 0.716
+  }
+]

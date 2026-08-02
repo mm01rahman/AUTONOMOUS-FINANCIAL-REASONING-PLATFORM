@@ -1,0 +1,374 @@
+[
+  {
+    "acceptance_criteria": [
+      "persistent bull windows retain positive mean return and high win rate",
+      "persistent-minus-transition return spread remains materially positive",
+      "results explain the non-promotion outcome without changing the hypothesis definition"
+    ],
+    "confidence_delta": 0.03,
+    "evidence_requirements": [
+      "persistent versus transition event summary",
+      "holding-window replay attribution",
+      "institutional explanation of transition contamination"
+    ],
+    "evidence_summary": [
+      "Persistent bull windows delivered +2.98% average event return with a 100% win rate across 7 governed events.",
+      "Transition-overlap windows delivered -0.50% average event return with only 35.29% wins across 17 events.",
+      "The +3.49 percentage-point persistent-versus-transition spread identifies regime exit contamination as the dominant failure driver."
+    ],
+    "expected_information_gain": 4.3,
+    "experiment_id": "IKROS-EXP-20260802-0601",
+    "experimental_design": "Replay the governed H0401 event set and partition events into persistent bull_trend windows versus transition-overlap windows across the same three-day holding period.",
+    "explains_observed_failures": true,
+    "failure_criteria": [
+      "persistent bull windows do not separate from transition windows",
+      "replay does not reduce uncertainty around the contamination source"
+    ],
+    "improves_confidence": true,
+    "improves_economic_understanding": true,
+    "recommendation": "RETURN_FOR_VALIDATION",
+    "reduces_uncertainty": "HIGH",
+    "required_datasets": [
+      "IKROS-DSV-20260802-0005",
+      "IKROS-DSV-20260802-0006"
+    ],
+    "required_features": [
+      "regime",
+      "regime_return_60",
+      "xau_return_20",
+      "forward_expectation"
+    ],
+    "required_regimes": [
+      "bull_trend"
+    ],
+    "requires_additional_data": false,
+    "research_question": "Does H0401 remain directionally valid only when bull_trend persists across the holding window, and is transition overlap the dominant contamination source?",
+    "result_metrics": {
+      "persistent_event_count": 7,
+      "persistent_mean_return": 0.0298,
+      "persistent_transition_spread": 0.0349,
+      "persistent_win_rate": 1.0,
+      "transition_event_count": 17,
+      "transition_mean_return": -0.005,
+      "transition_win_rate": 0.3529
+    },
+    "scientific_motivation": "Campaign 0006 identified transition fragility as the primary reason H0401 failed promotion; this experiment isolates the clean persistent bull subset from overlapping exit windows.",
+    "suggests_new_explanatory_variable": "regime persistence versus transition overlap",
+    "suggests_no_further_work": false,
+    "supports_or_contradicts_current_hypothesis": "SUPPORTS_CURRENT_HYPOTHESIS",
+    "target_hypothesis": "IKROS-HYP-20260802-0401",
+    "title": "Bull-state persistence replay audit",
+    "validation_method": "Governed event replay with persistent-versus-transition segmentation on the frozen validation frame."
+  },
+  {
+    "acceptance_criteria": [
+      "low DXY spillover windows preserve positive continuation",
+      "high DXY spillover windows underperform or negate the signal",
+      "the split clarifies whether USD pressure is a meaningful explanatory variable"
+    ],
+    "confidence_delta": 0.02,
+    "evidence_requirements": [
+      "low versus high DXY return comparison",
+      "economic interpretation of USD spillover effects",
+      "confidence-impact note for H0401"
+    ],
+    "evidence_summary": [
+      "Low-DXY-spillover H0401 events returned +1.36% on average across 12 events.",
+      "High-DXY-spillover H0401 events returned -0.33% on average across 12 events.",
+      "The 1.69 percentage-point low-versus-high DXY spread shows that benign USD conditions materially improve the continuation mechanism."
+    ],
+    "expected_information_gain": 4.1,
+    "experiment_id": "IKROS-EXP-20260802-0602",
+    "experimental_design": "Split the governed H0401 events into low and high absolute DXY spillover slices and compare continuation quality without changing the base event rule.",
+    "explains_observed_failures": true,
+    "failure_criteria": [
+      "low and high DXY slices behave similarly",
+      "the decomposition adds no economic explanation beyond generic bull-trend continuation"
+    ],
+    "improves_confidence": true,
+    "improves_economic_understanding": true,
+    "recommendation": "RETURN_FOR_VALIDATION",
+    "reduces_uncertainty": "MEDIUM",
+    "required_datasets": [
+      "IKROS-DSV-20260802-0005",
+      "IKROS-DSV-20260802-0006"
+    ],
+    "required_features": [
+      "dxy_return_20",
+      "forward_expectation",
+      "regime_return_60",
+      "xau_return_20"
+    ],
+    "required_regimes": [
+      "bull_trend"
+    ],
+    "requires_additional_data": false,
+    "research_question": "Does USD spillover intensity explain why some expectation-relief bull windows continue while others fail?",
+    "result_metrics": {
+      "absolute_dxy_median": 0.0053,
+      "high_dxy_event_count": 12,
+      "high_dxy_mean_return": -0.0033,
+      "high_dxy_win_rate": 0.4167,
+      "low_dxy_event_count": 12,
+      "low_dxy_mean_return": 0.0136,
+      "low_dxy_win_rate": 0.6667,
+      "low_high_spread": 0.0169
+    },
+    "scientific_motivation": "Campaign 0006 flagged adverse USD spillovers as a secondary failure driver for H0401; this experiment measures whether low-versus-high DXY pressure cleanly separates the outcomes.",
+    "suggests_new_explanatory_variable": "USD spillover intensity",
+    "suggests_no_further_work": false,
+    "supports_or_contradicts_current_hypothesis": "SUPPORTS_CURRENT_HYPOTHESIS",
+    "target_hypothesis": "IKROS-HYP-20260802-0401",
+    "title": "USD spillover decomposition study",
+    "validation_method": "Median-split diagnostic replay on the frozen H0401 event sample."
+  },
+  {
+    "acceptance_criteria": [
+      "at least one branch shows stable continuation quality",
+      "branch asymmetry explains the weak aggregate validation outcome",
+      "findings remain economically consistent with macro repricing theory"
+    ],
+    "confidence_delta": 0.015,
+    "evidence_requirements": [
+      "bullish versus bearish branch event summary",
+      "sample-balance note for the weaker branch",
+      "institutional interpretation of branch asymmetry"
+    ],
+    "evidence_summary": [
+      "Bearish policy-shock branches produced +0.31% average continuation with a 62.5% win rate, but only across 8 events.",
+      "Bullish policy-shock branches produced +0.16% average continuation with a 52.75% win rate across 91 events.",
+      "The aggregate signal was positive on both branches, but branch imbalance explains why the overall validation result looked shallow."
+    ],
+    "expected_information_gain": 4.5,
+    "experiment_id": "IKROS-EXP-20260802-0603",
+    "experimental_design": "Replay the governed H0405 event set and evaluate bullish- and bearish-shock branches separately while preserving the original continuation rule.",
+    "explains_observed_failures": true,
+    "failure_criteria": [
+      "both branches collapse after separation",
+      "branch separation provides no additional explanation for the aggregate weakness"
+    ],
+    "improves_confidence": true,
+    "improves_economic_understanding": true,
+    "recommendation": "RETURN_FOR_VALIDATION",
+    "reduces_uncertainty": "MEDIUM",
+    "required_datasets": [
+      "IKROS-DSV-20260802-0005",
+      "IKROS-DSV-20260802-0006"
+    ],
+    "required_features": [
+      "xau_return_1",
+      "sessionless_event_pressure",
+      "trend_breakout_interaction"
+    ],
+    "required_regimes": [
+      "macro_transition"
+    ],
+    "requires_additional_data": false,
+    "research_question": "Is H0405 supported symmetrically across bullish and bearish policy-shock branches, or is one branch carrying the aggregate signal?",
+    "result_metrics": {
+      "bearish_branch_event_count": 8,
+      "bearish_branch_mean_return": 0.0031,
+      "bearish_branch_win_rate": 0.625,
+      "bullish_branch_event_count": 91,
+      "bullish_branch_mean_return": 0.0016,
+      "bullish_branch_win_rate": 0.5275
+    },
+    "scientific_motivation": "Campaign 0006 concluded that H0405 was real but shallow, with likely branch imbalance hidden inside the aggregate event result.",
+    "suggests_new_explanatory_variable": "branch-level shock direction asymmetry",
+    "suggests_no_further_work": false,
+    "supports_or_contradicts_current_hypothesis": "SUPPORTS_WITH_ASYMMETRY",
+    "target_hypothesis": "IKROS-HYP-20260802-0405",
+    "title": "Macro-transition branch asymmetry audit",
+    "validation_method": "Branch-level diagnostic replay on the frozen H0405 event sample."
+  },
+  {
+    "acceptance_criteria": [
+      "narrow-range windows preserve positive continuation quality",
+      "wide-range windows explain a material share of the aggregate weakness",
+      "findings reduce uncertainty around post-shock noise contamination"
+    ],
+    "confidence_delta": 0.025,
+    "evidence_requirements": [
+      "narrow versus wide range event comparison",
+      "post-shock contamination interpretation",
+      "confidence-impact note for H0405"
+    ],
+    "evidence_summary": [
+      "Narrow-range macro-transition events returned +0.56% on average with a 60% win rate across 50 events.",
+      "Wide-range macro-transition events returned -0.23% on average with a 46.94% win rate across 49 events.",
+      "The narrow-versus-wide range spread identifies disorderly post-shock turbulence as a key contamination channel for H0405."
+    ],
+    "expected_information_gain": 4.4,
+    "experiment_id": "IKROS-EXP-20260802-0604",
+    "experimental_design": "Split the governed H0405 event set into narrow-range and wide-range slices using the frozen event frame and compare continuation quality.",
+    "explains_observed_failures": true,
+    "failure_criteria": [
+      "range segmentation does not explain outcome dispersion",
+      "wide-range windows remain equally constructive, undermining the contamination thesis"
+    ],
+    "improves_confidence": true,
+    "improves_economic_understanding": true,
+    "recommendation": "RETURN_FOR_VALIDATION",
+    "reduces_uncertainty": "HIGH",
+    "required_datasets": [
+      "IKROS-DSV-20260802-0005",
+      "IKROS-DSV-20260802-0006"
+    ],
+    "required_features": [
+      "range_pct",
+      "xau_return_1",
+      "sessionless_event_pressure",
+      "trend_breakout_interaction"
+    ],
+    "required_regimes": [
+      "macro_transition"
+    ],
+    "requires_additional_data": false,
+    "research_question": "Do wide-range macro-transition windows contaminate H0405 by mixing disorderly shock noise with genuine repricing continuation?",
+    "result_metrics": {
+      "narrow_range_event_count": 50,
+      "narrow_range_mean_return": 0.0056,
+      "narrow_range_win_rate": 0.6,
+      "narrow_wide_spread": 0.0079,
+      "range_median": 0.0122,
+      "wide_range_event_count": 49,
+      "wide_range_mean_return": -0.0023,
+      "wide_range_win_rate": 0.4694
+    },
+    "scientific_motivation": "Campaign 0006 identified high-range post-shock turbulence as a likely reason the policy-shock continuation thesis remained too shallow for promotion.",
+    "suggests_new_explanatory_variable": "post-shock range quality",
+    "suggests_no_further_work": false,
+    "supports_or_contradicts_current_hypothesis": "SUPPORTS_CURRENT_HYPOTHESIS",
+    "target_hypothesis": "IKROS-HYP-20260802-0405",
+    "title": "Wide-range transition contamination study",
+    "validation_method": "Median-split contamination audit on the frozen H0405 event sample."
+  },
+  {
+    "acceptance_criteria": [
+      "broader handoff episodes remain directionally positive",
+      "episode count expands materially versus the base H0408 sample",
+      "the audit distinguishes sparse coverage from outright hypothesis contradiction"
+    ],
+    "confidence_delta": 0.02,
+    "evidence_requirements": [
+      "base versus expanded episode summary",
+      "episode accounting note",
+      "institutional interpretation of over-restrictive confirmation logic"
+    ],
+    "evidence_summary": [
+      "Broadening H0408 to all governed macro-to-bull handoff episodes increased coverage from 7 to 18 events without losing directional sign.",
+      "Expanded handoff episodes returned +0.87% on average with a 72.22% win rate, slightly stronger than the base sample.",
+      "All 7 base events remained inside the broadened episode class, showing that Campaign 0005 likely used an over-restrictive confirmation layer rather than discovering a false signal."
+    ],
+    "expected_information_gain": 4.8,
+    "experiment_id": "IKROS-EXP-20260802-0605",
+    "experimental_design": "Compare the original H0408 event set with a broader diagnostic handoff episode universe defined only by macro_transition immediately resolving into bull_trend.",
+    "explains_observed_failures": true,
+    "failure_criteria": [
+      "expanded handoff episodes lose directional coherence",
+      "sample expansion still leaves no meaningful replication improvement"
+    ],
+    "improves_confidence": true,
+    "improves_economic_understanding": true,
+    "recommendation": "REMAIN_IN_TESTING",
+    "reduces_uncertainty": "HIGH",
+    "required_datasets": [
+      "IKROS-DSV-20260802-0005",
+      "IKROS-DSV-20260802-0006"
+    ],
+    "required_features": [
+      "prior_regime",
+      "regime",
+      "regime_return_60",
+      "xau_return_1",
+      "trend_breakout_interaction"
+    ],
+    "required_regimes": [
+      "macro_transition",
+      "bull_trend"
+    ],
+    "requires_additional_data": false,
+    "research_question": "If H0408 is evaluated as a broader macro-to-bull handoff episode class, does the edge remain positive once over-restrictive confirmation filters are removed from the diagnostic layer?",
+    "result_metrics": {
+      "base_episode_overlap": 7,
+      "base_event_count": 7,
+      "base_mean_return": 0.0074,
+      "base_win_rate": 0.7143,
+      "expanded_event_count": 18,
+      "expanded_mean_return": 0.0087,
+      "expanded_probability_positive": 0.888,
+      "expanded_win_rate": 0.7222
+    },
+    "scientific_motivation": "Campaign 0006 found that H0408 was dominated by sparse episode coverage; this experiment tests whether the handoff mechanism survives broader governed episode accounting.",
+    "suggests_new_explanatory_variable": "broader macro-to-bull handoff episode class",
+    "suggests_no_further_work": false,
+    "supports_or_contradicts_current_hypothesis": "SUPPORTS_WITH_SCOPE_EXPANSION",
+    "target_hypothesis": "IKROS-HYP-20260802-0408",
+    "title": "Sparse handoff episode expansion audit",
+    "validation_method": "Episode-expansion replay on the frozen transition-to-bull sequence set."
+  },
+  {
+    "acceptance_criteria": [
+      "a coherent subset of handoff sequences remains observable at the daily level",
+      "sequence replay reduces uncertainty about whether the mechanism is purely anecdotal"
+    ],
+    "confidence_delta": -0.01,
+    "evidence_requirements": [
+      "future-regime path frequency table",
+      "bull-share summary across handoff sequences",
+      "explicit note on the remaining intraday sequencing gap"
+    ],
+    "evidence_summary": [
+      "The most common broadened H0408 path was a clean bull_trend continuation, but only 4 times.",
+      "Mean future bull-share across broadened episodes was 46.67%, showing that constructive handoffs exist but do not dominate the full five-day horizon.",
+      "Daily sequence replay reduced uncertainty about path diversity, but it could not close the intraday ordering gap that Campaign 0006 identified as the main blocking issue."
+    ],
+    "expected_information_gain": 4.6,
+    "experiment_id": "IKROS-EXP-20260802-0606",
+    "experimental_design": "Catalogue the dominant future-regime paths after broadened H0408 handoff episodes and measure how often the follow-through remains bull_trend across the five-day holding window.",
+    "explains_observed_failures": true,
+    "failure_criteria": [
+      "sequence paths are too heterogeneous to support scientific follow-up",
+      "daily replay still cannot distinguish handoff structure from noise and leaves the key gap unresolved"
+    ],
+    "improves_confidence": false,
+    "improves_economic_understanding": true,
+    "recommendation": "REMAIN_IN_TESTING",
+    "reduces_uncertainty": "MEDIUM",
+    "required_datasets": [
+      "IKROS-DSV-20260802-0005",
+      "IKROS-DSV-20260802-0006"
+    ],
+    "required_features": [
+      "prior_regime",
+      "regime",
+      "trend_breakout_interaction",
+      "regime_return_60"
+    ],
+    "required_regimes": [
+      "macro_transition",
+      "bull_trend",
+      "range_compression"
+    ],
+    "requires_additional_data": true,
+    "research_question": "Do daily regime sequences following macro-to-bull handoff episodes display enough structural consistency to support eventual re-validation, even without intraday ordering data?",
+    "result_metrics": {
+      "expanded_event_count": 18,
+      "mean_future_bull_share": 0.4667,
+      "median_future_bull_share": 0.4,
+      "top_path_1": "bull_trend > bull_trend > bull_trend",
+      "top_path_1_count": 4,
+      "top_path_2": "bull_trend > range_compression > range_compression",
+      "top_path_2_count": 3,
+      "top_path_3": "range_compression > bull_trend > bull_trend",
+      "top_path_3_count": 2
+    },
+    "scientific_motivation": "Campaign 0006 identified unresolved transition-ordering uncertainty; this experiment documents what the frozen daily sequence can and cannot explain.",
+    "suggests_new_explanatory_variable": "daily transition-sequence stability",
+    "suggests_no_further_work": false,
+    "supports_or_contradicts_current_hypothesis": "MIXED_SUPPORT",
+    "target_hypothesis": "IKROS-HYP-20260802-0408",
+    "title": "Transition sequence replay book",
+    "validation_method": "Daily-sequence replay book on the broadened handoff event universe."
+  }
+]

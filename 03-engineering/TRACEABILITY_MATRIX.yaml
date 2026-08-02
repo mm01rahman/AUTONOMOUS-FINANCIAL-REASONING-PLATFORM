@@ -516,6 +516,150 @@ requirements:
       - "tests/unit/test_phaseb_verification.py"
       - "05-work-packages/WP-IMP-0036/evidence/EXEC-036.yaml"
 
+  # ── Phase C — Quantitative Research & Backtesting ───────────────────────
+  - id: "NFR-022"
+    title: "Backtesting engine determinism: identical inputs produce identical checksums"
+    source: "AFRP-PHASE-C-1.0.0"
+    capability: "QUANT-BACKTEST"
+    status: "implemented"
+    artifacts:
+      - "tools/backtest/engine.py"
+      - "tools/backtest/metrics.py"
+    verified_by:
+      - "tests/unit/test_backtest_engine.py"
+      - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+  - id: "NFR-023"
+    title: "Full regime coverage: 8 historical market regimes evaluated"
+    source: "AFRP-PHASE-C-1.0.0"
+    capability: "QUANT-BACKTEST"
+    status: "implemented"
+    artifacts:
+      - "tools/backtest/regimes.py"
+      - "tools/backtest/campaign.py"
+      - "11-research/regime_analysis.md"
+    verified_by:
+      - "tests/unit/test_backtest_engine.py"
+      - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+  - id: "NFR-024"
+    title: "Benchmark comparison: AFRP evaluated against 6 classical strategies"
+    source: "AFRP-PHASE-C-1.0.0"
+    capability: "QUANT-BACKTEST"
+    status: "implemented"
+    artifacts:
+      - "tools/backtest/benchmarks.py"
+      - "11-research/benchmark_comparison.md"
+      - "11-research/results/afrp_vs_benchmarks.json"
+    verified_by:
+      - "tests/unit/test_backtest_benchmarks.py"
+      - "05-work-packages/WP-IMP-0037/evidence/EXEC-037.yaml"
+  - id: "NFR-025"
+    title: "Live market gateway supports provider interfaces with deterministic live-sim fallback"
+    source: "AFRP-PHASE-D-1.0.0"
+    capability: "PAPER-SHADOW-EXEC"
+    status: "implemented"
+    artifacts:
+      - "tools/paper_trading/gateway.py"
+      - "tools/paper_trading/orchestrator.py"
+    verified_by:
+      - "tests/unit/test_paper_trading_modules.py"
+      - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+  - id: "NFR-026"
+    title: "Shadow execution and virtual portfolio remain simulation-only with deterministic replay"
+    source: "AFRP-PHASE-D-1.0.0"
+    capability: "PAPER-SHADOW-EXEC"
+    status: "implemented"
+    artifacts:
+      - "tools/paper_trading/shadow_execution.py"
+      - "tools/paper_trading/portfolio.py"
+      - "tools/paper_trading/decision_log.py"
+    verified_by:
+      - "tests/unit/test_paper_trading_modules.py"
+      - "tests/integration/test_paper_trading_orchestrator.py"
+      - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+      - "05-work-packages/WP-FIX-0003/evidence/EXEC-040.yaml"
+  - id: "NFR-027"
+    title: "Performance/risk monitoring and operational dashboards emitted as JSON/MD/HTML"
+    source: "AFRP-PHASE-D-1.0.0"
+    capability: "PAPER-SHADOW-EXEC"
+    status: "implemented"
+    artifacts:
+      - "tools/paper_trading/monitoring.py"
+      - "tools/paper_trading/risk.py"
+      - "tools/paper_trading/dashboard.py"
+      - ".github/workflows/quality.yml"
+    verified_by:
+      - "tests/unit/test_paper_trading_modules.py"
+      - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+      - "05-work-packages/WP-FIX-0002/evidence/EXEC-039.yaml"
+  - id: "NFR-028"
+    title: "Daily/weekly/monthly reporting with runtime, risk, performance, learning and log digests"
+    source: "AFRP-PHASE-D-1.0.0"
+    capability: "PAPER-SHADOW-EXEC"
+    status: "implemented"
+    artifacts:
+      - "tools/paper_trading/reporting.py"
+      - "tools/paper_trading/cli.py"
+      - "docs/research/PHASE_D_PAPER_TRADING.md"
+      - "11-research/phase-d/"
+    verified_by:
+      - "tests/integration/test_paper_trading_orchestrator.py"
+      - "05-work-packages/WP-IMP-0038/evidence/EXEC-038.yaml"
+
+  # ── Phase E — Alpha Research & Strategy Evolution ────────────────────────
+  - id: "NFR-029"
+    title: "Deterministic alpha attribution and feature-importance analytics emitted with drift and redundancy diagnostics"
+    source: "AFRP-PHASE-E-1.0.0"
+    capability: "ALPHA-RESEARCH"
+    status: "implemented"
+    artifacts:
+      - "tools/alpha_research/analysis.py"
+      - "tools/alpha_research/features.py"
+      - "11-research/phase-e/alpha_attribution_report.md"
+      - "11-research/phase-e/feature_importance_report.md"
+    verified_by:
+      - "tests/unit/test_alpha_research.py"
+      - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+  - id: "NFR-030"
+    title: "Phase E evaluates baseline plus six governed strategy hypotheses with anti-overfitting parameter search"
+    source: "AFRP-PHASE-E-1.0.0"
+    capability: "ALPHA-RESEARCH"
+    status: "implemented"
+    artifacts:
+      - "tools/alpha_research/strategies.py"
+      - "tools/alpha_research/optimization.py"
+      - "11-research/phase-e/strategy_research_report.md"
+      - "11-research/phase-e/parameter_optimization_report.md"
+    verified_by:
+      - "tests/unit/test_alpha_research.py"
+      - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+  - id: "NFR-031"
+    title: "Walk-forward validation, Monte Carlo robustness, and regime-adaptation assessment govern promotion decisions"
+    source: "AFRP-PHASE-E-1.0.0"
+    capability: "ALPHA-RESEARCH"
+    status: "implemented"
+    artifacts:
+      - "tools/alpha_research/optimization.py"
+      - "tools/alpha_research/analysis.py"
+      - "11-research/phase-e/walk_forward_validation_report.md"
+      - "11-research/phase-e/monte_carlo_report.md"
+      - "11-research/phase-e/regime_adaptation_report.md"
+    verified_by:
+      - "tests/unit/test_alpha_research.py"
+      - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+  - id: "NFR-032"
+    title: "Promotion assessments remain research-only and reproducibly linked to governed evidence"
+    source: "AFRP-PHASE-E-1.0.0"
+    capability: "ALPHA-RESEARCH"
+    status: "implemented"
+    artifacts:
+      - "tools/alpha_research/cli.py"
+      - "docs/research/PHASE_E_ALPHA_RESEARCH.md"
+      - "11-research/phase-e/promotion_assessment.md"
+      - "11-research/phase-e/phase_e_final_report.md"
+    verified_by:
+      - "tests/unit/test_alpha_research.py"
+      - "05-work-packages/WP-IMP-0039/evidence/EXEC-041.yaml"
+
   # ── Engineering decision rules (ARCH-001 §4) ────────────────────────
   - id: "EDR-001"
     title: "Business logic depends on abstract interfaces"
@@ -639,3 +783,342 @@ requirements:
     verified_by:
       - "tests/integration/test_system_replay.py"
       - "05-work-packages/WP-IMP-0033/evidence/EXEC-031.yaml"
+
+  # ── Specification Library (WP-IMP-0040) ──────────────────────────────────
+  - id: "NFR-033"
+    title: "Repository shall be the canonical home of every AFRP institutional specification"
+    source: "AFRP-WP-IMP-0040"
+    capability: "SPEC-LIBRARY"
+    status: "implemented"
+    artifacts:
+      - "specs/registry/SPECIFICATION_REGISTRY.yaml"
+      - "specs/README.md"
+      - "specs/registry/CONFORMANCE_MATRIX.md"
+    verified_by:
+      - "05-work-packages/WP-IMP-0040/evidence/EXEC-042.yaml"
+  - id: "NFR-034"
+    title: "Every AFRP capability shall trace back to at least one approved specification"
+    source: "AFRP-WP-IMP-0040"
+    capability: "SPEC-LIBRARY"
+    status: "implemented"
+    artifacts:
+      - "specs/registry/SPECIFICATION_REGISTRY.yaml"
+      - "specs/registry/CONFORMANCE_MATRIX.md"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    verified_by:
+      - "05-work-packages/WP-IMP-0040/evidence/EXEC-042.yaml"
+  - id: "NFR-035"
+    title: "Specifications shall have governed lifecycle management with versioning and approval workflow"
+    source: "AFRP-WP-IMP-0040"
+    capability: "SPEC-LIBRARY"
+    status: "implemented"
+    artifacts:
+      - "specs/policies/VERSIONING_POLICY.md"
+      - "specs/policies/REPOSITORY_ORGANIZATION_STANDARD.md"
+      - "specs/registry/SPECIFICATION_HIERARCHY.md"
+    verified_by:
+      - "05-work-packages/WP-IMP-0040/evidence/EXEC-042.yaml"
+  - id: "NFR-036"
+    title: "AFRP shall maintain a governed institutional knowledge graph linking all research artifacts"
+    source: "SPEC-060 (AFRP-WP-IMP-0041)"
+    capability: "IKROS-ARCH"
+    status: "implemented"
+    artifacts:
+      - "02-architecture/ikros/IKROS-ARCH-SPEC.md"
+      - "02-architecture/ikros/IKROS-KNOWLEDGE-GRAPH.md"
+      - "02-architecture/ikros/IKROS-ONTOLOGY.md"
+    verified_by:
+      - "05-work-packages/WP-IMP-0041/evidence/EXEC-043.yaml"
+  - id: "NFR-037"
+    title: "Every IKROS research object shall carry complete provenance lineage from origin to retirement"
+    source: "SPEC-060 (AFRP-WP-IMP-0041)"
+    capability: "IKROS-ARCH"
+    status: "implemented"
+    artifacts:
+      - "02-architecture/ikros/IKROS-LINEAGE.md"
+      - "02-architecture/ikros/IKROS-REGISTRIES.md"
+    verified_by:
+      - "05-work-packages/WP-IMP-0041/evidence/EXEC-043.yaml"
+  - id: "NFR-038"
+    title: "IKROS shall maintain permanent immutable failure records as institutional memory per Constitutional Article IX"
+    source: "SPEC-060 (AFRP-WP-IMP-0041)"
+    capability: "IKROS-ARCH"
+    status: "implemented"
+    artifacts:
+      - "02-architecture/ikros/IKROS-MEMORY.md"
+      - "02-architecture/ikros/IKROS-GOVERNANCE.md"
+      - "02-architecture/ikros/IKROS-REGISTRIES.md"
+    verified_by:
+      - "05-work-packages/WP-IMP-0041/evidence/EXEC-043.yaml"
+
+  - id: "NFR-039"
+    title: "IKROS core registries shall provide deterministic YAML serialization with version history and referential integrity"
+    source: "SPEC-060 §3 (AFRP-WP-IMP-0042)"
+    capability: "IKROS-REGISTRIES"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/registries/base.py"
+      - "tools/ikros/persistence.py"
+      - "tools/ikros/models.py"
+      - "tests/unit/test_ikros_registries.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0042/evidence/EXEC-044.yaml"
+
+  - id: "NFR-040"
+    title: "IKROS lifecycle state machines shall prevent invalid transitions and enforce governance rules LIN-001 through LIN-010"
+    source: "SPEC-060 §4 (AFRP-WP-IMP-0042)"
+    capability: "IKROS-REGISTRIES"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/identifiers.py"
+      - "tools/ikros/validation.py"
+      - "tools/ikros/registries/base.py"
+      - "tests/unit/test_ikros_registries.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0042/evidence/EXEC-044.yaml"
+
+  - id: "NFR-041"
+    title: "IKROS Alpha promotion shall require non-empty ERS evidence records (LIN-006) and permanent rejection documentation"
+    source: "SPEC-060 §5 (AFRP-WP-IMP-0042)"
+    capability: "IKROS-REGISTRIES"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/registries/alpha.py"
+      - "tools/ikros/validation.py"
+      - "tests/unit/test_ikros_registries.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0042/evidence/EXEC-044.yaml"
+
+  - id: "NFR-042"
+    title: "IKROS Knowledge Graph shall provide deterministic traversal, loading, and YAML persistence for reproducible institutional research state"
+    source: "SPEC-060 §4-§6 (AFRP-WP-IMP-0043)"
+    capability: "IKROS-GRAPH"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/graph/core.py"
+      - "tools/ikros/graph/models.py"
+      - "tools/ikros/graph/persistence.py"
+      - "tests/unit/test_ikros_graph.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0043/evidence/EXEC-045.yaml"
+
+  - id: "NFR-043"
+    title: "IKROS lineage traversal shall support forward and reverse dependency analysis across research questions, hypotheses, experiments, validations, and alphas"
+    source: "SPEC-060 §4, §7 (AFRP-WP-IMP-0043)"
+    capability: "IKROS-GRAPH"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/graph/core.py"
+      - "tools/ikros/graph/lineage.py"
+      - "tools/ikros/graph/validation.py"
+      - "tests/unit/test_ikros_graph.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0043/evidence/EXEC-045.yaml"
+
+  - id: "NFR-044"
+    title: "IKROS contradictions shall remain first-class relationships with explicit evidence references and deterministic confidence penalties"
+    source: "SPEC-060 §6, §8 (AFRP-WP-IMP-0043)"
+    capability: "IKROS-GRAPH"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/graph/models.py"
+      - "tools/ikros/graph/confidence.py"
+      - "tools/ikros/graph/validation.py"
+      - "tests/unit/test_ikros_graph.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0043/evidence/EXEC-045.yaml"
+
+  - id: "NFR-045"
+    title: "IKROS Research Memory shall provide deterministic six-tier storage, structured retrieval, lifecycle state, and YAML persistence for institutional research memory"
+    source: "SPEC-060 §6 (AFRP-WP-IMP-0044)"
+    capability: "IKROS-MEMORY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/memory/models.py"
+      - "tools/ikros/memory/core.py"
+      - "tools/ikros/memory/persistence.py"
+      - "tests/unit/test_ikros_memory.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0044/evidence/EXEC-046.yaml"
+
+  - id: "NFR-046"
+    title: "IKROS Research Memory shall support governed consolidation, promotion, retirement, archive, restore, and merge operations without deleting research history"
+    source: "SPEC-060 §6, §8, §9 (AFRP-WP-IMP-0044)"
+    capability: "IKROS-MEMORY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/memory/core.py"
+      - "tools/ikros/memory/validation.py"
+      - "docs/ikros/RESEARCH_MEMORY_GUIDE.md"
+      - "tests/unit/test_ikros_memory.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0044/evidence/EXEC-046.yaml"
+
+  - id: "NFR-047"
+    title: "IKROS Research Memory shall preserve graph-linked lineage, evidence, confidence, temporal history, and archive integrity across all tiers"
+    source: "SPEC-060 §6, §7, §8 (AFRP-WP-IMP-0044)"
+    capability: "IKROS-MEMORY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/memory/core.py"
+      - "tools/ikros/memory/retrieval.py"
+      - "tools/ikros/memory/validation.py"
+      - "tests/unit/test_ikros_memory.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0044/evidence/EXEC-046.yaml"
+
+  - id: "NFR-048"
+    title: "IKROS Query Engine shall parse, plan, validate, and execute deterministic structured queries across registries, graph, and memory"
+    source: "SPEC-060 §6, §7 (AFRP-WP-IMP-0045)"
+    capability: "IKROS-QUERY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/query/parser.py"
+      - "tools/ikros/query/planner.py"
+      - "tools/ikros/query/engine.py"
+      - "tests/unit/test_ikros_query.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0045/evidence/EXEC-047.yaml"
+
+  - id: "NFR-049"
+    title: "IKROS Query Engine shall support deterministic graph traversal, lineage path lookup, contradiction analysis, and governed archive access"
+    source: "SPEC-060 §7, §8, §9 (AFRP-WP-IMP-0045)"
+    capability: "IKROS-QUERY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/query/adapters.py"
+      - "tools/ikros/query/validation.py"
+      - "docs/ikros/INSTITUTIONAL_QUERY_GUIDE.md"
+      - "tests/unit/test_ikros_query.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0045/evidence/EXEC-047.yaml"
+
+  - id: "NFR-050"
+    title: "IKROS Query Engine shall emit deterministic audit records and normalized results with lineage, confidence, temporal, evidence, and work-package metadata"
+    source: "SPEC-060 §6, §9 (AFRP-WP-IMP-0045)"
+    capability: "IKROS-QUERY"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/query/models.py"
+      - "tools/ikros/query/audit.py"
+      - "tools/ikros/query/engine.py"
+      - "tests/unit/test_ikros_query.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0045/evidence/EXEC-047.yaml"
+
+  - id: "NFR-051"
+    title: "IKROS Research Ingestion Engine shall deterministically load structured Markdown, YAML, and JSON sources into governed IKROS object representations"
+    source: "SPEC-060 §5, §6, §12 (AFRP-WP-IMP-0046)"
+    capability: "IKROS-INGESTION"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/ingestion/loaders.py"
+      - "tools/ikros/ingestion/models.py"
+      - "tools/ikros/ingestion/engine.py"
+      - "tests/unit/test_ikros_ingestion.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0046/evidence/EXEC-048.yaml"
+
+  - id: "NFR-052"
+    title: "IKROS Research Ingestion Engine shall preserve provenance, lineage, duplicate detection, lifecycle validation, and referential integrity while routing registry-backed types through existing registries"
+    source: "SPEC-060 §6, §7, §10, §12 (AFRP-WP-IMP-0046)"
+    capability: "IKROS-INGESTION"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/ingestion/validation.py"
+      - "tools/ikros/ingestion/engine.py"
+      - "docs/ikros/RESEARCH_INGESTION_GUIDE.md"
+      - "tests/unit/test_ikros_ingestion.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0046/evidence/EXEC-048.yaml"
+
+  - id: "NFR-053"
+    title: "IKROS Research Ingestion Engine shall integrate ingested objects with the Knowledge Graph, Research Memory, and Query Engine while emitting deterministic ingestion reports"
+    source: "SPEC-060 §6, §7, §8, §12 (AFRP-WP-IMP-0046)"
+    capability: "IKROS-INGESTION"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/ingestion/persistence.py"
+      - "tools/ikros/ingestion/engine.py"
+      - "tools/ikros/__init__.py"
+      - "tests/unit/test_ikros_ingestion.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0046/evidence/EXEC-048.yaml"
+
+  - id: "NFR-054"
+    title: "IKROS Research Confidence Engine shall deterministically aggregate structured evidence into independent confidence dimensions and reproducible research quality indicators"
+    source: "SPEC-060 §8, §9 (AFRP-WP-IMP-0047)"
+    capability: "IKROS-CONFIDENCE"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/confidence/models.py"
+      - "tools/ikros/confidence/engine.py"
+      - "tests/unit/test_ikros_confidence.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0047/evidence/EXEC-049.yaml"
+
+  - id: "NFR-055"
+    title: "IKROS Research Confidence Engine shall propagate contradiction-aware confidence through the Knowledge Graph while tracking replication, append-only history, and deterministic audit trails"
+    source: "SPEC-060 §3, §8, §10 (AFRP-WP-IMP-0047)"
+    capability: "IKROS-CONFIDENCE"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/confidence/engine.py"
+      - "tools/ikros/confidence/persistence.py"
+      - "tools/ikros/confidence/validation.py"
+      - "tests/unit/test_ikros_confidence.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0047/evidence/EXEC-049.yaml"
+
+  - id: "NFR-056"
+    title: "IKROS Research Confidence Engine shall integrate confidence assessments with registries, Research Memory, the Institutional Query Engine, and deterministic YAML persistence without Runtime changes"
+    source: "SPEC-060 §8, §12 (AFRP-WP-IMP-0047)"
+    capability: "IKROS-CONFIDENCE"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/confidence/persistence.py"
+      - "tools/ikros/confidence/engine.py"
+      - "tools/ikros/__init__.py"
+      - "docs/ikros/RESEARCH_CONFIDENCE_ENGINE_GUIDE.md"
+      - "tests/unit/test_ikros_confidence.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0047/evidence/EXEC-049.yaml"
+
+  - id: "NFR-057"
+    title: "IKROS Research Orchestrator shall deterministically schedule and execute governed research campaigns with explicit task dependencies, progress tracking, and completion reporting"
+    source: "SPEC-060 §11, §12 (AFRP-WP-IMP-0048)"
+    capability: "IKROS-ORCHESTRATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/orchestrator/models.py"
+      - "tools/ikros/orchestrator/validation.py"
+      - "tools/ikros/orchestrator/engine.py"
+      - "tests/unit/test_ikros_orchestrator.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0048/evidence/EXEC-050.yaml"
+
+  - id: "NFR-058"
+    title: "IKROS Research Orchestrator shall integrate structured campaign tasks with registries, ingestion, confidence, Knowledge Graph, Research Memory, the Institutional Query Engine, and bounded backtest execution through deterministic adapters"
+    source: "SPEC-060 §3, §11, §12 (AFRP-WP-IMP-0048)"
+    capability: "IKROS-ORCHESTRATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/orchestrator/engine.py"
+      - "tools/ikros/__init__.py"
+      - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+      - "tests/unit/test_ikros_orchestrator.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0048/evidence/EXEC-050.yaml"
+
+  - id: "NFR-059"
+    title: "IKROS Research Orchestrator shall preserve auditability through hash-chained campaign logs, query-visible task memory, bounded failure handling, and resume support without Runtime changes"
+    source: "SPEC-060 §10, §11, §12 (AFRP-WP-IMP-0048)"
+    capability: "IKROS-ORCHESTRATOR"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/orchestrator/persistence.py"
+      - "tools/ikros/orchestrator/engine.py"
+      - "docs/ikros/RESEARCH_ORCHESTRATOR_GUIDE.md"
+      - "tests/unit/test_ikros_orchestrator.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0048/evidence/EXEC-050.yaml"

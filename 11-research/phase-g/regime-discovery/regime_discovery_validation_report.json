@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "source_kind": "VALIDATION_REPORT",
+    "title": "Campaign 0002 regime discovery validation synthesis",
+    "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+    "evidence_refs": [
+      "11-research/phase-g/regime-discovery/regime_discovery_analysis.json",
+      "11-research/phase-e/regime_adaptation.json",
+      "11-research/phase-e/feature_importance.json",
+      "11-research/regime_analysis.md"
+    ]
+  },
+  "ikros_objects": [
+    {
+      "identifier": "IKROS-VAL-20260802-0002",
+      "type": "Validation",
+      "title": "Campaign 0002 regime utility validation",
+      "summary": "Validation synthesis for the accepted six-state regime taxonomy.",
+      "lifecycle_state": "COMPLETE",
+      "confidence": 0.82,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-EXP-20260802-0002"],
+      "dependency_ids": ["IKROS-HYP-20260802-0002"],
+      "attributes": {
+        "validation_type": "regime_taxonomy_utility_test",
+        "verdict": "PASS",
+        "accepted_method_id": "IKROS-KO-20260802-0209",
+        "rejected_method_ids": [
+          "IKROS-KO-20260802-0202",
+          "IKROS-KO-20260802-0203",
+          "IKROS-KO-20260802-0205",
+          "IKROS-KO-20260802-0207",
+          "IKROS-KO-20260802-0208"
+        ],
+        "utility_metrics": {
+          "volatility_baseline_return_spread": 0.0012110299879640569,
+          "trend_volatility_return_spread": 0.0024014028145167335,
+          "accepted_return_spread": 0.004942385609214154,
+          "accepted_hit_rate_spread": 0.1422228565085708,
+          "accepted_stability": 0.7800863033402589
+        }
+      }
+    },
+    {
+      "identifier": "IKROS-EVIDENCE-20260802-0002",
+      "type": "Evidence",
+      "title": "Campaign 0002 regime evidence bundle",
+      "summary": "Evidence bundle carrying the method comparison, utility test, and historical atlas into IKROS.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.86,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-VAL-20260802-0002"],
+      "attributes": {
+        "quality_gates_passed": true,
+        "evidence_bundle": [
+          "11-research/phase-g/regime-discovery/regime_discovery_analysis.json",
+          "11-research/phase-e/regime_adaptation.json",
+          "11-research/phase-e/feature_importance.json",
+          "11-research/regime_analysis.md"
+        ]
+      }
+    },
+    {
+      "identifier": "IKROS-CONTRA-20260802-0002",
+      "type": "ContradictoryEvidence",
+      "title": "Volatility-only and latent-state method contradiction",
+      "summary": "The simplest and most complex candidate methods both failed institutional acceptance for Campaign 0002.",
+      "lifecycle_state": "ACTIVE",
+      "confidence": 0.73,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": ["IKROS-VAL-20260802-0002", "IKROS-EXP-20260802-0002"],
+      "attributes": {
+        "contradicts": ["IKROS-HYP-20260802-0002"],
+        "severity": "MODERATE",
+        "reasons": [
+          "volatility-only baseline under-separated outcomes",
+          "latent-state families did not justify extra governance complexity",
+          "crisis dislocation remains a weak-confidence research state"
+        ]
+      }
+    },
+    {
+      "identifier": "IKROS-CONCL-20260802-0002",
+      "type": "ResearchConclusion",
+      "title": "Adopt the institutional six-state overlay taxonomy",
+      "summary": "Campaign 0002 recommends the accepted six-state taxonomy as the institutional state model for future AFRP research.",
+      "lifecycle_state": "PUBLISHED",
+      "confidence": 0.84,
+      "specification_refs": ["SPEC-010", "SPEC-012", "SPEC-060"],
+      "evidence_refs": ["11-research/phase-g/regime-discovery/regime_discovery_analysis.json"],
+      "source_ids": [
+        "IKROS-HYP-20260802-0002",
+        "IKROS-VAL-20260802-0002",
+        "IKROS-CONTRA-20260802-0002"
+      ],
+      "dependency_ids": ["IKROS-RQ-20260802-0002"],
+      "attributes": {
+        "decision": "ACCEPT_TAXONOMY",
+        "accepted_taxonomy": "Institutional Six-State Overlay Taxonomy v1",
+        "recommendation": "Adopt the accepted taxonomy as the institutional state model for future AFRP research and use Campaign 0003 to refine features inside this state space.",
+        "rejected_methods": [
+          "Hidden Markov Models",
+          "Gaussian Mixture Models",
+          "Spectral Clustering",
+          "Density-based Clustering",
+          "Volatility-State Baseline"
+        ]
+      }
+    }
+  ]
+}

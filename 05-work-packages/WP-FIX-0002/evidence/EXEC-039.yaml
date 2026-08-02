@@ -1,0 +1,105 @@
+schema_version: "ERS-1.0"
+evidence_id: "EXEC-039"
+work_package_id: "WP-FIX-0002"
+capability:
+  id: "PAPER-SHADOW-EXEC"
+  version: "1.0"
+agent_identity:
+  role: "AEF-02 (Software Engineer)"
+  agent_vendor: "GitHub"
+  agent_name: "Copilot CLI"
+lifecycle:
+  protocol_version: "EGP-2.0"
+  started_at: "2026-08-01T13:12:12Z"
+  finished_at: "2026-08-01T13:19:30Z"
+  final_state: "REVIEW_PENDING"
+  state_transitions:
+    - state: "REVIEW_PENDING"
+      at: "2026-08-01T13:19:30Z"
+      note: "Single-asset concentration monitoring calibrated and regression-validated."
+preconditions:
+  - predicate: "capability.complete('PAPER-SHADOW-EXEC')"
+    result: "PASS"
+boundary_compliance:
+  bounded_files:
+    - "tools/paper_trading/risk.py"
+    - "tools/paper_trading/orchestrator.py"
+    - "tests/unit/test_paper_trading_modules.py"
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "CHANGELOG.md"
+    - "05-work-packages/WP-FIX-0002.yaml"
+    - "05-work-packages/WP-FIX-0002/evidence/EXEC-039.yaml"
+    - "11-research/phase-d/"
+  files_modified:
+    - "tools/paper_trading/risk.py"
+    - "tools/paper_trading/orchestrator.py"
+    - "tests/unit/test_paper_trading_modules.py"
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "CHANGELOG.md"
+    - "05-work-packages/WP-FIX-0002.yaml"
+    - "05-work-packages/WP-FIX-0002/evidence/EXEC-039.yaml"
+    - "11-research/phase-d/"
+  violations: []
+  compliant: true
+quality_gates:
+  - gate: "ruff_lint"
+    command: "uv run ruff check ."
+    result: "PASS"
+  - gate: "mypy_typecheck"
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+    result: "PASS"
+    detail: "Success: no issues found in 159 source files"
+  - gate: "pytest"
+    command: "uv run pytest -q"
+    result: "PASS"
+    detail: "Full test suite passed"
+  - gate: "afrp_validate"
+    command: "uv run afrp validate"
+    result: "PASS"
+    detail: "violations: 0"
+  - gate: "afrp_plan"
+    command: "uv run afrp plan"
+    result: "PASS"
+    detail: "38 capabilities, graph acyclic"
+  - gate: "afrp_health"
+    command: "uv run afrp health"
+    result: "PASS"
+    detail: "63/63 requirements covered (100.0%)"
+  - gate: "phase_b_validation"
+    command: "uv run python -m tools.verification.cli --output-dir 09-validation/reports/phase-d5"
+    result: "PASS"
+    detail: "Runtime verification PASS; regression suite PASS; p99=0.2545ms"
+  - gate: "phase_c_backtesting"
+    command: "uv run python -m tools.backtest.cli"
+    result: "PASS"
+    detail: "8 regimes, 6 benchmarks, 9 robustness scenarios completed"
+  - gate: "phase_d_paper_trading"
+    command: "uv run python -m tools.paper_trading.cli --iterations 24 --poll-seconds 300 --output-dir 11-research/phase-d --seed 42 --strict-readiness"
+    result: "PASS"
+    detail: "Readiness PASS; risk_alert_count=0; checksum=9d4c65dcf8e1e1d3ba42ec28ef3634ce9551f939f45eedfea2c6f252b889123b"
+  - gate: "afrp_evidence"
+    command: "uv run afrp evidence --wp WP-FIX-0002"
+    result: "PASS"
+    detail: "Existing evidence record validated against WP-FIX-0002 on a clean worktree."
+artifacts:
+  source_files:
+    - "tools/paper_trading/risk.py"
+    - "tools/paper_trading/orchestrator.py"
+  test_files:
+    - "tests/unit/test_paper_trading_modules.py"
+  documentation:
+    - "docs/research/PHASE_D_PAPER_TRADING.md"
+    - "11-research/phase-d/phase_d5_risk_improvement_report.md"
+    - "11-research/phase-d/phase_d5_before_after_comparison.md"
+    - "11-research/phase-d/phase_d5_operational_failure_analysis.md"
+  runtime_outputs:
+    - "11-research/phase-d/d5-baseline/"
+    - "11-research/phase-d/"
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: true
+  boundary_compliant: true
+  review_status: "PENDING_ARB"
+  review_note: "False-positive concentration alerts were removed without altering the deterministic decision path or other risk gates."

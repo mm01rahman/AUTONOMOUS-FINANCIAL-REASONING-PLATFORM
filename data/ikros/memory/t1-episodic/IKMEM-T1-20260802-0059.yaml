@@ -1,0 +1,103 @@
+archived_at: null
+capability_refs:
+- ALPHA-RESEARCH
+- IKROS-CONFIDENCE
+- IKROS-INGESTION
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T02:18:19.379926+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0046
+entity_type: ResearchTaskResult
+evidence_refs:
+- 11-research/phase-g/feature-discovery/feature_discovery_analysis.json
+- 11-research/phase-g/hypothesis-discovery/hypothesis_discovery_analysis.json
+- 11-research/phase-g/scientific-validation/SCIENTIFIC_VALIDATION_CAMPAIGN.md
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_analysis.json
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0005
+- IKROS-RESEARCHTASK-20260802-0049
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0059
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0005
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0046
+    finished_at: '2026-08-02T02:18:19.378908+00:00'
+    kind: VALIDATION_REQUEST
+    max_attempts: 1
+    payload:
+      source_path: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_validation_report.json
+    planned_order: 5
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0049
+      memory_record_id: null
+      metrics:
+        graph_node_ids:
+        - IKROS-VAL-20260802-0005
+        ingestion_status: INGESTED
+        memory_ids:
+        - IKMEM-T1-20260802-0058
+      output_refs:
+      - C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_validation_report.json
+      - IKROS-VAL-20260802-0005
+      - scientific_validation_validation_report
+      payload:
+        graph_node_ids:
+        - IKROS-VAL-20260802-0005
+        ingested_at: '2026-08-02T02:18:19.377907+00:00'
+        ingestion_id: IKING-20260802-0013
+        memory_ids:
+        - IKMEM-T1-20260802-0058
+        object_fingerprints:
+        - '{"attributes": {"further_research_count": 3, "promoted_count": 0, "rejected_count":
+          2}, "capability_refs": [], "confidence": 0.81, "created_at": "2026-08-02T02:18:18.804215+00:00",
+          "dependency_ids": [], "evidence_refs": ["11-research/phase-g/scientific-validation/scientific_validation_analysis.json"],
+          "identifier": "IKROS-VAL-20260802-0005", "lifecycle_state": "COMPLETE",
+          "memory_tier": null, "object_type": "Validation", "relationships": [], "source_format":
+          "JSON", "source_ids": [], "source_kind": "VALIDATION_REPORT", "source_reference":
+          "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\phase-g\\scientific-validation\\scientific_validation_validation_report.json",
+          "specification_refs": ["SPEC-012", "SPEC-060"], "summary": "Institutional
+          scientific validation summary for the approved Campaign 0005 hypothesis
+          set.", "title": "Campaign 0005 umbrella validation", "version": "1.0.0",
+          "work_package_refs": []}'
+        object_ids:
+        - IKROS-VAL-20260802-0005
+        source_format: JSON
+        source_hash: 19fa1055131d104eedc24e43eeeac996d8a4b7681179c23e3a934c8ad86099ab
+        source_kind: VALIDATION_REPORT
+        source_ref: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_validation_report.json
+        source_version: 1.0.0
+        status: INGESTED
+        warnings: []
+      selected_ids: []
+    started_at: '2026-08-02T02:18:18.421092+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0049
+    title: Validation Request
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0005
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_validation_report.json
+- IKROS-VAL-20260802-0005
+- scientific_validation_validation_report
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: VALIDATION_REQUEST COMPLETED
+tags:
+- research-orchestrator
+- validation_request
+tier: T1_EPISODIC
+title: 'Campaign 0005 Scientific Alpha Validation :: Validation Request'
+updated_at: '2026-08-02T02:18:19.379926+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

@@ -1,0 +1,19 @@
+attributes:
+  decision: REJECT
+  hit_rate_spread: 0.04837854955652099
+  return_spread: 0.0012110299879640569
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\regime-discovery\regime_discovery_knowledge.json
+  stability: 0.9354323158062969
+  summary: Executed and rejected because it under-separates research outcomes.
+confidence: 0.77
+created_at: '2026-08-02T01:43:01.847413+00:00'
+ikros_id: IKROS-KO-20260802-0208
+label: Volatility-state baseline review
+node_id: IKROS-KO-20260802-0208
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-02T01:43:01.847413+00:00'
+valid_to: null
+wp_refs: []

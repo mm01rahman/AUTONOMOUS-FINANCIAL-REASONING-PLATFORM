@@ -1,0 +1,43 @@
+archived_at: null
+capability_refs: []
+confidence: 0.9
+created_at: '2026-08-02T02:18:14.160058+00:00'
+dependency_ids: []
+entity_type: DatasetVersion
+evidence_refs:
+- 11-research/phase-g/scientific-validation/scientific_validation_analysis.json
+graph_node_ids:
+- IKROS-DSV-20260802-0005
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T2-20260802-0090
+payload:
+  attributes:
+    promoted_count: 0
+    rejected_count: 2
+    validated_hypothesis_count: 5
+  lifecycle_state: VALIDATED
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\phase-g\scientific-validation\scientific_validation_knowledge.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-DSV-20260802-0005
+spec_refs:
+- SPEC-012
+- SPEC-060
+summary: Frozen Phase G conditioned feature frame and governed event-validation outputs
+  for the approved hypothesis set.
+tags:
+- datasetversion
+- internal_research_report
+- ingested
+tier: T2_SEMANTIC
+title: Campaign 0005 scientific validation dataset snapshot
+updated_at: '2026-08-02T02:18:14.160058+00:00'
+valid_from: '2026-08-02T02:18:14.160058+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []
