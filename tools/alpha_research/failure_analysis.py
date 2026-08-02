@@ -199,6 +199,21 @@ def prepare_phase_g_failure_analysis_artifacts(
     output_dir: Path,
 ) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
+    source_analysis_path = repo_root / PHASE_G_FAILURE_ANALYSIS_ANALYSIS
+    if source_analysis_path.is_file():
+        analysis = cast(dict[str, Any], json.loads(source_analysis_path.read_text(encoding="utf-8")))
+        analysis_path = output_dir / "failure_analysis_analysis.json"
+        knowledge_path = output_dir / "failure_analysis_knowledge.json"
+        write_json(analysis_path, analysis)
+        write_json(knowledge_path, _build_knowledge_pack(analysis))
+        return {
+            "analysis": analysis,
+            "paths": {
+                "analysis": str(analysis_path),
+                "knowledge": str(knowledge_path),
+            },
+        }
+
     validation_analysis = load_phase_g_scientific_validation_analysis(repo_root)
     validation_by_id = {
         item["hypothesis_id"]: item for item in validation_analysis["hypothesis_validations"]
@@ -898,10 +913,13 @@ def _event_returns(
     returns: list[float] = []
     last_exit = -1
     for loc in locs:
-        if loc <= last_exit or loc + hold_days >= len(frame):
+        loc_idx = int(loc)
+        if loc_idx <= last_exit or loc_idx + hold_days >= len(frame):
             continue
-        returns.append(float(frame.iloc[loc][f"forward_return_{hold_days}"]) * float(direction.iloc[loc]))
-        last_exit = loc + hold_days
+        returns.append(
+            float(frame.iloc[loc_idx][f"forward_return_{hold_days}"]) * float(direction.iloc[loc_idx])
+        )
+        last_exit = loc_idx + hold_days
     return np.asarray(returns, dtype=float)
 
 

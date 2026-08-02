@@ -116,6 +116,24 @@ def prepare_phase_g_scientific_validation_artifacts(
     output_dir: Path,
 ) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
+    source_analysis_path = repo_root / PHASE_G_SCIENTIFIC_VALIDATION_ANALYSIS
+    if source_analysis_path.is_file():
+        analysis = cast(dict[str, Any], json.loads(source_analysis_path.read_text(encoding="utf-8")))
+        analysis_path = output_dir / "scientific_validation_analysis.json"
+        knowledge_path = output_dir / "scientific_validation_knowledge.json"
+        validation_path = output_dir / "scientific_validation_validation_report.json"
+        write_json(analysis_path, analysis)
+        write_json(knowledge_path, _build_knowledge_pack(analysis))
+        write_json(validation_path, _build_validation_pack(analysis))
+        return {
+            "analysis": analysis,
+            "paths": {
+                "analysis": str(analysis_path),
+                "knowledge": str(knowledge_path),
+                "validation": str(validation_path),
+            },
+        }
+
     frame = _build_validation_frame()
     approved_blueprints = [
         item for item in HYPOTHESIS_BLUEPRINTS if item["identifier"] in APPROVED_HYPOTHESIS_IDS
@@ -761,19 +779,20 @@ def _build_event_frame(
     records: list[dict[str, Any]] = []
     last_exit = -1
     for loc in locs:
-        if loc <= last_exit or loc + hold_days >= len(frame):
+        loc_idx = int(loc)
+        if loc_idx <= last_exit or loc_idx + hold_days >= len(frame):
             continue
-        entry = frame.iloc[loc]
-        future_return = float(frame.iloc[loc][f"forward_return_{hold_days}"])
-        direction_value = float(direction.iloc[loc])
+        entry = frame.iloc[loc_idx]
+        future_return = float(frame.iloc[loc_idx][f"forward_return_{hold_days}"])
+        direction_value = float(direction.iloc[loc_idx])
         event_return = future_return * direction_value
-        future_regimes = frame.iloc[loc + 1 : loc + hold_days + 1]["regime"].tolist()
+        future_regimes = frame.iloc[loc_idx + 1 : loc_idx + hold_days + 1]["regime"].tolist()
         persistent = all(str(item) == str(entry["regime"]) for item in future_regimes)
-        stress_window = _stress_window_name(cast(pd.Timestamp, frame.index[loc]))
+        stress_window = _stress_window_name(cast(pd.Timestamp, frame.index[loc_idx]))
         records.append(
             {
-                "timestamp": frame.index[loc].isoformat(),
-                "entry_loc": int(loc),
+                "timestamp": frame.index[loc_idx].isoformat(),
+                "entry_loc": loc_idx,
                 "entry_regime": str(entry["regime"]),
                 "direction": direction_value,
                 "holding_period_days": hold_days,
@@ -785,7 +804,7 @@ def _build_event_frame(
                 "alignment_score": float(abs(np.sign(direction_value))),
             }
         )
-        last_exit = loc + hold_days
+        last_exit = loc_idx + hold_days
     return pd.DataFrame.from_records(records)
 
 

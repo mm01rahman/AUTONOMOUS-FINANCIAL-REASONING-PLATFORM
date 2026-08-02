@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
-from typing import cast
 
 import numpy as np
 import pandas as pd
@@ -44,15 +43,15 @@ FEATURE_COLUMNS: Sequence[str] = (
 def build_feature_frame(base: pd.DataFrame) -> pd.DataFrame:
     """Build deterministic feature frame and forward-return targets."""
     frame = base.copy()
-    close = cast("pd.Series[float]", frame["close"].astype(float))
-    high = cast("pd.Series[float]", frame["high"].astype(float))
-    low = cast("pd.Series[float]", frame["low"].astype(float))
-    dxy = cast("pd.Series[float]", frame["dxy_close"].astype(float))
-    fed_actual = cast("pd.Series[float]", frame["fed_actual"].astype(float))
-    fed_previous = cast("pd.Series[float]", frame["fed_previous"].astype(float))
-    yield_3m = cast("pd.Series[float]", frame["yield_3m"].astype(float))
-    yield_10y = cast("pd.Series[float]", frame["yield_10y"].astype(float))
-    yield_30y = cast("pd.Series[float]", frame["yield_30y"].astype(float))
+    close = frame["close"].astype(float)
+    high = frame["high"].astype(float)
+    low = frame["low"].astype(float)
+    dxy = frame["dxy_close"].astype(float)
+    fed_actual = frame["fed_actual"].astype(float)
+    fed_previous = frame["fed_previous"].astype(float)
+    yield_3m = frame["yield_3m"].astype(float)
+    yield_10y = frame["yield_10y"].astype(float)
+    yield_30y = frame["yield_30y"].astype(float)
 
     frame["xau_return_1"] = close.pct_change().fillna(0.0)
     frame["xau_return_5"] = close.pct_change(5).fillna(0.0)
