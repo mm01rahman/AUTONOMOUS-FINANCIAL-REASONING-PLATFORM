@@ -1044,3 +1044,42 @@ requirements:
       - "tests/unit/test_ikros_ingestion.py"
     verified_by:
       - "05-work-packages/WP-IMP-0046/evidence/EXEC-048.yaml"
+
+  - id: "NFR-054"
+    title: "IKROS Research Confidence Engine shall deterministically aggregate structured evidence into independent confidence dimensions and reproducible research quality indicators"
+    source: "SPEC-060 §8, §9 (AFRP-WP-IMP-0047)"
+    capability: "IKROS-CONFIDENCE"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/confidence/models.py"
+      - "tools/ikros/confidence/engine.py"
+      - "tests/unit/test_ikros_confidence.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0047/evidence/EXEC-049.yaml"
+
+  - id: "NFR-055"
+    title: "IKROS Research Confidence Engine shall propagate contradiction-aware confidence through the Knowledge Graph while tracking replication, append-only history, and deterministic audit trails"
+    source: "SPEC-060 §3, §8, §10 (AFRP-WP-IMP-0047)"
+    capability: "IKROS-CONFIDENCE"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/confidence/engine.py"
+      - "tools/ikros/confidence/persistence.py"
+      - "tools/ikros/confidence/validation.py"
+      - "tests/unit/test_ikros_confidence.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0047/evidence/EXEC-049.yaml"
+
+  - id: "NFR-056"
+    title: "IKROS Research Confidence Engine shall integrate confidence assessments with registries, Research Memory, the Institutional Query Engine, and deterministic YAML persistence without Runtime changes"
+    source: "SPEC-060 §8, §12 (AFRP-WP-IMP-0047)"
+    capability: "IKROS-CONFIDENCE"
+    status: "implemented"
+    artifacts:
+      - "tools/ikros/confidence/persistence.py"
+      - "tools/ikros/confidence/engine.py"
+      - "tools/ikros/__init__.py"
+      - "docs/ikros/RESEARCH_CONFIDENCE_ENGINE_GUIDE.md"
+      - "tests/unit/test_ikros_confidence.py"
+    verified_by:
+      - "05-work-packages/WP-IMP-0047/evidence/EXEC-049.yaml"

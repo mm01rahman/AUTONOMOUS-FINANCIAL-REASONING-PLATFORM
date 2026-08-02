@@ -537,3 +537,16 @@ capabilities:
       implements_req: ["NFR-051", "NFR-052", "NFR-053"]
       trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004", "ADR-IKROS-005"]
       trace_vvc: "TVM-001"
+
+  # -- Stage R -- IKROS Confidence & Evidence -----------------------------------
+  - id: "IKROS-CONFIDENCE"
+    version: "1.0"
+    title: "IKROS Institutional Research Confidence & Evidence Engine"
+    owner: "ARB"
+    status: "COMPLETE"
+    depends_on: ["IKROS-INGESTION"]
+    work_package: "WP-IMP-0047"
+    traceability:
+      implements_req: ["NFR-054", "NFR-055", "NFR-056"]
+      trace_adr: ["ADR-IKROS-001", "ADR-IKROS-002", "ADR-IKROS-003", "ADR-IKROS-004", "ADR-IKROS-005"]
+      trace_vvc: "TVM-001"
