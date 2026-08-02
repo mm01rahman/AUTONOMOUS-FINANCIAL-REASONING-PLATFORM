@@ -2957,3 +2957,14 @@
   timestamp: '2026-08-02T03:21:41.502816+00:00'
   version: '1.0'
   wp_ref: WP-IMP-0048
+- attributes: {}
+  confidence: 1.0
+  edge_id: IKROS-EDGE-20260802-0270
+  edge_type: PRODUCED
+  evidence_ref: ''
+  source_id: IKROS-RESEARCHCAMPAIGN-20260802-0019
+  spec_ref: SPEC-060
+  target_id: IKROS-CAMPAIGNREPORT-20260802-0019
+  timestamp: '2026-08-02T09:42:47.398926+00:00'
+  version: '1.0'
+  wp_ref: WP-IMP-0048

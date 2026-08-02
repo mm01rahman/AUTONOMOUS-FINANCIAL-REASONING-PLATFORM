@@ -1,0 +1,17 @@
+attributes:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0019
+  entity_type: CampaignCompletionReport
+  lifecycle_state: FAILED
+confidence: 0.5
+created_at: '2026-08-02T09:42:47.343407+00:00'
+ikros_id: IKROS-CAMPAIGNREPORT-20260802-0019
+label: 'DC2 Program A Phase 3: Institutional Cross-Asset Information Network completion
+  report'
+node_id: IKROS-CAMPAIGNREPORT-20260802-0019
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

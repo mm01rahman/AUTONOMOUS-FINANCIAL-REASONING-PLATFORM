@@ -1,0 +1,66 @@
+archived_at: null
+capability_refs:
+- IKROS-ORCHESTRATOR
+confidence: 0.5
+created_at: '2026-08-02T09:42:47.388927+00:00'
+dependency_ids: []
+entity_type: CampaignCompletionReport
+evidence_refs: []
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0019
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260802-0025
+payload:
+  audit_ids:
+  - IKROS-CAMPAIGNAUDIT-20260802-0280
+  - IKROS-CAMPAIGNAUDIT-20260802-0281
+  - IKROS-CAMPAIGNAUDIT-20260802-0282
+  - IKROS-CAMPAIGNAUDIT-20260802-0283
+  - IKROS-CAMPAIGNAUDIT-20260802-0284
+  - IKROS-CAMPAIGNAUDIT-20260802-0285
+  - IKROS-CAMPAIGNAUDIT-20260802-0286
+  blocked_task_ids:
+  - IKROS-RESEARCHTASK-20260802-0104
+  - IKROS-RESEARCHTASK-20260802-0110
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0019
+  campaign_type: RESEARCH_AUDIT
+  completed_task_ids: []
+  failed_task_ids:
+  - IKROS-RESEARCHTASK-20260802-0100
+  finished_at: '2026-08-02T09:42:47.343407+00:00'
+  lifecycle_state: FAILED
+  memory_record_ids: []
+  output_refs: []
+  progress:
+    blocked: 2
+    completed: 0
+    failed: 1
+    percent_complete: 0.0
+    skipped: 0
+    total: 3
+  report_id: IKROS-CAMPAIGNREPORT-20260802-0019
+  skipped_task_ids: []
+  started_at: '2026-08-02T09:42:43.732994+00:00'
+  summary: 'DC2 Program A Phase 3: Institutional Cross-Asset Information Network failed
+    after 1 task failures.'
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0019
+spec_refs:
+- SPEC-060
+summary: 'DC2 Program A Phase 3: Institutional Cross-Asset Information Network failed
+  after 1 task failures.'
+tags:
+- research-orchestrator
+- completion-report
+tier: T4_INSTITUTIONAL
+title: 'Completion report for DC2 Program A Phase 3: Institutional Cross-Asset Information
+  Network'
+updated_at: '2026-08-02T09:42:47.388927+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs:
+- WP-IMP-0048

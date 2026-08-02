@@ -1,0 +1,205 @@
+{
+  "centrality_overlap": {
+    "overall_top_relays": [
+      "dxy_return_5",
+      "macro_pressure",
+      "dxy_return_20"
+    ],
+    "overall_top_sinks": [
+      "dxy_return_20",
+      "forward_expectation",
+      "geo_severity"
+    ],
+    "overall_top_sources": [
+      "dxy_return_1",
+      "xau_return_1",
+      "macro_pressure"
+    ]
+  },
+  "mean_overlap": 0.8454,
+  "stable_edges": [
+    {
+      "edge": "dxy_return_20->dxy_return_5",
+      "presence_count": 12
+    },
+    {
+      "edge": "forward_expectation->dxy_return_5",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_20->macro_pressure",
+      "presence_count": 12
+    },
+    {
+      "edge": "forward_expectation->macro_pressure",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_1->macro_pressure",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_1->dxy_return_5",
+      "presence_count": 12
+    },
+    {
+      "edge": "macro_pressure->dxy_return_5",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_20->dxy_return_1",
+      "presence_count": 12
+    },
+    {
+      "edge": "forward_expectation->dxy_return_1",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_5->forward_expectation",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_5->dxy_return_20",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_20->forward_expectation",
+      "presence_count": 12
+    },
+    {
+      "edge": "forward_expectation->dxy_return_20",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_5->dxy_return_1",
+      "presence_count": 12
+    },
+    {
+      "edge": "macro_pressure->forward_expectation",
+      "presence_count": 12
+    },
+    {
+      "edge": "macro_pressure->dxy_return_20",
+      "presence_count": 12
+    },
+    {
+      "edge": "macro_pressure->dxy_return_1",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_5->macro_pressure",
+      "presence_count": 12
+    },
+    {
+      "edge": "macro_pressure->xau_return_1",
+      "presence_count": 12
+    },
+    {
+      "edge": "xau_return_1->dxy_return_1",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_1->dxy_return_20",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_1->forward_expectation",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_5->xau_return_1",
+      "presence_count": 12
+    },
+    {
+      "edge": "dxy_return_1->xau_return_1",
+      "presence_count": 12
+    },
+    {
+      "edge": "xau_return_1->dxy_return_5",
+      "presence_count": 12
+    },
+    {
+      "edge": "xau_return_1->macro_pressure",
+      "presence_count": 12
+    },
+    {
+      "edge": "geo_severity->dxy_return_5",
+      "presence_count": 11
+    },
+    {
+      "edge": "dxy_return_20->xau_return_1",
+      "presence_count": 11
+    },
+    {
+      "edge": "forward_expectation->xau_return_1",
+      "presence_count": 11
+    },
+    {
+      "edge": "dxy_return_20->geo_severity",
+      "presence_count": 10
+    },
+    {
+      "edge": "forward_expectation->geo_severity",
+      "presence_count": 10
+    },
+    {
+      "edge": "macro_pressure->geo_severity",
+      "presence_count": 10
+    },
+    {
+      "edge": "xau_return_1->dxy_return_20",
+      "presence_count": 10
+    },
+    {
+      "edge": "xau_return_1->forward_expectation",
+      "presence_count": 10
+    },
+    {
+      "edge": "geo_severity->dxy_return_1",
+      "presence_count": 10
+    },
+    {
+      "edge": "xau_return_1->geo_severity",
+      "presence_count": 10
+    },
+    {
+      "edge": "geo_severity->macro_pressure",
+      "presence_count": 10
+    },
+    {
+      "edge": "dxy_return_5->geo_severity",
+      "presence_count": 9
+    },
+    {
+      "edge": "geo_severity->dxy_return_20",
+      "presence_count": 8
+    },
+    {
+      "edge": "geo_severity->forward_expectation",
+      "presence_count": 8
+    },
+    {
+      "edge": "dxy_return_1->geo_severity",
+      "presence_count": 7
+    },
+    {
+      "edge": "geo_severity->xau_return_1",
+      "presence_count": 7
+    }
+  ],
+  "topology_overlap": {
+    "bear_unwind": 0.9524,
+    "bull_trend": 0.9756,
+    "calm_carry": 0.9762,
+    "crisis_dislocation": 0.881,
+    "fed_surprise_events": 0.0,
+    "geopolitical_stress_events": 0.9512,
+    "global_financial_crisis": 0.9756,
+    "gold_liquidation_2013": 0.8333,
+    "inflation_repricing_2022": 0.9268,
+    "macro_pressure_events": 0.9286,
+    "macro_transition": 0.9286,
+    "pandemic_2020": 0.7317,
+    "range_compression": 0.9286
+  }
+}

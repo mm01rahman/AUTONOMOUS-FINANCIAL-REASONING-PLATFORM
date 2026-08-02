@@ -1,0 +1,28 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0019",
+  "n_communities": 5,
+  "n_edges": 41,
+  "n_feedback_loops": 15,
+  "n_nodes": 11,
+  "phase": "DC2_PROGRAM_A_PHASE3",
+  "reports": {
+    "arb_network_recommendation": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\ARB_NETWORK_RECOMMENDATION.md",
+    "arb_network_recommendation_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\arb_network_recommendation.json",
+    "centrality_analysis": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\CENTRALITY_ANALYSIS.md",
+    "centrality_analysis_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\centrality_analysis.json",
+    "community_detection": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\COMMUNITY_DETECTION.md",
+    "dynamic_network_graph": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\DYNAMIC_NETWORK_GRAPH.md",
+    "dynamic_network_graph_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\dynamic_network_graph.json",
+    "edge_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\CONFIDENCE_WEIGHTED_EDGE_REGISTRY.md",
+    "edge_registry_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\confidence_weighted_edge_registry.json",
+    "event_topology_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\event_topology.json",
+    "information_flow_hierarchy": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\INFORMATION_FLOW_HIERARCHY.md",
+    "network_stability_analysis": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\NETWORK_STABILITY_ANALYSIS.md",
+    "network_stability_analysis_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\network_stability_analysis.json",
+    "regime_network_atlas": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\REGIME_SPECIFIC_NETWORK_ATLAS.md",
+    "regime_network_atlas_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\regime_network_atlas.json",
+    "stress_topology_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\stress_topology.json",
+    "temporal_influence_network": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\TEMPORAL_INFLUENCE_NETWORK.md",
+    "temporal_influence_network_json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\discovery-cycle-2\\research-program-a-phase3\\temporal_influence_network.json"
+  }
+}
