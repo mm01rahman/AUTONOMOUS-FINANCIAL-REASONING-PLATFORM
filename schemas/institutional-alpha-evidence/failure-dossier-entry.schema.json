@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "expected_information_gain": {
+      "type": "string"
+    },
+    "failure_class": {
+      "enum": [
+        "Evidence Failure",
+        "Observation Failure",
+        "Proxy Failure",
+        "Feature Failure",
+        "Regime Failure",
+        "Statistical Failure",
+        "Economic Failure",
+        "Concept Drift",
+        "Architecture Limitation",
+        "Data Limitation"
+      ],
+      "type": "string"
+    },
+    "recommended_dataset_acquisitions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "recommended_experiments": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "root_cause": {
+      "type": "string"
+    },
+    "supporting_evidence": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "failure_class",
+    "root_cause",
+    "supporting_evidence",
+    "recommended_experiments",
+    "recommended_dataset_acquisitions",
+    "expected_information_gain"
+  ],
+  "title": "Institutional Alpha Failure Dossier Entry",
+  "type": "object"
+}

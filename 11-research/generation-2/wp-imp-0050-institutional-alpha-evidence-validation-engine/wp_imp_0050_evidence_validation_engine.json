@@ -1,0 +1,869 @@
+{
+  "arb_recommendation": {
+    "execute_batch_2_now": false,
+    "promote_any_alpha_now": false,
+    "recommended_next_action": "Approve focused observation/data remediation for blocked mechanisms, then run WP-IMP-0051 evidence execution for approved families only."
+  },
+  "blocked_on_observation_completeness": [
+    "IKROS-ALPHA-DC3-20260802-0009"
+  ],
+  "confidence_reports": [
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "contradictory_evidence": 0,
+      "delta": 0.0067,
+      "direction": "INCREASE",
+      "evidence_quality": 0.5377,
+      "evidence_weight": 0.6568,
+      "independent_confirmations": 5,
+      "independent_failures": 0,
+      "posterior": 0.6067,
+      "prior": 0.6,
+      "replication_count": 1,
+      "supporting_evidence": 9
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "contradictory_evidence": 5,
+      "delta": -0.1498,
+      "direction": "DECREASE",
+      "evidence_quality": 0.3221,
+      "evidence_weight": 0.362,
+      "independent_confirmations": 0,
+      "independent_failures": 5,
+      "posterior": 0.4402,
+      "prior": 0.59,
+      "replication_count": 1,
+      "supporting_evidence": 2
+    }
+  ],
+  "engine_architecture": {
+    "design": "Configuration-driven deterministic evidence pipeline",
+    "engine_id": "AFRP-GEN2-EVIDENCE-ENGINE-1.0.0",
+    "failure_taxonomy": [
+      "Evidence Failure",
+      "Observation Failure",
+      "Proxy Failure",
+      "Feature Failure",
+      "Regime Failure",
+      "Statistical Failure",
+      "Economic Failure",
+      "Concept Drift",
+      "Architecture Limitation",
+      "Data Limitation"
+    ],
+    "no_promotion_policy": "Institutional Alpha promotion prohibited in WP-IMP-0050.",
+    "pipeline_stages": [
+      "Evidence Sufficiency Check",
+      "Observation Completeness Check",
+      "Scientific Validation",
+      "Economic Validation",
+      "Cross-Asset Validation",
+      "Regime Validation",
+      "Robustness Analysis",
+      "Concept Drift Analysis",
+      "Failure Analysis",
+      "Confidence Update",
+      "IKROS Update",
+      "ARB Recommendation"
+    ],
+    "promotion_states": [
+      "DISCOVERED",
+      "RESEARCH",
+      "READY_FOR_REVALIDATION",
+      "VALIDATED",
+      "PROMOTION_REVIEW"
+    ]
+  },
+  "evidence_ledger": [
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "confidence": 0.6067,
+      "contradictory_evidence": [],
+      "evidence_quality": 0.5377,
+      "evidence_weight": 0.6568,
+      "independent_confirmations": 5,
+      "independent_failures": 0,
+      "lineage": {
+        "source_phase4": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\dc3_phase4_batch1_validation.json",
+        "source_phase5": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\dc3_phase5_revision_analysis.json"
+      },
+      "replication_count": 1,
+      "supporting_evidence": [
+        "IKROS-ALPHA-DC3-20260802-0006::bootstrap",
+        "IKROS-ALPHA-DC3-20260802-0006::historical_replay",
+        "IKROS-ALPHA-DC3-20260802-0006::monte_carlo",
+        "IKROS-ALPHA-DC3-20260802-0006::nested_walk_forward",
+        "IKROS-ALPHA-DC3-20260802-0006::out_of_sample_validation",
+        "IKROS-ALPHA-DC3-20260802-0006::probabilistic_sharpe_ratio",
+        "IKROS-ALPHA-DC3-20260802-0006::probability_of_backtest_overfitting",
+        "IKROS-ALPHA-DC3-20260802-0006::stability_analysis",
+        "IKROS-ALPHA-DC3-20260802-0006::walk_forward_validation"
+      ]
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "confidence": 0.4402,
+      "contradictory_evidence": [
+        "IKROS-ALPHA-DC3-20260802-0009::concept_drift_detection",
+        "IKROS-ALPHA-DC3-20260802-0009::deflated_sharpe_ratio",
+        "IKROS-ALPHA-DC3-20260802-0009::sensitivity_analysis",
+        "IKROS-ALPHA-DC3-20260802-0009::spa_test",
+        "IKROS-ALPHA-DC3-20260802-0009::whites_reality_check"
+      ],
+      "evidence_quality": 0.3221,
+      "evidence_weight": 0.362,
+      "independent_confirmations": 0,
+      "independent_failures": 5,
+      "lineage": {
+        "source_phase4": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\dc3_phase4_batch1_validation.json",
+        "source_phase5": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\dc3_phase5_revision_analysis.json"
+      },
+      "replication_count": 1,
+      "supporting_evidence": [
+        "IKROS-ALPHA-DC3-20260802-0009::bootstrap",
+        "IKROS-ALPHA-DC3-20260802-0009::walk_forward_validation"
+      ]
+    }
+  ],
+  "failure_dossiers": [
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "failures": [
+        {
+          "expected_information_gain": "MEDIUM",
+          "failure_class": "Evidence Failure",
+          "recommended_dataset_acquisitions": [
+            {
+              "gap": "VIX daily series",
+              "impact": "Required for composite_stress_index; currently absent from standard dataset.",
+              "priority": "HIGH"
+            },
+            {
+              "gap": "TED spread daily series",
+              "impact": "Systemic liquidity stress proxy; required for multi-channel composite index.",
+              "priority": "HIGH"
+            },
+            {
+              "gap": "Gold ETF flow proxy (GLD shares outstanding)",
+              "impact": "Institutional demand proxy currently missing; needed to validate activation cascade.",
+              "priority": "MEDIUM"
+            }
+          ],
+          "recommended_experiments": [],
+          "root_cause": "Phase 5 revision identified unsupported assumptions.",
+          "supporting_evidence": [
+            {
+              "assumption": "Safe-haven trigger is stable across all post-2010 regimes.",
+              "failure_evidence": "Concept drift detector flags structural break post-2020. COVID-era and post-pandemic regimes show materially different trigger dynamics.",
+              "priority": "HIGH",
+              "revision_action": "REDESIGN_TRIGGER"
+            },
+            {
+              "assumption": "Static trigger threshold remains valid under all volatility environments.",
+              "failure_evidence": "Sensitivity analysis shows result inversion under \u00b120% parameter shift in trigger threshold. Threshold is non-stationary.",
+              "priority": "HIGH",
+              "revision_action": "REPLACE_WITH_REGIME_CONDITIONAL_THRESHOLD"
+            },
+            {
+              "assumption": "White's Reality Check and SPA test will confirm edge over benchmark ensemble.",
+              "failure_evidence": "White's RC p=0.09, SPA p=0.11 \u2014 borderline. Insufficient to confirm mechanism survives multiple-hypothesis correction.",
+              "priority": "MEDIUM",
+              "revision_action": "EXPAND_DATASET_AND_RETEST"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "failures": [
+        {
+          "expected_information_gain": "HIGH",
+          "failure_class": "Observation Failure",
+          "recommended_dataset_acquisitions": [
+            "institutional inventory transitions",
+            "intraday dealer positioning dynamics",
+            "high-resolution policy surprise features"
+          ],
+          "recommended_experiments": [
+            "Design observability stress replay over missing institutional-state windows.",
+            "Run proxy-vs-direct-feature ablation to isolate observation loss."
+          ],
+          "root_cause": "Observation completeness below minimum threshold.",
+          "supporting_evidence": [
+            "observation_completeness=0.67",
+            "threshold=0.7"
+          ]
+        },
+        {
+          "expected_information_gain": "MEDIUM",
+          "failure_class": "Concept Drift",
+          "recommended_dataset_acquisitions": [],
+          "recommended_experiments": [
+            "Add rolling drift diagnostics with sub-regime segmentation.",
+            "Run change-point robustness audit for mechanism triggers."
+          ],
+          "root_cause": "Mechanism behavior unstable across post-2019 regimes.",
+          "supporting_evidence": [
+            "concept_drift_detection=FAIL",
+            "stability degradation across post-2020 intervals"
+          ]
+        },
+        {
+          "expected_information_gain": "HIGH",
+          "failure_class": "Statistical Failure",
+          "recommended_dataset_acquisitions": [],
+          "recommended_experiments": [
+            "Re-run mechanism under stricter CPCV and anti-leakage controls.",
+            "Estimate confidence with wider null ensembles and adversarial baselines."
+          ],
+          "root_cause": "Critical multiple-hypothesis robustness tests fail.",
+          "supporting_evidence": [
+            "failing_methods=['deflated_sharpe_ratio', 'spa_test', 'whites_reality_check']"
+          ]
+        },
+        {
+          "expected_information_gain": "HIGH",
+          "failure_class": "Proxy Failure",
+          "recommended_dataset_acquisitions": [
+            "institutional inventory transitions",
+            "intraday dealer positioning dynamics",
+            "high-resolution policy surprise features"
+          ],
+          "recommended_experiments": [
+            "Replace high-impact proxy features with directly observed variables.",
+            "Perform leave-proxy-out robustness tests."
+          ],
+          "root_cause": "Proxy dependence remains too high for institutional confidence.",
+          "supporting_evidence": [
+            "proxy_dependence=0.58"
+          ]
+        },
+        {
+          "expected_information_gain": "MEDIUM",
+          "failure_class": "Evidence Failure",
+          "recommended_dataset_acquisitions": [
+            {
+              "gap": "Intra-day order flow imbalance proxy",
+              "impact": "Required for proposed cascade-initiator replacement proxy.",
+              "priority": "HIGH"
+            },
+            {
+              "gap": "Options market pressure proxy (GVZ or similar)",
+              "impact": "Optionality pressure indicator for cascade initiation signal.",
+              "priority": "HIGH"
+            },
+            {
+              "gap": "Regime-specific XAU/USD micro-structure data",
+              "impact": "Decision cascade hypothesis requires micro-structure evidence to validate.",
+              "priority": "MEDIUM"
+            }
+          ],
+          "recommended_experiments": [],
+          "root_cause": "Phase 5 revision identified unsupported assumptions.",
+          "supporting_evidence": [
+            {
+              "assumption": "Cascade initiator proxy reliably identifies HF-driven decision cascades in XAU/USD.",
+              "failure_evidence": "Sensitivity analysis: results invert under \u00b115% shift. CPCV reveals ecology-proxy leakage. Proxy is unreliable.",
+              "priority": "HIGH",
+              "revision_action": "REPLACE_PROXY"
+            },
+            {
+              "assumption": "Decision cascade patterns are temporally stable across pre- and post-2019 market structure.",
+              "failure_evidence": "Concept drift: significant structural break detected post-2019. Mechanism strength is highly period-dependent.",
+              "priority": "HIGH",
+              "revision_action": "RESTRICT_TO_VALIDATED_REGIME"
+            },
+            {
+              "assumption": "Cascade mechanism survives multiple-hypothesis benchmark correction.",
+              "failure_evidence": "White's RC p=0.18, SPA p=0.21. Mechanism does not outperform benchmark ensemble under MC correction.",
+              "priority": "HIGH",
+              "revision_action": "REDESIGN_OR_RESEARCH"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ikros_graph_payload": {
+    "batch_node_id": "IKROS-GEN2-WP0050-CONCLUSION-20260803-0001",
+    "edges": [
+      {
+        "confidence": 0.6067,
+        "relation": "VALIDATED_BY",
+        "source": "IKROS-ALPHA-DC3-20260802-0006",
+        "target": "IKROS-GEN2-WP0050-VALID-0006"
+      },
+      {
+        "confidence": 0.72,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-GEN2-WP0050-VALID-0006",
+        "target": "IKROS-GEN2-WP0050-CONCLUSION-20260803-0001"
+      },
+      {
+        "confidence": 0.4402,
+        "relation": "VALIDATED_BY",
+        "source": "IKROS-ALPHA-DC3-20260802-0009",
+        "target": "IKROS-GEN2-WP0050-VALID-0009"
+      },
+      {
+        "confidence": 0.72,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-GEN2-WP0050-VALID-0009",
+        "target": "IKROS-GEN2-WP0050-CONCLUSION-20260803-0001"
+      }
+    ],
+    "nodes": [
+      {
+        "confidence": 0.74,
+        "label": "Generation 2 WP-IMP-0050 Evidence Engine Completion",
+        "node_id": "IKROS-GEN2-WP0050-CONCLUSION-20260803-0001",
+        "node_type": "RESEARCH_CONCLUSION"
+      },
+      {
+        "confidence": 0.6067,
+        "label": "WP-IMP-0050 Validation Dossier IKROS-ALPHA-DC3-20260802-0006",
+        "node_id": "IKROS-GEN2-WP0050-VALID-0006",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.4402,
+        "label": "WP-IMP-0050 Validation Dossier IKROS-ALPHA-DC3-20260802-0009",
+        "node_id": "IKROS-GEN2-WP0050-VALID-0009",
+        "node_type": "VALIDATION"
+      }
+    ]
+  },
+  "mechanism_dossiers": [
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "confidence_update": {
+        "contradictory_evidence": 0,
+        "delta": 0.0067,
+        "direction": "INCREASE",
+        "evidence_quality": 0.5377,
+        "evidence_weight": 0.6568,
+        "independent_confirmations": 5,
+        "independent_failures": 0,
+        "posterior": 0.6067,
+        "prior": 0.6,
+        "replication_count": 1,
+        "supporting_evidence": 9
+      },
+      "evidence_check": {
+        "evidence_quality": 0.5377,
+        "method_count": 17,
+        "method_pass_rate": 0.5294,
+        "reason": "Evidence set satisfies minimum quality and method completeness.",
+        "status": "PASS",
+        "threshold": 0.2
+      },
+      "evidence_ledger_entry": {
+        "confidence": 0.6067,
+        "contradictory_evidence": [],
+        "evidence_quality": 0.5377,
+        "evidence_weight": 0.6568,
+        "independent_confirmations": 5,
+        "independent_failures": 0,
+        "lineage": {
+          "source_phase4": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\dc3_phase4_batch1_validation.json",
+          "source_phase5": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\dc3_phase5_revision_analysis.json"
+        },
+        "replication_count": 1,
+        "supporting_evidence": [
+          "IKROS-ALPHA-DC3-20260802-0006::bootstrap",
+          "IKROS-ALPHA-DC3-20260802-0006::historical_replay",
+          "IKROS-ALPHA-DC3-20260802-0006::monte_carlo",
+          "IKROS-ALPHA-DC3-20260802-0006::nested_walk_forward",
+          "IKROS-ALPHA-DC3-20260802-0006::out_of_sample_validation",
+          "IKROS-ALPHA-DC3-20260802-0006::probabilistic_sharpe_ratio",
+          "IKROS-ALPHA-DC3-20260802-0006::probability_of_backtest_overfitting",
+          "IKROS-ALPHA-DC3-20260802-0006::stability_analysis",
+          "IKROS-ALPHA-DC3-20260802-0006::walk_forward_validation"
+        ]
+      },
+      "failure_dossier": [
+        {
+          "expected_information_gain": "MEDIUM",
+          "failure_class": "Evidence Failure",
+          "recommended_dataset_acquisitions": [
+            {
+              "gap": "VIX daily series",
+              "impact": "Required for composite_stress_index; currently absent from standard dataset.",
+              "priority": "HIGH"
+            },
+            {
+              "gap": "TED spread daily series",
+              "impact": "Systemic liquidity stress proxy; required for multi-channel composite index.",
+              "priority": "HIGH"
+            },
+            {
+              "gap": "Gold ETF flow proxy (GLD shares outstanding)",
+              "impact": "Institutional demand proxy currently missing; needed to validate activation cascade.",
+              "priority": "MEDIUM"
+            }
+          ],
+          "recommended_experiments": [],
+          "root_cause": "Phase 5 revision identified unsupported assumptions.",
+          "supporting_evidence": [
+            {
+              "assumption": "Safe-haven trigger is stable across all post-2010 regimes.",
+              "failure_evidence": "Concept drift detector flags structural break post-2020. COVID-era and post-pandemic regimes show materially different trigger dynamics.",
+              "priority": "HIGH",
+              "revision_action": "REDESIGN_TRIGGER"
+            },
+            {
+              "assumption": "Static trigger threshold remains valid under all volatility environments.",
+              "failure_evidence": "Sensitivity analysis shows result inversion under \u00b120% parameter shift in trigger threshold. Threshold is non-stationary.",
+              "priority": "HIGH",
+              "revision_action": "REPLACE_WITH_REGIME_CONDITIONAL_THRESHOLD"
+            },
+            {
+              "assumption": "White's Reality Check and SPA test will confirm edge over benchmark ensemble.",
+              "failure_evidence": "White's RC p=0.09, SPA p=0.11 \u2014 borderline. Insufficient to confirm mechanism survives multiple-hypothesis correction.",
+              "priority": "MEDIUM",
+              "revision_action": "EXPAND_DATASET_AND_RETEST"
+            }
+          ]
+        }
+      ],
+      "family_id": "FAM-003",
+      "lineage": {
+        "phase4_confidence_posterior": 0.5866,
+        "phase4_outcome": "RESEARCH",
+        "phase5_revision_present": true
+      },
+      "mechanism_type": "safe_haven_migration",
+      "observation_check": {
+        "dataset_sufficiency": "PARTIAL",
+        "missing_critical_datasets": [
+          "high-frequency funding stress",
+          "deep options-implied skew surfaces"
+        ],
+        "notes": "Core macro/flow coverage is present; stress microstructure remains proxied.",
+        "observation_completeness": 0.76,
+        "proxy_dependence": 0.41,
+        "status": "PASS",
+        "threshold": 0.7
+      },
+      "pipeline": [
+        {
+          "stage": "Evidence Sufficiency Check",
+          "status": "PASS"
+        },
+        {
+          "stage": "Observation Completeness Check",
+          "status": "PASS"
+        },
+        {
+          "stage": "Scientific Validation",
+          "status": "PASS"
+        },
+        {
+          "stage": "Economic Validation",
+          "status": "PASS"
+        },
+        {
+          "stage": "Cross-Asset Validation",
+          "status": "PASS"
+        },
+        {
+          "stage": "Regime Validation",
+          "status": "PASS"
+        },
+        {
+          "stage": "Robustness Analysis",
+          "status": "PASS"
+        },
+        {
+          "stage": "Concept Drift Analysis",
+          "status": "PASS"
+        },
+        {
+          "stage": "Failure Analysis",
+          "status": "PASS"
+        },
+        {
+          "stage": "Confidence Update",
+          "status": "PASS"
+        },
+        {
+          "stage": "IKROS Update",
+          "status": "PASS"
+        },
+        {
+          "stage": "ARB Recommendation",
+          "status": "PASS"
+        }
+      ],
+      "promotion_state": {
+        "allowed_states": [
+          "DISCOVERED",
+          "RESEARCH",
+          "READY_FOR_REVALIDATION",
+          "VALIDATED",
+          "PROMOTION_REVIEW"
+        ],
+        "next_state": "RESEARCH",
+        "rationale": "Evidence insufficient for validated transition."
+      },
+      "scorecard": {
+        "concept_drift": 0.51,
+        "cross_asset_consistency": 0.59,
+        "economic_plausibility": 0.63,
+        "evidence_completeness": 0.5377,
+        "expected_capacity": 0.55,
+        "explainability": 0.6,
+        "failure_severity": 0.2,
+        "generalization": 0.5,
+        "institutional_confidence": 0.5902,
+        "observation_completeness": 0.76,
+        "proxy_dependence": 0.41,
+        "regime_stability": 0.56,
+        "robustness": 0.52,
+        "scientific_validity": 0.61,
+        "statistical_quality": 0.7176
+      }
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "confidence_update": {
+        "contradictory_evidence": 5,
+        "delta": -0.1498,
+        "direction": "DECREASE",
+        "evidence_quality": 0.3221,
+        "evidence_weight": 0.362,
+        "independent_confirmations": 0,
+        "independent_failures": 5,
+        "posterior": 0.4402,
+        "prior": 0.59,
+        "replication_count": 1,
+        "supporting_evidence": 2
+      },
+      "evidence_check": {
+        "evidence_quality": 0.3221,
+        "method_count": 17,
+        "method_pass_rate": 0.1176,
+        "reason": "Evidence set satisfies minimum quality and method completeness.",
+        "status": "PASS",
+        "threshold": 0.2
+      },
+      "evidence_ledger_entry": {
+        "confidence": 0.4402,
+        "contradictory_evidence": [
+          "IKROS-ALPHA-DC3-20260802-0009::concept_drift_detection",
+          "IKROS-ALPHA-DC3-20260802-0009::deflated_sharpe_ratio",
+          "IKROS-ALPHA-DC3-20260802-0009::sensitivity_analysis",
+          "IKROS-ALPHA-DC3-20260802-0009::spa_test",
+          "IKROS-ALPHA-DC3-20260802-0009::whites_reality_check"
+        ],
+        "evidence_quality": 0.3221,
+        "evidence_weight": 0.362,
+        "independent_confirmations": 0,
+        "independent_failures": 5,
+        "lineage": {
+          "source_phase4": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\dc3_phase4_batch1_validation.json",
+          "source_phase5": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\dc3_phase5_revision_analysis.json"
+        },
+        "replication_count": 1,
+        "supporting_evidence": [
+          "IKROS-ALPHA-DC3-20260802-0009::bootstrap",
+          "IKROS-ALPHA-DC3-20260802-0009::walk_forward_validation"
+        ]
+      },
+      "failure_dossier": [
+        {
+          "expected_information_gain": "HIGH",
+          "failure_class": "Observation Failure",
+          "recommended_dataset_acquisitions": [
+            "institutional inventory transitions",
+            "intraday dealer positioning dynamics",
+            "high-resolution policy surprise features"
+          ],
+          "recommended_experiments": [
+            "Design observability stress replay over missing institutional-state windows.",
+            "Run proxy-vs-direct-feature ablation to isolate observation loss."
+          ],
+          "root_cause": "Observation completeness below minimum threshold.",
+          "supporting_evidence": [
+            "observation_completeness=0.67",
+            "threshold=0.7"
+          ]
+        },
+        {
+          "expected_information_gain": "MEDIUM",
+          "failure_class": "Concept Drift",
+          "recommended_dataset_acquisitions": [],
+          "recommended_experiments": [
+            "Add rolling drift diagnostics with sub-regime segmentation.",
+            "Run change-point robustness audit for mechanism triggers."
+          ],
+          "root_cause": "Mechanism behavior unstable across post-2019 regimes.",
+          "supporting_evidence": [
+            "concept_drift_detection=FAIL",
+            "stability degradation across post-2020 intervals"
+          ]
+        },
+        {
+          "expected_information_gain": "HIGH",
+          "failure_class": "Statistical Failure",
+          "recommended_dataset_acquisitions": [],
+          "recommended_experiments": [
+            "Re-run mechanism under stricter CPCV and anti-leakage controls.",
+            "Estimate confidence with wider null ensembles and adversarial baselines."
+          ],
+          "root_cause": "Critical multiple-hypothesis robustness tests fail.",
+          "supporting_evidence": [
+            "failing_methods=['deflated_sharpe_ratio', 'spa_test', 'whites_reality_check']"
+          ]
+        },
+        {
+          "expected_information_gain": "HIGH",
+          "failure_class": "Proxy Failure",
+          "recommended_dataset_acquisitions": [
+            "institutional inventory transitions",
+            "intraday dealer positioning dynamics",
+            "high-resolution policy surprise features"
+          ],
+          "recommended_experiments": [
+            "Replace high-impact proxy features with directly observed variables.",
+            "Perform leave-proxy-out robustness tests."
+          ],
+          "root_cause": "Proxy dependence remains too high for institutional confidence.",
+          "supporting_evidence": [
+            "proxy_dependence=0.58"
+          ]
+        },
+        {
+          "expected_information_gain": "MEDIUM",
+          "failure_class": "Evidence Failure",
+          "recommended_dataset_acquisitions": [
+            {
+              "gap": "Intra-day order flow imbalance proxy",
+              "impact": "Required for proposed cascade-initiator replacement proxy.",
+              "priority": "HIGH"
+            },
+            {
+              "gap": "Options market pressure proxy (GVZ or similar)",
+              "impact": "Optionality pressure indicator for cascade initiation signal.",
+              "priority": "HIGH"
+            },
+            {
+              "gap": "Regime-specific XAU/USD micro-structure data",
+              "impact": "Decision cascade hypothesis requires micro-structure evidence to validate.",
+              "priority": "MEDIUM"
+            }
+          ],
+          "recommended_experiments": [],
+          "root_cause": "Phase 5 revision identified unsupported assumptions.",
+          "supporting_evidence": [
+            {
+              "assumption": "Cascade initiator proxy reliably identifies HF-driven decision cascades in XAU/USD.",
+              "failure_evidence": "Sensitivity analysis: results invert under \u00b115% shift. CPCV reveals ecology-proxy leakage. Proxy is unreliable.",
+              "priority": "HIGH",
+              "revision_action": "REPLACE_PROXY"
+            },
+            {
+              "assumption": "Decision cascade patterns are temporally stable across pre- and post-2019 market structure.",
+              "failure_evidence": "Concept drift: significant structural break detected post-2019. Mechanism strength is highly period-dependent.",
+              "priority": "HIGH",
+              "revision_action": "RESTRICT_TO_VALIDATED_REGIME"
+            },
+            {
+              "assumption": "Cascade mechanism survives multiple-hypothesis benchmark correction.",
+              "failure_evidence": "White's RC p=0.18, SPA p=0.21. Mechanism does not outperform benchmark ensemble under MC correction.",
+              "priority": "HIGH",
+              "revision_action": "REDESIGN_OR_RESEARCH"
+            }
+          ]
+        }
+      ],
+      "family_id": "FAM-006",
+      "lineage": {
+        "phase4_confidence_posterior": 0.4351,
+        "phase4_outcome": "RESEARCH",
+        "phase5_revision_present": true
+      },
+      "mechanism_type": "decision_cascade",
+      "observation_check": {
+        "dataset_sufficiency": "INSUFFICIENT",
+        "missing_critical_datasets": [
+          "institutional inventory transitions",
+          "intraday dealer positioning dynamics",
+          "high-resolution policy surprise features"
+        ],
+        "notes": "Mechanism remains proxy-heavy with unresolved observability gaps.",
+        "observation_completeness": 0.67,
+        "proxy_dependence": 0.58,
+        "status": "FAIL",
+        "threshold": 0.7
+      },
+      "pipeline": [
+        {
+          "stage": "Evidence Sufficiency Check",
+          "status": "PASS"
+        },
+        {
+          "stage": "Observation Completeness Check",
+          "status": "FAIL"
+        },
+        {
+          "stage": "Scientific Validation",
+          "status": "HALTED"
+        },
+        {
+          "stage": "Economic Validation",
+          "status": "HALTED"
+        },
+        {
+          "stage": "Cross-Asset Validation",
+          "status": "HALTED"
+        },
+        {
+          "stage": "Regime Validation",
+          "status": "HALTED"
+        },
+        {
+          "stage": "Robustness Analysis",
+          "status": "HALTED"
+        },
+        {
+          "stage": "Concept Drift Analysis",
+          "status": "HALTED"
+        },
+        {
+          "stage": "Failure Analysis",
+          "status": "PASS"
+        },
+        {
+          "stage": "Confidence Update",
+          "status": "PASS"
+        },
+        {
+          "stage": "IKROS Update",
+          "status": "PASS"
+        },
+        {
+          "stage": "ARB Recommendation",
+          "status": "PASS"
+        }
+      ],
+      "promotion_state": {
+        "allowed_states": [
+          "DISCOVERED",
+          "RESEARCH",
+          "READY_FOR_REVALIDATION",
+          "VALIDATED",
+          "PROMOTION_REVIEW"
+        ],
+        "next_state": "RESEARCH",
+        "rationale": "Observation completeness gate failed; validation halted by policy."
+      },
+      "scorecard": {
+        "concept_drift": 0.47,
+        "cross_asset_consistency": 0.5,
+        "economic_plausibility": 0.57,
+        "evidence_completeness": 0.3221,
+        "expected_capacity": 0.5,
+        "explainability": 0.51,
+        "failure_severity": 1.0,
+        "generalization": 0.46,
+        "institutional_confidence": 0.3212,
+        "observation_completeness": 0.67,
+        "proxy_dependence": 0.58,
+        "regime_stability": 0.51,
+        "robustness": 0.48,
+        "scientific_validity": 0.55,
+        "statistical_quality": 0.3529
+      }
+    }
+  ],
+  "no_promotion": true,
+  "program": "GENERATION_2_WP_IMP_0050",
+  "promotion_state_updates": [
+    {
+      "allowed_states": [
+        "DISCOVERED",
+        "RESEARCH",
+        "READY_FOR_REVALIDATION",
+        "VALIDATED",
+        "PROMOTION_REVIEW"
+      ],
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "next_state": "RESEARCH",
+      "rationale": "Evidence insufficient for validated transition."
+    },
+    {
+      "allowed_states": [
+        "DISCOVERED",
+        "RESEARCH",
+        "READY_FOR_REVALIDATION",
+        "VALIDATED",
+        "PROMOTION_REVIEW"
+      ],
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "next_state": "RESEARCH",
+      "rationale": "Observation completeness gate failed; validation halted by policy."
+    }
+  ],
+  "ready_for_revalidation": [],
+  "research_mechanisms": [
+    "IKROS-ALPHA-DC3-20260802-0006",
+    "IKROS-ALPHA-DC3-20260802-0009"
+  ],
+  "title": "Institutional Alpha Evidence & Validation Engine",
+  "validated_mechanisms": [],
+  "validation_pipeline": [
+    "Evidence Sufficiency Check",
+    "Observation Completeness Check",
+    "Scientific Validation",
+    "Economic Validation",
+    "Cross-Asset Validation",
+    "Regime Validation",
+    "Robustness Analysis",
+    "Concept Drift Analysis",
+    "Failure Analysis",
+    "Confidence Update",
+    "IKROS Update",
+    "ARB Recommendation"
+  ],
+  "validation_scorecards": [
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "concept_drift": 0.51,
+      "cross_asset_consistency": 0.59,
+      "economic_plausibility": 0.63,
+      "evidence_completeness": 0.5377,
+      "expected_capacity": 0.55,
+      "explainability": 0.6,
+      "failure_severity": 0.2,
+      "generalization": 0.5,
+      "institutional_confidence": 0.5902,
+      "observation_completeness": 0.76,
+      "proxy_dependence": 0.41,
+      "regime_stability": 0.56,
+      "robustness": 0.52,
+      "scientific_validity": 0.61,
+      "statistical_quality": 0.7176
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "concept_drift": 0.47,
+      "cross_asset_consistency": 0.5,
+      "economic_plausibility": 0.57,
+      "evidence_completeness": 0.3221,
+      "expected_capacity": 0.5,
+      "explainability": 0.51,
+      "failure_severity": 1.0,
+      "generalization": 0.46,
+      "institutional_confidence": 0.3212,
+      "observation_completeness": 0.67,
+      "proxy_dependence": 0.58,
+      "regime_stability": 0.51,
+      "robustness": 0.48,
+      "scientific_validity": 0.55,
+      "statistical_quality": 0.3529
+    }
+  ]
+}

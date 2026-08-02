@@ -1,0 +1,160 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "failures": [
+      {
+        "expected_information_gain": "MEDIUM",
+        "failure_class": "Evidence Failure",
+        "recommended_dataset_acquisitions": [
+          {
+            "gap": "VIX daily series",
+            "impact": "Required for composite_stress_index; currently absent from standard dataset.",
+            "priority": "HIGH"
+          },
+          {
+            "gap": "TED spread daily series",
+            "impact": "Systemic liquidity stress proxy; required for multi-channel composite index.",
+            "priority": "HIGH"
+          },
+          {
+            "gap": "Gold ETF flow proxy (GLD shares outstanding)",
+            "impact": "Institutional demand proxy currently missing; needed to validate activation cascade.",
+            "priority": "MEDIUM"
+          }
+        ],
+        "recommended_experiments": [],
+        "root_cause": "Phase 5 revision identified unsupported assumptions.",
+        "supporting_evidence": [
+          {
+            "assumption": "Safe-haven trigger is stable across all post-2010 regimes.",
+            "failure_evidence": "Concept drift detector flags structural break post-2020. COVID-era and post-pandemic regimes show materially different trigger dynamics.",
+            "priority": "HIGH",
+            "revision_action": "REDESIGN_TRIGGER"
+          },
+          {
+            "assumption": "Static trigger threshold remains valid under all volatility environments.",
+            "failure_evidence": "Sensitivity analysis shows result inversion under \u00b120% parameter shift in trigger threshold. Threshold is non-stationary.",
+            "priority": "HIGH",
+            "revision_action": "REPLACE_WITH_REGIME_CONDITIONAL_THRESHOLD"
+          },
+          {
+            "assumption": "White's Reality Check and SPA test will confirm edge over benchmark ensemble.",
+            "failure_evidence": "White's RC p=0.09, SPA p=0.11 \u2014 borderline. Insufficient to confirm mechanism survives multiple-hypothesis correction.",
+            "priority": "MEDIUM",
+            "revision_action": "EXPAND_DATASET_AND_RETEST"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+    "failures": [
+      {
+        "expected_information_gain": "HIGH",
+        "failure_class": "Observation Failure",
+        "recommended_dataset_acquisitions": [
+          "institutional inventory transitions",
+          "intraday dealer positioning dynamics",
+          "high-resolution policy surprise features"
+        ],
+        "recommended_experiments": [
+          "Design observability stress replay over missing institutional-state windows.",
+          "Run proxy-vs-direct-feature ablation to isolate observation loss."
+        ],
+        "root_cause": "Observation completeness below minimum threshold.",
+        "supporting_evidence": [
+          "observation_completeness=0.67",
+          "threshold=0.7"
+        ]
+      },
+      {
+        "expected_information_gain": "MEDIUM",
+        "failure_class": "Concept Drift",
+        "recommended_dataset_acquisitions": [],
+        "recommended_experiments": [
+          "Add rolling drift diagnostics with sub-regime segmentation.",
+          "Run change-point robustness audit for mechanism triggers."
+        ],
+        "root_cause": "Mechanism behavior unstable across post-2019 regimes.",
+        "supporting_evidence": [
+          "concept_drift_detection=FAIL",
+          "stability degradation across post-2020 intervals"
+        ]
+      },
+      {
+        "expected_information_gain": "HIGH",
+        "failure_class": "Statistical Failure",
+        "recommended_dataset_acquisitions": [],
+        "recommended_experiments": [
+          "Re-run mechanism under stricter CPCV and anti-leakage controls.",
+          "Estimate confidence with wider null ensembles and adversarial baselines."
+        ],
+        "root_cause": "Critical multiple-hypothesis robustness tests fail.",
+        "supporting_evidence": [
+          "failing_methods=['deflated_sharpe_ratio', 'spa_test', 'whites_reality_check']"
+        ]
+      },
+      {
+        "expected_information_gain": "HIGH",
+        "failure_class": "Proxy Failure",
+        "recommended_dataset_acquisitions": [
+          "institutional inventory transitions",
+          "intraday dealer positioning dynamics",
+          "high-resolution policy surprise features"
+        ],
+        "recommended_experiments": [
+          "Replace high-impact proxy features with directly observed variables.",
+          "Perform leave-proxy-out robustness tests."
+        ],
+        "root_cause": "Proxy dependence remains too high for institutional confidence.",
+        "supporting_evidence": [
+          "proxy_dependence=0.58"
+        ]
+      },
+      {
+        "expected_information_gain": "MEDIUM",
+        "failure_class": "Evidence Failure",
+        "recommended_dataset_acquisitions": [
+          {
+            "gap": "Intra-day order flow imbalance proxy",
+            "impact": "Required for proposed cascade-initiator replacement proxy.",
+            "priority": "HIGH"
+          },
+          {
+            "gap": "Options market pressure proxy (GVZ or similar)",
+            "impact": "Optionality pressure indicator for cascade initiation signal.",
+            "priority": "HIGH"
+          },
+          {
+            "gap": "Regime-specific XAU/USD micro-structure data",
+            "impact": "Decision cascade hypothesis requires micro-structure evidence to validate.",
+            "priority": "MEDIUM"
+          }
+        ],
+        "recommended_experiments": [],
+        "root_cause": "Phase 5 revision identified unsupported assumptions.",
+        "supporting_evidence": [
+          {
+            "assumption": "Cascade initiator proxy reliably identifies HF-driven decision cascades in XAU/USD.",
+            "failure_evidence": "Sensitivity analysis: results invert under \u00b115% shift. CPCV reveals ecology-proxy leakage. Proxy is unreliable.",
+            "priority": "HIGH",
+            "revision_action": "REPLACE_PROXY"
+          },
+          {
+            "assumption": "Decision cascade patterns are temporally stable across pre- and post-2019 market structure.",
+            "failure_evidence": "Concept drift: significant structural break detected post-2019. Mechanism strength is highly period-dependent.",
+            "priority": "HIGH",
+            "revision_action": "RESTRICT_TO_VALIDATED_REGIME"
+          },
+          {
+            "assumption": "Cascade mechanism survives multiple-hypothesis benchmark correction.",
+            "failure_evidence": "White's RC p=0.18, SPA p=0.21. Mechanism does not outperform benchmark ensemble under MC correction.",
+            "priority": "HIGH",
+            "revision_action": "REDESIGN_OR_RESEARCH"
+          }
+        ]
+      }
+    ]
+  }
+]
