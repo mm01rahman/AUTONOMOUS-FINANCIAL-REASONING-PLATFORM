@@ -1,0 +1,18 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Create mechanism-agnostic institutional alpha validation framework and
+    governance standards without validating any current alpha mechanism.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0027
+confidence: 0.0
+created_at: '2026-08-02T14:20:58.885993+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0027
+label: 'Discovery Cycle 3 Phase 2: Institutional Alpha Validation Framework'
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0027
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

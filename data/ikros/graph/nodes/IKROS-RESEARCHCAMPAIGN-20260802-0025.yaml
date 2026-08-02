@@ -1,0 +1,18 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Extract enduring scientific principles from Programs A-E into institutional
+    axioms, rejected principles, and future architecture constraints.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0025
+confidence: 0.0
+created_at: '2026-08-02T14:03:04.699324+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0025
+label: 'DC2 Program F Phase 1: Institutional Theory Extraction'
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0025
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

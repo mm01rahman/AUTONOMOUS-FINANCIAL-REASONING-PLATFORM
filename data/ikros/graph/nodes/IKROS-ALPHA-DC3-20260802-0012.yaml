@@ -1,0 +1,15 @@
+attributes:
+  mechanism_type: regime_transition_chain
+  status: DISCOVERED
+confidence: 0.58
+created_at: '2026-08-02T14:11:24.758367+00:00'
+ikros_id: IKROS-ALPHA-DC3-20260802-0012
+label: Institutional Regime Transition Chain Mechanism
+node_id: IKROS-ALPHA-DC3-20260802-0012
+node_type: ALPHA_CANDIDATE
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

@@ -1,0 +1,217 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0343
+- IKROS-CAMPAIGNAUDIT-20260802-0344
+- IKROS-CAMPAIGNAUDIT-20260802-0345
+- IKROS-CAMPAIGNAUDIT-20260802-0346
+- IKROS-CAMPAIGNAUDIT-20260802-0347
+- IKROS-CAMPAIGNAUDIT-20260802-0348
+- IKROS-CAMPAIGNAUDIT-20260802-0349
+- IKROS-CAMPAIGNAUDIT-20260802-0350
+- IKROS-CAMPAIGNAUDIT-20260802-0351
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0026
+campaign_type: RESEARCH_AUDIT
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0026
+created_at: '2026-08-02T14:11:15.431140+00:00'
+evidence_refs: []
+failure_policy: CONTINUE
+finished_at: '2026-08-02T14:11:21.249161+00:00'
+lifecycle_state: FAILED
+objective: Discover and prioritize institutionally explainable alpha mechanisms from
+  governed knowledge without validation, optimization, or strategy construction.
+pipeline:
+  deterministic: true
+  name: RESEARCH_AUDIT pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0026
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0121
+  - IKROS-RESEARCHTASK-20260802-0125
+  - IKROS-RESEARCHTASK-20260802-0131
+research_question_id: null
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T14:11:16.816639+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T14:11:18.626260+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.52
+        economic: 0.67
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.59
+        operational: 0.5
+        overall: 0.5722287458072881
+        prior: 0.58
+        replication: 0.0
+        statistical: 0.61
+        validation: 0.56
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260802-9101
+      instrument: XAU/USD
+      lifecycle_state: ANSWERED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: dc3-institutional-alpha-program
+          creation_context: DC3 primary question
+          motivation: Discover durable, regime-aware, institutionally explainable
+            alpha mechanisms from Discovery Cycles 1 and 2 knowledge.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: Build a governed institutional alpha discovery system without validation,
+        optimization, or strategy promotion.
+      scope: CROSS_ASSET
+      spec_refs: []
+      time_horizon: 1D
+      title: 'DC3: Which economically plausible mechanisms can produce durable, regime-aware,
+        institutionally explainable alpha in XAU/USD?'
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: 'Duplicate: ResearchQuestion ''IKROS-RQ-20260802-9101'' already registered'
+    graph_node_id: null
+    memory_record_id: null
+    metrics: {}
+    output_refs: []
+    payload: {}
+    selected_ids: []
+  started_at: '2026-08-02T14:11:18.014012+00:00'
+  status: FAILED
+  task_id: IKROS-RESEARCHTASK-20260802-0121
+  title: Research Question
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0121
+  finished_at: null
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.52
+        economic: 0.67
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.59
+        operational: 0.5
+        overall: 0.5722287458072881
+        prior: 0.58
+        replication: 0.0
+        statistical: 0.61
+        validation: 0.56
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260802-9101
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: dc3-institutional-alpha-program
+          creation_context: DC3 synthesis experiment
+          motivation: Generate, classify, compete, prioritize, and explain institutional
+            alpha candidates with full governance traceability.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: dc3-institutional-alpha-program-exp-v1
+      spec_refs: []
+      title: 'DC3-EXP-001: Institutional Alpha Discovery'
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0125
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0125
+  finished_at: null
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0131
+  title: Final Report
+title: 'Discovery Cycle 3: Institutional Alpha Discovery Program'
+updated_at: '2026-08-02T14:11:22.539072+00:00'
+work_package_refs:
+- WP-IMP-0048

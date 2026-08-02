@@ -1,0 +1,216 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0352
+- IKROS-CAMPAIGNAUDIT-20260802-0353
+- IKROS-CAMPAIGNAUDIT-20260802-0354
+- IKROS-CAMPAIGNAUDIT-20260802-0355
+- IKROS-CAMPAIGNAUDIT-20260802-0356
+- IKROS-CAMPAIGNAUDIT-20260802-0357
+- IKROS-CAMPAIGNAUDIT-20260802-0358
+- IKROS-CAMPAIGNAUDIT-20260802-0359
+- IKROS-CAMPAIGNAUDIT-20260802-0360
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0027
+campaign_type: RESEARCH_AUDIT
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0027
+created_at: '2026-08-02T14:20:58.885993+00:00'
+evidence_refs: []
+failure_policy: CONTINUE
+finished_at: '2026-08-02T14:21:04.841283+00:00'
+lifecycle_state: FAILED
+objective: Create mechanism-agnostic institutional alpha validation framework and
+  governance standards without validating any current alpha mechanism.
+pipeline:
+  deterministic: true
+  name: RESEARCH_AUDIT pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0027
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0124
+  - IKROS-RESEARCHTASK-20260802-0128
+  - IKROS-RESEARCHTASK-20260802-0134
+research_question_id: null
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T14:21:00.340031+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T14:21:02.155029+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.53
+        economic: 0.68
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.6
+        operational: 0.5
+        overall: 0.5803572716699702
+        prior: 0.59
+        replication: 0.0
+        statistical: 0.62
+        validation: 0.57
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260802-9201
+      instrument: XAU/USD
+      lifecycle_state: ANSWERED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: dc3-phase2-validation-framework
+          creation_context: DC3 phase2 primary question
+          motivation: Create a permanent, mechanism-agnostic validation framework
+            as the only approved promotion path.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: Enforce scientific and institutional rigor before any alpha promotion.
+      scope: CROSS_ASSET
+      spec_refs: []
+      time_horizon: 1D
+      title: 'DC3-P2: What permanent validation framework should govern all future
+        alpha mechanism evaluation?'
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: 'Duplicate: ResearchQuestion ''IKROS-RQ-20260802-9201'' already registered'
+    graph_node_id: null
+    memory_record_id: null
+    metrics: {}
+    output_refs: []
+    payload: {}
+    selected_ids: []
+  started_at: '2026-08-02T14:21:01.554407+00:00'
+  status: FAILED
+  task_id: IKROS-RESEARCHTASK-20260802-0124
+  title: Research Question
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0124
+  finished_at: null
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.53
+        economic: 0.68
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.6
+        operational: 0.5
+        overall: 0.5803572716699702
+        prior: 0.59
+        replication: 0.0
+        statistical: 0.62
+        validation: 0.57
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260802-9201
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: dc3-phase2-validation-framework
+          creation_context: DC3 phase2 framework experiment
+          motivation: Define validation architecture, methods, registries, and workflows
+            without executing mechanism validation.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: dc3-phase2-validation-framework-exp-v1
+      spec_refs: []
+      title: 'DC3-P2-EXP-001: Institutional Alpha Validation Framework'
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0128
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0128
+  finished_at: null
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0134
+  title: Final Report
+title: 'Discovery Cycle 3 Phase 2: Institutional Alpha Validation Framework'
+updated_at: '2026-08-02T14:21:06.188737+00:00'
+work_package_refs:
+- WP-IMP-0048

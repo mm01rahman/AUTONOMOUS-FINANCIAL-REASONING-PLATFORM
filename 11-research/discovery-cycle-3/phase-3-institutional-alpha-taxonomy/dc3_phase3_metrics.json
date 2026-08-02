@@ -1,0 +1,29 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0028",
+  "family_count": 7,
+  "graph_edges_created": 20,
+  "graph_nodes_created": 8,
+  "independent_count": 11,
+  "mechanism_count": 12,
+  "merge_candidates": 1,
+  "redundant_pairs": 1,
+  "report_paths": {
+    "alpha_family_atlas": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\ALPHA_FAMILY_ATLAS.md",
+    "arb_recommendation": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\ARB_RECOMMENDATION.md",
+    "campaign_result": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\dc3_phase3_campaign_result.json",
+    "consolidation_report": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\CONSOLIDATION_REPORT.md",
+    "family_registry_json": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\dc3_phase3_alpha_family_registry.json",
+    "institutional_alpha_family_registry": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\INSTITUTIONAL_ALPHA_FAMILY_REGISTRY.md",
+    "institutional_alpha_taxonomy": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\INSTITUTIONAL_ALPHA_TAXONOMY.md",
+    "mechanism_cluster_report": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\MECHANISM_CLUSTER_REPORT.md",
+    "mechanism_decomposition": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\MECHANISM_DECOMPOSITION.md",
+    "mechanism_similarity_matrix": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\MECHANISM_SIMILARITY_MATRIX.md",
+    "redundancy_analysis": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\REDUNDANCY_ANALYSIS.md",
+    "research_prioritization_matrix": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\RESEARCH_PRIORITIZATION_MATRIX.md",
+    "similarity_json": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\dc3_phase3_taxonomy_similarity_matrix.json",
+    "validation_batch_plan": "11-research\\discovery-cycle-3\\phase-3-institutional-alpha-taxonomy\\VALIDATION_BATCH_PLAN.md"
+  },
+  "similarity_pairs": 66,
+  "top_priority_family": "Safe Haven Migration",
+  "validation_batches": 3
+}

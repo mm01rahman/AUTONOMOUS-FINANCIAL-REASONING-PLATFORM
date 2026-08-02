@@ -1,0 +1,1959 @@
+{
+  "alpha_family_registry": {
+    "FAM-001": {
+      "capacity_expectation": "HIGH",
+      "confidence": 0.63,
+      "definition": "Mechanisms driven by macro-economic signal repricing transmitted through cross-asset relay channels.",
+      "economic_rationale": "Macro shocks alter the real interest-rate and real-yield anchors that institutional actors use to price gold relative to alternatives.",
+      "expected_persistence": "MEDIUM",
+      "family_id": "FAM-001",
+      "known_risks": [
+        "Policy reversal",
+        "DXY regime change",
+        "Yield-curve regime break"
+      ],
+      "name": "Macro Repricing",
+      "typical_failures": [
+        "Relay disruption without macro confirmation",
+        "False trigger on noise spikes"
+      ],
+      "typical_regimes": [
+        "macro_transition",
+        "bear_unwind",
+        "bull_trend"
+      ]
+    },
+    "FAM-002": {
+      "capacity_expectation": "MEDIUM",
+      "confidence": 0.6,
+      "definition": "Mechanisms driven by institutional liquidity withdrawal, inventory constraint, or flow-absorption collapse.",
+      "economic_rationale": "Liquidity stress compresses bid-offer depth, forces inventory redistribution, and amplifies directional information flow.",
+      "expected_persistence": "LOW",
+      "family_id": "FAM-002",
+      "known_risks": [
+        "Rapid liquidity restoration",
+        "Central-bank backstop"
+      ],
+      "name": "Liquidity Transition",
+      "typical_failures": [
+        "False liquidity alarm without depth data",
+        "Missed recovery phase"
+      ],
+      "typical_regimes": [
+        "crisis_dislocation",
+        "bear_unwind",
+        "range_compression"
+      ]
+    },
+    "FAM-003": {
+      "capacity_expectation": "HIGH",
+      "confidence": 0.61,
+      "definition": "Mechanisms driven by capital migration toward gold as institutional safe-haven allocation rises.",
+      "economic_rationale": "Geopolitical and systemic stress activates safe-haven mandates across institutional cohorts, generating correlated directional flows.",
+      "expected_persistence": "MEDIUM",
+      "family_id": "FAM-003",
+      "known_risks": [
+        "Rapid de-risking reversal",
+        "Competing safe-haven assets"
+      ],
+      "name": "Safe Haven Migration",
+      "typical_failures": [
+        "Overstay past safe-haven normalization",
+        "Misidentification of stress type"
+      ],
+      "typical_regimes": [
+        "crisis_dislocation",
+        "bull_trend"
+      ]
+    },
+    "FAM-004": {
+      "capacity_expectation": "MEDIUM",
+      "confidence": 0.65,
+      "definition": "Mechanisms driven by information flow through a directed cross-asset network topology.",
+      "economic_rationale": "Directed source\u2192relay\u2192sink structure propagates institutional repricing with regime-dependent intensity.",
+      "expected_persistence": "MEDIUM",
+      "family_id": "FAM-004",
+      "known_risks": [
+        "Data-gap limitations in current dataset",
+        "Topology instability under rare events"
+      ],
+      "name": "Cross-Asset Information Propagation",
+      "typical_failures": [
+        "Topology disruption",
+        "Relay bottleneck collapse"
+      ],
+      "typical_regimes": [
+        "macro_transition",
+        "bull_trend",
+        "range_compression"
+      ]
+    },
+    "FAM-005": {
+      "capacity_expectation": "MEDIUM",
+      "confidence": 0.58,
+      "definition": "Mechanisms driven by expectation updates, policy surprises, and belief cascade formation.",
+      "economic_rationale": "Policy signals cause rapid expectation recalibration that propagates through fast-participant decision networks before slow-anchor actors reprice.",
+      "expected_persistence": "LOW",
+      "family_id": "FAM-005",
+      "known_risks": [
+        "Fed communication volatility",
+        "Expectation anchoring by central banks"
+      ],
+      "name": "Expectation & Policy Reset",
+      "typical_failures": [
+        "Expectation reversal",
+        "Policy surprise classification error"
+      ],
+      "typical_regimes": [
+        "macro_transition",
+        "bear_unwind",
+        "calm_carry"
+      ]
+    },
+    "FAM-006": {
+      "capacity_expectation": "MEDIUM",
+      "confidence": 0.57,
+      "definition": "Mechanisms driven by structured participant decision cascades through strategic dependency networks.",
+      "economic_rationale": "Fast institutional actors initiate decision chains that force constrained adjustments by slower actors.",
+      "expected_persistence": "LOW",
+      "family_id": "FAM-006",
+      "known_risks": [
+        "Macro-ecology model unresolved evidence per Program E"
+      ],
+      "name": "Institutional Decision Cascade",
+      "typical_failures": [
+        "Cascade abort",
+        "Strategic independence breakdown"
+      ],
+      "typical_regimes": [
+        "macro_transition",
+        "crisis_dislocation",
+        "bull_trend"
+      ]
+    },
+    "FAM-007": {
+      "capacity_expectation": "MEDIUM",
+      "confidence": 0.56,
+      "definition": "Mechanisms driven by fundamental regime-state transitions and adaptive changes in market ecology.",
+      "economic_rationale": "Regime transitions encode multi-channel institutional causal structures; ecology shifts redistribute flow-competition and cooperation.",
+      "expected_persistence": "MEDIUM",
+      "family_id": "FAM-007",
+      "known_risks": [
+        "Transition Engine v1 rejected",
+        "Component redesign required per Program E"
+      ],
+      "name": "Regime Transition & Adaptive Ecology",
+      "typical_failures": [
+        "Transition timing mis-specification",
+        "Ecology shift proxy weakness"
+      ],
+      "typical_regimes": [
+        "macro_transition",
+        "calm_carry",
+        "crisis_dislocation"
+      ]
+    }
+  },
+  "arb_recommendation": {
+    "distinct_families": 7,
+    "independent_mechanisms": 11,
+    "merge_candidates": 1,
+    "promote_now": false,
+    "recommended_next_action": "Await ARB approval before Phase 4 Institutional Alpha Validation Execution.",
+    "redundant_pairs": 1,
+    "top_priority_families": [
+      "Safe Haven Migration",
+      "Institutional Decision Cascade",
+      "Cross-Asset Information Propagation"
+    ],
+    "validate_now": false,
+    "validation_batches": 3
+  },
+  "ecology_knowledge_graph": {
+    "conclusion_node": {
+      "confidence": 0.72,
+      "label": "DC3 Phase 3 Institutional Alpha Taxonomy Conclusion",
+      "node_id": "IKROS-DC3P3-CONCLUSION-20260802-0001",
+      "node_type": "RESEARCH_CONCLUSION"
+    },
+    "edges": [
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0001",
+        "target": "IKROS-DC3P3-FAMILY-FAM004"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0007",
+        "target": "IKROS-DC3P3-FAMILY-FAM004"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0010",
+        "target": "IKROS-DC3P3-FAMILY-FAM004"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P3-FAMILY-FAM004",
+        "target": "IKROS-DC3P3-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0002",
+        "target": "IKROS-DC3P3-FAMILY-FAM001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P3-FAMILY-FAM001",
+        "target": "IKROS-DC3P3-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0003",
+        "target": "IKROS-DC3P3-FAMILY-FAM002"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0004",
+        "target": "IKROS-DC3P3-FAMILY-FAM002"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P3-FAMILY-FAM002",
+        "target": "IKROS-DC3P3-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0005",
+        "target": "IKROS-DC3P3-FAMILY-FAM005"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0008",
+        "target": "IKROS-DC3P3-FAMILY-FAM005"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P3-FAMILY-FAM005",
+        "target": "IKROS-DC3P3-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0006",
+        "target": "IKROS-DC3P3-FAMILY-FAM003"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P3-FAMILY-FAM003",
+        "target": "IKROS-DC3P3-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0009",
+        "target": "IKROS-DC3P3-FAMILY-FAM006"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P3-FAMILY-FAM006",
+        "target": "IKROS-DC3P3-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0011",
+        "target": "IKROS-DC3P3-FAMILY-FAM007"
+      },
+      {
+        "confidence": 0.65,
+        "relation": "RELATED_TO",
+        "source": "IKROS-ALPHA-DC3-20260802-0012",
+        "target": "IKROS-DC3P3-FAMILY-FAM007"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P3-FAMILY-FAM007",
+        "target": "IKROS-DC3P3-CONCLUSION-20260802-0001"
+      }
+    ],
+    "family_nodes": [
+      {
+        "confidence": 0.63,
+        "label": "Macro Repricing",
+        "node_id": "IKROS-DC3P3-FAMILY-FAM001",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.6,
+        "label": "Liquidity Transition",
+        "node_id": "IKROS-DC3P3-FAMILY-FAM002",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.61,
+        "label": "Safe Haven Migration",
+        "node_id": "IKROS-DC3P3-FAMILY-FAM003",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.65,
+        "label": "Cross-Asset Information Propagation",
+        "node_id": "IKROS-DC3P3-FAMILY-FAM004",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.58,
+        "label": "Expectation & Policy Reset",
+        "node_id": "IKROS-DC3P3-FAMILY-FAM005",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.57,
+        "label": "Institutional Decision Cascade",
+        "node_id": "IKROS-DC3P3-FAMILY-FAM006",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.56,
+        "label": "Regime Transition & Adaptive Ecology",
+        "node_id": "IKROS-DC3P3-FAMILY-FAM007",
+        "node_type": "KNOWLEDGE_OBJECT"
+      }
+    ]
+  },
+  "family_count": 7,
+  "institutional_alpha_taxonomy": [
+    {
+      "capacity_expectation": "HIGH",
+      "confidence": 0.63,
+      "definition": "Mechanisms driven by macro-economic signal repricing transmitted through cross-asset relay channels.",
+      "economic_rationale": "Macro shocks alter the real interest-rate and real-yield anchors that institutional actors use to price gold relative to alternatives.",
+      "expected_persistence": "MEDIUM",
+      "family_id": "FAM-001",
+      "known_risks": [
+        "Policy reversal",
+        "DXY regime change",
+        "Yield-curve regime break"
+      ],
+      "name": "Macro Repricing",
+      "typical_failures": [
+        "Relay disruption without macro confirmation",
+        "False trigger on noise spikes"
+      ],
+      "typical_regimes": [
+        "macro_transition",
+        "bear_unwind",
+        "bull_trend"
+      ]
+    },
+    {
+      "capacity_expectation": "MEDIUM",
+      "confidence": 0.6,
+      "definition": "Mechanisms driven by institutional liquidity withdrawal, inventory constraint, or flow-absorption collapse.",
+      "economic_rationale": "Liquidity stress compresses bid-offer depth, forces inventory redistribution, and amplifies directional information flow.",
+      "expected_persistence": "LOW",
+      "family_id": "FAM-002",
+      "known_risks": [
+        "Rapid liquidity restoration",
+        "Central-bank backstop"
+      ],
+      "name": "Liquidity Transition",
+      "typical_failures": [
+        "False liquidity alarm without depth data",
+        "Missed recovery phase"
+      ],
+      "typical_regimes": [
+        "crisis_dislocation",
+        "bear_unwind",
+        "range_compression"
+      ]
+    },
+    {
+      "capacity_expectation": "HIGH",
+      "confidence": 0.61,
+      "definition": "Mechanisms driven by capital migration toward gold as institutional safe-haven allocation rises.",
+      "economic_rationale": "Geopolitical and systemic stress activates safe-haven mandates across institutional cohorts, generating correlated directional flows.",
+      "expected_persistence": "MEDIUM",
+      "family_id": "FAM-003",
+      "known_risks": [
+        "Rapid de-risking reversal",
+        "Competing safe-haven assets"
+      ],
+      "name": "Safe Haven Migration",
+      "typical_failures": [
+        "Overstay past safe-haven normalization",
+        "Misidentification of stress type"
+      ],
+      "typical_regimes": [
+        "crisis_dislocation",
+        "bull_trend"
+      ]
+    },
+    {
+      "capacity_expectation": "MEDIUM",
+      "confidence": 0.65,
+      "definition": "Mechanisms driven by information flow through a directed cross-asset network topology.",
+      "economic_rationale": "Directed source\u2192relay\u2192sink structure propagates institutional repricing with regime-dependent intensity.",
+      "expected_persistence": "MEDIUM",
+      "family_id": "FAM-004",
+      "known_risks": [
+        "Data-gap limitations in current dataset",
+        "Topology instability under rare events"
+      ],
+      "name": "Cross-Asset Information Propagation",
+      "typical_failures": [
+        "Topology disruption",
+        "Relay bottleneck collapse"
+      ],
+      "typical_regimes": [
+        "macro_transition",
+        "bull_trend",
+        "range_compression"
+      ]
+    },
+    {
+      "capacity_expectation": "MEDIUM",
+      "confidence": 0.58,
+      "definition": "Mechanisms driven by expectation updates, policy surprises, and belief cascade formation.",
+      "economic_rationale": "Policy signals cause rapid expectation recalibration that propagates through fast-participant decision networks before slow-anchor actors reprice.",
+      "expected_persistence": "LOW",
+      "family_id": "FAM-005",
+      "known_risks": [
+        "Fed communication volatility",
+        "Expectation anchoring by central banks"
+      ],
+      "name": "Expectation & Policy Reset",
+      "typical_failures": [
+        "Expectation reversal",
+        "Policy surprise classification error"
+      ],
+      "typical_regimes": [
+        "macro_transition",
+        "bear_unwind",
+        "calm_carry"
+      ]
+    },
+    {
+      "capacity_expectation": "MEDIUM",
+      "confidence": 0.57,
+      "definition": "Mechanisms driven by structured participant decision cascades through strategic dependency networks.",
+      "economic_rationale": "Fast institutional actors initiate decision chains that force constrained adjustments by slower actors.",
+      "expected_persistence": "LOW",
+      "family_id": "FAM-006",
+      "known_risks": [
+        "Macro-ecology model unresolved evidence per Program E"
+      ],
+      "name": "Institutional Decision Cascade",
+      "typical_failures": [
+        "Cascade abort",
+        "Strategic independence breakdown"
+      ],
+      "typical_regimes": [
+        "macro_transition",
+        "crisis_dislocation",
+        "bull_trend"
+      ]
+    },
+    {
+      "capacity_expectation": "MEDIUM",
+      "confidence": 0.56,
+      "definition": "Mechanisms driven by fundamental regime-state transitions and adaptive changes in market ecology.",
+      "economic_rationale": "Regime transitions encode multi-channel institutional causal structures; ecology shifts redistribute flow-competition and cooperation.",
+      "expected_persistence": "MEDIUM",
+      "family_id": "FAM-007",
+      "known_risks": [
+        "Transition Engine v1 rejected",
+        "Component redesign required per Program E"
+      ],
+      "name": "Regime Transition & Adaptive Ecology",
+      "typical_failures": [
+        "Transition timing mis-specification",
+        "Ecology shift proxy weakness"
+      ],
+      "typical_regimes": [
+        "macro_transition",
+        "calm_carry",
+        "crisis_dislocation"
+      ]
+    }
+  ],
+  "mechanism_clusters": {
+    "FAM-001": [
+      "IKROS-ALPHA-DC3-20260802-0002"
+    ],
+    "FAM-002": [
+      "IKROS-ALPHA-DC3-20260802-0003",
+      "IKROS-ALPHA-DC3-20260802-0004"
+    ],
+    "FAM-003": [
+      "IKROS-ALPHA-DC3-20260802-0006"
+    ],
+    "FAM-004": [
+      "IKROS-ALPHA-DC3-20260802-0001",
+      "IKROS-ALPHA-DC3-20260802-0007",
+      "IKROS-ALPHA-DC3-20260802-0010"
+    ],
+    "FAM-005": [
+      "IKROS-ALPHA-DC3-20260802-0005",
+      "IKROS-ALPHA-DC3-20260802-0008"
+    ],
+    "FAM-006": [
+      "IKROS-ALPHA-DC3-20260802-0009"
+    ],
+    "FAM-007": [
+      "IKROS-ALPHA-DC3-20260802-0011",
+      "IKROS-ALPHA-DC3-20260802-0012"
+    ]
+  },
+  "mechanism_count": 12,
+  "mechanism_decomposition": [
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0001",
+      "causal_pathway": "source\u2192relay\u2192sink",
+      "core_driver": "cross_asset_relay",
+      "family_id": "FAM-004",
+      "feature_families": [
+        "dxy_features",
+        "yield_features",
+        "macro_features"
+      ],
+      "info_source": "cross_asset_network",
+      "mechanism_type": "cross_asset_transition",
+      "name": "Cross-Asset Relay Pressure Transition Mechanism",
+      "primary_mechanism": "relay_pressure",
+      "required_participants": [
+        "dealers",
+        "macro_hedge_funds",
+        "market_makers"
+      ],
+      "required_regime": [
+        "macro_transition",
+        "crisis_dislocation"
+      ],
+      "secondary_mechanism": "topology_reconfiguration"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0002",
+      "causal_pathway": "macro_shock\u2192relay\u2192xau",
+      "core_driver": "macro_signal",
+      "family_id": "FAM-001",
+      "feature_families": [
+        "macro_features",
+        "dxy_features",
+        "yield_features"
+      ],
+      "info_source": "macro_announcements",
+      "mechanism_type": "macro_repricing",
+      "name": "Macro Repricing Relay Mechanism",
+      "primary_mechanism": "relay_transmission",
+      "required_participants": [
+        "macro_hedge_funds",
+        "central_banks",
+        "dealers"
+      ],
+      "required_regime": [
+        "macro_transition",
+        "bear_unwind"
+      ],
+      "secondary_mechanism": "rate_repricing"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0003",
+      "causal_pathway": "liquidity_shock\u2192inventory\u2192price_impact",
+      "core_driver": "liquidity_stress",
+      "family_id": "FAM-002",
+      "feature_families": [
+        "vol_features",
+        "price_features"
+      ],
+      "info_source": "volatility_signals",
+      "mechanism_type": "liquidity_withdrawal",
+      "name": "Liquidity Withdrawal Shock Mechanism",
+      "primary_mechanism": "inventory_constraint",
+      "required_participants": [
+        "market_makers",
+        "dealers",
+        "commercial_hedgers"
+      ],
+      "required_regime": [
+        "crisis_dislocation",
+        "bear_unwind"
+      ],
+      "secondary_mechanism": "forced_redistribution"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0004",
+      "causal_pathway": "constraint_signal\u2192redistribution\u2192price",
+      "core_driver": "dealer_constraint",
+      "family_id": "FAM-002",
+      "feature_families": [
+        "price_features",
+        "vol_features",
+        "yield_features"
+      ],
+      "info_source": "positioning_proxies",
+      "mechanism_type": "dealer_inventory",
+      "name": "Dealer Inventory Redistribution Mechanism",
+      "primary_mechanism": "inventory_redistribution",
+      "required_participants": [
+        "dealers",
+        "bullion_banks",
+        "commercial_hedgers"
+      ],
+      "required_regime": [
+        "calm_carry",
+        "bear_unwind"
+      ],
+      "secondary_mechanism": "hedger_offset"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0005",
+      "causal_pathway": "expectation_shock\u2192fast_cascade\u2192anchor_reprice",
+      "core_driver": "expectation_shift",
+      "family_id": "FAM-005",
+      "feature_families": [
+        "macro_features",
+        "dxy_features"
+      ],
+      "info_source": "forward_rates",
+      "mechanism_type": "expectation_reset",
+      "name": "Expectation Reset Mechanism",
+      "primary_mechanism": "belief_cascade",
+      "required_participants": [
+        "macro_hedge_funds",
+        "market_makers",
+        "etf_investors"
+      ],
+      "required_regime": [
+        "macro_transition",
+        "range_compression"
+      ],
+      "secondary_mechanism": "anchor_repricing"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "causal_pathway": "stress_event\u2192safe_haven_demand\u2192price",
+      "core_driver": "risk_off_stress",
+      "family_id": "FAM-003",
+      "feature_families": [
+        "macro_features",
+        "dxy_features"
+      ],
+      "info_source": "stress_topology",
+      "mechanism_type": "safe_haven_migration",
+      "name": "Safe-Haven Capital Migration Mechanism",
+      "primary_mechanism": "safe_haven_allocation",
+      "required_participants": [
+        "safe_haven_capital",
+        "etf_investors",
+        "central_banks"
+      ],
+      "required_regime": [
+        "crisis_dislocation",
+        "bull_trend"
+      ],
+      "secondary_mechanism": "topology_rewiring"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0007",
+      "causal_pathway": "etf_impulse\u2192relay\u2192positioning",
+      "core_driver": "etf_flow",
+      "family_id": "FAM-004",
+      "feature_families": [
+        "dxy_features",
+        "price_features",
+        "vol_features"
+      ],
+      "info_source": "flow_proxies",
+      "mechanism_type": "etf_flow_propagation",
+      "name": "ETF Flow Propagation Mechanism",
+      "primary_mechanism": "relay_amplification",
+      "required_participants": [
+        "etf_investors",
+        "market_makers",
+        "dealers"
+      ],
+      "required_regime": [
+        "bull_trend",
+        "range_compression"
+      ],
+      "secondary_mechanism": "positioning_pressure"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0008",
+      "causal_pathway": "policy_surprise\u2192rate_shock\u2192gold_reprice",
+      "core_driver": "policy_surprise",
+      "family_id": "FAM-005",
+      "feature_families": [
+        "macro_features",
+        "yield_features"
+      ],
+      "info_source": "fed_announcements",
+      "mechanism_type": "policy_repricing",
+      "name": "Policy Repricing Chain Mechanism",
+      "primary_mechanism": "rate_shock",
+      "required_participants": [
+        "central_banks",
+        "macro_hedge_funds",
+        "dealers"
+      ],
+      "required_regime": [
+        "macro_transition",
+        "bear_unwind"
+      ],
+      "secondary_mechanism": "fx_transmission"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "causal_pathway": "initiator_trigger\u2192cascade\u2192constrained_adjustment",
+      "core_driver": "cascade_initiator",
+      "family_id": "FAM-006",
+      "feature_families": [
+        "macro_features",
+        "dxy_features"
+      ],
+      "info_source": "decision_ecology",
+      "mechanism_type": "decision_cascade",
+      "name": "Institutional Decision Cascade Mechanism",
+      "primary_mechanism": "strategic_dependency",
+      "required_participants": [
+        "macro_hedge_funds",
+        "market_makers",
+        "etf_investors"
+      ],
+      "required_regime": [
+        "macro_transition",
+        "crisis_dislocation"
+      ],
+      "secondary_mechanism": "order_flow_impact"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0010",
+      "causal_pathway": "source_signal\u2192directed_edge\u2192sink_reprice",
+      "core_driver": "information_flow",
+      "family_id": "FAM-004",
+      "feature_families": [
+        "dxy_features",
+        "macro_features"
+      ],
+      "info_source": "cross_asset_network",
+      "mechanism_type": "information_cascade",
+      "name": "Cross-Asset Information Cascade Mechanism",
+      "primary_mechanism": "directed_propagation",
+      "required_participants": [
+        "macro_hedge_funds",
+        "dealers",
+        "market_makers"
+      ],
+      "required_regime": [
+        "macro_transition",
+        "range_compression"
+      ],
+      "secondary_mechanism": "regime_amplification"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0011",
+      "causal_pathway": "ecology_shift\u2192flow_rewire\u2192price_impact",
+      "core_driver": "ecology_state",
+      "family_id": "FAM-007",
+      "feature_families": [
+        "vol_features",
+        "dxy_features",
+        "yield_features"
+      ],
+      "info_source": "ecology_model",
+      "mechanism_type": "adaptive_ecology_shift",
+      "name": "Adaptive Ecology Shift Mechanism",
+      "primary_mechanism": "participant_role_rotation",
+      "required_participants": [
+        "dealers",
+        "macro_hedge_funds",
+        "commercial_hedgers"
+      ],
+      "required_regime": [
+        "calm_carry",
+        "macro_transition"
+      ],
+      "secondary_mechanism": "flow_path_rewiring"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0012",
+      "causal_pathway": "trigger\u2192participant\u2192liquidity\u2192activation",
+      "core_driver": "regime_state",
+      "family_id": "FAM-007",
+      "feature_families": [
+        "price_features",
+        "macro_features",
+        "dxy_features",
+        "vol_features"
+      ],
+      "info_source": "regime_taxonomy",
+      "mechanism_type": "regime_transition_chain",
+      "name": "Institutional Regime Transition Chain Mechanism",
+      "primary_mechanism": "transition_activation",
+      "required_participants": [
+        "macro_hedge_funds",
+        "central_banks",
+        "dealers"
+      ],
+      "required_regime": [
+        "macro_transition"
+      ],
+      "secondary_mechanism": "multi_channel_cascade"
+    }
+  ],
+  "phase": "DISCOVERY_CYCLE_3_PHASE_3",
+  "primary_question": "How many genuinely distinct economic alpha mechanisms exist among the discovered candidates?",
+  "redundancy_analysis": {
+    "independent_count": 11,
+    "merge_candidate_count": 1,
+    "merge_candidates": [
+      {
+        "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+        "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+        "family_id": "FAM-004",
+        "overall_similarity": 0.85,
+        "recommendation": "CONSIDER_MERGE"
+      }
+    ],
+    "near_duplicates": [
+      {
+        "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+        "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+        "name_a": "Cross-Asset Relay Pressure Transition Mechanism",
+        "name_b": "Cross-Asset Information Cascade Mechanism",
+        "overall_similarity": 0.85,
+        "verdict": "NEAR_DUPLICATE"
+      }
+    ],
+    "redundant_pairs_count": 1,
+    "specializations": []
+  },
+  "research_priority_matrix": [
+    {
+      "alpha_ids": [
+        "IKROS-ALPHA-DC3-20260802-0006"
+      ],
+      "avg_confidence": 0.6,
+      "avg_failure_risk": 0.47,
+      "avg_information_gain": 0.507,
+      "avg_institutional_value": 0.587,
+      "avg_novelty": 0.48,
+      "avg_research_cost": 0.628,
+      "avg_robustness": 0.55,
+      "family_id": "FAM-003",
+      "family_name": "Safe Haven Migration",
+      "mechanism_count": 1,
+      "priority_band": "P1",
+      "rank": 1,
+      "research_priority_score": 0.3269
+    },
+    {
+      "alpha_ids": [
+        "IKROS-ALPHA-DC3-20260802-0009"
+      ],
+      "avg_confidence": 0.59,
+      "avg_failure_risk": 0.51,
+      "avg_information_gain": 0.502,
+      "avg_institutional_value": 0.5787,
+      "avg_novelty": 0.51,
+      "avg_research_cost": 0.644,
+      "avg_robustness": 0.54,
+      "family_id": "FAM-006",
+      "family_name": "Institutional Decision Cascade",
+      "mechanism_count": 1,
+      "priority_band": "P1",
+      "rank": 2,
+      "research_priority_score": 0.3212
+    },
+    {
+      "alpha_ids": [
+        "IKROS-ALPHA-DC3-20260802-0001",
+        "IKROS-ALPHA-DC3-20260802-0007",
+        "IKROS-ALPHA-DC3-20260802-0010"
+      ],
+      "avg_confidence": 0.59,
+      "avg_failure_risk": 0.49,
+      "avg_information_gain": 0.4998,
+      "avg_institutional_value": 0.5779,
+      "avg_novelty": 0.4867,
+      "avg_research_cost": 0.636,
+      "avg_robustness": 0.54,
+      "family_id": "FAM-004",
+      "family_name": "Cross-Asset Information Propagation",
+      "mechanism_count": 3,
+      "priority_band": "P2",
+      "rank": 3,
+      "research_priority_score": 0.32
+    },
+    {
+      "alpha_ids": [
+        "IKROS-ALPHA-DC3-20260802-0003",
+        "IKROS-ALPHA-DC3-20260802-0004"
+      ],
+      "avg_confidence": 0.575,
+      "avg_failure_risk": 0.435,
+      "avg_information_gain": 0.4965,
+      "avg_institutional_value": 0.567,
+      "avg_novelty": 0.445,
+      "avg_research_cost": 0.614,
+      "avg_robustness": 0.525,
+      "family_id": "FAM-002",
+      "family_name": "Liquidity Transition",
+      "mechanism_count": 2,
+      "priority_band": "P2",
+      "rank": 4,
+      "research_priority_score": 0.3137
+    },
+    {
+      "alpha_ids": [
+        "IKROS-ALPHA-DC3-20260802-0005",
+        "IKROS-ALPHA-DC3-20260802-0008"
+      ],
+      "avg_confidence": 0.55,
+      "avg_failure_risk": 0.405,
+      "avg_information_gain": 0.5072,
+      "avg_institutional_value": 0.5546,
+      "avg_novelty": 0.475,
+      "avg_research_cost": 0.602,
+      "avg_robustness": 0.5,
+      "family_id": "FAM-005",
+      "family_name": "Expectation & Policy Reset",
+      "mechanism_count": 2,
+      "priority_band": "P3",
+      "rank": 5,
+      "research_priority_score": 0.3123
+    },
+    {
+      "alpha_ids": [
+        "IKROS-ALPHA-DC3-20260802-0002"
+      ],
+      "avg_confidence": 0.56,
+      "avg_failure_risk": 0.42,
+      "avg_information_gain": 0.501,
+      "avg_institutional_value": 0.5589,
+      "avg_novelty": 0.46,
+      "avg_research_cost": 0.608,
+      "avg_robustness": 0.51,
+      "family_id": "FAM-001",
+      "family_name": "Macro Repricing",
+      "mechanism_count": 1,
+      "priority_band": "P3",
+      "rank": 6,
+      "research_priority_score": 0.3117
+    },
+    {
+      "alpha_ids": [
+        "IKROS-ALPHA-DC3-20260802-0011",
+        "IKROS-ALPHA-DC3-20260802-0012"
+      ],
+      "avg_confidence": 0.575,
+      "avg_failure_risk": 0.51,
+      "avg_information_gain": 0.4863,
+      "avg_institutional_value": 0.5634,
+      "avg_novelty": 0.48,
+      "avg_research_cost": 0.644,
+      "avg_robustness": 0.525,
+      "family_id": "FAM-007",
+      "family_name": "Regime Transition & Adaptive Ecology",
+      "mechanism_count": 2,
+      "priority_band": "P3",
+      "rank": 7,
+      "research_priority_score": 0.308
+    }
+  ],
+  "similarity_matrix": [
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0002",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 1.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "macro_repricing",
+      "overall_similarity": 0.3433,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0003",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "liquidity_withdrawal",
+      "overall_similarity": 0.16,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0004",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.2,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "dealer_inventory",
+      "overall_similarity": 0.145,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0005",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "expectation_reset",
+      "overall_similarity": 0.3433,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0006",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 0.3333,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "safe_haven_migration",
+      "overall_similarity": 0.2517,
+      "participant_overlap": 0.0,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0007",
+      "cross_asset_overlap": 0.4,
+      "economic_similarity": 1.0,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.2,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "etf_flow_propagation",
+      "overall_similarity": 0.4483,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0008",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "policy_repricing",
+      "overall_similarity": 0.2933,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0009",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "decision_cascade",
+      "overall_similarity": 0.3933,
+      "participant_overlap": 0.5,
+      "regime_overlap": 1.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+      "cross_asset_overlap": 1.0,
+      "economic_similarity": 1.0,
+      "failure_overlap": 1.0,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 1.0,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "information_cascade",
+      "overall_similarity": 0.85,
+      "participant_overlap": 1.0,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0011",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.5,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "adaptive_ecology_shift",
+      "overall_similarity": 0.285,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0001",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.25,
+      "feature_overlap": 0.4,
+      "lineage_overlap": 0.25,
+      "mechanism_a": "cross_asset_transition",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.295,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.5
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0002",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0003",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "macro_repricing",
+      "mechanism_b": "liquidity_withdrawal",
+      "overall_similarity": 0.115,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0002",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0004",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.2,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "macro_repricing",
+      "mechanism_b": "dealer_inventory",
+      "overall_similarity": 0.1783,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0002",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0005",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "macro_repricing",
+      "mechanism_b": "expectation_reset",
+      "overall_similarity": 0.2483,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0002",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0006",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "macro_repricing",
+      "mechanism_b": "safe_haven_migration",
+      "overall_similarity": 0.2483,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0002",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0007",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.2,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "macro_repricing",
+      "mechanism_b": "etf_flow_propagation",
+      "overall_similarity": 0.095,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0002",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0008",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 1.0,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 1.0,
+      "mechanism_a": "macro_repricing",
+      "mechanism_b": "policy_repricing",
+      "overall_similarity": 0.635,
+      "participant_overlap": 1.0,
+      "regime_overlap": 1.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0002",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0009",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "macro_repricing",
+      "mechanism_b": "decision_cascade",
+      "overall_similarity": 0.215,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0002",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "macro_repricing",
+      "mechanism_b": "information_cascade",
+      "overall_similarity": 0.2933,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0002",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0011",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.5,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "macro_repricing",
+      "mechanism_b": "adaptive_ecology_shift",
+      "overall_similarity": 0.235,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0002",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.6667,
+      "feature_overlap": 0.4,
+      "lineage_overlap": 0.3333,
+      "mechanism_a": "macro_repricing",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.42,
+      "participant_overlap": 1.0,
+      "regime_overlap": 0.5
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0003",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0004",
+      "cross_asset_overlap": 0.4,
+      "economic_similarity": 1.0,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "liquidity_withdrawal",
+      "mechanism_b": "dealer_inventory",
+      "overall_similarity": 0.5183,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0003",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0005",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "liquidity_withdrawal",
+      "mechanism_b": "expectation_reset",
+      "overall_similarity": 0.065,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0003",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0006",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "liquidity_withdrawal",
+      "mechanism_b": "safe_haven_migration",
+      "overall_similarity": 0.1183,
+      "participant_overlap": 0.0,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0003",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0007",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.6667,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "liquidity_withdrawal",
+      "mechanism_b": "etf_flow_propagation",
+      "overall_similarity": 0.2433,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0003",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0008",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "liquidity_withdrawal",
+      "mechanism_b": "policy_repricing",
+      "overall_similarity": 0.115,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0003",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0009",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 1.0,
+      "mechanism_a": "liquidity_withdrawal",
+      "mechanism_b": "decision_cascade",
+      "overall_similarity": 0.2483,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0003",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "liquidity_withdrawal",
+      "mechanism_b": "information_cascade",
+      "overall_similarity": 0.11,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0003",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0011",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 1.0,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "liquidity_withdrawal",
+      "mechanism_b": "adaptive_ecology_shift",
+      "overall_similarity": 0.2475,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0003",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.25,
+      "feature_overlap": 0.5,
+      "lineage_overlap": 0.3333,
+      "mechanism_a": "liquidity_withdrawal",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.1983,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0004",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0005",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "dealer_inventory",
+      "mechanism_b": "expectation_reset",
+      "overall_similarity": 0.0683,
+      "participant_overlap": 0.0,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0004",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0006",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "dealer_inventory",
+      "mechanism_b": "safe_haven_migration",
+      "overall_similarity": 0.035,
+      "participant_overlap": 0.0,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0004",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0007",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.5,
+      "lineage_overlap": 1.0,
+      "mechanism_a": "dealer_inventory",
+      "mechanism_b": "etf_flow_propagation",
+      "overall_similarity": 0.2733,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0004",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0008",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "dealer_inventory",
+      "mechanism_b": "policy_repricing",
+      "overall_similarity": 0.1858,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0004",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0009",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "dealer_inventory",
+      "mechanism_b": "decision_cascade",
+      "overall_similarity": 0.035,
+      "participant_overlap": 0.0,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0004",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "dealer_inventory",
+      "mechanism_b": "information_cascade",
+      "overall_similarity": 0.115,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0004",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0011",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.5,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "dealer_inventory",
+      "mechanism_b": "adaptive_ecology_shift",
+      "overall_similarity": 0.2683,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0004",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.6667,
+      "feature_overlap": 0.4,
+      "lineage_overlap": 0.3333,
+      "mechanism_a": "dealer_inventory",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.225,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0005",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0006",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 1.0,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "expectation_reset",
+      "mechanism_b": "safe_haven_migration",
+      "overall_similarity": 0.265,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0005",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0007",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "expectation_reset",
+      "mechanism_b": "etf_flow_propagation",
+      "overall_similarity": 0.2308,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0005",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0008",
+      "cross_asset_overlap": 0.4,
+      "economic_similarity": 1.0,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.3333,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "expectation_reset",
+      "mechanism_b": "policy_repricing",
+      "overall_similarity": 0.4233,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0005",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0009",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 1.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "expectation_reset",
+      "mechanism_b": "decision_cascade",
+      "overall_similarity": 0.4183,
+      "participant_overlap": 1.0,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0005",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 1.0,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "expectation_reset",
+      "mechanism_b": "information_cascade",
+      "overall_similarity": 0.4933,
+      "participant_overlap": 0.5,
+      "regime_overlap": 1.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0005",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0011",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 1.0,
+      "mechanism_a": "expectation_reset",
+      "mechanism_b": "adaptive_ecology_shift",
+      "overall_similarity": 0.2525,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0005",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.25,
+      "feature_overlap": 0.5,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "expectation_reset",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.24,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.5
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0006",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0007",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "safe_haven_migration",
+      "mechanism_b": "etf_flow_propagation",
+      "overall_similarity": 0.1525,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0006",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0008",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.3333,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "safe_haven_migration",
+      "mechanism_b": "policy_repricing",
+      "overall_similarity": 0.1983,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0006",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0009",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 1.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "safe_haven_migration",
+      "mechanism_b": "decision_cascade",
+      "overall_similarity": 0.2983,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0006",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 1.0,
+      "lineage_overlap": 0.3333,
+      "mechanism_a": "safe_haven_migration",
+      "mechanism_b": "information_cascade",
+      "overall_similarity": 0.2517,
+      "participant_overlap": 0.0,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0006",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0011",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "safe_haven_migration",
+      "mechanism_b": "adaptive_ecology_shift",
+      "overall_similarity": 0.1558,
+      "participant_overlap": 0.0,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0006",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.25,
+      "feature_overlap": 0.5,
+      "lineage_overlap": 0.25,
+      "mechanism_a": "safe_haven_migration",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.19,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0007",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0008",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "etf_flow_propagation",
+      "mechanism_b": "policy_repricing",
+      "overall_similarity": 0.065,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0007",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0009",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "etf_flow_propagation",
+      "mechanism_b": "decision_cascade",
+      "overall_similarity": 0.1808,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0007",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+      "cross_asset_overlap": 0.4,
+      "economic_similarity": 1.0,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "etf_flow_propagation",
+      "mechanism_b": "information_cascade",
+      "overall_similarity": 0.5058,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0007",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0011",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.5,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "etf_flow_propagation",
+      "mechanism_b": "adaptive_ecology_shift",
+      "overall_similarity": 0.1733,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0007",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.25,
+      "feature_overlap": 0.75,
+      "lineage_overlap": 0.3333,
+      "mechanism_a": "etf_flow_propagation",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.2358,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.0
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0008",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0009",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.3333,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "policy_repricing",
+      "mechanism_b": "decision_cascade",
+      "overall_similarity": 0.165,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0008",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.3333,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "policy_repricing",
+      "mechanism_b": "information_cascade",
+      "overall_similarity": 0.2433,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0008",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0011",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "policy_repricing",
+      "mechanism_b": "adaptive_ecology_shift",
+      "overall_similarity": 0.1975,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0008",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.6667,
+      "feature_overlap": 0.2,
+      "lineage_overlap": 0.3333,
+      "mechanism_a": "policy_repricing",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.39,
+      "participant_overlap": 1.0,
+      "regime_overlap": 0.5
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0009",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0010",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 1.0,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "decision_cascade",
+      "mechanism_b": "information_cascade",
+      "overall_similarity": 0.3433,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0009",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0011",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.3333,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "decision_cascade",
+      "mechanism_b": "adaptive_ecology_shift",
+      "overall_similarity": 0.1858,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0009",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.5,
+      "lineage_overlap": 0.3333,
+      "mechanism_a": "decision_cascade",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.2483,
+      "participant_overlap": 0.2,
+      "regime_overlap": 0.5
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0010",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0011",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.0,
+      "feature_overlap": 0.25,
+      "lineage_overlap": 0.5,
+      "mechanism_a": "information_cascade",
+      "mechanism_b": "adaptive_ecology_shift",
+      "overall_similarity": 0.2475,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.3333
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0010",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.1,
+      "economic_similarity": 0.1,
+      "failure_overlap": 0.25,
+      "feature_overlap": 0.5,
+      "lineage_overlap": 0.25,
+      "mechanism_a": "information_cascade",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.31,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.5
+    },
+    {
+      "alpha_id_a": "IKROS-ALPHA-DC3-20260802-0011",
+      "alpha_id_b": "IKROS-ALPHA-DC3-20260802-0012",
+      "cross_asset_overlap": 0.4,
+      "economic_similarity": 1.0,
+      "failure_overlap": 0.25,
+      "feature_overlap": 0.4,
+      "lineage_overlap": 0.0,
+      "mechanism_a": "adaptive_ecology_shift",
+      "mechanism_b": "regime_transition_chain",
+      "overall_similarity": 0.495,
+      "participant_overlap": 0.5,
+      "regime_overlap": 0.5
+    }
+  ],
+  "title": "Institutional Alpha Taxonomy & Consolidation Program",
+  "validation_batch_plan": [
+    {
+      "alpha_ids": [
+        "IKROS-ALPHA-DC3-20260802-0006",
+        "IKROS-ALPHA-DC3-20260802-0009"
+      ],
+      "balanced_regimes": true,
+      "batch_id": "BATCH-001",
+      "estimated_cycles": 4,
+      "families": [
+        "FAM-003",
+        "FAM-006"
+      ],
+      "rationale": "Highest-priority families; independent mechanism representatives.",
+      "representative_coverage": true
+    },
+    {
+      "alpha_ids": [
+        "IKROS-ALPHA-DC3-20260802-0001",
+        "IKROS-ALPHA-DC3-20260802-0003"
+      ],
+      "balanced_regimes": true,
+      "batch_id": "BATCH-002",
+      "estimated_cycles": 4,
+      "families": [
+        "FAM-004",
+        "FAM-002"
+      ],
+      "rationale": "Medium-priority families; balanced regime/participant coverage.",
+      "representative_coverage": true
+    },
+    {
+      "alpha_ids": [
+        "IKROS-ALPHA-DC3-20260802-0005",
+        "IKROS-ALPHA-DC3-20260802-0008",
+        "IKROS-ALPHA-DC3-20260802-0002",
+        "IKROS-ALPHA-DC3-20260802-0011",
+        "IKROS-ALPHA-DC3-20260802-0012"
+      ],
+      "balanced_regimes": true,
+      "batch_id": "BATCH-003",
+      "estimated_cycles": 3,
+      "families": [
+        "FAM-005",
+        "FAM-001",
+        "FAM-007"
+      ],
+      "rationale": "Lower-priority families; secondary mechanisms and specializations.",
+      "representative_coverage": false
+    }
+  ]
+}
