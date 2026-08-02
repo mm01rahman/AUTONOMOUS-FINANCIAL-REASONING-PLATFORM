@@ -1,0 +1,202 @@
+{
+  "approved_alpha_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        "SAFE_HAVEN_FLOWS"
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        "REAL_YIELD_DISLOCATIONS"
+      ],
+      [
+        "policy_expectation_repricing",
+        "POLICY_EXPECTATION_REPRICING"
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        "ETF_ACCUMULATION_DISTRIBUTION"
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        "COMMODITY_INTERMARKET_RELATIONSHIPS"
+      ]
+    ]
+  },
+  "blocked_alpha_dashboard": {
+    "tiles": [
+      [
+        "decision_cascade",
+        "DEALER_INVENTORY_DYNAMICS"
+      ],
+      [
+        "central_bank_reserve_reallocation",
+        "RESERVE_REALLOCATION"
+      ]
+    ]
+  },
+  "campaign_archive_dashboard": {
+    "tiles": [
+      [
+        "P4-CAMPAIGN-0001",
+        0.083
+      ],
+      [
+        "P4-CAMPAIGN-0002",
+        0.071
+      ],
+      [
+        "P4-CAMPAIGN-0003",
+        0.079
+      ],
+      [
+        "P4-CAMPAIGN-0004",
+        0.068
+      ],
+      [
+        "P4-CAMPAIGN-0005",
+        0.077
+      ],
+      [
+        "P4-CAMPAIGN-0006",
+        0.067
+      ],
+      [
+        "P4-CAMPAIGN-0007",
+        0.074
+      ],
+      [
+        "P4-CAMPAIGN-0008",
+        0.065
+      ],
+      [
+        "P4-CAMPAIGN-0009",
+        0.059
+      ],
+      [
+        "P4-CAMPAIGN-0010",
+        0.051
+      ]
+    ]
+  },
+  "evidence_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        0.75
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        0.72
+      ],
+      [
+        "policy_expectation_repricing",
+        0.71
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        0.73
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        0.72
+      ]
+    ]
+  },
+  "independence_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        0.71
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        0.77
+      ],
+      [
+        "policy_expectation_repricing",
+        0.79
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        0.72
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        0.76
+      ]
+    ]
+  },
+  "institutional_alpha_library_dashboard": {
+    "tiles": [
+      [
+        "Approved Alphas",
+        5
+      ],
+      [
+        "Rejected Alphas",
+        1
+      ],
+      [
+        "Blocked Alphas",
+        2
+      ],
+      [
+        "Campaigns Executed",
+        10
+      ]
+    ]
+  },
+  "promotion_history_dashboard": {
+    "tiles": [
+      [
+        "P4-CAMPAIGN-0001",
+        "RESEARCH"
+      ],
+      [
+        "P4-CAMPAIGN-0002",
+        "APPROVED_ALPHA"
+      ],
+      [
+        "P4-CAMPAIGN-0003",
+        "RESEARCH"
+      ],
+      [
+        "P4-CAMPAIGN-0004",
+        "APPROVED_ALPHA"
+      ],
+      [
+        "P4-CAMPAIGN-0005",
+        "RESEARCH"
+      ],
+      [
+        "P4-CAMPAIGN-0006",
+        "APPROVED_ALPHA"
+      ],
+      [
+        "P4-CAMPAIGN-0007",
+        "RESEARCH"
+      ],
+      [
+        "P4-CAMPAIGN-0008",
+        "APPROVED_ALPHA"
+      ],
+      [
+        "P4-CAMPAIGN-0009",
+        "BLOCKED_BY_DATA"
+      ],
+      [
+        "P4-CAMPAIGN-0010",
+        "REJECTED"
+      ]
+    ]
+  },
+  "rejected_alpha_dashboard": {
+    "tiles": [
+      [
+        "volatility_carry_shadow",
+        "VOLATILITY_REGIME_SHIFTS"
+      ]
+    ]
+  }
+}

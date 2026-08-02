@@ -1,0 +1,35 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0501
+- IKROS-CAMPAIGNAUDIT-20260802-0502
+- IKROS-CAMPAIGNAUDIT-20260802-0503
+- IKROS-CAMPAIGNAUDIT-20260802-0504
+- IKROS-CAMPAIGNAUDIT-20260802-0505
+- IKROS-CAMPAIGNAUDIT-20260802-0506
+- IKROS-CAMPAIGNAUDIT-20260802-0507
+- IKROS-CAMPAIGNAUDIT-20260802-0508
+blocked_task_ids:
+- IKROS-RESEARCHTASK-20260802-0185
+- IKROS-RESEARCHTASK-20260802-0189
+- IKROS-RESEARCHTASK-20260802-0191
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0045
+campaign_type: HYPOTHESIS_VALIDATION
+completed_task_ids: []
+failed_task_ids:
+- IKROS-RESEARCHTASK-20260802-0181
+finished_at: '2026-08-02T22:25:49.578070+00:00'
+lifecycle_state: FAILED
+memory_record_ids:
+- IKMEM-T4-20260802-0052
+output_refs: []
+progress:
+  blocked: 3
+  completed: 0
+  failed: 1
+  percent_complete: 0.0
+  skipped: 0
+  total: 4
+report_id: IKROS-CAMPAIGNREPORT-20260802-0045
+skipped_task_ids: []
+started_at: '2026-08-02T22:25:41.564725+00:00'
+summary: Program 3 — Autonomous Institutional Alpha Campaign Engine failed after 1
+  task failures.

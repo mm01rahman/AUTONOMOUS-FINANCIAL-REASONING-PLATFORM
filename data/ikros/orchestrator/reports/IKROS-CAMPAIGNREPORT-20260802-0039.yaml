@@ -1,0 +1,29 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0456
+- IKROS-CAMPAIGNAUDIT-20260802-0457
+- IKROS-CAMPAIGNAUDIT-20260802-0458
+- IKROS-CAMPAIGNAUDIT-20260802-0459
+- IKROS-CAMPAIGNAUDIT-20260802-0460
+blocked_task_ids: []
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0039
+campaign_type: RESEARCH_AUDIT
+completed_task_ids: []
+failed_task_ids:
+- IKROS-RESEARCHTASK-20260802-0162
+finished_at: '2026-08-02T16:07:09.516388+00:00'
+lifecycle_state: FAILED
+memory_record_ids:
+- IKMEM-T4-20260802-0046
+output_refs: []
+progress:
+  blocked: 0
+  completed: 0
+  failed: 1
+  percent_complete: 0.0
+  skipped: 0
+  total: 3
+report_id: IKROS-CAMPAIGNREPORT-20260802-0039
+skipped_task_ids: []
+started_at: '2026-08-02T16:07:04.557502+00:00'
+summary: DC2 Research Program A — Cross-Asset Transition Ecology failed after 1 task
+  failures.

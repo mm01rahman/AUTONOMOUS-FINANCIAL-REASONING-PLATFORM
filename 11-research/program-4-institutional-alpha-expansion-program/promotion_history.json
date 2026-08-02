@@ -1,0 +1,41 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "confidence": 0.719,
+    "mechanism": "safe_haven_migration",
+    "source_program": "PROGRAM_3",
+    "state": "APPROVED_ALPHA"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0001",
+    "confidence": 0.72,
+    "family": "REAL_YIELD_DISLOCATIONS",
+    "mechanism": "real_yield_dislocation_reversion",
+    "source_program": "PROGRAM_4",
+    "state": "APPROVED_ALPHA"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0002",
+    "confidence": 0.71,
+    "family": "POLICY_EXPECTATION_REPRICING",
+    "mechanism": "policy_expectation_repricing",
+    "source_program": "PROGRAM_4",
+    "state": "APPROVED_ALPHA"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0003",
+    "confidence": 0.72,
+    "family": "ETF_ACCUMULATION_DISTRIBUTION",
+    "mechanism": "etf_flow_accumulation_pressure",
+    "source_program": "PROGRAM_4",
+    "state": "APPROVED_ALPHA"
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0004",
+    "confidence": 0.71,
+    "family": "COMMODITY_INTERMARKET_RELATIONSHIPS",
+    "mechanism": "commodity_cross_curve_divergence",
+    "source_program": "PROGRAM_4",
+    "state": "APPROVED_ALPHA"
+  }
+]

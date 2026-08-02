@@ -1,0 +1,98 @@
+{
+  "commodity_cross_curve_divergence": {
+    "alpha_id": "IKROS-ALPHA-P4-0004",
+    "confidence": 0.71,
+    "correlation_to_existing_approved": 0.13,
+    "cross_asset_dependencies": [
+      "gold",
+      "oil",
+      "industrial_metals",
+      "usd"
+    ],
+    "expected_capacity": "HIGH",
+    "expected_decay": "Moderate as commodity spread converges",
+    "expected_holding_horizon": "4-12 days",
+    "expected_regime": "INTERMARKET_DIVERGENCE",
+    "family": "COMMODITY_INTERMARKET_RELATIONSHIPS",
+    "scientific_independence_score": 0.76,
+    "shared_datasets": [
+      "FRED-DXY"
+    ],
+    "shared_failure_modes": []
+  },
+  "etf_flow_accumulation_pressure": {
+    "alpha_id": "IKROS-ALPHA-P4-0003",
+    "confidence": 0.72,
+    "correlation_to_existing_approved": 0.1333,
+    "cross_asset_dependencies": [
+      "etf_flows",
+      "usd",
+      "liquidity"
+    ],
+    "expected_capacity": "MEDIUM",
+    "expected_decay": "Moderate as flows normalize",
+    "expected_holding_horizon": "2-8 days",
+    "expected_regime": "FLOW_DOMINATED",
+    "family": "ETF_ACCUMULATION_DISTRIBUTION",
+    "scientific_independence_score": 0.72,
+    "shared_datasets": [
+      "ETF-GLD",
+      "FRED-DXY"
+    ],
+    "shared_failure_modes": []
+  },
+  "policy_expectation_repricing": {
+    "alpha_id": "IKROS-ALPHA-P4-0002",
+    "confidence": 0.71,
+    "correlation_to_existing_approved": 0.06,
+    "cross_asset_dependencies": [
+      "front_end_rates",
+      "policy_expectations",
+      "usd"
+    ],
+    "expected_capacity": "MEDIUM",
+    "expected_decay": "Fast after event window closes",
+    "expected_holding_horizon": "1-5 days",
+    "expected_regime": "CENTRAL_BANK_REPRICING",
+    "family": "POLICY_EXPECTATION_REPRICING",
+    "scientific_independence_score": 0.79,
+    "shared_datasets": [],
+    "shared_failure_modes": []
+  },
+  "real_yield_dislocation_reversion": {
+    "alpha_id": "IKROS-ALPHA-P4-0001",
+    "confidence": 0.72,
+    "correlation_to_existing_approved": 0.0,
+    "cross_asset_dependencies": [
+      "real_yields",
+      "usd",
+      "inflation_expectations"
+    ],
+    "expected_capacity": "HIGH",
+    "expected_decay": "Moderate after policy repricing stabilizes",
+    "expected_holding_horizon": "3-10 days",
+    "expected_regime": "REAL_RATE_SHOCK",
+    "family": "REAL_YIELD_DISLOCATIONS",
+    "scientific_independence_score": 0.77,
+    "shared_datasets": [],
+    "shared_failure_modes": []
+  },
+  "safe_haven_migration": {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "confidence": 0.719,
+    "correlation_to_existing_approved": 0.0,
+    "cross_asset_dependencies": [
+      "USD",
+      "equity_volatility",
+      "rates"
+    ],
+    "expected_capacity": "MEDIUM",
+    "expected_decay": "Gradual over 3-6 months post-stress event",
+    "expected_holding_horizon": "5-15 days",
+    "expected_regime": "HIGH_UNCERTAINTY",
+    "family": "SAFE_HAVEN_FLOWS",
+    "scientific_independence_score": 0.71,
+    "shared_datasets": [],
+    "shared_failure_modes": []
+  }
+}

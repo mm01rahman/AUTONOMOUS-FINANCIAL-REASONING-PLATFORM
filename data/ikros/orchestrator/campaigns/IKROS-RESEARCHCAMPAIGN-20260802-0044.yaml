@@ -1,0 +1,231 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0491
+- IKROS-CAMPAIGNAUDIT-20260802-0492
+- IKROS-CAMPAIGNAUDIT-20260802-0493
+- IKROS-CAMPAIGNAUDIT-20260802-0494
+- IKROS-CAMPAIGNAUDIT-20260802-0495
+- IKROS-CAMPAIGNAUDIT-20260802-0496
+- IKROS-CAMPAIGNAUDIT-20260802-0497
+- IKROS-CAMPAIGNAUDIT-20260802-0498
+- IKROS-CAMPAIGNAUDIT-20260802-0499
+- IKROS-CAMPAIGNAUDIT-20260802-0500
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0044
+campaign_type: HYPOTHESIS_VALIDATION
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0044
+created_at: '2026-08-02T18:52:45.473717+00:00'
+evidence_refs: []
+failure_policy: CONTINUE
+finished_at: '2026-08-02T18:52:54.496186+00:00'
+lifecycle_state: FAILED
+objective: Implement a permanent institutional evidence and validation engine with
+  hard observation completeness gates, governed scorecards, failure dossiers, confidence
+  updates, and IKROS lineage updates.
+pipeline:
+  deterministic: true
+  name: HYPOTHESIS_VALIDATION pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0044
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - STATISTICAL_EVALUATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0177
+  - IKROS-RESEARCHTASK-20260802-0181
+  - IKROS-RESEARCHTASK-20260802-0185
+  - IKROS-RESEARCHTASK-20260802-0187
+research_question_id: null
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T18:52:47.416069+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T18:52:50.080214+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.59
+        economic: 0.62
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.6
+        operational: 0.0
+        overall: 0.6032050709374889
+        prior: 0.64
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260803-0050
+      instrument: XAU/USD
+      lifecycle_state: OPEN
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: wp-imp-0050-evidence-engine
+          creation_context: Generation 2 evidence-engine bootstrap
+          motivation: Institutionalize scientific validation as a permanent system.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: ''
+      scope: MACRO
+      spec_refs: []
+      time_horizon: ''
+      title: WP-IMP-0050 Primary Research Question
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: 'Duplicate: ResearchQuestion ''IKROS-RQ-20260803-0050'' already registered'
+    graph_node_id: null
+    memory_record_id: null
+    metrics: {}
+    output_refs: []
+    payload: {}
+    selected_ids: []
+  started_at: '2026-08-02T18:52:49.215329+00:00'
+  status: FAILED
+  task_id: IKROS-RESEARCHTASK-20260802-0177
+  title: Research Question
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0177
+  finished_at: null
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.58
+        economic: 0.61
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.6
+        operational: 0.0
+        overall: 0.5965355905005373
+        prior: 0.63
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260803-0050
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: wp-imp-0050-evidence-engine
+          creation_context: Generation 2 evidence-engine integration
+          motivation: Establish evidence-led, reproducible mechanism validation.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: b8f0a7f1da00320fe83681f924e4407da16574aa54df89e17b0efe08289fe503
+      spec_refs: []
+      title: WP-IMP-0050 Evidence Engine Integration
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0181
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0181
+  finished_at: null
+  kind: STATISTICAL_EVALUATION
+  max_attempts: 1
+  payload: {}
+  planned_order: 9
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0185
+  title: Statistical Evaluation
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0185
+  finished_at: null
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0187
+  title: Final Report
+title: Generation 2 WP-IMP-0050 Institutional Alpha Evidence Engine
+updated_at: '2026-08-02T18:52:56.390616+00:00'
+work_package_refs:
+- WP-IMP-0048

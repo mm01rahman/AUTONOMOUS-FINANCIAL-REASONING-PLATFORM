@@ -1,0 +1,13 @@
+attributes: {}
+confidence: 0.6067
+created_at: '2026-08-02T18:52:59.135317+00:00'
+ikros_id: IKROS-GEN2-WP0050-VALID-0006
+label: WP-IMP-0050 Validation Dossier IKROS-ALPHA-DC3-20260802-0006
+node_id: IKROS-GEN2-WP0050-VALID-0006
+node_type: VALIDATION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0050
