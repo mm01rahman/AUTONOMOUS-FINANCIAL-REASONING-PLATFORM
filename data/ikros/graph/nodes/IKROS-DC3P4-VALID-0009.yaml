@@ -1,0 +1,13 @@
+attributes: {}
+confidence: 0.4351
+created_at: '2026-08-02T14:41:06.581622+00:00'
+ikros_id: IKROS-DC3P4-VALID-0009
+label: 'DC3P4 Validation: IKROS-ALPHA-DC3-20260802-0009 → RESEARCH'
+node_id: IKROS-DC3P4-VALID-0009
+node_type: VALIDATION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

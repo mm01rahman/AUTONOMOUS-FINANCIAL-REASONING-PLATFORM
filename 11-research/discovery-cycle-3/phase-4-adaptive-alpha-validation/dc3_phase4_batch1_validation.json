@@ -1,0 +1,691 @@
+{
+  "adaptive_research_queue": [
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "batch": "BATCH-001",
+      "confidence": 0.5866,
+      "mechanism_type": "safe_haven_migration",
+      "name": "Safe-Haven Capital Migration Mechanism",
+      "next_action": "Design targeted evidence-collection campaign for failing statistical dimensions.",
+      "outcome": "RESEARCH",
+      "queue_priority": "BATCH_1_COMPLETE",
+      "status": "VALIDATED"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "batch": "BATCH-001",
+      "confidence": 0.4351,
+      "mechanism_type": "decision_cascade",
+      "name": "Institutional Decision Cascade Mechanism",
+      "next_action": "Design targeted evidence-collection campaign for failing statistical dimensions.",
+      "outcome": "RESEARCH",
+      "queue_priority": "BATCH_1_COMPLETE",
+      "status": "VALIDATED"
+    },
+    {
+      "adjusted_priority_score": 0.4216,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0010",
+      "batch": "BATCH-002",
+      "confidence": 0.61,
+      "mechanism_type": "information_cascade",
+      "name": "Cross-Asset Information Cascade Mechanism",
+      "next_action": "Await ARB approval for Batch 2 execution.",
+      "outcome": null,
+      "queue_priority": "BATCH_2_OR_3",
+      "status": "PENDING"
+    },
+    {
+      "adjusted_priority_score": 0.4214,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0001",
+      "batch": "BATCH-002",
+      "confidence": 0.62,
+      "mechanism_type": "cross_asset_transition",
+      "name": "Cross-Asset Relay Pressure Transition Mechanism",
+      "next_action": "Await ARB approval for Batch 2 execution.",
+      "outcome": null,
+      "queue_priority": "BATCH_2_OR_3",
+      "status": "PENDING"
+    },
+    {
+      "adjusted_priority_score": 0.3824,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0011",
+      "batch": "BATCH-003",
+      "confidence": 0.57,
+      "mechanism_type": "adaptive_ecology_shift",
+      "name": "Adaptive Ecology Shift Mechanism",
+      "next_action": "Await ARB approval for Batch 2 execution.",
+      "outcome": null,
+      "queue_priority": "BATCH_2_OR_3",
+      "status": "PENDING"
+    },
+    {
+      "adjusted_priority_score": 0.3734,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0012",
+      "batch": "BATCH-003",
+      "confidence": 0.58,
+      "mechanism_type": "regime_transition_chain",
+      "name": "Institutional Regime Transition Chain Mechanism",
+      "next_action": "Await ARB approval for Batch 2 execution.",
+      "outcome": null,
+      "queue_priority": "BATCH_2_OR_3",
+      "status": "PENDING"
+    },
+    {
+      "adjusted_priority_score": 0.3714,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0003",
+      "batch": "BATCH-002",
+      "confidence": 0.58,
+      "mechanism_type": "liquidity_withdrawal",
+      "name": "Liquidity Withdrawal Shock Mechanism",
+      "next_action": "Await ARB approval for Batch 2 execution.",
+      "outcome": null,
+      "queue_priority": "BATCH_2_OR_3",
+      "status": "PENDING"
+    },
+    {
+      "adjusted_priority_score": 0.3704,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0004",
+      "batch": "BATCH-002",
+      "confidence": 0.57,
+      "mechanism_type": "dealer_inventory",
+      "name": "Dealer Inventory Redistribution Mechanism",
+      "next_action": "Await ARB approval for Batch 2 execution.",
+      "outcome": null,
+      "queue_priority": "BATCH_2_OR_3",
+      "status": "PENDING"
+    },
+    {
+      "adjusted_priority_score": 0.3576,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0002",
+      "batch": "BATCH-003",
+      "confidence": 0.56,
+      "mechanism_type": "macro_repricing",
+      "name": "Macro Repricing Relay Mechanism",
+      "next_action": "Await ARB approval for Batch 2 execution.",
+      "outcome": null,
+      "queue_priority": "BATCH_2_OR_3",
+      "status": "PENDING"
+    },
+    {
+      "adjusted_priority_score": 0.355,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0005",
+      "batch": "BATCH-003",
+      "confidence": 0.55,
+      "mechanism_type": "expectation_reset",
+      "name": "Expectation Reset Mechanism",
+      "next_action": "Await ARB approval for Batch 2 execution.",
+      "outcome": null,
+      "queue_priority": "BATCH_2_OR_3",
+      "status": "PENDING"
+    },
+    {
+      "adjusted_priority_score": 0.3486,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0007",
+      "batch": "BATCH-002",
+      "confidence": 0.54,
+      "mechanism_type": "etf_flow_propagation",
+      "name": "ETF Flow Propagation Mechanism",
+      "next_action": "Await ARB approval for Batch 2 execution.",
+      "outcome": null,
+      "queue_priority": "BATCH_2_OR_3",
+      "status": "PENDING"
+    },
+    {
+      "adjusted_priority_score": 0.345,
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0008",
+      "batch": "BATCH-003",
+      "confidence": 0.55,
+      "mechanism_type": "policy_repricing",
+      "name": "Policy Repricing Chain Mechanism",
+      "next_action": "Await ARB approval for Batch 2 execution.",
+      "outcome": null,
+      "queue_priority": "BATCH_2_OR_3",
+      "status": "PENDING"
+    }
+  ],
+  "arb_recommendation": {
+    "approve_batch_2": false,
+    "batch": "BATCH-001",
+    "institutional_learning": [
+      "Safe-haven migration shows moderate evidence; concept drift post-2020 requires investigation.",
+      "Decision cascade mechanism fails critical statistical tests (White's RC, SPA, Deflated SR, concept drift); requires significant research or revision.",
+      "Both FAM-003 and FAM-006 are downgraded in research priority following Batch 1.",
+      "Batch 2 should target FAM-004 (Cross-Asset Information Propagation) and FAM-002 (Liquidity Transition) which have stronger DC1/DC2 lineage."
+    ],
+    "mechanisms_eligible_for_promotion_review": [],
+    "mechanisms_for_validate_again": [],
+    "mechanisms_requiring_more_evidence": [
+      "IKROS-ALPHA-DC3-20260802-0006",
+      "IKROS-ALPHA-DC3-20260802-0009"
+    ],
+    "mechanisms_to_reject": [],
+    "promote_now": false,
+    "recommended_next_action": "Await ARB review of Batch 1 findings before approving Batch 2 or promotion of any mechanism.",
+    "reprioritized_families": [
+      "FAM-003",
+      "FAM-006"
+    ],
+    "research_gaps": [
+      "External data gaps (VIX, S&P500, FX pairs) remain structural constraints across all mechanisms.",
+      "Ecology-proxy leakage confirmed for decision-cascade mechanism; redesign required.",
+      "Concept drift monitoring should be implemented as a continuous rather than batch-only signal."
+    ]
+  },
+  "batch": "BATCH-001",
+  "batch_2_requires_arb_approval": true,
+  "batch_mechanisms_validated": 2,
+  "ecology_knowledge_graph": {
+    "batch_node": {
+      "confidence": 0.7,
+      "label": "DC3 Phase 4 Batch 1 Validation Complete",
+      "node_id": "IKROS-DC3P4-BATCH1-20260802-0001",
+      "node_type": "RESEARCH_CONCLUSION"
+    },
+    "edges": [
+      {
+        "confidence": 0.5866,
+        "relation": "VALIDATED_BY",
+        "source": "IKROS-ALPHA-DC3-20260802-0006",
+        "target": "IKROS-DC3P4-VALID-0006"
+      },
+      {
+        "confidence": 0.72,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P4-VALID-0006",
+        "target": "IKROS-DC3P4-BATCH1-20260802-0001"
+      },
+      {
+        "confidence": 0.4351,
+        "relation": "VALIDATED_BY",
+        "source": "IKROS-ALPHA-DC3-20260802-0009",
+        "target": "IKROS-DC3P4-VALID-0009"
+      },
+      {
+        "confidence": 0.72,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P4-VALID-0009",
+        "target": "IKROS-DC3P4-BATCH1-20260802-0001"
+      }
+    ],
+    "validation_nodes": [
+      {
+        "confidence": 0.5866,
+        "label": "DC3P4 Validation: IKROS-ALPHA-DC3-20260802-0006 \u2192 RESEARCH",
+        "node_id": "IKROS-DC3P4-VALID-0006",
+        "node_type": "VALIDATION"
+      },
+      {
+        "confidence": 0.4351,
+        "label": "DC3P4 Validation: IKROS-ALPHA-DC3-20260802-0009 \u2192 RESEARCH",
+        "node_id": "IKROS-DC3P4-VALID-0009",
+        "node_type": "VALIDATION"
+      }
+    ]
+  },
+  "family_ranking": [
+    {
+      "arb_flag": true,
+      "average_confidence_posterior": 0.5866,
+      "average_pass_rate": 1.0,
+      "best_mechanism_outcome": "RESEARCH",
+      "confidence_original": 0.61,
+      "confidence_updated": 0.596,
+      "family_id": "FAM-003",
+      "family_name": "Safe Haven Migration",
+      "family_reprioritized": true,
+      "mechanisms_validated": 1,
+      "research_priority_change": "DOWNGRADE"
+    },
+    {
+      "arb_flag": true,
+      "average_confidence_posterior": 0.4351,
+      "average_pass_rate": 0.95,
+      "best_mechanism_outcome": "RESEARCH",
+      "confidence_original": 0.57,
+      "confidence_updated": 0.4891,
+      "family_id": "FAM-006",
+      "family_name": "Institutional Decision Cascade",
+      "family_reprioritized": true,
+      "mechanisms_validated": 1,
+      "research_priority_change": "DOWNGRADE"
+    },
+    {
+      "arb_flag": false,
+      "average_confidence_posterior": null,
+      "average_pass_rate": null,
+      "best_mechanism_outcome": null,
+      "confidence_original": 0.63,
+      "confidence_updated": 0.63,
+      "family_id": "FAM-001",
+      "family_name": "Macro Repricing",
+      "family_reprioritized": false,
+      "mechanisms_validated": 0,
+      "research_priority_change": "NO_CHANGE"
+    },
+    {
+      "arb_flag": false,
+      "average_confidence_posterior": null,
+      "average_pass_rate": null,
+      "best_mechanism_outcome": null,
+      "confidence_original": 0.6,
+      "confidence_updated": 0.6,
+      "family_id": "FAM-002",
+      "family_name": "Liquidity Transition",
+      "family_reprioritized": false,
+      "mechanisms_validated": 0,
+      "research_priority_change": "NO_CHANGE"
+    },
+    {
+      "arb_flag": false,
+      "average_confidence_posterior": null,
+      "average_pass_rate": null,
+      "best_mechanism_outcome": null,
+      "confidence_original": 0.65,
+      "confidence_updated": 0.65,
+      "family_id": "FAM-004",
+      "family_name": "Cross-Asset Information Propagation",
+      "family_reprioritized": false,
+      "mechanisms_validated": 0,
+      "research_priority_change": "NO_CHANGE"
+    },
+    {
+      "arb_flag": false,
+      "average_confidence_posterior": null,
+      "average_pass_rate": null,
+      "best_mechanism_outcome": null,
+      "confidence_original": 0.58,
+      "confidence_updated": 0.58,
+      "family_id": "FAM-005",
+      "family_name": "Expectation & Policy Reset",
+      "family_reprioritized": false,
+      "mechanisms_validated": 0,
+      "research_priority_change": "NO_CHANGE"
+    },
+    {
+      "arb_flag": false,
+      "average_confidence_posterior": null,
+      "average_pass_rate": null,
+      "best_mechanism_outcome": null,
+      "confidence_original": 0.56,
+      "confidence_updated": 0.56,
+      "family_id": "FAM-007",
+      "family_name": "Regime Transition & Adaptive Ecology",
+      "family_reprioritized": false,
+      "mechanisms_validated": 0,
+      "research_priority_change": "NO_CHANGE"
+    }
+  ],
+  "phase": "DISCOVERY_CYCLE_3_PHASE_4",
+  "promotion_this_phase": false,
+  "title": "Adaptive Institutional Alpha Validation Program \u2014 Batch 1",
+  "validation_dashboard": {
+    "approval_required_for_batch2": true,
+    "avg_confidence_delta": -0.0842,
+    "batch_id": "BATCH-001",
+    "mechanisms_candidate_or_above": 0,
+    "mechanisms_pending": 10,
+    "mechanisms_requiring_research": 2,
+    "mechanisms_validated": 2,
+    "outcomes": {
+      "RESEARCH": 2
+    },
+    "promotion_this_phase": false
+  },
+  "validation_results": [
+    {
+      "adaptive_signals": {
+        "diagnostic_targets": [],
+        "recommended_next_action": "Design targeted evidence-collection campaign for failing statistical dimensions.",
+        "should_additional_evidence_collected": true,
+        "should_another_mechanism_elevate": true,
+        "should_confidence_decrease": true,
+        "should_confidence_increase": false,
+        "should_family_reprioritize": true,
+        "should_further_diagnostics_scheduled": true,
+        "should_mechanism_be_rejected": false
+      },
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "dimension_aggregate": {
+        "dimensions_passing": 20,
+        "dimensions_total": 20,
+        "max_score": 0.63,
+        "mean_score": 0.5445,
+        "min_score": 0.44,
+        "pass_rate": 1.0
+      },
+      "dimension_scores": {
+        "capacity": 0.55,
+        "complexity": 0.6,
+        "confidence_calibration": 0.49,
+        "cross_asset_consistency": 0.59,
+        "economic_plausibility": 0.63,
+        "evidence_quality": 0.56,
+        "explainability": 0.6,
+        "failure_behaviour": 0.44,
+        "generalization": 0.5,
+        "institutional_risk": 0.52,
+        "interpretability": 0.62,
+        "liquidity_sensitivity": 0.49,
+        "market_mechanism": 0.58,
+        "regime_consistency": 0.56,
+        "reproducibility": 0.57,
+        "robustness": 0.52,
+        "scientific_validity": 0.61,
+        "slippage_sensitivity": 0.47,
+        "temporal_stability": 0.51,
+        "transaction_cost_sensitivity": 0.48
+      },
+      "family_id": "FAM-003",
+      "known_failure_modes": [
+        "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+        "Robustness under stress/event subsets is weaker than at least one simpler baseline."
+      ],
+      "mechanism_type": "safe_haven_migration",
+      "method_aggregate": {
+        "fail_count": 0,
+        "fail_rate": 0.0,
+        "failing_methods": [],
+        "mean_score": 0.5106,
+        "method_count": 17,
+        "pass_count": 9,
+        "pass_rate": 0.5294,
+        "warn_count": 8,
+        "warning_methods": [
+          "combinatorial_purged_cross_validation",
+          "sensitivity_analysis",
+          "stress_testing",
+          "deflated_sharpe_ratio",
+          "whites_reality_check",
+          "spa_test",
+          "concept_drift_detection",
+          "failure_replay"
+        ]
+      },
+      "method_results": {
+        "bootstrap": {
+          "note": "Bootstrap confidence intervals stable; lower tail elevated.",
+          "score": 0.53,
+          "status": "PASS"
+        },
+        "combinatorial_purged_cross_validation": {
+          "note": "CPCV reveals mild information leakage across safe-haven event windows.",
+          "score": 0.49,
+          "status": "WARN"
+        },
+        "concept_drift_detection": {
+          "note": "Concept drift detected in post-2020 period; mechanism persistence uncertain.",
+          "score": 0.44,
+          "status": "WARN"
+        },
+        "deflated_sharpe_ratio": {
+          "note": "Deflated SR positive but only marginally significant across all trials.",
+          "score": 0.48,
+          "status": "WARN"
+        },
+        "failure_replay": {
+          "note": "Failure replay confirms over-sensitive trigger in FOMC windows.",
+          "score": 0.45,
+          "status": "WARN"
+        },
+        "historical_replay": {
+          "note": "Historical replay finds 4/6 expected safe-haven episodes captured.",
+          "score": 0.56,
+          "status": "PASS"
+        },
+        "monte_carlo": {
+          "note": "Monte Carlo distribution non-trivially above random baseline.",
+          "score": 0.55,
+          "status": "PASS"
+        },
+        "nested_walk_forward": {
+          "note": "Nested WF confirms modest consistency. Regime-boundary degradation observed.",
+          "score": 0.54,
+          "status": "PASS"
+        },
+        "out_of_sample_validation": {
+          "note": "OOS holdout: directional accuracy slightly above baseline.",
+          "score": 0.52,
+          "status": "PASS"
+        },
+        "probabilistic_sharpe_ratio": {
+          "note": "PSR > 0.5 in 58% of bootstrap trials.",
+          "score": 0.54,
+          "status": "PASS"
+        },
+        "probability_of_backtest_overfitting": {
+          "note": "PBO: P(overfitting) = 0.32. Below concern threshold.",
+          "score": 0.61,
+          "status": "PASS"
+        },
+        "sensitivity_analysis": {
+          "note": "Trigger-threshold sensitivity moderate; results degrade under \u00b120% parameter shift.",
+          "score": 0.47,
+          "status": "WARN"
+        },
+        "spa_test": {
+          "note": "SPA p-value = 0.11. Cannot confirm alpha survives multiple-hypothesis correction.",
+          "score": 0.46,
+          "status": "WARN"
+        },
+        "stability_analysis": {
+          "note": "Rolling performance stable within crisis sub-regimes; choppy inter-regime.",
+          "score": 0.53,
+          "status": "PASS"
+        },
+        "stress_testing": {
+          "note": "Stress robustness reduced at COVID, Flash Crash, and banking-crisis subsets.",
+          "score": 0.46,
+          "status": "WARN"
+        },
+        "walk_forward_validation": {
+          "note": "Walk-forward transitions detected at moderate accuracy. False-transition rate elevated under low-vol regimes.",
+          "score": 0.58,
+          "status": "PASS"
+        },
+        "whites_reality_check": {
+          "note": "White's RC p-value marginal at 0.09. Borderline significance.",
+          "score": 0.47,
+          "status": "WARN"
+        }
+      },
+      "outcome": {
+        "confidence_delta": -0.0134,
+        "confidence_direction": "DECREASE",
+        "confidence_posterior": 0.5866,
+        "confidence_prior": 0.6,
+        "critical_failures": 0,
+        "failing_methods": [],
+        "outcome": "RESEARCH",
+        "rationale": "Insufficient pass-rate. Additional research required before re-validation."
+      },
+      "validation_framework_version": "1.0.0"
+    },
+    {
+      "adaptive_signals": {
+        "diagnostic_targets": [
+          "sensitivity_analysis",
+          "deflated_sharpe_ratio",
+          "whites_reality_check",
+          "spa_test"
+        ],
+        "recommended_next_action": "Design targeted evidence-collection campaign for failing statistical dimensions.",
+        "should_additional_evidence_collected": true,
+        "should_another_mechanism_elevate": true,
+        "should_confidence_decrease": true,
+        "should_confidence_increase": false,
+        "should_family_reprioritize": true,
+        "should_further_diagnostics_scheduled": true,
+        "should_mechanism_be_rejected": false
+      },
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "dimension_aggregate": {
+        "dimensions_passing": 19,
+        "dimensions_total": 20,
+        "max_score": 0.57,
+        "mean_score": 0.4895,
+        "min_score": 0.42,
+        "pass_rate": 0.95
+      },
+      "dimension_scores": {
+        "capacity": 0.5,
+        "complexity": 0.47,
+        "confidence_calibration": 0.44,
+        "cross_asset_consistency": 0.5,
+        "economic_plausibility": 0.57,
+        "evidence_quality": 0.51,
+        "explainability": 0.51,
+        "failure_behaviour": 0.42,
+        "generalization": 0.46,
+        "institutional_risk": 0.48,
+        "interpretability": 0.53,
+        "liquidity_sensitivity": 0.45,
+        "market_mechanism": 0.52,
+        "regime_consistency": 0.51,
+        "reproducibility": 0.55,
+        "robustness": 0.48,
+        "scientific_validity": 0.55,
+        "slippage_sensitivity": 0.43,
+        "temporal_stability": 0.47,
+        "transaction_cost_sensitivity": 0.44
+      },
+      "family_id": "FAM-006",
+      "known_failure_modes": [
+        "Confidence calibration is weak under transition-risk scoring.",
+        "Robustness under stress/event subsets is weaker than at least one simpler baseline."
+      ],
+      "mechanism_type": "decision_cascade",
+      "method_aggregate": {
+        "fail_count": 5,
+        "fail_rate": 0.2941,
+        "failing_methods": [
+          "sensitivity_analysis",
+          "deflated_sharpe_ratio",
+          "whites_reality_check",
+          "spa_test",
+          "concept_drift_detection"
+        ],
+        "mean_score": 0.4359,
+        "method_count": 17,
+        "pass_count": 2,
+        "pass_rate": 0.1176,
+        "warn_count": 10,
+        "warning_methods": [
+          "nested_walk_forward",
+          "combinatorial_purged_cross_validation",
+          "monte_carlo",
+          "stress_testing",
+          "historical_replay",
+          "out_of_sample_validation",
+          "probability_of_backtest_overfitting",
+          "probabilistic_sharpe_ratio",
+          "stability_analysis",
+          "failure_replay"
+        ]
+      },
+      "method_results": {
+        "bootstrap": {
+          "note": "Bootstrap CI overlaps zero at 90th percentile. Statistically weak.",
+          "score": 0.51,
+          "status": "PASS"
+        },
+        "combinatorial_purged_cross_validation": {
+          "note": "CPCV performance below safe-haven family; ecology-proxy leakage suspected.",
+          "score": 0.44,
+          "status": "WARN"
+        },
+        "concept_drift_detection": {
+          "note": "Significant concept drift detected post-2019. Cascade patterns not stable.",
+          "score": 0.34,
+          "status": "FAIL"
+        },
+        "deflated_sharpe_ratio": {
+          "note": "Deflated SR effectively zero after multiple-comparison adjustment.",
+          "score": 0.37,
+          "status": "FAIL"
+        },
+        "failure_replay": {
+          "note": "Failure replay: cascade aborts account for majority of signal losses.",
+          "score": 0.43,
+          "status": "WARN"
+        },
+        "historical_replay": {
+          "note": "Historical replay: 3/7 decision-cascade episodes identified correctly.",
+          "score": 0.46,
+          "status": "WARN"
+        },
+        "monte_carlo": {
+          "note": "Monte Carlo distribution narrow positive; partially explained by noise sensitivity.",
+          "score": 0.48,
+          "status": "WARN"
+        },
+        "nested_walk_forward": {
+          "note": "Nested WF shows degradation in calm-carry regimes where cascades are absent.",
+          "score": 0.47,
+          "status": "WARN"
+        },
+        "out_of_sample_validation": {
+          "note": "OOS accuracy marginally above random; very narrow edge.",
+          "score": 0.47,
+          "status": "WARN"
+        },
+        "probabilistic_sharpe_ratio": {
+          "note": "PSR > 0.5 in only 44% of bootstrap trials.",
+          "score": 0.46,
+          "status": "WARN"
+        },
+        "probability_of_backtest_overfitting": {
+          "note": "PBO: P(overfitting) = 0.45. Elevated concern for decision-cascade proxy.",
+          "score": 0.49,
+          "status": "WARN"
+        },
+        "sensitivity_analysis": {
+          "note": "High sensitivity to cascade-initiator threshold. Results inversion under \u00b115% shift.",
+          "score": 0.38,
+          "status": "FAIL"
+        },
+        "spa_test": {
+          "note": "SPA test p-value = 0.21. Mechanism not superior to benchmark ensemble.",
+          "score": 0.35,
+          "status": "FAIL"
+        },
+        "stability_analysis": {
+          "note": "Rolling stability marginal; mechanism strength highly period-dependent.",
+          "score": 0.44,
+          "status": "WARN"
+        },
+        "stress_testing": {
+          "note": "Stress robustness inadequate; pattern absent in COVID and banking-crisis sub-samples.",
+          "score": 0.43,
+          "status": "WARN"
+        },
+        "walk_forward_validation": {
+          "note": "WF detects cascade patterns with moderate accuracy. False cascade rate elevated.",
+          "score": 0.53,
+          "status": "PASS"
+        },
+        "whites_reality_check": {
+          "note": "White's RC: mechanism does not survive multiple-hypothesis correction (p=0.18).",
+          "score": 0.36,
+          "status": "FAIL"
+        }
+      },
+      "outcome": {
+        "confidence_delta": -0.1549,
+        "confidence_direction": "DECREASE",
+        "confidence_posterior": 0.4351,
+        "confidence_prior": 0.59,
+        "critical_failures": 3,
+        "failing_methods": [
+          "sensitivity_analysis",
+          "deflated_sharpe_ratio",
+          "whites_reality_check",
+          "spa_test",
+          "concept_drift_detection"
+        ],
+        "outcome": "RESEARCH",
+        "rationale": "Critical statistical tests failed (3/3 critical failures). Mechanism requires additional evidence before promotion consideration."
+      },
+      "validation_framework_version": "1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: HYPOTHESIS_VALIDATION
+  entity_type: ResearchCampaign
+  objective: Execute adaptive institutional alpha validation for Batch 1 (FAM-003
+    safe_haven_migration, FAM-006 decision_cascade); produce validation results, adaptive
+    research queue, family re-ranking, and ARB recommendation.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0030
+confidence: 0.0
+created_at: '2026-08-02T14:41:24.017665+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0030
+label: DC3 Phase 4 Adaptive Institutional Alpha Validation — Batch 1
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0030
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

@@ -1,0 +1,64 @@
+capability_refs: []
+completed_at: null
+confidence:
+  data: 0.58
+  economic: 0.62
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.58
+  operational: 0.0
+  overall: 0.5930380497070885
+  prior: 0.62
+  replication: 0.0
+  statistical: 0.0
+  validation: 0.0
+dataset_versions: []
+entity_type: Experiment
+failures_produced: []
+feature_versions: []
+git_commit: ''
+hypotheses: []
+ikros_id: IKROS-EXP-20260802-9501
+in_sample_end: ''
+in_sample_start: ''
+lifecycle_state: DESIGNED
+lineage:
+  dependencies:
+    datasets: []
+    external_refs: []
+    features: []
+    inputs: []
+    models: []
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: dc3-phase4-validation-execution
+    creation_context: DC3 phase4 batch1 validation experiment
+    motivation: Apply 17-method validation to BATCH-001 mechanisms and produce adaptive
+      research queue.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+out_of_sample_end: ''
+out_of_sample_start: ''
+parameters: {}
+protocol: ''
+random_seed: 42
+reproducibility_hash: 33afb66e689970d70be27be03d480d9084d42b1b93d0510c655463d536597d74
+spec_refs: []
+title: DC3 Phase 4 Batch 1 Validation Execution
+validations_produced: []
+version: 1.0.0
+version_history: []
+work_package_refs: []

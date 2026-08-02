@@ -1,0 +1,41 @@
+{
+  "audit_ids": [
+    "IKROS-CAMPAIGNAUDIT-20260802-0380",
+    "IKROS-CAMPAIGNAUDIT-20260802-0381",
+    "IKROS-CAMPAIGNAUDIT-20260802-0382",
+    "IKROS-CAMPAIGNAUDIT-20260802-0383",
+    "IKROS-CAMPAIGNAUDIT-20260802-0384",
+    "IKROS-CAMPAIGNAUDIT-20260802-0385",
+    "IKROS-CAMPAIGNAUDIT-20260802-0386",
+    "IKROS-CAMPAIGNAUDIT-20260802-0387"
+  ],
+  "blocked_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0138",
+    "IKROS-RESEARCHTASK-20260802-0142",
+    "IKROS-RESEARCHTASK-20260802-0144"
+  ],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0030",
+  "campaign_type": "HYPOTHESIS_VALIDATION",
+  "completed_task_ids": [],
+  "failed_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0134"
+  ],
+  "finished_at": "2026-08-02T14:41:32.008178+00:00",
+  "lifecycle_state": "FAILED",
+  "memory_record_ids": [
+    "IKMEM-T4-20260802-0036"
+  ],
+  "output_refs": [],
+  "progress": {
+    "blocked": 3,
+    "completed": 0,
+    "failed": 1,
+    "percent_complete": 0.0,
+    "skipped": 0,
+    "total": 4
+  },
+  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0030",
+  "skipped_task_ids": [],
+  "started_at": "2026-08-02T14:41:25.710371+00:00",
+  "summary": "DC3 Phase 4 Adaptive Institutional Alpha Validation \u2014 Batch 1 failed after 1 task failures."
+}
