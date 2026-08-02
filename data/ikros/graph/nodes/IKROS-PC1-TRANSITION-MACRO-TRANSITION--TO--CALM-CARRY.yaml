@@ -1,0 +1,16 @@
+attributes:
+  confidence: 0.7061
+  source_regime: macro_transition
+  target_regime: calm_carry
+confidence: 0.68
+created_at: '2026-08-02T11:34:56.451684+00:00'
+ikros_id: IKROS-PC1-TRANSITION-MACRO-TRANSITION--TO--CALM-CARRY
+label: macro_transition__to__calm_carry
+node_id: IKROS-PC1-TRANSITION-MACRO-TRANSITION--TO--CALM-CARRY
+node_type: MARKET_EVENT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

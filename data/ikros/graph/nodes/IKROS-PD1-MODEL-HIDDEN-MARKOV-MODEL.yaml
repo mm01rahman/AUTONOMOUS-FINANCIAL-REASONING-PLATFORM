@@ -1,0 +1,16 @@
+attributes:
+  interpretability: medium
+  timing_error: 2972.0625
+  transition_detection_accuracy: 0.7802
+confidence: 0.66
+created_at: '2026-08-02T12:08:59.669999+00:00'
+ikros_id: IKROS-PD1-MODEL-HIDDEN-MARKOV-MODEL
+label: hidden_markov_model
+node_id: IKROS-PD1-MODEL-HIDDEN-MARKOV-MODEL
+node_type: MODEL
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

@@ -1,0 +1,16 @@
+attributes:
+  interpretability: high
+  timing_error: 2.4092
+  transition_detection_accuracy: 0.6051
+confidence: 0.66
+created_at: '2026-08-02T12:08:59.669999+00:00'
+ikros_id: IKROS-PD1-MODEL-INSTITUTIONAL-TRANSITION-ENGINE-V1
+label: institutional_transition_engine_v1
+node_id: IKROS-PD1-MODEL-INSTITUTIONAL-TRANSITION-ENGINE-V1
+node_type: MODEL
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

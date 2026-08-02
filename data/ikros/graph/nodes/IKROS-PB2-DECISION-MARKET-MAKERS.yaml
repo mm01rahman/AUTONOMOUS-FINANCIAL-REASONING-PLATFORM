@@ -1,0 +1,17 @@
+attributes:
+  belief_update_process: microstructure_state
+  confidence: 0.92
+  participant: market_makers
+  reaction_speed: intraday
+confidence: 0.66
+created_at: '2026-08-02T11:00:11.268612+00:00'
+ikros_id: IKROS-PB2-DECISION-MARKET-MAKERS
+label: Market Makers Decision Model
+node_id: IKROS-PB2-DECISION-MARKET-MAKERS
+node_type: DECISION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

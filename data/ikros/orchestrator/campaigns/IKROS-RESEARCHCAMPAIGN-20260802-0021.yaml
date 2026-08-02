@@ -1,0 +1,217 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0298
+- IKROS-CAMPAIGNAUDIT-20260802-0299
+- IKROS-CAMPAIGNAUDIT-20260802-0300
+- IKROS-CAMPAIGNAUDIT-20260802-0301
+- IKROS-CAMPAIGNAUDIT-20260802-0302
+- IKROS-CAMPAIGNAUDIT-20260802-0303
+- IKROS-CAMPAIGNAUDIT-20260802-0304
+- IKROS-CAMPAIGNAUDIT-20260802-0305
+- IKROS-CAMPAIGNAUDIT-20260802-0306
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0021
+campaign_type: RESEARCH_AUDIT
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0021
+created_at: '2026-08-02T10:55:55.740648+00:00'
+evidence_refs: []
+failure_policy: CONTINUE
+finished_at: '2026-08-02T11:00:08.601101+00:00'
+lifecycle_state: FAILED
+objective: Construct the first institutional decision ecology explaining how heterogeneous
+  participant decisions generate market-wide behavior and regime transitions.
+pipeline:
+  deterministic: true
+  name: RESEARCH_AUDIT pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0021
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0106
+  - IKROS-RESEARCHTASK-20260802-0110
+  - IKROS-RESEARCHTASK-20260802-0116
+research_question_id: null
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T11:00:04.747572+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T11:00:06.316171+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.45
+        economic: 0.66
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.6
+        operational: 0.5
+        overall: 0.5405542537075604
+        prior: 0.56
+        replication: 0.0
+        statistical: 0.56
+        validation: 0.5
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260802-5001
+      instrument: XAU/USD
+      lifecycle_state: ANSWERED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: dc2-program-b-phase2
+          creation_context: Program B Phase 2 primary research question
+          motivation: Program B Phase 1 established the ecology; Phase 2 explains
+            coordinated decision formation.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: Institutional understanding now requires a decision-formation layer
+        above the approved participant ecology.
+      scope: CROSS_ASSET
+      spec_refs: []
+      time_horizon: 1D
+      title: 'DC2-PB2: How do heterogeneous market participants transform new information
+        into coordinated market decisions?'
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: 'Duplicate: ResearchQuestion ''IKROS-RQ-20260802-5001'' already registered'
+    graph_node_id: null
+    memory_record_id: null
+    metrics: {}
+    output_refs: []
+    payload: {}
+    selected_ids: []
+  started_at: '2026-08-02T11:00:05.779314+00:00'
+  status: FAILED
+  task_id: IKROS-RESEARCHTASK-20260802-0106
+  title: Research Question
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0106
+  finished_at: null
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.45
+        economic: 0.66
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.6
+        operational: 0.5
+        overall: 0.5405542537075604
+        prior: 0.56
+        replication: 0.0
+        statistical: 0.56
+        validation: 0.5
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260802-5001
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: dc2-program-b-phase2
+          creation_context: Program B Phase 2 decision ecology experiment
+          motivation: Model expectation formation, belief updating, strategic dependence,
+            and cascades.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: dc2-program-b-phase2-exp-v1
+      spec_refs: []
+      title: 'DC2-PB2-EXP-001: Institutional Decision Ecology'
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0110
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0110
+  finished_at: null
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0116
+  title: Final Report
+title: 'DC2 Program B Phase 2: Institutional Decision Ecology'
+updated_at: '2026-08-02T11:00:09.816571+00:00'
+work_package_refs:
+- WP-IMP-0048

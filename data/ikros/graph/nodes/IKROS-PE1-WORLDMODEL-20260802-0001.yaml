@@ -1,0 +1,14 @@
+attributes:
+  program: DC2 Program E Phase 1
+confidence: 0.73
+created_at: '2026-08-02T13:51:36.358514+00:00'
+ikros_id: IKROS-PE1-WORLDMODEL-20260802-0001
+label: Transition Engine Decomposition & Ablation Program
+node_id: IKROS-PE1-WORLDMODEL-20260802-0001
+node_type: WORLD_MODEL
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

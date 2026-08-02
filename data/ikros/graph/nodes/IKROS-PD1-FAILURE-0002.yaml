@@ -1,0 +1,14 @@
+attributes:
+  category: falsification
+confidence: 0.64
+created_at: '2026-08-02T12:08:59.669999+00:00'
+ikros_id: IKROS-PD1-FAILURE-0002
+label: Missed-transition rate indicates incomplete transition mechanism coverage.
+node_id: IKROS-PD1-FAILURE-0002
+node_type: FAILURE
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

@@ -1,0 +1,14 @@
+attributes:
+  step_count: 7
+confidence: 0.7
+created_at: '2026-08-02T13:51:36.358514+00:00'
+ikros_id: IKROS-PE1-REVISION-20260802-0001
+label: Transition Engine Revision Plan
+node_id: IKROS-PE1-REVISION-20260802-0001
+node_type: VALIDATION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

@@ -1,0 +1,16 @@
+attributes:
+  components_to_redesign: 4
+  components_to_remove: 1
+  components_to_retain: 0
+confidence: 0.71
+created_at: '2026-08-02T13:51:36.358514+00:00'
+ikros_id: IKROS-PE1-CONCLUSION-20260802-0001
+label: Transition Engine Decomposition Conclusion
+node_id: IKROS-PE1-CONCLUSION-20260802-0001
+node_type: RESEARCH_CONCLUSION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048
