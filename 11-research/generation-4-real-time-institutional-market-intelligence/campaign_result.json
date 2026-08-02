@@ -1,53 +1,41 @@
 {
   "audit_ids": [
-    "IKROS-CAMPAIGNAUDIT-20260802-0585",
-    "IKROS-CAMPAIGNAUDIT-20260802-0586",
-    "IKROS-CAMPAIGNAUDIT-20260802-0587",
-    "IKROS-CAMPAIGNAUDIT-20260802-0588",
-    "IKROS-CAMPAIGNAUDIT-20260802-0589",
-    "IKROS-CAMPAIGNAUDIT-20260802-0590",
-    "IKROS-CAMPAIGNAUDIT-20260802-0591",
-    "IKROS-CAMPAIGNAUDIT-20260802-0592",
-    "IKROS-CAMPAIGNAUDIT-20260802-0593",
-    "IKROS-CAMPAIGNAUDIT-20260802-0594",
-    "IKROS-CAMPAIGNAUDIT-20260802-0595",
-    "IKROS-CAMPAIGNAUDIT-20260802-0596",
-    "IKROS-CAMPAIGNAUDIT-20260802-0597",
-    "IKROS-CAMPAIGNAUDIT-20260802-0598"
+    "IKROS-CAMPAIGNAUDIT-20260802-0627",
+    "IKROS-CAMPAIGNAUDIT-20260802-0628",
+    "IKROS-CAMPAIGNAUDIT-20260802-0629",
+    "IKROS-CAMPAIGNAUDIT-20260802-0630",
+    "IKROS-CAMPAIGNAUDIT-20260802-0631",
+    "IKROS-CAMPAIGNAUDIT-20260802-0632",
+    "IKROS-CAMPAIGNAUDIT-20260802-0633",
+    "IKROS-CAMPAIGNAUDIT-20260802-0634"
   ],
-  "blocked_task_ids": [],
-  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0051",
+  "blocked_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0221",
+    "IKROS-RESEARCHTASK-20260802-0225",
+    "IKROS-RESEARCHTASK-20260802-0227"
+  ],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0054",
   "campaign_type": "HYPOTHESIS_VALIDATION",
-  "completed_task_ids": [
-    "IKROS-RESEARCHTASK-20260802-0205",
-    "IKROS-RESEARCHTASK-20260802-0209",
-    "IKROS-RESEARCHTASK-20260802-0213",
-    "IKROS-RESEARCHTASK-20260802-0215"
+  "completed_task_ids": [],
+  "failed_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0217"
   ],
-  "failed_task_ids": [],
-  "finished_at": "2026-08-02T23:29:39.058464+00:00",
-  "lifecycle_state": "COMPLETED",
+  "finished_at": "2026-08-02T23:40:55.211131+00:00",
+  "lifecycle_state": "FAILED",
   "memory_record_ids": [
-    "IKMEM-T1-20260802-0100",
-    "IKMEM-T1-20260802-0101",
-    "IKMEM-T1-20260802-0102",
-    "IKMEM-T1-20260802-0103",
-    "IKMEM-T4-20260802-0058"
+    "IKMEM-T4-20260802-0061"
   ],
-  "output_refs": [
-    "IKROS-EXP-20260803-0058",
-    "IKROS-RQ-20260803-0058"
-  ],
+  "output_refs": [],
   "progress": {
-    "blocked": 0,
-    "completed": 4,
-    "failed": 0,
-    "percent_complete": 100.0,
+    "blocked": 3,
+    "completed": 0,
+    "failed": 1,
+    "percent_complete": 0.0,
     "skipped": 0,
     "total": 4
   },
-  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0051",
+  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0054",
   "skipped_task_ids": [],
-  "started_at": "2026-08-02T23:29:17.638754+00:00",
-  "summary": "Generation 4 \u2014 Real-Time Institutional Market Intelligence Platform completed with 4 completed tasks."
+  "started_at": "2026-08-02T23:40:44.506003+00:00",
+  "summary": "Generation 4 \u2014 Real-Time Institutional Market Intelligence Platform failed after 1 task failures."
 }

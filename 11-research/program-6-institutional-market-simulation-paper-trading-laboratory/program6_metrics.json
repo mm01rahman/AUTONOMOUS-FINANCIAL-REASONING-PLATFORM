@@ -1,8 +1,8 @@
 {
-  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0050",
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0053",
   "final_equity": 1003379.1367,
-  "graph_edges_created": 23,
-  "graph_nodes_created": 23,
+  "graph_edges_created": 1,
+  "graph_nodes_created": 0,
   "portfolio_id": "IKROS-PORTFOLIO-P5-0001",
   "portfolio_recommendation": "NO POSITION",
   "program": "INSTITUTIONAL_MARKET_SIMULATION_PAPER_TRADING_LABORATORY",

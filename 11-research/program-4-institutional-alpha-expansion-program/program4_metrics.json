@@ -12,10 +12,10 @@
     "decision_cascade",
     "central_bank_reserve_reallocation"
   ],
-  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0047",
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0056",
   "campaigns_executed": 10,
-  "graph_edges_created": 6,
-  "graph_nodes_created": 5,
+  "graph_edges_created": 1,
+  "graph_nodes_created": 0,
   "program": "INSTITUTIONAL_ALPHA_EXPANSION_PROGRAM_4",
   "rejected_mechanisms": [
     "volatility_carry_shadow"

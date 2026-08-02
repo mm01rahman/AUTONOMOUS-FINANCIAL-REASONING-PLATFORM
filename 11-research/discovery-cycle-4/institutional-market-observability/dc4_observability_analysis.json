@@ -32,16 +32,16 @@
     "promote_now": false,
     "recommended_next_action": "Implement Data Foundation V2 with P1 free datasets (FRED: VIX, TED, Breakeven, TIPS, 2Y yield; CFTC: COT; CBOE: GVZ; SPDR: GLD; WGC: ETF flows). Await ARB approval before implementation.",
     "scientific_blind_spots": [
+      "trade_aggressor_ratio",
+      "etf_creation_redemption",
       "instantaneous_flow_data",
-      "dealer_gamma",
-      "directed_edge_weight",
-      "breakeven_inflation",
-      "bid_ask_spread",
-      "gld_shares_outstanding",
-      "news_embedding_velocity",
-      "comex_positioning_direct",
-      "institutional_flow_direction",
-      "gold_lease_rate"
+      "fomc_statement_embedding",
+      "vol_surface",
+      "sofr_futures",
+      "iau_etf_flows",
+      "ted_spread",
+      "etf_nav_premium",
+      "news_embedding_velocity"
     ],
     "validate_additional_now": false
   },

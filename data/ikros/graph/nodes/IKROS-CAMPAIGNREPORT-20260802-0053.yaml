@@ -1,0 +1,17 @@
+attributes:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0053
+  entity_type: CampaignCompletionReport
+  lifecycle_state: FAILED
+confidence: 0.5
+created_at: '2026-08-02T23:40:23.197922+00:00'
+ikros_id: IKROS-CAMPAIGNREPORT-20260802-0053
+label: Program 6 — Institutional Market Simulation & Paper Trading Laboratory completion
+  report
+node_id: IKROS-CAMPAIGNREPORT-20260802-0053
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

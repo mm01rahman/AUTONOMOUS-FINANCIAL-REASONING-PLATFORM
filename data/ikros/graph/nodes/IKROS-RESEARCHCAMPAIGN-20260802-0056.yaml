@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: HYPOTHESIS_VALIDATION
+  entity_type: ResearchCampaign
+  objective: Use the existing alpha factory and research laboratory concepts to autonomously
+    expand the approved institutional alpha library until at least five independent
+    approved alphas exist or observations are exhausted.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0056
+confidence: 0.0
+created_at: '2026-08-02T23:41:46.868359+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0056
+label: Program 4 — Institutional Alpha Expansion Program
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0056
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

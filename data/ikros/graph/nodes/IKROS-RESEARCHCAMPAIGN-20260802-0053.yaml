@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: HYPOTHESIS_VALIDATION
+  entity_type: ResearchCampaign
+  objective: Continuously evaluate the Program 5 portfolio under deterministic historical
+    replay, paper trading, attribution, drift monitoring, and automatic research feedback
+    while remaining entirely non-executing.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0053
+confidence: 0.0
+created_at: '2026-08-02T23:40:10.253200+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0053
+label: Program 6 — Institutional Market Simulation & Paper Trading Laboratory
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0053
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

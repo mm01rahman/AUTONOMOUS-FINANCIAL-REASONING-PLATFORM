@@ -1,53 +1,41 @@
 {
   "audit_ids": [
-    "IKROS-CAMPAIGNAUDIT-20260802-0569",
-    "IKROS-CAMPAIGNAUDIT-20260802-0570",
-    "IKROS-CAMPAIGNAUDIT-20260802-0571",
-    "IKROS-CAMPAIGNAUDIT-20260802-0572",
-    "IKROS-CAMPAIGNAUDIT-20260802-0573",
-    "IKROS-CAMPAIGNAUDIT-20260802-0574",
-    "IKROS-CAMPAIGNAUDIT-20260802-0575",
-    "IKROS-CAMPAIGNAUDIT-20260802-0576",
-    "IKROS-CAMPAIGNAUDIT-20260802-0577",
-    "IKROS-CAMPAIGNAUDIT-20260802-0578",
-    "IKROS-CAMPAIGNAUDIT-20260802-0579",
-    "IKROS-CAMPAIGNAUDIT-20260802-0580",
-    "IKROS-CAMPAIGNAUDIT-20260802-0581",
-    "IKROS-CAMPAIGNAUDIT-20260802-0582"
+    "IKROS-CAMPAIGNAUDIT-20260802-0617",
+    "IKROS-CAMPAIGNAUDIT-20260802-0618",
+    "IKROS-CAMPAIGNAUDIT-20260802-0619",
+    "IKROS-CAMPAIGNAUDIT-20260802-0620",
+    "IKROS-CAMPAIGNAUDIT-20260802-0621",
+    "IKROS-CAMPAIGNAUDIT-20260802-0622",
+    "IKROS-CAMPAIGNAUDIT-20260802-0623",
+    "IKROS-CAMPAIGNAUDIT-20260802-0624"
   ],
-  "blocked_task_ids": [],
-  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0050",
+  "blocked_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0217",
+    "IKROS-RESEARCHTASK-20260802-0221",
+    "IKROS-RESEARCHTASK-20260802-0223"
+  ],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0053",
   "campaign_type": "HYPOTHESIS_VALIDATION",
-  "completed_task_ids": [
-    "IKROS-RESEARCHTASK-20260802-0201",
-    "IKROS-RESEARCHTASK-20260802-0205",
-    "IKROS-RESEARCHTASK-20260802-0209",
-    "IKROS-RESEARCHTASK-20260802-0211"
+  "completed_task_ids": [],
+  "failed_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0213"
   ],
-  "failed_task_ids": [],
-  "finished_at": "2026-08-02T23:17:41.028455+00:00",
-  "lifecycle_state": "COMPLETED",
+  "finished_at": "2026-08-02T23:40:23.197922+00:00",
+  "lifecycle_state": "FAILED",
   "memory_record_ids": [
-    "IKMEM-T1-20260802-0096",
-    "IKMEM-T1-20260802-0097",
-    "IKMEM-T1-20260802-0098",
-    "IKMEM-T1-20260802-0099",
-    "IKMEM-T4-20260802-0057"
+    "IKMEM-T4-20260802-0060"
   ],
-  "output_refs": [
-    "IKROS-EXP-20260803-0057",
-    "IKROS-RQ-20260803-0057"
-  ],
+  "output_refs": [],
   "progress": {
-    "blocked": 0,
-    "completed": 4,
-    "failed": 0,
-    "percent_complete": 100.0,
+    "blocked": 3,
+    "completed": 0,
+    "failed": 1,
+    "percent_complete": 0.0,
     "skipped": 0,
     "total": 4
   },
-  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0050",
+  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0053",
   "skipped_task_ids": [],
-  "started_at": "2026-08-02T23:17:22.337453+00:00",
-  "summary": "Program 6 \u2014 Institutional Market Simulation & Paper Trading Laboratory completed with 4 completed tasks."
+  "started_at": "2026-08-02T23:40:12.824831+00:00",
+  "summary": "Program 6 \u2014 Institutional Market Simulation & Paper Trading Laboratory failed after 1 task failures."
 }

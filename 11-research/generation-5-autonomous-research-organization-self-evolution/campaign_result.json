@@ -1,53 +1,41 @@
 {
   "audit_ids": [
-    "IKROS-CAMPAIGNAUDIT-20260802-0601",
-    "IKROS-CAMPAIGNAUDIT-20260802-0602",
-    "IKROS-CAMPAIGNAUDIT-20260802-0603",
-    "IKROS-CAMPAIGNAUDIT-20260802-0604",
-    "IKROS-CAMPAIGNAUDIT-20260802-0605",
-    "IKROS-CAMPAIGNAUDIT-20260802-0606",
-    "IKROS-CAMPAIGNAUDIT-20260802-0607",
-    "IKROS-CAMPAIGNAUDIT-20260802-0608",
-    "IKROS-CAMPAIGNAUDIT-20260802-0609",
-    "IKROS-CAMPAIGNAUDIT-20260802-0610",
-    "IKROS-CAMPAIGNAUDIT-20260802-0611",
-    "IKROS-CAMPAIGNAUDIT-20260802-0612",
-    "IKROS-CAMPAIGNAUDIT-20260802-0613",
-    "IKROS-CAMPAIGNAUDIT-20260802-0614"
+    "IKROS-CAMPAIGNAUDIT-20260802-0667",
+    "IKROS-CAMPAIGNAUDIT-20260802-0668",
+    "IKROS-CAMPAIGNAUDIT-20260802-0669",
+    "IKROS-CAMPAIGNAUDIT-20260802-0670",
+    "IKROS-CAMPAIGNAUDIT-20260802-0671",
+    "IKROS-CAMPAIGNAUDIT-20260802-0672",
+    "IKROS-CAMPAIGNAUDIT-20260802-0673",
+    "IKROS-CAMPAIGNAUDIT-20260802-0674"
   ],
-  "blocked_task_ids": [],
-  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0052",
+  "blocked_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0237",
+    "IKROS-RESEARCHTASK-20260802-0241",
+    "IKROS-RESEARCHTASK-20260802-0243"
+  ],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0058",
   "campaign_type": "HYPOTHESIS_VALIDATION",
-  "completed_task_ids": [
-    "IKROS-RESEARCHTASK-20260802-0209",
-    "IKROS-RESEARCHTASK-20260802-0213",
-    "IKROS-RESEARCHTASK-20260802-0217",
-    "IKROS-RESEARCHTASK-20260802-0219"
+  "completed_task_ids": [],
+  "failed_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0233"
   ],
-  "failed_task_ids": [],
-  "finished_at": "2026-08-02T23:36:54.460892+00:00",
-  "lifecycle_state": "COMPLETED",
+  "finished_at": "2026-08-02T23:43:07.577486+00:00",
+  "lifecycle_state": "FAILED",
   "memory_record_ids": [
-    "IKMEM-T1-20260802-0104",
-    "IKMEM-T1-20260802-0105",
-    "IKMEM-T1-20260802-0106",
-    "IKMEM-T1-20260802-0107",
-    "IKMEM-T4-20260802-0059"
+    "IKMEM-T4-20260802-0065"
   ],
-  "output_refs": [
-    "IKROS-EXP-20260803-0059",
-    "IKROS-RQ-20260803-0059"
-  ],
+  "output_refs": [],
   "progress": {
-    "blocked": 0,
-    "completed": 4,
-    "failed": 0,
-    "percent_complete": 100.0,
+    "blocked": 3,
+    "completed": 0,
+    "failed": 1,
+    "percent_complete": 0.0,
     "skipped": 0,
     "total": 4
   },
-  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0052",
+  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0058",
   "skipped_task_ids": [],
-  "started_at": "2026-08-02T23:36:35.108558+00:00",
-  "summary": "Generation 5 \u2014 Autonomous Research Organization & Self-Evolution completed with 4 completed tasks."
+  "started_at": "2026-08-02T23:42:56.454936+00:00",
+  "summary": "Generation 5 \u2014 Autonomous Research Organization & Self-Evolution failed after 1 task failures."
 }

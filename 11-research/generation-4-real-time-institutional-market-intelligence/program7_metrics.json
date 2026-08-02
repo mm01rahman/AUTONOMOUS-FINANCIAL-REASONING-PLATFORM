@@ -1,8 +1,8 @@
 {
-  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0051",
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0054",
   "governed_research_triggers": 47,
-  "graph_edges_created": 49,
-  "graph_nodes_created": 48,
+  "graph_edges_created": 1,
+  "graph_nodes_created": 0,
   "intelligence_cycles": 18,
   "latest_confidence": 0.4074,
   "latest_decision": "INCREASE",

@@ -1,5 +1,5 @@
 {
-  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0018",
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0043",
   "experiment": {
     "capability_refs": [],
     "completed_at": null,
@@ -131,23 +131,23 @@
   },
   "report": {
     "audit_ids": [
-      "IKROS-CAMPAIGNAUDIT-20260802-0273",
-      "IKROS-CAMPAIGNAUDIT-20260802-0274",
-      "IKROS-CAMPAIGNAUDIT-20260802-0275",
-      "IKROS-CAMPAIGNAUDIT-20260802-0276",
-      "IKROS-CAMPAIGNAUDIT-20260802-0277"
+      "IKROS-CAMPAIGNAUDIT-20260802-0484",
+      "IKROS-CAMPAIGNAUDIT-20260802-0485",
+      "IKROS-CAMPAIGNAUDIT-20260802-0486",
+      "IKROS-CAMPAIGNAUDIT-20260802-0487",
+      "IKROS-CAMPAIGNAUDIT-20260802-0488"
     ],
     "blocked_task_ids": [],
-    "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0018",
+    "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0043",
     "campaign_type": "RESEARCH_AUDIT",
     "completed_task_ids": [],
     "failed_task_ids": [
-      "IKROS-RESEARCHTASK-20260802-0097"
+      "IKROS-RESEARCHTASK-20260802-0174"
     ],
-    "finished_at": "2026-08-02T03:21:41.436281+00:00",
+    "finished_at": "2026-08-02T17:50:44.119855+00:00",
     "lifecycle_state": "FAILED",
     "memory_record_ids": [
-      "IKMEM-T4-20260802-0024"
+      "IKMEM-T4-20260802-0050"
     ],
     "output_refs": [],
     "progress": {
@@ -158,9 +158,9 @@
       "skipped": 0,
       "total": 3
     },
-    "report_id": "IKROS-CAMPAIGNREPORT-20260802-0018",
+    "report_id": "IKROS-CAMPAIGNREPORT-20260802-0043",
     "skipped_task_ids": [],
-    "started_at": "2026-08-02T03:21:38.088991+00:00",
+    "started_at": "2026-08-02T17:50:39.370971+00:00",
     "summary": "DC2 Research Program A \u2014 Cross-Asset Transition Ecology failed after 1 task failures."
   },
   "report_paths": {

@@ -22,7 +22,7 @@
       "alpha_id": "IKROS-ALPHA-DC3-20260802-0001",
       "confidence": 0.62,
       "contradictory_evidence": [],
-      "cross_asset_explanation": "Uses features xau_return_1, dxy_return_5, dxy_return_20 to model cross-asset transmission.",
+      "cross_asset_explanation": "Uses features dxy_return_1, macro_pressure, forward_expectation to model cross-asset transmission.",
       "decision_ecology_explanation": "Belief update and reaction hierarchy inform timing assumptions but remain pre-validation.",
       "economic_explanation": "When source shocks concentrate into relay bottlenecks, downstream sink repricing accelerates regime pressure.",
       "failure_conditions": [
@@ -731,12 +731,12 @@
         "Program F axioms"
       ],
       "required_features": [
-        "xau_return_1",
-        "dxy_return_5",
-        "dxy_return_20",
+        "dxy_return_1",
         "macro_pressure",
         "forward_expectation",
-        "dxy_return_1"
+        "dxy_return_20",
+        "xau_return_1",
+        "dxy_return_5"
       ],
       "research_cost": 0.672,
       "research_priority": 0.4787,
@@ -1770,12 +1770,12 @@
         "Program F axioms"
       ],
       "required_features": [
-        "xau_return_1",
-        "dxy_return_5",
-        "dxy_return_20",
+        "dxy_return_1",
         "macro_pressure",
         "forward_expectation",
-        "dxy_return_1"
+        "dxy_return_20",
+        "xau_return_1",
+        "dxy_return_5"
       ],
       "research_cost": 0.672,
       "research_priority": 0.4787,

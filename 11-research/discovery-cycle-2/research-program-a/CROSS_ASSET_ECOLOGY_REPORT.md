@@ -27,20 +27,20 @@ Rows analyzed: 6,257
 - `forward_expectation`
 
 ## Unavailable Markets (Data Gaps)
-- **VIX** (severity: HIGH) — Equity volatility regime context; synchronization during stress; cross-asset fear transmission.
-- **S&P 500** (severity: HIGH) — Equity-gold correlation and regime interaction; risk-on/risk-off transmission.
-- **NASDAQ** (severity: MEDIUM) — Growth-proxy and tech-sector risk appetite signal.
-- **Crude Oil** (severity: HIGH) — Inflation proxy; commodity bloc co-movement; regime transition signal.
-- **Silver** (severity: MEDIUM) — Industrial metals ratio and gold/silver spread as positioning diagnostic.
-- **Copper** (severity: MEDIUM) — Global growth proxy and commodity cycle signal.
-- **Platinum** (severity: LOW) — Precious metals basket diversification signal.
-- **Palladium** (severity: LOW) — Industrial precious metals demand signal.
-- **EUR/USD** (severity: HIGH) — DXY component; European macro and ECB policy signal.
-- **USD/JPY** (severity: HIGH) — Risk-off safe-haven dynamics; BOJ policy interaction with gold.
-- **CHF** (severity: MEDIUM) — Safe-haven currency co-movement with gold during crisis regimes.
-- **Bond Futures** (severity: HIGH) — Duration positioning and flight-to-quality flows.
-- **ETF Flows (GLD)** (severity: HIGH) — Institutional positioning and retail flow pressure on gold.
-- **COMEX Positioning** (severity: HIGH) — Futures open interest and COT-style positioning for crowding signals.
+- **VIX** (severity: HIGH) - Equity volatility regime context; synchronization during stress; cross-asset fear transmission.
+- **S&P 500** (severity: HIGH) - Equity-gold correlation and regime interaction; risk-on/risk-off transmission.
+- **NASDAQ** (severity: MEDIUM) - Growth-proxy and tech-sector risk appetite signal.
+- **Crude Oil** (severity: HIGH) - Inflation proxy; commodity bloc co-movement; regime transition signal.
+- **Silver** (severity: MEDIUM) - Industrial metals ratio and gold/silver spread as positioning diagnostic.
+- **Copper** (severity: MEDIUM) - Global growth proxy and commodity cycle signal.
+- **Platinum** (severity: LOW) - Precious metals basket diversification signal.
+- **Palladium** (severity: LOW) - Industrial precious metals demand signal.
+- **EUR/USD** (severity: HIGH) - DXY component; European macro and ECB policy signal.
+- **USD/JPY** (severity: HIGH) - Risk-off safe-haven dynamics; BOJ policy interaction with gold.
+- **CHF** (severity: MEDIUM) - Safe-haven currency co-movement with gold during crisis regimes.
+- **Bond Futures** (severity: HIGH) - Duration positioning and flight-to-quality flows.
+- **ETF Flows (GLD)** (severity: HIGH) - Institutional positioning and retail flow pressure on gold.
+- **COMEX Positioning** (severity: HIGH) - Futures open interest and COT-style positioning for crowding signals.
 
 ## Cross-Market Influence Ranking
 

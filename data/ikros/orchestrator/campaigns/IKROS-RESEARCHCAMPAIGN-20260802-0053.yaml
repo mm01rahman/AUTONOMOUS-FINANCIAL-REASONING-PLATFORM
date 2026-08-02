@@ -1,0 +1,233 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0617
+- IKROS-CAMPAIGNAUDIT-20260802-0618
+- IKROS-CAMPAIGNAUDIT-20260802-0619
+- IKROS-CAMPAIGNAUDIT-20260802-0620
+- IKROS-CAMPAIGNAUDIT-20260802-0621
+- IKROS-CAMPAIGNAUDIT-20260802-0622
+- IKROS-CAMPAIGNAUDIT-20260802-0623
+- IKROS-CAMPAIGNAUDIT-20260802-0624
+- IKROS-CAMPAIGNAUDIT-20260802-0625
+- IKROS-CAMPAIGNAUDIT-20260802-0626
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0053
+campaign_type: HYPOTHESIS_VALIDATION
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0053
+created_at: '2026-08-02T23:40:10.253200+00:00'
+evidence_refs: []
+failure_policy: CONTINUE
+finished_at: '2026-08-02T23:40:23.197922+00:00'
+lifecycle_state: FAILED
+objective: Continuously evaluate the Program 5 portfolio under deterministic historical
+  replay, paper trading, attribution, drift monitoring, and automatic research feedback
+  while remaining entirely non-executing.
+pipeline:
+  deterministic: true
+  name: HYPOTHESIS_VALIDATION pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0053
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - STATISTICAL_EVALUATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0213
+  - IKROS-RESEARCHTASK-20260802-0217
+  - IKROS-RESEARCHTASK-20260802-0221
+  - IKROS-RESEARCHTASK-20260802-0223
+research_question_id: null
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T23:40:12.824831+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T23:40:16.656855+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.71
+        economic: 0.72
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.75
+        operational: 0.0
+        overall: 0.7264694730011461
+        prior: 0.74
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260803-0057
+      instrument: XAU/USD
+      lifecycle_state: OPEN
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: program6-simulation-lab
+          creation_context: Program 6 simulation laboratory bootstrap
+          motivation: Evaluate the approved portfolio continuously under non-executing
+            market simulation.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: ''
+      scope: MACRO
+      spec_refs: []
+      time_horizon: ''
+      title: Program 6 Primary Research Question
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: 'Duplicate: ResearchQuestion ''IKROS-RQ-20260803-0057'' already registered'
+    graph_node_id: null
+    memory_record_id: null
+    metrics: {}
+    output_refs: []
+    payload: {}
+    selected_ids: []
+  started_at: '2026-08-02T23:40:15.377167+00:00'
+  status: FAILED
+  task_id: IKROS-RESEARCHTASK-20260802-0213
+  title: Research Question
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0213
+  finished_at: null
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.7
+        economic: 0.71
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.74
+        operational: 0.0
+        overall: 0.7164667431041474
+        prior: 0.73
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260803-0057
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: program6-simulation-lab
+          creation_context: Program 6 simulation and paper-trading campaign
+          motivation: Run a deterministic replay and paper-trading laboratory from
+            the institutional portfolio.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: 270b6f6f3ca31ba8de02aaca36a6053d548592df8316d19b641435be648b7633
+      spec_refs: []
+      title: Program 6 Simulation Laboratory Integration
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0217
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0217
+  finished_at: null
+  kind: STATISTICAL_EVALUATION
+  max_attempts: 1
+  payload: {}
+  planned_order: 9
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0221
+  title: Statistical Evaluation
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0221
+  finished_at: null
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0223
+  title: Final Report
+title: Program 6 — Institutional Market Simulation & Paper Trading Laboratory
+updated_at: '2026-08-02T23:40:25.848404+00:00'
+work_package_refs:
+- WP-IMP-0048
