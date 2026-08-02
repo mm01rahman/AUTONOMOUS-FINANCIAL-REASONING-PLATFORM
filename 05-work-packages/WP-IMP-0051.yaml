@@ -1,0 +1,161 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0051"
+capability_id:
+  id: "ALPHA-RESEARCH"
+  version: "1.0"
+title: "Program 1 — Institutional Alpha Factory: Complete Lifecycle Engine"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
+    trace_sls: "AFRP-GEN2-WP0051-1.0.0"
+    trace_adr: ["ADR-0001", "ADR-IKROS-001", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "work_package.completed('WP-IMP-0050')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/alpha_research/institutional_alpha_factory.py"
+      - "tools/alpha_research/program1_alpha_factory.py"
+      - "tests/unit/test_program1_institutional_alpha_factory.py"
+      - "11-research/program-1-institutional-alpha-factory/"
+      - "schemas/institutional-alpha-factory/"
+      - "data/ikros/graph/"
+      - "data/ikros/registries/research/"
+      - "data/ikros/registries/experiments/"
+      - "05-work-packages/WP-IMP-0051.yaml"
+    read:
+      - "11-research/discovery-cycle-3/phase-4-adaptive-alpha-validation/"
+      - "11-research/discovery-cycle-3/phase-5-institutional-alpha-revision/"
+      - "11-research/generation-2/wp-imp-0050-institutional-alpha-evidence-validation-engine/"
+      - "data/ikros/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "12h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "11-research/discovery-cycle-3/phase-4-adaptive-alpha-validation/dc3_phase4_batch1_validation.json"
+    - "11-research/discovery-cycle-3/phase-5-institutional-alpha-revision/dc3_phase5_revision_analysis.json"
+    - "11-research/generation-2/wp-imp-0050-institutional-alpha-evidence-validation-engine/wp_imp_0050_evidence_validation_engine.json"
+    - "data/ikros/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+    - "specs/07-knowledge/SPEC-060-IKROS-ARCHITECTURE.md"
+
+outputs:
+  expected_source_files:
+    - "tools/alpha_research/institutional_alpha_factory.py"
+    - "tools/alpha_research/program1_alpha_factory.py"
+  expected_test_files:
+    - "tests/unit/test_program1_institutional_alpha_factory.py"
+  expected_documentation:
+    - "11-research/program-1-institutional-alpha-factory/"
+  expected_evidence:
+    - "11-research/program-1-institutional-alpha-factory/mechanism_results.json"
+    - "11-research/program-1-institutional-alpha-factory/replication_registry.json"
+    - "11-research/program-1-institutional-alpha-factory/institutional_alpha_registry.json"
+    - "11-research/program-1-institutional-alpha-factory/FINAL_REPORT.md"
+
+produces:
+  capability:
+    id: "ALPHA-RESEARCH"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/alpha_research/institutional_alpha_factory.py"
+    - "tools/alpha_research/program1_alpha_factory.py"
+    - "tests/unit/test_program1_institutional_alpha_factory.py"
+    - "11-research/program-1-institutional-alpha-factory/"
+    - "schemas/institutional-alpha-factory/"
+    - "data/ikros/graph/"
+    - "data/ikros/registries/research/"
+    - "data/ikros/registries/experiments/"
+    - "05-work-packages/WP-IMP-0051.yaml"
+  non_goals:
+    - "No Runtime modifications."
+    - "No broker integration."
+    - "No alpha promotion without explicit ARB approval."
+    - "No optimization or parameter tuning."
+    - "Do NOT begin Program 2 without ARB approval."
+
+requirements:
+  alpha_factory_engine:
+    module: "tools/alpha_research/institutional_alpha_factory.py"
+    rules:
+      - "Implements Part A: Scientific Replication Engine across temporal periods, regimes, and feature subsets."
+      - "Implements Part B: Promotion Committee evaluating 10 governed criteria with structured decisions."
+      - "Implements Part C: Institutional Alpha Registry with versioned, auditable entries."
+      - "Implements Part D: Evidence Convergence Engine tracking confidence trajectory and stability."
+      - "Implements Part E: Promotion Review System enforcing state machine transitions."
+      - "Implements Part F: Institutional Dossier with 8 governed sections per mechanism."
+      - "Implements Part G: IKROS extensions for 5 registry types and lineage."
+      - "Implements Part H: 7 governed dashboards for institutional observability."
+      - "Implements Part I: 9 JSON schemas for all factory domain types."
+      - "No mechanism may be promoted without satisfying all 10 criteria."
+      - "Observation completeness gate must block replication and advancement if coverage below 0.70."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0051"
+
+completion:
+  success_requires:
+    - "Complete Institutional Alpha Factory implemented with all 8 engine parts (A-H)."
+    - "Scientific Replication Engine produces per-period, per-regime, per-feature-subset replication ledger."
+    - "Promotion Committee evaluates 10 criteria and returns governed decisions."
+    - "Institutional Alpha Registry tracks all mechanisms with lifecycle states."
+    - "Evidence Convergence Engine tracks confidence trajectory and stability."
+    - "Promotion Review System enforces 10-state lifecycle with ARB gate."
+    - "Institutional Dossier generated for each mechanism."
+    - "7 governed dashboards produced."
+    - "9 JSON schemas emitted."
+    - "No mechanism promoted to Institutional Alpha."
+    - "No Runtime behavior changed."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-SCHEMA: "WPS-1.0 schema violation in WP YAML structure."
+  ERR-NONDETERMINISTIC: "Factory outputs are nondeterministic across runs."
+  ERR-GOVERNANCE: "Any mechanism promoted without meeting all 10 promotion criteria."
+  ERR-GATE-BYPASS: "Observation completeness gate bypassed or weakened."
