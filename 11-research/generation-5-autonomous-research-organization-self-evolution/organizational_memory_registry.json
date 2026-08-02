@@ -1,0 +1,43 @@
+{
+  "campaign_templates": [
+    "Autonomous bottleneck-resolution campaign template",
+    "Observability uplift campaign template"
+  ],
+  "decision_templates": [
+    "ARB pre-screen decision template",
+    "Improvement ranking approval template"
+  ],
+  "experiment_templates": [
+    "High-EIG decomposition experiment template",
+    "Cross-asset causality stress template",
+    "Concept-drift replay template"
+  ],
+  "failure_patterns": [
+    "Unknown-regime and evidence-conflict triggers cluster during stress transitions.",
+    "Concept-drift pressure rises when market stress and dispersion rise simultaneously."
+  ],
+  "institutional_playbooks": [
+    {
+      "name": "Regime Ambiguity Resolution",
+      "playbook_id": "PLAY-REGIME",
+      "version": "1.0"
+    },
+    {
+      "name": "Concept Drift Containment",
+      "playbook_id": "PLAY-DRIFT",
+      "version": "1.0"
+    }
+  ],
+  "research_patterns": [
+    "High-confidence portfolio revisions occur when cross-asset dispersion declines and ETF flows are stable.",
+    "Regime confidence improves when macro-release events are paired with low volatility expansion."
+  ],
+  "review_templates": [
+    "30-day executive scientific health review",
+    "Quarterly self-evolution governance review"
+  ],
+  "success_patterns": [
+    "Portfolio confidence increases when stress falls and cross-asset alignment rises.",
+    "High-evidence campaigns combine event reasoning and trigger-based follow-up."
+  ]
+}

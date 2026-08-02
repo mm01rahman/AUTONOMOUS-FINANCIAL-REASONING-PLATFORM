@@ -1,0 +1,57 @@
+[
+  {
+    "architectural_consistency": 1.0,
+    "decision": "APPROVE",
+    "engineering_necessity": 0.7826,
+    "expected_benefit": 0.79,
+    "expected_cost": 0.22,
+    "governance_alignment": 1.0,
+    "improvement_id": "IMP-004",
+    "reason": "Meets autonomous ARB thresholds for value, evidence support, and cost.",
+    "scientific_necessity": 0.7881
+  },
+  {
+    "architectural_consistency": 1.0,
+    "decision": "APPROVE",
+    "engineering_necessity": 0.6878,
+    "expected_benefit": 0.7791,
+    "expected_cost": 0.4,
+    "governance_alignment": 1.0,
+    "improvement_id": "IMP-002",
+    "reason": "Meets autonomous ARB thresholds for value, evidence support, and cost.",
+    "scientific_necessity": 0.7863
+  },
+  {
+    "architectural_consistency": 1.0,
+    "decision": "APPROVE",
+    "engineering_necessity": 0.8083,
+    "expected_benefit": 0.7052,
+    "expected_cost": 0.18,
+    "governance_alignment": 1.0,
+    "improvement_id": "IMP-005",
+    "reason": "Meets autonomous ARB thresholds for value, evidence support, and cost.",
+    "scientific_necessity": 0.7451
+  },
+  {
+    "architectural_consistency": 1.0,
+    "decision": "APPROVE",
+    "engineering_necessity": 0.7412,
+    "expected_benefit": 0.7344,
+    "expected_cost": 0.28,
+    "governance_alignment": 1.0,
+    "improvement_id": "IMP-003",
+    "reason": "Meets autonomous ARB thresholds for value, evidence support, and cost.",
+    "scientific_necessity": 0.7491
+  },
+  {
+    "architectural_consistency": 1.0,
+    "decision": "APPROVE",
+    "engineering_necessity": 0.6969,
+    "expected_benefit": 0.761,
+    "expected_cost": 0.34,
+    "governance_alignment": 1.0,
+    "improvement_id": "IMP-001",
+    "reason": "Meets autonomous ARB thresholds for value, evidence support, and cost.",
+    "scientific_necessity": 0.7525
+  }
+]

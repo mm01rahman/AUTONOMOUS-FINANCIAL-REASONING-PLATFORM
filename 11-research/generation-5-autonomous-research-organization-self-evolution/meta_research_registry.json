@@ -1,0 +1,30 @@
+{
+  "bottlenecks": [
+    {
+      "bottleneck": "regime_uncertainty",
+      "explanation": "Diffuse regime probabilities are repeatedly generating high-severity triggers.",
+      "severity": "high",
+      "signal": 18
+    },
+    {
+      "bottleneck": "cross_asset_instability",
+      "explanation": "Cross-asset relationships remain unstable in stress windows.",
+      "severity": "high",
+      "signal": 3
+    },
+    {
+      "bottleneck": "alpha_drift_pressure",
+      "explanation": "Alpha profiles show recurrent degradation and revalidation pressure.",
+      "severity": "medium",
+      "signal": 0
+    }
+  ],
+  "campaign_efficiency": 0.61,
+  "experiment_efficiency": 0.714,
+  "knowledge_growth": 18,
+  "promotion_rate": 0.0,
+  "rejection_rate": 0.35,
+  "research_roi": 0.8258,
+  "research_throughput": 53,
+  "scientific_maturity": 0.61
+}

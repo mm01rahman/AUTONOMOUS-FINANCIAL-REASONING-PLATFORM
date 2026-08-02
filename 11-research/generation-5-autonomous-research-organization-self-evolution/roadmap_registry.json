@@ -1,0 +1,43 @@
+{
+  "roadmap_12_month": {
+    "goal": "Sustain autonomous self-improvement with measurable quality and productivity gains.",
+    "initiatives": [
+      "IMP-004",
+      "IMP-002",
+      "IMP-005",
+      "IMP-003",
+      "IMP-001"
+    ],
+    "target_overall_health": 0.8519
+  },
+  "roadmap_30_day": {
+    "goal": "Resolve highest-severity research bottlenecks and improve regime certainty.",
+    "initiatives": [
+      "IMP-004",
+      "IMP-002",
+      "IMP-005"
+    ],
+    "target_scientific_health": 0.7819
+  },
+  "roadmap_6_month": {
+    "goal": "Institutionalize adaptive playbooks and meta-learning feedback loops.",
+    "initiatives": [
+      "IMP-004",
+      "IMP-002",
+      "IMP-005",
+      "IMP-003",
+      "IMP-001"
+    ],
+    "target_scientific_maturity": 0.69
+  },
+  "roadmap_90_day": {
+    "goal": "Scale autonomous campaign quality and reduce high-severity trigger recurrence.",
+    "initiatives": [
+      "IMP-004",
+      "IMP-002",
+      "IMP-005",
+      "IMP-003"
+    ],
+    "target_research_roi": 0.8758
+  }
+}

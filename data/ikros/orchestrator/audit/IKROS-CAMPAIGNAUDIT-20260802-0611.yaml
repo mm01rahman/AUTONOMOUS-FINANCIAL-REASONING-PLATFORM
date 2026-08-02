@@ -1,0 +1,12 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0611
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0052
+detail: Task STATISTICAL_EVALUATION completed
+entry_hash: 5f17d1da648e1a52c2fad3efb4f2c0f762b8f08378d594fb23b30eb29952e392
+event_type: TASK_COMPLETED
+new_state: COMPLETED
+output_refs: []
+previous_hash: f72794b1fa7a384486d2ee20f630ddaed594d4b4ea375e2e77e866c9c573ef4e
+previous_state: RUNNING
+task_id: IKROS-RESEARCHTASK-20260802-0217
+timestamp: '2026-08-02T23:36:48.501683+00:00'

@@ -1,13 +1,13 @@
 attributes:
   campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0052
   entity_type: ResearchTask
-  kind: EXPERIMENT_REGISTRATION
+  kind: FINAL_REPORT
   status: COMPLETED
 confidence: 1.0
-created_at: '2026-08-02T23:29:30.162328+00:00'
-ikros_id: IKROS-RESEARCHTASK-20260802-0213
-label: Statistical Evaluation
-node_id: IKROS-RESEARCHTASK-20260802-0213
+created_at: '2026-08-02T23:36:50.904969+00:00'
+ikros_id: IKROS-RESEARCHTASK-20260802-0219
+label: Final Report
+node_id: IKROS-RESEARCHTASK-20260802-0219
 node_type: KNOWLEDGE_OBJECT
 spec_refs:
 - SPEC-060

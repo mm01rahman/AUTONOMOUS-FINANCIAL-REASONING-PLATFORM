@@ -1,0 +1,40 @@
+{
+  "engineering_best_practices": [
+    "Deterministic registry generation with governed schemas for all institutional outputs.",
+    "Non-executing guardrails remain mandatory in all research and intelligence loops."
+  ],
+  "failed_alpha_signals": 0,
+  "failed_campaign_signals": 47,
+  "failure_patterns": [
+    "Unknown-regime and evidence-conflict triggers cluster during stress transitions.",
+    "Concept-drift pressure rises when market stress and dispersion rise simultaneously."
+  ],
+  "portfolio_performance_signals": 18,
+  "promotion_history_signals": 1,
+  "rejection_history_signals": 18,
+  "research_heuristics": [
+    {
+      "heuristic_id": "HEUR-001",
+      "rule": "Prioritize experiments where expected information gain exceeds 0.70 and cost is below 0.40.",
+      "source": "Improvement planner ranking and trigger outcomes."
+    },
+    {
+      "heuristic_id": "HEUR-002",
+      "rule": "Treat recurrent unknown-regime triggers as mandatory decomposition campaigns before confidence escalation.",
+      "source": "Program 7 trigger recurrence."
+    }
+  ],
+  "scientific_principles": [
+    "Confidence may only increase through independent, reproducible evidence accumulation.",
+    "Regime ambiguity must be reduced before broadening alpha activation states.",
+    "Self-improvement decisions require explicit expected-value and governance screens."
+  ],
+  "simulation_performance_signals": 18,
+  "successful_alpha_signals": 47,
+  "successful_campaign_signals": 6,
+  "successful_patterns": [
+    "High-confidence portfolio revisions occur when cross-asset dispersion declines and ETF flows are stable.",
+    "Regime confidence improves when macro-release events are paired with low volatility expansion."
+  ],
+  "top_improvement_reference": "IMP-004"
+}

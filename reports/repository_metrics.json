@@ -1,22 +1,9 @@
-﻿Collecting repository metrics...
-  Running ruff...
-  Running mypy...
-  Collecting pytest...
-
-Repository Health Score: 100.0% (A)
-  Coverage:      82.33%
-  Ruff:          PASS
-  Mypy:          PASS
-  Pytest:        PASS
-  Capabilities:  48/48 (100.0%)
-  Traceability:  94/94 (100.0%)
-
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-02T18:18:55.170576+00:00",
+  "generated_at": "2026-08-02T23:36:30.744911+00:00",
   "repository": "mm01rahman/AUTONOMOUS-FINANCIAL-REASONING-PLATFORM",
-  "health_score": 1.0,
-  "health_grade": "A",
+  "health_score": 0.8432,
+  "health_grade": "B",
   "quality": {
     "ruff": {
       "status": "PASS",
@@ -29,15 +16,15 @@ Repository Health Score: 100.0% (A)
     "pytest": {
       "status": "PASS",
       "exit_code": 0,
-      "collected": 96
+      "collected": 105
     },
     "coverage": {
       "available": true,
-      "percent": 82.33,
-      "lines_covered": 5365,
-      "lines_total": 6308,
-      "branches_covered": 1243,
-      "branches_total": 1718
+      "percent": 17.28,
+      "lines_covered": 4033,
+      "lines_total": 20507,
+      "branches_covered": 403,
+      "branches_total": 5164
     }
   },
   "capabilities": {
@@ -51,8 +38,8 @@ Repository Health Score: 100.0% (A)
     "coverage": 1.0
   },
   "summary": {
-    "health_score": 1.0,
-    "coverage_pct": 82.33,
+    "health_score": 0.8432,
+    "coverage_pct": 17.28,
     "capabilities_complete": 48,
     "capabilities_total": 48,
     "requirements_implemented": 94,

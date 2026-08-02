@@ -1,0 +1,162 @@
+{
+  "alpha_inventory_dashboard": {
+    "tiles": [
+      [
+        "Promotion Rate",
+        0.0
+      ],
+      [
+        "Rejection Rate",
+        0.35
+      ]
+    ]
+  },
+  "engineering_health_dashboard": {
+    "tiles": [
+      [
+        "Engineering Quality",
+        1.0
+      ],
+      [
+        "Engineering ROI",
+        0.9
+      ]
+    ]
+  },
+  "executive_review_dashboard": {
+    "tiles": [
+      [
+        "Top Improvement",
+        "IMP-004"
+      ],
+      [
+        "Top Priority",
+        0.7875
+      ],
+      [
+        "Expected Value",
+        0.79
+      ]
+    ]
+  },
+  "knowledge_growth_dashboard": {
+    "tiles": [
+      [
+        "Knowledge Entries",
+        18
+      ]
+    ]
+  },
+  "market_intelligence_dashboard": {
+    "tiles": [
+      [
+        "Prediction Quality",
+        0.6979
+      ]
+    ]
+  },
+  "organizational_productivity_dashboard": {
+    "tiles": [
+      [
+        "Research Productivity",
+        0.4417
+      ],
+      [
+        "Campaign Productivity",
+        0.61
+      ],
+      [
+        "Evidence Generated",
+        53
+      ]
+    ]
+  },
+  "overall_scientific_health_dashboard": {
+    "tiles": [
+      [
+        "Scientific Health",
+        0.7519
+      ],
+      [
+        "Scientific Maturity",
+        0.61
+      ],
+      [
+        "Research ROI",
+        0.8258
+      ]
+    ]
+  },
+  "paper_trading_dashboard": {
+    "tiles": [
+      [
+        "Simulation Signals",
+        0
+      ]
+    ]
+  },
+  "portfolio_quality_dashboard": {
+    "tiles": [
+      [
+        "Portfolio Quality",
+        0.7807
+      ]
+    ]
+  },
+  "research_backlog_dashboard": {
+    "tiles": [
+      [
+        "IMP-004",
+        "engineering_improvements"
+      ],
+      [
+        "IMP-002",
+        "new_datasets"
+      ],
+      [
+        "IMP-005",
+        "governance"
+      ],
+      [
+        "IMP-003",
+        "new_experiments"
+      ],
+      [
+        "IMP-001",
+        "new_research"
+      ]
+    ]
+  },
+  "research_maturity_dashboard": {
+    "tiles": [
+      [
+        "Campaign Efficiency",
+        0.61
+      ],
+      [
+        "Experiment Efficiency",
+        0.714
+      ],
+      [
+        "Knowledge Growth",
+        18
+      ]
+    ]
+  },
+  "strategic_roadmap_dashboard": {
+    "tiles": [
+      [
+        "30d Target Health",
+        0.7819
+      ],
+      [
+        "90d Target ROI",
+        0.8758
+      ],
+      [
+        "12m Target Health",
+        0.8519
+      ]
+    ]
+  }
+}

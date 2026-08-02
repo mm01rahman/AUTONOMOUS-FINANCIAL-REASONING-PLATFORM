@@ -1,0 +1,155 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0058"
+capability_id:
+  id: "AUTONOMOUS-RESEARCH-ORGANIZATION"
+  version: "1.0"
+title: "Generation 5 — Autonomous Research Organization & Self-Evolution"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
+    trace_sls: "AFRP-GEN5-WP0058-1.0.0"
+    trace_adr: ["ADR-0001", "ADR-IKROS-001", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "work_package.completed('WP-IMP-0057')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/alpha_research/autonomous_research_organization_self_evolution.py"
+      - "tools/alpha_research/program8_autonomous_research_organization_self_evolution.py"
+      - "tests/unit/test_program8_autonomous_research_organization_self_evolution.py"
+      - "11-research/generation-5-autonomous-research-organization-self-evolution/"
+      - "schemas/institutional-meta-research-organization/"
+      - "data/ikros/graph/"
+      - "data/ikros/orchestrator/audit/"
+      - "data/ikros/orchestrator/campaigns/"
+      - "data/ikros/orchestrator/reports/"
+      - "data/ikros/memory/t1-episodic/"
+      - "data/ikros/memory/t4-institutional/"
+      - "data/ikros/registries/research/"
+      - "data/ikros/registries/experiments/"
+      - "reports/repository_metrics.json"
+      - "05-work-packages/WP-IMP-0058.yaml"
+    read:
+      - "11-research/generation-4-real-time-institutional-market-intelligence/"
+      - "data/ikros/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "24h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "11-research/generation-4-real-time-institutional-market-intelligence/institutional_intelligence_registry.json"
+    - "11-research/generation-4-real-time-institutional-market-intelligence/research_trigger_registry.json"
+    - "11-research/generation-4-real-time-institutional-market-intelligence/portfolio_evolution_registry.json"
+    - "data/ikros/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/alpha_research/autonomous_research_organization_self_evolution.py"
+    - "tools/alpha_research/program8_autonomous_research_organization_self_evolution.py"
+  expected_test_files:
+    - "tests/unit/test_program8_autonomous_research_organization_self_evolution.py"
+  expected_documentation:
+    - "11-research/generation-5-autonomous-research-organization-self-evolution/"
+  expected_evidence:
+    - "11-research/generation-5-autonomous-research-organization-self-evolution/meta_research_registry.json"
+    - "11-research/generation-5-autonomous-research-organization-self-evolution/improvement_registry.json"
+    - "11-research/generation-5-autonomous-research-organization-self-evolution/FINAL_REPORT.md"
+    - "schemas/institutional-meta-research-organization/"
+    - "reports/repository_metrics.json"
+
+produces:
+  capability:
+    id: "AUTONOMOUS-RESEARCH-ORGANIZATION"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/alpha_research/autonomous_research_organization_self_evolution.py"
+    - "tools/alpha_research/program8_autonomous_research_organization_self_evolution.py"
+    - "tests/unit/test_program8_autonomous_research_organization_self_evolution.py"
+    - "11-research/generation-5-autonomous-research-organization-self-evolution/"
+    - "schemas/institutional-meta-research-organization/"
+    - "data/ikros/graph/"
+    - "data/ikros/orchestrator/audit/"
+    - "data/ikros/orchestrator/campaigns/"
+    - "data/ikros/orchestrator/reports/"
+    - "data/ikros/memory/t1-episodic/"
+    - "data/ikros/memory/t4-institutional/"
+    - "data/ikros/registries/research/"
+    - "data/ikros/registries/experiments/"
+    - "reports/repository_metrics.json"
+    - "05-work-packages/WP-IMP-0058.yaml"
+  non_goals:
+    - "No Runtime redesign."
+    - "No broker integration."
+    - "No order management."
+    - "No live trading."
+
+requirements:
+  self_evolution_engine:
+    module: "tools/alpha_research/autonomous_research_organization_self_evolution.py"
+    rules:
+      - "Continuously evaluate AFRP research-system quality and identify bottlenecks."
+      - "Generate and rank governed improvement plans by expected value, evidence, and cost."
+      - "Maintain autonomous ARB pre-screening and strategic roadmap registries."
+      - "Emit institutional memory, productivity, and executive dashboard artifacts."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0058"
+
+completion:
+  success_requires:
+    - "AFRP can evaluate research/system quality, identify bottlenecks, and rank improvements autonomously."
+    - "AFRP can emit governed strategic roadmaps and organizational memory updates."
+    - "AFRP maintains deterministic, non-executing autonomous ARB pre-screening."
+    - "Generation 5 reports, schemas, dashboards, and tests are generated and versioned."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-NONDETERMINISTIC: "Self-evolution outputs differ across repeated executions."
+  ERR-OPAQUE: "Improvement prioritization is emitted without expected-value and evidence rationale."
+  ERR-EXECUTION: "Any Generation 5 surface attempts to execute trades or connect to brokers."
