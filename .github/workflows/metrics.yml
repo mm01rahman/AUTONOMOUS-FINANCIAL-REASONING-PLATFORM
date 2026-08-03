@@ -43,7 +43,7 @@ jobs:
         run: uv sync --frozen --group dev
 
       - name: Download coverage artifact (if available)
-        uses: dawidd6/action-download-artifact@v6
+        uses: dawidd6/action-download-artifact@v21
         continue-on-error: true
         with:
           workflow: quality.yml
