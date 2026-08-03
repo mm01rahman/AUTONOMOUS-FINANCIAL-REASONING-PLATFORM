@@ -1,0 +1,32 @@
+{
+  "cadence": "weekly",
+  "dataset_id": "IADC002-CFTC-COMEX-GOLD",
+  "domain": "institutional_positioning",
+  "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+  "limitations": [
+    "Observational data; no identification design or causal warrant.",
+    "Tuesday positions are treated as observable on Friday to respect publication timing."
+  ],
+  "name": "CFTC Disaggregated COMEX Gold Positioning",
+  "normalized_checksum_sha256": "1168d03cb9eefc38d268d195c70b86d7f5ea400df777bb9d7f3c1275b1e00401",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-CFTC-COMEX-GOLD.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "CFTC Public Reporting",
+  "quality": {
+    "calendar_coverage_ratio": 1.0,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-28T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 1051,
+    "research_depth": true,
+    "start_timestamp": "2006-06-13T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "c00d91b812c9fb9138c096fddbffa4f142d96464b03be5b01012cfbec306ce0f",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-CFTC-COMEX-GOLD.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "U.S. Commodity Futures Trading Commission",
+  "source_url": "https://publicreporting.cftc.gov/resource/72hh-3qpy.csv?%24select=report_date_as_yyyy_mm_dd%2Cmarket_and_exchange_names%2Copen_interest_all%2Cprod_merc_positions_long%2Cprod_merc_positions_short%2Cswap_positions_long_all%2Cswap__positions_short_all%2Cm_money_positions_long_all%2Cm_money_positions_short_all%2Cother_rept_positions_long%2Cother_rept_positions_short&%24where=market_and_exchange_names%3D%27GOLD+-+COMMODITY+EXCHANGE+INC.%27&%24order=report_date_as_yyyy_mm_dd&%24limit=50000",
+  "timezone": "UTC",
+  "variable": "comex_gold_positioning"
+}

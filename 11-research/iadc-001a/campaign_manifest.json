@@ -1,0 +1,18 @@
+{
+  "authority": "Architecture Review Board",
+  "campaign_id": "IADC-001A",
+  "git_head": "11bc7595e7a0672c87a32bf0b1d28100e01c7e11",
+  "inputs": [
+    "Entire Historical Observatory",
+    "IKROS",
+    "Knowledge Graph",
+    "Institutional Memory",
+    "Discovery Cycle knowledge",
+    "Generation 2-5 Alpha Library",
+    "IADC-001"
+  ],
+  "no_causal_claims": true,
+  "no_software_architecture": true,
+  "no_trading_rules": true,
+  "seed": 42
+}

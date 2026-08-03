@@ -1,0 +1,32 @@
+[
+  {
+    "available": "six-row fixture only",
+    "decision": "BLOCKED_BY_DATA",
+    "domain": "real yields",
+    "required": "historical TIPS real-yield curve"
+  },
+  {
+    "available": "not present",
+    "decision": "BLOCKED_BY_DATA",
+    "domain": "inflation surprise",
+    "required": "CPI/Core CPI/PCE releases, consensus, and vintages"
+  },
+  {
+    "available": "daily short-rate proxy only",
+    "decision": "BLOCKED_BY_DATA",
+    "domain": "FOMC event studies",
+    "required": "meeting/statement timestamps and expectation surprises"
+  },
+  {
+    "available": "four-to-six-row fixtures only",
+    "decision": "BLOCKED_BY_DATA",
+    "domain": "institutional positioning and ETF transmission",
+    "required": "multi-cycle CFTC and ETF holdings histories"
+  },
+  {
+    "available": "observational daily time series",
+    "decision": "NOT_ESTABLISHED",
+    "domain": "causal identification",
+    "required": "valid instruments, natural experiments, or identified structural model"
+  }
+]

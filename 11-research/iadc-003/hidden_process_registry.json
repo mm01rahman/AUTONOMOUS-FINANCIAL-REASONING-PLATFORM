@@ -1,0 +1,1722 @@
+{
+  "campaign_id": "IADC-003",
+  "process_count": 5,
+  "processes": [
+    {
+      "activation": "Within the retrospectively estimated full-sample factor-score series, persistence confirmation begins only on the 3th consecutive session with signed rotated score >= 1.25; prior confirmation sessions are never backfilled.",
+      "alternatives": [
+        "A rotated covariance mode rather than a discrete institutional mechanism.",
+        "Common response to omitted macro news or market microstructure shocks.",
+        "Rights-restricted series may disproportionately shape this pole."
+      ],
+      "causal_confidence": null,
+      "confidence": 0.79,
+      "confidence_semantics": "retrospective observational stability score, not probability of truth",
+      "cross_asset_behavior": {
+        "active_forward_xau_mean": 0.00154454,
+        "edge_bh_qvalue": 0.75674326,
+        "forward_xau_active_minus_inactive_log_return": 0.00227666,
+        "forward_xau_matched_episode_difference": 0.00227666,
+        "matched_fold_direction_consistency": 0.75,
+        "matched_inactive_forward_xau_mean": -0.00073212,
+        "paired_bootstrap_95_interval": [
+          -0.00732649,
+          0.01283706
+        ],
+        "permutation_null_95_interval": [
+          -0.00880712,
+          0.00886588
+        ]
+      },
+      "description": "Autonomously extracted signed pole of rotated factor F01; its dominant empirical domains are etf_positioning, gold_volatility, real_yields.",
+      "episodes": [
+        {
+          "duration_sessions": 1,
+          "end": "2008-06-24",
+          "start": "2008-06-24"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2008-09-24",
+          "start": "2008-09-22"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2008-10-13",
+          "start": "2008-10-13"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2008-12-18",
+          "start": "2008-12-18"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2009-01-26",
+          "start": "2009-01-23"
+        },
+        {
+          "duration_sessions": 6,
+          "end": "2009-02-20",
+          "start": "2009-02-12"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2009-03-17",
+          "start": "2009-03-16"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2009-03-23",
+          "start": "2009-03-23"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2009-10-08",
+          "start": "2009-10-08"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2010-05-11",
+          "start": "2010-05-10"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2011-05-25",
+          "start": "2011-05-25"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2011-08-22",
+          "start": "2011-08-19"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2011-11-10",
+          "start": "2011-11-10"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2011-11-21",
+          "start": "2011-11-21"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2012-08-24",
+          "start": "2012-08-24"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2012-09-26",
+          "start": "2012-09-24"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2012-11-09",
+          "start": "2012-11-09"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2014-02-26",
+          "start": "2014-02-26"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2015-01-21",
+          "start": "2015-01-21"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2015-01-28",
+          "start": "2015-01-28"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2015-08-25",
+          "start": "2015-08-25"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2016-01-12",
+          "start": "2016-01-12"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2016-01-25",
+          "start": "2016-01-25"
+        },
+        {
+          "duration_sessions": 4,
+          "end": "2016-02-09",
+          "start": "2016-02-04"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2016-02-23",
+          "start": "2016-02-23"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2016-03-04",
+          "start": "2016-03-02"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2016-03-22",
+          "start": "2016-03-18"
+        },
+        {
+          "duration_sessions": 5,
+          "end": "2016-05-16",
+          "start": "2016-05-10"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2016-05-24",
+          "start": "2016-05-24"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2016-06-06",
+          "start": "2016-06-06"
+        },
+        {
+          "duration_sessions": 5,
+          "end": "2016-06-20",
+          "start": "2016-06-14"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2016-08-03",
+          "start": "2016-08-03"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2016-10-18",
+          "start": "2016-10-18"
+        },
+        {
+          "duration_sessions": 4,
+          "end": "2017-02-09",
+          "start": "2017-02-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2017-03-16",
+          "start": "2017-03-16"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2017-06-09",
+          "start": "2017-06-09"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2017-08-30",
+          "start": "2017-08-30"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2018-03-20",
+          "start": "2018-03-20"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2018-12-27",
+          "start": "2018-12-27"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2019-07-23",
+          "start": "2019-07-22"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2019-08-08",
+          "start": "2019-08-06"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2019-08-26",
+          "start": "2019-08-23"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2020-02-21",
+          "start": "2020-02-20"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-03-10",
+          "start": "2020-03-10"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2020-03-30",
+          "start": "2020-03-26"
+        },
+        {
+          "duration_sessions": 9,
+          "end": "2020-04-16",
+          "start": "2020-04-03"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-05-06",
+          "start": "2020-05-06"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2020-05-18",
+          "start": "2020-05-15"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2020-06-25",
+          "start": "2020-06-24"
+        },
+        {
+          "duration_sessions": 5,
+          "end": "2020-07-29",
+          "start": "2020-07-23"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-08-06",
+          "start": "2020-08-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2021-05-25",
+          "start": "2021-05-25"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-03-03",
+          "start": "2022-03-03"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-03-09",
+          "start": "2022-03-09"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-03-21",
+          "start": "2022-03-21"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-05-24",
+          "start": "2022-05-24"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-10-06",
+          "start": "2022-10-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2023-01-23",
+          "start": "2023-01-23"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2023-05-09",
+          "start": "2023-05-09"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2024-03-21",
+          "start": "2024-03-20"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2024-04-05",
+          "start": "2024-04-05"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2024-08-20",
+          "start": "2024-08-20"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2024-09-13",
+          "start": "2024-09-13"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2024-10-16",
+          "start": "2024-10-16"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2024-10-23",
+          "start": "2024-10-23"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2025-02-25",
+          "start": "2025-02-21"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2025-03-14",
+          "start": "2025-03-14"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2025-04-14",
+          "start": "2025-04-14"
+        },
+        {
+          "duration_sessions": 5,
+          "end": "2025-06-24",
+          "start": "2025-06-17"
+        },
+        {
+          "duration_sessions": 4,
+          "end": "2025-09-03",
+          "start": "2025-08-28"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2025-10-15",
+          "start": "2025-10-15"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2025-10-21",
+          "start": "2025-10-21"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2026-02-26",
+          "start": "2026-02-26"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2026-05-14",
+          "start": "2026-05-14"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2026-07-24",
+          "start": "2026-07-23"
+        }
+      ],
+      "evidence": {
+        "active_sessions": 138,
+        "control_reuse_count": 0,
+        "effective_independent_episode_count": 63,
+        "episode_fold_recurrence": 4,
+        "episodes": 75,
+        "loading_stability_mean_tucker_congruence": 0.99899398,
+        "matched_fold_direction_consistency": 0.75,
+        "observational_edge_bh_qvalue": 0.75674326,
+        "observational_edge_pvalue": 0.60539461,
+        "overlap_exclusions": 11,
+        "unmatched_onsets": 1
+      },
+      "factor_id": "F01",
+      "failure_frequency": 0.47619048,
+      "failure_modes": [
+        "Loading drift across chronological folds.",
+        "Episode definition sensitivity near the activation threshold.",
+        "Sparse weekly positioning releases are represented as release-time innovations.",
+        "Forward XAU association can reverse by regime and is not causal."
+      ],
+      "manifestations": [
+        {
+          "analysis_only_input": true,
+          "direction": "increase",
+          "domain": "etf_positioning",
+          "signed_loading": 2.94961735,
+          "variable": "gld_holdings_change"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "increase",
+          "domain": "gold_volatility",
+          "signed_loading": 0.13011508,
+          "variable": "gvz_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "real_yields",
+          "signed_loading": -0.11221301,
+          "variable": "real_yield_10y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "cross_asset_fx",
+          "signed_loading": -0.08254101,
+          "variable": "usdjpy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "usd_fx",
+          "signed_loading": -0.08234913,
+          "variable": "dxy_return"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "increase",
+          "domain": "cross_asset_volatility",
+          "signed_loading": 0.06348534,
+          "variable": "vix_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "nominal_yields",
+          "signed_loading": -0.0623838,
+          "variable": "yield_10y_change"
+        }
+      ],
+      "name": "Etf Positioning / Gold Volatility positive pole",
+      "pole": "positive",
+      "process_id": "IADC003-P01-POS",
+      "regime_persistence": {
+        "dominant_real_yield_regime_share": 0.60144928,
+        "dominant_volatility_regime_share": 0.68115942
+      },
+      "regimes": {
+        "HIGH_REAL_YIELD": 55,
+        "HIGH_VOL": 94,
+        "LOW_REAL_YIELD": 83,
+        "LOW_VOL": 44
+      },
+      "temporal_evolution": {
+        "episode_count": 75,
+        "first_episode": "2008-06-24",
+        "last_episode": "2026-07-24",
+        "recurrence_ratio": 1.0,
+        "recurring_temporal_folds": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "termination": "The retrospectively estimated episode terminates on the first session below 1.25; that session is excluded and no inactive gap is merged or marked active.",
+      "typical_duration": {
+        "maximum_sessions": 9,
+        "mean_sessions": 1.84,
+        "median_sessions": 1.0
+      },
+      "variables": [
+        "gld_holdings_change",
+        "gvz_return",
+        "real_yield_10y_change",
+        "usdjpy_return",
+        "dxy_return",
+        "vix_return",
+        "yield_10y_change"
+      ]
+    },
+    {
+      "activation": "Within the retrospectively estimated full-sample factor-score series, persistence confirmation begins only on the 3th consecutive session with signed rotated score >= 1.25; prior confirmation sessions are never backfilled.",
+      "alternatives": [
+        "A rotated covariance mode rather than a discrete institutional mechanism.",
+        "Common response to omitted macro news or market microstructure shocks.",
+        "Rights-restricted series may disproportionately shape this pole."
+      ],
+      "causal_confidence": null,
+      "confidence": 0.79,
+      "confidence_semantics": "retrospective observational stability score, not probability of truth",
+      "cross_asset_behavior": {
+        "active_forward_xau_mean": -0.00098593,
+        "edge_bh_qvalue": 0.75674326,
+        "forward_xau_active_minus_inactive_log_return": -0.00261291,
+        "forward_xau_matched_episode_difference": -0.00261291,
+        "matched_fold_direction_consistency": 0.75,
+        "matched_inactive_forward_xau_mean": 0.00162698,
+        "paired_bootstrap_95_interval": [
+          -0.01048563,
+          0.00529295
+        ],
+        "permutation_null_95_interval": [
+          -0.00900696,
+          0.00887914
+        ]
+      },
+      "description": "Autonomously extracted signed pole of rotated factor F01; its dominant empirical domains are etf_positioning, gold_volatility, real_yields.",
+      "episodes": [
+        {
+          "duration_sessions": 2,
+          "end": "2011-01-20",
+          "start": "2011-01-19"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2011-05-10",
+          "start": "2011-05-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2011-08-25",
+          "start": "2011-08-25"
+        },
+        {
+          "duration_sessions": 6,
+          "end": "2013-03-01",
+          "start": "2013-02-22"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2013-03-12",
+          "start": "2013-03-12"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2013-04-04",
+          "start": "2013-04-04"
+        },
+        {
+          "duration_sessions": 20,
+          "end": "2013-05-09",
+          "start": "2013-04-12"
+        },
+        {
+          "duration_sessions": 4,
+          "end": "2013-05-23",
+          "start": "2013-05-20"
+        },
+        {
+          "duration_sessions": 4,
+          "end": "2013-06-26",
+          "start": "2013-06-21"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2013-07-10",
+          "start": "2013-07-10"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2013-08-08",
+          "start": "2013-08-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2013-10-15",
+          "start": "2013-10-15"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2013-11-26",
+          "start": "2013-11-22"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2013-12-20",
+          "start": "2013-12-19"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2013-12-31",
+          "start": "2013-12-31"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2014-04-22",
+          "start": "2014-04-22"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2014-05-05",
+          "start": "2014-05-05"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2014-09-05",
+          "start": "2014-09-05"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2014-09-24",
+          "start": "2014-09-24"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2014-10-03",
+          "start": "2014-10-03"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2014-10-31",
+          "start": "2014-10-31"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2014-11-11",
+          "start": "2014-11-07"
+        },
+        {
+          "duration_sessions": 5,
+          "end": "2015-07-27",
+          "start": "2015-07-21"
+        },
+        {
+          "duration_sessions": 6,
+          "end": "2015-11-11",
+          "start": "2015-11-04"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2016-04-15",
+          "start": "2016-04-15"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2016-11-16",
+          "start": "2016-11-16"
+        },
+        {
+          "duration_sessions": 4,
+          "end": "2016-11-28",
+          "start": "2016-11-22"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2016-12-12",
+          "start": "2016-12-12"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2016-12-20",
+          "start": "2016-12-19"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2017-01-26",
+          "start": "2017-01-26"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2017-03-21",
+          "start": "2017-03-21"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2017-07-06",
+          "start": "2017-07-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2017-07-20",
+          "start": "2017-07-20"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2017-07-28",
+          "start": "2017-07-26"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2018-07-05",
+          "start": "2018-07-02"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2018-08-09",
+          "start": "2018-08-08"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2018-08-20",
+          "start": "2018-08-16"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2018-09-05",
+          "start": "2018-09-05"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2018-10-04",
+          "start": "2018-10-04"
+        },
+        {
+          "duration_sessions": 4,
+          "end": "2019-02-11",
+          "start": "2019-02-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2019-03-05",
+          "start": "2019-03-05"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2019-04-05",
+          "start": "2019-04-04"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2019-05-07",
+          "start": "2019-05-07"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2019-07-01",
+          "start": "2019-06-28"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2019-07-10",
+          "start": "2019-07-10"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-01-13",
+          "start": "2020-01-13"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2020-03-17",
+          "start": "2020-03-13"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-03-23",
+          "start": "2020-03-23"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2020-11-19",
+          "start": "2020-11-18"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-11-27",
+          "start": "2020-11-27"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2021-02-02",
+          "start": "2021-02-01"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2021-02-12",
+          "start": "2021-02-10"
+        },
+        {
+          "duration_sessions": 5,
+          "end": "2021-03-02",
+          "start": "2021-02-24"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2021-03-09",
+          "start": "2021-03-08"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2021-03-16",
+          "start": "2021-03-15"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2021-08-26",
+          "start": "2021-08-25"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2021-12-07",
+          "start": "2021-12-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-04-28",
+          "start": "2022-04-28"
+        },
+        {
+          "duration_sessions": 7,
+          "end": "2022-05-18",
+          "start": "2022-05-10"
+        },
+        {
+          "duration_sessions": 9,
+          "end": "2022-07-07",
+          "start": "2022-06-24"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2022-07-19",
+          "start": "2022-07-15"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2022-08-19",
+          "start": "2022-08-17"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2022-09-01",
+          "start": "2022-08-31"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2022-09-15",
+          "start": "2022-09-13"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2022-09-28",
+          "start": "2022-09-27"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-10-24",
+          "start": "2022-10-24"
+        },
+        {
+          "duration_sessions": 6,
+          "end": "2022-11-08",
+          "start": "2022-11-01"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2023-04-19",
+          "start": "2023-04-18"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2023-06-27",
+          "start": "2023-06-26"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2023-07-31",
+          "start": "2023-07-31"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2023-08-16",
+          "start": "2023-08-16"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2023-10-10",
+          "start": "2023-10-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2023-10-19",
+          "start": "2023-10-19"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2023-12-01",
+          "start": "2023-12-01"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2024-02-16",
+          "start": "2024-02-16"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2024-02-23",
+          "start": "2024-02-23"
+        },
+        {
+          "duration_sessions": 5,
+          "end": "2024-11-14",
+          "start": "2024-11-08"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2025-01-28",
+          "start": "2025-01-24"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2025-03-11",
+          "start": "2025-03-10"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2025-05-19",
+          "start": "2025-05-16"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2025-08-22",
+          "start": "2025-08-22"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2026-02-09",
+          "start": "2026-02-06"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2026-03-10",
+          "start": "2026-03-06"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2026-03-24",
+          "start": "2026-03-23"
+        },
+        {
+          "duration_sessions": 6,
+          "end": "2026-05-01",
+          "start": "2026-04-24"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2026-06-29",
+          "start": "2026-06-26"
+        }
+      ],
+      "evidence": {
+        "active_sessions": 214,
+        "control_reuse_count": 0,
+        "effective_independent_episode_count": 67,
+        "episode_fold_recurrence": 4,
+        "episodes": 86,
+        "loading_stability_mean_tucker_congruence": 0.99899398,
+        "matched_fold_direction_consistency": 0.75,
+        "observational_edge_bh_qvalue": 0.75674326,
+        "observational_edge_pvalue": 0.54445554,
+        "overlap_exclusions": 19,
+        "unmatched_onsets": 0
+      },
+      "factor_id": "F01",
+      "failure_frequency": 0.41791045,
+      "failure_modes": [
+        "Loading drift across chronological folds.",
+        "Episode definition sensitivity near the activation threshold.",
+        "Sparse weekly positioning releases are represented as release-time innovations.",
+        "Forward XAU association can reverse by regime and is not causal."
+      ],
+      "manifestations": [
+        {
+          "analysis_only_input": true,
+          "direction": "decrease",
+          "domain": "etf_positioning",
+          "signed_loading": -2.94961735,
+          "variable": "gld_holdings_change"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "decrease",
+          "domain": "gold_volatility",
+          "signed_loading": -0.13011508,
+          "variable": "gvz_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "real_yields",
+          "signed_loading": 0.11221301,
+          "variable": "real_yield_10y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "cross_asset_fx",
+          "signed_loading": 0.08254101,
+          "variable": "usdjpy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "usd_fx",
+          "signed_loading": 0.08234913,
+          "variable": "dxy_return"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "decrease",
+          "domain": "cross_asset_volatility",
+          "signed_loading": -0.06348534,
+          "variable": "vix_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "nominal_yields",
+          "signed_loading": 0.0623838,
+          "variable": "yield_10y_change"
+        }
+      ],
+      "name": "Etf Positioning / Gold Volatility inverse pole",
+      "pole": "negative",
+      "process_id": "IADC003-P01-NEG",
+      "regime_persistence": {
+        "dominant_real_yield_regime_share": 0.52336449,
+        "dominant_volatility_regime_share": 0.57476636
+      },
+      "regimes": {
+        "HIGH_REAL_YIELD": 102,
+        "HIGH_VOL": 91,
+        "LOW_REAL_YIELD": 112,
+        "LOW_VOL": 123
+      },
+      "temporal_evolution": {
+        "episode_count": 86,
+        "first_episode": "2011-01-19",
+        "last_episode": "2026-06-29",
+        "recurrence_ratio": 1.0,
+        "recurring_temporal_folds": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "termination": "The retrospectively estimated episode terminates on the first session below 1.25; that session is excluded and no inactive gap is merged or marked active.",
+      "typical_duration": {
+        "maximum_sessions": 20,
+        "mean_sessions": 2.48837209,
+        "median_sessions": 2.0
+      },
+      "variables": [
+        "gld_holdings_change",
+        "gvz_return",
+        "real_yield_10y_change",
+        "usdjpy_return",
+        "dxy_return",
+        "vix_return",
+        "yield_10y_change"
+      ]
+    },
+    {
+      "activation": "Within the retrospectively estimated full-sample factor-score series, persistence confirmation begins only on the 3th consecutive session with signed rotated score >= 1.25; prior confirmation sessions are never backfilled.",
+      "alternatives": [
+        "A rotated covariance mode rather than a discrete institutional mechanism.",
+        "Common response to omitted macro news or market microstructure shocks.",
+        "Rights-restricted series may disproportionately shape this pole."
+      ],
+      "causal_confidence": null,
+      "confidence": 0.553,
+      "confidence_semantics": "retrospective observational stability score, not probability of truth",
+      "cross_asset_behavior": {
+        "active_forward_xau_mean": 0.00556604,
+        "edge_bh_qvalue": 0.77222777,
+        "forward_xau_active_minus_inactive_log_return": -0.00260564,
+        "forward_xau_matched_episode_difference": -0.00260564,
+        "matched_fold_direction_consistency": 0.75,
+        "matched_inactive_forward_xau_mean": 0.00817169,
+        "paired_bootstrap_95_interval": [
+          -0.02517505,
+          0.01931448
+        ],
+        "permutation_null_95_interval": [
+          -0.01802235,
+          0.01910108
+        ]
+      },
+      "description": "Autonomously extracted signed pole of rotated factor F03; its dominant empirical domains are usd_fx, cross_asset_fx, nominal_yields.",
+      "episodes": [
+        {
+          "duration_sessions": 1,
+          "end": "2008-12-18",
+          "start": "2008-12-18"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2009-06-03",
+          "start": "2009-06-03"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2010-05-24",
+          "start": "2010-05-24"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2010-12-06",
+          "start": "2010-12-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2011-04-25",
+          "start": "2011-04-25"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2015-08-25",
+          "start": "2015-08-25"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2018-01-17",
+          "start": "2018-01-17"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2018-02-16",
+          "start": "2018-02-16"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-03-03",
+          "start": "2020-03-03"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-03-10",
+          "start": "2020-03-10"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-07-20",
+          "start": "2022-07-20"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-11-09",
+          "start": "2022-11-09"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2025-03-07",
+          "start": "2025-03-06"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2025-04-14",
+          "start": "2025-04-14"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2026-01-28",
+          "start": "2026-01-28"
+        }
+      ],
+      "evidence": {
+        "active_sessions": 16,
+        "control_reuse_count": 0,
+        "effective_independent_episode_count": 14,
+        "episode_fold_recurrence": 4,
+        "episodes": 15,
+        "loading_stability_mean_tucker_congruence": 0.98221686,
+        "matched_fold_direction_consistency": 0.75,
+        "observational_edge_bh_qvalue": 0.77222777,
+        "observational_edge_pvalue": 0.77222777,
+        "overlap_exclusions": 1,
+        "unmatched_onsets": 0
+      },
+      "factor_id": "F03",
+      "failure_frequency": 0.42857143,
+      "failure_modes": [
+        "Loading drift across chronological folds.",
+        "Episode definition sensitivity near the activation threshold.",
+        "Sparse weekly positioning releases are represented as release-time innovations.",
+        "Forward XAU association can reverse by regime and is not causal."
+      ],
+      "manifestations": [
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "usd_fx",
+          "signed_loading": -1.15390036,
+          "variable": "dxy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "cross_asset_fx",
+          "signed_loading": 0.83957609,
+          "variable": "eurusd_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "cross_asset_fx",
+          "signed_loading": -0.46188616,
+          "variable": "usdjpy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "nominal_yields",
+          "signed_loading": -0.17989214,
+          "variable": "yield_2y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "commodity",
+          "signed_loading": 0.14776309,
+          "variable": "wti_return"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "decrease",
+          "domain": "cross_asset_volatility",
+          "signed_loading": -0.10847379,
+          "variable": "vix_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "real_yields",
+          "signed_loading": -0.1050426,
+          "variable": "real_yield_10y_change"
+        }
+      ],
+      "name": "Usd Fx / Cross Asset Fx inverse pole",
+      "pole": "negative",
+      "process_id": "IADC003-P03-NEG",
+      "regime_persistence": {
+        "dominant_real_yield_regime_share": 0.75,
+        "dominant_volatility_regime_share": 0.8125
+      },
+      "regimes": {
+        "HIGH_REAL_YIELD": 12,
+        "HIGH_VOL": 13,
+        "LOW_REAL_YIELD": 4,
+        "LOW_VOL": 3
+      },
+      "temporal_evolution": {
+        "episode_count": 15,
+        "first_episode": "2008-12-18",
+        "last_episode": "2026-01-28",
+        "recurrence_ratio": 1.0,
+        "recurring_temporal_folds": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "termination": "The retrospectively estimated episode terminates on the first session below 1.25; that session is excluded and no inactive gap is merged or marked active.",
+      "typical_duration": {
+        "maximum_sessions": 2,
+        "mean_sessions": 1.06666667,
+        "median_sessions": 1.0
+      },
+      "variables": [
+        "dxy_return",
+        "eurusd_return",
+        "usdjpy_return",
+        "yield_2y_change",
+        "wti_return",
+        "vix_return",
+        "real_yield_10y_change"
+      ]
+    },
+    {
+      "activation": "Within the retrospectively estimated full-sample factor-score series, persistence confirmation begins only on the 3th consecutive session with signed rotated score >= 1.25; prior confirmation sessions are never backfilled.",
+      "alternatives": [
+        "A rotated covariance mode rather than a discrete institutional mechanism.",
+        "Common response to omitted macro news or market microstructure shocks.",
+        "Rights-restricted series may disproportionately shape this pole."
+      ],
+      "causal_confidence": null,
+      "confidence": 0.553,
+      "confidence_semantics": "retrospective observational stability score, not probability of truth",
+      "cross_asset_behavior": {
+        "active_forward_xau_mean": 0.006211,
+        "edge_bh_qvalue": 0.75674326,
+        "forward_xau_active_minus_inactive_log_return": 0.00879478,
+        "forward_xau_matched_episode_difference": 0.00879478,
+        "matched_fold_direction_consistency": 1.0,
+        "matched_inactive_forward_xau_mean": -0.00258378,
+        "paired_bootstrap_95_interval": [
+          -0.00252113,
+          0.0206434
+        ],
+        "permutation_null_95_interval": [
+          -0.01870107,
+          0.01760236
+        ]
+      },
+      "description": "Autonomously extracted signed pole of rotated factor F04; its dominant empirical domains are cross_asset_volatility, gold_volatility, cross_asset_fx.",
+      "episodes": [
+        {
+          "duration_sessions": 1,
+          "end": "2009-09-03",
+          "start": "2009-09-03"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2010-01-25",
+          "start": "2010-01-25"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2012-12-31",
+          "start": "2012-12-31"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2015-08-25",
+          "start": "2015-08-25"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2016-06-14",
+          "start": "2016-06-13"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2016-11-02",
+          "start": "2016-11-01"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2017-04-13",
+          "start": "2017-04-12"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2017-08-11",
+          "start": "2017-08-11"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2019-12-04",
+          "start": "2019-12-04"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2019-12-27",
+          "start": "2019-12-27"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-02-26",
+          "start": "2020-02-26"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-03-10",
+          "start": "2020-03-10"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2020-06-12",
+          "start": "2020-06-12"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2023-03-14",
+          "start": "2023-03-14"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2024-08-06",
+          "start": "2024-08-06"
+        }
+      ],
+      "evidence": {
+        "active_sessions": 18,
+        "control_reuse_count": 0,
+        "effective_independent_episode_count": 14,
+        "episode_fold_recurrence": 4,
+        "episodes": 15,
+        "loading_stability_mean_tucker_congruence": 0.99646126,
+        "matched_fold_direction_consistency": 1.0,
+        "observational_edge_bh_qvalue": 0.75674326,
+        "observational_edge_pvalue": 0.31568432,
+        "overlap_exclusions": 1,
+        "unmatched_onsets": 0
+      },
+      "factor_id": "F04",
+      "failure_frequency": 0.5,
+      "failure_modes": [
+        "Loading drift across chronological folds.",
+        "Episode definition sensitivity near the activation threshold.",
+        "Sparse weekly positioning releases are represented as release-time innovations.",
+        "Forward XAU association can reverse by regime and is not causal."
+      ],
+      "manifestations": [
+        {
+          "analysis_only_input": true,
+          "direction": "increase",
+          "domain": "cross_asset_volatility",
+          "signed_loading": 1.09979176,
+          "variable": "vix_return"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "increase",
+          "domain": "gold_volatility",
+          "signed_loading": 1.08390722,
+          "variable": "gvz_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "cross_asset_fx",
+          "signed_loading": -0.1977618,
+          "variable": "usdjpy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "inflation_expectations",
+          "signed_loading": -0.19645632,
+          "variable": "breakeven_5y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "inflation_expectations",
+          "signed_loading": -0.18981314,
+          "variable": "breakeven_10y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "nominal_yields",
+          "signed_loading": -0.14051986,
+          "variable": "yield_2y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "nominal_yields",
+          "signed_loading": -0.11465428,
+          "variable": "yield_10y_change"
+        }
+      ],
+      "name": "Cross Asset Volatility / Gold Volatility positive pole",
+      "pole": "positive",
+      "process_id": "IADC003-P04-POS",
+      "regime_persistence": {
+        "dominant_real_yield_regime_share": 0.77777778,
+        "dominant_volatility_regime_share": 0.61111111
+      },
+      "regimes": {
+        "HIGH_REAL_YIELD": 4,
+        "HIGH_VOL": 11,
+        "LOW_REAL_YIELD": 14,
+        "LOW_VOL": 7
+      },
+      "temporal_evolution": {
+        "episode_count": 15,
+        "first_episode": "2009-09-03",
+        "last_episode": "2024-08-06",
+        "recurrence_ratio": 1.0,
+        "recurring_temporal_folds": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "termination": "The retrospectively estimated episode terminates on the first session below 1.25; that session is excluded and no inactive gap is merged or marked active.",
+      "typical_duration": {
+        "maximum_sessions": 2,
+        "mean_sessions": 1.2,
+        "median_sessions": 1.0
+      },
+      "variables": [
+        "vix_return",
+        "gvz_return",
+        "usdjpy_return",
+        "breakeven_5y_change",
+        "breakeven_10y_change",
+        "yield_2y_change",
+        "yield_10y_change"
+      ]
+    },
+    {
+      "activation": "Within the retrospectively estimated full-sample factor-score series, persistence confirmation begins only on the 3th consecutive session with signed rotated score >= 1.25; prior confirmation sessions are never backfilled.",
+      "alternatives": [
+        "A rotated covariance mode rather than a discrete institutional mechanism.",
+        "Common response to omitted macro news or market microstructure shocks.",
+        "Rights-restricted series may disproportionately shape this pole."
+      ],
+      "causal_confidence": null,
+      "confidence": 0.395,
+      "confidence_semantics": "retrospective observational stability score, not probability of truth",
+      "cross_asset_behavior": {
+        "active_forward_xau_mean": -0.01810651,
+        "edge_bh_qvalue": 0.75674326,
+        "forward_xau_active_minus_inactive_log_return": -0.01497086,
+        "forward_xau_matched_episode_difference": -0.01497086,
+        "matched_fold_direction_consistency": 0.75,
+        "matched_inactive_forward_xau_mean": -0.00313565,
+        "paired_bootstrap_95_interval": [
+          -0.0525129,
+          0.02874955
+        ],
+        "permutation_null_95_interval": [
+          -0.02243622,
+          0.0215484
+        ]
+      },
+      "description": "Autonomously extracted signed pole of rotated factor F05; its dominant empirical domains are real_yields, nominal_yields, cross_asset_fx.",
+      "episodes": [
+        {
+          "duration_sessions": 1,
+          "end": "2008-07-21",
+          "start": "2008-07-21"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2008-10-13",
+          "start": "2008-10-10"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2009-06-09",
+          "start": "2009-06-09"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2013-06-24",
+          "start": "2013-06-24"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2013-08-20",
+          "start": "2013-08-20"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2013-09-06",
+          "start": "2013-09-06"
+        },
+        {
+          "duration_sessions": 2,
+          "end": "2020-03-16",
+          "start": "2020-03-13"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-03-17",
+          "start": "2022-03-17"
+        },
+        {
+          "duration_sessions": 1,
+          "end": "2022-06-15",
+          "start": "2022-06-15"
+        },
+        {
+          "duration_sessions": 3,
+          "end": "2025-04-14",
+          "start": "2025-04-10"
+        }
+      ],
+      "evidence": {
+        "active_sessions": 14,
+        "control_reuse_count": 0,
+        "effective_independent_episode_count": 10,
+        "episode_fold_recurrence": 4,
+        "episodes": 10,
+        "loading_stability_mean_tucker_congruence": 0.98812405,
+        "matched_fold_direction_consistency": 0.75,
+        "observational_edge_bh_qvalue": 0.75674326,
+        "observational_edge_pvalue": 0.18181818,
+        "overlap_exclusions": 0,
+        "unmatched_onsets": 0
+      },
+      "factor_id": "F05",
+      "failure_frequency": 0.3,
+      "failure_modes": [
+        "Loading drift across chronological folds.",
+        "Episode definition sensitivity near the activation threshold.",
+        "Sparse weekly positioning releases are represented as release-time innovations.",
+        "Forward XAU association can reverse by regime and is not causal."
+      ],
+      "manifestations": [
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "real_yields",
+          "signed_loading": 1.09824911,
+          "variable": "real_yield_10y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "nominal_yields",
+          "signed_loading": 0.66116137,
+          "variable": "yield_2y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "nominal_yields",
+          "signed_loading": 0.64330033,
+          "variable": "yield_10y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "nominal_yields",
+          "signed_loading": 0.55862529,
+          "variable": "yield_30y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "cross_asset_fx",
+          "signed_loading": 0.30864952,
+          "variable": "usdjpy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "usd_fx",
+          "signed_loading": 0.12622638,
+          "variable": "dxy_return"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "decrease",
+          "domain": "cross_asset_volatility",
+          "signed_loading": -0.10993198,
+          "variable": "vix_return"
+        }
+      ],
+      "name": "Real Yields / Nominal Yields positive pole",
+      "pole": "positive",
+      "process_id": "IADC003-P05-POS",
+      "regime_persistence": {
+        "dominant_real_yield_regime_share": 0.78571429,
+        "dominant_volatility_regime_share": 0.85714286
+      },
+      "regimes": {
+        "HIGH_REAL_YIELD": 11,
+        "HIGH_VOL": 12,
+        "LOW_REAL_YIELD": 3,
+        "LOW_VOL": 2
+      },
+      "temporal_evolution": {
+        "episode_count": 10,
+        "first_episode": "2008-07-21",
+        "last_episode": "2025-04-14",
+        "recurrence_ratio": 1.0,
+        "recurring_temporal_folds": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "termination": "The retrospectively estimated episode terminates on the first session below 1.25; that session is excluded and no inactive gap is merged or marked active.",
+      "typical_duration": {
+        "maximum_sessions": 3,
+        "mean_sessions": 1.4,
+        "median_sessions": 1.0
+      },
+      "variables": [
+        "real_yield_10y_change",
+        "yield_2y_change",
+        "yield_10y_change",
+        "yield_30y_change",
+        "usdjpy_return",
+        "dxy_return",
+        "vix_return"
+      ]
+    }
+  ],
+  "selection_rule": "Only parallel-analysis candidates passing leave-block-out Tucker gates and pole recurrence/nonoverlapping-onset gates are retained."
+}

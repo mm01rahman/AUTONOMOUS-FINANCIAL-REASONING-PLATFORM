@@ -1,0 +1,25 @@
+attributes:
+  bh_cross_process_transitions: 0
+  campaign_id: IADC-003
+  causal_claims: 0
+  descriptive_lifecycle_count: 201
+  examined_cross_process_transitions: 80
+  examined_interactions: 9
+  ontology_parent_count: 4
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: 11-research\iadc-003\ikros_ingestion.json
+  summary: Bounded process ontology with supported overlaps, exact-null transitions,
+    and descriptive lifecycles.
+  supported_overlaps: 2
+  trading_outputs: 0
+confidence: 0.72
+created_at: '2026-08-03T11:31:39.865357+00:00'
+ikros_id: IKROS-KO-20260803-0906
+label: IADC-003 process ontology and relational evidence
+node_id: IKROS-KO-20260803-0906
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T11:31:39.865357+00:00'
+valid_to: null
+wp_refs: []

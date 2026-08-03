@@ -1,0 +1,26 @@
+attributes:
+  campaign_id: IADC-003
+  causal_claims: 0
+  causal_promotions: 0
+  cross_process_transition_edges: 0
+  decision: RETROSPECTIVE_STRUCTURE_FORWARD_ALPHA_UNSUPPORTED
+  process_alpha_edges: 0
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: 11-research\iadc-003\ikros_ingestion.json
+  summary: Latent processes do not explain XAU/USD more consistently out of sample
+    than the training-selected isolated-variable benchmark. No retrospective process
+    alpha edge survives BH.
+  supported_overlaps: 2
+  trading_outputs: 0
+  trading_rules: 0
+confidence: 0.72
+created_at: '2026-08-03T11:31:39.865357+00:00'
+ikros_id: IKROS-CONCL-20260803-0904
+label: IADC-003 institutional latent-process conclusion
+node_id: IKROS-CONCL-20260803-0904
+node_type: RESEARCH_CONCLUSION
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T11:31:39.865357+00:00'
+valid_to: null
+wp_refs: []

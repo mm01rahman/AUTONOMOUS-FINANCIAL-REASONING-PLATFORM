@@ -1,0 +1,205 @@
+{
+  "ikros_objects": [
+    {
+      "attributes": {
+        "blocked_research_domains": 5,
+        "campaign_id": "IADC-001",
+        "generated_at": "2026-08-03T03:32:07.301830+00:00",
+        "hypotheses_generated": 1080,
+        "hypotheses_tested": 1080,
+        "no_trading_rules_generated": true,
+        "rejected_hypotheses": 1058,
+        "sample_blocked_hypotheses": 0,
+        "scientific_conclusion": "The available archive supports observational tests of USD, nominal-yield, curve, and policy-anchor transmission. It cannot validate real-yield, inflation-surprise, FOMC-event, positioning, ETF, or causal mechanisms.",
+        "status": "EVIDENCE_EXHAUSTED_FOR_AVAILABLE_DATA",
+        "supported_associations": 22,
+        "title": "Institutional Real Yield & Monetary Policy Alpha Discovery",
+        "validated_causal_mechanisms": 0
+      },
+      "confidence": 0.95,
+      "evidence_refs": [
+        "11-research/iadc-001/evidence_ledger.json"
+      ],
+      "identifier": "IKROS-EVIDENCE-20260803-0901",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-060"
+      ],
+      "summary": "1080 hypotheses tested over 6242 daily observations.",
+      "title": "IADC-001 historical evidence ledger",
+      "type": "Evidence"
+    },
+    {
+      "attributes": {
+        "reasons": [
+          {
+            "available": "six-row fixture only",
+            "decision": "BLOCKED_BY_DATA",
+            "domain": "real yields",
+            "required": "historical TIPS real-yield curve"
+          },
+          {
+            "available": "not present",
+            "decision": "BLOCKED_BY_DATA",
+            "domain": "inflation surprise",
+            "required": "CPI/Core CPI/PCE releases, consensus, and vintages"
+          },
+          {
+            "available": "daily short-rate proxy only",
+            "decision": "BLOCKED_BY_DATA",
+            "domain": "FOMC event studies",
+            "required": "meeting/statement timestamps and expectation surprises"
+          },
+          {
+            "available": "four-to-six-row fixtures only",
+            "decision": "BLOCKED_BY_DATA",
+            "domain": "institutional positioning and ETF transmission",
+            "required": "multi-cycle CFTC and ETF holdings histories"
+          },
+          {
+            "available": "observational daily time series",
+            "decision": "NOT_ESTABLISHED",
+            "domain": "causal identification",
+            "required": "valid instruments, natural experiments, or identified structural model"
+          }
+        ]
+      },
+      "confidence": 0.99,
+      "evidence_refs": [
+        "11-research/iadc-001/blocked_research_registry.json"
+      ],
+      "identifier": "IKROS-CONTRA-20260803-0901",
+      "lifecycle_state": "ACTIVE",
+      "source_ids": [
+        "IKROS-EVIDENCE-20260803-0901"
+      ],
+      "specification_refs": [
+        "SPEC-060"
+      ],
+      "summary": "Critical requested mechanism families cannot be tested with the available archive.",
+      "title": "IADC-001 evidence-boundary contradictions",
+      "type": "ContradictoryEvidence"
+    },
+    {
+      "attributes": {
+        "decision": "EVIDENCE_EXHAUSTED_FOR_AVAILABLE_DATA",
+        "mechanism_states": [
+          {
+            "best_correlation": 0.057786,
+            "best_horizon_days": 5,
+            "best_hypothesis_id": "IADC-HYP-0901",
+            "best_lag_days": 10,
+            "best_q_value": 0.0002486111,
+            "best_regime": "all",
+            "causal_status": "NOT_ESTABLISHED",
+            "confidence": 0.75,
+            "economic_mechanism": "Curve steepening can reflect easing or inflation expectations supportive of gold.",
+            "failure_modes": [
+              "common macro driver",
+              "regime misclassification",
+              "non-stationarity",
+              "overlapping forward returns"
+            ],
+            "family": "curve_expectations",
+            "mechanism_id": "IADC-MECH-001",
+            "portfolio_contribution": "Not assessed",
+            "state": "SUPPORTED_ASSOCIATION",
+            "supported_hypothesis_count": 2
+          },
+          {
+            "best_correlation": -0.062943,
+            "best_horizon_days": 5,
+            "best_hypothesis_id": "IADC-HYP-0658",
+            "best_lag_days": 20,
+            "best_q_value": 4.29141e-05,
+            "best_regime": "all",
+            "causal_status": "NOT_ESTABLISHED",
+            "confidence": 0.75,
+            "economic_mechanism": "Sustained nominal-yield repricing can pressure gold through carry and USD channels.",
+            "failure_modes": [
+              "common macro driver",
+              "regime misclassification",
+              "non-stationarity",
+              "overlapping forward returns"
+            ],
+            "family": "nominal_yield_transmission",
+            "mechanism_id": "IADC-MECH-002",
+            "portfolio_contribution": "Not assessed",
+            "state": "SUPPORTED_ASSOCIATION",
+            "supported_hypothesis_count": 16
+          },
+          {
+            "best_correlation": 0.156463,
+            "best_horizon_days": 20,
+            "best_hypothesis_id": "IADC-HYP-1020",
+            "best_lag_days": 5,
+            "best_q_value": 0.0,
+            "best_regime": "gold_bear",
+            "causal_status": "NOT_ESTABLISHED",
+            "confidence": 0.5,
+            "economic_mechanism": "A rising short-rate policy proxy tightens carry conditions for non-yielding gold.",
+            "failure_modes": [
+              "common macro driver",
+              "regime misclassification",
+              "non-stationarity",
+              "overlapping forward returns"
+            ],
+            "family": "policy_anchor",
+            "mechanism_id": "IADC-MECH-003",
+            "portfolio_contribution": "Not assessed",
+            "state": "REJECTED_OR_UNRESOLVED",
+            "supported_hypothesis_count": 0
+          },
+          {
+            "best_correlation": -0.088288,
+            "best_horizon_days": 1,
+            "best_hypothesis_id": "IADC-HYP-0006",
+            "best_lag_days": 0,
+            "best_q_value": 0.0029925467,
+            "best_regime": "usd_strength",
+            "causal_status": "NOT_ESTABLISHED",
+            "confidence": 0.75,
+            "economic_mechanism": "USD appreciation raises the non-USD price of gold and can reduce marginal demand.",
+            "failure_modes": [
+              "common macro driver",
+              "regime misclassification",
+              "non-stationarity",
+              "overlapping forward returns"
+            ],
+            "family": "usd_transmission",
+            "mechanism_id": "IADC-MECH-004",
+            "portfolio_contribution": "Not assessed",
+            "state": "SUPPORTED_ASSOCIATION",
+            "supported_hypothesis_count": 4
+          }
+        ],
+        "supported_associations": 22,
+        "validated_causal_mechanisms": 0
+      },
+      "confidence": 0.72,
+      "evidence_refs": [
+        "11-research/iadc-001/EXECUTIVE_SUMMARY.md",
+        "11-research/iadc-001/evidence_ledger.json"
+      ],
+      "identifier": "IKROS-CONCL-20260803-0901",
+      "lifecycle_state": "PUBLISHED",
+      "source_ids": [
+        "IKROS-EVIDENCE-20260803-0901",
+        "IKROS-CONTRA-20260803-0901"
+      ],
+      "specification_refs": [
+        "SPEC-060"
+      ],
+      "summary": "The available archive supports observational tests of USD, nominal-yield, curve, and policy-anchor transmission. It cannot validate real-yield, inflation-surprise, FOMC-event, positioning, ETF, or causal mechanisms.",
+      "title": "IADC-001 bounded monetary-policy conclusion",
+      "type": "ResearchConclusion"
+    }
+  ],
+  "metadata": {
+    "source_kind": "INTERNAL_RESEARCH_REPORT",
+    "specification_refs": [
+      "SPEC-060"
+    ],
+    "title": "IADC-001 Institutional Real Yield and Monetary Policy Alpha Discovery"
+  }
+}

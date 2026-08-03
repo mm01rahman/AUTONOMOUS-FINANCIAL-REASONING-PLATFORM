@@ -1,0 +1,31 @@
+{
+  "cadence": "daily",
+  "dataset_id": "IADC002-DCOILWTICO",
+  "domain": "cross_asset_commodity",
+  "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+  "limitations": [
+    "Observational data; no identification design or causal warrant."
+  ],
+  "name": "WTI Crude Oil Spot Price",
+  "normalized_checksum_sha256": "482803cd0bd0343517d690abbf790aec9284e984eb08734013ff0ae2f538e030",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-DCOILWTICO.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "FRED",
+  "quality": {
+    "calendar_coverage_ratio": 0.689073,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-27T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 10210,
+    "research_depth": true,
+    "start_timestamp": "1986-01-02T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "cbb2a637c6f9da413922df0bd7953f4d9f972f4b89a26f70a5380550c6edcf57",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-DCOILWTICO.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "U.S. Energy Information Administration",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO",
+  "timezone": "UTC",
+  "variable": "wti"
+}

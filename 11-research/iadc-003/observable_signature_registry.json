@@ -1,0 +1,285 @@
+{
+  "campaign_id": "IADC-003",
+  "signatures": [
+    {
+      "activation": "Within the retrospectively estimated full-sample factor-score series, persistence confirmation begins only on the 3th consecutive session with signed rotated score >= 1.25; prior confirmation sessions are never backfilled.",
+      "manifestations": [
+        {
+          "analysis_only_input": true,
+          "direction": "increase",
+          "domain": "etf_positioning",
+          "signed_loading": 2.94961735,
+          "variable": "gld_holdings_change"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "increase",
+          "domain": "gold_volatility",
+          "signed_loading": 0.13011508,
+          "variable": "gvz_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "real_yields",
+          "signed_loading": -0.11221301,
+          "variable": "real_yield_10y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "cross_asset_fx",
+          "signed_loading": -0.08254101,
+          "variable": "usdjpy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "usd_fx",
+          "signed_loading": -0.08234913,
+          "variable": "dxy_return"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "increase",
+          "domain": "cross_asset_volatility",
+          "signed_loading": 0.06348534,
+          "variable": "vix_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "nominal_yields",
+          "signed_loading": -0.0623838,
+          "variable": "yield_10y_change"
+        }
+      ],
+      "process_id": "IADC003-P01-POS",
+      "termination": "The retrospectively estimated episode terminates on the first session below 1.25; that session is excluded and no inactive gap is merged or marked active."
+    },
+    {
+      "activation": "Within the retrospectively estimated full-sample factor-score series, persistence confirmation begins only on the 3th consecutive session with signed rotated score >= 1.25; prior confirmation sessions are never backfilled.",
+      "manifestations": [
+        {
+          "analysis_only_input": true,
+          "direction": "decrease",
+          "domain": "etf_positioning",
+          "signed_loading": -2.94961735,
+          "variable": "gld_holdings_change"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "decrease",
+          "domain": "gold_volatility",
+          "signed_loading": -0.13011508,
+          "variable": "gvz_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "real_yields",
+          "signed_loading": 0.11221301,
+          "variable": "real_yield_10y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "cross_asset_fx",
+          "signed_loading": 0.08254101,
+          "variable": "usdjpy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "usd_fx",
+          "signed_loading": 0.08234913,
+          "variable": "dxy_return"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "decrease",
+          "domain": "cross_asset_volatility",
+          "signed_loading": -0.06348534,
+          "variable": "vix_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "nominal_yields",
+          "signed_loading": 0.0623838,
+          "variable": "yield_10y_change"
+        }
+      ],
+      "process_id": "IADC003-P01-NEG",
+      "termination": "The retrospectively estimated episode terminates on the first session below 1.25; that session is excluded and no inactive gap is merged or marked active."
+    },
+    {
+      "activation": "Within the retrospectively estimated full-sample factor-score series, persistence confirmation begins only on the 3th consecutive session with signed rotated score >= 1.25; prior confirmation sessions are never backfilled.",
+      "manifestations": [
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "usd_fx",
+          "signed_loading": -1.15390036,
+          "variable": "dxy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "cross_asset_fx",
+          "signed_loading": 0.83957609,
+          "variable": "eurusd_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "cross_asset_fx",
+          "signed_loading": -0.46188616,
+          "variable": "usdjpy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "nominal_yields",
+          "signed_loading": -0.17989214,
+          "variable": "yield_2y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "commodity",
+          "signed_loading": 0.14776309,
+          "variable": "wti_return"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "decrease",
+          "domain": "cross_asset_volatility",
+          "signed_loading": -0.10847379,
+          "variable": "vix_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "real_yields",
+          "signed_loading": -0.1050426,
+          "variable": "real_yield_10y_change"
+        }
+      ],
+      "process_id": "IADC003-P03-NEG",
+      "termination": "The retrospectively estimated episode terminates on the first session below 1.25; that session is excluded and no inactive gap is merged or marked active."
+    },
+    {
+      "activation": "Within the retrospectively estimated full-sample factor-score series, persistence confirmation begins only on the 3th consecutive session with signed rotated score >= 1.25; prior confirmation sessions are never backfilled.",
+      "manifestations": [
+        {
+          "analysis_only_input": true,
+          "direction": "increase",
+          "domain": "cross_asset_volatility",
+          "signed_loading": 1.09979176,
+          "variable": "vix_return"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "increase",
+          "domain": "gold_volatility",
+          "signed_loading": 1.08390722,
+          "variable": "gvz_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "cross_asset_fx",
+          "signed_loading": -0.1977618,
+          "variable": "usdjpy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "inflation_expectations",
+          "signed_loading": -0.19645632,
+          "variable": "breakeven_5y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "inflation_expectations",
+          "signed_loading": -0.18981314,
+          "variable": "breakeven_10y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "nominal_yields",
+          "signed_loading": -0.14051986,
+          "variable": "yield_2y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "decrease",
+          "domain": "nominal_yields",
+          "signed_loading": -0.11465428,
+          "variable": "yield_10y_change"
+        }
+      ],
+      "process_id": "IADC003-P04-POS",
+      "termination": "The retrospectively estimated episode terminates on the first session below 1.25; that session is excluded and no inactive gap is merged or marked active."
+    },
+    {
+      "activation": "Within the retrospectively estimated full-sample factor-score series, persistence confirmation begins only on the 3th consecutive session with signed rotated score >= 1.25; prior confirmation sessions are never backfilled.",
+      "manifestations": [
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "real_yields",
+          "signed_loading": 1.09824911,
+          "variable": "real_yield_10y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "nominal_yields",
+          "signed_loading": 0.66116137,
+          "variable": "yield_2y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "nominal_yields",
+          "signed_loading": 0.64330033,
+          "variable": "yield_10y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "nominal_yields",
+          "signed_loading": 0.55862529,
+          "variable": "yield_30y_change"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "cross_asset_fx",
+          "signed_loading": 0.30864952,
+          "variable": "usdjpy_return"
+        },
+        {
+          "analysis_only_input": false,
+          "direction": "increase",
+          "domain": "usd_fx",
+          "signed_loading": 0.12622638,
+          "variable": "dxy_return"
+        },
+        {
+          "analysis_only_input": true,
+          "direction": "decrease",
+          "domain": "cross_asset_volatility",
+          "signed_loading": -0.10993198,
+          "variable": "vix_return"
+        }
+      ],
+      "process_id": "IADC003-P05-POS",
+      "termination": "The retrospectively estimated episode terminates on the first session below 1.25; that session is excluded and no inactive gap is merged or marked active."
+    }
+  ]
+}

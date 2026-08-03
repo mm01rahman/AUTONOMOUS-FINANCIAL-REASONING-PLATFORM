@@ -1,0 +1,154 @@
+[
+  {
+    "dataset_id": "IADC002-DFII10",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "275fe35b2a955b8d2071235ac0b87d8716c67551638a8b5aea57bf7b49ab4c3a",
+    "source_owner": "U.S. Department of the Treasury",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10"
+  },
+  {
+    "dataset_id": "IADC002-T10YIE",
+    "license_status": "PUBLIC_RESEARCH_DOWNLOAD",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "a34f5c76c760db476e1dca74138a0ef5e84d721f4ca0c842c5b4ebb22106d17a",
+    "source_owner": "Federal Reserve Bank of St. Louis",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10YIE"
+  },
+  {
+    "dataset_id": "IADC002-T5YIE",
+    "license_status": "PUBLIC_RESEARCH_DOWNLOAD",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "c0af4aa8107410572d18a57d6835e1d45457087909bd7311b9f05cda9805ccbd",
+    "source_owner": "Federal Reserve Bank of St. Louis",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T5YIE"
+  },
+  {
+    "dataset_id": "IADC002-DGS2",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "ea8b91463644518bc542999584dfb0cdcfe82b08fe16a5c5303139f5adde7c5b",
+    "source_owner": "Board of Governors of the Federal Reserve System",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2"
+  },
+  {
+    "dataset_id": "IADC002-DGS10",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "ff7e029b7532f7a91a2725677548de83a64e93d9293997ea3fee82ce3a2578d5",
+    "source_owner": "Board of Governors of the Federal Reserve System",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10"
+  },
+  {
+    "dataset_id": "IADC002-DGS30",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "1e2089bb19c9178e9cd95b9dcdc604999b98bcf17b0009d3f1ac6251a0e914db",
+    "source_owner": "Board of Governors of the Federal Reserve System",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS30"
+  },
+  {
+    "dataset_id": "IADC002-DFF",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "c85aa2518db619b048026e12037389014679f05b02b6ea55917a7155ee514f89",
+    "source_owner": "Board of Governors of the Federal Reserve System",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF"
+  },
+  {
+    "dataset_id": "IADC002-SOFR",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "c9772cd17e8a50e0e96384a438ba1940fac4c69597ff145ea04c805d6f08758e",
+    "source_owner": "Federal Reserve Bank of New York",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SOFR"
+  },
+  {
+    "dataset_id": "IADC002-CPIAUCSL",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "2efffad3305f5adef58e84b06f268811123534805d5d7358f633cdb7e8c1aedb",
+    "source_owner": "U.S. Bureau of Labor Statistics",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL"
+  },
+  {
+    "dataset_id": "IADC002-CPILFESL",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "1b898e8aa1f9320225d6241e7a39e93e059884b0a09cddbf20799d0f429b0e82",
+    "source_owner": "U.S. Bureau of Labor Statistics",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPILFESL"
+  },
+  {
+    "dataset_id": "IADC002-PCEPI",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "0d37320b25ed0cc6296fc8662fc04819d469bd6bcb02986a45e8a678a0d5c794",
+    "source_owner": "U.S. Bureau of Economic Analysis",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI"
+  },
+  {
+    "dataset_id": "IADC002-PCEPILFE",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "dfb91c73baa1d3dab20014699f8337b8076c8da42e77ff75cc71bcccd608b133",
+    "source_owner": "U.S. Bureau of Economic Analysis",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE"
+  },
+  {
+    "dataset_id": "IADC002-DEXUSEU",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "46b69014f1462e41e1ac13c658417f58bf32abd7875aa11161b1c7d0b4f349aa",
+    "source_owner": "Board of Governors of the Federal Reserve System",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU"
+  },
+  {
+    "dataset_id": "IADC002-DEXJPUS",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "1fe3eeb841ef4b69decfbf754b77d89ad9feab0176216879083b5349239c9854",
+    "source_owner": "Board of Governors of the Federal Reserve System",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXJPUS"
+  },
+  {
+    "dataset_id": "IADC002-DCOILWTICO",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "cbb2a637c6f9da413922df0bd7953f4d9f972f4b89a26f70a5380550c6edcf57",
+    "source_owner": "U.S. Energy Information Administration",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO"
+  },
+  {
+    "dataset_id": "IADC002-VIXCLS",
+    "license_status": "THIRD_PARTY_RIGHTS_REVIEW_REQUIRED",
+    "persistence_status": "ANALYSIS_ONLY_NOT_PERSISTED_RIGHTS_REVIEW_REQUIRED",
+    "raw_checksum_sha256": "d38d5b393cc65b841bb240d5efc0755ce5ae2c658039fb3820a47ca7e07a4d40",
+    "source_owner": "Chicago Board Options Exchange",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS"
+  },
+  {
+    "dataset_id": "IADC002-GVZCLS",
+    "license_status": "THIRD_PARTY_RIGHTS_REVIEW_REQUIRED",
+    "persistence_status": "ANALYSIS_ONLY_NOT_PERSISTED_RIGHTS_REVIEW_REQUIRED",
+    "raw_checksum_sha256": "9c453cae43da270ea6b04c0a7798e17874165612bffdbd60319afee3ecb4e454",
+    "source_owner": "Chicago Board Options Exchange",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GVZCLS"
+  },
+  {
+    "dataset_id": "IADC002-CFTC-COMEX-GOLD",
+    "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+    "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+    "raw_checksum_sha256": "c00d91b812c9fb9138c096fddbffa4f142d96464b03be5b01012cfbec306ce0f",
+    "source_owner": "U.S. Commodity Futures Trading Commission",
+    "source_url": "https://publicreporting.cftc.gov/resource/72hh-3qpy.csv?%24select=report_date_as_yyyy_mm_dd%2Cmarket_and_exchange_names%2Copen_interest_all%2Cprod_merc_positions_long%2Cprod_merc_positions_short%2Cswap_positions_long_all%2Cswap__positions_short_all%2Cm_money_positions_long_all%2Cm_money_positions_short_all%2Cother_rept_positions_long%2Cother_rept_positions_short&%24where=market_and_exchange_names%3D%27GOLD+-+COMMODITY+EXCHANGE+INC.%27&%24order=report_date_as_yyyy_mm_dd&%24limit=50000"
+  },
+  {
+    "dataset_id": "IADC002-GLD-HISTORY",
+    "license_status": "REPRODUCTION_AND_REDISTRIBUTION_PROHIBITED_WITHOUT_CONSENT",
+    "persistence_status": "LOCAL_ANALYSIS_ONLY_NOT_COPIED_TO_REPOSITORY",
+    "raw_checksum_sha256": "aa5b0fd8bc002703e44853f175c175207c4f940033df129cd95d27245be1894c",
+    "source_owner": "World Gold Trust Services / State Street",
+    "source_url": "https://api.spdrgoldshares.com/api/v1/historical-archive?product=gld&exchange=NYSE&lang=en"
+  }
+]

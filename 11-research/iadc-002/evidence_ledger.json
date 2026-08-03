@@ -1,0 +1,56 @@
+{
+  "campaign_id": "IADC-002",
+  "evidence_class": "OBSERVATIONAL_DATASET_EXPANSION",
+  "negative_and_bounded_evidence": {
+    "causal_promotions": 0,
+    "license_restricted_datasets": [
+      "IADC002-VIXCLS",
+      "IADC002-GVZCLS",
+      "IADC002-GLD-HISTORY"
+    ],
+    "open_gaps": [
+      "IADC-GAP-001A-008",
+      "IADC-GAP-001A-007"
+    ],
+    "unstable_or_confounding_sensitive_prior_observations": [
+      "IADC-OBS-001A-016",
+      "IADC-OBS-001A-011",
+      "IADC-OBS-001A-005",
+      "IADC-OBS-001A-006",
+      "IADC-OBS-001A-009",
+      "IADC-OBS-001A-012",
+      "IADC-OBS-001A-007",
+      "IADC-OBS-001A-010"
+    ]
+  },
+  "positive_evidence": {
+    "persisted_historical_datasets": [
+      "IADC002-DFII10",
+      "IADC002-T10YIE",
+      "IADC002-T5YIE",
+      "IADC002-DGS2",
+      "IADC002-DGS10",
+      "IADC002-DGS30",
+      "IADC002-DFF",
+      "IADC002-SOFR",
+      "IADC002-CPIAUCSL",
+      "IADC002-CPILFESL",
+      "IADC002-PCEPI",
+      "IADC002-PCEPILFE",
+      "IADC002-DEXUSEU",
+      "IADC002-DEXJPUS",
+      "IADC002-DCOILWTICO",
+      "IADC002-CFTC-COMEX-GOLD"
+    ],
+    "robust_prior_observations": [
+      "IADC-OBS-001A-003",
+      "IADC-OBS-001A-002",
+      "IADC-OBS-001A-004",
+      "IADC-OBS-001A-001",
+      "IADC-OBS-001A-021",
+      "IADC-OBS-001A-022"
+    ],
+    "supported_incremental_experiments": []
+  },
+  "scientific_boundary": "Covariate expansion and temporal ordering strengthen observational inference but do not establish causality."
+}

@@ -1,0 +1,22 @@
+{
+  "causal_evidence": "ABSENT",
+  "dc4_prior_observability": {
+    "average_observation_completeness": 0.1806,
+    "mechanisms_blocked": 11,
+    "unavailable_variables": 39
+  },
+  "iadc_001": {
+    "end": "2026-07-02 04:00:00+00:00",
+    "methods": [
+      "false-discovery control",
+      "early/late stability",
+      "six-fold chronological validation",
+      "moving-block bootstrap",
+      "circular-shift placebo",
+      "lag/horizon sensitivity",
+      "cross-regime consistency"
+    ],
+    "sample_rows": 6242,
+    "start": "2001-08-15 04:00:00+00:00"
+  }
+}

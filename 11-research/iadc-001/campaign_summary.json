@@ -1,0 +1,15 @@
+{
+  "blocked_research_domains": 5,
+  "campaign_id": "IADC-001",
+  "generated_at": "2026-08-03T03:32:07.301830+00:00",
+  "hypotheses_generated": 1080,
+  "hypotheses_tested": 1080,
+  "no_trading_rules_generated": true,
+  "rejected_hypotheses": 1058,
+  "sample_blocked_hypotheses": 0,
+  "scientific_conclusion": "The available archive supports observational tests of USD, nominal-yield, curve, and policy-anchor transmission. It cannot validate real-yield, inflation-surprise, FOMC-event, positioning, ETF, or causal mechanisms.",
+  "status": "EVIDENCE_EXHAUSTED_FOR_AVAILABLE_DATA",
+  "supported_associations": 22,
+  "title": "Institutional Real Yield & Monetary Policy Alpha Discovery",
+  "validated_causal_mechanisms": 0
+}

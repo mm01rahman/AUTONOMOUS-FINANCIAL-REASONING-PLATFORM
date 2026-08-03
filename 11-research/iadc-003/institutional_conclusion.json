@@ -1,0 +1,23 @@
+{
+  "bh_significant_cross_process_transition_edges_5pct": 0,
+  "bh_significant_forward_process_edges_5pct": 0,
+  "bh_significant_interactions_5pct": 2,
+  "campaign_id": "IADC-003",
+  "candidate_factors": 5,
+  "candidate_signed_processes": 10,
+  "causal_confidence": null,
+  "causal_promotions": 0,
+  "contemporaneous_comparison": "UNRESOLVED_HIGHER_MEAN_LOWER_FOLD_CONSISTENCY",
+  "future_alpha_foundation": "The multivariate process representation is not yet a stronger empirical foundation for alpha discovery; retain it as a bounded descriptive research layer.",
+  "institutional_conclusion": "Latent processes do not explain XAU/USD more consistently out of sample than the training-selected isolated-variable benchmark.",
+  "latent_more_consistent_than_isolated_contemporaneous": false,
+  "latent_more_consistent_than_isolated_forward": false,
+  "process_alpha_conclusion": "NO_PROCESS_ALPHA_EVIDENCE",
+  "rejected_factor_candidates": 1,
+  "rejected_signed_processes": 5,
+  "retained_factors": 4,
+  "retained_signed_processes": 5,
+  "status": "COMPLETE",
+  "trading_outputs": 0,
+  "validation_outcome": "MIXED_STRUCTURE_FORWARD_UNSUPPORTED"
+}

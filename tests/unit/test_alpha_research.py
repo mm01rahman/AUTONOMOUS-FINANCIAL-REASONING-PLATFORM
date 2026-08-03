@@ -13,6 +13,7 @@ from tools.alpha_research.analysis import (
     compute_regime_adaptation,
 )
 from tools.alpha_research.backtester import backtest_strategy
+from tools.alpha_research.data import load_research_frame
 from tools.alpha_research.features import FEATURE_COLUMNS, build_feature_frame
 from tools.alpha_research.models import ResearchConfig, StrategyParameters
 from tools.alpha_research.optimization import (
@@ -63,6 +64,66 @@ def test_feature_frame_contains_phase_e_columns() -> None:
     frame = _feature_frame()
     for column in FEATURE_COLUMNS:
         assert column in frame.columns
+
+
+def test_research_frame_aligns_daily_sources_across_intraday_timestamps(
+    tmp_path: Path,
+) -> None:
+    dates = pd.date_range("2024-01-02", periods=3, freq="D", tz="UTC")
+    xau_index = dates + pd.Timedelta(hours=4)
+    source_index = dates + pd.Timedelta(hours=6)
+    calendar_index = source_index.repeat(2)
+
+    datasets = {
+        "xauusd/xauusd_1d.parquet": pd.DataFrame(
+            {
+                "open": [2000.0, 2010.0, 2020.0],
+                "high": [2010.0, 2020.0, 2030.0],
+                "low": [1990.0, 2000.0, 2010.0],
+                "close": [2005.0, 2015.0, 2025.0],
+                "volume": [100.0, 110.0, 120.0],
+            },
+            index=xau_index,
+        ),
+        "dxy/dxy_1d.parquet": pd.DataFrame(
+            {"close": [102.0, 101.5, 101.0]}, index=source_index
+        ),
+        "yields/yields_daily.parquet": pd.DataFrame(
+            {
+                "3M": [5.0, 5.1, 5.2],
+                "5Y": [4.0, 4.1, 4.2],
+                "10Y": [4.2, 4.3, 4.4],
+                "30Y": [4.4, 4.5, 4.6],
+            },
+            index=source_index,
+        ),
+        "economic_calendar/economic_calendar.parquet": pd.DataFrame(
+            {
+                "actual": [5.2, 4.2, 5.3, 4.3, 5.4, 4.4],
+                "previous": [5.1, 4.1, 5.2, 4.2, 5.3, 4.3],
+                "event": ["Fed Funds Rate Proxy (13W T-Bill)", "10Y Treasury Yield"] * 3,
+            },
+            index=calendar_index,
+        ),
+        "geopolitical/geopolitical_events.parquet": pd.DataFrame(
+            {
+                "end": pd.Series(dtype="datetime64[ns, UTC]"),
+                "severity": pd.Series(dtype="object"),
+            },
+            index=pd.DatetimeIndex([], tz="UTC"),
+        ),
+    }
+    for relative_path, dataset in datasets.items():
+        path = tmp_path / relative_path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        dataset.to_parquet(path)
+
+    frame = load_research_frame(tmp_path)
+
+    assert frame["yield_10y"].tolist() == [4.2, 4.3, 4.4]
+    assert frame["fed_actual"].tolist() == [5.2, 5.3, 5.4]
+    assert frame["fed_previous"].tolist() == [5.1, 5.2, 5.3]
+    assert not frame.isna().any().any()
 
 
 def test_all_strategies_generate_decision_frames() -> None:

@@ -1,0 +1,83 @@
+[
+  {
+    "correlation": -0.013133,
+    "decision": "EXPLORATORY_ONLY",
+    "horizon_days": 1,
+    "interaction": "usd_x_nominal_yield",
+    "p_value_unadjusted": 0.2995864909,
+    "reason": "Interaction direction was not preregistered; retain for replication only.",
+    "sample_size": 6241
+  },
+  {
+    "correlation": -0.046425,
+    "decision": "EXPLORATORY_ONLY",
+    "horizon_days": 5,
+    "interaction": "usd_x_nominal_yield",
+    "p_value_unadjusted": 0.0002443021,
+    "reason": "Interaction direction was not preregistered; retain for replication only.",
+    "sample_size": 6237
+  },
+  {
+    "correlation": -0.005748,
+    "decision": "EXPLORATORY_ONLY",
+    "horizon_days": 20,
+    "interaction": "usd_x_nominal_yield",
+    "p_value_unadjusted": 0.6503526761,
+    "reason": "Interaction direction was not preregistered; retain for replication only.",
+    "sample_size": 6222
+  },
+  {
+    "correlation": -0.050065,
+    "decision": "EXPLORATORY_ONLY",
+    "horizon_days": 1,
+    "interaction": "usd_x_policy_anchor",
+    "p_value_unadjusted": 7.77826e-05,
+    "reason": "Interaction direction was not preregistered; retain for replication only.",
+    "sample_size": 6221
+  },
+  {
+    "correlation": -0.054312,
+    "decision": "EXPLORATORY_ONLY",
+    "horizon_days": 5,
+    "interaction": "usd_x_policy_anchor",
+    "p_value_unadjusted": 1.82265e-05,
+    "reason": "Interaction direction was not preregistered; retain for replication only.",
+    "sample_size": 6217
+  },
+  {
+    "correlation": -0.030568,
+    "decision": "EXPLORATORY_ONLY",
+    "horizon_days": 20,
+    "interaction": "usd_x_policy_anchor",
+    "p_value_unadjusted": 0.0160637182,
+    "reason": "Interaction direction was not preregistered; retain for replication only.",
+    "sample_size": 6202
+  },
+  {
+    "correlation": 0.024478,
+    "decision": "EXPLORATORY_ONLY",
+    "horizon_days": 1,
+    "interaction": "curve_x_policy_anchor",
+    "p_value_unadjusted": 0.0535348282,
+    "reason": "Interaction direction was not preregistered; retain for replication only.",
+    "sample_size": 6221
+  },
+  {
+    "correlation": 0.021696,
+    "decision": "EXPLORATORY_ONLY",
+    "horizon_days": 5,
+    "interaction": "curve_x_policy_anchor",
+    "p_value_unadjusted": 0.0871675023,
+    "reason": "Interaction direction was not preregistered; retain for replication only.",
+    "sample_size": 6217
+  },
+  {
+    "correlation": 0.022936,
+    "decision": "EXPLORATORY_ONLY",
+    "horizon_days": 20,
+    "interaction": "curve_x_policy_anchor",
+    "p_value_unadjusted": 0.0708899726,
+    "reason": "Interaction direction was not preregistered; retain for replication only.",
+    "sample_size": 6202
+  }
+]

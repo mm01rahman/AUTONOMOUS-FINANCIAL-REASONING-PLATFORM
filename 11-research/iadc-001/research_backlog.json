@@ -1,0 +1,32 @@
+[
+  {
+    "priority": 1,
+    "reason": "BLOCKED_BY_DATA",
+    "required_evidence": "historical TIPS real-yield curve",
+    "research_domain": "real yields"
+  },
+  {
+    "priority": 2,
+    "reason": "BLOCKED_BY_DATA",
+    "required_evidence": "CPI/Core CPI/PCE releases, consensus, and vintages",
+    "research_domain": "inflation surprise"
+  },
+  {
+    "priority": 3,
+    "reason": "BLOCKED_BY_DATA",
+    "required_evidence": "meeting/statement timestamps and expectation surprises",
+    "research_domain": "FOMC event studies"
+  },
+  {
+    "priority": 4,
+    "reason": "BLOCKED_BY_DATA",
+    "required_evidence": "multi-cycle CFTC and ETF holdings histories",
+    "research_domain": "institutional positioning and ETF transmission"
+  },
+  {
+    "priority": 5,
+    "reason": "NOT_ESTABLISHED",
+    "required_evidence": "valid instruments, natural experiments, or identified structural model",
+    "research_domain": "causal identification"
+  }
+]

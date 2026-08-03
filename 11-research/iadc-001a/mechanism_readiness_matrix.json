@@ -1,0 +1,113 @@
+[
+  {
+    "causal_confidence": null,
+    "data_readiness": "LOW",
+    "knowledge_state": "REPEATABLE_OBSERVATION",
+    "mechanism": "curve_expectations",
+    "observation_count": 2,
+    "observational_confidence": 0.649255,
+    "required_next_evidence": "independent replication and identified causal design",
+    "scientific_maturity": 3
+  },
+  {
+    "causal_confidence": null,
+    "data_readiness": "PARTIAL",
+    "knowledge_state": "REPEATABLE_OBSERVATION",
+    "mechanism": "nominal_yield_transmission",
+    "observation_count": 16,
+    "observational_confidence": 0.66853,
+    "required_next_evidence": "independent replication and identified causal design",
+    "scientific_maturity": 3
+  },
+  {
+    "causal_confidence": null,
+    "data_readiness": "LOW",
+    "knowledge_state": "UNRESOLVED_OR_REJECTED",
+    "mechanism": "policy_anchor",
+    "observation_count": 0,
+    "observational_confidence": 0.0,
+    "required_next_evidence": "direct historical expectation or flow data",
+    "scientific_maturity": 1
+  },
+  {
+    "causal_confidence": null,
+    "data_readiness": "PARTIAL",
+    "knowledge_state": "REPEATABLE_OBSERVATION",
+    "mechanism": "usd_transmission",
+    "observation_count": 4,
+    "observational_confidence": 0.70843,
+    "required_next_evidence": "independent replication and identified causal design",
+    "scientific_maturity": 3
+  },
+  {
+    "causal_confidence": null,
+    "data_readiness": "LOW",
+    "knowledge_state": "PRIOR_LIBRARY_CANDIDATE_NOT_REVALIDATED_IN_IADC_001A",
+    "mechanism": "commodity_cross_curve_divergence",
+    "observation_count": 0,
+    "observational_confidence": 0.355,
+    "required_next_evidence": [
+      "gold",
+      "oil",
+      "industrial_metals",
+      "usd"
+    ],
+    "scientific_maturity": 1
+  },
+  {
+    "causal_confidence": null,
+    "data_readiness": "LOW",
+    "knowledge_state": "PRIOR_LIBRARY_CANDIDATE_NOT_REVALIDATED_IN_IADC_001A",
+    "mechanism": "etf_flow_accumulation_pressure",
+    "observation_count": 0,
+    "observational_confidence": 0.36,
+    "required_next_evidence": [
+      "etf_flows",
+      "usd",
+      "liquidity"
+    ],
+    "scientific_maturity": 1
+  },
+  {
+    "causal_confidence": null,
+    "data_readiness": "LOW",
+    "knowledge_state": "PRIOR_LIBRARY_CANDIDATE_NOT_REVALIDATED_IN_IADC_001A",
+    "mechanism": "policy_expectation_repricing",
+    "observation_count": 0,
+    "observational_confidence": 0.355,
+    "required_next_evidence": [
+      "front_end_rates",
+      "policy_expectations",
+      "usd"
+    ],
+    "scientific_maturity": 1
+  },
+  {
+    "causal_confidence": null,
+    "data_readiness": "LOW",
+    "knowledge_state": "PRIOR_LIBRARY_CANDIDATE_NOT_REVALIDATED_IN_IADC_001A",
+    "mechanism": "real_yield_dislocation_reversion",
+    "observation_count": 0,
+    "observational_confidence": 0.36,
+    "required_next_evidence": [
+      "real_yields",
+      "usd",
+      "inflation_expectations"
+    ],
+    "scientific_maturity": 1
+  },
+  {
+    "causal_confidence": null,
+    "data_readiness": "LOW",
+    "knowledge_state": "PRIOR_LIBRARY_CANDIDATE_NOT_REVALIDATED_IN_IADC_001A",
+    "mechanism": "safe_haven_migration",
+    "observation_count": 0,
+    "observational_confidence": 0.3595,
+    "required_next_evidence": [
+      "USD",
+      "equity_volatility",
+      "rates"
+    ],
+    "scientific_maturity": 1
+  }
+]

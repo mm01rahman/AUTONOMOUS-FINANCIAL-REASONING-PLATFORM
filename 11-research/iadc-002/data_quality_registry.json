@@ -1,0 +1,211 @@
+[
+  {
+    "calendar_coverage_ratio": 0.684938,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-DFII10",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 5898,
+    "research_depth": true,
+    "start_timestamp": "2003-01-02T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.684974,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-T10YIE",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-31T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 5899,
+    "research_depth": true,
+    "start_timestamp": "2003-01-02T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.684974,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-T5YIE",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-31T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 5899,
+    "research_depth": true,
+    "start_timestamp": "2003-01-02T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.684259,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-DGS2",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 12537,
+    "research_depth": true,
+    "start_timestamp": "1976-06-01T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.683838,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-DGS10",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 16129,
+    "research_depth": true,
+    "start_timestamp": "1962-01-02T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.684216,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-DGS30",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 12359,
+    "research_depth": true,
+    "start_timestamp": "1977-02-15T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 1.0,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-DFF",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 26328,
+    "research_depth": true,
+    "start_timestamp": "1954-07-01T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.683657,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-SOFR",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 2079,
+    "research_depth": true,
+    "start_timestamp": "2018-04-03T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.986542,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-CPIAUCSL",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-06-01T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 953,
+    "research_depth": true,
+    "start_timestamp": "1947-01-01T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.985799,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-CPILFESL",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-06-01T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 833,
+    "research_depth": true,
+    "start_timestamp": "1957-01-01T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.987805,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-PCEPI",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-06-01T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 810,
+    "research_depth": true,
+    "start_timestamp": "1959-01-01T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.987805,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-PCEPILFE",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-06-01T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 810,
+    "research_depth": true,
+    "start_timestamp": "1959-01-01T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.686705,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-DEXUSEU",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-24T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 6911,
+    "research_depth": true,
+    "start_timestamp": "1999-01-04T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.686314,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-DEXJPUS",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-24T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 13926,
+    "research_depth": true,
+    "start_timestamp": "1971-01-04T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.689073,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-DCOILWTICO",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-27T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 10210,
+    "research_depth": true,
+    "start_timestamp": "1986-01-02T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.691743,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-VIXCLS",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 9241,
+    "research_depth": true,
+    "start_timestamp": "1990-01-02T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.689083,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-GVZCLS",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 4570,
+    "research_depth": true,
+    "start_timestamp": "2008-06-03T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 1.0,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-CFTC-COMEX-GOLD",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-28T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 1051,
+    "research_depth": true,
+    "start_timestamp": "2006-06-13T00:00:00+00:00"
+  },
+  {
+    "calendar_coverage_ratio": 0.688494,
+    "completeness": 1.0,
+    "dataset_id": "IADC002-GLD-HISTORY",
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-31T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 5457,
+    "research_depth": true,
+    "start_timestamp": "2004-11-18T00:00:00+00:00"
+  }
+]

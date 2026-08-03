@@ -1,0 +1,32 @@
+attributes:
+  campaign_id: IADC-001A
+  causal_claims: 0
+  conditional_observations: 8
+  datasets_evaluated: 20
+  failed_hypotheses_classified: 1058
+  generated_at: '2026-08-03T03:39:57.212828+00:00'
+  institutional_conclusion: AFRP has repeatable but weak-to-moderate observational
+    knowledge concentrated in USD, nominal-yield, and curve relationships. Scientific
+    maturity is capped by dependent variants, absent multi-provider replication, and
+    major expectation, flow, positioning, event, and causal-identification gaps.
+  observation_clusters: 5
+  repeatable_observations: 14
+  research_gaps_ranked: 8
+  retained_associations_reanalyzed: 22
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\autonomous-financial-reasoning-platform\11-research\iadc-001a\ikros_ingestion.json
+  status: COMPLETE
+  summary: 22 retained observations and 1058 failures re-evaluated.
+  title: Institutional Observational Alpha Discovery & Research Gap Analysis
+  trading_rules_generated: 0
+confidence: 0.96
+created_at: '2026-08-03T03:40:30.492221+00:00'
+ikros_id: IKROS-EVIDENCE-20260803-0902
+label: IADC-001A observational evidence atlas
+node_id: IKROS-EVIDENCE-20260803-0902
+node_type: EVIDENCE
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T03:40:30.492221+00:00'
+valid_to: null
+wp_refs: []

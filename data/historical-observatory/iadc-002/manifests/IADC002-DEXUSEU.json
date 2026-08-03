@@ -1,0 +1,31 @@
+{
+  "cadence": "daily",
+  "dataset_id": "IADC002-DEXUSEU",
+  "domain": "cross_asset_fx",
+  "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+  "limitations": [
+    "Observational data; no identification design or causal warrant."
+  ],
+  "name": "U.S. Dollar per Euro",
+  "normalized_checksum_sha256": "9d8866ba056f83260923c05769412f4dc80f1743794a93d6d2a752ae73e87e61",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-DEXUSEU.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "FRED",
+  "quality": {
+    "calendar_coverage_ratio": 0.686705,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-24T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 6911,
+    "research_depth": true,
+    "start_timestamp": "1999-01-04T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "46b69014f1462e41e1ac13c658417f58bf32abd7875aa11161b1c7d0b4f349aa",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-DEXUSEU.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "Board of Governors of the Federal Reserve System",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU",
+  "timezone": "UTC",
+  "variable": "eurusd"
+}

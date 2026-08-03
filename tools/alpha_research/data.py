@@ -29,6 +29,17 @@ def _severity_to_score(severity: str) -> float:
     return mapping.get(severity.upper(), 0.0)
 
 
+def _align_daily_series(series: pd.Series, target_index: pd.DatetimeIndex) -> pd.Series:
+    """Align observations by UTC calendar date while preserving the target timestamps."""
+    source = series.copy()
+    source.index = pd.DatetimeIndex(source.index).tz_convert("UTC").normalize()
+    source = source.groupby(level=0).last()
+    target_dates = target_index.tz_convert("UTC").normalize()
+    aligned = source.reindex(target_dates).ffill().bfill()
+    aligned.index = target_index
+    return aligned
+
+
 def load_research_frame(dataset_root: Path | None = None) -> pd.DataFrame:
     """Load and align all official local Phase E datasets."""
     root = dataset_root or _DATASET_ROOT
@@ -39,13 +50,20 @@ def load_research_frame(dataset_root: Path | None = None) -> pd.DataFrame:
     geopolitical = _load_parquet(root / "geopolitical" / "geopolitical_events.parquet")
 
     frame = xau[["open", "high", "low", "close", "volume"]].copy()
-    frame["dxy_close"] = dxy["close"].reindex(frame.index).ffill().bfill()
-    frame["yield_3m"] = yields["3M"].reindex(frame.index).ffill().bfill()
-    frame["yield_5y"] = yields["5Y"].reindex(frame.index).ffill().bfill()
-    frame["yield_10y"] = yields["10Y"].reindex(frame.index).ffill().bfill()
-    frame["yield_30y"] = yields["30Y"].reindex(frame.index).ffill().bfill()
-    frame["fed_actual"] = calendar["actual"].reindex(frame.index).ffill().bfill()
-    frame["fed_previous"] = calendar["previous"].reindex(frame.index).ffill().bfill()
+    target_index = pd.DatetimeIndex(frame.index)
+    frame["dxy_close"] = _align_daily_series(dxy["close"], target_index)
+    frame["yield_3m"] = _align_daily_series(yields["3M"], target_index)
+    frame["yield_5y"] = _align_daily_series(yields["5Y"], target_index)
+    frame["yield_10y"] = _align_daily_series(yields["10Y"], target_index)
+    frame["yield_30y"] = _align_daily_series(yields["30Y"], target_index)
+
+    policy_rows = calendar.loc[
+        calendar["event"].astype(str).str.contains("Fed Funds Rate Proxy", case=False, na=False)
+    ]
+    if policy_rows.empty:
+        raise ValueError("economic calendar has no Fed Funds Rate Proxy observations")
+    frame["fed_actual"] = _align_daily_series(policy_rows["actual"], target_index)
+    frame["fed_previous"] = _align_daily_series(policy_rows["previous"], target_index)
     frame["geo_active"] = 0.0
     frame["geo_severity"] = 0.0
     frame["geo_event_count"] = 0.0

@@ -1,0 +1,74 @@
+[
+  {
+    "best_absolute_correlation": 0.133224,
+    "best_hypothesis": "IADC-HYP-0632",
+    "best_q_value": 9.18e-07,
+    "classification": "REPLICABLE_ASSOCIATION",
+    "family": "nominal_yield_transmission",
+    "feature": "yield_10y_change_5",
+    "supported_associations": 9
+  },
+  {
+    "best_absolute_correlation": 0.088288,
+    "best_hypothesis": "IADC-HYP-0006",
+    "best_q_value": 0.0029925467,
+    "classification": "REPLICABLE_ASSOCIATION",
+    "family": "usd_transmission",
+    "feature": "dxy_return_1",
+    "supported_associations": 4
+  },
+  {
+    "best_absolute_correlation": 0.140562,
+    "best_hypothesis": "IADC-HYP-0531",
+    "best_q_value": 0.0079726815,
+    "classification": "REPLICABLE_ASSOCIATION",
+    "family": "nominal_yield_transmission",
+    "feature": "yield_10y_change_1",
+    "supported_associations": 4
+  },
+  {
+    "best_absolute_correlation": 0.126021,
+    "best_hypothesis": "IADC-HYP-0804",
+    "best_q_value": 5.5944e-06,
+    "classification": "REPLICABLE_ASSOCIATION",
+    "family": "nominal_yield_transmission",
+    "feature": "yield_10y_change_20",
+    "supported_associations": 3
+  },
+  {
+    "best_absolute_correlation": 0.260535,
+    "best_hypothesis": "IADC-HYP-0936",
+    "best_q_value": 0.0,
+    "classification": "REPLICABLE_ASSOCIATION",
+    "family": "curve_expectations",
+    "feature": "curve_change_5",
+    "supported_associations": 2
+  },
+  {
+    "best_absolute_correlation": 0.156463,
+    "best_hypothesis": "IADC-HYP-1020",
+    "best_q_value": 0.0,
+    "classification": "UNRESOLVED_OR_REJECTED",
+    "family": "policy_anchor",
+    "feature": "policy_proxy_change_20",
+    "supported_associations": 0
+  },
+  {
+    "best_absolute_correlation": 0.252156,
+    "best_hypothesis": "IADC-HYP-0324",
+    "best_q_value": 7.2e-08,
+    "classification": "UNRESOLVED_OR_REJECTED",
+    "family": "usd_transmission",
+    "feature": "dxy_return_20",
+    "supported_associations": 0
+  },
+  {
+    "best_absolute_correlation": 0.097764,
+    "best_hypothesis": "IADC-HYP-0158",
+    "best_q_value": 0.000942408,
+    "classification": "UNRESOLVED_OR_REJECTED",
+    "family": "usd_transmission",
+    "feature": "dxy_return_5",
+    "supported_associations": 0
+  }
+]

@@ -1,0 +1,125 @@
+[
+  {
+    "affected_failure_classes": [
+      "OBSERVABILITY_INSUFFICIENT",
+      "TEMPORAL_COVERAGE_INSUFFICIENT",
+      "COMMON_MACRO_DRIVER"
+    ],
+    "affected_observation_ids": [
+      "IADC-OBS-001A-016",
+      "IADC-OBS-001A-017",
+      "IADC-OBS-001A-014",
+      "IADC-OBS-001A-008",
+      "IADC-OBS-001A-015",
+      "IADC-OBS-001A-011",
+      "IADC-OBS-001A-013",
+      "IADC-OBS-001A-005",
+      "IADC-OBS-001A-021",
+      "IADC-OBS-001A-006",
+      "IADC-OBS-001A-009",
+      "IADC-OBS-001A-012",
+      "IADC-OBS-001A-022",
+      "IADC-OBS-001A-018",
+      "IADC-OBS-001A-020",
+      "IADC-OBS-001A-007",
+      "IADC-OBS-001A-019",
+      "IADC-OBS-001A-010"
+    ],
+    "dataset_id": "IADC002-DFII10",
+    "reopened_mechanisms": [
+      "nominal_yield_transmission",
+      "curve_expectations",
+      "real_yield_transmission"
+    ]
+  },
+  {
+    "affected_failure_classes": [
+      "OBSERVABILITY_INSUFFICIENT",
+      "COMMON_MACRO_DRIVER"
+    ],
+    "affected_observation_ids": [
+      "IADC-OBS-001A-016",
+      "IADC-OBS-001A-017",
+      "IADC-OBS-001A-014",
+      "IADC-OBS-001A-008",
+      "IADC-OBS-001A-015",
+      "IADC-OBS-001A-011",
+      "IADC-OBS-001A-013",
+      "IADC-OBS-001A-005",
+      "IADC-OBS-001A-021",
+      "IADC-OBS-001A-006",
+      "IADC-OBS-001A-009",
+      "IADC-OBS-001A-012",
+      "IADC-OBS-001A-022",
+      "IADC-OBS-001A-018",
+      "IADC-OBS-001A-020",
+      "IADC-OBS-001A-007",
+      "IADC-OBS-001A-019",
+      "IADC-OBS-001A-010"
+    ],
+    "dataset_id": "IADC002-T10YIE",
+    "reopened_mechanisms": [
+      "inflation_expectations",
+      "nominal_yield_decomposition"
+    ]
+  },
+  {
+    "affected_failure_classes": [
+      "OBSERVABILITY_INSUFFICIENT",
+      "TEMPORAL_COVERAGE_INSUFFICIENT"
+    ],
+    "affected_observation_ids": [],
+    "dataset_id": "IADC002-CFTC-COMEX-GOLD",
+    "reopened_mechanisms": [
+      "institutional_positioning",
+      "participant_flow"
+    ]
+  },
+  {
+    "affected_failure_classes": [
+      "OBSERVABILITY_INSUFFICIENT",
+      "TEMPORAL_COVERAGE_INSUFFICIENT"
+    ],
+    "affected_observation_ids": [],
+    "dataset_id": "IADC002-GLD-HISTORY",
+    "reopened_mechanisms": [
+      "etf_flow_propagation"
+    ]
+  },
+  {
+    "affected_failure_classes": [
+      "COMMON_MACRO_DRIVER",
+      "TEMPORAL_INSTABILITY"
+    ],
+    "affected_observation_ids": [
+      "IADC-OBS-001A-016",
+      "IADC-OBS-001A-017",
+      "IADC-OBS-001A-014",
+      "IADC-OBS-001A-008",
+      "IADC-OBS-001A-003",
+      "IADC-OBS-001A-002",
+      "IADC-OBS-001A-004",
+      "IADC-OBS-001A-015",
+      "IADC-OBS-001A-001",
+      "IADC-OBS-001A-011",
+      "IADC-OBS-001A-013",
+      "IADC-OBS-001A-005",
+      "IADC-OBS-001A-021",
+      "IADC-OBS-001A-006",
+      "IADC-OBS-001A-009",
+      "IADC-OBS-001A-012",
+      "IADC-OBS-001A-022",
+      "IADC-OBS-001A-018",
+      "IADC-OBS-001A-020",
+      "IADC-OBS-001A-007",
+      "IADC-OBS-001A-019",
+      "IADC-OBS-001A-010"
+    ],
+    "dataset_id": "IADC002-CROSS-ASSET-BUNDLE",
+    "reopened_mechanisms": [
+      "safe_haven_migration",
+      "usd_cross_validation",
+      "commodity_inflation_channel"
+    ]
+  }
+]

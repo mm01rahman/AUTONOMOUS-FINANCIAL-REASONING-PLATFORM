@@ -1,0 +1,17 @@
+attributes:
+  analysis_only_datasets: 3
+  persisted_datasets: 16
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: 11-research\iadc-002\ikros_ingestion.json
+  summary: Permanent registry of acquired, analysis-only, and blocked historical sources.
+confidence: 0.97
+created_at: '2026-08-03T03:55:50.218191+00:00'
+ikros_id: IKROS-KO-20260803-0903
+label: IADC-002 dataset and provenance registry
+node_id: IKROS-KO-20260803-0903
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T03:55:50.218191+00:00'
+valid_to: null
+wp_refs: []

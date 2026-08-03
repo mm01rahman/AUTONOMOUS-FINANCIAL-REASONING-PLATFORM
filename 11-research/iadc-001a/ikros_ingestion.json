@@ -1,0 +1,144 @@
+{
+  "ikros_objects": [
+    {
+      "attributes": {
+        "campaign_id": "IADC-001A",
+        "causal_claims": 0,
+        "conditional_observations": 8,
+        "datasets_evaluated": 20,
+        "failed_hypotheses_classified": 1058,
+        "generated_at": "2026-08-03T03:39:57.212828+00:00",
+        "institutional_conclusion": "AFRP has repeatable but weak-to-moderate observational knowledge concentrated in USD, nominal-yield, and curve relationships. Scientific maturity is capped by dependent variants, absent multi-provider replication, and major expectation, flow, positioning, event, and causal-identification gaps.",
+        "observation_clusters": 5,
+        "repeatable_observations": 14,
+        "research_gaps_ranked": 8,
+        "retained_associations_reanalyzed": 22,
+        "status": "COMPLETE",
+        "title": "Institutional Observational Alpha Discovery & Research Gap Analysis",
+        "trading_rules_generated": 0
+      },
+      "confidence": 0.96,
+      "evidence_refs": [
+        "11-research/iadc-001a/evidence_quality_atlas.json"
+      ],
+      "identifier": "IKROS-EVIDENCE-20260803-0902",
+      "lifecycle_state": "ACTIVE",
+      "specification_refs": [
+        "SPEC-060"
+      ],
+      "summary": "22 retained observations and 1058 failures re-evaluated.",
+      "title": "IADC-001A observational evidence atlas",
+      "type": "Evidence"
+    },
+    {
+      "attributes": {
+        "clusters": 5,
+        "observations": 22
+      },
+      "confidence": 0.79,
+      "evidence_refs": [
+        "11-research/iadc-001a/observational_alpha_registry.json"
+      ],
+      "identifier": "IKROS-KO-20260803-0901",
+      "lifecycle_state": "ACTIVE",
+      "source_ids": [
+        "IKROS-EVIDENCE-20260803-0902"
+      ],
+      "specification_refs": [
+        "SPEC-060"
+      ],
+      "summary": "Permanent registry of repeatable and conditional observational relationships.",
+      "title": "IADC-001A observational alpha registry",
+      "type": "KnowledgeObject"
+    },
+    {
+      "attributes": {
+        "gaps": 8,
+        "top_gap": {
+          "affected_features": [
+            "real_yield_change",
+            "inflation_expectation_change"
+          ],
+          "affected_mechanisms": [
+            "nominal_yield_transmission",
+            "curve_expectations"
+          ],
+          "affected_regimes": [
+            "policy_transition",
+            "market_stress",
+            "gold_bull",
+            "gold_bear"
+          ],
+          "cost_score": 1,
+          "estimated_cost": "LOW",
+          "expected_confidence_increase": 0.298,
+          "expected_information_gain": 0.9,
+          "failure_evidence": {
+            "EVIDENCE_SUPPORTS_NULL_OR_NEGLIGIBLE_EFFECT": 513,
+            "MULTIPLE_TESTING_OR_EFFECT_GATE_FAILURE": 128,
+            "OBSERVABILITY_INSUFFICIENT": 135,
+            "REPEATABILITY_OR_PLACEBO_FAILURE": 27,
+            "TEMPORAL_COVERAGE_INSUFFICIENT": 206,
+            "TEMPORAL_INSTABILITY": 49
+          },
+          "gap_id": "IADC-GAP-001A-001",
+          "potential_providers": [
+            "FRED"
+          ],
+          "priority": 1,
+          "priority_score": 90.0,
+          "recommended_dataset": "FRED DGS10, DFII10, T10YIE",
+          "scientific_importance": "HIGH",
+          "title": "Historical real yields and breakevens"
+        }
+      },
+      "confidence": 0.9,
+      "evidence_refs": [
+        "11-research/iadc-001a/institutional_research_gap_registry.json"
+      ],
+      "identifier": "IKROS-KO-20260803-0902",
+      "lifecycle_state": "ACTIVE",
+      "source_ids": [
+        "IKROS-EVIDENCE-20260803-0902"
+      ],
+      "specification_refs": [
+        "SPEC-060"
+      ],
+      "summary": "Ranked missing observations by expected scientific return.",
+      "title": "IADC-001A institutional research gap registry",
+      "type": "KnowledgeObject"
+    },
+    {
+      "attributes": {
+        "causal_claims": 0,
+        "decision": "OBSERVATIONAL_MAP_COMPLETE",
+        "trading_rules": 0
+      },
+      "confidence": 0.79,
+      "evidence_refs": [
+        "11-research/iadc-001a/EXECUTIVE_SUMMARY.md",
+        "11-research/iadc-001a/KNOWLEDGE_CONSOLIDATION_REPORT.md"
+      ],
+      "identifier": "IKROS-CONCL-20260803-0902",
+      "lifecycle_state": "PUBLISHED",
+      "source_ids": [
+        "IKROS-EVIDENCE-20260803-0902",
+        "IKROS-KO-20260803-0901",
+        "IKROS-KO-20260803-0902"
+      ],
+      "specification_refs": [
+        "SPEC-060"
+      ],
+      "summary": "AFRP has repeatable but weak-to-moderate observational knowledge concentrated in USD, nominal-yield, and curve relationships. Scientific maturity is capped by dependent variants, absent multi-provider replication, and major expectation, flow, positioning, event, and causal-identification gaps.",
+      "title": "IADC-001A institutional evidence-quality conclusion",
+      "type": "ResearchConclusion"
+    }
+  ],
+  "metadata": {
+    "source_kind": "INTERNAL_RESEARCH_REPORT",
+    "specification_refs": [
+      "SPEC-060"
+    ],
+    "title": "IADC-001A Observational Alpha and Research Gap Map"
+  }
+}

@@ -1,0 +1,17 @@
+attributes:
+  clusters: 5
+  observations: 22
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\autonomous-financial-reasoning-platform\11-research\iadc-001a\ikros_ingestion.json
+  summary: Permanent registry of repeatable and conditional observational relationships.
+confidence: 0.79
+created_at: '2026-08-03T03:40:30.492221+00:00'
+ikros_id: IKROS-KO-20260803-0901
+label: IADC-001A observational alpha registry
+node_id: IKROS-KO-20260803-0901
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T03:40:30.492221+00:00'
+valid_to: null
+wp_refs: []

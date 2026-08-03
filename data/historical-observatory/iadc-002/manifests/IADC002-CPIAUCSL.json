@@ -1,0 +1,31 @@
+{
+  "cadence": "monthly",
+  "dataset_id": "IADC002-CPIAUCSL",
+  "domain": "inflation",
+  "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+  "limitations": [
+    "Observational data; no identification design or causal warrant."
+  ],
+  "name": "Consumer Price Index",
+  "normalized_checksum_sha256": "669a7282c16f5b0737e96d23b435ce66f544ae0ab9f96d8d8cff57398872528c",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-CPIAUCSL.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "FRED",
+  "quality": {
+    "calendar_coverage_ratio": 0.986542,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-06-01T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 953,
+    "research_depth": true,
+    "start_timestamp": "1947-01-01T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "2efffad3305f5adef58e84b06f268811123534805d5d7358f633cdb7e8c1aedb",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-CPIAUCSL.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "U.S. Bureau of Labor Statistics",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL",
+  "timezone": "UTC",
+  "variable": "cpi"
+}

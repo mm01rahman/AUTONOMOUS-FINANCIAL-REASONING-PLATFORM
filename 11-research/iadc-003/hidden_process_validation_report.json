@@ -1,0 +1,506 @@
+{
+  "aggregate": {
+    "bh_significant_cross_process_transition_edges_5pct": 0,
+    "bh_significant_interactions_5pct": 2,
+    "bh_significant_process_edges_5pct": 0,
+    "contemporaneous_comparison": "UNRESOLVED_HIGHER_MEAN_LOWER_FOLD_CONSISTENCY",
+    "contemporaneous_factor": {
+      "mean_direction_accuracy": 0.51644305,
+      "mean_oos_correlation": 0.1296719,
+      "mean_oos_r2": 0.01139999,
+      "positive_r2_folds": 1
+    },
+    "contemporaneous_isolated": {
+      "mean_direction_accuracy": 0.51074417,
+      "mean_oos_correlation": 0.06487016,
+      "mean_oos_r2": 0.00490654,
+      "positive_r2_folds": 2
+    },
+    "factor_more_consistent_contemporaneous": false,
+    "factor_more_consistent_forward": false,
+    "forward_factor": {
+      "mean_direction_accuracy": 0.52001611,
+      "mean_oos_correlation": -0.02377262,
+      "mean_oos_r2": -0.01069032,
+      "positive_r2_folds": 0
+    },
+    "forward_isolated": {
+      "mean_direction_accuracy": 0.54505956,
+      "mean_oos_correlation": 0.00019071,
+      "mean_oos_r2": -0.00751485,
+      "positive_r2_folds": 0
+    }
+  },
+  "campaign_id": "IADC-003",
+  "edge_inference": "retrospective descriptive subsequent-outcome association only; full-sample process episodes are not OOS/predictive states",
+  "episode_sensitivity_counts": {
+    "threshold_1.0_minimum_2": {
+      "IADC003-P01-NEG": 241,
+      "IADC003-P01-POS": 193,
+      "IADC003-P02-NEG": 147,
+      "IADC003-P02-POS": 129,
+      "IADC003-P03-NEG": 124,
+      "IADC003-P03-POS": 121,
+      "IADC003-P04-NEG": 98,
+      "IADC003-P04-POS": 127,
+      "IADC003-P05-NEG": 98,
+      "IADC003-P05-POS": 136
+    },
+    "threshold_1.25_minimum_3": {
+      "IADC003-P01-NEG": 86,
+      "IADC003-P01-POS": 75,
+      "IADC003-P02-NEG": 18,
+      "IADC003-P02-POS": 15,
+      "IADC003-P03-NEG": 15,
+      "IADC003-P03-POS": 7,
+      "IADC003-P04-NEG": 6,
+      "IADC003-P04-POS": 15,
+      "IADC003-P05-NEG": 11,
+      "IADC003-P05-POS": 10
+    },
+    "threshold_1.5_minimum_5": {
+      "IADC003-P01-NEG": 19,
+      "IADC003-P01-POS": 13,
+      "IADC003-P02-NEG": 1,
+      "IADC003-P02-POS": 0,
+      "IADC003-P03-NEG": 0,
+      "IADC003-P03-POS": 0,
+      "IADC003-P04-NEG": 0,
+      "IADC003-P04-POS": 0,
+      "IADC003-P05-NEG": 1,
+      "IADC003-P05-POS": 1
+    }
+  },
+  "leakage_control": "5-session label purge plus 5-session embargo; scaling, parallel analysis, PCA, rotation, and isolated benchmark selection are training-only",
+  "loading_stability": {
+    "design": "four leave-one-chronological-block-out training models; exact optimal assignment; train-only anchor",
+    "factors": {
+      "F01": {
+        "adjacent_absolute_tucker_congruences": [
+          0.99797397,
+          0.99946821,
+          0.99953975
+        ],
+        "anchor_train_only_component": 1,
+        "mean_congruence": 0.99899398,
+        "minimum_congruence": 0.99797397,
+        "rejection_reasons": [],
+        "structurally_stable": true
+      },
+      "F02": {
+        "adjacent_absolute_tucker_congruences": [
+          0.94052852,
+          0.99410202,
+          0.83624092
+        ],
+        "anchor_train_only_component": 2,
+        "mean_congruence": 0.92362382,
+        "minimum_congruence": 0.83624092,
+        "rejection_reasons": [
+          "minimum adjacent Tucker congruence below 0.85"
+        ],
+        "structurally_stable": false
+      },
+      "F03": {
+        "adjacent_absolute_tucker_congruences": [
+          0.97464808,
+          0.99229824,
+          0.97970426
+        ],
+        "anchor_train_only_component": 4,
+        "mean_congruence": 0.98221686,
+        "minimum_congruence": 0.97464808,
+        "rejection_reasons": [],
+        "structurally_stable": true
+      },
+      "F04": {
+        "adjacent_absolute_tucker_congruences": [
+          0.99604096,
+          0.99818497,
+          0.99515786
+        ],
+        "anchor_train_only_component": 3,
+        "mean_congruence": 0.99646126,
+        "minimum_congruence": 0.99515786,
+        "rejection_reasons": [],
+        "structurally_stable": true
+      },
+      "F05": {
+        "adjacent_absolute_tucker_congruences": [
+          0.99218194,
+          0.99142112,
+          0.98076907
+        ],
+        "anchor_train_only_component": 5,
+        "mean_congruence": 0.98812405,
+        "minimum_congruence": 0.98076907,
+        "rejection_reasons": [],
+        "structurally_stable": true
+      }
+    },
+    "fold_models": [
+      {
+        "assignment_to_next_leave_block_out_model": [
+          {
+            "absolute_tucker_congruence": 0.99797397,
+            "from_component": 1,
+            "to_component": 1,
+            "tucker_congruence": 0.99797397
+          },
+          {
+            "absolute_tucker_congruence": 0.94052852,
+            "from_component": 2,
+            "to_component": 3,
+            "tucker_congruence": 0.94052852
+          },
+          {
+            "absolute_tucker_congruence": 0.99604096,
+            "from_component": 3,
+            "to_component": 5,
+            "tucker_congruence": 0.99604096
+          },
+          {
+            "absolute_tucker_congruence": 0.97464808,
+            "from_component": 4,
+            "to_component": 4,
+            "tucker_congruence": 0.97464808
+          },
+          {
+            "absolute_tucker_congruence": 0.99218194,
+            "from_component": 5,
+            "to_component": 2,
+            "tucker_congruence": 0.99218194
+          }
+        ],
+        "leave_block_out_fold": 1,
+        "omitted_end": "2012-12-13",
+        "omitted_start": "2008-06-05",
+        "selected_factor_count": 5,
+        "training_sessions": 3422
+      },
+      {
+        "assignment_to_next_leave_block_out_model": [
+          {
+            "absolute_tucker_congruence": 0.99946821,
+            "from_component": 1,
+            "to_component": 1,
+            "tucker_congruence": 0.99946821
+          },
+          {
+            "absolute_tucker_congruence": 0.99142112,
+            "from_component": 2,
+            "to_component": 2,
+            "tucker_congruence": 0.99142112
+          },
+          {
+            "absolute_tucker_congruence": 0.99410202,
+            "from_component": 3,
+            "to_component": 5,
+            "tucker_congruence": 0.99410202
+          },
+          {
+            "absolute_tucker_congruence": 0.99229824,
+            "from_component": 4,
+            "to_component": 3,
+            "tucker_congruence": 0.99229824
+          },
+          {
+            "absolute_tucker_congruence": 0.99818497,
+            "from_component": 5,
+            "to_component": 4,
+            "tucker_congruence": 0.99818497
+          }
+        ],
+        "leave_block_out_fold": 2,
+        "omitted_end": "2017-06-29",
+        "omitted_start": "2012-12-14",
+        "selected_factor_count": 5,
+        "training_sessions": 3421
+      },
+      {
+        "assignment_to_next_leave_block_out_model": [
+          {
+            "absolute_tucker_congruence": 0.99953975,
+            "from_component": 1,
+            "to_component": 1,
+            "tucker_congruence": 0.99953975
+          },
+          {
+            "absolute_tucker_congruence": 0.98076907,
+            "from_component": 2,
+            "to_component": 5,
+            "tucker_congruence": 0.98076907
+          },
+          {
+            "absolute_tucker_congruence": 0.97970426,
+            "from_component": 3,
+            "to_component": 3,
+            "tucker_congruence": 0.97970426
+          },
+          {
+            "absolute_tucker_congruence": 0.99515786,
+            "from_component": 4,
+            "to_component": 4,
+            "tucker_congruence": 0.99515786
+          },
+          {
+            "absolute_tucker_congruence": 0.83624092,
+            "from_component": 5,
+            "to_component": 6,
+            "tucker_congruence": 0.83624092
+          }
+        ],
+        "leave_block_out_fold": 3,
+        "omitted_end": "2022-01-12",
+        "omitted_start": "2017-06-30",
+        "selected_factor_count": 5,
+        "training_sessions": 3422
+      },
+      {
+        "leave_block_out_fold": 4,
+        "omitted_end": "2026-07-30",
+        "omitted_start": "2022-01-13",
+        "selected_factor_count": 6,
+        "training_sessions": 3421
+      }
+    ],
+    "gates": {
+      "mean_adjacent_tucker_congruence": 0.9,
+      "minimum_adjacent_tucker_congruence": 0.85,
+      "trace_required_across_all_models": true
+    },
+    "stable_full_factor_indexes": [
+      0,
+      2,
+      3,
+      4
+    ]
+  },
+  "matched_inactive_method": "confirmed, buffered, nonoverlapping episode onsets matched to inactive onset risk windows in the same fold and lagged-XAU-volatility quintile without replacement; control reuse must be zero",
+  "outcome": "MIXED_STRUCTURE_FORWARD_UNSUPPORTED",
+  "representation_diagnostics": {
+    "curve_sensitivity": {
+      "column_count": 18,
+      "covariance_condition_number": 4646.41389284,
+      "definition": "breakeven and nominal-yield constituents replaced by level-plus-curve coordinates",
+      "full_column_rank": true,
+      "rank": 18,
+      "selected_factor_count": 5,
+      "variables": [
+        "real_yield_10y_change",
+        "breakeven_10y_change",
+        "breakeven_curve_change",
+        "yield_10y_change",
+        "curve_10y2y_change",
+        "curve_30y10y_change",
+        "policy_rate_change",
+        "sofr_policy_spread_change",
+        "dxy_return",
+        "eurusd_return",
+        "usdjpy_return",
+        "wti_return",
+        "vix_return",
+        "gvz_return",
+        "gld_holdings_change",
+        "managed_money_share_change",
+        "producer_share_change",
+        "cftc_open_interest_change"
+      ]
+    },
+    "mean_score_subspace_congruence": 0.94751711,
+    "primary": {
+      "column_count": 18,
+      "covariance_condition_number": 8031.99285332,
+      "definition": "18 nonredundant base signatures; no exact derived curves alongside their constituents",
+      "full_column_rank": true,
+      "rank": 18,
+      "variables": [
+        "real_yield_10y_change",
+        "breakeven_5y_change",
+        "breakeven_10y_change",
+        "yield_2y_change",
+        "yield_10y_change",
+        "yield_30y_change",
+        "policy_rate_change",
+        "sofr_policy_spread_change",
+        "dxy_return",
+        "eurusd_return",
+        "usdjpy_return",
+        "wti_return",
+        "vix_return",
+        "gvz_return",
+        "gld_holdings_change",
+        "managed_money_share_change",
+        "producer_share_change",
+        "cftc_open_interest_change"
+      ]
+    },
+    "score_subspace_singular_congruences": [
+      0.99999855,
+      0.99640669,
+      0.99088411,
+      0.96407113,
+      0.78622507
+    ]
+  },
+  "walk_forward_contemporaneous": [
+    {
+      "embargo_sessions_before_test": 5,
+      "factor_model": {
+        "correlation": 0.264746,
+        "direction_accuracy": 0.51447368,
+        "n": 760,
+        "r2": 0.03848172
+      },
+      "fold": 1,
+      "fold_selected_factor_count": 4,
+      "isolated_benchmark": {
+        "correlation": 0.11586966,
+        "direction_accuracy": 0.51184211,
+        "n": 760,
+        "r2": 0.0134891,
+        "variable": "gld_holdings_change"
+      },
+      "mode": "contemporaneous",
+      "parallel_analysis_first_rejected_cutoff": 1.46209132,
+      "parallel_analysis_first_rejected_eigenvalue": 1.17647026,
+      "purged_sessions_before_test": 5,
+      "test_end": "2020-07-13",
+      "test_start": "2017-06-30",
+      "train_end": "2017-06-15",
+      "train_start": "2008-06-05"
+    },
+    {
+      "embargo_sessions_before_test": 5,
+      "factor_model": {
+        "correlation": 0.08314325,
+        "direction_accuracy": 0.525,
+        "n": 760,
+        "r2": -0.00317823
+      },
+      "fold": 2,
+      "fold_selected_factor_count": 6,
+      "isolated_benchmark": {
+        "correlation": 0.09789602,
+        "direction_accuracy": 0.51710526,
+        "n": 760,
+        "r2": 0.0088553,
+        "variable": "real_yield_10y_change"
+      },
+      "mode": "contemporaneous",
+      "parallel_analysis_first_rejected_cutoff": 1.21119822,
+      "parallel_analysis_first_rejected_eigenvalue": 1.03430369,
+      "purged_sessions_before_test": 5,
+      "test_end": "2023-07-20",
+      "test_start": "2020-07-14",
+      "train_end": "2020-06-26",
+      "train_start": "2008-06-05"
+    },
+    {
+      "embargo_sessions_before_test": 5,
+      "factor_model": {
+        "correlation": 0.04112645,
+        "direction_accuracy": 0.50985545,
+        "n": 761,
+        "r2": -0.00110353
+      },
+      "fold": 3,
+      "fold_selected_factor_count": 5,
+      "isolated_benchmark": {
+        "correlation": -0.01915521,
+        "direction_accuracy": 0.50328515,
+        "n": 761,
+        "r2": -0.00762479,
+        "variable": "real_yield_10y_change"
+      },
+      "mode": "contemporaneous",
+      "parallel_analysis_first_rejected_cutoff": 1.39219148,
+      "parallel_analysis_first_rejected_eigenvalue": 1.33060452,
+      "purged_sessions_before_test": 5,
+      "test_end": "2026-07-30",
+      "test_start": "2023-07-21",
+      "train_end": "2023-07-06",
+      "train_start": "2008-06-05"
+    }
+  ],
+  "walk_forward_forward_5_session": [
+    {
+      "embargo_sessions_before_test": 5,
+      "factor_model": {
+        "correlation": -0.05006376,
+        "direction_accuracy": 0.51184211,
+        "n": 760,
+        "r2": -0.01411119
+      },
+      "fold": 1,
+      "fold_selected_factor_count": 4,
+      "isolated_benchmark": {
+        "correlation": -0.00758746,
+        "direction_accuracy": 0.53552632,
+        "n": 760,
+        "r2": -0.00721809,
+        "variable": "yield_10y_change"
+      },
+      "mode": "forward_5_session",
+      "parallel_analysis_first_rejected_cutoff": 1.46209132,
+      "parallel_analysis_first_rejected_eigenvalue": 1.17647026,
+      "purged_sessions_before_test": 5,
+      "test_end": "2020-07-13",
+      "test_start": "2017-06-30",
+      "train_end": "2017-06-15",
+      "train_start": "2008-06-05"
+    },
+    {
+      "embargo_sessions_before_test": 5,
+      "factor_model": {
+        "correlation": 0.00777536,
+        "direction_accuracy": 0.50263158,
+        "n": 760,
+        "r2": -0.01080504
+      },
+      "fold": 2,
+      "fold_selected_factor_count": 6,
+      "isolated_benchmark": {
+        "correlation": 0.01703889,
+        "direction_accuracy": 0.52105263,
+        "n": 760,
+        "r2": -0.01233988,
+        "variable": "yield_2y_change"
+      },
+      "mode": "forward_5_session",
+      "parallel_analysis_first_rejected_cutoff": 1.21119822,
+      "parallel_analysis_first_rejected_eigenvalue": 1.03430369,
+      "purged_sessions_before_test": 5,
+      "test_end": "2023-07-20",
+      "test_start": "2020-07-14",
+      "train_end": "2020-06-26",
+      "train_start": "2008-06-05"
+    },
+    {
+      "embargo_sessions_before_test": 5,
+      "factor_model": {
+        "correlation": -0.02902945,
+        "direction_accuracy": 0.54557464,
+        "n": 757,
+        "r2": -0.00715474
+      },
+      "fold": 3,
+      "fold_selected_factor_count": 5,
+      "isolated_benchmark": {
+        "correlation": -0.00887929,
+        "direction_accuracy": 0.57859974,
+        "n": 757,
+        "r2": -0.00298658,
+        "variable": "yield_10y_change"
+      },
+      "mode": "forward_5_session",
+      "parallel_analysis_first_rejected_cutoff": 1.39219148,
+      "parallel_analysis_first_rejected_eigenvalue": 1.33060452,
+      "purged_sessions_before_test": 5,
+      "test_end": "2026-07-30",
+      "test_start": "2023-07-21",
+      "train_end": "2023-07-06",
+      "train_start": "2008-06-05"
+    }
+  ]
+}

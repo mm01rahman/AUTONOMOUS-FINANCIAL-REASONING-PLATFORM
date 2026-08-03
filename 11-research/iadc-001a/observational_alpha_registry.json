@@ -1,0 +1,2356 @@
+[
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_5 observed with lag 20 explain persistent 5-day XAU/USD behavior in policy_easing?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.0,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00633483,
+    "observation_id": "IADC-OBS-001A-016",
+    "observational_confidence": 0.763799,
+    "observed_relationship": {
+      "correlation": -0.112204,
+      "driver": "yield_10y_change_5",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 20,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 1,
+    "regime_direction_consistency": 1.0,
+    "regime_support_frequency": 0.333333,
+    "regimes": [
+      "policy_easing"
+    ],
+    "repeatability": 1.0,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0662",
+    "strength": 0.748027,
+    "supporting_evidence": {
+      "bh_q_value": 6.7842e-05,
+      "bootstrap_sign_probability": 1.0,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.109259,
+        "correlation_std": 0.054933,
+        "folds": [
+          {
+            "correlation": -0.010683,
+            "end": "2004-01-09 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 312,
+            "start": "2001-09-18 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.149348,
+            "end": "2008-07-31 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 312,
+            "start": "2004-01-12 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.188301,
+            "end": "2012-03-26 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 312,
+            "start": "2008-08-01 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.090132,
+            "end": "2019-05-29 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 311,
+            "start": "2012-03-27 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.099416,
+            "end": "2023-11-21 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 311,
+            "start": "2019-05-30 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.117672,
+            "end": "2026-05-21 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 6,
+            "sample_size": 311,
+            "start": "2023-11-22 05:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 1.0
+      },
+      "sample_size": 1869
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_5 observed with lag 20 explain persistent 5-day XAU/USD behavior in market_stress?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.166667,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.01791419,
+    "observation_id": "IADC-OBS-001A-017",
+    "observational_confidence": 0.750789,
+    "observed_relationship": {
+      "correlation": -0.187601,
+      "driver": "yield_10y_change_5",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 20,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 2,
+    "regime_direction_consistency": 1.0,
+    "regime_support_frequency": 0.333333,
+    "regimes": [
+      "market_stress"
+    ],
+    "repeatability": 0.833333,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0666",
+    "strength": 1.0,
+    "supporting_evidence": {
+      "bh_q_value": 0.0001447996,
+      "bootstrap_sign_probability": 1.0,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.163911,
+        "correlation_std": 0.104349,
+        "folds": [
+          {
+            "correlation": -0.19763,
+            "end": "2008-04-03 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 103,
+            "start": "2001-09-18 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.157457,
+            "end": "2008-12-05 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 103,
+            "start": "2008-04-04 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.275644,
+            "end": "2011-09-09 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 103,
+            "start": "2008-12-08 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.142058,
+            "end": "2013-10-10 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 103,
+            "start": "2011-09-12 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.254219,
+            "end": "2025-05-23 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 103,
+            "start": "2013-10-11 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.043541,
+            "end": "2026-06-25 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 102,
+            "start": "2025-05-27 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.833333
+      },
+      "sample_size": 617
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_5 observed with lag 20 explain persistent 1-day XAU/USD behavior in market_stress?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.166667,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.0095919,
+    "observation_id": "IADC-OBS-001A-014",
+    "observational_confidence": 0.744386,
+    "observed_relationship": {
+      "correlation": -0.137844,
+      "driver": "yield_10y_change_5",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 20,
+      "predictive_horizon_days": 1
+    },
+    "persistence": 1.0,
+    "rank": 3,
+    "regime_direction_consistency": 1.0,
+    "regime_support_frequency": 0.111111,
+    "regimes": [
+      "market_stress"
+    ],
+    "repeatability": 0.833333,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0657",
+    "strength": 0.91896,
+    "supporting_evidence": {
+      "bh_q_value": 0.0090798437,
+      "bootstrap_sign_probability": 1.0,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.13277,
+        "correlation_std": 0.097789,
+        "folds": [
+          {
+            "correlation": -0.238162,
+            "end": "2008-04-04 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 104,
+            "start": "2001-09-18 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.224213,
+            "end": "2008-12-09 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 104,
+            "start": "2008-04-07 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.112511,
+            "end": "2011-09-14 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 104,
+            "start": "2008-12-10 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.07951,
+            "end": "2013-10-15 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 103,
+            "start": "2011-09-15 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.187423,
+            "end": "2025-05-29 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 103,
+            "start": "2013-10-16 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.0452,
+            "end": "2026-07-01 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 103,
+            "start": "2025-05-30 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.833333
+      },
+      "sample_size": 621
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_1",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_1 observed with lag 20 explain persistent 5-day XAU/USD behavior in market_stress?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.166667,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00997773,
+    "observation_id": "IADC-OBS-001A-008",
+    "observational_confidence": 0.732651,
+    "observed_relationship": {
+      "correlation": -0.140562,
+      "driver": "yield_10y_change_1",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 20,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 4,
+    "regime_direction_consistency": 0.888889,
+    "regime_support_frequency": 0.111111,
+    "regimes": [
+      "market_stress"
+    ],
+    "repeatability": 0.833333,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0531",
+    "strength": 0.93708,
+    "supporting_evidence": {
+      "bh_q_value": 0.0079726815,
+      "bootstrap_sign_probability": 1.0,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.116339,
+        "correlation_std": 0.090761,
+        "folds": [
+          {
+            "correlation": -0.131301,
+            "end": "2008-04-04 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 103,
+            "start": "2001-09-19 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.185839,
+            "end": "2008-12-08 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 103,
+            "start": "2008-04-07 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.162258,
+            "end": "2011-09-12 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 103,
+            "start": "2008-12-09 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.086667,
+            "end": "2013-10-11 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 103,
+            "start": "2011-09-13 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.200728,
+            "end": "2025-05-23 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 102,
+            "start": "2013-10-14 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.068757,
+            "end": "2026-06-25 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 102,
+            "start": "2025-05-27 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.833333
+      },
+      "sample_size": 616
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-USD_TRANSMISSION-DXY_RETURN_1",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does dxy_return_1 observed with lag 0 explain persistent 1-day XAU/USD behavior in market_stress?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.0,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00681077,
+    "observation_id": "IADC-OBS-001A-003",
+    "observational_confidence": 0.726465,
+    "observed_relationship": {
+      "correlation": -0.116315,
+      "driver": "dxy_return_1",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 0,
+      "predictive_horizon_days": 1
+    },
+    "persistence": 1.0,
+    "rank": 5,
+    "regime_direction_consistency": 1.0,
+    "regime_support_frequency": 0.333333,
+    "regimes": [
+      "market_stress"
+    ],
+    "repeatability": 1.0,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 0.5,
+    "source_hypothesis_id": "IADC-HYP-0009",
+    "strength": 0.775433,
+    "supporting_evidence": {
+      "bh_q_value": 0.0331139844,
+      "bootstrap_sign_probability": 1.0,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.11132,
+        "correlation_std": 0.065049,
+        "folds": [
+          {
+            "correlation": -0.085412,
+            "end": "2008-04-03 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 104,
+            "start": "2001-09-17 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.075944,
+            "end": "2008-12-08 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 104,
+            "start": "2008-04-04 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.246878,
+            "end": "2011-09-13 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 104,
+            "start": "2008-12-09 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.081614,
+            "end": "2013-10-15 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 104,
+            "start": "2011-09-14 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.048947,
+            "end": "2025-05-29 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 103,
+            "start": "2013-10-16 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.129126,
+            "end": "2026-07-01 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 6,
+            "sample_size": 103,
+            "start": "2025-05-30 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 1.0
+      },
+      "sample_size": 622
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-USD_TRANSMISSION-DXY_RETURN_1",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does dxy_return_1 observed with lag 0 explain persistent 1-day XAU/USD behavior in usd_strength?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.0,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00391265,
+    "observation_id": "IADC-OBS-001A-002",
+    "observational_confidence": 0.711704,
+    "observed_relationship": {
+      "correlation": -0.088288,
+      "driver": "dxy_return_1",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 0,
+      "predictive_horizon_days": 1
+    },
+    "persistence": 1.0,
+    "rank": 6,
+    "regime_direction_consistency": 1.0,
+    "regime_support_frequency": 0.333333,
+    "regimes": [
+      "usd_strength"
+    ],
+    "repeatability": 1.0,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 0.5,
+    "source_hypothesis_id": "IADC-HYP-0006",
+    "strength": 0.588587,
+    "supporting_evidence": {
+      "bh_q_value": 0.0029925467,
+      "bootstrap_sign_probability": 1.0,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.078005,
+        "correlation_std": 0.039666,
+        "folds": [
+          {
+            "correlation": -0.080529,
+            "end": "2005-11-18 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 312,
+            "start": "2001-10-15 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.131857,
+            "end": "2010-04-08 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 312,
+            "start": "2005-11-21 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.125075,
+            "end": "2014-08-27 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 312,
+            "start": "2010-04-15 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.023012,
+            "end": "2017-11-07 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 312,
+            "start": "2014-08-28 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.06153,
+            "end": "2022-07-27 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 312,
+            "start": "2017-11-08 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.046025,
+            "end": "2026-07-01 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 6,
+            "sample_size": 312,
+            "start": "2022-07-28 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 1.0
+      },
+      "sample_size": 1872
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-USD_TRANSMISSION-DXY_RETURN_1",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does dxy_return_1 observed with lag 10 explain persistent 1-day XAU/USD behavior in gold_bull?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.0,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00291352,
+    "observation_id": "IADC-OBS-001A-004",
+    "observational_confidence": 0.70535,
+    "observed_relationship": {
+      "correlation": -0.076224,
+      "driver": "dxy_return_1",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 10,
+      "predictive_horizon_days": 1
+    },
+    "persistence": 1.0,
+    "rank": 7,
+    "regime_direction_consistency": 0.666667,
+    "regime_support_frequency": 0.111111,
+    "regimes": [
+      "gold_bull"
+    ],
+    "repeatability": 1.0,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0083",
+    "strength": 0.50816,
+    "supporting_evidence": {
+      "bh_q_value": 0.0126169301,
+      "bootstrap_sign_probability": 1.0,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.073125,
+        "correlation_std": 0.049473,
+        "folds": [
+          {
+            "correlation": -0.041869,
+            "end": "2005-12-19 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 313,
+            "start": "2001-09-14 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.044387,
+            "end": "2009-01-22 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 312,
+            "start": "2005-12-20 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.079477,
+            "end": "2011-08-30 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 312,
+            "start": "2009-01-23 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.06378,
+            "end": "2019-09-17 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 312,
+            "start": "2011-08-31 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.031231,
+            "end": "2024-05-20 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 312,
+            "start": "2019-09-20 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.178004,
+            "end": "2026-04-01 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 6,
+            "sample_size": 312,
+            "start": "2024-05-21 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 1.0
+      },
+      "sample_size": 1873
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_5 observed with lag 20 explain persistent 5-day XAU/USD behavior in all?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.166667,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00198485,
+    "observation_id": "IADC-OBS-001A-015",
+    "observational_confidence": 0.691954,
+    "observed_relationship": {
+      "correlation": -0.062943,
+      "driver": "yield_10y_change_5",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 20,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 8,
+    "regime_direction_consistency": 1.0,
+    "regime_support_frequency": 0.333333,
+    "regimes": [
+      "all"
+    ],
+    "repeatability": 0.833333,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "MEDIUM",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0658",
+    "strength": 0.41962,
+    "supporting_evidence": {
+      "bh_q_value": 4.29141e-05,
+      "bootstrap_sign_probability": 0.996667,
+      "circular_permutation_p": 0.011952,
+      "fold_validation": {
+        "correlation_mean": -0.055568,
+        "correlation_std": 0.055848,
+        "folds": [
+          {
+            "correlation": 0.02566,
+            "end": "2005-11-14 05:00:00+00:00",
+            "expected_sign": false,
+            "fold": 1,
+            "sample_size": 1037,
+            "start": "2001-09-18 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.128154,
+            "end": "2009-12-30 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 1036,
+            "start": "2005-11-15 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.077364,
+            "end": "2014-02-12 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 1036,
+            "start": "2009-12-31 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.005511,
+            "end": "2018-03-29 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 1036,
+            "start": "2014-02-13 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.113931,
+            "end": "2022-05-10 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 1036,
+            "start": "2018-04-02 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.034109,
+            "end": "2026-06-25 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 6,
+            "sample_size": 1036,
+            "start": "2022-05-11 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.833333
+      },
+      "sample_size": 6217
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-USD_TRANSMISSION-DXY_RETURN_1",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does dxy_return_1 observed with lag 0 explain persistent 1-day XAU/USD behavior in all?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.0,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00112731,
+    "observation_id": "IADC-OBS-001A-001",
+    "observational_confidence": 0.690199,
+    "observed_relationship": {
+      "correlation": -0.047456,
+      "driver": "dxy_return_1",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 0,
+      "predictive_horizon_days": 1
+    },
+    "persistence": 1.0,
+    "rank": 9,
+    "regime_direction_consistency": 1.0,
+    "regime_support_frequency": 0.333333,
+    "regimes": [
+      "all"
+    ],
+    "repeatability": 1.0,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "MEDIUM",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 0.5,
+    "source_hypothesis_id": "IADC-HYP-0001",
+    "strength": 0.316373,
+    "supporting_evidence": {
+      "bh_q_value": 0.003625654,
+      "bootstrap_sign_probability": 1.0,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.043091,
+        "correlation_std": 0.027834,
+        "folds": [
+          {
+            "correlation": -0.015266,
+            "end": "2005-10-21 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 1041,
+            "start": "2001-08-15 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.093915,
+            "end": "2009-12-11 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 1040,
+            "start": "2005-10-24 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.034563,
+            "end": "2014-01-31 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 1040,
+            "start": "2009-12-14 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.06266,
+            "end": "2018-03-23 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 1040,
+            "start": "2014-02-03 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.037389,
+            "end": "2022-05-10 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 1040,
+            "start": "2018-03-26 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.014754,
+            "end": "2026-07-01 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 6,
+            "sample_size": 1040,
+            "start": "2022-05-11 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 1.0
+      },
+      "sample_size": 6241
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_5 observed with lag 1 explain persistent 5-day XAU/USD behavior in gold_bear?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.166667,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00422398,
+    "observation_id": "IADC-OBS-001A-011",
+    "observational_confidence": 0.681171,
+    "observed_relationship": {
+      "correlation": -0.091719,
+      "driver": "yield_10y_change_5",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 1,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 10,
+    "regime_direction_consistency": 0.777778,
+    "regime_support_frequency": 0.111111,
+    "regimes": [
+      "gold_bear"
+    ],
+    "repeatability": 0.833333,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0579",
+    "strength": 0.61146,
+    "supporting_evidence": {
+      "bh_q_value": 0.0020336286,
+      "bootstrap_sign_probability": 1.0,
+      "circular_permutation_p": 0.011952,
+      "fold_validation": {
+        "correlation_mean": -0.071807,
+        "correlation_std": 0.098395,
+        "folds": [
+          {
+            "correlation": -0.105646,
+            "end": "2008-04-28 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 312,
+            "start": "2001-08-16 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.167321,
+            "end": "2012-07-12 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 311,
+            "start": "2008-04-29 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.010093,
+            "end": "2014-10-13 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 311,
+            "start": "2012-07-13 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.2062,
+            "end": "2017-01-31 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 311,
+            "start": "2014-10-14 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.023434,
+            "end": "2021-04-20 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 311,
+            "start": "2017-02-01 05:00:00+00:00"
+          },
+          {
+            "correlation": 0.081852,
+            "end": "2026-06-25 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 311,
+            "start": "2021-04-21 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.833333
+      },
+      "sample_size": 1867
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_5 observed with lag 5 explain persistent 20-day XAU/USD behavior in gold_bear?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.0,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00429961,
+    "observation_id": "IADC-OBS-001A-013",
+    "observational_confidence": 0.676936,
+    "observed_relationship": {
+      "correlation": -0.092533,
+      "driver": "yield_10y_change_5",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 5,
+      "predictive_horizon_days": 20
+    },
+    "persistence": 1.0,
+    "rank": 11,
+    "regime_direction_consistency": 0.666667,
+    "regime_support_frequency": 0.111111,
+    "regimes": [
+      "gold_bear"
+    ],
+    "repeatability": 1.0,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0615",
+    "strength": 0.616887,
+    "supporting_evidence": {
+      "bh_q_value": 0.0019347266,
+      "bootstrap_sign_probability": 0.953333,
+      "circular_permutation_p": 0.023904,
+      "fold_validation": {
+        "correlation_mean": -0.068238,
+        "correlation_std": 0.053696,
+        "folds": [
+          {
+            "correlation": -0.042033,
+            "end": "2008-04-25 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 309,
+            "start": "2001-09-10 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.131113,
+            "end": "2012-07-09 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 309,
+            "start": "2008-04-28 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.076124,
+            "end": "2014-10-06 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 309,
+            "start": "2012-07-10 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.142561,
+            "end": "2017-01-19 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 308,
+            "start": "2014-10-07 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.006826,
+            "end": "2021-04-05 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 308,
+            "start": "2017-01-20 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.010773,
+            "end": "2026-06-03 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 6,
+            "sample_size": 308,
+            "start": "2021-04-06 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 1.0
+      },
+      "sample_size": 1851
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_1",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_1 observed with lag 0 explain persistent 1-day XAU/USD behavior in all?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.166667,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00093404,
+    "observation_id": "IADC-OBS-001A-005",
+    "observational_confidence": 0.67429,
+    "observed_relationship": {
+      "correlation": -0.043201,
+      "driver": "yield_10y_change_1",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 0,
+      "predictive_horizon_days": 1
+    },
+    "persistence": 1.0,
+    "rank": 12,
+    "regime_direction_consistency": 0.888889,
+    "regime_support_frequency": 0.222222,
+    "regimes": [
+      "all"
+    ],
+    "repeatability": 0.833333,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "MEDIUM",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0406",
+    "strength": 0.288007,
+    "supporting_evidence": {
+      "bh_q_value": 0.0097994617,
+      "bootstrap_sign_probability": 0.993333,
+      "circular_permutation_p": 0.007968,
+      "fold_validation": {
+        "correlation_mean": -0.052434,
+        "correlation_std": 0.049862,
+        "folds": [
+          {
+            "correlation": -0.051693,
+            "end": "2005-10-21 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 1040,
+            "start": "2001-08-16 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.026332,
+            "end": "2009-12-11 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 1040,
+            "start": "2005-10-24 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.075738,
+            "end": "2014-01-31 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 1040,
+            "start": "2009-12-14 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.057014,
+            "end": "2018-03-23 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 1040,
+            "start": "2014-02-03 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.134589,
+            "end": "2022-05-10 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 1040,
+            "start": "2018-03-26 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.030765,
+            "end": "2026-07-01 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 1040,
+            "start": "2022-05-11 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.833333
+      },
+      "sample_size": 6240
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-CURVE_EXPECTATIONS-CURVE_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does curve_change_5 observed with lag 10 explain persistent 5-day XAU/USD behavior in all?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.166667,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.0016724,
+    "observation_id": "IADC-OBS-001A-021",
+    "observational_confidence": 0.661325,
+    "observed_relationship": {
+      "correlation": 0.057786,
+      "driver": "curve_change_5",
+      "expected_direction": "POSITIVE",
+      "lag_days": 10,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 13,
+    "regime_direction_consistency": 1.0,
+    "regime_support_frequency": 0.222222,
+    "regimes": [
+      "all"
+    ],
+    "repeatability": 0.833333,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "MEDIUM",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 0.666667,
+    "source_hypothesis_id": "IADC-HYP-0901",
+    "strength": 0.38524,
+    "supporting_evidence": {
+      "bh_q_value": 0.0002486111,
+      "bootstrap_sign_probability": 0.983333,
+      "circular_permutation_p": 0.011952,
+      "fold_validation": {
+        "correlation_mean": 0.041313,
+        "correlation_std": 0.057251,
+        "folds": [
+          {
+            "correlation": 0.01272,
+            "end": "2005-11-07 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 1037,
+            "start": "2001-09-06 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.104839,
+            "end": "2009-12-23 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 1037,
+            "start": "2005-11-08 05:00:00+00:00"
+          },
+          {
+            "correlation": 0.00918,
+            "end": "2014-02-07 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 1037,
+            "start": "2009-12-24 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.045758,
+            "end": "2018-03-27 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 4,
+            "sample_size": 1037,
+            "start": "2014-02-10 05:00:00+00:00"
+          },
+          {
+            "correlation": 0.119836,
+            "end": "2022-05-09 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 1037,
+            "start": "2018-03-28 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.04706,
+            "end": "2026-06-25 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 6,
+            "sample_size": 1037,
+            "start": "2022-05-10 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.833333
+      },
+      "sample_size": 6222
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_1",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_1 observed with lag 0 explain persistent 1-day XAU/USD behavior in policy_easing?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.333333,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00320513,
+    "observation_id": "IADC-OBS-001A-006",
+    "observational_confidence": 0.644895,
+    "observed_relationship": {
+      "correlation": -0.079936,
+      "driver": "yield_10y_change_1",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 0,
+      "predictive_horizon_days": 1
+    },
+    "persistence": 1.0,
+    "rank": 14,
+    "regime_direction_consistency": 0.888889,
+    "regime_support_frequency": 0.222222,
+    "regimes": [
+      "policy_easing"
+    ],
+    "repeatability": 0.666667,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "CONDITIONAL_OBSERVATION",
+    "sensitivity_consistency": 0.75,
+    "source_hypothesis_id": "IADC-HYP-0410",
+    "strength": 0.532907,
+    "supporting_evidence": {
+      "bh_q_value": 0.0088256667,
+      "bootstrap_sign_probability": 0.973333,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.068393,
+        "correlation_std": 0.076262,
+        "folds": [
+          {
+            "correlation": -0.075502,
+            "end": "2004-01-09 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 312,
+            "start": "2001-09-18 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.003028,
+            "end": "2008-07-31 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 2,
+            "sample_size": 312,
+            "start": "2004-01-12 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.118523,
+            "end": "2012-03-26 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 312,
+            "start": "2008-08-01 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.033051,
+            "end": "2019-05-29 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 311,
+            "start": "2012-03-27 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.204409,
+            "end": "2023-11-21 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 311,
+            "start": "2019-05-30 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.0181,
+            "end": "2026-05-21 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 311,
+            "start": "2023-11-22 05:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.666667
+      },
+      "sample_size": 1869
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_5 observed with lag 0 explain persistent 5-day XAU/USD behavior in gold_bear?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.333333,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00460479,
+    "observation_id": "IADC-OBS-001A-009",
+    "observational_confidence": 0.643291,
+    "observed_relationship": {
+      "correlation": -0.095746,
+      "driver": "yield_10y_change_5",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 0,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 15,
+    "regime_direction_consistency": 0.777778,
+    "regime_support_frequency": 0.222222,
+    "regimes": [
+      "gold_bear"
+    ],
+    "repeatability": 0.666667,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "CONDITIONAL_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0552",
+    "strength": 0.638307,
+    "supporting_evidence": {
+      "bh_q_value": 0.0012515375,
+      "bootstrap_sign_probability": 0.993333,
+      "circular_permutation_p": 0.015936,
+      "fold_validation": {
+        "correlation_mean": -0.069557,
+        "correlation_std": 0.120991,
+        "folds": [
+          {
+            "correlation": -0.145173,
+            "end": "2008-04-25 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 312,
+            "start": "2001-08-15 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.170553,
+            "end": "2012-07-12 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 312,
+            "start": "2008-04-28 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.051075,
+            "end": "2014-10-13 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 311,
+            "start": "2012-07-13 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.217741,
+            "end": "2017-01-31 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 311,
+            "start": "2014-10-14 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.046852,
+            "end": "2021-04-20 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 5,
+            "sample_size": 311,
+            "start": "2017-02-01 05:00:00+00:00"
+          },
+          {
+            "correlation": 0.120348,
+            "end": "2026-06-25 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 311,
+            "start": "2021-04-21 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.666667
+      },
+      "sample_size": 1868
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_5 observed with lag 5 explain persistent 1-day XAU/USD behavior in gold_bear?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.333333,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00202288,
+    "observation_id": "IADC-OBS-001A-012",
+    "observational_confidence": 0.641578,
+    "observed_relationship": {
+      "correlation": -0.063542,
+      "driver": "yield_10y_change_5",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 5,
+      "predictive_horizon_days": 1
+    },
+    "persistence": 1.0,
+    "rank": 16,
+    "regime_direction_consistency": 1.0,
+    "regime_support_frequency": 0.111111,
+    "regimes": [
+      "gold_bear"
+    ],
+    "repeatability": 0.666667,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "CONDITIONAL_OBSERVATION",
+    "sensitivity_consistency": 0.8,
+    "source_hypothesis_id": "IADC-HYP-0597",
+    "strength": 0.423613,
+    "supporting_evidence": {
+      "bh_q_value": 0.0455264455,
+      "bootstrap_sign_probability": 0.98,
+      "circular_permutation_p": 0.011952,
+      "fold_validation": {
+        "correlation_mean": -0.042693,
+        "correlation_std": 0.05476,
+        "folds": [
+          {
+            "correlation": -0.035578,
+            "end": "2008-04-30 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 312,
+            "start": "2001-09-10 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.141834,
+            "end": "2012-07-17 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 312,
+            "start": "2008-05-01 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.014551,
+            "end": "2014-10-17 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 3,
+            "sample_size": 312,
+            "start": "2012-07-18 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.084517,
+            "end": "2017-02-06 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 311,
+            "start": "2014-10-20 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.013109,
+            "end": "2021-04-26 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 311,
+            "start": "2017-02-07 05:00:00+00:00"
+          },
+          {
+            "correlation": 0.00433,
+            "end": "2026-07-01 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 311,
+            "start": "2021-04-27 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.666667
+      },
+      "sample_size": 1869
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-CURVE_EXPECTATIONS-CURVE_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does curve_change_5 observed with lag 10 explain persistent 5-day XAU/USD behavior in gold_bull?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.166667,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00326421,
+    "observation_id": "IADC-OBS-001A-022",
+    "observational_confidence": 0.637186,
+    "observed_relationship": {
+      "correlation": 0.080667,
+      "driver": "curve_change_5",
+      "expected_direction": "POSITIVE",
+      "lag_days": 10,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 17,
+    "regime_direction_consistency": 1.0,
+    "regime_support_frequency": 0.222222,
+    "regimes": [
+      "gold_bull"
+    ],
+    "repeatability": 0.833333,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "REPEATABLE_OBSERVATION",
+    "sensitivity_consistency": 0.666667,
+    "source_hypothesis_id": "IADC-HYP-0902",
+    "strength": 0.53778,
+    "supporting_evidence": {
+      "bh_q_value": 0.0079726815,
+      "bootstrap_sign_probability": 0.996667,
+      "circular_permutation_p": 0.035857,
+      "fold_validation": {
+        "correlation_mean": 0.067766,
+        "correlation_std": 0.055278,
+        "folds": [
+          {
+            "correlation": -0.020482,
+            "end": "2005-12-19 05:00:00+00:00",
+            "expected_sign": false,
+            "fold": 1,
+            "sample_size": 313,
+            "start": "2001-09-14 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.060806,
+            "end": "2009-01-22 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 312,
+            "start": "2005-12-20 05:00:00+00:00"
+          },
+          {
+            "correlation": 0.152959,
+            "end": "2011-08-30 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 312,
+            "start": "2009-01-23 05:00:00+00:00"
+          },
+          {
+            "correlation": 0.032501,
+            "end": "2019-09-17 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 312,
+            "start": "2011-08-31 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.112444,
+            "end": "2024-05-20 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 312,
+            "start": "2019-09-20 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.06837,
+            "end": "2026-04-01 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 6,
+            "sample_size": 312,
+            "start": "2024-05-21 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.833333
+      },
+      "sample_size": 1873
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_20",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_20 observed with lag 0 explain persistent 5-day XAU/USD behavior in gold_bear?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.333333,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00454767,
+    "observation_id": "IADC-OBS-001A-018",
+    "observational_confidence": 0.633736,
+    "observed_relationship": {
+      "correlation": -0.095153,
+      "driver": "yield_10y_change_20",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 0,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 18,
+    "regime_direction_consistency": 0.666667,
+    "regime_support_frequency": 0.111111,
+    "regimes": [
+      "gold_bear"
+    ],
+    "repeatability": 0.666667,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "CONDITIONAL_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0687",
+    "strength": 0.634353,
+    "supporting_evidence": {
+      "bh_q_value": 0.0013355036,
+      "bootstrap_sign_probability": 0.973333,
+      "circular_permutation_p": 0.011952,
+      "fold_validation": {
+        "correlation_mean": -0.057321,
+        "correlation_std": 0.114329,
+        "folds": [
+          {
+            "correlation": -0.202158,
+            "end": "2008-04-30 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 311,
+            "start": "2001-11-15 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.163818,
+            "end": "2012-07-16 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 311,
+            "start": "2008-05-01 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.013673,
+            "end": "2014-10-15 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 311,
+            "start": "2012-07-17 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.12799,
+            "end": "2017-02-02 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 311,
+            "start": "2014-10-16 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.066572,
+            "end": "2021-04-21 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 5,
+            "sample_size": 310,
+            "start": "2017-02-03 05:00:00+00:00"
+          },
+          {
+            "correlation": 0.097141,
+            "end": "2026-06-25 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 310,
+            "start": "2021-04-22 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.666667
+      },
+      "sample_size": 1864
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_20",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_20 observed with lag 1 explain persistent 5-day XAU/USD behavior in gold_bear?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.333333,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00384541,
+    "observation_id": "IADC-OBS-001A-020",
+    "observational_confidence": 0.621451,
+    "observed_relationship": {
+      "correlation": -0.087529,
+      "driver": "yield_10y_change_20",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 1,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 19,
+    "regime_direction_consistency": 0.666667,
+    "regime_support_frequency": 0.111111,
+    "regimes": [
+      "gold_bear"
+    ],
+    "repeatability": 0.666667,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "CONDITIONAL_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0714",
+    "strength": 0.583527,
+    "supporting_evidence": {
+      "bh_q_value": 0.0033794126,
+      "bootstrap_sign_probability": 0.956667,
+      "circular_permutation_p": 0.015936,
+      "fold_validation": {
+        "correlation_mean": -0.050788,
+        "correlation_std": 0.1013,
+        "folds": [
+          {
+            "correlation": -0.164319,
+            "end": "2008-04-30 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 311,
+            "start": "2001-11-15 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.159324,
+            "end": "2012-07-16 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 311,
+            "start": "2008-05-01 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.004193,
+            "end": "2014-10-15 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 311,
+            "start": "2012-07-17 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.118152,
+            "end": "2017-02-02 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 311,
+            "start": "2014-10-16 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.05182,
+            "end": "2021-04-21 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 5,
+            "sample_size": 310,
+            "start": "2017-02-03 05:00:00+00:00"
+          },
+          {
+            "correlation": 0.089438,
+            "end": "2026-06-25 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 310,
+            "start": "2021-04-22 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.666667
+      },
+      "sample_size": 1864
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_1",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_1 observed with lag 1 explain persistent 1-day XAU/USD behavior in policy_easing?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.333333,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00307858,
+    "observation_id": "IADC-OBS-001A-007",
+    "observational_confidence": 0.606138,
+    "observed_relationship": {
+      "correlation": -0.078347,
+      "driver": "yield_10y_change_1",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 1,
+      "predictive_horizon_days": 1
+    },
+    "persistence": 1.0,
+    "rank": 20,
+    "regime_direction_consistency": 0.555556,
+    "regime_support_frequency": 0.111111,
+    "regimes": [
+      "policy_easing"
+    ],
+    "repeatability": 0.666667,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "CONDITIONAL_OBSERVATION",
+    "sensitivity_consistency": 0.75,
+    "source_hypothesis_id": "IADC-HYP-0437",
+    "strength": 0.522313,
+    "supporting_evidence": {
+      "bh_q_value": 0.0100156464,
+      "bootstrap_sign_probability": 0.986667,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.058516,
+        "correlation_std": 0.096415,
+        "folds": [
+          {
+            "correlation": -0.131009,
+            "end": "2004-01-09 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 312,
+            "start": "2001-09-18 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.089462,
+            "end": "2008-07-31 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 2,
+            "sample_size": 312,
+            "start": "2004-01-12 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.20491,
+            "end": "2012-03-26 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 312,
+            "start": "2008-08-01 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.072811,
+            "end": "2019-05-29 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 311,
+            "start": "2012-03-27 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.056879,
+            "end": "2023-11-21 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 5,
+            "sample_size": 311,
+            "start": "2019-05-30 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.025053,
+            "end": "2026-05-21 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 311,
+            "start": "2023-11-22 05:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.666667
+      },
+      "sample_size": 1869
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_20",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_20 observed with lag 1 explain persistent 1-day XAU/USD behavior in gold_bear?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.333333,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00241714,
+    "observation_id": "IADC-OBS-001A-019",
+    "observational_confidence": 0.595261,
+    "observed_relationship": {
+      "correlation": -0.069445,
+      "driver": "yield_10y_change_20",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 1,
+      "predictive_horizon_days": 1
+    },
+    "persistence": 1.0,
+    "rank": 21,
+    "regime_direction_consistency": 0.333333,
+    "regime_support_frequency": 0.111111,
+    "regimes": [
+      "gold_bear"
+    ],
+    "repeatability": 0.666667,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "CONDITIONAL_OBSERVATION",
+    "sensitivity_consistency": 1.0,
+    "source_hypothesis_id": "IADC-HYP-0705",
+    "strength": 0.462967,
+    "supporting_evidence": {
+      "bh_q_value": 0.0256160909,
+      "bootstrap_sign_probability": 0.99,
+      "circular_permutation_p": 0.003984,
+      "fold_validation": {
+        "correlation_mean": -0.04346,
+        "correlation_std": 0.061909,
+        "folds": [
+          {
+            "correlation": -0.104441,
+            "end": "2008-05-01 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 1,
+            "sample_size": 312,
+            "start": "2001-11-15 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.119904,
+            "end": "2012-07-18 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 312,
+            "start": "2008-05-02 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.016761,
+            "end": "2014-10-17 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 311,
+            "start": "2012-07-19 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.081736,
+            "end": "2017-02-06 05:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 311,
+            "start": "2014-10-20 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.039853,
+            "end": "2021-04-26 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 5,
+            "sample_size": 311,
+            "start": "2017-02-07 05:00:00+00:00"
+          },
+          {
+            "correlation": 0.022227,
+            "end": "2026-07-01 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 6,
+            "sample_size": 311,
+            "start": "2021-04-27 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.666667
+      },
+      "sample_size": 1868
+    }
+  },
+  {
+    "causal_confidence": null,
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+    "dependencies": [
+      "XAU/USD",
+      "DXY",
+      "US Treasury yields",
+      "policy proxy"
+    ],
+    "description": "Does yield_10y_change_5 observed with lag 0 explain persistent 5-day XAU/USD behavior in usd_strength?",
+    "economic_plausibility": "SUPPORTED_NARRATIVE_NOT_CAUSAL",
+    "failure_frequency": 0.333333,
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "information_gain_nats_per_observation": 0.00317464,
+    "observation_id": "IADC-OBS-001A-010",
+    "observational_confidence": 0.594155,
+    "observed_relationship": {
+      "correlation": -0.079556,
+      "driver": "yield_10y_change_5",
+      "expected_direction": "NEGATIVE",
+      "lag_days": 0,
+      "predictive_horizon_days": 5
+    },
+    "persistence": 1.0,
+    "rank": 22,
+    "regime_direction_consistency": 0.777778,
+    "regime_support_frequency": 0.222222,
+    "regimes": [
+      "usd_strength"
+    ],
+    "repeatability": 0.666667,
+    "required_future_data": [
+      "independent provider replication",
+      "identified causal design"
+    ],
+    "research_priority": "HIGH",
+    "scientific_maturity": "CONDITIONAL_OBSERVATION",
+    "sensitivity_consistency": 0.75,
+    "source_hypothesis_id": "IADC-HYP-0555",
+    "strength": 0.530373,
+    "supporting_evidence": {
+      "bh_q_value": 0.0091389314,
+      "bootstrap_sign_probability": 0.976667,
+      "circular_permutation_p": 0.027888,
+      "fold_validation": {
+        "correlation_mean": -0.085389,
+        "correlation_std": 0.12716,
+        "folds": [
+          {
+            "correlation": 0.042788,
+            "end": "2005-11-18 05:00:00+00:00",
+            "expected_sign": false,
+            "fold": 1,
+            "sample_size": 312,
+            "start": "2001-10-15 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.120295,
+            "end": "2010-04-08 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 2,
+            "sample_size": 312,
+            "start": "2005-11-21 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.039545,
+            "end": "2014-08-26 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 3,
+            "sample_size": 311,
+            "start": "2010-04-15 04:00:00+00:00"
+          },
+          {
+            "correlation": -0.344083,
+            "end": "2017-11-03 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 4,
+            "sample_size": 311,
+            "start": "2014-08-27 04:00:00+00:00"
+          },
+          {
+            "correlation": 0.01438,
+            "end": "2022-07-22 04:00:00+00:00",
+            "expected_sign": false,
+            "fold": 5,
+            "sample_size": 311,
+            "start": "2017-11-06 05:00:00+00:00"
+          },
+          {
+            "correlation": -0.06558,
+            "end": "2026-06-25 04:00:00+00:00",
+            "expected_sign": true,
+            "fold": 6,
+            "sample_size": 311,
+            "start": "2022-07-25 04:00:00+00:00"
+          }
+        ],
+        "positive_direction_fold_ratio": 0.666667
+      },
+      "sample_size": 1868
+    }
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "cadence": "daily",
+  "dataset_id": "IADC002-DEXJPUS",
+  "domain": "cross_asset_fx",
+  "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+  "limitations": [
+    "Observational data; no identification design or causal warrant."
+  ],
+  "name": "Japanese Yen per U.S. Dollar",
+  "normalized_checksum_sha256": "77c3b6cd5ad7474dc2fcf8054ad3352faf2f97229f12ee018a9a42c1fadf8ab0",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-DEXJPUS.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "FRED",
+  "quality": {
+    "calendar_coverage_ratio": 0.686314,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-24T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 13926,
+    "research_depth": true,
+    "start_timestamp": "1971-01-04T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "1fe3eeb841ef4b69decfbf754b77d89ad9feab0176216879083b5349239c9854",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-DEXJPUS.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "Board of Governors of the Federal Reserve System",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXJPUS",
+  "timezone": "UTC",
+  "variable": "usdjpy"
+}
