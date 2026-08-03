@@ -1,0 +1,12 @@
+{
+  "approved_improvements": 5,
+  "broker_connections": 0,
+  "continuous_self_improvement_enabled": true,
+  "deferred_improvements": 0,
+  "engineering_quality": 1.0,
+  "non_executing": true,
+  "overall_scientific_health": 0.7519,
+  "research_roi": 0.8258,
+  "top_priority_improvement": "IMP-004",
+  "trade_execution_calls": 0
+}

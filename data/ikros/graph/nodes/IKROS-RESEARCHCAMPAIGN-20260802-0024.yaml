@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Decompose Transition Engine v1 into testable components and measure incremental
+    contribution via systematic ablation.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0024
+confidence: 0.0
+created_at: '2026-08-02T13:51:21.996010+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0024
+label: 'DC2 Program E Phase 1: Institutional Transition Engine Decomposition & Ablation
+  Analysis'
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0024
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

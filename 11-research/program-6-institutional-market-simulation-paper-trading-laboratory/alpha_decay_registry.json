@@ -1,0 +1,898 @@
+[
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0128,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.009,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.28
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0064,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0045,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.16
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0064,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0045,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.24
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0512,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0358,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.12
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0608,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0426,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.18
+      }
+    ],
+    "replay_mode": "historical_replay",
+    "timestamp": "2021-01-04T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0212,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0148,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.024,
+        "recommended_action": "retain",
+        "regime_instability": 0.42
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0148,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0104,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.22
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0084,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0059,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0096,
+        "recommended_action": "retain",
+        "regime_instability": 0.26
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0836,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0585,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.21
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0532,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0372,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.02
+      }
+    ],
+    "replay_mode": "walk_forward_replay",
+    "timestamp": "2021-03-15T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0328,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.023,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.032,
+        "recommended_action": "retain",
+        "regime_instability": 0.18
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0392,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0274,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.032,
+        "recommended_action": "retain",
+        "regime_instability": 0.22
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.044,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0308,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.032,
+        "recommended_action": "retain",
+        "regime_instability": 0.25
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0184,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0129,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0192,
+        "recommended_action": "retain",
+        "regime_instability": 0.09
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0104,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0073,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.032,
+        "recommended_action": "retain",
+        "regime_instability": 0.04
+      }
+    ],
+    "replay_mode": "rolling_replay",
+    "timestamp": "2021-06-21T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.006,
+        "concept_drift": 0.0108,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0076,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.0336,
+        "recommended_action": "retain",
+        "regime_instability": 0.02
+      },
+      {
+        "capacity_decay": 0.006,
+        "concept_drift": 0.0188,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0132,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.056,
+        "recommended_action": "retain",
+        "regime_instability": 0.03
+      },
+      {
+        "capacity_decay": 0.006,
+        "concept_drift": 0.038,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0266,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.15
+      },
+      {
+        "capacity_decay": 0.006,
+        "concept_drift": 0.0476,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0333,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.21
+      },
+      {
+        "capacity_decay": 0.006,
+        "concept_drift": 0.0444,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0311,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.19
+      }
+    ],
+    "replay_mode": "multi_year_replay",
+    "timestamp": "2021-09-30T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.03,
+        "concept_drift": 0.066,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0462,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.25
+      },
+      {
+        "capacity_decay": 0.03,
+        "concept_drift": 0.1172,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.082,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.07
+      },
+      {
+        "capacity_decay": 0.03,
+        "concept_drift": 0.1252,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0876,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.12
+      },
+      {
+        "capacity_decay": 0.03,
+        "concept_drift": 0.1348,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0944,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.18
+      },
+      {
+        "capacity_decay": 0.03,
+        "concept_drift": 0.1508,
+        "confidence_degradation": 0.0061,
+        "evidence_degradation": 0.1056,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0192,
+        "recommended_action": "retain",
+        "regime_instability": 0.28
+      }
+    ],
+    "replay_mode": "regime_replay",
+    "timestamp": "2021-12-20T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.078,
+        "concept_drift": 0.2264,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.1585,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.0,
+        "recommended_action": "suspend",
+        "regime_instability": 0.26
+      },
+      {
+        "capacity_decay": 0.078,
+        "concept_drift": 0.284,
+        "confidence_degradation": 0.0211,
+        "evidence_degradation": 0.1988,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retire",
+        "regime_instability": 0.1
+      },
+      {
+        "capacity_decay": 0.078,
+        "concept_drift": 0.3,
+        "confidence_degradation": 0.029,
+        "evidence_degradation": 0.21,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retire",
+        "regime_instability": 0.2
+      },
+      {
+        "capacity_decay": 0.078,
+        "concept_drift": 0.3256,
+        "confidence_degradation": 0.0416,
+        "evidence_degradation": 0.2279,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.072,
+        "recommended_action": "retire",
+        "regime_instability": 0.36
+      },
+      {
+        "capacity_decay": 0.078,
+        "concept_drift": 0.3304,
+        "confidence_degradation": 0.044,
+        "evidence_degradation": 0.2313,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.072,
+        "recommended_action": "retire",
+        "regime_instability": 0.39
+      }
+    ],
+    "replay_mode": "event_replay",
+    "timestamp": "2022-03-14T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.09,
+        "concept_drift": 0.2912,
+        "confidence_degradation": 0.0084,
+        "evidence_degradation": 0.2038,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.072,
+        "recommended_action": "retire",
+        "regime_instability": 0.18
+      },
+      {
+        "capacity_decay": 0.09,
+        "concept_drift": 0.2848,
+        "confidence_degradation": 0.0053,
+        "evidence_degradation": 0.1994,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.072,
+        "recommended_action": "retire",
+        "regime_instability": 0.22
+      },
+      {
+        "capacity_decay": 0.09,
+        "concept_drift": 0.28,
+        "confidence_degradation": 0.0029,
+        "evidence_degradation": 0.196,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.072,
+        "recommended_action": "suspend",
+        "regime_instability": 0.25
+      },
+      {
+        "capacity_decay": 0.09,
+        "concept_drift": 0.3344,
+        "confidence_degradation": 0.0297,
+        "evidence_degradation": 0.2341,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0432,
+        "recommended_action": "retire",
+        "regime_instability": 0.09
+      },
+      {
+        "capacity_decay": 0.09,
+        "concept_drift": 0.3136,
+        "confidence_degradation": 0.0194,
+        "evidence_degradation": 0.2195,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.072,
+        "recommended_action": "retire",
+        "regime_instability": 0.04
+      }
+    ],
+    "replay_mode": "shock_replay",
+    "timestamp": "2022-06-13T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.036,
+        "concept_drift": 0.125,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0875,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.25
+      },
+      {
+        "capacity_decay": 0.036,
+        "concept_drift": 0.1762,
+        "confidence_degradation": 0.0002,
+        "evidence_degradation": 0.1233,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.07
+      },
+      {
+        "capacity_decay": 0.036,
+        "concept_drift": 0.1842,
+        "confidence_degradation": 0.0042,
+        "evidence_degradation": 0.1289,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.12
+      },
+      {
+        "capacity_decay": 0.036,
+        "concept_drift": 0.1938,
+        "confidence_degradation": 0.0089,
+        "evidence_degradation": 0.1357,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.18
+      },
+      {
+        "capacity_decay": 0.036,
+        "concept_drift": 0.2098,
+        "confidence_degradation": 0.0168,
+        "evidence_degradation": 0.1469,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0176,
+        "recommended_action": "retain",
+        "regime_instability": 0.28
+      }
+    ],
+    "replay_mode": "session_replay",
+    "timestamp": "2022-09-27T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0208,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0146,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.28
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0304,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0213,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.16
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0176,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0123,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.24
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0752,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0526,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.12
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0848,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0594,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.18
+      }
+    ],
+    "replay_mode": "historical_replay",
+    "timestamp": "2023-01-17T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0628,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.044,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.18
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0692,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0484,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.22
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.074,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0518,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.25
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0196,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0137,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.09
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0404,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0283,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.04
+      }
+    ],
+    "replay_mode": "walk_forward_replay",
+    "timestamp": "2023-04-24T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0232,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0162,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.032,
+        "recommended_action": "retain",
+        "regime_instability": 0.42
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0488,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0342,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.22
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0424,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0297,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0128,
+        "recommended_action": "retain",
+        "regime_instability": 0.26
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.1176,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0823,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.21
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0872,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.061,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.02
+      }
+    ],
+    "replay_mode": "rolling_replay",
+    "timestamp": "2023-07-10T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.042,
+        "concept_drift": 0.1668,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.1168,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.048,
+        "recommended_action": "retain",
+        "regime_instability": 0.02
+      },
+      {
+        "capacity_decay": 0.042,
+        "concept_drift": 0.1748,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.1224,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.08,
+        "recommended_action": "retain",
+        "regime_instability": 0.03
+      },
+      {
+        "capacity_decay": 0.042,
+        "concept_drift": 0.194,
+        "confidence_degradation": 0.0074,
+        "evidence_degradation": 0.1358,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.15
+      },
+      {
+        "capacity_decay": 0.042,
+        "concept_drift": 0.2036,
+        "confidence_degradation": 0.0121,
+        "evidence_degradation": 0.1425,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.21
+      },
+      {
+        "capacity_decay": 0.042,
+        "concept_drift": 0.2004,
+        "confidence_degradation": 0.0106,
+        "evidence_degradation": 0.1403,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.19
+      }
+    ],
+    "replay_mode": "multi_year_replay",
+    "timestamp": "2023-10-02T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.018,
+        "concept_drift": 0.048,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0336,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.25
+      },
+      {
+        "capacity_decay": 0.018,
+        "concept_drift": 0.0992,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0694,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.07
+      },
+      {
+        "capacity_decay": 0.018,
+        "concept_drift": 0.1072,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.075,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.12
+      },
+      {
+        "capacity_decay": 0.018,
+        "concept_drift": 0.1168,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0818,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.18
+      },
+      {
+        "capacity_decay": 0.018,
+        "concept_drift": 0.1328,
+        "confidence_degradation": 0.0029,
+        "evidence_degradation": 0.093,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0144,
+        "recommended_action": "retain",
+        "regime_instability": 0.28
+      }
+    ],
+    "replay_mode": "regime_replay",
+    "timestamp": "2024-01-29T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.066,
+        "concept_drift": 0.2164,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.1515,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.26
+      },
+      {
+        "capacity_decay": 0.066,
+        "concept_drift": 0.274,
+        "confidence_degradation": 0.0193,
+        "evidence_degradation": 0.1918,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "suspend",
+        "regime_instability": 0.1
+      },
+      {
+        "capacity_decay": 0.066,
+        "concept_drift": 0.29,
+        "confidence_degradation": 0.0272,
+        "evidence_degradation": 0.203,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retire",
+        "regime_instability": 0.2
+      },
+      {
+        "capacity_decay": 0.066,
+        "concept_drift": 0.3156,
+        "confidence_degradation": 0.0398,
+        "evidence_degradation": 0.2209,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.056,
+        "recommended_action": "retire",
+        "regime_instability": 0.36
+      },
+      {
+        "capacity_decay": 0.066,
+        "concept_drift": 0.3204,
+        "confidence_degradation": 0.0422,
+        "evidence_degradation": 0.2243,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.056,
+        "recommended_action": "retire",
+        "regime_instability": 0.39
+      }
+    ],
+    "replay_mode": "event_replay",
+    "timestamp": "2024-04-15T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.012,
+        "concept_drift": 0.0312,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0218,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.18
+      },
+      {
+        "capacity_decay": 0.012,
+        "concept_drift": 0.0312,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0218,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.22
+      },
+      {
+        "capacity_decay": 0.012,
+        "concept_drift": 0.036,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0252,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.25
+      },
+      {
+        "capacity_decay": 0.012,
+        "concept_drift": 0.0744,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0521,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.09
+      },
+      {
+        "capacity_decay": 0.012,
+        "concept_drift": 0.0536,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0375,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.04
+      }
+    ],
+    "replay_mode": "shock_replay",
+    "timestamp": "2024-07-22T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0412,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0288,
+        "mechanism": "safe_haven_migration",
+        "performance_degradation": 0.024,
+        "recommended_action": "retain",
+        "regime_instability": 0.42
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0508,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0356,
+        "mechanism": "real_yield_dislocation_reversion",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.22
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0444,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0311,
+        "mechanism": "policy_expectation_repricing",
+        "performance_degradation": 0.0096,
+        "recommended_action": "retain",
+        "regime_instability": 0.26
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.1196,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0837,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.21
+      },
+      {
+        "capacity_decay": 0.0,
+        "concept_drift": 0.0892,
+        "confidence_degradation": 0.0,
+        "evidence_degradation": 0.0624,
+        "mechanism": "commodity_cross_curve_divergence",
+        "performance_degradation": 0.0,
+        "recommended_action": "retain",
+        "regime_instability": 0.02
+      }
+    ],
+    "replay_mode": "session_replay",
+    "timestamp": "2024-10-07T00:00:00+00:00"
+  }
+]

@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: HYPOTHESIS_VALIDATION
+  entity_type: ResearchCampaign
+  objective: Evaluate AFRP research-system quality, identify bottlenecks, rank improvements,
+    apply autonomous ARB pre-screening, and emit governed roadmaps and organizational
+    memory updates.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0058
+confidence: 0.0
+created_at: '2026-08-02T23:42:53.822268+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0058
+label: Generation 5 — Autonomous Research Organization & Self-Evolution
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0058
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

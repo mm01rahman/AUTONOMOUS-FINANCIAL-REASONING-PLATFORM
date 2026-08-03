@@ -1,0 +1,12 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0570
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0050
+detail: Campaign execution started
+entry_hash: 91cf48b2bed3f27ffe5497b147cdb34ddafd5c0ce84f1e140b895b2aeac9ae70
+event_type: CAMPAIGN_STARTED
+new_state: RUNNING
+output_refs: []
+previous_hash: bf75b5480d7af42a64da6af5cfd7434147ef2a5bfb0c8930d0a76e8ecf3de5da
+previous_state: READY
+task_id: null
+timestamp: '2026-08-02T23:17:23.372453+00:00'

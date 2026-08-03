@@ -1,0 +1,18 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Attempt to falsify Institutional Transition Engine v1 against simple
+    baseline transition models.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0023
+confidence: 0.0
+created_at: '2026-08-02T11:59:43.412868+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0023
+label: 'DC2 Program D Phase 1: Institutional Transition Engine Verification & Falsification'
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0023
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

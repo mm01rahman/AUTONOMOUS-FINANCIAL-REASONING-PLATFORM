@@ -1,0 +1,52 @@
+[
+  {
+    "category": "engineering_improvements",
+    "evidence_support": 0.7857,
+    "expected_cost": 0.22,
+    "expected_value": 0.79,
+    "improvement_id": "IMP-004",
+    "justification": "Self-evolution quality improves when ROI and throughput are observable with lower lag.",
+    "priority": 0.7875,
+    "title": "Scientific productivity observability augmentation"
+  },
+  {
+    "category": "new_datasets",
+    "evidence_support": 0.795,
+    "expected_cost": 0.4,
+    "expected_value": 0.7791,
+    "improvement_id": "IMP-002",
+    "justification": "Cross-asset instability bottleneck indicates current observation layer is constraining confidence growth.",
+    "priority": 0.7668,
+    "title": "Cross-asset flow + positioning enhancement bundle"
+  },
+  {
+    "category": "governance",
+    "evidence_support": 0.7939,
+    "expected_cost": 0.18,
+    "expected_value": 0.7052,
+    "improvement_id": "IMP-005",
+    "justification": "High volume of improvement candidates benefits from deterministic reject/advance criteria.",
+    "priority": 0.7477,
+    "title": "Autonomous ARB pre-screening policy refinement"
+  },
+  {
+    "category": "new_experiments",
+    "evidence_support": 0.7671,
+    "expected_cost": 0.28,
+    "expected_value": 0.7344,
+    "improvement_id": "IMP-003",
+    "justification": "Concept-drift triggers should be isolated by stress-replay ablations before confidence revisions.",
+    "priority": 0.7444,
+    "title": "Concept-drift stress replay matrix"
+  },
+  {
+    "category": "new_research",
+    "evidence_support": 0.742,
+    "expected_cost": 0.34,
+    "expected_value": 0.761,
+    "improvement_id": "IMP-001",
+    "justification": "Repeated unknown-regime triggers imply high information gain from targeted regime decomposition.",
+    "priority": 0.7442,
+    "title": "Regime ambiguity disentanglement experiments"
+  }
+]

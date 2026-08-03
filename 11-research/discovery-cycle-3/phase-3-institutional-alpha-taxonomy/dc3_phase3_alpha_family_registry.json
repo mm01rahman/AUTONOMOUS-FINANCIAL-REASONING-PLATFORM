@@ -1,0 +1,155 @@
+[
+  {
+    "capacity_expectation": "HIGH",
+    "confidence": 0.63,
+    "definition": "Mechanisms driven by macro-economic signal repricing transmitted through cross-asset relay channels.",
+    "economic_rationale": "Macro shocks alter the real interest-rate and real-yield anchors that institutional actors use to price gold relative to alternatives.",
+    "expected_persistence": "MEDIUM",
+    "family_id": "FAM-001",
+    "known_risks": [
+      "Policy reversal",
+      "DXY regime change",
+      "Yield-curve regime break"
+    ],
+    "name": "Macro Repricing",
+    "typical_failures": [
+      "Relay disruption without macro confirmation",
+      "False trigger on noise spikes"
+    ],
+    "typical_regimes": [
+      "macro_transition",
+      "bear_unwind",
+      "bull_trend"
+    ]
+  },
+  {
+    "capacity_expectation": "MEDIUM",
+    "confidence": 0.6,
+    "definition": "Mechanisms driven by institutional liquidity withdrawal, inventory constraint, or flow-absorption collapse.",
+    "economic_rationale": "Liquidity stress compresses bid-offer depth, forces inventory redistribution, and amplifies directional information flow.",
+    "expected_persistence": "LOW",
+    "family_id": "FAM-002",
+    "known_risks": [
+      "Rapid liquidity restoration",
+      "Central-bank backstop"
+    ],
+    "name": "Liquidity Transition",
+    "typical_failures": [
+      "False liquidity alarm without depth data",
+      "Missed recovery phase"
+    ],
+    "typical_regimes": [
+      "crisis_dislocation",
+      "bear_unwind",
+      "range_compression"
+    ]
+  },
+  {
+    "capacity_expectation": "HIGH",
+    "confidence": 0.61,
+    "definition": "Mechanisms driven by capital migration toward gold as institutional safe-haven allocation rises.",
+    "economic_rationale": "Geopolitical and systemic stress activates safe-haven mandates across institutional cohorts, generating correlated directional flows.",
+    "expected_persistence": "MEDIUM",
+    "family_id": "FAM-003",
+    "known_risks": [
+      "Rapid de-risking reversal",
+      "Competing safe-haven assets"
+    ],
+    "name": "Safe Haven Migration",
+    "typical_failures": [
+      "Overstay past safe-haven normalization",
+      "Misidentification of stress type"
+    ],
+    "typical_regimes": [
+      "crisis_dislocation",
+      "bull_trend"
+    ]
+  },
+  {
+    "capacity_expectation": "MEDIUM",
+    "confidence": 0.65,
+    "definition": "Mechanisms driven by information flow through a directed cross-asset network topology.",
+    "economic_rationale": "Directed source\u2192relay\u2192sink structure propagates institutional repricing with regime-dependent intensity.",
+    "expected_persistence": "MEDIUM",
+    "family_id": "FAM-004",
+    "known_risks": [
+      "Data-gap limitations in current dataset",
+      "Topology instability under rare events"
+    ],
+    "name": "Cross-Asset Information Propagation",
+    "typical_failures": [
+      "Topology disruption",
+      "Relay bottleneck collapse"
+    ],
+    "typical_regimes": [
+      "macro_transition",
+      "bull_trend",
+      "range_compression"
+    ]
+  },
+  {
+    "capacity_expectation": "MEDIUM",
+    "confidence": 0.58,
+    "definition": "Mechanisms driven by expectation updates, policy surprises, and belief cascade formation.",
+    "economic_rationale": "Policy signals cause rapid expectation recalibration that propagates through fast-participant decision networks before slow-anchor actors reprice.",
+    "expected_persistence": "LOW",
+    "family_id": "FAM-005",
+    "known_risks": [
+      "Fed communication volatility",
+      "Expectation anchoring by central banks"
+    ],
+    "name": "Expectation & Policy Reset",
+    "typical_failures": [
+      "Expectation reversal",
+      "Policy surprise classification error"
+    ],
+    "typical_regimes": [
+      "macro_transition",
+      "bear_unwind",
+      "calm_carry"
+    ]
+  },
+  {
+    "capacity_expectation": "MEDIUM",
+    "confidence": 0.57,
+    "definition": "Mechanisms driven by structured participant decision cascades through strategic dependency networks.",
+    "economic_rationale": "Fast institutional actors initiate decision chains that force constrained adjustments by slower actors.",
+    "expected_persistence": "LOW",
+    "family_id": "FAM-006",
+    "known_risks": [
+      "Macro-ecology model unresolved evidence per Program E"
+    ],
+    "name": "Institutional Decision Cascade",
+    "typical_failures": [
+      "Cascade abort",
+      "Strategic independence breakdown"
+    ],
+    "typical_regimes": [
+      "macro_transition",
+      "crisis_dislocation",
+      "bull_trend"
+    ]
+  },
+  {
+    "capacity_expectation": "MEDIUM",
+    "confidence": 0.56,
+    "definition": "Mechanisms driven by fundamental regime-state transitions and adaptive changes in market ecology.",
+    "economic_rationale": "Regime transitions encode multi-channel institutional causal structures; ecology shifts redistribute flow-competition and cooperation.",
+    "expected_persistence": "MEDIUM",
+    "family_id": "FAM-007",
+    "known_risks": [
+      "Transition Engine v1 rejected",
+      "Component redesign required per Program E"
+    ],
+    "name": "Regime Transition & Adaptive Ecology",
+    "typical_failures": [
+      "Transition timing mis-specification",
+      "Ecology shift proxy weakness"
+    ],
+    "typical_regimes": [
+      "macro_transition",
+      "calm_carry",
+      "crisis_dislocation"
+    ]
+  }
+]

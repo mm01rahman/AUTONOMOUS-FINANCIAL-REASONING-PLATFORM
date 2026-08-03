@@ -89,7 +89,14 @@ def _edge_confidence(f_proxy: float, transfer_entropy: float, corr: float) -> fl
     return round(0.50 * f_component + 0.30 * te_component + 0.20 * corr_component, 4)
 
 
-def _topology_tag(out_strength: float, in_strength: float, relay_score: float, source_cutoff: float, sink_cutoff: float, relay_cutoff: float) -> str:
+def _topology_tag(
+    out_strength: float,
+    in_strength: float,
+    relay_score: float,
+    source_cutoff: float,
+    sink_cutoff: float,
+    relay_cutoff: float,
+) -> str:
     net = out_strength - in_strength
     if relay_score >= relay_cutoff and abs(net) <= max(0.05, relay_cutoff * 0.1):
         return "relay"
@@ -142,7 +149,10 @@ def _compute_directed_edges(frame: pd.DataFrame, nodes: list[str]) -> list[dict[
                     "significance": _significance_tag(best_fp),
                 }
             )
-    edges.sort(key=lambda item: (item["confidence"], item["f_proxy"], item["transfer_entropy"]), reverse=True)
+    edges.sort(
+        key=lambda item: (item["confidence"], item["f_proxy"], item["transfer_entropy"]),
+        reverse=True,
+    )
     return edges
 
 
@@ -160,9 +170,21 @@ def _centrality_analysis(nodes: list[str], edges: list[dict[str, Any]]) -> dict[
 
     relay_scores = {node: round(out_strength[node] * in_strength[node], 4) for node in nodes}
     net_flow = {node: round(out_strength[node] - in_strength[node], 4) for node in nodes}
-    source_cutoff = float(np.quantile(np.asarray(list(net_flow.values()), dtype=float), 0.75)) if net_flow else 0.0
-    sink_cutoff = float(np.quantile(np.asarray(list(net_flow.values()), dtype=float), 0.25)) if net_flow else 0.0
-    relay_cutoff = float(np.quantile(np.asarray(list(relay_scores.values()), dtype=float), 0.80)) if relay_scores else 0.0
+    source_cutoff = (
+        float(np.quantile(np.asarray(list(net_flow.values()), dtype=float), 0.75))
+        if net_flow
+        else 0.0
+    )
+    sink_cutoff = (
+        float(np.quantile(np.asarray(list(net_flow.values()), dtype=float), 0.25))
+        if net_flow
+        else 0.0
+    )
+    relay_cutoff = (
+        float(np.quantile(np.asarray(list(relay_scores.values()), dtype=float), 0.80))
+        if relay_scores
+        else 0.0
+    )
 
     nodes_summary: dict[str, dict[str, Any]] = {}
     for node in nodes:
@@ -183,15 +205,21 @@ def _centrality_analysis(nodes: list[str], edges: list[dict[str, Any]]) -> dict[
             ),
         }
 
-    sorted_sources = sorted(nodes_summary.items(), key=lambda item: item[1]["net_flow"], reverse=True)
-    sorted_relays = sorted(nodes_summary.items(), key=lambda item: item[1]["relay_score"], reverse=True)
+    sorted_sources = sorted(
+        nodes_summary.items(), key=lambda item: item[1]["net_flow"], reverse=True
+    )
+    sorted_relays = sorted(
+        nodes_summary.items(), key=lambda item: item[1]["relay_score"], reverse=True
+    )
     sorted_sinks = sorted(nodes_summary.items(), key=lambda item: item[1]["net_flow"])
     return {
         "nodes": nodes_summary,
         "top_sources": [node for node, _ in sorted_sources[:5]],
         "top_sinks": [node for node, _ in sorted_sinks[:5]],
         "top_relays": [node for node, _ in sorted_relays[:5]],
-        "bottlenecks": [node for node, info in sorted_relays[:5] if info["topology_role"] == "relay"],
+        "bottlenecks": [
+            node for node, info in sorted_relays[:5] if info["topology_role"] == "relay"
+        ],
     }
 
 
@@ -205,14 +233,19 @@ def _feedback_loops(edges: list[dict[str, Any]]) -> list[dict[str, Any]]:
         backward = edge_map.get((target, source))
         if not forward or not backward:
             continue
-        if float(forward["confidence"]) < COMMUNITY_EDGE_THRESHOLD or float(backward["confidence"]) < COMMUNITY_EDGE_THRESHOLD:
+        if (
+            float(forward["confidence"]) < COMMUNITY_EDGE_THRESHOLD
+            or float(backward["confidence"]) < COMMUNITY_EDGE_THRESHOLD
+        ):
             continue
         loops.append(
             {
                 "pair": f"{source} <-> {target}",
                 "forward_confidence": forward["confidence"],
                 "backward_confidence": backward["confidence"],
-                "combined_confidence": round((float(forward["confidence"]) + float(backward["confidence"])) / 2.0, 4),
+                "combined_confidence": round(
+                    (float(forward["confidence"]) + float(backward["confidence"])) / 2.0, 4
+                ),
             }
         )
     loops.sort(key=lambda item: float(item["combined_confidence"]), reverse=True)
@@ -324,17 +357,27 @@ def _event_topology(frame: pd.DataFrame) -> dict[str, Any]:
     if "fed_surprise" in frame.columns:
         fed_values: NDArray[np.float64] = np.asarray(frame["fed_surprise"].to_numpy(), dtype=float)
         fed_mask: NDArray[np.bool_] = np.asarray(np.abs(fed_values) > 0.0, dtype=bool)
-        topologies["fed_surprise_events"] = _subset_network(frame.loc[fed_mask], "Fed Surprise Events")
+        topologies["fed_surprise_events"] = _subset_network(
+            frame.loc[fed_mask], "Fed Surprise Events"
+        )
     if "geo_severity" in frame.columns:
         geo_values: NDArray[np.float64] = np.asarray(frame["geo_severity"].to_numpy(), dtype=float)
         threshold = float(pd.Series(geo_values).quantile(0.75))
         geo_mask: NDArray[np.bool_] = np.asarray(geo_values >= threshold, dtype=bool)
-        topologies["geopolitical_stress_events"] = _subset_network(frame.loc[geo_mask], "Geopolitical Stress Events")
+        topologies["geopolitical_stress_events"] = _subset_network(
+            frame.loc[geo_mask], "Geopolitical Stress Events"
+        )
     if "macro_pressure" in frame.columns:
-        macro_values: NDArray[np.float64] = np.asarray(frame["macro_pressure"].to_numpy(), dtype=float)
+        macro_values: NDArray[np.float64] = np.asarray(
+            frame["macro_pressure"].to_numpy(), dtype=float
+        )
         macro_threshold = float(pd.Series(np.abs(macro_values)).quantile(0.75))
-        macro_mask: NDArray[np.bool_] = np.asarray(np.abs(macro_values) >= macro_threshold, dtype=bool)
-        topologies["macro_pressure_events"] = _subset_network(frame.loc[macro_mask], "Macro Pressure Events")
+        macro_mask: NDArray[np.bool_] = np.asarray(
+            np.abs(macro_values) >= macro_threshold, dtype=bool
+        )
+        topologies["macro_pressure_events"] = _subset_network(
+            frame.loc[macro_mask], "Macro Pressure Events"
+        )
     return topologies
 
 
@@ -381,7 +424,9 @@ def _network_stability(
         "topology_overlap": overlaps,
         "stable_edges": stable_edges,
         "centrality_overlap": centrality_overlap,
-        "mean_overlap": round(float(np.mean(np.asarray(list(overlaps.values()), dtype=float))) if overlaps else 0.0, 4),
+        "mean_overlap": round(
+            float(np.mean(np.asarray(list(overlaps.values()), dtype=float))) if overlaps else 0.0, 4
+        ),
     }
 
 
@@ -398,13 +443,13 @@ def _edge_registry(
     regime_presence: dict[str, int] = defaultdict(int)
     stress_presence: dict[str, int] = defaultdict(int)
     event_presence: dict[str, int] = defaultdict(int)
-    for label, network in regimes.items():
+    for _label, network in regimes.items():
         for edge in network.get("edges", []):
             regime_presence[f"{edge['source']}->{edge['target']}"] += 1
-    for label, network in stress.items():
+    for _label, network in stress.items():
         for edge in network.get("edges", []):
             stress_presence[f"{edge['source']}->{edge['target']}"] += 1
-    for label, network in events.items():
+    for _label, network in events.items():
         for edge in network.get("edges", []):
             event_presence[f"{edge['source']}->{edge['target']}"] += 1
 
@@ -443,7 +488,9 @@ def _edge_registry(
     registry.sort(
         key=lambda item: (
             float(item["confidence"]),
-            int(item["regime_presence"]) + int(item["stress_presence"]) + int(item["event_presence"]),
+            int(item["regime_presence"])
+            + int(item["stress_presence"])
+            + int(item["event_presence"]),
         ),
         reverse=True,
     )
@@ -660,7 +707,12 @@ def emit_dc2_phase3_reports(
         for idx, group in enumerate(communities["communities"])
     ]
     loop_rows: list[list[object]] = [
-        [loop["pair"], loop["forward_confidence"], loop["backward_confidence"], loop["combined_confidence"]]
+        [
+            loop["pair"],
+            loop["forward_confidence"],
+            loop["backward_confidence"],
+            loop["combined_confidence"],
+        ]
         for loop in communities["feedback_loops"][:10]
     ]
     write_markdown(
@@ -697,8 +749,7 @@ def emit_dc2_phase3_reports(
         [label, value] for label, value in stability["topology_overlap"].items()
     ]
     stable_edge_rows: list[list[object]] = [
-        [item["edge"], item["presence_count"]]
-        for item in stability["stable_edges"][:15]
+        [item["edge"], item["presence_count"]] for item in stability["stable_edges"][:15]
     ]
     write_markdown(
         stability_md,

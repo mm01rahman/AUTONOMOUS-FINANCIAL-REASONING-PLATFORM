@@ -1,0 +1,30 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "contradictory_evidence": 0,
+    "delta": 0.0067,
+    "direction": "INCREASE",
+    "evidence_quality": 0.5377,
+    "evidence_weight": 0.6568,
+    "independent_confirmations": 5,
+    "independent_failures": 0,
+    "posterior": 0.6067,
+    "prior": 0.6,
+    "replication_count": 1,
+    "supporting_evidence": 9
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+    "contradictory_evidence": 5,
+    "delta": -0.1498,
+    "direction": "DECREASE",
+    "evidence_quality": 0.3221,
+    "evidence_weight": 0.362,
+    "independent_confirmations": 0,
+    "independent_failures": 5,
+    "posterior": 0.4402,
+    "prior": 0.59,
+    "replication_count": 1,
+    "supporting_evidence": 2
+  }
+]

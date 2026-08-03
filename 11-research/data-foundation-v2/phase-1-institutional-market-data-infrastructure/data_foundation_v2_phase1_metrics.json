@@ -1,0 +1,52 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0035",
+  "covered_variable_count": 22,
+  "dataset_count": 13,
+  "final_report": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\FINAL_REPORT.md",
+  "graph_edges_created": 1,
+  "graph_nodes_created": 0,
+  "memory_records_created": [
+    "IKMEM-T4-20260802-0041",
+    "IKMEM-T1-20260802-0079",
+    "IKMEM-T1-20260802-0080",
+    "IKMEM-T1-20260802-0081",
+    "IKMEM-T1-20260802-0082",
+    "IKMEM-T1-20260802-0083"
+  ],
+  "no_alpha_validation": true,
+  "no_broker_connectivity": true,
+  "no_runtime_changes": true,
+  "proxy_dependence_reduction": 7,
+  "ready_mechanisms_after_tier1": [],
+  "remaining_blocked_families": [
+    "FAM-001",
+    "FAM-002",
+    "FAM-003",
+    "FAM-004",
+    "FAM-005",
+    "FAM-006",
+    "FAM-007"
+  ],
+  "remaining_commercial_only_gaps": [
+    "DS-002",
+    "DS-004",
+    "DS-005",
+    "DS-006",
+    "DS-013",
+    "DS-015",
+    "DS-016",
+    "DS-020"
+  ],
+  "report_paths": {
+    "arb_recommendation": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\ARB_RECOMMENDATION_DATA_FOUNDATION_V2_PHASE1.md",
+    "coverage_dashboard": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\COVERAGE_DASHBOARD.md",
+    "dataset_registry": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\DATASET_REGISTRY.md",
+    "json_schema_library": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\JSON_SCHEMA_LIBRARY.md",
+    "manifest_catalogue": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\MANIFEST_CATALOGUE.md",
+    "market_state_registry": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\MARKET_STATE_REGISTRY.md",
+    "metadata_catalogue": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\METADATA_CATALOGUE.md",
+    "observability_improvement_report": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\OBSERVABILITY_IMPROVEMENT_REPORT.md",
+    "provider_library": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\PROVIDER_LIBRARY.md",
+    "quality_dashboard": "11-research\\data-foundation-v2\\phase-1-institutional-market-data-infrastructure\\QUALITY_DASHBOARD.md"
+  }
+}

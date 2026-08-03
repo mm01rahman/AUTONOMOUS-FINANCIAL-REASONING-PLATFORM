@@ -1,0 +1,11 @@
+{
+  "engineering_quality": 1.0,
+  "knowledge_quality": 0.724,
+  "observability_quality": 0.78,
+  "overall_scientific_health": 0.7519,
+  "portfolio_quality": 0.7807,
+  "prediction_quality": 0.6979,
+  "replication_quality": 0.684,
+  "research_quality": 0.7287,
+  "validation_quality": 0.62
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "evidence": "meta_research_registry.json",
+    "status": "complete",
+    "step": "observe_self"
+  },
+  {
+    "evidence": "self_evaluation_registry.json",
+    "status": "complete",
+    "step": "identify_weaknesses"
+  },
+  {
+    "evidence": "improvement_registry.json",
+    "status": "complete",
+    "step": "prioritize_improvements"
+  },
+  {
+    "evidence": "top_candidate=IMP-004",
+    "status": "complete",
+    "step": "design_research"
+  },
+  {
+    "evidence": "approved_candidates=5",
+    "status": "planned",
+    "step": "execute_research"
+  },
+  {
+    "evidence": "awaiting governed campaign execution",
+    "status": "planned",
+    "step": "evaluate_outcome"
+  },
+  {
+    "evidence": "meta_learning_registry.json",
+    "status": "planned",
+    "step": "update_knowledge"
+  },
+  {
+    "evidence": "roadmap_registry.json",
+    "status": "planned",
+    "step": "improve_future_planning"
+  }
+]

@@ -1,0 +1,220 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0307
+- IKROS-CAMPAIGNAUDIT-20260802-0308
+- IKROS-CAMPAIGNAUDIT-20260802-0309
+- IKROS-CAMPAIGNAUDIT-20260802-0310
+- IKROS-CAMPAIGNAUDIT-20260802-0311
+- IKROS-CAMPAIGNAUDIT-20260802-0312
+- IKROS-CAMPAIGNAUDIT-20260802-0313
+- IKROS-CAMPAIGNAUDIT-20260802-0314
+- IKROS-CAMPAIGNAUDIT-20260802-0315
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0022
+campaign_type: RESEARCH_AUDIT
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0022
+created_at: '2026-08-02T11:24:57.772978+00:00'
+evidence_refs: []
+failure_policy: CONTINUE
+finished_at: '2026-08-02T11:34:53.820270+00:00'
+lifecycle_state: FAILED
+objective: Construct the first institutional market transition engine explaining how
+  approved macro, ecological, decision, and cross-asset mechanisms combine into XAU/USD
+  regime transitions.
+pipeline:
+  deterministic: true
+  name: RESEARCH_AUDIT pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0022
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0109
+  - IKROS-RESEARCHTASK-20260802-0113
+  - IKROS-RESEARCHTASK-20260802-0119
+research_question_id: null
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T11:34:50.014502+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T11:34:51.612362+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.46
+        economic: 0.68
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.62
+        operational: 0.5
+        overall: 0.555064300174054
+        prior: 0.58
+        replication: 0.0
+        statistical: 0.58
+        validation: 0.52
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260802-6001
+      instrument: XAU/USD
+      lifecycle_state: ANSWERED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: dc2-program-c-phase1
+          creation_context: Program C Phase 1 primary research question
+          motivation: Program A and Program B established the approved foundations;
+            Program C integrates them into a unified transition explanation.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: Institutional understanding now requires a systems-level transition
+        engine above the approved network, ecology, and decision models.
+      scope: CROSS_ASSET
+      spec_refs: []
+      time_horizon: 1D
+      title: 'DC2-PC1: How do macro conditions, institutional participants, decision
+        processes, liquidity, and cross-asset propagation combine to produce XAU/USD
+        regime transitions?'
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: 'Duplicate: ResearchQuestion ''IKROS-RQ-20260802-6001'' already registered'
+    graph_node_id: null
+    memory_record_id: null
+    metrics: {}
+    output_refs: []
+    payload: {}
+    selected_ids: []
+  started_at: '2026-08-02T11:34:51.092807+00:00'
+  status: FAILED
+  task_id: IKROS-RESEARCHTASK-20260802-0109
+  title: Research Question
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0109
+  finished_at: null
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.46
+        economic: 0.68
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.62
+        operational: 0.5
+        overall: 0.555064300174054
+        prior: 0.58
+        replication: 0.0
+        statistical: 0.58
+        validation: 0.52
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260802-6001
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: dc2-program-c-phase1
+          creation_context: Program C Phase 1 transition engine experiment
+          motivation: Integrate transition triggers, participant actions, decision
+            cascades, capital flow, and liquidity transformation into a unified institutional
+            engine.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: dc2-program-c-phase1-exp-v1
+      spec_refs: []
+      title: 'DC2-PC1-EXP-001: Institutional Market Transition Engine'
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0113
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0113
+  finished_at: null
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0119
+  title: Final Report
+title: 'DC2 Program C Phase 1: Institutional Market Transition Engine'
+updated_at: '2026-08-02T11:34:54.980168+00:00'
+work_package_refs:
+- WP-IMP-0048

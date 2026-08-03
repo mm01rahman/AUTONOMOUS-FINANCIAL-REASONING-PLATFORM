@@ -1,0 +1,855 @@
+[
+  {
+    "confidence": 0.734,
+    "decision": "INCREASE",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000000",
+          "price": 1894.41105249,
+          "quantity": 9.01604585,
+          "side": "buy",
+          "status": "partial"
+        },
+        {
+          "fill_id": "F00000001",
+          "price": 1894.65017115,
+          "quantity": 10.58355415,
+          "side": "buy",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "partial"
+    },
+    "market_observation": {
+      "event": "post-pandemic growth rebound",
+      "market_return": 0.01,
+      "regime": "BULL_TREND",
+      "replay_mode": "historical_replay",
+      "sequence": 0,
+      "shock": 0.01,
+      "timestamp": "2021-01-04T00:00:00Z",
+      "volatility": 0.012,
+      "xauusd_price": 1893.75
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1894.5401737621883,
+          "market_price": 1893.75,
+          "quantity": 19.5996,
+          "realized_pnl": 0.0
+        }
+      },
+      "state": {
+        "cash": 962866.20918669,
+        "drawdown": 1.705e-05,
+        "equity": 999982.95168669,
+        "gross_exposure": 37116.7425,
+        "leverage": 0.03711738,
+        "net_exposure": 37116.7425,
+        "realized_pnl": 0.0,
+        "total_pnl": -17.04831331,
+        "unrealized_pnl": -15.48708967
+      }
+    },
+    "replay_mode": "historical_replay",
+    "timestamp": "2021-01-04T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.7558,
+    "decision": "NO POSITION",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000002",
+          "price": 1904.22252933,
+          "quantity": 19.5996,
+          "side": "sell",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "ETF accumulation continuation",
+      "market_return": 0.006,
+      "regime": "RISK_ON",
+      "replay_mode": "walk_forward_replay",
+      "sequence": 1,
+      "shock": 0.008,
+      "timestamp": "2021-03-15T00:00:00Z",
+      "volatility": 0.011,
+      "xauusd_price": 1905.1125
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 0.0,
+          "market_price": 1905.1125,
+          "quantity": 0.0,
+          "realized_pnl": 189.7702961868838
+        }
+      },
+      "state": {
+        "cash": 1000187.31910187,
+        "drawdown": 0.0,
+        "equity": 1000187.31910187,
+        "gross_exposure": 0.0,
+        "leverage": 0.0,
+        "net_exposure": 0.0,
+        "realized_pnl": 189.77029619,
+        "total_pnl": 187.31910187,
+        "unrealized_pnl": 0.0
+      }
+    },
+    "replay_mode": "walk_forward_replay",
+    "timestamp": "2021-03-15T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.7916,
+    "decision": "BUY",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000003",
+          "price": 1898.48337517,
+          "quantity": 45.0211,
+          "side": "buy",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "hawkish central-bank repricing",
+      "market_return": -0.004,
+      "regime": "MACRO_TRANSITION",
+      "replay_mode": "rolling_replay",
+      "sequence": 2,
+      "shock": 0.014,
+      "timestamp": "2021-06-21T00:00:00Z",
+      "volatility": 0.015,
+      "xauusd_price": 1897.492
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1898.48337517,
+          "market_price": 1897.492,
+          "quantity": 45.0211,
+          "realized_pnl": 189.7702961868838
+        }
+      },
+      "state": {
+        "cash": 914714.51784483,
+        "drawdown": 4.562e-05,
+        "equity": 1000141.69492603,
+        "gross_exposure": 85427.1770812,
+        "leverage": 0.08541507,
+        "net_exposure": 85427.1770812,
+        "realized_pnl": 189.77029619,
+        "total_pnl": 141.69492603,
+        "unrealized_pnl": -44.63280067
+      }
+    },
+    "replay_mode": "rolling_replay",
+    "timestamp": "2021-06-21T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.8153,
+    "decision": "NO POSITION",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000004",
+          "price": 1883.51190007,
+          "quantity": 45.0211,
+          "side": "sell",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "real-yield normalization",
+      "market_return": -0.007,
+      "regime": "BEAR_TREND",
+      "replay_mode": "multi_year_replay",
+      "sequence": 3,
+      "shock": 0.015,
+      "timestamp": "2021-09-30T00:00:00Z",
+      "volatility": 0.016,
+      "xauusd_price": 1884.2096
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 0.0,
+          "market_price": 1884.2096,
+          "quantity": 0.0,
+          "realized_pnl": -484.2619814377322
+        }
+      },
+      "state": {
+        "cash": 999511.59774915,
+        "drawdown": 0.00067559,
+        "equity": 999511.59774915,
+        "gross_exposure": 0.0,
+        "leverage": 0.0,
+        "net_exposure": 0.0,
+        "realized_pnl": -484.26198144,
+        "total_pnl": -488.40225085,
+        "unrealized_pnl": 0.0
+      }
+    },
+    "replay_mode": "multi_year_replay",
+    "timestamp": "2021-09-30T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.8249,
+    "decision": "INCREASE",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000005",
+          "price": 1907.86369963,
+          "quantity": 20.762,
+          "side": "buy",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "growth scare and safe-haven bid",
+      "market_return": 0.012,
+      "regime": "RISK_OFF",
+      "replay_mode": "regime_replay",
+      "sequence": 4,
+      "shock": 0.025,
+      "timestamp": "2021-12-20T00:00:00Z",
+      "volatility": 0.02,
+      "xauusd_price": 1906.8201
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1907.8636996299997,
+          "market_price": 1906.8201,
+          "quantity": 20.762,
+          "realized_pnl": -484.2619814377322
+        }
+      },
+      "state": {
+        "cash": 959899.4880178,
+        "drawdown": 0.0006983,
+        "equity": 999488.886934,
+        "gross_exposure": 39589.3989162,
+        "leverage": 0.03960964,
+        "net_exposure": 39589.3989162,
+        "realized_pnl": -484.26198144,
+        "total_pnl": -511.113066,
+        "unrealized_pnl": -21.66721552
+      }
+    },
+    "replay_mode": "regime_replay",
+    "timestamp": "2021-12-20T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.7992,
+    "decision": "HOLD",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000006",
+          "price": 1940.01223781,
+          "quantity": 17.5997,
+          "side": "sell",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "geopolitical shock",
+      "market_return": 0.018,
+      "regime": "LIQUIDITY_CRISIS",
+      "replay_mode": "event_replay",
+      "sequence": 5,
+      "shock": 0.04,
+      "timestamp": "2022-03-14T00:00:00Z",
+      "volatility": 0.028,
+      "xauusd_price": 1941.1429
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1907.8636996299997,
+          "market_price": 1941.1429,
+          "quantity": 3.162300000000002,
+          "realized_pnl": 81.54264596881887
+        }
+      },
+      "state": {
+        "cash": 994041.99073739,
+        "drawdown": 6.85e-06,
+        "equity": 1000180.46693006,
+        "gross_exposure": 6138.47619267,
+        "leverage": 0.00613737,
+        "net_exposure": 6138.47619267,
+        "realized_pnl": 81.54264597,
+        "total_pnl": 180.46693006,
+        "unrealized_pnl": 105.23881533
+      }
+    },
+    "replay_mode": "event_replay",
+    "timestamp": "2022-03-14T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.786,
+    "decision": "BUY",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000007",
+          "price": 1924.57991673,
+          "quantity": 41.081,
+          "side": "buy",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "inflation surprise and forced repricing",
+      "market_return": -0.009,
+      "regime": "MACRO_TRANSITION",
+      "replay_mode": "shock_replay",
+      "sequence": 6,
+      "shock": 0.045,
+      "timestamp": "2022-06-13T00:00:00Z",
+      "volatility": 0.03,
+      "xauusd_price": 1923.6726
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1923.3851212844672,
+          "market_price": 1923.6726,
+          "quantity": 44.243300000000005,
+          "realized_pnl": 81.54264596881887
+        }
+      },
+      "state": {
+        "cash": 914977.41586148,
+        "drawdown": 0.00010026,
+        "equity": 1000087.03980506,
+        "gross_exposure": 85109.62394358,
+        "leverage": 0.08510222,
+        "net_exposure": 85109.62394358,
+        "realized_pnl": 81.54264597,
+        "total_pnl": 87.03980506,
+        "unrealized_pnl": 12.71900705
+      }
+    },
+    "replay_mode": "shock_replay",
+    "timestamp": "2022-06-13T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.785,
+    "decision": "INCREASE",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000008",
+          "price": 1943.6935962,
+          "quantity": 23.9013,
+          "side": "sell",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "USD funding stress session",
+      "market_return": 0.011,
+      "regime": "RISK_OFF",
+      "replay_mode": "session_replay",
+      "sequence": 7,
+      "shock": 0.031,
+      "timestamp": "2022-09-27T00:00:00Z",
+      "volatility": 0.021,
+      "xauusd_price": 1944.833
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1923.3851212844672,
+          "market_price": 1944.833,
+          "quantity": 20.342000000000006,
+          "realized_pnl": 566.9415974674423
+        }
+      },
+      "state": {
+        "cash": 961433.08020853,
+        "drawdown": 0.0,
+        "equity": 1000994.87309453,
+        "gross_exposure": 39561.792886,
+        "leverage": 0.03952247,
+        "net_exposure": 39561.792886,
+        "realized_pnl": 566.94159747,
+        "total_pnl": 994.87309453,
+        "unrealized_pnl": 436.29274883
+      }
+    },
+    "replay_mode": "session_replay",
+    "timestamp": "2022-09-27T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.808,
+    "decision": "INCREASE",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000009",
+          "price": 1957.49109433,
+          "quantity": 1.308,
+          "side": "sell",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "commodity complex divergence",
+      "market_return": 0.007,
+      "regime": "BULL_TREND",
+      "replay_mode": "historical_replay",
+      "sequence": 8,
+      "shock": 0.009,
+      "timestamp": "2023-01-17T00:00:00Z",
+      "volatility": 0.013,
+      "xauusd_price": 1958.4468
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1923.3851212844672,
+          "market_price": 1958.4468,
+          "quantity": 19.034000000000006,
+          "realized_pnl": 611.5522102109991
+        }
+      },
+      "state": {
+        "cash": 963992.52285424,
+        "drawdown": 0.0,
+        "equity": 1001269.59924544,
+        "gross_exposure": 37277.0763912,
+        "leverage": 0.03722981,
+        "net_exposure": 37277.0763912,
+        "realized_pnl": 611.55221021,
+        "total_pnl": 1269.59924544,
+        "unrealized_pnl": 667.36399267
+      }
+    },
+    "replay_mode": "historical_replay",
+    "timestamp": "2023-01-17T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.8394,
+    "decision": "BUY",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000010",
+          "price": 1969.23593212,
+          "quantity": 25.0263,
+          "side": "buy",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "policy path uncertainty",
+      "market_return": 0.005,
+      "regime": "MACRO_TRANSITION",
+      "replay_mode": "walk_forward_replay",
+      "sequence": 9,
+      "shock": 0.012,
+      "timestamp": "2023-04-24T00:00:00Z",
+      "volatility": 0.014,
+      "xauusd_price": 1968.239
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1949.4284334546815,
+          "market_price": 1968.239,
+          "quantity": 44.060300000000005,
+          "realized_pnl": 611.5522102109991
+        }
+      },
+      "state": {
+        "cash": 914708.83671411,
+        "drawdown": 0.0,
+        "equity": 1001430.03752581,
+        "gross_exposure": 86721.2008117,
+        "leverage": 0.08659736,
+        "net_exposure": 86721.2008117,
+        "realized_pnl": 611.55221021,
+        "total_pnl": 1430.03752581,
+        "unrealized_pnl": 828.79920516
+      }
+    },
+    "replay_mode": "walk_forward_replay",
+    "timestamp": "2023-04-24T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.8562,
+    "decision": "NO POSITION",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000011",
+          "price": 1983.11307184,
+          "quantity": 28.27132318,
+          "side": "sell",
+          "status": "partial"
+        },
+        {
+          "fill_id": "F00000012",
+          "price": 1982.98955067,
+          "quantity": 15.78897682,
+          "side": "sell",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "partial"
+    },
+    "market_observation": {
+      "event": "ETF persistence with benign growth",
+      "market_return": 0.008,
+      "regime": "RISK_ON",
+      "replay_mode": "rolling_replay",
+      "sequence": 10,
+      "shock": 0.006,
+      "timestamp": "2023-07-10T00:00:00Z",
+      "volatility": 0.01,
+      "xauusd_price": 1983.9849
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 0.0,
+          "market_price": 1983.9849,
+          "quantity": 0.0,
+          "realized_pnl": 2093.757209969739
+        }
+      },
+      "state": {
+        "cash": 1002081.57614292,
+        "drawdown": 0.0,
+        "equity": 1002081.57614292,
+        "gross_exposure": 0.0,
+        "leverage": 0.0,
+        "net_exposure": 0.0,
+        "realized_pnl": 2093.75720997,
+        "total_pnl": 2081.57614292,
+        "unrealized_pnl": 0.0
+      }
+    },
+    "replay_mode": "rolling_replay",
+    "timestamp": "2023-07-10T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.8518,
+    "decision": "INCREASE",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000013",
+          "price": 1964.79038611,
+          "quantity": 8.19003126,
+          "side": "buy",
+          "status": "partial"
+        },
+        {
+          "fill_id": "F00000014",
+          "price": 1965.11445044,
+          "quantity": 9.00936874,
+          "side": "buy",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "partial"
+    },
+    "market_observation": {
+      "event": "rates shock",
+      "market_return": -0.01,
+      "regime": "BEAR_TREND",
+      "replay_mode": "multi_year_replay",
+      "sequence": 11,
+      "shock": 0.03,
+      "timestamp": "2023-10-02T00:00:00Z",
+      "volatility": 0.022,
+      "xauusd_price": 1964.1451
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1964.9601370922699,
+          "market_price": 1964.1451,
+          "quantity": 17.199399999999997,
+          "realized_pnl": 2093.757209969739
+        }
+      },
+      "state": {
+        "cash": 968283.82612446,
+        "drawdown": 1.56e-05,
+        "equity": 1002065.9433574,
+        "gross_exposure": 33782.11723294,
+        "leverage": 0.03371247,
+        "net_exposure": 33782.11723294,
+        "realized_pnl": 2093.75720997,
+        "total_pnl": 2065.9433574,
+        "unrealized_pnl": -14.01814896
+      }
+    },
+    "replay_mode": "multi_year_replay",
+    "timestamp": "2023-10-02T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.8646,
+    "decision": "INCREASE",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000015",
+          "price": 1982.58374967,
+          "quantity": 3.1253,
+          "side": "buy",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "policy credibility stress",
+      "market_return": 0.009,
+      "regime": "RISK_OFF",
+      "replay_mode": "regime_replay",
+      "sequence": 12,
+      "shock": 0.022,
+      "timestamp": "2024-01-29T00:00:00Z",
+      "volatility": 0.018,
+      "xauusd_price": 1981.8224
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1967.6700947491693,
+          "market_price": 1981.8224,
+          "quantity": 20.324699999999996,
+          "realized_pnl": 2093.757209969739
+        }
+      },
+      "state": {
+        "cash": 962086.89578195,
+        "drawdown": 0.0,
+        "equity": 1002366.84151523,
+        "gross_exposure": 40279.94573328,
+        "leverage": 0.04018483,
+        "net_exposure": 40279.94573328,
+        "realized_pnl": 2093.75720997,
+        "total_pnl": 2366.84151523,
+        "unrealized_pnl": 287.64135853
+      }
+    },
+    "replay_mode": "regime_replay",
+    "timestamp": "2024-01-29T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.8407,
+    "decision": "HOLD",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000016",
+          "price": 2008.43974786,
+          "quantity": 17.2182,
+          "side": "sell",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "cross-asset de-risking event",
+      "market_return": 0.014,
+      "regime": "LIQUIDITY_CRISIS",
+      "replay_mode": "event_replay",
+      "sequence": 13,
+      "shock": 0.038,
+      "timestamp": "2024-04-15T00:00:00Z",
+      "volatility": 0.026,
+      "xauusd_price": 2009.5679
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 1967.6700947491693,
+          "market_price": 2009.5679,
+          "quantity": 3.106499999999997,
+          "realized_pnl": 2795.737251162643
+        }
+      },
+      "state": {
+        "cash": 996667.48489641,
+        "drawdown": 0.0,
+        "equity": 1002910.20757776,
+        "gross_exposure": 6242.72268135,
+        "leverage": 0.00622461,
+        "net_exposure": 6242.72268135,
+        "realized_pnl": 2795.73725116,
+        "total_pnl": 2910.20757776,
+        "unrealized_pnl": 130.15553201
+      }
+    },
+    "replay_mode": "event_replay",
+    "timestamp": "2024-04-15T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.8673,
+    "decision": "BUY",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000017",
+          "price": 2018.51950448,
+          "quantity": 40.2992,
+          "side": "buy",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "real-rate overshoot",
+      "market_return": 0.004,
+      "regime": "MACRO_TRANSITION",
+      "replay_mode": "shock_replay",
+      "sequence": 14,
+      "shock": 0.018,
+      "timestamp": "2024-07-22T00:00:00Z",
+      "volatility": 0.017,
+      "xauusd_price": 2017.6062
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 2014.8802660544286,
+          "market_price": 2017.6062,
+          "quantity": 43.405699999999996,
+          "realized_pnl": 2795.737251162643
+        }
+      },
+      "state": {
+        "cash": 915321.85037699,
+        "drawdown": 1.271e-05,
+        "equity": 1002897.45981233,
+        "gross_exposure": 87575.60943534,
+        "leverage": 0.0873226,
+        "net_exposure": 87575.60943534,
+        "realized_pnl": 2795.73725116,
+        "total_pnl": 2897.45981233,
+        "unrealized_pnl": 118.32107106
+      }
+    },
+    "replay_mode": "shock_replay",
+    "timestamp": "2024-07-22T00:00:00+00:00"
+  },
+  {
+    "confidence": 0.8818,
+    "decision": "NO POSITION",
+    "execution": {
+      "fills": [
+        {
+          "fill_id": "F00000018",
+          "price": 2028.72599964,
+          "quantity": 43.4057,
+          "side": "sell",
+          "status": "filled"
+        }
+      ],
+      "reason": "ok",
+      "simulated_only": true,
+      "status": "filled"
+    },
+    "market_observation": {
+      "event": "session transition accumulation",
+      "market_return": 0.006,
+      "regime": "RISK_ON",
+      "replay_mode": "session_replay",
+      "sequence": 15,
+      "shock": 0.007,
+      "timestamp": "2024-10-07T00:00:00Z",
+      "volatility": 0.012,
+      "xauusd_price": 2029.7118
+    },
+    "portfolio_state": {
+      "positions": {
+        "XAUUSD": {
+          "avg_price": 0.0,
+          "market_price": 2029.7118,
+          "quantity": 0.0,
+          "realized_pnl": 3396.721009457882
+        }
+      },
+      "state": {
+        "cash": 1003379.13669921,
+        "drawdown": 0.0,
+        "equity": 1003379.13669921,
+        "gross_exposure": 0.0,
+        "leverage": 0.0,
+        "net_exposure": 0.0,
+        "realized_pnl": 3396.72100946,
+        "total_pnl": 3379.13669921,
+        "unrealized_pnl": 0.0
+      }
+    },
+    "replay_mode": "session_replay",
+    "timestamp": "2024-10-07T00:00:00+00:00"
+  }
+]

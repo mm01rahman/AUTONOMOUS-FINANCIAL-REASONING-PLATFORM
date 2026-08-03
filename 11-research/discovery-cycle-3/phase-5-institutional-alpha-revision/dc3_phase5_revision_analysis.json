@@ -1,0 +1,510 @@
+{
+  "arb_summary": {
+    "execute_batch_2_now": false,
+    "institutional_learning": [
+      "Ecology-model dependency is a systemic weakness across FAM-006 mechanisms; decouple before any revalidation.",
+      "Concept drift must be treated as a first-class gate; mechanisms with confirmed drift require regime-restricted revalidation.",
+      "Static trigger thresholds are non-stationary; all future mechanism designs must use regime-conditional trigger logic.",
+      "VIX and TED spread are critical missing datasets; acquisition is a prerequisite for multiple planned experiments."
+    ],
+    "mechanisms_ready_for_revalidation": [
+      "IKROS-ALPHA-DC3-20260802-0006"
+    ],
+    "mechanisms_reject": [],
+    "mechanisms_research": [
+      "IKROS-ALPHA-DC3-20260802-0009"
+    ],
+    "promote_now": false,
+    "recommended_next_action": "safe_haven_migration is READY_FOR_REVALIDATION pending composite trigger implementation and VIX/TED dataset acquisition. decision_cascade requires further RESEARCH: proxy replacement must precede revalidation. Await ARB approval before revalidation.",
+    "total_dataset_gaps": 7,
+    "total_experiment_backlog": 8
+  },
+  "batch": "BATCH-001",
+  "combined_dataset_gaps": [
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "gap": "VIX daily series",
+      "impact": "Required for composite_stress_index; currently absent from standard dataset.",
+      "mechanism_type": "safe_haven_migration",
+      "priority": "HIGH"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "gap": "TED spread daily series",
+      "impact": "Systemic liquidity stress proxy; required for multi-channel composite index.",
+      "mechanism_type": "safe_haven_migration",
+      "priority": "HIGH"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "gap": "Gold ETF flow proxy (GLD shares outstanding)",
+      "impact": "Institutional demand proxy currently missing; needed to validate activation cascade.",
+      "mechanism_type": "safe_haven_migration",
+      "priority": "MEDIUM"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "gap": "CHF, JPY, Treasury safe-haven series",
+      "impact": "Required to control for competing safe-haven destinations; currently absent.",
+      "mechanism_type": "safe_haven_migration",
+      "priority": "MEDIUM"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "gap": "Intra-day order flow imbalance proxy",
+      "impact": "Required for proposed cascade-initiator replacement proxy.",
+      "mechanism_type": "decision_cascade",
+      "priority": "HIGH"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "gap": "Options market pressure proxy (GVZ or similar)",
+      "impact": "Optionality pressure indicator for cascade initiation signal.",
+      "mechanism_type": "decision_cascade",
+      "priority": "HIGH"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "gap": "Regime-specific XAU/USD micro-structure data",
+      "impact": "Decision cascade hypothesis requires micro-structure evidence to validate.",
+      "mechanism_type": "decision_cascade",
+      "priority": "MEDIUM"
+    }
+  ],
+  "combined_experiment_backlog": [
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "experiment_id": "EXP-SHM-001",
+      "mechanism_type": "safe_haven_migration",
+      "objective": "Validate composite_stress_index trigger under regime-conditional WF with VIX and TED spread.",
+      "prerequisite": "VIX and TED spread data acquisition.",
+      "priority": "HIGH",
+      "title": "Regime-Conditional Trigger Walk-Forward"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "experiment_id": "EXP-SHM-002",
+      "mechanism_type": "safe_haven_migration",
+      "objective": "Isolate whether concept drift is persistent or transient using 2020\u20132026 sub-sample.",
+      "prerequisite": "VIX dataset.",
+      "priority": "HIGH",
+      "title": "Post-2020 Out-of-Sample Concept Drift Analysis"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "experiment_id": "EXP-SHM-003",
+      "mechanism_type": "safe_haven_migration",
+      "objective": "Compare safe-haven migration mechanism against CHF, JPY, Treasury alternatives.",
+      "prerequisite": "CHF/JPY/Treasury data.",
+      "priority": "MEDIUM",
+      "title": "Competing Safe-Haven Asset Control"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "experiment_id": "EXP-SHM-004",
+      "mechanism_type": "safe_haven_migration",
+      "objective": "Validate regime-exit signal against static horizon across bull_trend and crisis_dislocation.",
+      "prerequisite": "Regime classification overlay.",
+      "priority": "MEDIUM",
+      "title": "Regime-Exit Signal Temporal Stability"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "experiment_id": "EXP-DC-001",
+      "mechanism_type": "decision_cascade",
+      "objective": "Test dxy_momentum_divergence \u00d7 yield_inversion_speed as cascade-initiator proxy in walk-forward. Completely independent of ecology model.",
+      "prerequisite": "Proxy construction from existing features.",
+      "priority": "HIGH",
+      "title": "Order-Flow Cascade Proxy Standalone WF"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "experiment_id": "EXP-DC-002",
+      "mechanism_type": "decision_cascade",
+      "objective": "Validate cascade mechanism in macro_transition regime only; defer other regimes.",
+      "prerequisite": "EXP-DC-001 order-flow proxy.",
+      "priority": "HIGH",
+      "title": "Macro Transition Regime-Restricted Cascade"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "experiment_id": "EXP-DC-003",
+      "mechanism_type": "decision_cascade",
+      "objective": "Compare pre-2019 and post-2019 cascade patterns explicitly to determine if structural break is a feature or a flaw.",
+      "prerequisite": "None.",
+      "priority": "MEDIUM",
+      "title": "Concept Drift Sub-Period Analysis"
+    },
+    {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "experiment_id": "EXP-DC-004",
+      "mechanism_type": "decision_cascade",
+      "objective": "Test vol_clustering_score as cascade-depth proxy under nested walk-forward.",
+      "prerequisite": "Intra-day vol feature construction.",
+      "priority": "MEDIUM",
+      "title": "Volatility Clustering Cascade Amplification"
+    }
+  ],
+  "confidence_updates": {
+    "decision_cascade": {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "delta": -0.018,
+      "direction": "DECREASE",
+      "phase4_posterior": 0.528,
+      "phase5_posterior": 0.51
+    },
+    "safe_haven_migration": {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "delta": 0.014,
+      "direction": "MARGINAL_INCREASE",
+      "phase4_posterior": 0.576,
+      "phase5_posterior": 0.59
+    }
+  },
+  "ecology_knowledge_graph": {
+    "conclusion_node": {
+      "confidence": 0.68,
+      "label": "DC3 Phase 5 Institutional Alpha Revision Conclusion",
+      "node_id": "IKROS-DC3P5-CONCLUSION-20260802-0001",
+      "node_type": "RESEARCH_CONCLUSION"
+    },
+    "edges": [
+      {
+        "confidence": 0.59,
+        "relation": "REVISED_BY",
+        "source": "IKROS-ALPHA-DC3-20260802-0006",
+        "target": "IKROS-DC3P5-REVISION-0006"
+      },
+      {
+        "confidence": 0.68,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P5-REVISION-0006",
+        "target": "IKROS-DC3P5-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.51,
+        "relation": "REVISED_BY",
+        "source": "IKROS-ALPHA-DC3-20260802-0009",
+        "target": "IKROS-DC3P5-REVISION-0009"
+      },
+      {
+        "confidence": 0.68,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-DC3P5-REVISION-0009",
+        "target": "IKROS-DC3P5-CONCLUSION-20260802-0001"
+      }
+    ],
+    "revision_nodes": [
+      {
+        "confidence": 0.59,
+        "label": "DC3P5 Revision: IKROS-ALPHA-DC3-20260802-0006 -> READY_FOR_REVALIDATION",
+        "node_id": "IKROS-DC3P5-REVISION-0006",
+        "node_type": "KNOWLEDGE_OBJECT"
+      },
+      {
+        "confidence": 0.51,
+        "label": "DC3P5 Revision: IKROS-ALPHA-DC3-20260802-0009 -> RESEARCH",
+        "node_id": "IKROS-DC3P5-REVISION-0009",
+        "node_type": "KNOWLEDGE_OBJECT"
+      }
+    ]
+  },
+  "execute_batch_2_now": false,
+  "mechanisms_revised": 2,
+  "phase": "DISCOVERY_CYCLE_3_PHASE_5",
+  "promote_now": false,
+  "revision_analyses": {
+    "decision_cascade": {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+      "arb_decision": "RESEARCH",
+      "arb_rationale": "Decision cascade mechanism requires significant proxy redesign before revalidation is warranted. Core causal chain is plausible but current implementation is not ready for immediate revalidation. Further research (proxy construction, regime restriction) must precede a READY_FOR_REVALIDATION decision.",
+      "assumptions_failed": [
+        {
+          "assumption": "Cascade initiator proxy reliably identifies HF-driven decision cascades in XAU/USD.",
+          "failure_evidence": "Sensitivity analysis: results invert under \u00b115% shift. CPCV reveals ecology-proxy leakage. Proxy is unreliable.",
+          "priority": "HIGH",
+          "revision_action": "REPLACE_PROXY"
+        },
+        {
+          "assumption": "Decision cascade patterns are temporally stable across pre- and post-2019 market structure.",
+          "failure_evidence": "Concept drift: significant structural break detected post-2019. Mechanism strength is highly period-dependent.",
+          "priority": "HIGH",
+          "revision_action": "RESTRICT_TO_VALIDATED_REGIME"
+        },
+        {
+          "assumption": "Cascade mechanism survives multiple-hypothesis benchmark correction.",
+          "failure_evidence": "White's RC p=0.18, SPA p=0.21. Mechanism does not outperform benchmark ensemble under MC correction.",
+          "priority": "HIGH",
+          "revision_action": "REDESIGN_OR_RESEARCH"
+        },
+        {
+          "assumption": "Decision ecology model provides a reliable causal input to cascade initiator detection.",
+          "failure_evidence": "Program E identified decision ecology as requiring investigation. Ecology-proxy leakage confirmed in Phase 4 CPCV.",
+          "priority": "HIGH",
+          "revision_action": "DECOUPLE_FROM_ECOLOGY_MODEL"
+        }
+      ],
+      "assumptions_supported": [
+        "Fast-participant decision cascades are economically plausible during macro_transition and crisis regimes (DC2 B2 lineage).",
+        "Walk-forward detects cascade patterns at moderate accuracy in macro_transition regime.",
+        "Historical replay identifies 3/7 decision-cascade episodes \u2014 partial confirmation of existence."
+      ],
+      "causal_mechanisms_remaining_plausible": [
+        "Large institutional actor initiates position; order flow imbalance creates directional pressure that forces constrained actors to adjust: causally plausible.",
+        "Cascade amplification through dealer inventory stress: consistent with liquidity evidence from Program D/E."
+      ],
+      "causal_mechanisms_requiring_revision": [
+        {
+          "mechanism": "Decision ecology model \u2192 cascade initiator identification",
+          "problem": "Ecology model itself is unvalidated (Program E: participant_ecology recommended for removal; decision_ecology requires investigation). Using it as a cascade proxy creates a circular, unvalidated dependency.",
+          "proposed_revision": "Replace ecology-derived proxy with order-flow-based observable proxy. Decouple cascade mechanism from ecology model entirely for revalidation purposes."
+        },
+        {
+          "mechanism": "Temporal stability of cascade patterns",
+          "problem": "Post-2019 concept drift shows cascade patterns are not stable. Pre-2019 vs post-2019 regimes may represent structurally different cascade dynamics.",
+          "proposed_revision": "Restrict initial revalidation to macro_transition regime only. Expand to other regimes only after regime-specific evidence is gathered."
+        }
+      ],
+      "confidence_delta_revision": -0.018,
+      "confidence_phase4_posterior": 0.528,
+      "confidence_posterior_revised": 0.51,
+      "confidence_revision": {
+        "contingent_on": "Proxy replacement (ecology-independent order-flow approach) and regime-restriction to macro_transition.",
+        "direction": "DECREASE",
+        "posterior_revision": 0.51,
+        "prior_phase4": 0.528,
+        "revision_rationale": "Multiple critical failures confirmed. Proxy redesign is required before revalidation. Core causal chain (order-flow cascade) remains plausible but is not supported by current proxy set. Confidence decreases to reflect increased uncertainty until proxy redesign complete."
+      },
+      "dataset_gaps": [
+        {
+          "gap": "Intra-day order flow imbalance proxy",
+          "impact": "Required for proposed cascade-initiator replacement proxy.",
+          "priority": "HIGH"
+        },
+        {
+          "gap": "Options market pressure proxy (GVZ or similar)",
+          "impact": "Optionality pressure indicator for cascade initiation signal.",
+          "priority": "HIGH"
+        },
+        {
+          "gap": "Regime-specific XAU/USD micro-structure data",
+          "impact": "Decision cascade hypothesis requires micro-structure evidence to validate.",
+          "priority": "MEDIUM"
+        }
+      ],
+      "evidence_insufficient": [
+        "No reliable cascade-initiator proxy exists without the ecology model. Standalone cascade proxy is currently unavailable.",
+        "Decision cascade literature evidence is predominantly qualitative; no XAU/USD-specific quantitative evidence in IKROS.",
+        "Regime-specific cascade evidence is only partial: macro_transition has some support; calm_carry and crisis_dislocation sub-samples are under-powered."
+      ],
+      "experiment_backlog": [
+        {
+          "experiment_id": "EXP-DC-001",
+          "objective": "Test dxy_momentum_divergence \u00d7 yield_inversion_speed as cascade-initiator proxy in walk-forward. Completely independent of ecology model.",
+          "prerequisite": "Proxy construction from existing features.",
+          "priority": "HIGH",
+          "title": "Order-Flow Cascade Proxy Standalone WF"
+        },
+        {
+          "experiment_id": "EXP-DC-002",
+          "objective": "Validate cascade mechanism in macro_transition regime only; defer other regimes.",
+          "prerequisite": "EXP-DC-001 order-flow proxy.",
+          "priority": "HIGH",
+          "title": "Macro Transition Regime-Restricted Cascade"
+        },
+        {
+          "experiment_id": "EXP-DC-003",
+          "objective": "Compare pre-2019 and post-2019 cascade patterns explicitly to determine if structural break is a feature or a flaw.",
+          "prerequisite": "None.",
+          "priority": "MEDIUM",
+          "title": "Concept Drift Sub-Period Analysis"
+        },
+        {
+          "experiment_id": "EXP-DC-004",
+          "objective": "Test vol_clustering_score as cascade-depth proxy under nested walk-forward.",
+          "prerequisite": "Intra-day vol feature construction.",
+          "priority": "MEDIUM",
+          "title": "Volatility Clustering Cascade Amplification"
+        }
+      ],
+      "family_id": "FAM-006",
+      "features_requiring_redesign": [
+        {
+          "current_proxy": "decision_ecology_score (derived from Program B2 ecology model)",
+          "expected_improvement": "Removes ecology-model dependency; reduces leakage; increases proxy robustness.",
+          "failure_mode": "Ecology-proxy leakage; high sensitivity; non-stationary post-2019.",
+          "feature": "cascade_initiator_proxy",
+          "proposed_replacement": "Dual-proxy approach: (1) large-order-flow imbalance proxy from DXY momentum divergence, (2) optionality pressure indicator from yield-curve inversion speed.",
+          "requires_new_data": [
+            "options_data_proxy",
+            "order_flow_imbalance_proxy"
+          ]
+        },
+        {
+          "current_proxy": "participant_count_proxy (ecology model output)",
+          "expected_improvement": "Removes circular dependency; uses already-available data.",
+          "failure_mode": "Ecology model not validated; proxy is circular with initiator.",
+          "feature": "cascade_depth_estimator",
+          "proposed_replacement": "Intra-day volatility clustering score as cascade amplification proxy (available from existing vol_features).",
+          "requires_new_data": []
+        }
+      ],
+      "mechanism_type": "decision_cascade",
+      "phase4_outcome": "RESEARCH",
+      "proxy_replacements": [
+        {
+          "current_proxy": "decision_ecology_score",
+          "proposed_proxy": "dxy_momentum_divergence \u00d7 yield_inversion_speed",
+          "scientific_rationale": "Order-flow-based proxies are not contingent on unvalidated ecology model. Literature supports order-flow imbalance as cascade-initiator signal."
+        },
+        {
+          "current_proxy": "participant_count_proxy",
+          "proposed_proxy": "vol_clustering_score (intra-day GARCH-derived)",
+          "scientific_rationale": "Volatility clustering is an observable footprint of sequential institutional order execution, not dependent on ecology model."
+        }
+      ]
+    },
+    "safe_haven_migration": {
+      "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+      "arb_decision": "READY_FOR_REVALIDATION",
+      "arb_rationale": "Core economic mechanism remains scientifically plausible. Identified failures are addressable through trigger redesign and dataset expansion. Mechanism is not rejected \u2014 revalidation is warranted after composite trigger implementation.",
+      "assumptions_failed": [
+        {
+          "assumption": "Safe-haven trigger is stable across all post-2010 regimes.",
+          "failure_evidence": "Concept drift detector flags structural break post-2020. COVID-era and post-pandemic regimes show materially different trigger dynamics.",
+          "priority": "HIGH",
+          "revision_action": "REDESIGN_TRIGGER"
+        },
+        {
+          "assumption": "Static trigger threshold remains valid under all volatility environments.",
+          "failure_evidence": "Sensitivity analysis shows result inversion under \u00b120% parameter shift in trigger threshold. Threshold is non-stationary.",
+          "priority": "HIGH",
+          "revision_action": "REPLACE_WITH_REGIME_CONDITIONAL_THRESHOLD"
+        },
+        {
+          "assumption": "White's Reality Check and SPA test will confirm edge over benchmark ensemble.",
+          "failure_evidence": "White's RC p=0.09, SPA p=0.11 \u2014 borderline. Insufficient to confirm mechanism survives multiple-hypothesis correction.",
+          "priority": "MEDIUM",
+          "revision_action": "EXPAND_DATASET_AND_RETEST"
+        }
+      ],
+      "assumptions_supported": [
+        "Safe-haven demand activation during systemic stress events is economically plausible and consistent with DC2 ecology model.",
+        "Directional signal during crisis_dislocation and bull_trend regimes maintains moderate accuracy (walk-forward PASS, historical replay 4/6 episodes).",
+        "PBO P(overfitting) = 0.32 confirms mechanism is not simply a backtest artefact.",
+        "Probabilistic SR > 0.5 in 58% of bootstrap trials \u2014 positive tail exists."
+      ],
+      "causal_mechanisms_remaining_plausible": [
+        "Systemic stress \u2192 institutional safe-haven demand \u2192 gold allocation increase: core causal chain remains intact in crisis_dislocation evidence.",
+        "ETF investor coordination with institutional safe-haven mandate: DC2 Decision Ecology supports this cascade.",
+        "Safe-haven activation precedes price impact: lead-lag structure confirmed in historical replay (4/6 episodes)."
+      ],
+      "causal_mechanisms_requiring_revision": [
+        {
+          "mechanism": "Stress trigger \u2192 immediate safe-haven activation",
+          "problem": "Activation speed assumption is too uniform. Different participant classes activate at different latencies. Concept drift suggests latency structure has shifted post-2020.",
+          "proposed_revision": "Decompose activation into: (1) fast-participant trigger (macro HFs, <1h), (2) slow-participant cascade (ETF flows, 1-5 days). Model separately."
+        }
+      ],
+      "confidence_delta_revision": 0.014,
+      "confidence_phase4_posterior": 0.576,
+      "confidence_posterior_revised": 0.59,
+      "confidence_revision": {
+        "contingent_on": "Composite trigger redesign and VIX/TED dataset acquisition.",
+        "direction": "MARGINAL_INCREASE",
+        "posterior_revision": 0.59,
+        "prior_phase4": 0.576,
+        "revision_rationale": "Concept drift is a structural weakness but PBO and bootstrap results confirm non-trivial edge. Causal chain remains plausible. Core revision (composite trigger) is scientifically justifiable."
+      },
+      "dataset_gaps": [
+        {
+          "gap": "VIX daily series",
+          "impact": "Required for composite_stress_index; currently absent from standard dataset.",
+          "priority": "HIGH"
+        },
+        {
+          "gap": "TED spread daily series",
+          "impact": "Systemic liquidity stress proxy; required for multi-channel composite index.",
+          "priority": "HIGH"
+        },
+        {
+          "gap": "Gold ETF flow proxy (GLD shares outstanding)",
+          "impact": "Institutional demand proxy currently missing; needed to validate activation cascade.",
+          "priority": "MEDIUM"
+        },
+        {
+          "gap": "CHF, JPY, Treasury safe-haven series",
+          "impact": "Required to control for competing safe-haven destinations; currently absent.",
+          "priority": "MEDIUM"
+        }
+      ],
+      "evidence_insufficient": [
+        "Post-2020 regime-specific evidence: concept drift analysis requires out-of-sample data covering 2020\u20132026 safe-haven episodes explicitly.",
+        "Competing safe-haven asset evidence: no systematic comparison against BTC, CHF, JPY, Treasuries as competing safe-haven destinations.",
+        "Institutional flow data: no direct institutional flow proxy; all signals are price-derived."
+      ],
+      "experiment_backlog": [
+        {
+          "experiment_id": "EXP-SHM-001",
+          "objective": "Validate composite_stress_index trigger under regime-conditional WF with VIX and TED spread.",
+          "prerequisite": "VIX and TED spread data acquisition.",
+          "priority": "HIGH",
+          "title": "Regime-Conditional Trigger Walk-Forward"
+        },
+        {
+          "experiment_id": "EXP-SHM-002",
+          "objective": "Isolate whether concept drift is persistent or transient using 2020\u20132026 sub-sample.",
+          "prerequisite": "VIX dataset.",
+          "priority": "HIGH",
+          "title": "Post-2020 Out-of-Sample Concept Drift Analysis"
+        },
+        {
+          "experiment_id": "EXP-SHM-003",
+          "objective": "Compare safe-haven migration mechanism against CHF, JPY, Treasury alternatives.",
+          "prerequisite": "CHF/JPY/Treasury data.",
+          "priority": "MEDIUM",
+          "title": "Competing Safe-Haven Asset Control"
+        },
+        {
+          "experiment_id": "EXP-SHM-004",
+          "objective": "Validate regime-exit signal against static horizon across bull_trend and crisis_dislocation.",
+          "prerequisite": "Regime classification overlay.",
+          "priority": "MEDIUM",
+          "title": "Regime-Exit Signal Temporal Stability"
+        }
+      ],
+      "family_id": "FAM-003",
+      "features_requiring_redesign": [
+        {
+          "current_proxy": "stress_topology score threshold",
+          "expected_improvement": "Reduces concept drift by conditioning on current-regime stress calibration.",
+          "failure_mode": "Non-stationary; concept drift confirmed post-2020.",
+          "feature": "safe_haven_trigger",
+          "proposed_replacement": "Regime-conditional stress index: VIX regime \u00d7 DXY regime \u00d7 yield-spread regime \u2192 composite adaptive threshold.",
+          "requires_new_data": [
+            "VIX",
+            "TED_spread"
+          ]
+        },
+        {
+          "current_proxy": "Implicit \u2014 fixed holding horizon",
+          "expected_improvement": "Reduces overstay losses and improves temporal stability.",
+          "failure_mode": "Over-stay confirmed in stability_analysis; rolling performance choppy inter-regime.",
+          "feature": "safe_haven_persistence",
+          "proposed_replacement": "Regime-exit signal: exits safe-haven position when ecology stress score drops below calibrated threshold rather than fixed horizon.",
+          "requires_new_data": []
+        }
+      ],
+      "mechanism_type": "safe_haven_migration",
+      "phase4_outcome": "RESEARCH",
+      "proxy_replacements": [
+        {
+          "current_proxy": "stress_topology (graph-derived, single-path)",
+          "proposed_proxy": "composite_stress_index (VIX \u00d7 yield_spread \u00d7 DXY_momentum)",
+          "scientific_rationale": "Composite multi-channel stress index is less susceptible to topology disruption and more robust across regimes."
+        }
+      ]
+    }
+  },
+  "title": "Institutional Alpha Revision Program"
+}

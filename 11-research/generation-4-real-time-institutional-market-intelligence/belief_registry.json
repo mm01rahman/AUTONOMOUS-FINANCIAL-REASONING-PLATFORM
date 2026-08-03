@@ -1,0 +1,272 @@
+[
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.5707,
+      "growth": 0.547,
+      "inflation": 0.5442,
+      "liquidity": 0.4894,
+      "market_stress": 0.5567,
+      "policy": 0.4936,
+      "portfolio_conviction": 0.5448,
+      "regime_conviction": 0.544,
+      "risk_appetite": 0.525,
+      "safe_haven_demand": 0.5556
+    },
+    "timestamp": "2025-01-02T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.5913,
+      "growth": 0.5473,
+      "inflation": 0.5379,
+      "liquidity": 0.4381,
+      "market_stress": 0.5587,
+      "policy": 0.4404,
+      "portfolio_conviction": 0.5403,
+      "regime_conviction": 0.5387,
+      "risk_appetite": 0.5085,
+      "safe_haven_demand": 0.5574
+    },
+    "timestamp": "2025-01-10T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6002,
+      "growth": 0.5386,
+      "inflation": 0.5346,
+      "liquidity": 0.3716,
+      "market_stress": 0.5849,
+      "policy": 0.4044,
+      "portfolio_conviction": 0.5334,
+      "regime_conviction": 0.5341,
+      "risk_appetite": 0.4636,
+      "safe_haven_demand": 0.5793
+    },
+    "timestamp": "2025-01-22T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6146,
+      "growth": 0.5377,
+      "inflation": 0.5277,
+      "liquidity": 0.3185,
+      "market_stress": 0.5998,
+      "policy": 0.3643,
+      "portfolio_conviction": 0.5269,
+      "regime_conviction": 0.53,
+      "risk_appetite": 0.4542,
+      "safe_haven_demand": 0.5923
+    },
+    "timestamp": "2025-02-03T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6286,
+      "growth": 0.5399,
+      "inflation": 0.5232,
+      "liquidity": 0.2751,
+      "market_stress": 0.6077,
+      "policy": 0.3254,
+      "portfolio_conviction": 0.5206,
+      "regime_conviction": 0.5264,
+      "risk_appetite": 0.4358,
+      "safe_haven_demand": 0.5996
+    },
+    "timestamp": "2025-02-14T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6287,
+      "growth": 0.5269,
+      "inflation": 0.5232,
+      "liquidity": 0.2049,
+      "market_stress": 0.652,
+      "policy": 0.3092,
+      "portfolio_conviction": 0.5111,
+      "regime_conviction": 0.5232,
+      "risk_appetite": 0.3922,
+      "safe_haven_demand": 0.6373
+    },
+    "timestamp": "2025-02-27T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6315,
+      "growth": 0.5222,
+      "inflation": 0.5213,
+      "liquidity": 0.1525,
+      "market_stress": 0.678,
+      "policy": 0.2865,
+      "portfolio_conviction": 0.5001,
+      "regime_conviction": 0.5204,
+      "risk_appetite": 0.355,
+      "safe_haven_demand": 0.6604
+    },
+    "timestamp": "2025-03-11T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6422,
+      "growth": 0.524,
+      "inflation": 0.5166,
+      "liquidity": 0.1235,
+      "market_stress": 0.6792,
+      "policy": 0.2593,
+      "portfolio_conviction": 0.4906,
+      "regime_conviction": 0.518,
+      "risk_appetite": 0.3485,
+      "safe_haven_demand": 0.6632
+    },
+    "timestamp": "2025-03-24T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6555,
+      "growth": 0.5266,
+      "inflation": 0.5107,
+      "liquidity": 0.1071,
+      "market_stress": 0.6686,
+      "policy": 0.2342,
+      "portfolio_conviction": 0.4834,
+      "regime_conviction": 0.5158,
+      "risk_appetite": 0.3506,
+      "safe_haven_demand": 0.656
+    },
+    "timestamp": "2025-04-04T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6622,
+      "growth": 0.5249,
+      "inflation": 0.5066,
+      "liquidity": 0.0807,
+      "market_stress": 0.6732,
+      "policy": 0.2169,
+      "portfolio_conviction": 0.4764,
+      "regime_conviction": 0.5139,
+      "risk_appetite": 0.3335,
+      "safe_haven_demand": 0.6611
+    },
+    "timestamp": "2025-04-21T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6629,
+      "growth": 0.5174,
+      "inflation": 0.5054,
+      "liquidity": 0.0436,
+      "market_stress": 0.6932,
+      "policy": 0.2089,
+      "portfolio_conviction": 0.468,
+      "regime_conviction": 0.5122,
+      "risk_appetite": 0.3012,
+      "safe_haven_demand": 0.679
+    },
+    "timestamp": "2025-05-02T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6581,
+      "growth": 0.5087,
+      "inflation": 0.5059,
+      "liquidity": 0.0,
+      "market_stress": 0.73,
+      "policy": 0.2042,
+      "portfolio_conviction": 0.4574,
+      "regime_conviction": 0.5107,
+      "risk_appetite": 0.2711,
+      "safe_haven_demand": 0.7111
+    },
+    "timestamp": "2025-05-16T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6637,
+      "growth": 0.5108,
+      "inflation": 0.5034,
+      "liquidity": 0.0,
+      "market_stress": 0.7303,
+      "policy": 0.1881,
+      "portfolio_conviction": 0.4482,
+      "regime_conviction": 0.5094,
+      "risk_appetite": 0.265,
+      "safe_haven_demand": 0.7133
+    },
+    "timestamp": "2025-05-28T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6733,
+      "growth": 0.5137,
+      "inflation": 0.4995,
+      "liquidity": 0.0,
+      "market_stress": 0.7205,
+      "policy": 0.1727,
+      "portfolio_conviction": 0.4412,
+      "regime_conviction": 0.5083,
+      "risk_appetite": 0.2705,
+      "safe_haven_demand": 0.7068
+    },
+    "timestamp": "2025-06-10T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6856,
+      "growth": 0.5183,
+      "inflation": 0.4943,
+      "liquidity": 0.0,
+      "market_stress": 0.7037,
+      "policy": 0.1568,
+      "portfolio_conviction": 0.437,
+      "regime_conviction": 0.5073,
+      "risk_appetite": 0.2845,
+      "safe_haven_demand": 0.6942
+    },
+    "timestamp": "2025-06-23T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6914,
+      "growth": 0.5185,
+      "inflation": 0.4913,
+      "liquidity": 0.0,
+      "market_stress": 0.7013,
+      "policy": 0.1476,
+      "portfolio_conviction": 0.4334,
+      "regime_conviction": 0.5064,
+      "risk_appetite": 0.2781,
+      "safe_haven_demand": 0.6932
+    },
+    "timestamp": "2025-07-08T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6877,
+      "growth": 0.5106,
+      "inflation": 0.4922,
+      "liquidity": 0.0,
+      "market_stress": 0.7289,
+      "policy": 0.1491,
+      "portfolio_conviction": 0.4276,
+      "regime_conviction": 0.5056,
+      "risk_appetite": 0.2503,
+      "safe_haven_demand": 0.717
+    },
+    "timestamp": "2025-07-21T00:00:00Z"
+  },
+  {
+    "beliefs": {
+      "cross_asset_relationships": 0.6897,
+      "growth": 0.5105,
+      "inflation": 0.4912,
+      "liquidity": 0.0,
+      "market_stress": 0.7337,
+      "policy": 0.142,
+      "portfolio_conviction": 0.4219,
+      "regime_conviction": 0.5049,
+      "risk_appetite": 0.2393,
+      "safe_haven_demand": 0.7222
+    },
+    "timestamp": "2025-08-04T00:00:00Z"
+  }
+]

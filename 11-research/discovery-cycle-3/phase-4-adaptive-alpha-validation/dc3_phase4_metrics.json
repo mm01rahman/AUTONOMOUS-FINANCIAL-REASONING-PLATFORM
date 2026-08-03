@@ -1,0 +1,36 @@
+{
+  "arb_candidates": [],
+  "arb_reject": [],
+  "arb_research": [
+    "IKROS-ALPHA-DC3-20260802-0006",
+    "IKROS-ALPHA-DC3-20260802-0009"
+  ],
+  "avg_confidence_delta": -0.0842,
+  "batch": "BATCH-001",
+  "batch_2_requires_arb_approval": true,
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0030",
+  "graph_edges_created": 1,
+  "graph_nodes_created": 0,
+  "mechanisms_candidate_or_above": 0,
+  "mechanisms_pending": 10,
+  "mechanisms_requiring_research": 2,
+  "mechanisms_validated": 2,
+  "outcomes": {
+    "IKROS-ALPHA-DC3-20260802-0006": "RESEARCH",
+    "IKROS-ALPHA-DC3-20260802-0009": "RESEARCH"
+  },
+  "promotion_this_phase": false,
+  "report_paths": {
+    "adaptive_research_queue": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\ADAPTIVE_RESEARCH_QUEUE.md",
+    "arb_recommendation": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\ARB_RECOMMENDATION_BATCH1.md",
+    "batch1_report": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\BATCH1_VALIDATION_REPORT.md",
+    "campaign_result": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\dc3_phase4_campaign_result.json",
+    "failure_report_IKROS-ALPHA-DC3-20260802-0009": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\FAILURE_REPORT_IKROS_ALPHA_DC3_20260802_0009.md",
+    "family_ranking": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\FAMILY_RANKING.md",
+    "mechanism_report_IKROS-ALPHA-DC3-20260802-0006": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\MECHANISM_REPORT_IKROS_ALPHA_DC3_20260802_0006.md",
+    "mechanism_report_IKROS-ALPHA-DC3-20260802-0009": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\MECHANISM_REPORT_IKROS_ALPHA_DC3_20260802_0009.md",
+    "research_recommendations": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\RESEARCH_RECOMMENDATIONS.md",
+    "updated_validation_schedule": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\UPDATED_VALIDATION_SCHEDULE.md",
+    "validation_dashboard": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\INSTITUTIONAL_VALIDATION_DASHBOARD.md"
+  }
+}

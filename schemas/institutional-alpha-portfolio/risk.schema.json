@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "expected_drawdown": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "portfolio_concentration": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "portfolio_confidence": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "portfolio_uncertainty": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "robustness_score": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "tail_vulnerability": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    }
+  },
+  "required": [
+    "portfolio_confidence",
+    "portfolio_uncertainty",
+    "portfolio_concentration",
+    "expected_drawdown",
+    "tail_vulnerability",
+    "robustness_score"
+  ],
+  "title": "Portfolio Risk Report",
+  "type": "object"
+}

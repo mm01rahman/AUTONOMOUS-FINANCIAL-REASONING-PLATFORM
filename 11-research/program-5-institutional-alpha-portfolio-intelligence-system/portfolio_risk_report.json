@@ -1,0 +1,38 @@
+{
+  "capacity_degradation": 0.334,
+  "common_assumptions": [
+    "Commodity-curve divergence reflects macro transition pressure relevant to gold.",
+    "ETF inventory shifts proxy institutional accumulation with acceptable delay.",
+    "Front-end rates and policy language jointly identify repricing shocks.",
+    "Intermarket relationships remain stable enough to preserve explanatory power.",
+    "Macro inflation expectations remain observable with public datasets.",
+    "Persistent fund-flow pressure transmits into spot and futures demand.",
+    "Policy stress regimes transmit rapidly into gold demand.",
+    "Policy-surprise windows are causally distinct from generic safe-haven stress.",
+    "Real-rate overshoots mean revert after policy repricing.",
+    "Safe-haven preference remains observable through public macro proxies."
+  ],
+  "common_datasets": [
+    "ETF-GLD",
+    "FRED-DXY"
+  ],
+  "conflict_count": 10,
+  "expected_drawdown": 0.1539,
+  "portfolio_concentration": 0.4807,
+  "portfolio_confidence": 0.7082,
+  "portfolio_uncertainty": 0.2696,
+  "robustness_score": 0.25,
+  "shared_failure_exposure": [
+    "Concept drift under regime transition",
+    "Cross-commodity contamination",
+    "Crowding around macro catalysts",
+    "ETF reporting lag",
+    "Macro regime discontinuity",
+    "Meeting-window clustering",
+    "Physical bottleneck distortion",
+    "Policy-text misclassification",
+    "Stress-window threshold instability",
+    "Yield-measurement lag"
+  ],
+  "tail_vulnerability": 0.3433
+}

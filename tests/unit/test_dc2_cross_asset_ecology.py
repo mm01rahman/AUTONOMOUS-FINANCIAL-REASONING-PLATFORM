@@ -6,6 +6,8 @@ from pathlib import Path
 
 import pytest
 
+pytestmark = pytest.mark.slow
+
 
 def _repo_root() -> Path:
     return Path(__file__).resolve().parent.parent.parent
@@ -124,7 +126,7 @@ def test_dc2_program_a_information_flow(tmp_path: Path) -> None:
     assert "regime_conditioned_mi" in info_flow
     te = info_flow["transfer_entropy_proxy"]
     assert len(te) > 0
-    for sig, data in te.items():
+    for _sig, data in te.items():
         assert "peak_lag_days" in data
         assert "peak_mi" in data
 

@@ -1,0 +1,26 @@
+[
+  {
+    "allowed_states": [
+      "DISCOVERED",
+      "RESEARCH",
+      "READY_FOR_REVALIDATION",
+      "VALIDATED",
+      "PROMOTION_REVIEW"
+    ],
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "next_state": "RESEARCH",
+    "rationale": "Evidence insufficient for validated transition."
+  },
+  {
+    "allowed_states": [
+      "DISCOVERED",
+      "RESEARCH",
+      "READY_FOR_REVALIDATION",
+      "VALIDATED",
+      "PROMOTION_REVIEW"
+    ],
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+    "next_state": "RESEARCH",
+    "rationale": "Observation completeness gate failed; validation halted by policy."
+  }
+]

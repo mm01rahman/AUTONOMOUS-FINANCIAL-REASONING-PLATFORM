@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "confidence_drift": {
+      "type": "number"
+    },
+    "dataset_drift": {
+      "type": "number"
+    },
+    "distribution_drift": {
+      "type": "number"
+    },
+    "feature_drift": {
+      "type": "number"
+    },
+    "knowledge_drift": {
+      "type": "number"
+    },
+    "market_drift": {
+      "type": "number"
+    },
+    "mechanism": {
+      "type": "string"
+    },
+    "observation_drift": {
+      "type": "number"
+    },
+    "regime_drift": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "mechanism",
+    "feature_drift",
+    "distribution_drift",
+    "regime_drift",
+    "knowledge_drift"
+  ],
+  "title": "Drift Entry",
+  "type": "object"
+}

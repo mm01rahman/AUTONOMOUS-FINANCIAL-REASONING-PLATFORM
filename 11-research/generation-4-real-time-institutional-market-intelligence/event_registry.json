@@ -1,0 +1,146 @@
+[
+  {
+    "affected_alpha_mechanisms": [
+      "safe_haven_migration",
+      "real_yield_dislocation_reversion",
+      "etf_flow_accumulation_pressure"
+    ],
+    "affected_portfolio": "INCREASE",
+    "belief_revision": {
+      "growth": -0.0087,
+      "inflation": -0.0033,
+      "liquidity": -0.0665,
+      "market_stress": 0.0262,
+      "policy": -0.036,
+      "risk_appetite": -0.0449
+    },
+    "confidence_revision": 0.0,
+    "event_type": "policy_shift",
+    "evidence_change": 0.0262,
+    "expected_research_value": 0.3538,
+    "immediate_impact": 0.1983,
+    "institutional_narrative": "Event 'policy_shift' shifted stress and policy beliefs, increasing attention on safe_haven_migration while portfolio stance moved toward INCREASE.",
+    "medium_term_impact": 0.2988,
+    "timestamp": "2025-01-22T00:00:00Z"
+  },
+  {
+    "affected_alpha_mechanisms": [
+      "safe_haven_migration",
+      "real_yield_dislocation_reversion",
+      "etf_flow_accumulation_pressure"
+    ],
+    "affected_portfolio": "INCREASE",
+    "belief_revision": {
+      "growth": -0.0009,
+      "inflation": -0.0069,
+      "liquidity": -0.0531,
+      "market_stress": 0.0149,
+      "policy": -0.0401,
+      "risk_appetite": -0.0094
+    },
+    "confidence_revision": 0.0,
+    "event_type": "geopolitical",
+    "evidence_change": 0.0149,
+    "expected_research_value": 0.3112,
+    "immediate_impact": 0.1367,
+    "institutional_narrative": "Event 'geopolitical' shifted stress and policy beliefs, increasing attention on safe_haven_migration while portfolio stance moved toward INCREASE.",
+    "medium_term_impact": 0.2562,
+    "timestamp": "2025-02-03T00:00:00Z"
+  },
+  {
+    "affected_alpha_mechanisms": [
+      "safe_haven_migration",
+      "real_yield_dislocation_reversion",
+      "policy_expectation_repricing"
+    ],
+    "affected_portfolio": "INCREASE",
+    "belief_revision": {
+      "growth": -0.013,
+      "inflation": 0.0,
+      "liquidity": -0.0702,
+      "market_stress": 0.0443,
+      "policy": -0.0162,
+      "risk_appetite": -0.0436
+    },
+    "confidence_revision": 0.0,
+    "event_type": "shock",
+    "evidence_change": 0.0443,
+    "expected_research_value": 0.5058,
+    "immediate_impact": 0.2959,
+    "institutional_narrative": "Event 'shock' shifted stress and policy beliefs, increasing attention on safe_haven_migration while portfolio stance moved toward INCREASE.",
+    "medium_term_impact": 0.3791,
+    "timestamp": "2025-02-27T00:00:00Z"
+  },
+  {
+    "affected_alpha_mechanisms": [
+      "safe_haven_migration",
+      "real_yield_dislocation_reversion",
+      "policy_expectation_repricing"
+    ],
+    "affected_portfolio": "INCREASE",
+    "belief_revision": {
+      "growth": -0.0075,
+      "inflation": -0.0012,
+      "liquidity": -0.0371,
+      "market_stress": 0.02,
+      "policy": -0.008,
+      "risk_appetite": -0.0323
+    },
+    "confidence_revision": 0.0,
+    "event_type": "policy_shift",
+    "evidence_change": 0.02,
+    "expected_research_value": 0.4551,
+    "immediate_impact": 0.2205,
+    "institutional_narrative": "Event 'policy_shift' shifted stress and policy beliefs, increasing attention on safe_haven_migration while portfolio stance moved toward INCREASE.",
+    "medium_term_impact": 0.3311,
+    "timestamp": "2025-05-02T00:00:00Z"
+  },
+  {
+    "affected_alpha_mechanisms": [
+      "safe_haven_migration",
+      "real_yield_dislocation_reversion",
+      "policy_expectation_repricing"
+    ],
+    "affected_portfolio": "HOLD",
+    "belief_revision": {
+      "growth": -0.0087,
+      "inflation": 0.0005,
+      "liquidity": -0.0436,
+      "market_stress": 0.0368,
+      "policy": -0.0047,
+      "risk_appetite": -0.0301
+    },
+    "confidence_revision": 0.0,
+    "event_type": "shock",
+    "evidence_change": 0.0368,
+    "expected_research_value": 0.5998,
+    "immediate_impact": 0.3119,
+    "institutional_narrative": "Event 'shock' shifted stress and policy beliefs, increasing attention on safe_haven_migration while portfolio stance moved toward HOLD.",
+    "medium_term_impact": 0.3984,
+    "timestamp": "2025-05-16T00:00:00Z"
+  },
+  {
+    "affected_alpha_mechanisms": [
+      "safe_haven_migration",
+      "real_yield_dislocation_reversion",
+      "policy_expectation_repricing"
+    ],
+    "affected_portfolio": "INCREASE",
+    "belief_revision": {
+      "growth": -0.0079,
+      "inflation": 0.0009,
+      "liquidity": 0.0,
+      "market_stress": 0.0276,
+      "policy": 0.0015,
+      "risk_appetite": -0.0278
+    },
+    "confidence_revision": 0.0,
+    "event_type": "event_risk",
+    "evidence_change": 0.0276,
+    "expected_research_value": 0.5676,
+    "immediate_impact": 0.263,
+    "institutional_narrative": "Event 'event_risk' shifted stress and policy beliefs, increasing attention on safe_haven_migration while portfolio stance moved toward INCREASE.",
+    "medium_term_impact": 0.3692,
+    "timestamp": "2025-07-21T00:00:00Z"
+  }
+]

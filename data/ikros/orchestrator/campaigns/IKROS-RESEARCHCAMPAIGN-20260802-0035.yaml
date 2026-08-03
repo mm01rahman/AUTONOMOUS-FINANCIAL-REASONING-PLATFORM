@@ -1,0 +1,217 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0426
+- IKROS-CAMPAIGNAUDIT-20260802-0427
+- IKROS-CAMPAIGNAUDIT-20260802-0428
+- IKROS-CAMPAIGNAUDIT-20260802-0429
+- IKROS-CAMPAIGNAUDIT-20260802-0430
+- IKROS-CAMPAIGNAUDIT-20260802-0431
+- IKROS-CAMPAIGNAUDIT-20260802-0432
+- IKROS-CAMPAIGNAUDIT-20260802-0433
+- IKROS-CAMPAIGNAUDIT-20260802-0434
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0035
+campaign_type: RESEARCH_AUDIT
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0035
+created_at: '2026-08-02T15:36:04.599964+00:00'
+evidence_refs: []
+failure_policy: CONTINUE
+finished_at: '2026-08-02T15:36:11.958368+00:00'
+lifecycle_state: FAILED
+objective: Implement deterministic Tier 1 institutional market data ingestion, storage,
+  registries, manifests, checksums, dashboards, and IKROS integration for approved
+  free/public datasets.
+pipeline:
+  deterministic: true
+  name: RESEARCH_AUDIT pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0035
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0150
+  - IKROS-RESEARCHTASK-20260802-0154
+  - IKROS-RESEARCHTASK-20260802-0160
+research_question_id: null
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T15:36:06.360051+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T15:36:08.644943+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.72
+        economic: 0.78
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.72
+        operational: 0.0
+        overall: 0.7394688177298846
+        prior: 0.75
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260802-9901
+      instrument: XAU/USD
+      lifecycle_state: OPEN
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: data-foundation-v2-phase1
+          creation_context: Data Foundation V2 Phase 1 primary question
+          motivation: Implement permanent institutional-grade observation capability
+            for approved free Tier 1 datasets.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: ''
+      scope: MACRO
+      spec_refs: []
+      time_horizon: ''
+      title: Data Foundation V2 Tier 1 Observation Question
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: 'Duplicate: ResearchQuestion ''IKROS-RQ-20260802-9901'' already registered'
+    graph_node_id: null
+    memory_record_id: null
+    metrics: {}
+    output_refs: []
+    payload: {}
+    selected_ids: []
+  started_at: '2026-08-02T15:36:07.879608+00:00'
+  status: FAILED
+  task_id: IKROS-RESEARCHTASK-20260802-0150
+  title: Research Question
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0150
+  finished_at: null
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.72
+        economic: 0.78
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.72
+        operational: 0.0
+        overall: 0.7394688177298846
+        prior: 0.75
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260802-9901
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: data-foundation-v2-phase1
+          creation_context: Data Foundation V2 Phase 1 execution
+          motivation: Create the provider library, dataset registry, quality dashboards,
+            manifests, checksums, and IKROS updates for Tier 1 institutional market
+            data.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: 537673deb7db407566ed20f8633d6617b89958a3c4912d592ab6373a9decaa6f
+      spec_refs: []
+      title: Data Foundation V2 Tier 1 Infrastructure Execution
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0154
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0154
+  finished_at: null
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0160
+  title: Final Report
+title: Data Foundation V2 Phase 1 Institutional Market Data Infrastructure
+updated_at: '2026-08-02T15:36:13.509369+00:00'
+work_package_refs:
+- WP-IMP-0048

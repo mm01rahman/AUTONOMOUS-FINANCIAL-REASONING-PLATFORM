@@ -1,0 +1,208 @@
+[
+  {
+    "alerts": [],
+    "concentration": 0.2189,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.01,
+    "portfolio_var": 0.01,
+    "regime_concentration": "BULL_TREND",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.034,
+    "timestamp": "2021-01-04T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.23,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.006,
+    "portfolio_var": 0.006,
+    "regime_concentration": "RISK_ON",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.028,
+    "timestamp": "2021-03-15T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.2285,
+    "confidence_adjusted_drawdown": 0.0001,
+    "expected_shortfall": 0.004,
+    "portfolio_var": 0.004,
+    "regime_concentration": "MACRO_TRANSITION",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.034,
+    "timestamp": "2021-06-21T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.231,
+    "confidence_adjusted_drawdown": 0.0008,
+    "expected_shortfall": 0.007,
+    "portfolio_var": 0.007,
+    "regime_concentration": "BEAR_TREND",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.039,
+    "timestamp": "2021-09-30T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.2253,
+    "confidence_adjusted_drawdown": 0.0008,
+    "expected_shortfall": 0.007,
+    "portfolio_var": 0.007,
+    "regime_concentration": "RISK_OFF",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.047,
+    "timestamp": "2021-12-20T00:00:00+00:00"
+  },
+  {
+    "alerts": [
+      {
+        "code": "RISK-VOLATILITY",
+        "message": "Volatility exceeds limit",
+        "metric": "volatility",
+        "severity": "warning",
+        "threshold": 0.025,
+        "timestamp": "2022-03-14T00:00:00+00:00",
+        "value": 0.028
+      }
+    ],
+    "concentration": 0.2315,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.007,
+    "portfolio_var": 0.007,
+    "regime_concentration": "LIQUIDITY_CRISIS",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.063,
+    "timestamp": "2022-03-14T00:00:00+00:00"
+  },
+  {
+    "alerts": [
+      {
+        "code": "RISK-VOLATILITY",
+        "message": "Volatility exceeds limit",
+        "metric": "volatility",
+        "severity": "warning",
+        "threshold": 0.025,
+        "timestamp": "2022-06-13T00:00:00+00:00",
+        "value": 0.03
+      }
+    ],
+    "concentration": 0.2325,
+    "confidence_adjusted_drawdown": 0.0001,
+    "expected_shortfall": 0.009,
+    "portfolio_var": 0.009,
+    "regime_concentration": "MACRO_TRANSITION",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.069,
+    "timestamp": "2022-06-13T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.2271,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.009,
+    "portfolio_var": 0.009,
+    "regime_concentration": "RISK_OFF",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.051,
+    "timestamp": "2022-09-27T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.2183,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.009,
+    "portfolio_var": 0.009,
+    "regime_concentration": "BULL_TREND",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.035,
+    "timestamp": "2023-01-17T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.2314,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.009,
+    "portfolio_var": 0.009,
+    "regime_concentration": "MACRO_TRANSITION",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.037,
+    "timestamp": "2023-04-24T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.2238,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.009,
+    "portfolio_var": 0.009,
+    "regime_concentration": "RISK_ON",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.029,
+    "timestamp": "2023-07-10T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.2335,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.01,
+    "portfolio_var": 0.01,
+    "regime_concentration": "BEAR_TREND",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.054,
+    "timestamp": "2023-10-02T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.2268,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.01,
+    "portfolio_var": 0.01,
+    "regime_concentration": "RISK_OFF",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.046,
+    "timestamp": "2024-01-29T00:00:00+00:00"
+  },
+  {
+    "alerts": [
+      {
+        "code": "RISK-VOLATILITY",
+        "message": "Volatility exceeds limit",
+        "metric": "volatility",
+        "severity": "warning",
+        "threshold": 0.025,
+        "timestamp": "2024-04-15T00:00:00+00:00",
+        "value": 0.026
+      }
+    ],
+    "concentration": 0.2353,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.01,
+    "portfolio_var": 0.01,
+    "regime_concentration": "LIQUIDITY_CRISIS",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.062,
+    "timestamp": "2024-04-15T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.2356,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.01,
+    "portfolio_var": 0.01,
+    "regime_concentration": "MACRO_TRANSITION",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.044,
+    "timestamp": "2024-07-22T00:00:00+00:00"
+  },
+  {
+    "alerts": [],
+    "concentration": 0.2203,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.01,
+    "portfolio_var": 0.01,
+    "regime_concentration": "RISK_ON",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.034,
+    "timestamp": "2024-10-07T00:00:00+00:00"
+  }
+]

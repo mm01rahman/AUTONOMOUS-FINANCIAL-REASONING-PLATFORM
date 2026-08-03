@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "capacity_decay": {
+      "type": "number"
+    },
+    "concept_drift": {
+      "type": "number"
+    },
+    "confidence_degradation": {
+      "type": "number"
+    },
+    "evidence_degradation": {
+      "type": "number"
+    },
+    "mechanism": {
+      "type": "string"
+    },
+    "performance_degradation": {
+      "type": "number"
+    },
+    "regime_instability": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "mechanism",
+    "performance_degradation",
+    "confidence_degradation",
+    "concept_drift",
+    "regime_instability"
+  ],
+  "title": "Alpha Decay Entry",
+  "type": "object"
+}

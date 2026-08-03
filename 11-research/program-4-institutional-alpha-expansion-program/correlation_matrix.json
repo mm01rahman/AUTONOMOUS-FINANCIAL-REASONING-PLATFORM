@@ -1,0 +1,52 @@
+[
+  {
+    "correlation": 0.08,
+    "left": "safe_haven_migration",
+    "right": "real_yield_dislocation_reversion"
+  },
+  {
+    "correlation": 0.08,
+    "left": "safe_haven_migration",
+    "right": "policy_expectation_repricing"
+  },
+  {
+    "correlation": 0.16,
+    "left": "safe_haven_migration",
+    "right": "etf_flow_accumulation_pressure"
+  },
+  {
+    "correlation": 0.08,
+    "left": "safe_haven_migration",
+    "right": "commodity_cross_curve_divergence"
+  },
+  {
+    "correlation": 0.2,
+    "left": "real_yield_dislocation_reversion",
+    "right": "policy_expectation_repricing"
+  },
+  {
+    "correlation": 0.28,
+    "left": "real_yield_dislocation_reversion",
+    "right": "etf_flow_accumulation_pressure"
+  },
+  {
+    "correlation": 0.28,
+    "left": "real_yield_dislocation_reversion",
+    "right": "commodity_cross_curve_divergence"
+  },
+  {
+    "correlation": 0.2,
+    "left": "policy_expectation_repricing",
+    "right": "etf_flow_accumulation_pressure"
+  },
+  {
+    "correlation": 0.2,
+    "left": "policy_expectation_repricing",
+    "right": "commodity_cross_curve_divergence"
+  },
+  {
+    "correlation": 0.28,
+    "left": "etf_flow_accumulation_pressure",
+    "right": "commodity_cross_curve_divergence"
+  }
+]

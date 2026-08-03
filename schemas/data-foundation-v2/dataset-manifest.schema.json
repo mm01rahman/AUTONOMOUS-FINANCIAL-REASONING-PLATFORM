@@ -1,0 +1,186 @@
+{
+  "$defs": {
+    "DatasetQualityMetrics": {
+      "description": "Quality and confidence metrics required by Data Foundation V2.",
+      "properties": {
+        "completeness": {
+          "title": "Completeness",
+          "type": "number"
+        },
+        "confidence_score": {
+          "title": "Confidence Score",
+          "type": "number"
+        },
+        "coverage": {
+          "title": "Coverage",
+          "type": "number"
+        },
+        "duplicate_rate": {
+          "title": "Duplicate Rate",
+          "type": "number"
+        },
+        "end_timestamp": {
+          "title": "End Timestamp",
+          "type": "string"
+        },
+        "freshness": {
+          "title": "Freshness",
+          "type": "number"
+        },
+        "missing_rate": {
+          "title": "Missing Rate",
+          "type": "number"
+        },
+        "record_count": {
+          "title": "Record Count",
+          "type": "integer"
+        },
+        "schema_conformity": {
+          "title": "Schema Conformity",
+          "type": "number"
+        },
+        "start_timestamp": {
+          "title": "Start Timestamp",
+          "type": "string"
+        },
+        "timestamp_consistency": {
+          "title": "Timestamp Consistency",
+          "type": "number"
+        },
+        "validation_score": {
+          "title": "Validation Score",
+          "type": "number"
+        }
+      },
+      "required": [
+        "record_count",
+        "coverage",
+        "completeness",
+        "freshness",
+        "missing_rate",
+        "duplicate_rate",
+        "timestamp_consistency",
+        "schema_conformity",
+        "validation_score",
+        "confidence_score",
+        "start_timestamp",
+        "end_timestamp"
+      ],
+      "title": "DatasetQualityMetrics",
+      "type": "object"
+    }
+  },
+  "description": "Deterministic dataset version manifest.",
+  "properties": {
+    "cadence": {
+      "title": "Cadence",
+      "type": "string"
+    },
+    "checksum_sha256": {
+      "title": "Checksum Sha256",
+      "type": "string"
+    },
+    "covered_variables": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Covered Variables",
+      "type": "array"
+    },
+    "dataset_id": {
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "dataset_name": {
+      "title": "Dataset Name",
+      "type": "string"
+    },
+    "generated_at": {
+      "title": "Generated At",
+      "type": "string"
+    },
+    "provenance": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Provenance",
+      "type": "object"
+    },
+    "provider": {
+      "title": "Provider",
+      "type": "string"
+    },
+    "quality": {
+      "$ref": "#/$defs/DatasetQualityMetrics"
+    },
+    "raw_checksum_sha256": {
+      "title": "Raw Checksum Sha256",
+      "type": "string"
+    },
+    "row_count": {
+      "title": "Row Count",
+      "type": "integer"
+    },
+    "source": {
+      "title": "Source",
+      "type": "string"
+    },
+    "source_url": {
+      "title": "Source Url",
+      "type": "string"
+    },
+    "storage_path": {
+      "title": "Storage Path",
+      "type": "string"
+    },
+    "supported_families": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supported Families",
+      "type": "array"
+    },
+    "supported_mechanisms": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supported Mechanisms",
+      "type": "array"
+    },
+    "timezone": {
+      "title": "Timezone",
+      "type": "string"
+    },
+    "version_id": {
+      "title": "Version Id",
+      "type": "string"
+    },
+    "work_package": {
+      "title": "Work Package",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "dataset_name",
+    "version_id",
+    "generated_at",
+    "provider",
+    "source",
+    "source_url",
+    "cadence",
+    "timezone",
+    "work_package",
+    "storage_path",
+    "row_count",
+    "checksum_sha256",
+    "raw_checksum_sha256",
+    "covered_variables",
+    "supported_mechanisms",
+    "supported_families",
+    "provenance",
+    "quality"
+  ],
+  "title": "DatasetManifest",
+  "type": "object"
+}

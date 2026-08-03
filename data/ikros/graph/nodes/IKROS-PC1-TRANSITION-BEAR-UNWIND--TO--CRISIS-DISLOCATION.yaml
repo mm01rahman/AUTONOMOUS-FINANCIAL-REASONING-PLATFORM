@@ -1,0 +1,16 @@
+attributes:
+  confidence: 0.7013
+  source_regime: bear_unwind
+  target_regime: crisis_dislocation
+confidence: 0.68
+created_at: '2026-08-02T11:34:56.451684+00:00'
+ikros_id: IKROS-PC1-TRANSITION-BEAR-UNWIND--TO--CRISIS-DISLOCATION
+label: bear_unwind__to__crisis_dislocation
+node_id: IKROS-PC1-TRANSITION-BEAR-UNWIND--TO--CRISIS-DISLOCATION
+node_type: MARKET_EVENT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

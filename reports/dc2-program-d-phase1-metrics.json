@@ -1,0 +1,28 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0023",
+  "decision": "REVISE_MODEL",
+  "graph_edges_created": 15,
+  "graph_nodes_created": 16,
+  "models_evaluated": 7,
+  "outcome": "REQUIRES REVISION",
+  "phase": "DC2_PROGRAM_D_PHASE1",
+  "reports": {
+    "arb_recommendation": "11-research\\discovery-cycle-2\\research-program-d-phase1\\ARB_RECOMMENDATION.md",
+    "arb_recommendation_json": "11-research\\discovery-cycle-2\\research-program-d-phase1\\arb_recommendation.json",
+    "baseline_comparison_matrix_json": "11-research\\discovery-cycle-2\\research-program-d-phase1\\baseline_comparison_matrix.json",
+    "baseline_comparison_report": "11-research\\discovery-cycle-2\\research-program-d-phase1\\BASELINE_COMPARISON_REPORT.md",
+    "evidence_summary": "11-research\\discovery-cycle-2\\research-program-d-phase1\\EVIDENCE_SUMMARY.md",
+    "evidence_summary_json": "11-research\\discovery-cycle-2\\research-program-d-phase1\\evidence_summary.json",
+    "failure_catalogue": "11-research\\discovery-cycle-2\\research-program-d-phase1\\FAILURE_CATALOGUE.md",
+    "falsification_report": "11-research\\discovery-cycle-2\\research-program-d-phase1\\FALSIFICATION_REPORT.md",
+    "falsification_report_json": "11-research\\discovery-cycle-2\\research-program-d-phase1\\falsification_report.json",
+    "model_comparison_matrix": "11-research\\discovery-cycle-2\\research-program-d-phase1\\MODEL_COMPARISON_MATRIX.md",
+    "research_recommendations": "11-research\\discovery-cycle-2\\research-program-d-phase1\\RESEARCH_RECOMMENDATIONS.md",
+    "transition_accuracy_report": "11-research\\discovery-cycle-2\\research-program-d-phase1\\TRANSITION_ACCURACY_REPORT.md",
+    "transition_robustness_report": "11-research\\discovery-cycle-2\\research-program-d-phase1\\TRANSITION_ROBUSTNESS_REPORT.md",
+    "transition_robustness_report_json": "11-research\\discovery-cycle-2\\research-program-d-phase1\\transition_robustness_report.json",
+    "transition_timing_report": "11-research\\discovery-cycle-2\\research-program-d-phase1\\TRANSITION_TIMING_REPORT.md",
+    "verification_report": "11-research\\discovery-cycle-2\\research-program-d-phase1\\INSTITUTIONAL_TRANSITION_ENGINE_VERIFICATION_REPORT.md"
+  },
+  "transition_engine_rank": 7
+}

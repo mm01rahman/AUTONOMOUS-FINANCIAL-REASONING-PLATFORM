@@ -1,0 +1,64 @@
+capability_refs: []
+completed_at: null
+confidence:
+  data: 0.6
+  economic: 0.65
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.6
+  operational: 0.0
+  overall: 0.6162240147749038
+  prior: 0.65
+  replication: 0.0
+  statistical: 0.0
+  validation: 0.0
+dataset_versions: []
+entity_type: Experiment
+failures_produced: []
+feature_versions: []
+git_commit: ''
+hypotheses: []
+ikros_id: IKROS-EXP-20260802-9401
+in_sample_end: ''
+in_sample_start: ''
+lifecycle_state: DESIGNED
+lineage:
+  dependencies:
+    datasets: []
+    external_refs: []
+    features: []
+    inputs: []
+    models: []
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: dc3-phase3-alpha-taxonomy
+    creation_context: DC3 phase3 taxonomy experiment
+    motivation: Produce governed institutional alpha taxonomy including families,
+      similarity matrix, redundancy analysis, prioritization, and batch plan.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+out_of_sample_end: ''
+out_of_sample_start: ''
+parameters: {}
+protocol: ''
+random_seed: 42
+reproducibility_hash: 81ff14eb32640baab6a57d51c1f930d2384efa9ecedf925699623c36d9376dc5
+spec_refs: []
+title: DC3 Phase 3 Institutional Alpha Taxonomy
+validations_produced: []
+version: 1.0.0
+version_history: []
+work_package_refs: []

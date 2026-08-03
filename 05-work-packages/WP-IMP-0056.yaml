@@ -1,0 +1,153 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0056"
+capability_id:
+  id: "ALPHA-SIMULATION-LAB"
+  version: "1.0"
+title: "Program 6 — Institutional Market Simulation & Paper Trading Laboratory"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
+    trace_sls: "AFRP-GEN2-WP0056-1.0.0"
+    trace_adr: ["ADR-0001", "ADR-IKROS-001", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "work_package.completed('WP-IMP-0055')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/alpha_research/institutional_market_simulation_laboratory.py"
+      - "tools/alpha_research/program6_institutional_market_simulation_laboratory.py"
+      - "tests/unit/test_program6_institutional_market_simulation_laboratory.py"
+      - "11-research/program-6-institutional-market-simulation-paper-trading-laboratory/"
+      - "schemas/institutional-market-simulation/"
+      - "data/ikros/graph/"
+      - "data/ikros/orchestrator/audit/"
+      - "data/ikros/orchestrator/campaigns/"
+      - "data/ikros/orchestrator/reports/"
+      - "data/ikros/memory/t1-episodic/"
+      - "data/ikros/memory/t4-institutional/"
+      - "data/ikros/registries/research/"
+      - "data/ikros/registries/experiments/"
+      - "05-work-packages/WP-IMP-0056.yaml"
+    read:
+      - "11-research/program-5-institutional-alpha-portfolio-intelligence-system/"
+      - "data/ikros/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "24h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "11-research/program-5-institutional-alpha-portfolio-intelligence-system/portfolio_registry.json"
+    - "11-research/program-5-institutional-alpha-portfolio-intelligence-system/institutional_portfolio_decision.json"
+    - "11-research/program-5-institutional-alpha-portfolio-intelligence-system/allocation_registry.json"
+    - "data/ikros/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/alpha_research/institutional_market_simulation_laboratory.py"
+    - "tools/alpha_research/program6_institutional_market_simulation_laboratory.py"
+  expected_test_files:
+    - "tests/unit/test_program6_institutional_market_simulation_laboratory.py"
+  expected_documentation:
+    - "11-research/program-6-institutional-market-simulation-paper-trading-laboratory/"
+  expected_evidence:
+    - "11-research/program-6-institutional-market-simulation-paper-trading-laboratory/portfolio_performance_registry.json"
+    - "11-research/program-6-institutional-market-simulation-paper-trading-laboratory/paper_trade_registry.json"
+    - "11-research/program-6-institutional-market-simulation-paper-trading-laboratory/FINAL_REPORT.md"
+    - "schemas/institutional-market-simulation/"
+
+produces:
+  capability:
+    id: "ALPHA-SIMULATION-LAB"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/alpha_research/institutional_market_simulation_laboratory.py"
+    - "tools/alpha_research/program6_institutional_market_simulation_laboratory.py"
+    - "tests/unit/test_program6_institutional_market_simulation_laboratory.py"
+    - "11-research/program-6-institutional-market-simulation-paper-trading-laboratory/"
+    - "schemas/institutional-market-simulation/"
+    - "data/ikros/graph/"
+    - "data/ikros/orchestrator/audit/"
+    - "data/ikros/orchestrator/campaigns/"
+    - "data/ikros/orchestrator/reports/"
+    - "data/ikros/memory/t1-episodic/"
+    - "data/ikros/memory/t4-institutional/"
+    - "data/ikros/registries/research/"
+    - "data/ikros/registries/experiments/"
+    - "05-work-packages/WP-IMP-0056.yaml"
+  non_goals:
+    - "No Runtime redesign."
+    - "No broker API."
+    - "No live orders."
+    - "No exchange connectivity."
+    - "Simulation only."
+
+requirements:
+  simulation_laboratory:
+    module: "tools/alpha_research/institutional_market_simulation_laboratory.py"
+    rules:
+      - "Run deterministic replay and simulated paper-trading from the Program 5 institutional portfolio."
+      - "Generate replay, paper-trade, attribution, evolution, decay, drift, risk, live-monitor, and research-feedback artifacts."
+      - "All decisions and simulated trades must remain reproducible and explicitly non-executing."
+      - "Program 6 must feed governed research feedback back into IKROS."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0056"
+
+completion:
+  success_requires:
+    - "AFRP can continuously simulate portfolio management, paper trading, attribution, drift detection, alpha decay, and automatic research feedback."
+    - "All Program 6 outputs remain deterministic, reproducible, and non-executing."
+    - "IKROS simulation-laboratory registry, lineage, graph, memory, and audit artifacts are emitted through the governed runner."
+    - "Program 6 reports, schemas, dashboards, and tests are generated and versioned."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-NONDETERMINISTIC: "Replay, paper-trading, or research-feedback outputs differ across repeated executions."
+  ERR-EXECUTION: "Any Program 6 surface attempts to route orders or connect to a broker or exchange."
+  ERR-OPAQUE: "Simulation decisions or research feedback are emitted without attribution, drift context, or governance rationale."

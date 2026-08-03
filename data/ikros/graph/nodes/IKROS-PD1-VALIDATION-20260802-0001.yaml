@@ -1,0 +1,14 @@
+attributes:
+  outcome: REQUIRES REVISION
+confidence: 0.68
+created_at: '2026-08-02T12:08:59.669999+00:00'
+ikros_id: IKROS-PD1-VALIDATION-20260802-0001
+label: Institutional Transition Engine Verification
+node_id: IKROS-PD1-VALIDATION-20260802-0001
+node_type: VALIDATION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

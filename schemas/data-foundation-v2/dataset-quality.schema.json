@@ -1,0 +1,69 @@
+{
+  "description": "Quality and confidence metrics required by Data Foundation V2.",
+  "properties": {
+    "completeness": {
+      "title": "Completeness",
+      "type": "number"
+    },
+    "confidence_score": {
+      "title": "Confidence Score",
+      "type": "number"
+    },
+    "coverage": {
+      "title": "Coverage",
+      "type": "number"
+    },
+    "duplicate_rate": {
+      "title": "Duplicate Rate",
+      "type": "number"
+    },
+    "end_timestamp": {
+      "title": "End Timestamp",
+      "type": "string"
+    },
+    "freshness": {
+      "title": "Freshness",
+      "type": "number"
+    },
+    "missing_rate": {
+      "title": "Missing Rate",
+      "type": "number"
+    },
+    "record_count": {
+      "title": "Record Count",
+      "type": "integer"
+    },
+    "schema_conformity": {
+      "title": "Schema Conformity",
+      "type": "number"
+    },
+    "start_timestamp": {
+      "title": "Start Timestamp",
+      "type": "string"
+    },
+    "timestamp_consistency": {
+      "title": "Timestamp Consistency",
+      "type": "number"
+    },
+    "validation_score": {
+      "title": "Validation Score",
+      "type": "number"
+    }
+  },
+  "required": [
+    "record_count",
+    "coverage",
+    "completeness",
+    "freshness",
+    "missing_rate",
+    "duplicate_rate",
+    "timestamp_consistency",
+    "schema_conformity",
+    "validation_score",
+    "confidence_score",
+    "start_timestamp",
+    "end_timestamp"
+  ],
+  "title": "DatasetQualityMetrics",
+  "type": "object"
+}

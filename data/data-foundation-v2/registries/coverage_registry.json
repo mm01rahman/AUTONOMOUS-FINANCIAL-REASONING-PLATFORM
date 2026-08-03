@@ -1,0 +1,132 @@
+[
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-001",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "start_timestamp": "2026-07-27T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-003",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "start_timestamp": "2026-07-27T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-007",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "start_timestamp": "2026-07-27T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-008",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "start_timestamp": "2026-07-27T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-009",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-07-28T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 4,
+    "start_timestamp": "2026-07-07T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-010",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-07-28T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 4,
+    "start_timestamp": "2026-07-07T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-011",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "start_timestamp": "2026-07-27T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-012",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "start_timestamp": "2026-07-27T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-014",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-07-31T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 4,
+    "start_timestamp": "2026-04-30T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-017",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-07-31T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 4,
+    "start_timestamp": "2026-04-30T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-018",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "start_timestamp": "2026-07-27T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-019",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "start_timestamp": "2026-07-27T00:00:00Z"
+  },
+  {
+    "completeness": 1.0,
+    "coverage": 1.0,
+    "dataset_id": "DS-PUB-021",
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "start_timestamp": "2026-07-27T00:00:00Z"
+  }
+]

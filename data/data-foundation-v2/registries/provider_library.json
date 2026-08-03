@@ -1,0 +1,79 @@
+[
+  {
+    "checksum_enabled": true,
+    "deterministic": true,
+    "historical_only": true,
+    "provider": "AcademicProvider",
+    "requires_api_key": false,
+    "retry_attempts": 3,
+    "supported_source_kinds": [
+      "public_file"
+    ]
+  },
+  {
+    "checksum_enabled": true,
+    "deterministic": true,
+    "historical_only": true,
+    "provider": "CBOEProvider",
+    "requires_api_key": false,
+    "retry_attempts": 3,
+    "supported_source_kinds": [
+      "public_file"
+    ]
+  },
+  {
+    "checksum_enabled": true,
+    "deterministic": true,
+    "historical_only": true,
+    "provider": "CFTCProvider",
+    "requires_api_key": false,
+    "retry_attempts": 3,
+    "supported_source_kinds": [
+      "public_api"
+    ]
+  },
+  {
+    "checksum_enabled": true,
+    "deterministic": true,
+    "historical_only": true,
+    "provider": "DerivedPolicyProvider",
+    "requires_api_key": false,
+    "retry_attempts": 3,
+    "supported_source_kinds": [
+      "derived"
+    ]
+  },
+  {
+    "checksum_enabled": true,
+    "deterministic": true,
+    "historical_only": true,
+    "provider": "ETFHoldingsProvider",
+    "requires_api_key": false,
+    "retry_attempts": 3,
+    "supported_source_kinds": [
+      "public_file"
+    ]
+  },
+  {
+    "checksum_enabled": true,
+    "deterministic": true,
+    "historical_only": true,
+    "provider": "FREDProvider",
+    "requires_api_key": false,
+    "retry_attempts": 3,
+    "supported_source_kinds": [
+      "public_api"
+    ]
+  },
+  {
+    "checksum_enabled": true,
+    "deterministic": true,
+    "historical_only": true,
+    "provider": "WGCProvider",
+    "requires_api_key": false,
+    "retry_attempts": 3,
+    "supported_source_kinds": [
+      "public_file"
+    ]
+  }
+]

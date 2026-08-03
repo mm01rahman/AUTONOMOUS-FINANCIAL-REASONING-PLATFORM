@@ -1,0 +1,82 @@
+{
+  "bullion_banks": {
+    "bear_unwind": "Unwind inventories and funding-sensitive structures.",
+    "bull_trend": "Warehouse trend-following demand and manage forward inventory.",
+    "calm_carry": "Monetize stable basis conditions.",
+    "crisis_dislocation": "Funding and basis stress make them critical relays.",
+    "macro_transition": "Translate macro repricing into forward/spot market structure.",
+    "range_compression": "Optimize balance sheet rather than directional expression."
+  },
+  "central_banks": {
+    "bear_unwind": "Higher real-rate pressure dominates reserve demand.",
+    "bull_trend": "Policy stance matters less than persistent investor and CTA trend reinforcement.",
+    "calm_carry": "Steady policy backdrop suppresses urgent gold demand.",
+    "crisis_dislocation": "Policy and reserve credibility become central network anchors.",
+    "macro_transition": "Primary drivers through policy-path repricing.",
+    "range_compression": "Policy uncertainty is low and participant interactions are muted."
+  },
+  "commercial_hedgers": {
+    "bear_unwind": "Reduce hedges or monetize prior protection.",
+    "bull_trend": "Increase tactical hedging as upside persists.",
+    "calm_carry": "Optimize carry and financing through forward structures.",
+    "crisis_dislocation": "Prioritize balance-sheet protection over optimization.",
+    "macro_transition": "Re-evaluate hedge structures as macro carry changes.",
+    "range_compression": "Maintain baseline hedges with little directional urgency."
+  },
+  "ctas": {
+    "bear_unwind": "Reverse long exposure and accelerate unwind.",
+    "bull_trend": "Scale into trend continuation and amplify directional persistence.",
+    "calm_carry": "Lower participation because trends are muted.",
+    "crisis_dislocation": "Can reinforce both crash and rebound once trend rules trigger.",
+    "macro_transition": "Join after directional persistence is established.",
+    "range_compression": "Low engagement because breakout signals are absent."
+  },
+  "dealers": {
+    "bear_unwind": "Transmit de-risking across client channels.",
+    "bull_trend": "Distribute directional client demand while protecting inventory.",
+    "calm_carry": "Warehouse balanced two-way flow efficiently.",
+    "crisis_dislocation": "Become bottlenecks as balance-sheet capacity shrinks.",
+    "macro_transition": "Intermediate rapid portfolio reallocation across participants.",
+    "range_compression": "Facilitate mean-reverting two-way flow."
+  },
+  "etf_investors": {
+    "bear_unwind": "Redeem exposure after thesis deterioration.",
+    "bull_trend": "Increase strategic allocations after confirmation.",
+    "calm_carry": "Strategic flows dominate over tactical changes.",
+    "crisis_dislocation": "Add to safe-haven positions after stress confirmation.",
+    "macro_transition": "Respond after thesis gains institutional legitimacy.",
+    "range_compression": "Strategic but inactive."
+  },
+  "macro_hedge_funds": {
+    "bear_unwind": "Rotate toward USD/rates expressions over gold.",
+    "bull_trend": "Express pro-gold macro thesis via cross-asset allocations.",
+    "calm_carry": "Prefer relative-value expressions.",
+    "crisis_dislocation": "Aggressively reallocate across gold, USD, and rates.",
+    "macro_transition": "Fastest tactical reallocators at narrative turning points.",
+    "range_compression": "Wait for cleaner macro asymmetry."
+  },
+  "market_makers": {
+    "bear_unwind": "Tighten risk, manage adverse flow imbalances.",
+    "bull_trend": "Provide liquidity but shorten quote horizons.",
+    "calm_carry": "Deepest liquidity and narrowest spreads.",
+    "crisis_dislocation": "Withdraw liquidity and widen spreads sharply.",
+    "macro_transition": "Adjust depth as information arrival accelerates.",
+    "range_compression": "Dominate microstructure with deepest continuous liquidity."
+  },
+  "retail_traders": {
+    "bear_unwind": "Late liquidation after visible breakdown.",
+    "bull_trend": "Join once momentum is visible.",
+    "calm_carry": "Attention fades without visible volatility.",
+    "crisis_dislocation": "Chase fear-driven moves late in the cycle.",
+    "macro_transition": "Mostly reactive, not initiators.",
+    "range_compression": "Fade visibility due to low excitement."
+  },
+  "safe_haven_capital_flows": {
+    "bear_unwind": "Retreat as stress premium falls.",
+    "bull_trend": "Less dominant unless trend is fear-driven.",
+    "calm_carry": "Remain dormant.",
+    "crisis_dislocation": "Most dominant participant during systemic stress.",
+    "macro_transition": "Rise when macro transition overlaps with systemic fear.",
+    "range_compression": "Inactive in absence of stress."
+  }
+}

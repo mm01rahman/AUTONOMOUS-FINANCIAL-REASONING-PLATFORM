@@ -1,0 +1,653 @@
+{
+  "arb_recommendation": {
+    "architecture_constraints": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion.",
+      "Future architectures MUST separate descriptive institutional narratives from predictive claims unless verified by out-of-sample evidence.",
+      "Future architectures MUST treat unresolved macro and decision layers as hypothesis zones requiring dedicated evidence programs.",
+      "Future architectures MUST enforce data-gap governance; missing critical markets block strong-causal promotion."
+    ],
+    "keep_conditional": [
+      "Integrated transition narratives are plausible but not yet validated"
+    ],
+    "open_questions": [
+      "Macro and decision layers remain unresolved evidence targets"
+    ],
+    "promote_to_institutional_constraints": [
+      "Directed cross-asset topology governs information propagation",
+      "Topology is regime-dependent but structurally persistent",
+      "High trigger sensitivity without calibration degrades transition validity",
+      "Data completeness constrains causal claims"
+    ],
+    "reject": [
+      "Transition Engine v1 component set is not institutionally retained",
+      "Participant ecology layer as encoded in v1 adds negative incremental value"
+    ],
+    "retain_as_supported_principles": [
+      "Institutional heterogeneity is a necessary descriptive layer",
+      "Decision latency hierarchy and cascades matter"
+    ],
+    "stop_confirmation": "Program F extracted institutional scientific theory only; no engine redesign and no alpha generation performed."
+  },
+  "conditional_principles": [
+    {
+      "classification": "CONDITIONAL_PRINCIPLE",
+      "confidence": 0.52,
+      "contradictory_evidence": [
+        "Program D outcome: REQUIRES REVISION (REVISE_MODEL).",
+        "Program D: engine not superior in transition detection/timing versus simpler baselines."
+      ],
+      "economic_rationale": "Regime transitions are multi-channel institutional phenomena, but channel weights were mis-specified in v1.",
+      "failure_conditions": [
+        "If integrated models cannot outperform simple baselines after mechanism-level correction."
+      ],
+      "institutional_candidate": false,
+      "name": "Integrated transition narratives are plausible but not yet validated",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0005",
+      "regime_dependence": "Expected high dependence; currently under-constrained.",
+      "scientific_statement": "A systems narrative combining macro repricing, participant ecology, decision cascades, cross-asset propagation, and liquidity transformation is economically coherent but not empirically superior in v1 implementation.",
+      "scope": "Explanatory architecture-level framing only.",
+      "supporting_evidence": [
+        "Program C mean transition confidence: 0.7034.",
+        "Program C generated complete six-state transition library and dependency graph.",
+        "Program D still acknowledged interpretability and plausibility dimensions for structured models."
+      ]
+    }
+  ],
+  "ecology_knowledge_graph": {
+    "conclusion_node": {
+      "attributes": {
+        "axioms": 4,
+        "conditional": 1,
+        "open_questions": 1,
+        "rejected": 2,
+        "supported": 2
+      },
+      "label": "Discovery Cycle 2 Institutional Theory Extraction Conclusion",
+      "node_id": "IKROS-PF1-CONCLUSION-20260802-0001",
+      "node_type": "RESEARCH_CONCLUSION"
+    },
+    "constraints_node": {
+      "attributes": {
+        "constraint_count": 7
+      },
+      "label": "Future Architecture Constraints",
+      "node_id": "IKROS-PF1-CONSTRAINTS-20260802-0001",
+      "node_type": "KNOWLEDGE_OBJECT"
+    },
+    "edges": [
+      {
+        "confidence": 0.82,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-PF1-PRINCIPLE-0001",
+        "target": "IKROS-PF1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.79,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-PF1-PRINCIPLE-0002",
+        "target": "IKROS-PF1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.86,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-PF1-PRINCIPLE-0006",
+        "target": "IKROS-PF1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.88,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-PF1-PRINCIPLE-0010",
+        "target": "IKROS-PF1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.68,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-PF1-PRINCIPLE-0003",
+        "target": "IKROS-PF1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.73,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-PF1-PRINCIPLE-0004",
+        "target": "IKROS-PF1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.52,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-PF1-PRINCIPLE-0005",
+        "target": "IKROS-PF1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.9,
+        "relation": "REFUTES",
+        "source": "IKROS-PF1-PRINCIPLE-0007",
+        "target": "IKROS-PF1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.84,
+        "relation": "REFUTES",
+        "source": "IKROS-PF1-PRINCIPLE-0008",
+        "target": "IKROS-PF1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.49,
+        "relation": "SUPPORTED_BY",
+        "source": "IKROS-PF1-PRINCIPLE-0009",
+        "target": "IKROS-PF1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.8,
+        "relation": "EXPLAINS",
+        "source": "IKROS-PF1-CONCLUSION-20260802-0001",
+        "target": "IKROS-PF1-CONSTRAINTS-20260802-0001"
+      }
+    ],
+    "principle_nodes": [
+      {
+        "classification": "INSTITUTIONAL_AXIOM",
+        "confidence": 0.82,
+        "label": "Directed cross-asset topology governs information propagation",
+        "node_id": "IKROS-PF1-PRINCIPLE-0001"
+      },
+      {
+        "classification": "INSTITUTIONAL_AXIOM",
+        "confidence": 0.79,
+        "label": "Topology is regime-dependent but structurally persistent",
+        "node_id": "IKROS-PF1-PRINCIPLE-0002"
+      },
+      {
+        "classification": "INSTITUTIONAL_AXIOM",
+        "confidence": 0.86,
+        "label": "High trigger sensitivity without calibration degrades transition validity",
+        "node_id": "IKROS-PF1-PRINCIPLE-0006"
+      },
+      {
+        "classification": "INSTITUTIONAL_AXIOM",
+        "confidence": 0.88,
+        "label": "Data completeness constrains causal claims",
+        "node_id": "IKROS-PF1-PRINCIPLE-0010"
+      },
+      {
+        "classification": "SUPPORTED_PRINCIPLE",
+        "confidence": 0.68,
+        "label": "Institutional heterogeneity is a necessary descriptive layer",
+        "node_id": "IKROS-PF1-PRINCIPLE-0003"
+      },
+      {
+        "classification": "SUPPORTED_PRINCIPLE",
+        "confidence": 0.73,
+        "label": "Decision latency hierarchy and cascades matter",
+        "node_id": "IKROS-PF1-PRINCIPLE-0004"
+      },
+      {
+        "classification": "CONDITIONAL_PRINCIPLE",
+        "confidence": 0.52,
+        "label": "Integrated transition narratives are plausible but not yet validated",
+        "node_id": "IKROS-PF1-PRINCIPLE-0005"
+      },
+      {
+        "classification": "REJECTED_PRINCIPLE",
+        "confidence": 0.9,
+        "label": "Transition Engine v1 component set is not institutionally retained",
+        "node_id": "IKROS-PF1-PRINCIPLE-0007"
+      },
+      {
+        "classification": "REJECTED_PRINCIPLE",
+        "confidence": 0.84,
+        "label": "Participant ecology layer as encoded in v1 adds negative incremental value",
+        "node_id": "IKROS-PF1-PRINCIPLE-0008"
+      },
+      {
+        "classification": "OPEN_QUESTION",
+        "confidence": 0.49,
+        "label": "Macro and decision layers remain unresolved evidence targets",
+        "node_id": "IKROS-PF1-PRINCIPLE-0009"
+      }
+    ]
+  },
+  "evidence_synthesis": {
+    "architecture_constraints_for_future_models": [
+      "Future architectures MUST model directed cross-asset information flow with explicit source-relay-sink structure.",
+      "Future architectures MUST be regime-aware and stress-aware; topology and mechanism parameters cannot be globally stationary.",
+      "Future architectures MUST include explicit confidence calibration checks (e.g., Brier-style diagnostics) and false-transition controls.",
+      "Future architectures MUST beat or match simple baselines on transition detection and timing before institutional promotion.",
+      "Future architectures MUST separate descriptive institutional narratives from predictive claims unless verified by out-of-sample evidence.",
+      "Future architectures MUST treat unresolved macro and decision layers as hypothesis zones requiring dedicated evidence programs.",
+      "Future architectures MUST enforce data-gap governance; missing critical markets block strong-causal promotion."
+    ],
+    "what_dc2_disproved": [
+      "The specific Transition Engine v1 composition qualifies as a governing explanatory model.",
+      "The v1 participant ecology layer implementation improves transition explanatory performance."
+    ],
+    "what_dc2_proved": [
+      "Information before XAU/USD regime transitions propagates through a directed, confidence-weighted cross-asset topology with identifiable source, relay, and sink hierarchy.",
+      "Cross-asset network topology changes under stress/event regimes but retains substantial structural overlap and persistent bottlenecks.",
+      "Participant classes (central banks, dealers, market makers, hedge funds, CTAs, ETF/safe-haven flows, hedgers) exhibit differentiated objectives, constraints, and liquidity effects that shape observed ecology.",
+      "Faster institutional actors initiate decision cascades that propagate through slower agents and inventory relays.",
+      "Transition detection architectures must explicitly control false-transition rates and calibrate transition-risk confidence; otherwise explanatory claims are unreliable.",
+      "Causal or transition-level institutional claims are bounded by exogenous data coverage quality; missing cross-market observability should default conclusions toward conditional status."
+    ],
+    "what_remains_uncertain": [
+      "A systems narrative combining macro repricing, participant ecology, decision cascades, cross-asset propagation, and liquidity transformation is economically coherent but not empirically superior in v1 implementation.",
+      "Macro and decision-ecology layers may contain explanatory signal but require additional evidence before institutional retention or rejection."
+    ]
+  },
+  "institutional_axiom_registry": [
+    {
+      "classification": "INSTITUTIONAL_AXIOM",
+      "confidence": 0.82,
+      "contradictory_evidence": [],
+      "economic_rationale": "Institutional capital reallocates through constrained relay channels, producing directed information flow.",
+      "failure_conditions": [
+        "If directed hierarchy disappears after adding missing external market datasets."
+      ],
+      "institutional_candidate": true,
+      "name": "Directed cross-asset topology governs information propagation",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0001",
+      "regime_dependence": "Topology reconfigures by regime while preserving core hierarchy constraints.",
+      "scientific_statement": "Information before XAU/USD regime transitions propagates through a directed, confidence-weighted cross-asset topology with identifiable source, relay, and sink hierarchy.",
+      "scope": "XAU/USD cross-asset regime transition context (1D horizon).",
+      "supporting_evidence": [
+        "Program A Phase 3 ARB: governing model is confidence-weighted directed network with regime overlays.",
+        "Program A Phase 3 stable edges: dxy_return_5->dxy_return_20, dxy_return_5->forward_expectation, macro_pressure->dxy_return_20, macro_pressure->forward_expectation, dxy_return_1->macro_pressure.",
+        "Program A Phase 3 hierarchy: sources=dxy_return_1, xau_return_1, macro_pressure, relays=dxy_return_5, macro_pressure, dxy_return_20, sinks=dxy_return_20, forward_expectation, geo_severity."
+      ]
+    },
+    {
+      "classification": "INSTITUTIONAL_AXIOM",
+      "confidence": 0.79,
+      "contradictory_evidence": [],
+      "economic_rationale": "Institutional constraints and common collateral channels anchor flow skeleton while risk appetite rotates edges.",
+      "failure_conditions": [
+        "If out-of-sample topology overlap collapses materially below observed governed window."
+      ],
+      "institutional_candidate": true,
+      "name": "Topology is regime-dependent but structurally persistent",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0002",
+      "regime_dependence": "High; topology differs across six approved regimes.",
+      "scientific_statement": "Cross-asset network topology changes under stress/event regimes but retains substantial structural overlap and persistent bottlenecks.",
+      "scope": "Regime-conditioned network topology around transitions.",
+      "supporting_evidence": [
+        "Program A Phase 3 mean topology overlap: 0.8454.",
+        "Program A Phase 3 bottlenecks: dxy_return_5, macro_pressure.",
+        "Program A Phase 3 stress/event topology reports show conditional rewiring rather than complete topology collapse."
+      ]
+    },
+    {
+      "classification": "INSTITUTIONAL_AXIOM",
+      "confidence": 0.86,
+      "contradictory_evidence": [],
+      "economic_rationale": "Institutional transitions are sparse; over-triggering creates spurious regime narratives.",
+      "failure_conditions": [
+        "If model governance allows uncalibrated confidence or unbounded trigger amplification."
+      ],
+      "institutional_candidate": true,
+      "name": "High trigger sensitivity without calibration degrades transition validity",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0006",
+      "regime_dependence": "Applies across regimes, especially stress regimes.",
+      "scientific_statement": "Transition detection architectures must explicitly control false-transition rates and calibrate transition-risk confidence; otherwise explanatory claims are unreliable.",
+      "scope": "All future transition inference architectures in AFRP.",
+      "supporting_evidence": [
+        "Program D failures include: Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+        "Program D failures include: Confidence calibration is weak under transition-risk scoring.",
+        "Program E interaction/regime/cross-asset layers flagged for redesign partly due to calibration and over-sensitivity outcomes."
+      ]
+    },
+    {
+      "classification": "INSTITUTIONAL_AXIOM",
+      "confidence": 0.88,
+      "contradictory_evidence": [],
+      "economic_rationale": "Unobserved drivers induce omitted-variable bias and unstable causal attribution.",
+      "failure_conditions": [
+        "If governance permits strong-causal promotion without closing critical data gaps."
+      ],
+      "institutional_candidate": true,
+      "name": "Data completeness constrains causal claims",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0010",
+      "regime_dependence": "Data requirements amplify in stress/event regimes.",
+      "scientific_statement": "Causal or transition-level institutional claims are bounded by exogenous data coverage quality; missing cross-market observability should default conclusions toward conditional status.",
+      "scope": "All AFRP discovery cycles and model-governance decisions.",
+      "supporting_evidence": [
+        "Program A Phase 1 data gap priority includes: VIX, S&P 500, Crude Oil, EUR/USD, USD/JPY.",
+        "Program D contradictory evidence: CPI/NFP direct datasets unavailable; proxies were used.",
+        "Program A Phase 2 promoted zero strong causal candidates under available data."
+      ]
+    }
+  ],
+  "knowledge_consolidation_report": {
+    "axiom_count": 4,
+    "conditional_count": 1,
+    "open_question_count": 1,
+    "rejected_count": 2,
+    "supported_count": 2
+  },
+  "open_research_questions": [
+    {
+      "classification": "OPEN_QUESTION",
+      "confidence": 0.49,
+      "contradictory_evidence": [
+        "Program A Phase 2 retained-for-validation signals were limited: dxy_return_5, macro_pressure."
+      ],
+      "economic_rationale": "Macro and decision channels are plausible but weakly observed in current dataset coverage.",
+      "failure_conditions": [
+        "If future studies fail to demonstrate stable incremental gain over simpler baselines."
+      ],
+      "institutional_candidate": false,
+      "name": "Macro and decision layers remain unresolved evidence targets",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0009",
+      "regime_dependence": "Potentially high but currently under-identified.",
+      "scientific_statement": "Macro and decision-ecology layers may contain explanatory signal but require additional evidence before institutional retention or rejection.",
+      "scope": "Future evidence acquisition and controlled validation studies.",
+      "supporting_evidence": [
+        "Program E components requiring evidence: decision_ecology_layer, macro_layer.",
+        "Program E incremental gain macro=0.0054, decision=0.0019."
+      ]
+    }
+  ],
+  "phase": "DC2_PROGRAM_F_PHASE1",
+  "rejected_principles": [
+    {
+      "classification": "REJECTED_PRINCIPLE",
+      "confidence": 0.9,
+      "contradictory_evidence": [
+        "Program D outcome: REQUIRES REVISION / REVISE_MODEL.",
+        "Program E: components_to_retain is empty."
+      ],
+      "economic_rationale": "Empirical performance and calibration deficits prevent institutional retention.",
+      "failure_conditions": [
+        "N/A (already falsified/rejected in current governed evidence)."
+      ],
+      "institutional_candidate": false,
+      "name": "Transition Engine v1 component set is not institutionally retained",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0007",
+      "regime_dependence": "N/A",
+      "scientific_statement": "The specific Transition Engine v1 composition qualifies as a governing explanatory model.",
+      "scope": "Transition Engine v1 implementation only.",
+      "supporting_evidence": []
+    },
+    {
+      "classification": "REJECTED_PRINCIPLE",
+      "confidence": 0.84,
+      "contradictory_evidence": [
+        "Program E incremental gain participant_ecology_layer: -0.0132.",
+        "Program E components_to_remove: participant_ecology_layer."
+      ],
+      "economic_rationale": "Coarse participant proxies can inject noise and overfit institutional narratives.",
+      "failure_conditions": [
+        "Could be reconsidered only with materially improved participant-state observability."
+      ],
+      "institutional_candidate": false,
+      "name": "Participant ecology layer as encoded in v1 adds negative incremental value",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0008",
+      "regime_dependence": "Likely regime dependent but unresolved due signal specification weakness.",
+      "scientific_statement": "The v1 participant ecology layer implementation improves transition explanatory performance.",
+      "scope": "Current v1 parameterization and proxy encoding only.",
+      "supporting_evidence": []
+    }
+  ],
+  "research_unknowns": [],
+  "scientific_principle_registry": [
+    {
+      "classification": "INSTITUTIONAL_AXIOM",
+      "confidence": 0.82,
+      "contradictory_evidence": [],
+      "economic_rationale": "Institutional capital reallocates through constrained relay channels, producing directed information flow.",
+      "failure_conditions": [
+        "If directed hierarchy disappears after adding missing external market datasets."
+      ],
+      "institutional_candidate": true,
+      "name": "Directed cross-asset topology governs information propagation",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0001",
+      "regime_dependence": "Topology reconfigures by regime while preserving core hierarchy constraints.",
+      "scientific_statement": "Information before XAU/USD regime transitions propagates through a directed, confidence-weighted cross-asset topology with identifiable source, relay, and sink hierarchy.",
+      "scope": "XAU/USD cross-asset regime transition context (1D horizon).",
+      "supporting_evidence": [
+        "Program A Phase 3 ARB: governing model is confidence-weighted directed network with regime overlays.",
+        "Program A Phase 3 stable edges: dxy_return_5->dxy_return_20, dxy_return_5->forward_expectation, macro_pressure->dxy_return_20, macro_pressure->forward_expectation, dxy_return_1->macro_pressure.",
+        "Program A Phase 3 hierarchy: sources=dxy_return_1, xau_return_1, macro_pressure, relays=dxy_return_5, macro_pressure, dxy_return_20, sinks=dxy_return_20, forward_expectation, geo_severity."
+      ]
+    },
+    {
+      "classification": "INSTITUTIONAL_AXIOM",
+      "confidence": 0.79,
+      "contradictory_evidence": [],
+      "economic_rationale": "Institutional constraints and common collateral channels anchor flow skeleton while risk appetite rotates edges.",
+      "failure_conditions": [
+        "If out-of-sample topology overlap collapses materially below observed governed window."
+      ],
+      "institutional_candidate": true,
+      "name": "Topology is regime-dependent but structurally persistent",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0002",
+      "regime_dependence": "High; topology differs across six approved regimes.",
+      "scientific_statement": "Cross-asset network topology changes under stress/event regimes but retains substantial structural overlap and persistent bottlenecks.",
+      "scope": "Regime-conditioned network topology around transitions.",
+      "supporting_evidence": [
+        "Program A Phase 3 mean topology overlap: 0.8454.",
+        "Program A Phase 3 bottlenecks: dxy_return_5, macro_pressure.",
+        "Program A Phase 3 stress/event topology reports show conditional rewiring rather than complete topology collapse."
+      ]
+    },
+    {
+      "classification": "SUPPORTED_PRINCIPLE",
+      "confidence": 0.68,
+      "contradictory_evidence": [
+        "Program E found participant_ecology_layer negative incremental gain in Transition Engine v1 implementation."
+      ],
+      "economic_rationale": "Different balance-sheet mandates and risk constraints generate non-homogeneous order-flow impact.",
+      "failure_conditions": [
+        "If participant proxies remain too coarse to map to transition timing decisions."
+      ],
+      "institutional_candidate": true,
+      "name": "Institutional heterogeneity is a necessary descriptive layer",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0003",
+      "regime_dependence": "Participant influence and interaction intensity vary by regime.",
+      "scientific_statement": "Participant classes (central banks, dealers, market makers, hedge funds, CTAs, ETF/safe-haven flows, hedgers) exhibit differentiated objectives, constraints, and liquidity effects that shape observed ecology.",
+      "scope": "Descriptive institutional ecology; not automatically predictive when naively encoded.",
+      "supporting_evidence": [
+        "Program B Phase 1 participant profiles and interaction matrix.",
+        "Program B Phase 1 critical interactions: dealers->market_makers, bullion_banks->dealers, dealers->bullion_banks, bullion_banks->commercial_hedgers, dealers->macro_hedge_funds.",
+        "Program B Phase 2 confirms heterogeneous decision responses and asymmetry rankings."
+      ]
+    },
+    {
+      "classification": "SUPPORTED_PRINCIPLE",
+      "confidence": 0.73,
+      "contradictory_evidence": [],
+      "economic_rationale": "Short-horizon discretionary and systematic actors react before policy/anchor actors fully reprice.",
+      "failure_conditions": [
+        "If latency rankings invert under richer event-annotated data."
+      ],
+      "institutional_candidate": true,
+      "name": "Decision latency hierarchy and cascades matter",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0004",
+      "regime_dependence": "Cascade pathways vary with liquidity and macro stress state.",
+      "scientific_statement": "Faster institutional actors initiate decision cascades that propagate through slower agents and inventory relays.",
+      "scope": "Transition formation sequencing, not sufficient as standalone predictor.",
+      "supporting_evidence": [
+        "Program B Phase 2 fastest decision makers: market_makers, macro_hedge_funds, etf_investors, safe_haven_capital_flows, commercial_hedgers.",
+        "Program B Phase 2 dominant cascade initiators: market_makers, macro_hedge_funds, etf_investors, safe_haven_capital_flows.",
+        "Program C transition timelines explicitly include participant action and decision sequence stages."
+      ]
+    },
+    {
+      "classification": "CONDITIONAL_PRINCIPLE",
+      "confidence": 0.52,
+      "contradictory_evidence": [
+        "Program D outcome: REQUIRES REVISION (REVISE_MODEL).",
+        "Program D: engine not superior in transition detection/timing versus simpler baselines."
+      ],
+      "economic_rationale": "Regime transitions are multi-channel institutional phenomena, but channel weights were mis-specified in v1.",
+      "failure_conditions": [
+        "If integrated models cannot outperform simple baselines after mechanism-level correction."
+      ],
+      "institutional_candidate": false,
+      "name": "Integrated transition narratives are plausible but not yet validated",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0005",
+      "regime_dependence": "Expected high dependence; currently under-constrained.",
+      "scientific_statement": "A systems narrative combining macro repricing, participant ecology, decision cascades, cross-asset propagation, and liquidity transformation is economically coherent but not empirically superior in v1 implementation.",
+      "scope": "Explanatory architecture-level framing only.",
+      "supporting_evidence": [
+        "Program C mean transition confidence: 0.7034.",
+        "Program C generated complete six-state transition library and dependency graph.",
+        "Program D still acknowledged interpretability and plausibility dimensions for structured models."
+      ]
+    },
+    {
+      "classification": "INSTITUTIONAL_AXIOM",
+      "confidence": 0.86,
+      "contradictory_evidence": [],
+      "economic_rationale": "Institutional transitions are sparse; over-triggering creates spurious regime narratives.",
+      "failure_conditions": [
+        "If model governance allows uncalibrated confidence or unbounded trigger amplification."
+      ],
+      "institutional_candidate": true,
+      "name": "High trigger sensitivity without calibration degrades transition validity",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0006",
+      "regime_dependence": "Applies across regimes, especially stress regimes.",
+      "scientific_statement": "Transition detection architectures must explicitly control false-transition rates and calibrate transition-risk confidence; otherwise explanatory claims are unreliable.",
+      "scope": "All future transition inference architectures in AFRP.",
+      "supporting_evidence": [
+        "Program D failures include: Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+        "Program D failures include: Confidence calibration is weak under transition-risk scoring.",
+        "Program E interaction/regime/cross-asset layers flagged for redesign partly due to calibration and over-sensitivity outcomes."
+      ]
+    },
+    {
+      "classification": "REJECTED_PRINCIPLE",
+      "confidence": 0.9,
+      "contradictory_evidence": [
+        "Program D outcome: REQUIRES REVISION / REVISE_MODEL.",
+        "Program E: components_to_retain is empty."
+      ],
+      "economic_rationale": "Empirical performance and calibration deficits prevent institutional retention.",
+      "failure_conditions": [
+        "N/A (already falsified/rejected in current governed evidence)."
+      ],
+      "institutional_candidate": false,
+      "name": "Transition Engine v1 component set is not institutionally retained",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0007",
+      "regime_dependence": "N/A",
+      "scientific_statement": "The specific Transition Engine v1 composition qualifies as a governing explanatory model.",
+      "scope": "Transition Engine v1 implementation only.",
+      "supporting_evidence": []
+    },
+    {
+      "classification": "REJECTED_PRINCIPLE",
+      "confidence": 0.84,
+      "contradictory_evidence": [
+        "Program E incremental gain participant_ecology_layer: -0.0132.",
+        "Program E components_to_remove: participant_ecology_layer."
+      ],
+      "economic_rationale": "Coarse participant proxies can inject noise and overfit institutional narratives.",
+      "failure_conditions": [
+        "Could be reconsidered only with materially improved participant-state observability."
+      ],
+      "institutional_candidate": false,
+      "name": "Participant ecology layer as encoded in v1 adds negative incremental value",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0008",
+      "regime_dependence": "Likely regime dependent but unresolved due signal specification weakness.",
+      "scientific_statement": "The v1 participant ecology layer implementation improves transition explanatory performance.",
+      "scope": "Current v1 parameterization and proxy encoding only.",
+      "supporting_evidence": []
+    },
+    {
+      "classification": "OPEN_QUESTION",
+      "confidence": 0.49,
+      "contradictory_evidence": [
+        "Program A Phase 2 retained-for-validation signals were limited: dxy_return_5, macro_pressure."
+      ],
+      "economic_rationale": "Macro and decision channels are plausible but weakly observed in current dataset coverage.",
+      "failure_conditions": [
+        "If future studies fail to demonstrate stable incremental gain over simpler baselines."
+      ],
+      "institutional_candidate": false,
+      "name": "Macro and decision layers remain unresolved evidence targets",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0009",
+      "regime_dependence": "Potentially high but currently under-identified.",
+      "scientific_statement": "Macro and decision-ecology layers may contain explanatory signal but require additional evidence before institutional retention or rejection.",
+      "scope": "Future evidence acquisition and controlled validation studies.",
+      "supporting_evidence": [
+        "Program E components requiring evidence: decision_ecology_layer, macro_layer.",
+        "Program E incremental gain macro=0.0054, decision=0.0019."
+      ]
+    },
+    {
+      "classification": "INSTITUTIONAL_AXIOM",
+      "confidence": 0.88,
+      "contradictory_evidence": [],
+      "economic_rationale": "Unobserved drivers induce omitted-variable bias and unstable causal attribution.",
+      "failure_conditions": [
+        "If governance permits strong-causal promotion without closing critical data gaps."
+      ],
+      "institutional_candidate": true,
+      "name": "Data completeness constrains causal claims",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0010",
+      "regime_dependence": "Data requirements amplify in stress/event regimes.",
+      "scientific_statement": "Causal or transition-level institutional claims are bounded by exogenous data coverage quality; missing cross-market observability should default conclusions toward conditional status.",
+      "scope": "All AFRP discovery cycles and model-governance decisions.",
+      "supporting_evidence": [
+        "Program A Phase 1 data gap priority includes: VIX, S&P 500, Crude Oil, EUR/USD, USD/JPY.",
+        "Program D contradictory evidence: CPI/NFP direct datasets unavailable; proxies were used.",
+        "Program A Phase 2 promoted zero strong causal candidates under available data."
+      ]
+    }
+  ],
+  "source_programs": [
+    "program_a_phase1",
+    "program_a_phase2",
+    "program_a_phase3",
+    "program_b_phase1",
+    "program_b_phase2",
+    "program_c_phase1",
+    "program_d_phase1",
+    "program_e_phase1"
+  ],
+  "supported_principles": [
+    {
+      "classification": "SUPPORTED_PRINCIPLE",
+      "confidence": 0.68,
+      "contradictory_evidence": [
+        "Program E found participant_ecology_layer negative incremental gain in Transition Engine v1 implementation."
+      ],
+      "economic_rationale": "Different balance-sheet mandates and risk constraints generate non-homogeneous order-flow impact.",
+      "failure_conditions": [
+        "If participant proxies remain too coarse to map to transition timing decisions."
+      ],
+      "institutional_candidate": true,
+      "name": "Institutional heterogeneity is a necessary descriptive layer",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0003",
+      "regime_dependence": "Participant influence and interaction intensity vary by regime.",
+      "scientific_statement": "Participant classes (central banks, dealers, market makers, hedge funds, CTAs, ETF/safe-haven flows, hedgers) exhibit differentiated objectives, constraints, and liquidity effects that shape observed ecology.",
+      "scope": "Descriptive institutional ecology; not automatically predictive when naively encoded.",
+      "supporting_evidence": [
+        "Program B Phase 1 participant profiles and interaction matrix.",
+        "Program B Phase 1 critical interactions: dealers->market_makers, bullion_banks->dealers, dealers->bullion_banks, bullion_banks->commercial_hedgers, dealers->macro_hedge_funds.",
+        "Program B Phase 2 confirms heterogeneous decision responses and asymmetry rankings."
+      ]
+    },
+    {
+      "classification": "SUPPORTED_PRINCIPLE",
+      "confidence": 0.73,
+      "contradictory_evidence": [],
+      "economic_rationale": "Short-horizon discretionary and systematic actors react before policy/anchor actors fully reprice.",
+      "failure_conditions": [
+        "If latency rankings invert under richer event-annotated data."
+      ],
+      "institutional_candidate": true,
+      "name": "Decision latency hierarchy and cascades matter",
+      "principle_id": "IKROS-PF1-PRINCIPLE-0004",
+      "regime_dependence": "Cascade pathways vary with liquidity and macro stress state.",
+      "scientific_statement": "Faster institutional actors initiate decision cascades that propagate through slower agents and inventory relays.",
+      "scope": "Transition formation sequencing, not sufficient as standalone predictor.",
+      "supporting_evidence": [
+        "Program B Phase 2 fastest decision makers: market_makers, macro_hedge_funds, etf_investors, safe_haven_capital_flows, commercial_hedgers.",
+        "Program B Phase 2 dominant cascade initiators: market_makers, macro_hedge_funds, etf_investors, safe_haven_capital_flows.",
+        "Program C transition timelines explicitly include participant action and decision sequence stages."
+      ]
+    }
+  ],
+  "title": "Institutional Theory Extraction"
+}

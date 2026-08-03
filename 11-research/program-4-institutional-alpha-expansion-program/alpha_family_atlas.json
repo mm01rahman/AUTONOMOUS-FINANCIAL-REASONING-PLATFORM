@@ -1,0 +1,98 @@
+[
+  {
+    "family": "COMMODITY_INTERMARKET_RELATIONSHIPS",
+    "mechanisms": [
+      "commodity_cross_curve_divergence"
+    ],
+    "regimes": [
+      "INTERMARKET_DIVERGENCE"
+    ],
+    "states": [
+      "APPROVED_ALPHA"
+    ]
+  },
+  {
+    "family": "DEALER_INVENTORY_DYNAMICS",
+    "mechanisms": [
+      "decision_cascade"
+    ],
+    "regimes": [
+      "TRANSITION"
+    ],
+    "states": [
+      "BLOCKED_BY_DATA"
+    ]
+  },
+  {
+    "family": "ETF_ACCUMULATION_DISTRIBUTION",
+    "mechanisms": [
+      "etf_flow_accumulation_pressure"
+    ],
+    "regimes": [
+      "FLOW_DOMINATED"
+    ],
+    "states": [
+      "APPROVED_ALPHA"
+    ]
+  },
+  {
+    "family": "POLICY_EXPECTATION_REPRICING",
+    "mechanisms": [
+      "policy_expectation_repricing"
+    ],
+    "regimes": [
+      "CENTRAL_BANK_REPRICING"
+    ],
+    "states": [
+      "APPROVED_ALPHA"
+    ]
+  },
+  {
+    "family": "REAL_YIELD_DISLOCATIONS",
+    "mechanisms": [
+      "real_yield_dislocation_reversion"
+    ],
+    "regimes": [
+      "REAL_RATE_SHOCK"
+    ],
+    "states": [
+      "APPROVED_ALPHA"
+    ]
+  },
+  {
+    "family": "RESERVE_REALLOCATION",
+    "mechanisms": [
+      "central_bank_reserve_reallocation"
+    ],
+    "regimes": [
+      "SOVEREIGN_REALLOCATION"
+    ],
+    "states": [
+      "BLOCKED_BY_DATA"
+    ]
+  },
+  {
+    "family": "SAFE_HAVEN_FLOWS",
+    "mechanisms": [
+      "safe_haven_migration"
+    ],
+    "regimes": [
+      "HIGH_UNCERTAINTY"
+    ],
+    "states": [
+      "APPROVED_ALPHA"
+    ]
+  },
+  {
+    "family": "VOLATILITY_REGIME_SHIFTS",
+    "mechanisms": [
+      "volatility_carry_shadow"
+    ],
+    "regimes": [
+      "VOLATILITY_TRANSITION"
+    ],
+    "states": [
+      "REJECTED"
+    ]
+  }
+]

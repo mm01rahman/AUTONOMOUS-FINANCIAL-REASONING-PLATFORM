@@ -6,7 +6,7 @@ Program B Phase 1: Institutional Market Ecology Research Program.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any, cast
+from typing import Any, Protocol, cast
 
 from tools.alpha_research.market_ecology import (
     DC2_PROGRAM_B_DIR,
@@ -30,10 +30,14 @@ def _with_reproducibility_hash(entity: dict[str, Any]) -> dict[str, Any]:
     return result
 
 
-def _select_campaign_pipeline(campaign: ResearchCampaign, task_kinds: list[str]) -> ResearchCampaign:
+def _select_campaign_pipeline(
+    campaign: ResearchCampaign, task_kinds: list[str]
+) -> ResearchCampaign:
     kind_set = set(task_kinds)
     filtered = [task for task in campaign.tasks if task.kind in kind_set]
-    ordered = sorted(filtered, key=lambda task: task_kinds.index(task.kind) if task.kind in task_kinds else 999)
+    ordered = sorted(
+        filtered, key=lambda task: task_kinds.index(task.kind) if task.kind in task_kinds else 999
+    )
     for idx, task in enumerate(ordered):
         task.depends_on = [ordered[idx - 1].task_id] if idx > 0 else []
     campaign.tasks = ordered
@@ -42,7 +46,26 @@ def _select_campaign_pipeline(campaign: ResearchCampaign, task_kinds: list[str])
     return campaign
 
 
-def _transition_if_needed(registry: Any, entity_id: str, target_state: str, note: str = "") -> None:
+class _TransitionEntity(Protocol):
+    lifecycle_state: str
+
+
+class _TransitionRegistry(Protocol):
+    def get(self, entity_id: str) -> _TransitionEntity: ...
+
+    def transition(
+        self,
+        entity_id: str,
+        target_state: str,
+        note: str = "",
+    ) -> object: ...
+
+def _transition_if_needed(
+    registry: _TransitionRegistry,
+    entity_id: str,
+    target_state: str,
+    note: str = "",
+) -> None:
     state_rank: dict[str, int] = {
         "PROPOSED": 0,
         "OPEN": 0,
@@ -65,7 +88,9 @@ def _transition_if_needed(registry: Any, entity_id: str, target_state: str, note
         pass
 
 
-def _upsert_graph_payload(repo_root: Path, analysis: dict[str, Any], campaign_id: str) -> dict[str, int]:
+def _upsert_graph_payload(
+    repo_root: Path, analysis: dict[str, Any], campaign_id: str
+) -> dict[str, int]:
     graph_repo = YAMLGraphRepository((repo_root / "data" / "ikros" / "graph").resolve())
     graph = graph_repo.load()
     payload = analysis["ecology_knowledge_graph"]
@@ -88,7 +113,10 @@ def _upsert_graph_payload(repo_root: Path, analysis: dict[str, Any], campaign_id
             wp_refs=["WP-IMP-0048"],
             attributes={
                 "program": "DC2 Program B Phase 1",
-                "description": "First institutional ecology model explaining participant interactions behind the cross-asset information network.",
+                "description": (
+                    "First institutional ecology model explaining participant "
+                    "interactions behind the cross-asset information network."
+                ),
             },
         ),
         GraphNode(
@@ -101,7 +129,9 @@ def _upsert_graph_payload(repo_root: Path, analysis: dict[str, Any], campaign_id
             wp_refs=["WP-IMP-0048"],
             attributes={
                 "arb_recommendation": analysis["research_recommendations"]["arb_recommendation"],
-                "critical_interactions": analysis["research_recommendations"]["critical_interactions"],
+                "critical_interactions": analysis["research_recommendations"][
+                    "critical_interactions"
+                ],
             },
         ),
         GraphNode(
@@ -120,7 +150,9 @@ def _upsert_graph_payload(repo_root: Path, analysis: dict[str, Any], campaign_id
     all_nodes.extend(
         GraphNode(
             node_id=node["node_id"],
-            node_type=NodeType.KNOWLEDGE_OBJECT.value if node["node_type"] == "KNOWLEDGE_OBJECT" else NodeType.FACTOR.value,
+            node_type=NodeType.KNOWLEDGE_OBJECT.value
+            if node["node_type"] == "KNOWLEDGE_OBJECT"
+            else NodeType.FACTOR.value,
             ikros_id=node["node_id"],
             label=str(node["label"]),
             confidence=0.65,
@@ -136,12 +168,16 @@ def _upsert_graph_payload(repo_root: Path, analysis: dict[str, Any], campaign_id
             graph.add_node(node)
             created_nodes += 1
 
-    relation_index = {
-        (edge.source_id, edge.target_id, edge.edge_type)
-        for edge in graph.edges()
-    }
+    relation_index = {(edge.source_id, edge.target_id, edge.edge_type) for edge in graph.edges()}
 
-    def add_edge(source_id: str, target_id: str, edge_type: str, confidence: float, evidence_ref: str, attributes: dict[str, Any]) -> None:
+    def add_edge(
+        source_id: str,
+        target_id: str,
+        edge_type: str,
+        confidence: float,
+        evidence_ref: str,
+        attributes: dict[str, Any],
+    ) -> None:
         nonlocal created_edges
         key = (source_id, target_id, edge_type)
         if key in relation_index:
@@ -165,7 +201,9 @@ def _upsert_graph_payload(repo_root: Path, analysis: dict[str, Any], campaign_id
         add_edge(
             edge["source"],
             edge["target"],
-            EdgeType.RELATED_TO.value if edge["relation"] == "RELATED_TO" else EdgeType.ASSOCIATED_WITH.value,
+            EdgeType.RELATED_TO.value
+            if edge["relation"] == "RELATED_TO"
+            else EdgeType.ASSOCIATED_WITH.value,
             float(edge["confidence"]),
             str(DC2_PROGRAM_B_DIR / "INTERACTION_MATRIX.md"),
             dict(edge["attributes"]),
@@ -179,9 +217,30 @@ def _upsert_graph_payload(repo_root: Path, analysis: dict[str, Any], campaign_id
             str(DC2_PROGRAM_B_DIR / "CAPITAL_FLOW_ATLAS.md"),
             dict(edge["attributes"]),
         )
-    add_edge(model_node_id, campaign_id, EdgeType.DERIVED_FROM.value, 0.74, str(DC2_PROGRAM_B_DIR / "INSTITUTIONAL_MARKET_ECOLOGY_ATLAS.md"), {})
-    add_edge(conclusion_node_id, model_node_id, EdgeType.EXPLAINS.value, 0.72, str(DC2_PROGRAM_B_DIR / "RESEARCH_RECOMMENDATIONS.md"), {})
-    add_edge(conclusion_node_id, evidence_node_id, EdgeType.SUPPORTED_BY.value, 0.70, str(DC2_PROGRAM_B_DIR / "INSTITUTIONAL_MARKET_ECOLOGY_ATLAS.md"), {})
+    add_edge(
+        model_node_id,
+        campaign_id,
+        EdgeType.DERIVED_FROM.value,
+        0.74,
+        str(DC2_PROGRAM_B_DIR / "INSTITUTIONAL_MARKET_ECOLOGY_ATLAS.md"),
+        {},
+    )
+    add_edge(
+        conclusion_node_id,
+        model_node_id,
+        EdgeType.EXPLAINS.value,
+        0.72,
+        str(DC2_PROGRAM_B_DIR / "RESEARCH_RECOMMENDATIONS.md"),
+        {},
+    )
+    add_edge(
+        conclusion_node_id,
+        evidence_node_id,
+        EdgeType.SUPPORTED_BY.value,
+        0.70,
+        str(DC2_PROGRAM_B_DIR / "INSTITUTIONAL_MARKET_ECOLOGY_ATLAS.md"),
+        {},
+    )
 
     graph_repo.save(graph)
     return {"created_nodes": created_nodes, "created_edges": created_edges}
@@ -192,23 +251,40 @@ def run_dc2_program_b_campaign(repo_root: Path) -> dict[str, Any]:
     orchestrator = ResearchOrchestrator(base_dir=resolved_base)
     spec = _default_campaign_spec()
 
-    research_question = ResearchQuestion.from_dict(_with_reproducibility_hash(spec["research_question_primary"]))
+    research_question = ResearchQuestion.from_dict(
+        _with_reproducibility_hash(spec["research_question_primary"])
+    )
     experiment = Experiment.from_dict(_with_reproducibility_hash(spec["experiment"]))
 
     task_payloads: dict[str, Any] = {
-        TaskKind.RESEARCH_QUESTION.value: {"entity_type": "ResearchQuestion", "entity": research_question.to_dict()},
-        TaskKind.EXPERIMENT_REGISTRATION.value: {"entity_type": "Experiment", "entity": experiment.to_dict()},
+        TaskKind.RESEARCH_QUESTION.value: {
+            "entity_type": "ResearchQuestion",
+            "entity": research_question.to_dict(),
+        },
+        TaskKind.EXPERIMENT_REGISTRATION.value: {
+            "entity_type": "Experiment",
+            "entity": experiment.to_dict(),
+        },
     }
     campaign = orchestrator.build_campaign(
         title=str(spec["title"]),
-        objective="Construct the first institutional market ecology model explaining how heterogeneous participants collectively generate the cross-asset information network and XAU/USD regime transitions.",
+        objective=(
+            "Construct the first institutional market ecology model "
+            "explaining how heterogeneous participants collectively "
+            "generate the cross-asset information network and XAU/USD "
+            "regime transitions."
+        ),
         campaign_type="RESEARCH_AUDIT",
         task_payloads=task_payloads,
         failure_policy=FailurePolicy.CONTINUE.value,
     )
     _select_campaign_pipeline(
         campaign,
-        [TaskKind.RESEARCH_QUESTION.value, TaskKind.EXPERIMENT_REGISTRATION.value, TaskKind.FINAL_REPORT.value],
+        [
+            TaskKind.RESEARCH_QUESTION.value,
+            TaskKind.EXPERIMENT_REGISTRATION.value,
+            TaskKind.FINAL_REPORT.value,
+        ],
     )
 
     analysis = prepare_dc2_program_b_artifacts(repo_root=repo_root)
@@ -225,7 +301,9 @@ def run_dc2_program_b_campaign(repo_root: Path) -> dict[str, Any]:
 
     output_dir = repo_root / DC2_PROGRAM_B_DIR
     output_dir.mkdir(parents=True, exist_ok=True)
-    report_paths = emit_dc2_program_b_reports(analysis, campaign_result=report.to_dict(), repo_root=repo_root)
+    report_paths = emit_dc2_program_b_reports(
+        analysis, campaign_result=report.to_dict(), repo_root=repo_root
+    )
     graph_metrics = _upsert_graph_payload(repo_root, analysis, campaign.campaign_id)
 
     for rq_secondary in spec["research_questions_secondary"]:
@@ -271,7 +349,12 @@ def run_dc2_program_b_campaign(repo_root: Path) -> dict[str, Any]:
                 rq_obj = ResearchQuestion.from_dict(rq_dict)
                 research_registry.register(rq_obj)
                 research_registry.link_conclusion(rq_id, campaign.campaign_id)
-                _transition_if_needed(research_registry, rq_id, "ANSWERED", note="Program B Phase 1 addressed this participant-ecology question.")
+                _transition_if_needed(
+                    research_registry,
+                    rq_id,
+                    "ANSWERED",
+                    note="Program B Phase 1 addressed this participant-ecology question.",
+                )
             except Exception:
                 pass
 
@@ -330,7 +413,10 @@ def _default_campaign_spec() -> dict[str, Any]:
                     "created_by": "dc2-program-b",
                     "created_at": "2026-08-02T00:00:00Z",
                     "creation_context": "Program B Phase 1 primary research question",
-                    "motivation": "Program A completed the cross-asset network; Program B explains it through participant ecology.",
+                    "motivation": (
+                        "Program A completed the cross-asset network; "
+                        "Program B explains it through participant ecology."
+                    ),
                 },
                 "dependencies": {"supporting": [], "contradicting": [], "ers_records": []},
             },
@@ -338,8 +424,16 @@ def _default_campaign_spec() -> dict[str, Any]:
             "capability_refs": [],
             "work_package_refs": [],
             "version_history": [],
-            "title": "DC2-PB1: How do heterogeneous market participants collectively generate the cross-asset information network and XAU/USD regime transitions?",
-            "motivation": "The network must be explained through institutional participant behavior rather than treated as purely statistical structure.",
+            "title": (
+                "DC2-PB1: How do heterogeneous market participants "
+                "collectively generate the cross-asset information network "
+                "and XAU/USD regime transitions?"
+            ),
+            "motivation": (
+                "The network must be explained through institutional "
+                "participant behavior rather than treated as purely "
+                "statistical structure."
+            ),
             "instrument": "XAU/USD",
             "scope": "CROSS_ASSET",
             "time_horizon": "1D",
@@ -366,7 +460,11 @@ def _default_campaign_spec() -> dict[str, Any]:
                     "created_by": "dc2-program-b",
                     "created_at": "2026-08-02T00:00:00Z",
                     "creation_context": "Program B Phase 1 ecology experiment",
-                    "motivation": "Integrate participant objectives, constraints, and interactions into the first institutional ecology model.",
+                    "motivation": (
+                        "Integrate participant objectives, constraints, and "
+                        "interactions into the first institutional ecology "
+                        "model."
+                    ),
                 },
                 "dependencies": {"supporting": [], "contradicting": [], "ers_records": []},
             },
@@ -375,29 +473,46 @@ def _default_campaign_spec() -> dict[str, Any]:
             "work_package_refs": [],
             "version_history": [],
             "title": "DC2-PB1-EXP-001: Institutional Market Ecology Model",
-            "description": "Participant-layer ecology model grounded in the approved Program A confidence-weighted network.",
+            "description": (
+                "Participant-layer ecology model grounded in the approved "
+                "Program A confidence-weighted network."
+            ),
             "reproducibility_hash": "dc2-program-b-exp-v1",
         },
         "research_questions_secondary": [
             {
                 "ikros_id": "IKROS-RQ-20260802-4002",
                 "theme": "Participant Drivers",
-                "statement": "Which participant classes most consistently initiate the network structures and regime transitions observed in Program A?",
+                "statement": (
+                    "Which participant classes most consistently initiate the "
+                    "network structures and regime transitions observed in "
+                    "Program A?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-4003",
                 "theme": "Liquidity Ecology",
-                "statement": "How do dealers, makers, and bullion banks transform macro shocks into liquidity conditions and bottlenecks?",
+                "statement": (
+                    "How do dealers, makers, and bullion banks transform "
+                    "macro shocks into liquidity conditions and bottlenecks?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-4004",
                 "theme": "Capital Flow Network",
-                "statement": "How do ETF investors, macro hedge funds, and safe-haven flows propagate capital across the network during different regimes?",
+                "statement": (
+                    "How do ETF investors, macro hedge funds, and safe-haven "
+                    "flows propagate capital across the network during "
+                    "different regimes?"
+                ),
             },
             {
                 "ikros_id": "IKROS-RQ-20260802-4005",
                 "theme": "Adaptive Behaviour",
-                "statement": "How do participant reaction functions adapt across the six regimes and during stress dislocations?",
+                "statement": (
+                    "How do participant reaction functions adapt across the "
+                    "six regimes and during stress dislocations?"
+                ),
             },
         ],
     }

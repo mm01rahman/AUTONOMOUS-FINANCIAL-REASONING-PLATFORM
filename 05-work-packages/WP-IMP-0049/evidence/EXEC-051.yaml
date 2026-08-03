@@ -1,0 +1,72 @@
+schema_version: ERS-1.0
+evidence_id: EXEC-051
+work_package_id: WP-IMP-0049
+capability:
+  id: ALPHA-RESEARCH
+  version: '1.0'
+agent_identity:
+  role: AEF-02 (Software Engineer)
+  agent_vendor: GitHub
+  agent_name: Copilot CLI
+lifecycle:
+  protocol_version: EGP-2.0
+  started_at: '2026-08-02T15:38:00.873382+00:00'
+  finished_at: '2026-08-02T15:38:00.873382+00:00'
+  final_state: REVIEW_PENDING
+preconditions: []
+boundary_compliance:
+  bounded_files:
+  - tools/data_foundation/
+  - tools/ikros/persistence.py
+  - tests/unit/test_data_foundation_v2_phase1.py
+  - data/data-foundation-v2/
+  - schemas/data-foundation-v2/
+  - 11-research/data-foundation-v2/
+  - data/ikros/graph/
+  - data/ikros/memory/
+  - data/ikros/orchestrator/
+  - data/ikros/registries/research/
+  - data/ikros/registries/experiments/
+  - reports/repository_metrics.json
+  - 05-work-packages/WP-IMP-0049.yaml
+  - 05-work-packages/WP-IMP-0049/
+  - 05-work-packages/WP-IMP-0049/evidence/EXEC-051.yaml
+  files_modified: []
+  violations: []
+  compliant: true
+quality_gates:
+- gate: ruff_lint
+  command: uv run ruff check .
+  result: SKIPPED
+  detail: gate result was not supplied
+- gate: mypy_typecheck
+  command: uv run mypy --strict tools 06-runtime 07-research tests
+  result: SKIPPED
+  detail: gate result was not supplied
+- gate: pytest
+  command: uv run pytest -q --tb=short
+  result: SKIPPED
+  detail: gate result was not supplied
+- gate: afrp_validate
+  command: uv run afrp validate
+  result: SKIPPED
+  detail: gate result was not supplied
+- gate: afrp_plan
+  command: uv run afrp plan
+  result: SKIPPED
+  detail: gate result was not supplied
+- gate: afrp_health
+  command: uv run afrp health
+  result: SKIPPED
+  detail: gate result was not supplied
+- gate: afrp_evidence
+  command: uv run afrp evidence --wp WP-IMP-0049
+  result: SKIPPED
+  detail: gate result was not supplied
+artifacts:
+  source_files: []
+unlocked_capabilities: []
+verdict:
+  all_gates_passed: false
+  boundary_compliant: true
+  review_status: PENDING_ARB

@@ -1,0 +1,418 @@
+{
+  "by_regime": {
+    "BEAR_TREND": {
+      "contributions": [
+        {
+          "mechanism": "safe_haven_migration",
+          "vote": "INCREASE",
+          "vote_weight": 0.7365,
+          "weighted_score": 0.4419
+        },
+        {
+          "mechanism": "real_yield_dislocation_reversion",
+          "vote": "BUY",
+          "vote_weight": 0.72,
+          "weighted_score": 0.72
+        },
+        {
+          "mechanism": "policy_expectation_repricing",
+          "vote": "HOLD",
+          "vote_weight": 0.6889,
+          "weighted_score": 0.0
+        },
+        {
+          "mechanism": "etf_flow_accumulation_pressure",
+          "vote": "HOLD",
+          "vote_weight": 0.6772,
+          "weighted_score": 0.0
+        },
+        {
+          "mechanism": "commodity_cross_curve_divergence",
+          "vote": "REDUCE",
+          "vote_weight": 0.67,
+          "weighted_score": -0.335
+        }
+      ],
+      "decision": "NO POSITION",
+      "explanation": "Votes are weighted by confidence, evidence, replication quality, regime relevance, scientific maturity, and economic strength.",
+      "preferred_mix": [
+        {
+          "allocation_weight": 0.2466,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "allocation_weight": 0.2381,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "allocation_weight": 0.1918,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "allocation_weight": 0.1659,
+          "mechanism": "commodity_cross_curve_divergence"
+        },
+        {
+          "allocation_weight": 0.1576,
+          "mechanism": "etf_flow_accumulation_pressure"
+        }
+      ],
+      "weighted_score": 0.5827
+    },
+    "BULL_TREND": {
+      "contributions": [
+        {
+          "mechanism": "safe_haven_migration",
+          "vote": "HOLD",
+          "vote_weight": 0.6865,
+          "weighted_score": 0.0
+        },
+        {
+          "mechanism": "real_yield_dislocation_reversion",
+          "vote": "HOLD",
+          "vote_weight": 0.6983,
+          "weighted_score": 0.0
+        },
+        {
+          "mechanism": "policy_expectation_repricing",
+          "vote": "HOLD",
+          "vote_weight": 0.6739,
+          "weighted_score": 0.0
+        },
+        {
+          "mechanism": "etf_flow_accumulation_pressure",
+          "vote": "BUY",
+          "vote_weight": 0.7322,
+          "weighted_score": 0.7322
+        },
+        {
+          "mechanism": "commodity_cross_curve_divergence",
+          "vote": "BUY",
+          "vote_weight": 0.7317,
+          "weighted_score": 0.7317
+        }
+      ],
+      "decision": "INCREASE",
+      "explanation": "Votes are weighted by confidence, evidence, replication quality, regime relevance, scientific maturity, and economic strength.",
+      "preferred_mix": [
+        {
+          "allocation_weight": 0.2737,
+          "mechanism": "commodity_cross_curve_divergence"
+        },
+        {
+          "allocation_weight": 0.2521,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "allocation_weight": 0.1834,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "allocation_weight": 0.1533,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "allocation_weight": 0.1375,
+          "mechanism": "safe_haven_migration"
+        }
+      ],
+      "weighted_score": 0.6464
+    },
+    "LIQUIDITY_CRISIS": {
+      "contributions": [
+        {
+          "mechanism": "safe_haven_migration",
+          "vote": "BUY",
+          "vote_weight": 0.7765,
+          "weighted_score": 0.7765
+        },
+        {
+          "mechanism": "real_yield_dislocation_reversion",
+          "vote": "HOLD",
+          "vote_weight": 0.7083,
+          "weighted_score": 0.0
+        },
+        {
+          "mechanism": "policy_expectation_repricing",
+          "vote": "HOLD",
+          "vote_weight": 0.6806,
+          "weighted_score": 0.0
+        },
+        {
+          "mechanism": "etf_flow_accumulation_pressure",
+          "vote": "REDUCE",
+          "vote_weight": 0.6522,
+          "weighted_score": -0.3261
+        },
+        {
+          "mechanism": "commodity_cross_curve_divergence",
+          "vote": "REDUCE",
+          "vote_weight": 0.6367,
+          "weighted_score": -0.3184
+        }
+      ],
+      "decision": "HOLD",
+      "explanation": "Votes are weighted by confidence, evidence, replication quality, regime relevance, scientific maturity, and economic strength.",
+      "preferred_mix": [
+        {
+          "allocation_weight": 0.3549,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "allocation_weight": 0.2301,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "allocation_weight": 0.1882,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "allocation_weight": 0.118,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "allocation_weight": 0.1088,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "weighted_score": 0.5132
+    },
+    "MACRO_TRANSITION": {
+      "contributions": [
+        {
+          "mechanism": "safe_haven_migration",
+          "vote": "BUY",
+          "vote_weight": 0.7632,
+          "weighted_score": 0.7632
+        },
+        {
+          "mechanism": "real_yield_dislocation_reversion",
+          "vote": "BUY",
+          "vote_weight": 0.7617,
+          "weighted_score": 0.7617
+        },
+        {
+          "mechanism": "policy_expectation_repricing",
+          "vote": "BUY",
+          "vote_weight": 0.7556,
+          "weighted_score": 0.7556
+        },
+        {
+          "mechanism": "etf_flow_accumulation_pressure",
+          "vote": "INCREASE",
+          "vote_weight": 0.6972,
+          "weighted_score": 0.4183
+        },
+        {
+          "mechanism": "commodity_cross_curve_divergence",
+          "vote": "BUY",
+          "vote_weight": 0.7083,
+          "weighted_score": 0.7083
+        }
+      ],
+      "decision": "BUY",
+      "explanation": "Votes are weighted by confidence, evidence, replication quality, regime relevance, scientific maturity, and economic strength.",
+      "preferred_mix": [
+        {
+          "allocation_weight": 0.2371,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "allocation_weight": 0.2341,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "allocation_weight": 0.2159,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "allocation_weight": 0.1724,
+          "mechanism": "commodity_cross_curve_divergence"
+        },
+        {
+          "allocation_weight": 0.1405,
+          "mechanism": "etf_flow_accumulation_pressure"
+        }
+      ],
+      "weighted_score": 0.8407
+    },
+    "RISK_OFF": {
+      "contributions": [
+        {
+          "mechanism": "safe_haven_migration",
+          "vote": "BUY",
+          "vote_weight": 0.7748,
+          "weighted_score": 0.7748
+        },
+        {
+          "mechanism": "real_yield_dislocation_reversion",
+          "vote": "INCREASE",
+          "vote_weight": 0.7133,
+          "weighted_score": 0.428
+        },
+        {
+          "mechanism": "policy_expectation_repricing",
+          "vote": "BUY",
+          "vote_weight": 0.6939,
+          "weighted_score": 0.6939
+        },
+        {
+          "mechanism": "etf_flow_accumulation_pressure",
+          "vote": "HOLD",
+          "vote_weight": 0.6822,
+          "weighted_score": 0.0
+        },
+        {
+          "mechanism": "commodity_cross_curve_divergence",
+          "vote": "NO POSITION",
+          "vote_weight": 0.655,
+          "weighted_score": -0.131
+        }
+      ],
+      "decision": "INCREASE",
+      "explanation": "Votes are weighted by confidence, evidence, replication quality, regime relevance, scientific maturity, and economic strength.",
+      "preferred_mix": [
+        {
+          "allocation_weight": 0.3083,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "allocation_weight": 0.2121,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "allocation_weight": 0.1916,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "allocation_weight": 0.1585,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "allocation_weight": 0.1295,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "weighted_score": 0.6766
+    },
+    "RISK_ON": {
+      "contributions": [
+        {
+          "mechanism": "safe_haven_migration",
+          "vote": "REDUCE",
+          "vote_weight": 0.6632,
+          "weighted_score": -0.3316
+        },
+        {
+          "mechanism": "real_yield_dislocation_reversion",
+          "vote": "HOLD",
+          "vote_weight": 0.6883,
+          "weighted_score": 0.0
+        },
+        {
+          "mechanism": "policy_expectation_repricing",
+          "vote": "NO POSITION",
+          "vote_weight": 0.6705,
+          "weighted_score": -0.1341
+        },
+        {
+          "mechanism": "etf_flow_accumulation_pressure",
+          "vote": "BUY",
+          "vote_weight": 0.7472,
+          "weighted_score": 0.7472
+        },
+        {
+          "mechanism": "commodity_cross_curve_divergence",
+          "vote": "INCREASE",
+          "vote_weight": 0.705,
+          "weighted_score": 0.423
+        }
+      ],
+      "decision": "NO POSITION",
+      "explanation": "Votes are weighted by confidence, evidence, replication quality, regime relevance, scientific maturity, and economic strength.",
+      "preferred_mix": [
+        {
+          "allocation_weight": 0.3092,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "allocation_weight": 0.2474,
+          "mechanism": "commodity_cross_curve_divergence"
+        },
+        {
+          "allocation_weight": 0.1801,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "allocation_weight": 0.162,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "allocation_weight": 0.1013,
+          "mechanism": "safe_haven_migration"
+        }
+      ],
+      "weighted_score": 0.5705
+    }
+  },
+  "current_decision": {
+    "contributions": [
+      {
+        "mechanism": "safe_haven_migration",
+        "vote": "BUY",
+        "vote_weight": 0.7632,
+        "weighted_score": 0.7632
+      },
+      {
+        "mechanism": "real_yield_dislocation_reversion",
+        "vote": "BUY",
+        "vote_weight": 0.7617,
+        "weighted_score": 0.7617
+      },
+      {
+        "mechanism": "policy_expectation_repricing",
+        "vote": "BUY",
+        "vote_weight": 0.7556,
+        "weighted_score": 0.7556
+      },
+      {
+        "mechanism": "etf_flow_accumulation_pressure",
+        "vote": "INCREASE",
+        "vote_weight": 0.6972,
+        "weighted_score": 0.4183
+      },
+      {
+        "mechanism": "commodity_cross_curve_divergence",
+        "vote": "BUY",
+        "vote_weight": 0.7083,
+        "weighted_score": 0.7083
+      }
+    ],
+    "decision": "BUY",
+    "explanation": "Votes are weighted by confidence, evidence, replication quality, regime relevance, scientific maturity, and economic strength.",
+    "preferred_mix": [
+      {
+        "allocation_weight": 0.2371,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "allocation_weight": 0.2341,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "allocation_weight": 0.2159,
+        "mechanism": "safe_haven_migration"
+      },
+      {
+        "allocation_weight": 0.1724,
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      {
+        "allocation_weight": 0.1405,
+        "mechanism": "etf_flow_accumulation_pressure"
+      }
+    ],
+    "weighted_score": 0.8407
+  },
+  "current_regime": "MACRO_TRANSITION"
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "cascade_strength": 0.91,
+    "initiator": "market_makers",
+    "stage_1": [
+      "market_makers"
+    ],
+    "stage_2": [
+      "retail_traders",
+      "etf_investors"
+    ],
+    "stage_3": [
+      "commercial_hedgers",
+      "etf_investors",
+      "market_makers",
+      "retail_traders"
+    ]
+  },
+  {
+    "cascade_strength": 0.91,
+    "initiator": "macro_hedge_funds",
+    "stage_1": [
+      "macro_hedge_funds"
+    ],
+    "stage_2": [
+      "central_banks",
+      "safe_haven_capital_flows"
+    ],
+    "stage_3": [
+      "central_banks",
+      "etf_investors",
+      "macro_hedge_funds",
+      "safe_haven_capital_flows"
+    ]
+  },
+  {
+    "cascade_strength": 0.91,
+    "initiator": "etf_investors",
+    "stage_1": [
+      "etf_investors"
+    ],
+    "stage_2": [
+      "market_makers",
+      "retail_traders"
+    ],
+    "stage_3": [
+      "etf_investors",
+      "market_makers",
+      "retail_traders"
+    ]
+  },
+  {
+    "cascade_strength": 0.91,
+    "initiator": "safe_haven_capital_flows",
+    "stage_1": [
+      "safe_haven_capital_flows"
+    ],
+    "stage_2": [
+      "etf_investors",
+      "macro_hedge_funds"
+    ],
+    "stage_3": [
+      "central_banks",
+      "commercial_hedgers",
+      "retail_traders",
+      "safe_haven_capital_flows"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+attributes:
+  interpretability: low
+  timing_error: 2.1177
+  transition_detection_accuracy: 0.6605
+confidence: 0.66
+created_at: '2026-08-02T12:08:59.669999+00:00'
+ikros_id: IKROS-PD1-MODEL-RANDOM-TRANSITION-BASELINE
+label: random_transition_baseline
+node_id: IKROS-PD1-MODEL-RANDOM-TRANSITION-BASELINE
+node_type: MODEL
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

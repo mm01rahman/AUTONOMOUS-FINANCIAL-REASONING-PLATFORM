@@ -1,0 +1,37 @@
+{
+  "description": "Market-state variable coverage by dataset.",
+  "properties": {
+    "dataset_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Dataset Ids",
+      "type": "array"
+    },
+    "domain": {
+      "title": "Domain",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "OBSERVED",
+        "PARTIAL",
+        "UNMAPPED"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "variable": {
+      "title": "Variable",
+      "type": "string"
+    }
+  },
+  "required": [
+    "domain",
+    "variable",
+    "dataset_ids",
+    "status"
+  ],
+  "title": "MarketStateRegistryEntry",
+  "type": "object"
+}

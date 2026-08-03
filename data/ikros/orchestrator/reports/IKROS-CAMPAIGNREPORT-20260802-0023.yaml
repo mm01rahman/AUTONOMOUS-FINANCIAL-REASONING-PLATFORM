@@ -1,0 +1,33 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0316
+- IKROS-CAMPAIGNAUDIT-20260802-0317
+- IKROS-CAMPAIGNAUDIT-20260802-0318
+- IKROS-CAMPAIGNAUDIT-20260802-0319
+- IKROS-CAMPAIGNAUDIT-20260802-0320
+- IKROS-CAMPAIGNAUDIT-20260802-0321
+- IKROS-CAMPAIGNAUDIT-20260802-0322
+blocked_task_ids:
+- IKROS-RESEARCHTASK-20260802-0116
+- IKROS-RESEARCHTASK-20260802-0122
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0023
+campaign_type: RESEARCH_AUDIT
+completed_task_ids: []
+failed_task_ids:
+- IKROS-RESEARCHTASK-20260802-0112
+finished_at: '2026-08-02T12:08:56.658943+00:00'
+lifecycle_state: FAILED
+memory_record_ids:
+- IKMEM-T4-20260802-0029
+output_refs: []
+progress:
+  blocked: 2
+  completed: 0
+  failed: 1
+  percent_complete: 0.0
+  skipped: 0
+  total: 3
+report_id: IKROS-CAMPAIGNREPORT-20260802-0023
+skipped_task_ids: []
+started_at: '2026-08-02T12:08:52.795535+00:00'
+summary: 'DC2 Program D Phase 1: Institutional Transition Engine Verification & Falsification
+  failed after 1 task failures.'

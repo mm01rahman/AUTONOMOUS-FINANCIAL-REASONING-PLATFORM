@@ -1,0 +1,49 @@
+{
+  "cadence": "daily",
+  "checksum_sha256": "a87bcbe79e6f57e99e1c5a7f0e6d91fc33d9c7888a70c7facafc4426df2ec2fd",
+  "covered_variables": [
+    "us_treasury_2y_yield",
+    "fomc_policy_anchor_public"
+  ],
+  "dataset_id": "DS-018",
+  "dataset_name": "US Treasury 2Y Yield",
+  "generated_at": "2026-08-02T00:00:00Z",
+  "provenance": {
+    "fixture_or_remote": "fixture",
+    "retrieved_at": "2026-08-02T00:00:00Z",
+    "source_kind": "public_api",
+    "timezone": "UTC"
+  },
+  "provider": "FREDProvider",
+  "quality": {
+    "completeness": 1.0,
+    "confidence_score": 0.9592,
+    "coverage": 1.0,
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "freshness": 0.9,
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "schema_conformity": 1.0,
+    "start_timestamp": "2026-07-27T00:00:00Z",
+    "timestamp_consistency": 1.0,
+    "validation_score": 0.9833
+  },
+  "raw_checksum_sha256": "bfaeaa2d2eca173236ae8f6444f65fcb4d0afb70b912c98c1db79ab1a42da4b5",
+  "row_count": 6,
+  "source": "FRED",
+  "source_url": "https://fred.stlouisfed.org/series/DGS2/downloaddata/DGS2.csv",
+  "storage_path": "data\\data-foundation-v2\\datasets\\DS-018\\DF2-DS018-20260801-a87bcbe7\\data.csv",
+  "supported_families": [
+    "FAM-001",
+    "FAM-005"
+  ],
+  "supported_mechanisms": [
+    "macro_repricing",
+    "expectation_reset",
+    "policy_repricing"
+  ],
+  "timezone": "UTC",
+  "version_id": "DF2-DS018-20260801-a87bcbe7",
+  "work_package": "DF2-WP-003"
+}

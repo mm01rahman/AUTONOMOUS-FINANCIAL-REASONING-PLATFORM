@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, cast
+from typing import Any, Protocol, cast
 
 from tools.alpha_research.cross_asset_ecology import (
     DC2_PROGRAM_A_DIR,
@@ -76,15 +76,30 @@ def _resolve_task_payloads(
     return dict(raw_payloads)
 
 
+class _TransitionEntity(Protocol):
+    lifecycle_state: str
+
+
+class _TransitionRegistry(Protocol):
+    def get(self, entity_id: str) -> _TransitionEntity: ...
+
+    def transition(
+        self,
+        entity_id: str,
+        target_state: str,
+        note: str = "",
+    ) -> object: ...
+
+
 def _transition_if_needed(
-    registry: Any,
+    registry: _TransitionRegistry,
     entity_id: str,
     target_state: str,
     *,
     note: str = "",
 ) -> None:
     """Transition entity to target_state only if not already at or past that state."""
-    _STATE_RANK: dict[str, int] = {
+    state_rank: dict[str, int] = {
         "PROPOSED": 0,
         "APPROVED_FOR_TESTING": 1,
         "OPEN": 1,
@@ -98,8 +113,8 @@ def _transition_if_needed(
     }
     try:
         current = str(registry.get(entity_id).lifecycle_state)
-        current_rank = _STATE_RANK.get(current, -1)
-        target_rank = _STATE_RANK.get(target_state, -1)
+        current_rank = state_rank.get(current, -1)
+        target_rank = state_rank.get(target_state, -1)
         if current_rank < target_rank:
             if note:
                 registry.transition(entity_id, target_state, note=note)
@@ -123,9 +138,7 @@ def run_dc2_program_a_campaign(
     repo_root = repo_root.resolve()
     manifest = load_dc2_program_a_manifest(repo_root)
     resolved_base = (base_dir or (repo_root / "data" / "ikros")).resolve()
-    resolved_output = (
-        output_dir or (repo_root / DC2_PROGRAM_A_DIR)
-    ).resolve()
+    resolved_output = (output_dir or (repo_root / DC2_PROGRAM_A_DIR)).resolve()
 
     # --- Run analysis ---
     prepared = prepare_dc2_program_a_artifacts(output_dir=resolved_output)
@@ -138,9 +151,7 @@ def run_dc2_program_a_campaign(
     research_question = ResearchQuestion.from_dict(rq_data)
 
     exp_data = manifest["task_payloads"]["EXPERIMENT_REGISTRATION"]["entity"]
-    experiment = Experiment.from_dict(
-        _with_reproducibility_hash(exp_data)
-    )
+    experiment = Experiment.from_dict(_with_reproducibility_hash(exp_data))
 
     task_payloads = _resolve_task_payloads(repo_root, manifest["task_payloads"])
     task_payloads[TaskKind.RESEARCH_QUESTION.value] = {
@@ -155,7 +166,10 @@ def run_dc2_program_a_campaign(
     campaign_spec = manifest["campaign"]
     campaign = orchestrator.build_campaign(
         title=str(campaign_spec["title"]),
-        objective="Map cross-asset transition ecology to determine how information propagates before XAU/USD regime changes.",
+        objective=(
+            "Map cross-asset transition ecology to determine how information "
+            "propagates before XAU/USD regime changes."
+        ),
         campaign_type="RESEARCH_AUDIT",
         task_payloads=task_payloads,
         failure_policy=FailurePolicy.FAIL_FAST.value,
@@ -205,19 +219,56 @@ def run_dc2_program_a_campaign(
                     "entity_type": "ResearchQuestion",
                     "version": "1.0.0",
                     "lifecycle_state": "OPEN",
-                    "confidence": {"prior": 0.5, "statistical": 0.5, "economic": 0.5, "data": 0.5, "model": 0.5, "validation": 0.5, "replication": 0.0, "operational": 0.5, "last_updated": "2026-08-02T00:00:00Z"},
-                    "lineage": {"origin": {"created_by": "dc2-program-a", "created_at": "2026-08-02T00:00:00Z", "creation_context": "DC2 Program A secondary question", "motivation": rq_secondary.get("statement", "")}, "dependencies": {"inputs": [], "datasets": [], "features": [], "models": [], "external_refs": []}, "experiments": {"tested_in": [], "validated_by": []}, "evidence": {"supporting": [], "contradicting": [], "ers_records": []}},
-                    "spec_refs": [], "capability_refs": [], "work_package_refs": [], "version_history": [],
+                    "confidence": {
+                        "prior": 0.5,
+                        "statistical": 0.5,
+                        "economic": 0.5,
+                        "data": 0.5,
+                        "model": 0.5,
+                        "validation": 0.5,
+                        "replication": 0.0,
+                        "operational": 0.5,
+                        "last_updated": "2026-08-02T00:00:00Z",
+                    },
+                    "lineage": {
+                        "origin": {
+                            "created_by": "dc2-program-a",
+                            "created_at": "2026-08-02T00:00:00Z",
+                            "creation_context": "DC2 Program A secondary question",
+                            "motivation": rq_secondary.get("statement", ""),
+                        },
+                        "dependencies": {
+                            "inputs": [],
+                            "datasets": [],
+                            "features": [],
+                            "models": [],
+                            "external_refs": [],
+                        },
+                        "experiments": {"tested_in": [], "validated_by": []},
+                        "evidence": {"supporting": [], "contradicting": [], "ers_records": []},
+                    },
+                    "spec_refs": [],
+                    "capability_refs": [],
+                    "work_package_refs": [],
+                    "version_history": [],
                     "title": f"DC2-PA: {rq_secondary.get('theme', rq_id)}",
                     "motivation": str(rq_secondary.get("statement", "")),
-                    "scope": "MACRO", "instrument": "XAU/USD", "time_horizon": "1D",
+                    "scope": "MACRO",
+                    "instrument": "XAU/USD",
+                    "time_horizon": "1D",
                     "campaign_tag": "DC2-PROGRAM-A-001",
-                    "linked_hypotheses": [], "linked_conclusions": [],
+                    "linked_hypotheses": [],
+                    "linked_conclusions": [],
                 }
                 rq_obj = ResearchQuestion.from_dict(rq_dict)
                 research_registry.register(rq_obj)
                 research_registry.link_conclusion(rq_id, campaign.campaign_id)
-                _transition_if_needed(research_registry, rq_id, "COMPLETE", note="DC2 Program A addressed this secondary question.")
+                _transition_if_needed(
+                    research_registry,
+                    rq_id,
+                    "COMPLETE",
+                    note="DC2 Program A addressed this secondary question.",
+                )
             except Exception:
                 pass
 

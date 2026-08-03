@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "alpha_contribution": {
+      "type": "number"
+    },
+    "confidence_contribution": {
+      "type": "number"
+    },
+    "dataset_contribution": {
+      "type": "number"
+    },
+    "evidence_contribution": {
+      "type": "number"
+    },
+    "feature_contribution": {
+      "type": "number"
+    },
+    "mechanism": {
+      "type": "string"
+    },
+    "regime_contribution": {
+      "type": "number"
+    },
+    "risk_contribution": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "mechanism",
+    "alpha_contribution",
+    "regime_contribution",
+    "confidence_contribution"
+  ],
+  "title": "Attribution Entry",
+  "type": "object"
+}

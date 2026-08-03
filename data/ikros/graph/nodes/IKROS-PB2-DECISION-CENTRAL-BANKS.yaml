@@ -1,0 +1,17 @@
+attributes:
+  belief_update_process: macro_scenario
+  confidence: 0.92
+  participant: central_banks
+  reaction_speed: slow
+confidence: 0.66
+created_at: '2026-08-02T11:00:11.268612+00:00'
+ikros_id: IKROS-PB2-DECISION-CENTRAL-BANKS
+label: Central Banks Decision Model
+node_id: IKROS-PB2-DECISION-CENTRAL-BANKS
+node_type: DECISION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

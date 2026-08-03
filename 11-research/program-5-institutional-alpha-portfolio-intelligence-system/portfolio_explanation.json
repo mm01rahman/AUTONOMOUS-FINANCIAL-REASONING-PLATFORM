@@ -1,0 +1,266 @@
+{
+  "alpha_contribution_report": [
+    {
+      "allocation_weight": 0.2023,
+      "confidence_attribution": 0.1455,
+      "evidence_attribution": 0.1517,
+      "failure_attribution": [
+        "Concept drift under regime transition",
+        "Stress-window threshold instability"
+      ],
+      "mechanism": "safe_haven_migration",
+      "regime_attribution": "RISK_OFF",
+      "risk_attribution": 0.0627
+    },
+    {
+      "allocation_weight": 0.2098,
+      "confidence_attribution": 0.1511,
+      "evidence_attribution": 0.1511,
+      "failure_attribution": [
+        "Macro regime discontinuity",
+        "Yield-measurement lag"
+      ],
+      "mechanism": "real_yield_dislocation_reversion",
+      "regime_attribution": "MACRO_TRANSITION",
+      "risk_attribution": 0.0608
+    },
+    {
+      "allocation_weight": 0.2059,
+      "confidence_attribution": 0.1462,
+      "evidence_attribution": 0.1462,
+      "failure_attribution": [
+        "Policy-text misclassification",
+        "Meeting-window clustering"
+      ],
+      "mechanism": "policy_expectation_repricing",
+      "regime_attribution": "MACRO_TRANSITION",
+      "risk_attribution": 0.0618
+    },
+    {
+      "allocation_weight": 0.1899,
+      "confidence_attribution": 0.1329,
+      "evidence_attribution": 0.1367,
+      "failure_attribution": [
+        "ETF reporting lag",
+        "Crowding around macro catalysts"
+      ],
+      "mechanism": "etf_flow_accumulation_pressure",
+      "regime_attribution": "RISK_ON",
+      "risk_attribution": 0.0532
+    },
+    {
+      "allocation_weight": 0.1921,
+      "confidence_attribution": 0.1325,
+      "evidence_attribution": 0.1345,
+      "failure_attribution": [
+        "Cross-commodity contamination",
+        "Physical bottleneck distortion"
+      ],
+      "mechanism": "commodity_cross_curve_divergence",
+      "regime_attribution": "BULL_TREND",
+      "risk_attribution": 0.0634
+    }
+  ],
+  "capital_allocation_rationale": "Capital is allocated through confidence-, evidence-, regime-, capacity-, and scientific-quality weighting with explicit penalties for uncertainty, failure severity, and pairwise correlation.",
+  "confidence_attribution": {
+    "commodity_cross_curve_divergence": 0.1325,
+    "etf_flow_accumulation_pressure": 0.1329,
+    "policy_expectation_repricing": 0.1462,
+    "real_yield_dislocation_reversion": 0.1511,
+    "safe_haven_migration": 0.1455
+  },
+  "contradictory_evidence": [
+    {
+      "mechanism": "safe_haven_migration",
+      "minority_view": "REDUCE",
+      "reason": "Regime specificity and economic-channel disagreement across the approved alpha library."
+    },
+    {
+      "mechanism": "policy_expectation_repricing",
+      "minority_view": "HOLD",
+      "reason": "Regime specificity and economic-channel disagreement across the approved alpha library."
+    },
+    {
+      "mechanism": "safe_haven_migration",
+      "minority_view": "REDUCE",
+      "reason": "Regime specificity and economic-channel disagreement across the approved alpha library."
+    },
+    {
+      "mechanism": "commodity_cross_curve_divergence",
+      "minority_view": "REDUCE",
+      "reason": "Regime specificity and economic-channel disagreement across the approved alpha library."
+    },
+    {
+      "mechanism": "policy_expectation_repricing",
+      "minority_view": "HOLD",
+      "reason": "Regime specificity and economic-channel disagreement across the approved alpha library."
+    },
+    {
+      "mechanism": "real_yield_dislocation_reversion",
+      "minority_view": "HOLD",
+      "reason": "Regime specificity and economic-channel disagreement across the approved alpha library."
+    },
+    {
+      "mechanism": "commodity_cross_curve_divergence",
+      "minority_view": "REDUCE",
+      "reason": "Regime specificity and economic-channel disagreement across the approved alpha library."
+    },
+    {
+      "mechanism": "policy_expectation_repricing",
+      "minority_view": "NO POSITION",
+      "reason": "Regime specificity and economic-channel disagreement across the approved alpha library."
+    },
+    {
+      "mechanism": "commodity_cross_curve_divergence",
+      "minority_view": "NO POSITION",
+      "reason": "Regime specificity and economic-channel disagreement across the approved alpha library."
+    },
+    {
+      "mechanism": "commodity_cross_curve_divergence",
+      "minority_view": "REDUCE",
+      "reason": "Regime specificity and economic-channel disagreement across the approved alpha library."
+    }
+  ],
+  "current_portfolio_decision": {
+    "contributions": [
+      {
+        "mechanism": "safe_haven_migration",
+        "vote": "BUY",
+        "vote_weight": 0.7632,
+        "weighted_score": 0.7632
+      },
+      {
+        "mechanism": "real_yield_dislocation_reversion",
+        "vote": "BUY",
+        "vote_weight": 0.7617,
+        "weighted_score": 0.7617
+      },
+      {
+        "mechanism": "policy_expectation_repricing",
+        "vote": "BUY",
+        "vote_weight": 0.7556,
+        "weighted_score": 0.7556
+      },
+      {
+        "mechanism": "etf_flow_accumulation_pressure",
+        "vote": "INCREASE",
+        "vote_weight": 0.6972,
+        "weighted_score": 0.4183
+      },
+      {
+        "mechanism": "commodity_cross_curve_divergence",
+        "vote": "BUY",
+        "vote_weight": 0.7083,
+        "weighted_score": 0.7083
+      }
+    ],
+    "decision": "BUY",
+    "explanation": "Votes are weighted by confidence, evidence, replication quality, regime relevance, scientific maturity, and economic strength.",
+    "preferred_mix": [
+      {
+        "allocation_weight": 0.2371,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "allocation_weight": 0.2341,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "allocation_weight": 0.2159,
+        "mechanism": "safe_haven_migration"
+      },
+      {
+        "allocation_weight": 0.1724,
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      {
+        "allocation_weight": 0.1405,
+        "mechanism": "etf_flow_accumulation_pressure"
+      }
+    ],
+    "weighted_score": 0.8407
+  },
+  "economic_narrative": "The current portfolio is anchored by macro-transition, safe-haven, and ETF-flow mechanisms because they provide complementary economic channels across policy repricing, stress migration, and institutional accumulation.",
+  "evidence_attribution": {
+    "commodity_cross_curve_divergence": 0.1345,
+    "etf_flow_accumulation_pressure": 0.1367,
+    "policy_expectation_repricing": 0.1462,
+    "real_yield_dislocation_reversion": 0.1511,
+    "safe_haven_migration": 0.1517
+  },
+  "failure_attribution": {
+    "commodity_cross_curve_divergence": [
+      "Cross-commodity contamination",
+      "Physical bottleneck distortion"
+    ],
+    "etf_flow_accumulation_pressure": [
+      "ETF reporting lag",
+      "Crowding around macro catalysts"
+    ],
+    "policy_expectation_repricing": [
+      "Policy-text misclassification",
+      "Meeting-window clustering"
+    ],
+    "real_yield_dislocation_reversion": [
+      "Macro regime discontinuity",
+      "Yield-measurement lag"
+    ],
+    "safe_haven_migration": [
+      "Concept drift under regime transition",
+      "Stress-window threshold instability"
+    ]
+  },
+  "portfolio_executive_report": "AFRP transforms the approved alpha library into a governed institutional portfolio by favoring high-confidence, high-evidence, high-independence mechanisms under the active macro-transition regime while penalizing shared failure channels and concentration.",
+  "portfolio_risk_summary": {
+    "capacity_degradation": 0.334,
+    "common_assumptions": [
+      "Commodity-curve divergence reflects macro transition pressure relevant to gold.",
+      "ETF inventory shifts proxy institutional accumulation with acceptable delay.",
+      "Front-end rates and policy language jointly identify repricing shocks.",
+      "Intermarket relationships remain stable enough to preserve explanatory power.",
+      "Macro inflation expectations remain observable with public datasets.",
+      "Persistent fund-flow pressure transmits into spot and futures demand.",
+      "Policy stress regimes transmit rapidly into gold demand.",
+      "Policy-surprise windows are causally distinct from generic safe-haven stress.",
+      "Real-rate overshoots mean revert after policy repricing.",
+      "Safe-haven preference remains observable through public macro proxies."
+    ],
+    "common_datasets": [
+      "ETF-GLD",
+      "FRED-DXY"
+    ],
+    "conflict_count": 10,
+    "expected_drawdown": 0.1539,
+    "portfolio_concentration": 0.4807,
+    "portfolio_confidence": 0.7082,
+    "portfolio_uncertainty": 0.2696,
+    "robustness_score": 0.25,
+    "shared_failure_exposure": [
+      "Concept drift under regime transition",
+      "Cross-commodity contamination",
+      "Crowding around macro catalysts",
+      "ETF reporting lag",
+      "Macro regime discontinuity",
+      "Meeting-window clustering",
+      "Physical bottleneck distortion",
+      "Policy-text misclassification",
+      "Stress-window threshold instability",
+      "Yield-measurement lag"
+    ],
+    "tail_vulnerability": 0.3433
+  },
+  "regime_attribution": {
+    "commodity_cross_curve_divergence": "BULL_TREND",
+    "etf_flow_accumulation_pressure": "RISK_ON",
+    "policy_expectation_repricing": "MACRO_TRANSITION",
+    "real_yield_dislocation_reversion": "MACRO_TRANSITION",
+    "safe_haven_migration": "RISK_OFF"
+  },
+  "risk_attribution": {
+    "commodity_cross_curve_divergence": 0.0634,
+    "etf_flow_accumulation_pressure": 0.0532,
+    "policy_expectation_repricing": 0.0618,
+    "real_yield_dislocation_reversion": 0.0608,
+    "safe_haven_migration": 0.0627
+  }
+}

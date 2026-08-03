@@ -1,0 +1,14 @@
+attributes:
+  evidence_ref: 11-research\discovery-cycle-2\research-program-b-phase2\DECISION_ECOLOGY_REPORT.md
+confidence: 0.7
+created_at: '2026-08-02T11:00:11.268612+00:00'
+ikros_id: IKROS-PB2-EVIDENCE-20260802-0001
+label: Program B Phase 2 Decision Ecology Evidence
+node_id: IKROS-PB2-EVIDENCE-20260802-0001
+node_type: EVIDENCE
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

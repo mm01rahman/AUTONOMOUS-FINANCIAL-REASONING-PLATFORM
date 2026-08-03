@@ -1,0 +1,82 @@
+[
+  {
+    "belief_update_process": "microstructure_state",
+    "label": "Market Makers",
+    "participant": "market_makers",
+    "rank": 1,
+    "reaction_score": 0.98,
+    "reaction_speed": "intraday"
+  },
+  {
+    "belief_update_process": "macro_scenario",
+    "label": "Macro Hedge Funds",
+    "participant": "macro_hedge_funds",
+    "rank": 2,
+    "reaction_score": 0.92,
+    "reaction_speed": "fast"
+  },
+  {
+    "belief_update_process": "allocation_narrative",
+    "label": "ETF Investors",
+    "participant": "etf_investors",
+    "rank": 3,
+    "reaction_score": 0.8,
+    "reaction_speed": "medium"
+  },
+  {
+    "belief_update_process": "allocation_narrative",
+    "label": "Safe Haven Capital Flows",
+    "participant": "safe_haven_capital_flows",
+    "rank": 4,
+    "reaction_score": 0.8,
+    "reaction_speed": "medium"
+  },
+  {
+    "belief_update_process": "hedge_optimization",
+    "label": "Commercial Hedgers",
+    "participant": "commercial_hedgers",
+    "rank": 5,
+    "reaction_score": 0.76,
+    "reaction_speed": "medium"
+  },
+  {
+    "belief_update_process": "flow_balancing",
+    "label": "Bullion Banks",
+    "participant": "bullion_banks",
+    "rank": 6,
+    "reaction_score": 0.76,
+    "reaction_speed": "medium"
+  },
+  {
+    "belief_update_process": "flow_balancing",
+    "label": "Dealers",
+    "participant": "dealers",
+    "rank": 7,
+    "reaction_score": 0.76,
+    "reaction_speed": "medium"
+  },
+  {
+    "belief_update_process": "systematic_trend",
+    "label": "Commodity Trading Advisors",
+    "participant": "ctas",
+    "rank": 8,
+    "reaction_score": 0.76,
+    "reaction_speed": "medium"
+  },
+  {
+    "belief_update_process": "hedge_optimization",
+    "label": "Retail Traders",
+    "participant": "retail_traders",
+    "rank": 9,
+    "reaction_score": 0.76,
+    "reaction_speed": "medium"
+  },
+  {
+    "belief_update_process": "macro_scenario",
+    "label": "Central Banks",
+    "participant": "central_banks",
+    "rank": 10,
+    "reaction_score": 0.66,
+    "reaction_speed": "slow"
+  }
+]

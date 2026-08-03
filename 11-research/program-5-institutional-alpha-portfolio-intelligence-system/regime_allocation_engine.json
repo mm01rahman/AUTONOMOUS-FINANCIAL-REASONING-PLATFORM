@@ -1,0 +1,302 @@
+{
+  "BEAR_TREND": {
+    "allocation_adjustments": [
+      {
+        "adjustment_vs_base": 0.0443,
+        "mechanism": "safe_haven_migration"
+      },
+      {
+        "adjustment_vs_base": 0.0283,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "adjustment_vs_base": -0.0141,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "adjustment_vs_base": -0.0262,
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      {
+        "adjustment_vs_base": -0.0323,
+        "mechanism": "etf_flow_accumulation_pressure"
+      }
+    ],
+    "automatic_portfolio_rotation": "Increase exposure toward safe_haven_migration and reduce the lowest-regime-fit alpha when AFRP classifies the market as bear trend.",
+    "expected_confidence": 0.7097,
+    "expected_resilience": 0.6981,
+    "label": "Bear trend",
+    "preferred_alpha_mix": [
+      {
+        "allocation_weight": 0.2466,
+        "mechanism": "safe_haven_migration"
+      },
+      {
+        "allocation_weight": 0.2381,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "allocation_weight": 0.1918,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "allocation_weight": 0.1659,
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      {
+        "allocation_weight": 0.1576,
+        "mechanism": "etf_flow_accumulation_pressure"
+      }
+    ]
+  },
+  "BULL_TREND": {
+    "allocation_adjustments": [
+      {
+        "adjustment_vs_base": 0.0816,
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      {
+        "adjustment_vs_base": 0.0622,
+        "mechanism": "etf_flow_accumulation_pressure"
+      },
+      {
+        "adjustment_vs_base": -0.0264,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "adjustment_vs_base": -0.0526,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "adjustment_vs_base": -0.0648,
+        "mechanism": "safe_haven_migration"
+      }
+    ],
+    "automatic_portfolio_rotation": "Increase exposure toward commodity_cross_curve_divergence and reduce the lowest-regime-fit alpha when AFRP classifies the market as bull trend.",
+    "expected_confidence": 0.7051,
+    "expected_resilience": 0.6973,
+    "label": "Bull trend",
+    "preferred_alpha_mix": [
+      {
+        "allocation_weight": 0.2737,
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      {
+        "allocation_weight": 0.2521,
+        "mechanism": "etf_flow_accumulation_pressure"
+      },
+      {
+        "allocation_weight": 0.1834,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "allocation_weight": 0.1533,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "allocation_weight": 0.1375,
+        "mechanism": "safe_haven_migration"
+      }
+    ]
+  },
+  "LIQUIDITY_CRISIS": {
+    "allocation_adjustments": [
+      {
+        "adjustment_vs_base": 0.1526,
+        "mechanism": "safe_haven_migration"
+      },
+      {
+        "adjustment_vs_base": 0.0203,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "adjustment_vs_base": -0.0177,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "adjustment_vs_base": -0.0719,
+        "mechanism": "etf_flow_accumulation_pressure"
+      },
+      {
+        "adjustment_vs_base": -0.0833,
+        "mechanism": "commodity_cross_curve_divergence"
+      }
+    ],
+    "automatic_portfolio_rotation": "Increase exposure toward safe_haven_migration and reduce the lowest-regime-fit alpha when AFRP classifies the market as liquidity crisis.",
+    "expected_confidence": 0.7121,
+    "expected_resilience": 0.6978,
+    "label": "Liquidity crisis",
+    "preferred_alpha_mix": [
+      {
+        "allocation_weight": 0.3549,
+        "mechanism": "safe_haven_migration"
+      },
+      {
+        "allocation_weight": 0.2301,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "allocation_weight": 0.1882,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "allocation_weight": 0.118,
+        "mechanism": "etf_flow_accumulation_pressure"
+      },
+      {
+        "allocation_weight": 0.1088,
+        "mechanism": "commodity_cross_curve_divergence"
+      }
+    ]
+  },
+  "MACRO_TRANSITION": {
+    "allocation_adjustments": [
+      {
+        "adjustment_vs_base": 0.0312,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "adjustment_vs_base": 0.0243,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "adjustment_vs_base": 0.0136,
+        "mechanism": "safe_haven_migration"
+      },
+      {
+        "adjustment_vs_base": -0.0197,
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      {
+        "adjustment_vs_base": -0.0494,
+        "mechanism": "etf_flow_accumulation_pressure"
+      }
+    ],
+    "automatic_portfolio_rotation": "Increase exposure toward policy_expectation_repricing and reduce the lowest-regime-fit alpha when AFRP classifies the market as macro transition.",
+    "expected_confidence": 0.7094,
+    "expected_resilience": 0.6978,
+    "label": "Macro transition",
+    "preferred_alpha_mix": [
+      {
+        "allocation_weight": 0.2371,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "allocation_weight": 0.2341,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "allocation_weight": 0.2159,
+        "mechanism": "safe_haven_migration"
+      },
+      {
+        "allocation_weight": 0.1724,
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      {
+        "allocation_weight": 0.1405,
+        "mechanism": "etf_flow_accumulation_pressure"
+      }
+    ]
+  },
+  "RISK_OFF": {
+    "allocation_adjustments": [
+      {
+        "adjustment_vs_base": 0.106,
+        "mechanism": "safe_haven_migration"
+      },
+      {
+        "adjustment_vs_base": 0.0023,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "adjustment_vs_base": -0.0143,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "adjustment_vs_base": -0.0314,
+        "mechanism": "etf_flow_accumulation_pressure"
+      },
+      {
+        "adjustment_vs_base": -0.0626,
+        "mechanism": "commodity_cross_curve_divergence"
+      }
+    ],
+    "automatic_portfolio_rotation": "Increase exposure toward safe_haven_migration and reduce the lowest-regime-fit alpha when AFRP classifies the market as risk-off.",
+    "expected_confidence": 0.7107,
+    "expected_resilience": 0.6983,
+    "label": "Risk-off",
+    "preferred_alpha_mix": [
+      {
+        "allocation_weight": 0.3083,
+        "mechanism": "safe_haven_migration"
+      },
+      {
+        "allocation_weight": 0.2121,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "allocation_weight": 0.1916,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "allocation_weight": 0.1585,
+        "mechanism": "etf_flow_accumulation_pressure"
+      },
+      {
+        "allocation_weight": 0.1295,
+        "mechanism": "commodity_cross_curve_divergence"
+      }
+    ]
+  },
+  "RISK_ON": {
+    "allocation_adjustments": [
+      {
+        "adjustment_vs_base": 0.1193,
+        "mechanism": "etf_flow_accumulation_pressure"
+      },
+      {
+        "adjustment_vs_base": 0.0553,
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      {
+        "adjustment_vs_base": -0.0297,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "adjustment_vs_base": -0.0439,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "adjustment_vs_base": -0.101,
+        "mechanism": "safe_haven_migration"
+      }
+    ],
+    "automatic_portfolio_rotation": "Increase exposure toward etf_flow_accumulation_pressure and reduce the lowest-regime-fit alpha when AFRP classifies the market as risk-on.",
+    "expected_confidence": 0.7047,
+    "expected_resilience": 0.6995,
+    "label": "Risk-on",
+    "preferred_alpha_mix": [
+      {
+        "allocation_weight": 0.3092,
+        "mechanism": "etf_flow_accumulation_pressure"
+      },
+      {
+        "allocation_weight": 0.2474,
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      {
+        "allocation_weight": 0.1801,
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      {
+        "allocation_weight": 0.162,
+        "mechanism": "policy_expectation_repricing"
+      },
+      {
+        "allocation_weight": 0.1013,
+        "mechanism": "safe_haven_migration"
+      }
+    ]
+  }
+}

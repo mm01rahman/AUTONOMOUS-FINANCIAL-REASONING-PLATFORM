@@ -1,0 +1,47 @@
+{
+  "approved_alpha_count": 5,
+  "approved_mechanisms": [
+    "commodity_cross_curve_divergence",
+    "etf_flow_accumulation_pressure",
+    "policy_expectation_repricing",
+    "real_yield_dislocation_reversion",
+    "safe_haven_migration"
+  ],
+  "arb_recommendation": "Program 4 reached the diversification target with five approved alphas including the existing safe_haven_migration seed. Additional reserve-reallocation and dealer-inventory mechanisms remain scientifically valuable but are blocked by current observations. Proceed to governed downstream portfolio-intelligence only after ARB approval and keep the blocked registries open for future data-expansion programs.",
+  "blocked_mechanisms": [
+    "decision_cascade",
+    "central_bank_reserve_reallocation"
+  ],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0056",
+  "campaigns_executed": 10,
+  "graph_edges_created": 1,
+  "graph_nodes_created": 0,
+  "program": "INSTITUTIONAL_ALPHA_EXPANSION_PROGRAM_4",
+  "rejected_mechanisms": [
+    "volatility_carry_shadow"
+  ],
+  "report_paths": {
+    "alpha_family_atlas": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\alpha_family_atlas.json",
+    "approved_alpha_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\approved_alpha_registry.json",
+    "blocked_alpha_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\blocked_alpha_registry.json",
+    "campaign_archive_md": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\RESEARCH_CAMPAIGN_ARCHIVE.md",
+    "campaign_result": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\campaign_result.json",
+    "correlation_matrix": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\correlation_matrix.json",
+    "data_expansion_requests": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\data_expansion_requests.json",
+    "evidence_atlas": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\evidence_atlas.json",
+    "family_atlas_md": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\ALPHA_FAMILY_ATLAS.md",
+    "final_report": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\FINAL_REPORT.md",
+    "independence_md": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\MECHANISM_INDEPENDENCE_MATRIX.md",
+    "institutional_alpha_library": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\institutional_alpha_library.json",
+    "institutional_dashboards": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\institutional_dashboards.json",
+    "knowledge_evolution": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\knowledge_evolution.json",
+    "library_md": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\INSTITUTIONAL_ALPHA_LIBRARY.md",
+    "mechanism_independence_matrix": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\mechanism_independence_matrix.json",
+    "promotion_history": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\promotion_history.json",
+    "rejected_alpha_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\rejected_alpha_registry.json",
+    "research_campaign_archive": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\research_campaign_archive.json",
+    "terminal_registries_md": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\program-4-institutional-alpha-expansion-program\\TERMINAL_REGISTRIES.md"
+  },
+  "stop_reason": "Target approved alpha count reached using currently available observations.",
+  "target_approved_alpha_count": 5
+}

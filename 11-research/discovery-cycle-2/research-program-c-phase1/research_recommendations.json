@@ -1,0 +1,18 @@
+{
+  "arb_recommendation": "Adopt an institutional transition engine in which macro repricing, dealer relay capacity, liquidity withdrawal, and participant decision cascades jointly determine how XAU/USD moves between the six approved regimes.",
+  "mean_transition_confidence": 0.7034,
+  "priority_early_warnings": [
+    "yield_curve_10y_3m",
+    "dxy_return_20",
+    "macro_pressure",
+    "yield_30y_change_20",
+    "market_makers"
+  ],
+  "priority_transitions": [
+    "calm_carry__to__bear_unwind",
+    "bear_unwind__to__calm_carry",
+    "range_compression__to__calm_carry",
+    "macro_transition__to__calm_carry",
+    "calm_carry__to__range_compression"
+  ]
+}

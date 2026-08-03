@@ -1,0 +1,17 @@
+{
+  "high_confidence_transitions": [
+    "calm_carry__to__bear_unwind",
+    "bear_unwind__to__calm_carry",
+    "range_compression__to__calm_carry",
+    "macro_transition__to__calm_carry",
+    "calm_carry__to__range_compression",
+    "calm_carry__to__macro_transition",
+    "calm_carry__to__bull_trend",
+    "bull_trend__to__calm_carry",
+    "range_compression__to__bear_unwind",
+    "macro_transition__to__bear_unwind"
+  ],
+  "low_confidence_transitions": [],
+  "mean_confidence": 0.7034,
+  "medium_confidence_transitions": []
+}

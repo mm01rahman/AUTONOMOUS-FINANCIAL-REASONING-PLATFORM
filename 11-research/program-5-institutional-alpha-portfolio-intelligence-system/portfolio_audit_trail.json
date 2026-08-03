@@ -1,0 +1,18 @@
+[
+  {
+    "outcome": "Loaded five approved Program 4 mechanisms into the governed portfolio workspace.",
+    "step": "load-approved-alpha-library"
+  },
+  {
+    "outcome": "Current portfolio decision is BUY under MACRO_TRANSITION.",
+    "step": "construct-allocation"
+  },
+  {
+    "outcome": "Resolved 10 material conflicts using evidence, confidence, and regime specificity.",
+    "step": "resolve-conflicts"
+  },
+  {
+    "outcome": "Portfolio robustness score recorded at 0.25.",
+    "step": "risk-capacity-review"
+  }
+]

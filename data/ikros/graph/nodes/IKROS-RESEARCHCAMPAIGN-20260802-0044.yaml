@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: HYPOTHESIS_VALIDATION
+  entity_type: ResearchCampaign
+  objective: Implement a permanent institutional evidence and validation engine with
+    hard observation completeness gates, governed scorecards, failure dossiers, confidence
+    updates, and IKROS lineage updates.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0044
+confidence: 0.0
+created_at: '2026-08-02T18:52:45.473717+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0044
+label: Generation 2 WP-IMP-0050 Institutional Alpha Evidence Engine
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0044
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

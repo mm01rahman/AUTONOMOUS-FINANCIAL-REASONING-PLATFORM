@@ -1,0 +1,2940 @@
+{
+  "belief_update_network": {
+    "edges": [
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": -0.22,
+        "source": "dealers",
+        "target": "market_makers",
+        "update_strength": 2.2668
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": 0.0,
+        "source": "bullion_banks",
+        "target": "dealers",
+        "update_strength": 2.2367
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": 0.0,
+        "source": "dealers",
+        "target": "bullion_banks",
+        "update_strength": 1.9895
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": 0.0,
+        "source": "bullion_banks",
+        "target": "commercial_hedgers",
+        "update_strength": 1.9092
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": -0.16,
+        "source": "dealers",
+        "target": "macro_hedge_funds",
+        "update_strength": 1.8948
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": 0.26,
+        "source": "macro_hedge_funds",
+        "target": "central_banks",
+        "update_strength": 1.8661
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": -0.04,
+        "source": "dealers",
+        "target": "safe_haven_capital_flows",
+        "update_strength": 1.8472
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": -0.04,
+        "source": "bullion_banks",
+        "target": "etf_investors",
+        "update_strength": 1.8297
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": 0.0,
+        "source": "bullion_banks",
+        "target": "ctas",
+        "update_strength": 1.8289
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": -0.22,
+        "source": "bullion_banks",
+        "target": "market_makers",
+        "update_strength": 1.8008
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": 0.1,
+        "source": "dealers",
+        "target": "central_banks",
+        "update_strength": 1.7949
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": 0.0,
+        "source": "dealers",
+        "target": "retail_traders",
+        "update_strength": 1.774
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": 0.0,
+        "source": "dealers",
+        "target": "commercial_hedgers",
+        "update_strength": 1.7102
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": -0.04,
+        "source": "dealers",
+        "target": "etf_investors",
+        "update_strength": 1.7054
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": 0.0,
+        "source": "dealers",
+        "target": "ctas",
+        "update_strength": 1.7046
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": 0.0,
+        "source": "bullion_banks",
+        "target": "retail_traders",
+        "update_strength": 1.6888
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": -0.16,
+        "source": "bullion_banks",
+        "target": "macro_hedge_funds",
+        "update_strength": 1.5852
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": -0.04,
+        "source": "bullion_banks",
+        "target": "safe_haven_capital_flows",
+        "update_strength": 1.5076
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.0,
+        "source": "safe_haven_capital_flows",
+        "target": "etf_investors",
+        "update_strength": 1.4972
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.14,
+        "source": "safe_haven_capital_flows",
+        "target": "central_banks",
+        "update_strength": 1.4687
+      },
+      {
+        "channel": "flow_balancing",
+        "information_asymmetry": 0.1,
+        "source": "bullion_banks",
+        "target": "central_banks",
+        "update_strength": 1.4553
+      },
+      {
+        "channel": "microstructure_state",
+        "information_asymmetry": 0.22,
+        "source": "market_makers",
+        "target": "retail_traders",
+        "update_strength": 1.3482
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": 0.12,
+        "source": "macro_hedge_funds",
+        "target": "safe_haven_capital_flows",
+        "update_strength": 1.3226
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": -0.12,
+        "source": "safe_haven_capital_flows",
+        "target": "macro_hedge_funds",
+        "update_strength": 1.3098
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": -0.26,
+        "source": "central_banks",
+        "target": "macro_hedge_funds",
+        "update_strength": 1.2853
+      },
+      {
+        "channel": "microstructure_state",
+        "information_asymmetry": 0.18,
+        "source": "market_makers",
+        "target": "etf_investors",
+        "update_strength": 1.234
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": 0.16,
+        "source": "macro_hedge_funds",
+        "target": "ctas",
+        "update_strength": 1.1999
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": 0.16,
+        "source": "macro_hedge_funds",
+        "target": "dealers",
+        "update_strength": 1.1905
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.04,
+        "source": "safe_haven_capital_flows",
+        "target": "retail_traders",
+        "update_strength": 1.1701
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": -0.18,
+        "source": "safe_haven_capital_flows",
+        "target": "market_makers",
+        "update_strength": 1.1425
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.04,
+        "source": "safe_haven_capital_flows",
+        "target": "dealers",
+        "update_strength": 1.139
+      },
+      {
+        "channel": "microstructure_state",
+        "information_asymmetry": 0.18,
+        "source": "market_makers",
+        "target": "safe_haven_capital_flows",
+        "update_strength": 1.103
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": -0.06,
+        "source": "macro_hedge_funds",
+        "target": "market_makers",
+        "update_strength": 1.0985
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": 0.12,
+        "source": "macro_hedge_funds",
+        "target": "etf_investors",
+        "update_strength": 1.0655
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.04,
+        "source": "etf_investors",
+        "target": "retail_traders",
+        "update_strength": 1.0601
+      },
+      {
+        "channel": "microstructure_state",
+        "information_asymmetry": 0.22,
+        "source": "market_makers",
+        "target": "ctas",
+        "update_strength": 1.0592
+      },
+      {
+        "channel": "systematic_trend",
+        "information_asymmetry": 0.0,
+        "source": "ctas",
+        "target": "commercial_hedgers",
+        "update_strength": 1.059
+      },
+      {
+        "channel": "systematic_trend",
+        "information_asymmetry": -0.04,
+        "source": "ctas",
+        "target": "etf_investors",
+        "update_strength": 1.0544
+      },
+      {
+        "channel": "microstructure_state",
+        "information_asymmetry": 0.22,
+        "source": "market_makers",
+        "target": "commercial_hedgers",
+        "update_strength": 1.0482
+      },
+      {
+        "channel": "microstructure_state",
+        "information_asymmetry": 0.22,
+        "source": "market_makers",
+        "target": "bullion_banks",
+        "update_strength": 1.0425
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.04,
+        "source": "etf_investors",
+        "target": "commercial_hedgers",
+        "update_strength": 1.0252
+      },
+      {
+        "channel": "microstructure_state",
+        "information_asymmetry": 0.22,
+        "source": "market_makers",
+        "target": "dealers",
+        "update_strength": 1.0178
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.04,
+        "source": "etf_investors",
+        "target": "ctas",
+        "update_strength": 1.0042
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": 0.16,
+        "source": "macro_hedge_funds",
+        "target": "retail_traders",
+        "update_strength": 0.9734
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": 0.16,
+        "source": "macro_hedge_funds",
+        "target": "commercial_hedgers",
+        "update_strength": 0.9688
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.04,
+        "source": "safe_haven_capital_flows",
+        "target": "commercial_hedgers",
+        "update_strength": 0.9657
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": 0.16,
+        "source": "macro_hedge_funds",
+        "target": "bullion_banks",
+        "update_strength": 0.9635
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": -0.18,
+        "source": "etf_investors",
+        "target": "market_makers",
+        "update_strength": 0.9444
+      },
+      {
+        "channel": "microstructure_state",
+        "information_asymmetry": 0.06,
+        "source": "market_makers",
+        "target": "macro_hedge_funds",
+        "update_strength": 0.9325
+      },
+      {
+        "channel": "systematic_trend",
+        "information_asymmetry": 0.0,
+        "source": "ctas",
+        "target": "retail_traders",
+        "update_strength": 0.9285
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": 0.0,
+        "source": "commercial_hedgers",
+        "target": "bullion_banks",
+        "update_strength": 0.9126
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.04,
+        "source": "safe_haven_capital_flows",
+        "target": "bullion_banks",
+        "update_strength": 0.8991
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.04,
+        "source": "safe_haven_capital_flows",
+        "target": "ctas",
+        "update_strength": 0.8985
+      },
+      {
+        "channel": "systematic_trend",
+        "information_asymmetry": 0.0,
+        "source": "ctas",
+        "target": "bullion_banks",
+        "update_strength": 0.8598
+      },
+      {
+        "channel": "microstructure_state",
+        "information_asymmetry": 0.32,
+        "source": "market_makers",
+        "target": "central_banks",
+        "update_strength": 0.8511
+      },
+      {
+        "channel": "systematic_trend",
+        "information_asymmetry": -0.22,
+        "source": "ctas",
+        "target": "market_makers",
+        "update_strength": 0.8459
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": -0.14,
+        "source": "central_banks",
+        "target": "safe_haven_capital_flows",
+        "update_strength": 0.814
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.04,
+        "source": "etf_investors",
+        "target": "bullion_banks",
+        "update_strength": 0.8046
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": -0.04,
+        "source": "retail_traders",
+        "target": "etf_investors",
+        "update_strength": 0.7621
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": -0.04,
+        "source": "commercial_hedgers",
+        "target": "etf_investors",
+        "update_strength": 0.7481
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.0,
+        "source": "etf_investors",
+        "target": "safe_haven_capital_flows",
+        "update_strength": 0.735
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": 0.0,
+        "source": "commercial_hedgers",
+        "target": "ctas",
+        "update_strength": 0.7324
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": -0.22,
+        "source": "retail_traders",
+        "target": "market_makers",
+        "update_strength": 0.6801
+      },
+      {
+        "channel": "systematic_trend",
+        "information_asymmetry": 0.1,
+        "source": "ctas",
+        "target": "central_banks",
+        "update_strength": 0.68
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.14,
+        "source": "etf_investors",
+        "target": "central_banks",
+        "update_strength": 0.635
+      },
+      {
+        "channel": "systematic_trend",
+        "information_asymmetry": 0.0,
+        "source": "ctas",
+        "target": "dealers",
+        "update_strength": 0.629
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": 0.0,
+        "source": "commercial_hedgers",
+        "target": "retail_traders",
+        "update_strength": 0.5923
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": 0.0,
+        "source": "retail_traders",
+        "target": "ctas",
+        "update_strength": 0.5818
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": 0.0,
+        "source": "retail_traders",
+        "target": "commercial_hedgers",
+        "update_strength": 0.5723
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": 0.04,
+        "source": "etf_investors",
+        "target": "dealers",
+        "update_strength": 0.5671
+      },
+      {
+        "channel": "systematic_trend",
+        "information_asymmetry": -0.16,
+        "source": "ctas",
+        "target": "macro_hedge_funds",
+        "update_strength": 0.5556
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": 0.0,
+        "source": "commercial_hedgers",
+        "target": "dealers",
+        "update_strength": 0.5526
+      },
+      {
+        "channel": "systematic_trend",
+        "information_asymmetry": -0.04,
+        "source": "ctas",
+        "target": "safe_haven_capital_flows",
+        "update_strength": 0.5377
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": -0.22,
+        "source": "commercial_hedgers",
+        "target": "market_makers",
+        "update_strength": 0.5097
+      },
+      {
+        "channel": "allocation_narrative",
+        "information_asymmetry": -0.12,
+        "source": "etf_investors",
+        "target": "macro_hedge_funds",
+        "update_strength": 0.5069
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": -0.04,
+        "source": "retail_traders",
+        "target": "safe_haven_capital_flows",
+        "update_strength": 0.4549
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": 0.1,
+        "source": "commercial_hedgers",
+        "target": "central_banks",
+        "update_strength": 0.4186
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": 0.1,
+        "source": "retail_traders",
+        "target": "central_banks",
+        "update_strength": 0.4027
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": 0.0,
+        "source": "retail_traders",
+        "target": "bullion_banks",
+        "update_strength": 0.3729
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": 0.0,
+        "source": "retail_traders",
+        "target": "dealers",
+        "update_strength": 0.3517
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": -0.1,
+        "source": "central_banks",
+        "target": "retail_traders",
+        "update_strength": 0.3456
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": -0.1,
+        "source": "central_banks",
+        "target": "commercial_hedgers",
+        "update_strength": 0.3418
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": -0.1,
+        "source": "central_banks",
+        "target": "bullion_banks",
+        "update_strength": 0.3286
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": -0.1,
+        "source": "central_banks",
+        "target": "dealers",
+        "update_strength": 0.3176
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": -0.14,
+        "source": "central_banks",
+        "target": "etf_investors",
+        "update_strength": 0.296
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": -0.16,
+        "source": "commercial_hedgers",
+        "target": "macro_hedge_funds",
+        "update_strength": 0.2942
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": -0.1,
+        "source": "central_banks",
+        "target": "ctas",
+        "update_strength": 0.2814
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": -0.16,
+        "source": "retail_traders",
+        "target": "macro_hedge_funds",
+        "update_strength": 0.2783
+      },
+      {
+        "channel": "hedge_optimization",
+        "information_asymmetry": -0.04,
+        "source": "commercial_hedgers",
+        "target": "safe_haven_capital_flows",
+        "update_strength": 0.2764
+      },
+      {
+        "channel": "macro_scenario",
+        "information_asymmetry": -0.32,
+        "source": "central_banks",
+        "target": "market_makers",
+        "update_strength": 0.2691
+      }
+    ]
+  },
+  "date_range": {
+    "end": "2026-07-24 04:00:00+00:00",
+    "n_obs": 6257,
+    "start": "2001-08-15 04:00:00+00:00"
+  },
+  "decision_cascade_models": [
+    {
+      "cascade_strength": 0.91,
+      "initiator": "market_makers",
+      "stage_1": [
+        "market_makers"
+      ],
+      "stage_2": [
+        "retail_traders",
+        "etf_investors"
+      ],
+      "stage_3": [
+        "commercial_hedgers",
+        "etf_investors",
+        "market_makers",
+        "retail_traders"
+      ]
+    },
+    {
+      "cascade_strength": 0.91,
+      "initiator": "macro_hedge_funds",
+      "stage_1": [
+        "macro_hedge_funds"
+      ],
+      "stage_2": [
+        "central_banks",
+        "safe_haven_capital_flows"
+      ],
+      "stage_3": [
+        "central_banks",
+        "etf_investors",
+        "macro_hedge_funds",
+        "safe_haven_capital_flows"
+      ]
+    },
+    {
+      "cascade_strength": 0.91,
+      "initiator": "etf_investors",
+      "stage_1": [
+        "etf_investors"
+      ],
+      "stage_2": [
+        "market_makers",
+        "retail_traders"
+      ],
+      "stage_3": [
+        "etf_investors",
+        "market_makers",
+        "retail_traders"
+      ]
+    },
+    {
+      "cascade_strength": 0.91,
+      "initiator": "safe_haven_capital_flows",
+      "stage_1": [
+        "safe_haven_capital_flows"
+      ],
+      "stage_2": [
+        "etf_investors",
+        "macro_hedge_funds"
+      ],
+      "stage_3": [
+        "central_banks",
+        "commercial_hedgers",
+        "retail_traders",
+        "safe_haven_capital_flows"
+      ]
+    }
+  ],
+  "decision_failure_catalogue": [
+    {
+      "confidence": 0.92,
+      "failure_category": "information_delay",
+      "failure_mode": "Policy surprise misread, reserve defense constraints, delayed response to inflation stress.",
+      "participant": "central_banks"
+    },
+    {
+      "confidence": 0.92,
+      "failure_category": "information_delay",
+      "failure_mode": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+      "participant": "commercial_hedgers"
+    },
+    {
+      "confidence": 0.92,
+      "failure_category": "information_delay",
+      "failure_mode": "Funding stress, basis breaks, concentrated client flow shocks.",
+      "participant": "bullion_banks"
+    },
+    {
+      "confidence": 0.92,
+      "failure_category": "information_delay",
+      "failure_mode": "Inventory saturation, spread blowout, procyclical de-risking.",
+      "participant": "dealers"
+    },
+    {
+      "confidence": 0.92,
+      "failure_category": "cascade_amplification",
+      "failure_mode": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+      "participant": "market_makers"
+    },
+    {
+      "confidence": 0.92,
+      "failure_category": "information_delay",
+      "failure_mode": "Whipsaws, false breakouts, crowded trend reversals.",
+      "participant": "ctas"
+    },
+    {
+      "confidence": 0.92,
+      "failure_category": "cascade_amplification",
+      "failure_mode": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+      "participant": "macro_hedge_funds"
+    },
+    {
+      "confidence": 0.92,
+      "failure_category": "cascade_amplification",
+      "failure_mode": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+      "participant": "etf_investors"
+    },
+    {
+      "confidence": 0.92,
+      "failure_category": "information_delay",
+      "failure_mode": "Buying tops, selling troughs, liquidity chasing.",
+      "participant": "retail_traders"
+    },
+    {
+      "confidence": 0.92,
+      "failure_category": "cascade_amplification",
+      "failure_mode": "Crowding into same hedge, late panic allocation, reversal after stress normalization.",
+      "participant": "safe_haven_capital_flows"
+    }
+  ],
+  "decision_graph": {
+    "dominant_cascade_initiators": [
+      "market_makers",
+      "macro_hedge_funds",
+      "etf_investors",
+      "safe_haven_capital_flows"
+    ],
+    "fastest_decision_makers": [
+      "market_makers",
+      "macro_hedge_funds",
+      "etf_investors",
+      "safe_haven_capital_flows",
+      "commercial_hedgers"
+    ],
+    "participants": [
+      "central_banks",
+      "commercial_hedgers",
+      "bullion_banks",
+      "dealers",
+      "market_makers",
+      "ctas",
+      "macro_hedge_funds",
+      "etf_investors",
+      "retail_traders",
+      "safe_haven_capital_flows"
+    ]
+  },
+  "decision_profiles": {
+    "bullion_banks": {
+      "belief_update_process": "flow_balancing",
+      "confidence": 0.92,
+      "decision_constraints": "balance_sheet",
+      "decision_objectives": "Warehouse flow, manage basis exposure, intermediate OTC and futures demand.",
+      "ecology_role": "ecology_driver",
+      "failure_modes": "Funding stress, basis breaks, concentrated client flow shocks.",
+      "historical_examples": "Most important during USD and forward-basis dislocations.",
+      "information_sources": [
+        "dxy_return_1",
+        "dxy_return_5",
+        "forward_expectation",
+        "xau_return_1"
+      ],
+      "label": "Bullion Banks",
+      "participant": "bullion_banks",
+      "reaction_score": 0.76,
+      "reaction_speed": "medium",
+      "typical_responses_by_regime": {
+        "bear_unwind": "Unwind inventories and funding-sensitive structures.",
+        "bull_trend": "Warehouse trend-following demand and manage forward inventory.",
+        "calm_carry": "Monetize stable basis conditions.",
+        "crisis_dislocation": "Funding and basis stress make them critical relays.",
+        "macro_transition": "Translate macro repricing into forward/spot market structure.",
+        "range_compression": "Optimize balance sheet rather than directional expression."
+      }
+    },
+    "central_banks": {
+      "belief_update_process": "macro_scenario",
+      "confidence": 0.92,
+      "decision_constraints": "policy_credibility",
+      "decision_objectives": "Anchor inflation expectations, manage reserves, preserve policy credibility.",
+      "ecology_role": "ecology_driver",
+      "failure_modes": "Policy surprise misread, reserve defense constraints, delayed response to inflation stress.",
+      "historical_examples": "Dominant at macro turning points, inflation shocks, and policy regime shifts.",
+      "information_sources": [
+        "fed_surprise",
+        "macro_pressure",
+        "yield_10y_change_5",
+        "yield_curve_10y_3m"
+      ],
+      "label": "Central Banks",
+      "participant": "central_banks",
+      "reaction_score": 0.66,
+      "reaction_speed": "slow",
+      "typical_responses_by_regime": {
+        "bear_unwind": "Higher real-rate pressure dominates reserve demand.",
+        "bull_trend": "Policy stance matters less than persistent investor and CTA trend reinforcement.",
+        "calm_carry": "Steady policy backdrop suppresses urgent gold demand.",
+        "crisis_dislocation": "Policy and reserve credibility become central network anchors.",
+        "macro_transition": "Primary drivers through policy-path repricing.",
+        "range_compression": "Policy uncertainty is low and participant interactions are muted."
+      }
+    },
+    "commercial_hedgers": {
+      "belief_update_process": "hedge_optimization",
+      "confidence": 0.92,
+      "decision_constraints": "mandate_and_liquidity",
+      "decision_objectives": "Reduce operating PnL volatility and manage physical exposure.",
+      "ecology_role": "ecology_driver",
+      "failure_modes": "Under-hedging during abrupt rallies, over-hedging during supply shocks.",
+      "historical_examples": "Most visible during term-structure stress and producer margin compression.",
+      "information_sources": [
+        "forward_expectation",
+        "xau_return_1",
+        "yield_30y_change_20"
+      ],
+      "label": "Commercial Hedgers",
+      "participant": "commercial_hedgers",
+      "reaction_score": 0.76,
+      "reaction_speed": "medium",
+      "typical_responses_by_regime": {
+        "bear_unwind": "Reduce hedges or monetize prior protection.",
+        "bull_trend": "Increase tactical hedging as upside persists.",
+        "calm_carry": "Optimize carry and financing through forward structures.",
+        "crisis_dislocation": "Prioritize balance-sheet protection over optimization.",
+        "macro_transition": "Re-evaluate hedge structures as macro carry changes.",
+        "range_compression": "Maintain baseline hedges with little directional urgency."
+      }
+    },
+    "ctas": {
+      "belief_update_process": "systematic_trend",
+      "confidence": 0.92,
+      "decision_constraints": "model_rules",
+      "decision_objectives": "Exploit persistent trends and convexity in macro futures and metals.",
+      "ecology_role": "ecology_driver",
+      "failure_modes": "Whipsaws, false breakouts, crowded trend reversals.",
+      "historical_examples": "Most influential after macro transitions convert into persistent price trends.",
+      "information_sources": [
+        "dxy_return_20",
+        "forward_expectation",
+        "xau_return_1"
+      ],
+      "label": "Commodity Trading Advisors",
+      "participant": "ctas",
+      "reaction_score": 0.76,
+      "reaction_speed": "medium",
+      "typical_responses_by_regime": {
+        "bear_unwind": "Reverse long exposure and accelerate unwind.",
+        "bull_trend": "Scale into trend continuation and amplify directional persistence.",
+        "calm_carry": "Lower participation because trends are muted.",
+        "crisis_dislocation": "Can reinforce both crash and rebound once trend rules trigger.",
+        "macro_transition": "Join after directional persistence is established.",
+        "range_compression": "Low engagement because breakout signals are absent."
+      }
+    },
+    "dealers": {
+      "belief_update_process": "flow_balancing",
+      "confidence": 0.92,
+      "decision_constraints": "balance_sheet",
+      "decision_objectives": "Absorb client flow while preserving inventory and spread economics.",
+      "ecology_role": "ecology_driver",
+      "failure_modes": "Inventory saturation, spread blowout, procyclical de-risking.",
+      "historical_examples": "Critical in transition phases when information must be warehoused before redistribution.",
+      "information_sources": [
+        "dxy_return_1",
+        "dxy_return_5",
+        "macro_pressure",
+        "xau_return_1"
+      ],
+      "label": "Dealers",
+      "participant": "dealers",
+      "reaction_score": 0.76,
+      "reaction_speed": "medium",
+      "typical_responses_by_regime": {
+        "bear_unwind": "Transmit de-risking across client channels.",
+        "bull_trend": "Distribute directional client demand while protecting inventory.",
+        "calm_carry": "Warehouse balanced two-way flow efficiently.",
+        "crisis_dislocation": "Become bottlenecks as balance-sheet capacity shrinks.",
+        "macro_transition": "Intermediate rapid portfolio reallocation across participants.",
+        "range_compression": "Facilitate mean-reverting two-way flow."
+      }
+    },
+    "etf_investors": {
+      "belief_update_process": "allocation_narrative",
+      "confidence": 0.92,
+      "decision_constraints": "mandate_and_liquidity",
+      "decision_objectives": "Allocate to gold as strategic hedge, inflation diversifier, or safe haven.",
+      "ecology_role": "ecology_driver",
+      "failure_modes": "Late entry/exit, crowding with safe-haven flows, narrative lag.",
+      "historical_examples": "Most active during fear-driven allocation cycles and inflation hedging episodes.",
+      "information_sources": [
+        "forward_expectation",
+        "geo_severity",
+        "xau_return_1"
+      ],
+      "label": "ETF Investors",
+      "participant": "etf_investors",
+      "reaction_score": 0.8,
+      "reaction_speed": "medium",
+      "typical_responses_by_regime": {
+        "bear_unwind": "Redeem exposure after thesis deterioration.",
+        "bull_trend": "Increase strategic allocations after confirmation.",
+        "calm_carry": "Strategic flows dominate over tactical changes.",
+        "crisis_dislocation": "Add to safe-haven positions after stress confirmation.",
+        "macro_transition": "Respond after thesis gains institutional legitimacy.",
+        "range_compression": "Strategic but inactive."
+      }
+    },
+    "macro_hedge_funds": {
+      "belief_update_process": "macro_scenario",
+      "confidence": 0.92,
+      "decision_constraints": "mandate_and_liquidity",
+      "decision_objectives": "Express macro theses across rates, FX, commodities, and safe-haven trades.",
+      "ecology_role": "ecology_driver",
+      "failure_modes": "Narrative overcrowding, leverage unwind, cross-asset contagion.",
+      "historical_examples": "Dominant during macro transitions, inflation repricing, and policy shocks.",
+      "information_sources": [
+        "dxy_return_1",
+        "fed_surprise",
+        "macro_pressure",
+        "yield_10y_change_5"
+      ],
+      "label": "Macro Hedge Funds",
+      "participant": "macro_hedge_funds",
+      "reaction_score": 0.92,
+      "reaction_speed": "fast",
+      "typical_responses_by_regime": {
+        "bear_unwind": "Rotate toward USD/rates expressions over gold.",
+        "bull_trend": "Express pro-gold macro thesis via cross-asset allocations.",
+        "calm_carry": "Prefer relative-value expressions.",
+        "crisis_dislocation": "Aggressively reallocate across gold, USD, and rates.",
+        "macro_transition": "Fastest tactical reallocators at narrative turning points.",
+        "range_compression": "Wait for cleaner macro asymmetry."
+      }
+    },
+    "market_makers": {
+      "belief_update_process": "microstructure_state",
+      "confidence": 0.92,
+      "decision_constraints": "flow_toxicity",
+      "decision_objectives": "Earn spread, manage adverse selection, maintain quoting franchise.",
+      "ecology_role": "ecology_driver",
+      "failure_modes": "Quote withdrawal, flow toxicity misclassification, inventory air pockets.",
+      "historical_examples": "Strong in calm carry/range regimes, defensive in crisis dislocation.",
+      "information_sources": [
+        "dxy_return_1",
+        "geo_severity",
+        "xau_return_1"
+      ],
+      "label": "Market Makers",
+      "participant": "market_makers",
+      "reaction_score": 0.98,
+      "reaction_speed": "intraday",
+      "typical_responses_by_regime": {
+        "bear_unwind": "Tighten risk, manage adverse flow imbalances.",
+        "bull_trend": "Provide liquidity but shorten quote horizons.",
+        "calm_carry": "Deepest liquidity and narrowest spreads.",
+        "crisis_dislocation": "Withdraw liquidity and widen spreads sharply.",
+        "macro_transition": "Adjust depth as information arrival accelerates.",
+        "range_compression": "Dominate microstructure with deepest continuous liquidity."
+      }
+    },
+    "retail_traders": {
+      "belief_update_process": "hedge_optimization",
+      "confidence": 0.92,
+      "decision_constraints": "mandate_and_liquidity",
+      "decision_objectives": "Capture short-horizon price action or express discretionary macro sentiment.",
+      "ecology_role": "ecology_driver",
+      "failure_modes": "Buying tops, selling troughs, liquidity chasing.",
+      "historical_examples": "Most active after public narratives become obvious and price momentum is visible.",
+      "information_sources": [
+        "geo_severity",
+        "xau_return_1"
+      ],
+      "label": "Retail Traders",
+      "participant": "retail_traders",
+      "reaction_score": 0.76,
+      "reaction_speed": "medium",
+      "typical_responses_by_regime": {
+        "bear_unwind": "Late liquidation after visible breakdown.",
+        "bull_trend": "Join once momentum is visible.",
+        "calm_carry": "Attention fades without visible volatility.",
+        "crisis_dislocation": "Chase fear-driven moves late in the cycle.",
+        "macro_transition": "Mostly reactive, not initiators.",
+        "range_compression": "Fade visibility due to low excitement."
+      }
+    },
+    "safe_haven_capital_flows": {
+      "belief_update_process": "allocation_narrative",
+      "confidence": 0.92,
+      "decision_constraints": "mandate_and_liquidity",
+      "decision_objectives": "Protect capital under systemic uncertainty and preserve real purchasing power.",
+      "ecology_role": "ecology_driver",
+      "failure_modes": "Crowding into same hedge, late panic allocation, reversal after stress normalization.",
+      "historical_examples": "Strongest in crisis dislocation and geopolitical shock regimes.",
+      "information_sources": [
+        "dxy_return_1",
+        "geo_severity",
+        "macro_pressure",
+        "yield_curve_10y_3m"
+      ],
+      "label": "Safe Haven Capital Flows",
+      "participant": "safe_haven_capital_flows",
+      "reaction_score": 0.8,
+      "reaction_speed": "medium",
+      "typical_responses_by_regime": {
+        "bear_unwind": "Retreat as stress premium falls.",
+        "bull_trend": "Less dominant unless trend is fear-driven.",
+        "calm_carry": "Remain dormant.",
+        "crisis_dislocation": "Most dominant participant during systemic stress.",
+        "macro_transition": "Rise when macro transition overlaps with systemic fear.",
+        "range_compression": "Inactive in absence of stress."
+      }
+    }
+  },
+  "ecology_knowledge_graph": {
+    "belief_edges": [
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": -0.22
+        },
+        "confidence": 2.2668,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-MARKET-MAKERS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": 0.0
+        },
+        "confidence": 2.2367,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-DEALERS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": 0.0
+        },
+        "confidence": 1.9895,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-BULLION-BANKS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": 0.0
+        },
+        "confidence": 1.9092,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-COMMERCIAL-HEDGERS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": -0.16
+        },
+        "confidence": 1.8948,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS"
+      },
+      {
+        "attributes": {
+          "channel": "macro_scenario",
+          "information_asymmetry": 0.26
+        },
+        "confidence": 1.8661,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-CENTRAL-BANKS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": -0.04
+        },
+        "confidence": 1.8472,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": -0.04
+        },
+        "confidence": 1.8297,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": 0.0
+        },
+        "confidence": 1.8289,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-CTAS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": -0.22
+        },
+        "confidence": 1.8008,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-MARKET-MAKERS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": 0.1
+        },
+        "confidence": 1.7949,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-CENTRAL-BANKS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": 0.0
+        },
+        "confidence": 1.774,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-RETAIL-TRADERS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": 0.0
+        },
+        "confidence": 1.7102,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-COMMERCIAL-HEDGERS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": -0.04
+        },
+        "confidence": 1.7054,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": 0.0
+        },
+        "confidence": 1.7046,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-CTAS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": 0.0
+        },
+        "confidence": 1.6888,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-RETAIL-TRADERS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": -0.16
+        },
+        "confidence": 1.5852,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": -0.04
+        },
+        "confidence": 1.5076,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS"
+      },
+      {
+        "attributes": {
+          "channel": "allocation_narrative",
+          "information_asymmetry": 0.0
+        },
+        "confidence": 1.4972,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "channel": "allocation_narrative",
+          "information_asymmetry": 0.14
+        },
+        "confidence": 1.4687,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-CENTRAL-BANKS"
+      },
+      {
+        "attributes": {
+          "channel": "flow_balancing",
+          "information_asymmetry": 0.1
+        },
+        "confidence": 1.4553,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-CENTRAL-BANKS"
+      },
+      {
+        "attributes": {
+          "channel": "microstructure_state",
+          "information_asymmetry": 0.22
+        },
+        "confidence": 1.3482,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MARKET-MAKERS",
+        "target": "IKROS-PB2-DECISION-RETAIL-TRADERS"
+      },
+      {
+        "attributes": {
+          "channel": "macro_scenario",
+          "information_asymmetry": 0.12
+        },
+        "confidence": 1.3226,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS"
+      },
+      {
+        "attributes": {
+          "channel": "allocation_narrative",
+          "information_asymmetry": -0.12
+        },
+        "confidence": 1.3098,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS"
+      },
+      {
+        "attributes": {
+          "channel": "macro_scenario",
+          "information_asymmetry": -0.26
+        },
+        "confidence": 1.2853,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-CENTRAL-BANKS",
+        "target": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS"
+      },
+      {
+        "attributes": {
+          "channel": "microstructure_state",
+          "information_asymmetry": 0.18
+        },
+        "confidence": 1.234,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MARKET-MAKERS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "channel": "macro_scenario",
+          "information_asymmetry": 0.16
+        },
+        "confidence": 1.1999,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-CTAS"
+      },
+      {
+        "attributes": {
+          "channel": "macro_scenario",
+          "information_asymmetry": 0.16
+        },
+        "confidence": 1.1905,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-DEALERS"
+      },
+      {
+        "attributes": {
+          "channel": "allocation_narrative",
+          "information_asymmetry": 0.04
+        },
+        "confidence": 1.1701,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-RETAIL-TRADERS"
+      },
+      {
+        "attributes": {
+          "channel": "allocation_narrative",
+          "information_asymmetry": -0.18
+        },
+        "confidence": 1.1425,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-MARKET-MAKERS"
+      },
+      {
+        "attributes": {
+          "channel": "allocation_narrative",
+          "information_asymmetry": 0.04
+        },
+        "confidence": 1.139,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-DEALERS"
+      },
+      {
+        "attributes": {
+          "channel": "microstructure_state",
+          "information_asymmetry": 0.18
+        },
+        "confidence": 1.103,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MARKET-MAKERS",
+        "target": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS"
+      },
+      {
+        "attributes": {
+          "channel": "macro_scenario",
+          "information_asymmetry": -0.06
+        },
+        "confidence": 1.0985,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-MARKET-MAKERS"
+      },
+      {
+        "attributes": {
+          "channel": "macro_scenario",
+          "information_asymmetry": 0.12
+        },
+        "confidence": 1.0655,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "channel": "allocation_narrative",
+          "information_asymmetry": 0.04
+        },
+        "confidence": 1.0601,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-ETF-INVESTORS",
+        "target": "IKROS-PB2-DECISION-RETAIL-TRADERS"
+      },
+      {
+        "attributes": {
+          "channel": "microstructure_state",
+          "information_asymmetry": 0.22
+        },
+        "confidence": 1.0592,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MARKET-MAKERS",
+        "target": "IKROS-PB2-DECISION-CTAS"
+      },
+      {
+        "attributes": {
+          "channel": "systematic_trend",
+          "information_asymmetry": 0.0
+        },
+        "confidence": 1.059,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-CTAS",
+        "target": "IKROS-PB2-DECISION-COMMERCIAL-HEDGERS"
+      },
+      {
+        "attributes": {
+          "channel": "systematic_trend",
+          "information_asymmetry": -0.04
+        },
+        "confidence": 1.0544,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-CTAS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "channel": "microstructure_state",
+          "information_asymmetry": 0.22
+        },
+        "confidence": 1.0482,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MARKET-MAKERS",
+        "target": "IKROS-PB2-DECISION-COMMERCIAL-HEDGERS"
+      },
+      {
+        "attributes": {
+          "channel": "microstructure_state",
+          "information_asymmetry": 0.22
+        },
+        "confidence": 1.0425,
+        "relation": "CAUSES",
+        "source": "IKROS-PB2-DECISION-MARKET-MAKERS",
+        "target": "IKROS-PB2-DECISION-BULLION-BANKS"
+      }
+    ],
+    "cascade_nodes": [
+      {
+        "attributes": {
+          "cascade_strength": 0.91,
+          "initiator": "market_makers"
+        },
+        "label": "Decision Cascade 1",
+        "node_id": "IKROS-PB2-CASCADE-0001",
+        "node_type": "RESEARCH_CONCLUSION"
+      },
+      {
+        "attributes": {
+          "cascade_strength": 0.91,
+          "initiator": "macro_hedge_funds"
+        },
+        "label": "Decision Cascade 2",
+        "node_id": "IKROS-PB2-CASCADE-0002",
+        "node_type": "RESEARCH_CONCLUSION"
+      },
+      {
+        "attributes": {
+          "cascade_strength": 0.91,
+          "initiator": "etf_investors"
+        },
+        "label": "Decision Cascade 3",
+        "node_id": "IKROS-PB2-CASCADE-0003",
+        "node_type": "RESEARCH_CONCLUSION"
+      },
+      {
+        "attributes": {
+          "cascade_strength": 0.91,
+          "initiator": "safe_haven_capital_flows"
+        },
+        "label": "Decision Cascade 4",
+        "node_id": "IKROS-PB2-CASCADE-0004",
+        "node_type": "RESEARCH_CONCLUSION"
+      }
+    ],
+    "decision_nodes": [
+      {
+        "attributes": {
+          "belief_update_process": "macro_scenario",
+          "confidence": 0.92,
+          "participant": "central_banks",
+          "reaction_speed": "slow"
+        },
+        "label": "Central Banks Decision Model",
+        "node_id": "IKROS-PB2-DECISION-CENTRAL-BANKS",
+        "node_type": "DECISION"
+      },
+      {
+        "attributes": {
+          "belief_update_process": "hedge_optimization",
+          "confidence": 0.92,
+          "participant": "commercial_hedgers",
+          "reaction_speed": "medium"
+        },
+        "label": "Commercial Hedgers Decision Model",
+        "node_id": "IKROS-PB2-DECISION-COMMERCIAL-HEDGERS",
+        "node_type": "DECISION"
+      },
+      {
+        "attributes": {
+          "belief_update_process": "flow_balancing",
+          "confidence": 0.92,
+          "participant": "bullion_banks",
+          "reaction_speed": "medium"
+        },
+        "label": "Bullion Banks Decision Model",
+        "node_id": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "node_type": "DECISION"
+      },
+      {
+        "attributes": {
+          "belief_update_process": "flow_balancing",
+          "confidence": 0.92,
+          "participant": "dealers",
+          "reaction_speed": "medium"
+        },
+        "label": "Dealers Decision Model",
+        "node_id": "IKROS-PB2-DECISION-DEALERS",
+        "node_type": "DECISION"
+      },
+      {
+        "attributes": {
+          "belief_update_process": "microstructure_state",
+          "confidence": 0.92,
+          "participant": "market_makers",
+          "reaction_speed": "intraday"
+        },
+        "label": "Market Makers Decision Model",
+        "node_id": "IKROS-PB2-DECISION-MARKET-MAKERS",
+        "node_type": "DECISION"
+      },
+      {
+        "attributes": {
+          "belief_update_process": "systematic_trend",
+          "confidence": 0.92,
+          "participant": "ctas",
+          "reaction_speed": "medium"
+        },
+        "label": "Commodity Trading Advisors Decision Model",
+        "node_id": "IKROS-PB2-DECISION-CTAS",
+        "node_type": "DECISION"
+      },
+      {
+        "attributes": {
+          "belief_update_process": "macro_scenario",
+          "confidence": 0.92,
+          "participant": "macro_hedge_funds",
+          "reaction_speed": "fast"
+        },
+        "label": "Macro Hedge Funds Decision Model",
+        "node_id": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "node_type": "DECISION"
+      },
+      {
+        "attributes": {
+          "belief_update_process": "allocation_narrative",
+          "confidence": 0.92,
+          "participant": "etf_investors",
+          "reaction_speed": "medium"
+        },
+        "label": "ETF Investors Decision Model",
+        "node_id": "IKROS-PB2-DECISION-ETF-INVESTORS",
+        "node_type": "DECISION"
+      },
+      {
+        "attributes": {
+          "belief_update_process": "hedge_optimization",
+          "confidence": 0.92,
+          "participant": "retail_traders",
+          "reaction_speed": "medium"
+        },
+        "label": "Retail Traders Decision Model",
+        "node_id": "IKROS-PB2-DECISION-RETAIL-TRADERS",
+        "node_type": "DECISION"
+      },
+      {
+        "attributes": {
+          "belief_update_process": "allocation_narrative",
+          "confidence": 0.92,
+          "participant": "safe_haven_capital_flows",
+          "reaction_speed": "medium"
+        },
+        "label": "Safe Haven Capital Flows Decision Model",
+        "node_id": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "node_type": "DECISION"
+      }
+    ],
+    "strategic_edges": [
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 3.7953,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-MARKET-MAKERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 3.3287,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-DEALERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 3.0762,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 3.015,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-MARKET-MAKERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.9609,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-BULLION-BANKS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.8413,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-COMMERCIAL-HEDGERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.8115,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.785,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.7219,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-CTAS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.6401,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-RETAIL-TRADERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.5958,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.5736,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.5452,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-COMMERCIAL-HEDGERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.5369,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-CTAS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.5195,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-DEALERS",
+        "target": "IKROS-PB2-DECISION-CENTRAL-BANKS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.5134,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-RETAIL-TRADERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.3437,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-CENTRAL-BANKS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.2946,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.2524,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-CENTRAL-BANKS",
+        "target": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.2137,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.0658,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.0428,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-BULLION-BANKS",
+        "target": "IKROS-PB2-DECISION-CENTRAL-BANKS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 2.0027,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-CENTRAL-BANKS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.8583,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-MARKET-MAKERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.8011,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.7271,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-MARKET-MAKERS",
+        "target": "IKROS-PB2-DECISION-RETAIL-TRADERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.6917,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-RETAIL-TRADERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.6467,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS",
+        "target": "IKROS-PB2-DECISION-DEALERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.6456,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-MARKET-MAKERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.6167,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-MARKET-MAKERS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.6049,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-CTAS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.5977,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-CTAS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.5852,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-DEALERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.5761,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-CTAS",
+        "target": "IKROS-PB2-DECISION-COMMERCIAL-HEDGERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.5361,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-ETF-INVESTORS",
+        "target": "IKROS-PB2-DECISION-MARKET-MAKERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.5326,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-ETF-INVESTORS",
+        "target": "IKROS-PB2-DECISION-RETAIL-TRADERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.4822,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-ETF-INVESTORS",
+        "target": "IKROS-PB2-DECISION-COMMERCIAL-HEDGERS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.4518,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-ETF-INVESTORS",
+        "target": "IKROS-PB2-DECISION-CTAS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.4511,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-MACRO-HEDGE-FUNDS",
+        "target": "IKROS-PB2-DECISION-ETF-INVESTORS"
+      },
+      {
+        "attributes": {
+          "dependency_type": "strategic_follow"
+        },
+        "confidence": 1.4451,
+        "relation": "DEPENDS_ON",
+        "source": "IKROS-PB2-DECISION-MARKET-MAKERS",
+        "target": "IKROS-PB2-DECISION-SAFE-HAVEN-CAPITAL-FLOWS"
+      }
+    ]
+  },
+  "information_asymmetry": [
+    {
+      "asymmetry_score": 1.536,
+      "label": "Macro Hedge Funds",
+      "participant": "macro_hedge_funds",
+      "reaction_score": 0.92,
+      "source_count": 4
+    },
+    {
+      "asymmetry_score": 1.464,
+      "label": "Safe Haven Capital Flows",
+      "participant": "safe_haven_capital_flows",
+      "reaction_score": 0.8,
+      "source_count": 4
+    },
+    {
+      "asymmetry_score": 1.44,
+      "label": "Bullion Banks",
+      "participant": "bullion_banks",
+      "reaction_score": 0.76,
+      "source_count": 4
+    },
+    {
+      "asymmetry_score": 1.44,
+      "label": "Dealers",
+      "participant": "dealers",
+      "reaction_score": 0.76,
+      "source_count": 4
+    },
+    {
+      "asymmetry_score": 1.38,
+      "label": "Central Banks",
+      "participant": "central_banks",
+      "reaction_score": 0.66,
+      "source_count": 4
+    },
+    {
+      "asymmetry_score": 1.372,
+      "label": "Market Makers",
+      "participant": "market_makers",
+      "reaction_score": 0.98,
+      "source_count": 3
+    },
+    {
+      "asymmetry_score": 1.264,
+      "label": "ETF Investors",
+      "participant": "etf_investors",
+      "reaction_score": 0.8,
+      "source_count": 3
+    },
+    {
+      "asymmetry_score": 1.24,
+      "label": "Commercial Hedgers",
+      "participant": "commercial_hedgers",
+      "reaction_score": 0.76,
+      "source_count": 3
+    },
+    {
+      "asymmetry_score": 1.24,
+      "label": "Commodity Trading Advisors",
+      "participant": "ctas",
+      "reaction_score": 0.76,
+      "source_count": 3
+    },
+    {
+      "asymmetry_score": 1.04,
+      "label": "Retail Traders",
+      "participant": "retail_traders",
+      "reaction_score": 0.76,
+      "source_count": 2
+    }
+  ],
+  "institutional_recommendations": {
+    "arb_recommendation": "Adopt a layered decision ecology in which macro hedge funds and market makers update fastest, central banks and bullion banks anchor belief formation, dealers relay strategic dependencies, and ETF/safe-haven flows turn localized decisions into market-wide cascades.",
+    "dominant_cascade_initiators": [
+      "market_makers",
+      "macro_hedge_funds",
+      "etf_investors",
+      "safe_haven_capital_flows"
+    ],
+    "fastest_decision_makers": [
+      "market_makers",
+      "macro_hedge_funds",
+      "etf_investors",
+      "safe_haven_capital_flows",
+      "commercial_hedgers"
+    ],
+    "highest_information_asymmetry": [
+      "macro_hedge_funds",
+      "safe_haven_capital_flows",
+      "bullion_banks",
+      "dealers",
+      "central_banks"
+    ]
+  },
+  "phase": "DC2_PROGRAM_B_PHASE2",
+  "program_b_phase1_foundations": {
+    "arb_recommendation": "Adopt a participant-layer ecology model in which central banks and macro hedge funds initiate macro repricing, bullion banks and dealers relay and transform the flow, market makers provide or withdraw microstructure depth, and CTAs / ETF investors / safe-haven flows amplify or stabilize regime transitions.",
+    "critical_interactions": [
+      "dealers->market_makers",
+      "bullion_banks->dealers",
+      "dealers->bullion_banks",
+      "bullion_banks->commercial_hedgers",
+      "dealers->macro_hedge_funds",
+      "dealers->safe_haven_capital_flows",
+      "bullion_banks->etf_investors",
+      "bullion_banks->ctas"
+    ],
+    "dataset_priorities": [
+      "COT / commercial hedger positioning",
+      "ETF flow data (GLD and related products)",
+      "Bullion bank / dealer inventory and lease/basis proxies",
+      "Safe-haven fund flow proxies and options positioning"
+    ],
+    "phase3_governing_model": "confidence-weighted directed cross-asset information network with regime overlays",
+    "priority_participants": [
+      "dealers",
+      "bullion_banks",
+      "safe_haven_capital_flows",
+      "macro_hedge_funds",
+      "market_makers"
+    ],
+    "priority_relays": [
+      "bullion_banks",
+      "dealers",
+      "safe_haven_capital_flows"
+    ]
+  },
+  "reaction_time_hierarchy": [
+    {
+      "belief_update_process": "microstructure_state",
+      "label": "Market Makers",
+      "participant": "market_makers",
+      "rank": 1,
+      "reaction_score": 0.98,
+      "reaction_speed": "intraday"
+    },
+    {
+      "belief_update_process": "macro_scenario",
+      "label": "Macro Hedge Funds",
+      "participant": "macro_hedge_funds",
+      "rank": 2,
+      "reaction_score": 0.92,
+      "reaction_speed": "fast"
+    },
+    {
+      "belief_update_process": "allocation_narrative",
+      "label": "ETF Investors",
+      "participant": "etf_investors",
+      "rank": 3,
+      "reaction_score": 0.8,
+      "reaction_speed": "medium"
+    },
+    {
+      "belief_update_process": "allocation_narrative",
+      "label": "Safe Haven Capital Flows",
+      "participant": "safe_haven_capital_flows",
+      "rank": 4,
+      "reaction_score": 0.8,
+      "reaction_speed": "medium"
+    },
+    {
+      "belief_update_process": "hedge_optimization",
+      "label": "Commercial Hedgers",
+      "participant": "commercial_hedgers",
+      "rank": 5,
+      "reaction_score": 0.76,
+      "reaction_speed": "medium"
+    },
+    {
+      "belief_update_process": "flow_balancing",
+      "label": "Bullion Banks",
+      "participant": "bullion_banks",
+      "rank": 6,
+      "reaction_score": 0.76,
+      "reaction_speed": "medium"
+    },
+    {
+      "belief_update_process": "flow_balancing",
+      "label": "Dealers",
+      "participant": "dealers",
+      "rank": 7,
+      "reaction_score": 0.76,
+      "reaction_speed": "medium"
+    },
+    {
+      "belief_update_process": "systematic_trend",
+      "label": "Commodity Trading Advisors",
+      "participant": "ctas",
+      "rank": 8,
+      "reaction_score": 0.76,
+      "reaction_speed": "medium"
+    },
+    {
+      "belief_update_process": "hedge_optimization",
+      "label": "Retail Traders",
+      "participant": "retail_traders",
+      "rank": 9,
+      "reaction_score": 0.76,
+      "reaction_speed": "medium"
+    },
+    {
+      "belief_update_process": "macro_scenario",
+      "label": "Central Banks",
+      "participant": "central_banks",
+      "rank": 10,
+      "reaction_score": 0.66,
+      "reaction_speed": "slow"
+    }
+  ],
+  "regime_decision_matrix": {
+    "bullion_banks": {
+      "bear_unwind": "Unwind inventories and funding-sensitive structures.",
+      "bull_trend": "Warehouse trend-following demand and manage forward inventory.",
+      "calm_carry": "Monetize stable basis conditions.",
+      "crisis_dislocation": "Funding and basis stress make them critical relays.",
+      "macro_transition": "Translate macro repricing into forward/spot market structure.",
+      "range_compression": "Optimize balance sheet rather than directional expression."
+    },
+    "central_banks": {
+      "bear_unwind": "Higher real-rate pressure dominates reserve demand.",
+      "bull_trend": "Policy stance matters less than persistent investor and CTA trend reinforcement.",
+      "calm_carry": "Steady policy backdrop suppresses urgent gold demand.",
+      "crisis_dislocation": "Policy and reserve credibility become central network anchors.",
+      "macro_transition": "Primary drivers through policy-path repricing.",
+      "range_compression": "Policy uncertainty is low and participant interactions are muted."
+    },
+    "commercial_hedgers": {
+      "bear_unwind": "Reduce hedges or monetize prior protection.",
+      "bull_trend": "Increase tactical hedging as upside persists.",
+      "calm_carry": "Optimize carry and financing through forward structures.",
+      "crisis_dislocation": "Prioritize balance-sheet protection over optimization.",
+      "macro_transition": "Re-evaluate hedge structures as macro carry changes.",
+      "range_compression": "Maintain baseline hedges with little directional urgency."
+    },
+    "ctas": {
+      "bear_unwind": "Reverse long exposure and accelerate unwind.",
+      "bull_trend": "Scale into trend continuation and amplify directional persistence.",
+      "calm_carry": "Lower participation because trends are muted.",
+      "crisis_dislocation": "Can reinforce both crash and rebound once trend rules trigger.",
+      "macro_transition": "Join after directional persistence is established.",
+      "range_compression": "Low engagement because breakout signals are absent."
+    },
+    "dealers": {
+      "bear_unwind": "Transmit de-risking across client channels.",
+      "bull_trend": "Distribute directional client demand while protecting inventory.",
+      "calm_carry": "Warehouse balanced two-way flow efficiently.",
+      "crisis_dislocation": "Become bottlenecks as balance-sheet capacity shrinks.",
+      "macro_transition": "Intermediate rapid portfolio reallocation across participants.",
+      "range_compression": "Facilitate mean-reverting two-way flow."
+    },
+    "etf_investors": {
+      "bear_unwind": "Redeem exposure after thesis deterioration.",
+      "bull_trend": "Increase strategic allocations after confirmation.",
+      "calm_carry": "Strategic flows dominate over tactical changes.",
+      "crisis_dislocation": "Add to safe-haven positions after stress confirmation.",
+      "macro_transition": "Respond after thesis gains institutional legitimacy.",
+      "range_compression": "Strategic but inactive."
+    },
+    "macro_hedge_funds": {
+      "bear_unwind": "Rotate toward USD/rates expressions over gold.",
+      "bull_trend": "Express pro-gold macro thesis via cross-asset allocations.",
+      "calm_carry": "Prefer relative-value expressions.",
+      "crisis_dislocation": "Aggressively reallocate across gold, USD, and rates.",
+      "macro_transition": "Fastest tactical reallocators at narrative turning points.",
+      "range_compression": "Wait for cleaner macro asymmetry."
+    },
+    "market_makers": {
+      "bear_unwind": "Tighten risk, manage adverse flow imbalances.",
+      "bull_trend": "Provide liquidity but shorten quote horizons.",
+      "calm_carry": "Deepest liquidity and narrowest spreads.",
+      "crisis_dislocation": "Withdraw liquidity and widen spreads sharply.",
+      "macro_transition": "Adjust depth as information arrival accelerates.",
+      "range_compression": "Dominate microstructure with deepest continuous liquidity."
+    },
+    "retail_traders": {
+      "bear_unwind": "Late liquidation after visible breakdown.",
+      "bull_trend": "Join once momentum is visible.",
+      "calm_carry": "Attention fades without visible volatility.",
+      "crisis_dislocation": "Chase fear-driven moves late in the cycle.",
+      "macro_transition": "Mostly reactive, not initiators.",
+      "range_compression": "Fade visibility due to low excitement."
+    },
+    "safe_haven_capital_flows": {
+      "bear_unwind": "Retreat as stress premium falls.",
+      "bull_trend": "Less dominant unless trend is fear-driven.",
+      "calm_carry": "Remain dormant.",
+      "crisis_dislocation": "Most dominant participant during systemic stress.",
+      "macro_transition": "Rise when macro transition overlaps with systemic fear.",
+      "range_compression": "Inactive in absence of stress."
+    }
+  },
+  "strategic_dependency_network": {
+    "edges": [
+      {
+        "dependency_strength": 3.7953,
+        "dependency_type": "strategic_follow",
+        "source": "dealers",
+        "target": "market_makers"
+      },
+      {
+        "dependency_strength": 3.3287,
+        "dependency_type": "strategic_follow",
+        "source": "bullion_banks",
+        "target": "dealers"
+      },
+      {
+        "dependency_strength": 3.0762,
+        "dependency_type": "strategic_follow",
+        "source": "dealers",
+        "target": "macro_hedge_funds"
+      },
+      {
+        "dependency_strength": 3.015,
+        "dependency_type": "strategic_follow",
+        "source": "bullion_banks",
+        "target": "market_makers"
+      },
+      {
+        "dependency_strength": 2.9609,
+        "dependency_type": "strategic_follow",
+        "source": "dealers",
+        "target": "bullion_banks"
+      },
+      {
+        "dependency_strength": 2.8413,
+        "dependency_type": "strategic_follow",
+        "source": "bullion_banks",
+        "target": "commercial_hedgers"
+      },
+      {
+        "dependency_strength": 2.8115,
+        "dependency_type": "strategic_follow",
+        "source": "dealers",
+        "target": "safe_haven_capital_flows"
+      },
+      {
+        "dependency_strength": 2.785,
+        "dependency_type": "strategic_follow",
+        "source": "bullion_banks",
+        "target": "etf_investors"
+      },
+      {
+        "dependency_strength": 2.7219,
+        "dependency_type": "strategic_follow",
+        "source": "bullion_banks",
+        "target": "ctas"
+      },
+      {
+        "dependency_strength": 2.6401,
+        "dependency_type": "strategic_follow",
+        "source": "dealers",
+        "target": "retail_traders"
+      },
+      {
+        "dependency_strength": 2.5958,
+        "dependency_type": "strategic_follow",
+        "source": "dealers",
+        "target": "etf_investors"
+      },
+      {
+        "dependency_strength": 2.5736,
+        "dependency_type": "strategic_follow",
+        "source": "bullion_banks",
+        "target": "macro_hedge_funds"
+      },
+      {
+        "dependency_strength": 2.5452,
+        "dependency_type": "strategic_follow",
+        "source": "dealers",
+        "target": "commercial_hedgers"
+      },
+      {
+        "dependency_strength": 2.5369,
+        "dependency_type": "strategic_follow",
+        "source": "dealers",
+        "target": "ctas"
+      },
+      {
+        "dependency_strength": 2.5195,
+        "dependency_type": "strategic_follow",
+        "source": "dealers",
+        "target": "central_banks"
+      },
+      {
+        "dependency_strength": 2.5134,
+        "dependency_type": "strategic_follow",
+        "source": "bullion_banks",
+        "target": "retail_traders"
+      },
+      {
+        "dependency_strength": 2.3437,
+        "dependency_type": "strategic_follow",
+        "source": "macro_hedge_funds",
+        "target": "central_banks"
+      },
+      {
+        "dependency_strength": 2.2946,
+        "dependency_type": "strategic_follow",
+        "source": "bullion_banks",
+        "target": "safe_haven_capital_flows"
+      },
+      {
+        "dependency_strength": 2.2524,
+        "dependency_type": "strategic_follow",
+        "source": "central_banks",
+        "target": "macro_hedge_funds"
+      },
+      {
+        "dependency_strength": 2.2137,
+        "dependency_type": "strategic_follow",
+        "source": "safe_haven_capital_flows",
+        "target": "etf_investors"
+      },
+      {
+        "dependency_strength": 2.0658,
+        "dependency_type": "strategic_follow",
+        "source": "safe_haven_capital_flows",
+        "target": "macro_hedge_funds"
+      },
+      {
+        "dependency_strength": 2.0428,
+        "dependency_type": "strategic_follow",
+        "source": "bullion_banks",
+        "target": "central_banks"
+      },
+      {
+        "dependency_strength": 2.0027,
+        "dependency_type": "strategic_follow",
+        "source": "safe_haven_capital_flows",
+        "target": "central_banks"
+      },
+      {
+        "dependency_strength": 1.8583,
+        "dependency_type": "strategic_follow",
+        "source": "safe_haven_capital_flows",
+        "target": "market_makers"
+      },
+      {
+        "dependency_strength": 1.8011,
+        "dependency_type": "strategic_follow",
+        "source": "macro_hedge_funds",
+        "target": "safe_haven_capital_flows"
+      },
+      {
+        "dependency_strength": 1.7271,
+        "dependency_type": "strategic_follow",
+        "source": "market_makers",
+        "target": "retail_traders"
+      },
+      {
+        "dependency_strength": 1.6917,
+        "dependency_type": "strategic_follow",
+        "source": "safe_haven_capital_flows",
+        "target": "retail_traders"
+      },
+      {
+        "dependency_strength": 1.6467,
+        "dependency_type": "strategic_follow",
+        "source": "safe_haven_capital_flows",
+        "target": "dealers"
+      },
+      {
+        "dependency_strength": 1.6456,
+        "dependency_type": "strategic_follow",
+        "source": "macro_hedge_funds",
+        "target": "market_makers"
+      },
+      {
+        "dependency_strength": 1.6167,
+        "dependency_type": "strategic_follow",
+        "source": "market_makers",
+        "target": "etf_investors"
+      },
+      {
+        "dependency_strength": 1.6049,
+        "dependency_type": "strategic_follow",
+        "source": "ctas",
+        "target": "etf_investors"
+      },
+      {
+        "dependency_strength": 1.5977,
+        "dependency_type": "strategic_follow",
+        "source": "macro_hedge_funds",
+        "target": "ctas"
+      },
+      {
+        "dependency_strength": 1.5852,
+        "dependency_type": "strategic_follow",
+        "source": "macro_hedge_funds",
+        "target": "dealers"
+      },
+      {
+        "dependency_strength": 1.5761,
+        "dependency_type": "strategic_follow",
+        "source": "ctas",
+        "target": "commercial_hedgers"
+      },
+      {
+        "dependency_strength": 1.5361,
+        "dependency_type": "strategic_follow",
+        "source": "etf_investors",
+        "target": "market_makers"
+      },
+      {
+        "dependency_strength": 1.5326,
+        "dependency_type": "strategic_follow",
+        "source": "etf_investors",
+        "target": "retail_traders"
+      },
+      {
+        "dependency_strength": 1.4822,
+        "dependency_type": "strategic_follow",
+        "source": "etf_investors",
+        "target": "commercial_hedgers"
+      },
+      {
+        "dependency_strength": 1.4518,
+        "dependency_type": "strategic_follow",
+        "source": "etf_investors",
+        "target": "ctas"
+      },
+      {
+        "dependency_strength": 1.4511,
+        "dependency_type": "strategic_follow",
+        "source": "macro_hedge_funds",
+        "target": "etf_investors"
+      },
+      {
+        "dependency_strength": 1.4451,
+        "dependency_type": "strategic_follow",
+        "source": "market_makers",
+        "target": "safe_haven_capital_flows"
+      },
+      {
+        "dependency_strength": 1.4163,
+        "dependency_type": "strategic_follow",
+        "source": "ctas",
+        "target": "market_makers"
+      },
+      {
+        "dependency_strength": 1.3962,
+        "dependency_type": "strategic_follow",
+        "source": "safe_haven_capital_flows",
+        "target": "commercial_hedgers"
+      },
+      {
+        "dependency_strength": 1.3818,
+        "dependency_type": "strategic_follow",
+        "source": "ctas",
+        "target": "retail_traders"
+      },
+      {
+        "dependency_strength": 1.3581,
+        "dependency_type": "strategic_follow",
+        "source": "commercial_hedgers",
+        "target": "bullion_banks"
+      },
+      {
+        "dependency_strength": 1.3569,
+        "dependency_type": "strategic_follow",
+        "source": "market_makers",
+        "target": "ctas"
+      },
+      {
+        "dependency_strength": 1.3427,
+        "dependency_type": "strategic_follow",
+        "source": "market_makers",
+        "target": "commercial_hedgers"
+      },
+      {
+        "dependency_strength": 1.3372,
+        "dependency_type": "strategic_follow",
+        "source": "central_banks",
+        "target": "safe_haven_capital_flows"
+      },
+      {
+        "dependency_strength": 1.3354,
+        "dependency_type": "strategic_follow",
+        "source": "market_makers",
+        "target": "bullion_banks"
+      },
+      {
+        "dependency_strength": 1.3039,
+        "dependency_type": "strategic_follow",
+        "source": "market_makers",
+        "target": "dealers"
+      },
+      {
+        "dependency_strength": 1.3032,
+        "dependency_type": "strategic_follow",
+        "source": "market_makers",
+        "target": "macro_hedge_funds"
+      },
+      {
+        "dependency_strength": 1.2998,
+        "dependency_type": "strategic_follow",
+        "source": "safe_haven_capital_flows",
+        "target": "bullion_banks"
+      },
+      {
+        "dependency_strength": 1.299,
+        "dependency_type": "strategic_follow",
+        "source": "safe_haven_capital_flows",
+        "target": "ctas"
+      },
+      {
+        "dependency_strength": 1.2962,
+        "dependency_type": "strategic_follow",
+        "source": "macro_hedge_funds",
+        "target": "retail_traders"
+      },
+      {
+        "dependency_strength": 1.2901,
+        "dependency_type": "strategic_follow",
+        "source": "macro_hedge_funds",
+        "target": "commercial_hedgers"
+      },
+      {
+        "dependency_strength": 1.283,
+        "dependency_type": "strategic_follow",
+        "source": "macro_hedge_funds",
+        "target": "bullion_banks"
+      },
+      {
+        "dependency_strength": 1.2796,
+        "dependency_type": "strategic_follow",
+        "source": "ctas",
+        "target": "bullion_banks"
+      },
+      {
+        "dependency_strength": 1.1632,
+        "dependency_type": "strategic_follow",
+        "source": "etf_investors",
+        "target": "bullion_banks"
+      },
+      {
+        "dependency_strength": 1.16,
+        "dependency_type": "strategic_follow",
+        "source": "retail_traders",
+        "target": "etf_investors"
+      },
+      {
+        "dependency_strength": 1.1387,
+        "dependency_type": "strategic_follow",
+        "source": "commercial_hedgers",
+        "target": "etf_investors"
+      },
+      {
+        "dependency_strength": 1.1387,
+        "dependency_type": "strategic_follow",
+        "source": "retail_traders",
+        "target": "market_makers"
+      },
+      {
+        "dependency_strength": 1.0899,
+        "dependency_type": "strategic_follow",
+        "source": "commercial_hedgers",
+        "target": "ctas"
+      },
+      {
+        "dependency_strength": 1.0867,
+        "dependency_type": "strategic_follow",
+        "source": "etf_investors",
+        "target": "safe_haven_capital_flows"
+      },
+      {
+        "dependency_strength": 1.0284,
+        "dependency_type": "strategic_follow",
+        "source": "market_makers",
+        "target": "central_banks"
+      },
+      {
+        "dependency_strength": 0.9545,
+        "dependency_type": "strategic_follow",
+        "source": "ctas",
+        "target": "central_banks"
+      },
+      {
+        "dependency_strength": 0.9361,
+        "dependency_type": "strategic_follow",
+        "source": "ctas",
+        "target": "dealers"
+      },
+      {
+        "dependency_strength": 0.902,
+        "dependency_type": "strategic_follow",
+        "source": "ctas",
+        "target": "macro_hedge_funds"
+      },
+      {
+        "dependency_strength": 0.8815,
+        "dependency_type": "strategic_follow",
+        "source": "commercial_hedgers",
+        "target": "retail_traders"
+      },
+      {
+        "dependency_strength": 0.8659,
+        "dependency_type": "strategic_follow",
+        "source": "etf_investors",
+        "target": "central_banks"
+      },
+      {
+        "dependency_strength": 0.8659,
+        "dependency_type": "strategic_follow",
+        "source": "retail_traders",
+        "target": "ctas"
+      },
+      {
+        "dependency_strength": 0.8534,
+        "dependency_type": "strategic_follow",
+        "source": "commercial_hedgers",
+        "target": "market_makers"
+      },
+      {
+        "dependency_strength": 0.8517,
+        "dependency_type": "strategic_follow",
+        "source": "retail_traders",
+        "target": "commercial_hedgers"
+      },
+      {
+        "dependency_strength": 0.8224,
+        "dependency_type": "strategic_follow",
+        "source": "commercial_hedgers",
+        "target": "dealers"
+      },
+      {
+        "dependency_strength": 0.8199,
+        "dependency_type": "strategic_follow",
+        "source": "etf_investors",
+        "target": "dealers"
+      },
+      {
+        "dependency_strength": 0.8185,
+        "dependency_type": "strategic_follow",
+        "source": "ctas",
+        "target": "safe_haven_capital_flows"
+      },
+      {
+        "dependency_strength": 0.7995,
+        "dependency_type": "strategic_follow",
+        "source": "etf_investors",
+        "target": "macro_hedge_funds"
+      },
+      {
+        "dependency_strength": 0.6924,
+        "dependency_type": "strategic_follow",
+        "source": "retail_traders",
+        "target": "safe_haven_capital_flows"
+      },
+      {
+        "dependency_strength": 0.5876,
+        "dependency_type": "strategic_follow",
+        "source": "commercial_hedgers",
+        "target": "central_banks"
+      },
+      {
+        "dependency_strength": 0.5653,
+        "dependency_type": "strategic_follow",
+        "source": "retail_traders",
+        "target": "central_banks"
+      },
+      {
+        "dependency_strength": 0.5552,
+        "dependency_type": "strategic_follow",
+        "source": "central_banks",
+        "target": "retail_traders"
+      },
+      {
+        "dependency_strength": 0.555,
+        "dependency_type": "strategic_follow",
+        "source": "retail_traders",
+        "target": "bullion_banks"
+      },
+      {
+        "dependency_strength": 0.5491,
+        "dependency_type": "strategic_follow",
+        "source": "central_banks",
+        "target": "commercial_hedgers"
+      },
+      {
+        "dependency_strength": 0.5279,
+        "dependency_type": "strategic_follow",
+        "source": "central_banks",
+        "target": "bullion_banks"
+      },
+      {
+        "dependency_strength": 0.5234,
+        "dependency_type": "strategic_follow",
+        "source": "retail_traders",
+        "target": "dealers"
+      },
+      {
+        "dependency_strength": 0.5103,
+        "dependency_type": "strategic_follow",
+        "source": "central_banks",
+        "target": "dealers"
+      },
+      {
+        "dependency_strength": 0.4864,
+        "dependency_type": "strategic_follow",
+        "source": "central_banks",
+        "target": "market_makers"
+      },
+      {
+        "dependency_strength": 0.4862,
+        "dependency_type": "strategic_follow",
+        "source": "central_banks",
+        "target": "etf_investors"
+      },
+      {
+        "dependency_strength": 0.4776,
+        "dependency_type": "strategic_follow",
+        "source": "commercial_hedgers",
+        "target": "macro_hedge_funds"
+      },
+      {
+        "dependency_strength": 0.452,
+        "dependency_type": "strategic_follow",
+        "source": "central_banks",
+        "target": "ctas"
+      },
+      {
+        "dependency_strength": 0.4518,
+        "dependency_type": "strategic_follow",
+        "source": "retail_traders",
+        "target": "macro_hedge_funds"
+      },
+      {
+        "dependency_strength": 0.4206,
+        "dependency_type": "strategic_follow",
+        "source": "commercial_hedgers",
+        "target": "safe_haven_capital_flows"
+      }
+    ],
+    "matrix": {
+      "bullion_banks": {
+        "bullion_banks": 0.0,
+        "central_banks": 2.0428,
+        "commercial_hedgers": 2.8413,
+        "ctas": 2.7219,
+        "dealers": 3.3287,
+        "etf_investors": 2.785,
+        "macro_hedge_funds": 2.5736,
+        "market_makers": 3.015,
+        "retail_traders": 2.5134,
+        "safe_haven_capital_flows": 2.2946
+      },
+      "central_banks": {
+        "bullion_banks": 0.5279,
+        "central_banks": 0.0,
+        "commercial_hedgers": 0.5491,
+        "ctas": 0.452,
+        "dealers": 0.5103,
+        "etf_investors": 0.4862,
+        "macro_hedge_funds": 2.2524,
+        "market_makers": 0.4864,
+        "retail_traders": 0.5552,
+        "safe_haven_capital_flows": 1.3372
+      },
+      "commercial_hedgers": {
+        "bullion_banks": 1.3581,
+        "central_banks": 0.5876,
+        "commercial_hedgers": 0.0,
+        "ctas": 1.0899,
+        "dealers": 0.8224,
+        "etf_investors": 1.1387,
+        "macro_hedge_funds": 0.4776,
+        "market_makers": 0.8534,
+        "retail_traders": 0.8815,
+        "safe_haven_capital_flows": 0.4206
+      },
+      "ctas": {
+        "bullion_banks": 1.2796,
+        "central_banks": 0.9545,
+        "commercial_hedgers": 1.5761,
+        "ctas": 0.0,
+        "dealers": 0.9361,
+        "etf_investors": 1.6049,
+        "macro_hedge_funds": 0.902,
+        "market_makers": 1.4163,
+        "retail_traders": 1.3818,
+        "safe_haven_capital_flows": 0.8185
+      },
+      "dealers": {
+        "bullion_banks": 2.9609,
+        "central_banks": 2.5195,
+        "commercial_hedgers": 2.5452,
+        "ctas": 2.5369,
+        "dealers": 0.0,
+        "etf_investors": 2.5958,
+        "macro_hedge_funds": 3.0762,
+        "market_makers": 3.7953,
+        "retail_traders": 2.6401,
+        "safe_haven_capital_flows": 2.8115
+      },
+      "etf_investors": {
+        "bullion_banks": 1.1632,
+        "central_banks": 0.8659,
+        "commercial_hedgers": 1.4822,
+        "ctas": 1.4518,
+        "dealers": 0.8199,
+        "etf_investors": 0.0,
+        "macro_hedge_funds": 0.7995,
+        "market_makers": 1.5361,
+        "retail_traders": 1.5326,
+        "safe_haven_capital_flows": 1.0867
+      },
+      "macro_hedge_funds": {
+        "bullion_banks": 1.283,
+        "central_banks": 2.3437,
+        "commercial_hedgers": 1.2901,
+        "ctas": 1.5977,
+        "dealers": 1.5852,
+        "etf_investors": 1.4511,
+        "macro_hedge_funds": 0.0,
+        "market_makers": 1.6456,
+        "retail_traders": 1.2962,
+        "safe_haven_capital_flows": 1.8011
+      },
+      "market_makers": {
+        "bullion_banks": 1.3354,
+        "central_banks": 1.0284,
+        "commercial_hedgers": 1.3427,
+        "ctas": 1.3569,
+        "dealers": 1.3039,
+        "etf_investors": 1.6167,
+        "macro_hedge_funds": 1.3032,
+        "market_makers": 0.0,
+        "retail_traders": 1.7271,
+        "safe_haven_capital_flows": 1.4451
+      },
+      "retail_traders": {
+        "bullion_banks": 0.555,
+        "central_banks": 0.5653,
+        "commercial_hedgers": 0.8517,
+        "ctas": 0.8659,
+        "dealers": 0.5234,
+        "etf_investors": 1.16,
+        "macro_hedge_funds": 0.4518,
+        "market_makers": 1.1387,
+        "retail_traders": 0.0,
+        "safe_haven_capital_flows": 0.6924
+      },
+      "safe_haven_capital_flows": {
+        "bullion_banks": 1.2998,
+        "central_banks": 2.0027,
+        "commercial_hedgers": 1.3962,
+        "ctas": 1.299,
+        "dealers": 1.6467,
+        "etf_investors": 2.2137,
+        "macro_hedge_funds": 2.0658,
+        "market_makers": 1.8583,
+        "retail_traders": 1.6917,
+        "safe_haven_capital_flows": 0.0
+      }
+    }
+  },
+  "title": "Institutional Decision Ecology"
+}

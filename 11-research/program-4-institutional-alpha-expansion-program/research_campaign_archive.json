@@ -1,0 +1,1069 @@
+[
+  {
+    "campaign_id": "P4-CAMPAIGN-0001",
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "engineering_cost": 4,
+      "expected_information_gain": 0.083,
+      "objective": "Real-yield shock discovery and validation",
+      "question": "Can real-yield overshoots explain independent gold reversion outside safe-haven episodes?",
+      "research_cost": 8,
+      "selection_reason": "High observation completeness and high scientific independence with immediate macro dataset availability."
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity_score": true,
+        "concept_drift_risk": true,
+        "cross_regime_robustness": true,
+        "economic_rationale_strength": true,
+        "evidence_completeness": false,
+        "explainability": true,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": false,
+        "scientific_independence_score": true,
+        "scientific_validity": false
+      },
+      "decision": "RETURN_FOR_REPLICATION"
+    },
+    "confidence_updates": {
+      "delta": 0.06,
+      "history": [
+        0.61,
+        0.67
+      ]
+    },
+    "diversification_assessment": {
+      "correlation_to_existing_approved": 0.0,
+      "scientific_independence_score": 0.77,
+      "shared_datasets": [],
+      "shared_failure_modes": []
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0001-EVID-01",
+        "summary": "discovery_validation completed for real_yield_dislocation_reversion under REAL_RATE_SHOCK regime.",
+        "weight": 0.0747
+      },
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0001-EVID-02",
+        "summary": "macro_counterfactual completed for real_yield_dislocation_reversion under REAL_RATE_SHOCK regime.",
+        "weight": 0.0693
+      },
+      {
+        "category": "QUALIFYING",
+        "evidence_id": "P4-CAMPAIGN-0001-EVID-03",
+        "summary": "cross_regime_stress_test completed for real_yield_dislocation_reversion under REAL_RATE_SHOCK regime.",
+        "weight": 0.0639
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0457,
+        "expected_information_gain": 0.083,
+        "experiment_id": "P4-CAMPAIGN-0001-EXP-01",
+        "experiment_type": "discovery_validation",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0424,
+        "expected_information_gain": 0.077,
+        "experiment_id": "P4-CAMPAIGN-0001-EXP-02",
+        "experiment_type": "macro_counterfactual",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0391,
+        "expected_information_gain": 0.071,
+        "experiment_id": "P4-CAMPAIGN-0001-EXP-03",
+        "experiment_type": "cross_regime_stress_test",
+        "status": "COMPLETED"
+      }
+    ],
+    "future_work": "Continue autonomous expansion.",
+    "hypotheses": [
+      "real_yield_dislocation_reversion is an independent institutional alpha in REAL_YIELD_DISLOCATIONS."
+    ],
+    "mechanism": "real_yield_dislocation_reversion",
+    "replication_results": {
+      "cross_regime_after": 0.66,
+      "replication_after": 0.64,
+      "replication_before": 0.58
+    },
+    "research_questions": [
+      "Can real-yield overshoots explain independent gold reversion outside safe-haven episodes?",
+      "Can real_yield_dislocation_reversion remain distinct from existing approved alphas after replication?"
+    ],
+    "results": {
+      "confidence_after": 0.67,
+      "confidence_before": 0.61,
+      "independence_after": 0.77,
+      "independence_before": 0.77,
+      "state_after": "RESEARCH",
+      "state_before": "RESEARCH"
+    }
+  },
+  {
+    "campaign_id": "P4-CAMPAIGN-0002",
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "engineering_cost": 3,
+      "expected_information_gain": 0.071,
+      "objective": "Real-yield replication and promotion review",
+      "question": "Does the mechanism replicate independently across pre- and post-inflation shock regimes?",
+      "research_cost": 7,
+      "selection_reason": "Strong first-pass evidence warrants immediate replication and committee review."
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity_score": true,
+        "concept_drift_risk": true,
+        "cross_regime_robustness": true,
+        "economic_rationale_strength": true,
+        "evidence_completeness": true,
+        "explainability": true,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": true,
+        "scientific_independence_score": true,
+        "scientific_validity": true
+      },
+      "decision": "PROMOTE_TO_APPROVED_ALPHA"
+    },
+    "confidence_updates": {
+      "delta": 0.05,
+      "history": [
+        0.61,
+        0.67,
+        0.72
+      ]
+    },
+    "diversification_assessment": {
+      "correlation_to_existing_approved": 0.0,
+      "scientific_independence_score": 0.77,
+      "shared_datasets": [],
+      "shared_failure_modes": []
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0002-EVID-01",
+        "summary": "replication_experiment completed for real_yield_dislocation_reversion under REAL_RATE_SHOCK regime.",
+        "weight": 0.0639
+      },
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0002-EVID-02",
+        "summary": "regime_partition_validation completed for real_yield_dislocation_reversion under REAL_RATE_SHOCK regime.",
+        "weight": 0.0585
+      },
+      {
+        "category": "QUALIFYING",
+        "evidence_id": "P4-CAMPAIGN-0002-EVID-03",
+        "summary": "promotion_committee_review completed for real_yield_dislocation_reversion under REAL_RATE_SHOCK regime.",
+        "weight": 0.0531
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0391,
+        "expected_information_gain": 0.071,
+        "experiment_id": "P4-CAMPAIGN-0002-EXP-01",
+        "experiment_type": "replication_experiment",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0357,
+        "expected_information_gain": 0.065,
+        "experiment_id": "P4-CAMPAIGN-0002-EXP-02",
+        "experiment_type": "regime_partition_validation",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0324,
+        "expected_information_gain": 0.059,
+        "experiment_id": "P4-CAMPAIGN-0002-EXP-03",
+        "experiment_type": "promotion_committee_review",
+        "status": "COMPLETED"
+      }
+    ],
+    "future_work": "Continue autonomous expansion.",
+    "hypotheses": [
+      "real_yield_dislocation_reversion is an independent institutional alpha in REAL_YIELD_DISLOCATIONS."
+    ],
+    "mechanism": "real_yield_dislocation_reversion",
+    "replication_results": {
+      "cross_regime_after": 0.7,
+      "replication_after": 0.72,
+      "replication_before": 0.64
+    },
+    "research_questions": [
+      "Does the mechanism replicate independently across pre- and post-inflation shock regimes?",
+      "Can real_yield_dislocation_reversion remain distinct from existing approved alphas after replication?"
+    ],
+    "results": {
+      "confidence_after": 0.72,
+      "confidence_before": 0.67,
+      "independence_after": 0.77,
+      "independence_before": 0.77,
+      "state_after": "APPROVED_ALPHA",
+      "state_before": "RESEARCH"
+    }
+  },
+  {
+    "campaign_id": "P4-CAMPAIGN-0003",
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "engineering_cost": 5,
+      "expected_information_gain": 0.079,
+      "objective": "Policy repricing hypothesis formation and event study",
+      "question": "Can policy-surprise repricing be separated from safe-haven and real-yield channels?",
+      "research_cost": 8,
+      "selection_reason": "Strong independence and event-driven observability produce attractive information gain."
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity_score": true,
+        "concept_drift_risk": true,
+        "cross_regime_robustness": true,
+        "economic_rationale_strength": true,
+        "evidence_completeness": false,
+        "explainability": true,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": false,
+        "scientific_independence_score": true,
+        "scientific_validity": false
+      },
+      "decision": "RETURN_FOR_REPLICATION"
+    },
+    "confidence_updates": {
+      "delta": 0.06,
+      "history": [
+        0.6,
+        0.66
+      ]
+    },
+    "diversification_assessment": {
+      "correlation_to_existing_approved": 0.06,
+      "scientific_independence_score": 0.79,
+      "shared_datasets": [],
+      "shared_failure_modes": []
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0003-EVID-01",
+        "summary": "event_study_validation completed for policy_expectation_repricing under CENTRAL_BANK_REPRICING regime.",
+        "weight": 0.0711
+      },
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0003-EVID-02",
+        "summary": "counterfactual_rate_path completed for policy_expectation_repricing under CENTRAL_BANK_REPRICING regime.",
+        "weight": 0.0657
+      },
+      {
+        "category": "QUALIFYING",
+        "evidence_id": "P4-CAMPAIGN-0003-EVID-03",
+        "summary": "explainability_audit completed for policy_expectation_repricing under CENTRAL_BANK_REPRICING regime.",
+        "weight": 0.0603
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0435,
+        "expected_information_gain": 0.079,
+        "experiment_id": "P4-CAMPAIGN-0003-EXP-01",
+        "experiment_type": "event_study_validation",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0401,
+        "expected_information_gain": 0.073,
+        "experiment_id": "P4-CAMPAIGN-0003-EXP-02",
+        "experiment_type": "counterfactual_rate_path",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0369,
+        "expected_information_gain": 0.067,
+        "experiment_id": "P4-CAMPAIGN-0003-EXP-03",
+        "experiment_type": "explainability_audit",
+        "status": "COMPLETED"
+      }
+    ],
+    "future_work": "Continue autonomous expansion.",
+    "hypotheses": [
+      "policy_expectation_repricing is an independent institutional alpha in POLICY_EXPECTATION_REPRICING."
+    ],
+    "mechanism": "policy_expectation_repricing",
+    "replication_results": {
+      "cross_regime_after": 0.65,
+      "replication_after": 0.62,
+      "replication_before": 0.57
+    },
+    "research_questions": [
+      "Can policy-surprise repricing be separated from safe-haven and real-yield channels?",
+      "Can policy_expectation_repricing remain distinct from existing approved alphas after replication?"
+    ],
+    "results": {
+      "confidence_after": 0.66,
+      "confidence_before": 0.6,
+      "independence_after": 0.79,
+      "independence_before": 0.79,
+      "state_after": "RESEARCH",
+      "state_before": "RESEARCH"
+    }
+  },
+  {
+    "campaign_id": "P4-CAMPAIGN-0004",
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "engineering_cost": 3,
+      "expected_information_gain": 0.068,
+      "objective": "Policy repricing replication and committee review",
+      "question": "Does policy repricing remain independent across tightening, pause, and easing regimes?",
+      "research_cost": 7,
+      "selection_reason": "Second-pass evidence supports rapid replication and promotion review."
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity_score": true,
+        "concept_drift_risk": true,
+        "cross_regime_robustness": true,
+        "economic_rationale_strength": true,
+        "evidence_completeness": true,
+        "explainability": true,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": true,
+        "scientific_independence_score": true,
+        "scientific_validity": true
+      },
+      "decision": "PROMOTE_TO_APPROVED_ALPHA"
+    },
+    "confidence_updates": {
+      "delta": 0.05,
+      "history": [
+        0.6,
+        0.66,
+        0.71
+      ]
+    },
+    "diversification_assessment": {
+      "correlation_to_existing_approved": 0.06,
+      "scientific_independence_score": 0.79,
+      "shared_datasets": [],
+      "shared_failure_modes": []
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0004-EVID-01",
+        "summary": "replication_experiment completed for policy_expectation_repricing under CENTRAL_BANK_REPRICING regime.",
+        "weight": 0.0612
+      },
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0004-EVID-02",
+        "summary": "regime_specific_study completed for policy_expectation_repricing under CENTRAL_BANK_REPRICING regime.",
+        "weight": 0.0558
+      },
+      {
+        "category": "QUALIFYING",
+        "evidence_id": "P4-CAMPAIGN-0004-EVID-03",
+        "summary": "promotion_committee_review completed for policy_expectation_repricing under CENTRAL_BANK_REPRICING regime.",
+        "weight": 0.0504
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0374,
+        "expected_information_gain": 0.068,
+        "experiment_id": "P4-CAMPAIGN-0004-EXP-01",
+        "experiment_type": "replication_experiment",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0341,
+        "expected_information_gain": 0.062,
+        "experiment_id": "P4-CAMPAIGN-0004-EXP-02",
+        "experiment_type": "regime_specific_study",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0308,
+        "expected_information_gain": 0.056,
+        "experiment_id": "P4-CAMPAIGN-0004-EXP-03",
+        "experiment_type": "promotion_committee_review",
+        "status": "COMPLETED"
+      }
+    ],
+    "future_work": "Continue autonomous expansion.",
+    "hypotheses": [
+      "policy_expectation_repricing is an independent institutional alpha in POLICY_EXPECTATION_REPRICING."
+    ],
+    "mechanism": "policy_expectation_repricing",
+    "replication_results": {
+      "cross_regime_after": 0.7,
+      "replication_after": 0.71,
+      "replication_before": 0.62
+    },
+    "research_questions": [
+      "Does policy repricing remain independent across tightening, pause, and easing regimes?",
+      "Can policy_expectation_repricing remain distinct from existing approved alphas after replication?"
+    ],
+    "results": {
+      "confidence_after": 0.71,
+      "confidence_before": 0.66,
+      "independence_after": 0.79,
+      "independence_before": 0.79,
+      "state_after": "APPROVED_ALPHA",
+      "state_before": "RESEARCH"
+    }
+  },
+  {
+    "campaign_id": "P4-CAMPAIGN-0005",
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "engineering_cost": 4,
+      "expected_information_gain": 0.077,
+      "objective": "ETF accumulation-distribution mechanism discovery",
+      "question": "Do ETF flow imbalances provide an independent gold-pressure mechanism distinct from safe-haven demand?",
+      "research_cost": 8,
+      "selection_reason": "Public ETF observability is strong and provides a distinct flow-based research lane."
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity_score": true,
+        "concept_drift_risk": true,
+        "cross_regime_robustness": true,
+        "economic_rationale_strength": true,
+        "evidence_completeness": false,
+        "explainability": true,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": false,
+        "scientific_independence_score": true,
+        "scientific_validity": false
+      },
+      "decision": "RETURN_FOR_REPLICATION"
+    },
+    "confidence_updates": {
+      "delta": 0.05,
+      "history": [
+        0.62,
+        0.67
+      ]
+    },
+    "diversification_assessment": {
+      "correlation_to_existing_approved": 0.1333,
+      "scientific_independence_score": 0.72,
+      "shared_datasets": [
+        "ETF-GLD",
+        "FRED-DXY"
+      ],
+      "shared_failure_modes": []
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0005-EVID-01",
+        "summary": "flow_validation completed for etf_flow_accumulation_pressure under FLOW_DOMINATED regime.",
+        "weight": 0.0693
+      },
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0005-EVID-02",
+        "summary": "cross_asset_dependency_check completed for etf_flow_accumulation_pressure under FLOW_DOMINATED regime.",
+        "weight": 0.0639
+      },
+      {
+        "category": "QUALIFYING",
+        "evidence_id": "P4-CAMPAIGN-0005-EVID-03",
+        "summary": "feature_ablation completed for etf_flow_accumulation_pressure under FLOW_DOMINATED regime.",
+        "weight": 0.0585
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0424,
+        "expected_information_gain": 0.077,
+        "experiment_id": "P4-CAMPAIGN-0005-EXP-01",
+        "experiment_type": "flow_validation",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0391,
+        "expected_information_gain": 0.071,
+        "experiment_id": "P4-CAMPAIGN-0005-EXP-02",
+        "experiment_type": "cross_asset_dependency_check",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0358,
+        "expected_information_gain": 0.065,
+        "experiment_id": "P4-CAMPAIGN-0005-EXP-03",
+        "experiment_type": "feature_ablation",
+        "status": "COMPLETED"
+      }
+    ],
+    "future_work": "Continue autonomous expansion.",
+    "hypotheses": [
+      "etf_flow_accumulation_pressure is an independent institutional alpha in ETF_ACCUMULATION_DISTRIBUTION."
+    ],
+    "mechanism": "etf_flow_accumulation_pressure",
+    "replication_results": {
+      "cross_regime_after": 0.65,
+      "replication_after": 0.63,
+      "replication_before": 0.58
+    },
+    "research_questions": [
+      "Do ETF flow imbalances provide an independent gold-pressure mechanism distinct from safe-haven demand?",
+      "Can etf_flow_accumulation_pressure remain distinct from existing approved alphas after replication?"
+    ],
+    "results": {
+      "confidence_after": 0.67,
+      "confidence_before": 0.62,
+      "independence_after": 0.72,
+      "independence_before": 0.72,
+      "state_after": "RESEARCH",
+      "state_before": "RESEARCH"
+    }
+  },
+  {
+    "campaign_id": "P4-CAMPAIGN-0006",
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "engineering_cost": 3,
+      "expected_information_gain": 0.067,
+      "objective": "ETF flow replication and promotion review",
+      "question": "Does ETF flow pressure persist across accumulation, liquidation, and range-bound environments?",
+      "research_cost": 7,
+      "selection_reason": "Independent evidence is sufficient for replication and final promotion screening."
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity_score": true,
+        "concept_drift_risk": true,
+        "cross_regime_robustness": true,
+        "economic_rationale_strength": true,
+        "evidence_completeness": true,
+        "explainability": true,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": true,
+        "scientific_independence_score": true,
+        "scientific_validity": true
+      },
+      "decision": "PROMOTE_TO_APPROVED_ALPHA"
+    },
+    "confidence_updates": {
+      "delta": 0.05,
+      "history": [
+        0.62,
+        0.67,
+        0.72
+      ]
+    },
+    "diversification_assessment": {
+      "correlation_to_existing_approved": 0.1333,
+      "scientific_independence_score": 0.72,
+      "shared_datasets": [
+        "ETF-GLD",
+        "FRED-DXY"
+      ],
+      "shared_failure_modes": []
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0006-EVID-01",
+        "summary": "replication_experiment completed for etf_flow_accumulation_pressure under FLOW_DOMINATED regime.",
+        "weight": 0.0603
+      },
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0006-EVID-02",
+        "summary": "regime_specific_study completed for etf_flow_accumulation_pressure under FLOW_DOMINATED regime.",
+        "weight": 0.0549
+      },
+      {
+        "category": "QUALIFYING",
+        "evidence_id": "P4-CAMPAIGN-0006-EVID-03",
+        "summary": "promotion_committee_review completed for etf_flow_accumulation_pressure under FLOW_DOMINATED regime.",
+        "weight": 0.0495
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0369,
+        "expected_information_gain": 0.067,
+        "experiment_id": "P4-CAMPAIGN-0006-EXP-01",
+        "experiment_type": "replication_experiment",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0336,
+        "expected_information_gain": 0.061,
+        "experiment_id": "P4-CAMPAIGN-0006-EXP-02",
+        "experiment_type": "regime_specific_study",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0303,
+        "expected_information_gain": 0.055,
+        "experiment_id": "P4-CAMPAIGN-0006-EXP-03",
+        "experiment_type": "promotion_committee_review",
+        "status": "COMPLETED"
+      }
+    ],
+    "future_work": "Continue autonomous expansion.",
+    "hypotheses": [
+      "etf_flow_accumulation_pressure is an independent institutional alpha in ETF_ACCUMULATION_DISTRIBUTION."
+    ],
+    "mechanism": "etf_flow_accumulation_pressure",
+    "replication_results": {
+      "cross_regime_after": 0.69,
+      "replication_after": 0.72,
+      "replication_before": 0.63
+    },
+    "research_questions": [
+      "Does ETF flow pressure persist across accumulation, liquidation, and range-bound environments?",
+      "Can etf_flow_accumulation_pressure remain distinct from existing approved alphas after replication?"
+    ],
+    "results": {
+      "confidence_after": 0.72,
+      "confidence_before": 0.67,
+      "independence_after": 0.72,
+      "independence_before": 0.72,
+      "state_after": "APPROVED_ALPHA",
+      "state_before": "RESEARCH"
+    }
+  },
+  {
+    "campaign_id": "P4-CAMPAIGN-0007",
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "engineering_cost": 4,
+      "expected_information_gain": 0.074,
+      "objective": "Intermarket divergence mechanism discovery",
+      "question": "Can gold-oil-industrial divergence identify an independent institutional alpha family?",
+      "research_cost": 8,
+      "selection_reason": "Distinct economic rationale with strong observability and low redundancy to existing approved alpha."
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity_score": true,
+        "concept_drift_risk": true,
+        "cross_regime_robustness": true,
+        "economic_rationale_strength": true,
+        "evidence_completeness": false,
+        "explainability": true,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": false,
+        "scientific_independence_score": true,
+        "scientific_validity": false
+      },
+      "decision": "RETURN_FOR_REPLICATION"
+    },
+    "confidence_updates": {
+      "delta": 0.05,
+      "history": [
+        0.61,
+        0.66
+      ]
+    },
+    "diversification_assessment": {
+      "correlation_to_existing_approved": 0.13,
+      "scientific_independence_score": 0.76,
+      "shared_datasets": [
+        "FRED-DXY"
+      ],
+      "shared_failure_modes": []
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0007-EVID-01",
+        "summary": "intermarket_validation completed for commodity_cross_curve_divergence under INTERMARKET_DIVERGENCE regime.",
+        "weight": 0.0666
+      },
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0007-EVID-02",
+        "summary": "macro_transition_study completed for commodity_cross_curve_divergence under INTERMARKET_DIVERGENCE regime.",
+        "weight": 0.0612
+      },
+      {
+        "category": "QUALIFYING",
+        "evidence_id": "P4-CAMPAIGN-0007-EVID-03",
+        "summary": "causal_experiment completed for commodity_cross_curve_divergence under INTERMARKET_DIVERGENCE regime.",
+        "weight": 0.0558
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0407,
+        "expected_information_gain": 0.074,
+        "experiment_id": "P4-CAMPAIGN-0007-EXP-01",
+        "experiment_type": "intermarket_validation",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0374,
+        "expected_information_gain": 0.068,
+        "experiment_id": "P4-CAMPAIGN-0007-EXP-02",
+        "experiment_type": "macro_transition_study",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0341,
+        "expected_information_gain": 0.062,
+        "experiment_id": "P4-CAMPAIGN-0007-EXP-03",
+        "experiment_type": "causal_experiment",
+        "status": "COMPLETED"
+      }
+    ],
+    "future_work": "Continue autonomous expansion.",
+    "hypotheses": [
+      "commodity_cross_curve_divergence is an independent institutional alpha in COMMODITY_INTERMARKET_RELATIONSHIPS."
+    ],
+    "mechanism": "commodity_cross_curve_divergence",
+    "replication_results": {
+      "cross_regime_after": 0.65,
+      "replication_after": 0.63,
+      "replication_before": 0.58
+    },
+    "research_questions": [
+      "Can gold-oil-industrial divergence identify an independent institutional alpha family?",
+      "Can commodity_cross_curve_divergence remain distinct from existing approved alphas after replication?"
+    ],
+    "results": {
+      "confidence_after": 0.66,
+      "confidence_before": 0.61,
+      "independence_after": 0.76,
+      "independence_before": 0.76,
+      "state_after": "RESEARCH",
+      "state_before": "RESEARCH"
+    }
+  },
+  {
+    "campaign_id": "P4-CAMPAIGN-0008",
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "engineering_cost": 3,
+      "expected_information_gain": 0.065,
+      "objective": "Intermarket divergence replication and promotion review",
+      "question": "Does the divergence mechanism survive replication across inflation, growth-scare, and liquidity-shock states?",
+      "research_cost": 7,
+      "selection_reason": "The candidate already clears independence and capacity screens, so replication is the remaining gate."
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity_score": true,
+        "concept_drift_risk": true,
+        "cross_regime_robustness": true,
+        "economic_rationale_strength": true,
+        "evidence_completeness": true,
+        "explainability": true,
+        "failure_severity": true,
+        "observation_completeness": true,
+        "replication_quality": true,
+        "scientific_independence_score": true,
+        "scientific_validity": true
+      },
+      "decision": "PROMOTE_TO_APPROVED_ALPHA"
+    },
+    "confidence_updates": {
+      "delta": 0.05,
+      "history": [
+        0.61,
+        0.66,
+        0.71
+      ]
+    },
+    "diversification_assessment": {
+      "correlation_to_existing_approved": 0.13,
+      "scientific_independence_score": 0.76,
+      "shared_datasets": [
+        "FRED-DXY"
+      ],
+      "shared_failure_modes": []
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0008-EVID-01",
+        "summary": "replication_experiment completed for commodity_cross_curve_divergence under INTERMARKET_DIVERGENCE regime.",
+        "weight": 0.0585
+      },
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0008-EVID-02",
+        "summary": "stress_test completed for commodity_cross_curve_divergence under INTERMARKET_DIVERGENCE regime.",
+        "weight": 0.0531
+      },
+      {
+        "category": "QUALIFYING",
+        "evidence_id": "P4-CAMPAIGN-0008-EVID-03",
+        "summary": "promotion_committee_review completed for commodity_cross_curve_divergence under INTERMARKET_DIVERGENCE regime.",
+        "weight": 0.0477
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0358,
+        "expected_information_gain": 0.065,
+        "experiment_id": "P4-CAMPAIGN-0008-EXP-01",
+        "experiment_type": "replication_experiment",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0325,
+        "expected_information_gain": 0.059,
+        "experiment_id": "P4-CAMPAIGN-0008-EXP-02",
+        "experiment_type": "stress_test",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0292,
+        "expected_information_gain": 0.053,
+        "experiment_id": "P4-CAMPAIGN-0008-EXP-03",
+        "experiment_type": "promotion_committee_review",
+        "status": "COMPLETED"
+      }
+    ],
+    "future_work": "Continue autonomous expansion.",
+    "hypotheses": [
+      "commodity_cross_curve_divergence is an independent institutional alpha in COMMODITY_INTERMARKET_RELATIONSHIPS."
+    ],
+    "mechanism": "commodity_cross_curve_divergence",
+    "replication_results": {
+      "cross_regime_after": 0.7,
+      "replication_after": 0.72,
+      "replication_before": 0.63
+    },
+    "research_questions": [
+      "Does the divergence mechanism survive replication across inflation, growth-scare, and liquidity-shock states?",
+      "Can commodity_cross_curve_divergence remain distinct from existing approved alphas after replication?"
+    ],
+    "results": {
+      "confidence_after": 0.71,
+      "confidence_before": 0.66,
+      "independence_after": 0.76,
+      "independence_before": 0.76,
+      "state_after": "APPROVED_ALPHA",
+      "state_before": "RESEARCH"
+    }
+  },
+  {
+    "campaign_id": "P4-CAMPAIGN-0009",
+    "campaign_plan": {
+      "dataset_cost": 7,
+      "engineering_cost": 4,
+      "expected_information_gain": 0.059,
+      "objective": "Reserve reallocation observation-gap campaign",
+      "question": "Are currently observable sovereign reserve disclosures sufficient to validate a reserve-reallocation mechanism?",
+      "research_cost": 6,
+      "selection_reason": "High strategic value but uncertain observation sufficiency requires early gating."
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity_score": true,
+        "concept_drift_risk": true,
+        "cross_regime_robustness": false,
+        "economic_rationale_strength": true,
+        "evidence_completeness": false,
+        "explainability": true,
+        "failure_severity": false,
+        "observation_completeness": false,
+        "replication_quality": false,
+        "scientific_independence_score": true,
+        "scientific_validity": false
+      },
+      "decision": "RETURN_FOR_DATA_ACQUISITION"
+    },
+    "confidence_updates": {
+      "delta": 0.0,
+      "history": [
+        0.56,
+        0.55
+      ]
+    },
+    "diversification_assessment": {
+      "correlation_to_existing_approved": 0.048,
+      "scientific_independence_score": 0.85,
+      "shared_datasets": [
+        "FRED-DXY"
+      ],
+      "shared_failure_modes": []
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0009-EVID-01",
+        "summary": "observation_gap_experiment completed for central_bank_reserve_reallocation under SOVEREIGN_REALLOCATION regime.",
+        "weight": 0.0531
+      },
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0009-EVID-02",
+        "summary": "dataset_sufficiency_audit completed for central_bank_reserve_reallocation under SOVEREIGN_REALLOCATION regime.",
+        "weight": 0.0477
+      },
+      {
+        "category": "QUALIFYING",
+        "evidence_id": "P4-CAMPAIGN-0009-EVID-03",
+        "summary": "data_expansion_request_review completed for central_bank_reserve_reallocation under SOVEREIGN_REALLOCATION regime.",
+        "weight": 0.0423
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0324,
+        "expected_information_gain": 0.059,
+        "experiment_id": "P4-CAMPAIGN-0009-EXP-01",
+        "experiment_type": "observation_gap_experiment",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0292,
+        "expected_information_gain": 0.053,
+        "experiment_id": "P4-CAMPAIGN-0009-EXP-02",
+        "experiment_type": "dataset_sufficiency_audit",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0259,
+        "expected_information_gain": 0.047,
+        "experiment_id": "P4-CAMPAIGN-0009-EXP-03",
+        "experiment_type": "data_expansion_request_review",
+        "status": "COMPLETED"
+      }
+    ],
+    "future_work": "Official reserve disclosures are too delayed and sparse to support governed replication with current approved observations.",
+    "hypotheses": [
+      "central_bank_reserve_reallocation is an independent institutional alpha in RESERVE_REALLOCATION."
+    ],
+    "mechanism": "central_bank_reserve_reallocation",
+    "replication_results": {
+      "cross_regime_after": 0.55,
+      "replication_after": 0.0,
+      "replication_before": 0.0
+    },
+    "research_questions": [
+      "Are currently observable sovereign reserve disclosures sufficient to validate a reserve-reallocation mechanism?",
+      "Can central_bank_reserve_reallocation remain distinct from existing approved alphas after replication?"
+    ],
+    "results": {
+      "confidence_after": 0.55,
+      "confidence_before": 0.56,
+      "independence_after": 0.85,
+      "independence_before": 0.85,
+      "state_after": "BLOCKED_BY_DATA",
+      "state_before": "RESEARCH"
+    }
+  },
+  {
+    "campaign_id": "P4-CAMPAIGN-0010",
+    "campaign_plan": {
+      "dataset_cost": 0,
+      "engineering_cost": 3,
+      "expected_information_gain": 0.051,
+      "objective": "Volatility carry shadow redundancy audit",
+      "question": "Is the volatility-shadow mechanism scientifically independent from safe_haven_migration?",
+      "research_cost": 5,
+      "selection_reason": "Fast redundancy check prevents promoting a mechanistically overlapping alpha."
+    },
+    "committee_decision": {
+      "criteria_pass": {
+        "capacity_score": true,
+        "concept_drift_risk": false,
+        "cross_regime_robustness": false,
+        "economic_rationale_strength": false,
+        "evidence_completeness": false,
+        "explainability": false,
+        "failure_severity": false,
+        "observation_completeness": true,
+        "replication_quality": false,
+        "scientific_independence_score": false,
+        "scientific_validity": false
+      },
+      "decision": "REJECT"
+    },
+    "confidence_updates": {
+      "delta": 0.0,
+      "history": [
+        0.55,
+        0.53
+      ]
+    },
+    "diversification_assessment": {
+      "correlation_to_existing_approved": 0.176,
+      "scientific_independence_score": 0.54,
+      "shared_datasets": [
+        "SYNTHETIC-VIX",
+        "FRED-DXY",
+        "FRED-GOLD"
+      ],
+      "shared_failure_modes": []
+    },
+    "evidence": [
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0010-EVID-01",
+        "summary": "independence_audit completed for volatility_carry_shadow under VOLATILITY_TRANSITION regime.",
+        "weight": 0.0459
+      },
+      {
+        "category": "SUPPORTING",
+        "evidence_id": "P4-CAMPAIGN-0010-EVID-02",
+        "summary": "correlation_stability_test completed for volatility_carry_shadow under VOLATILITY_TRANSITION regime.",
+        "weight": 0.0405
+      }
+    ],
+    "experiments": [
+      {
+        "expected_confidence_increase": 0.0281,
+        "expected_information_gain": 0.051,
+        "experiment_id": "P4-CAMPAIGN-0010-EXP-01",
+        "experiment_type": "independence_audit",
+        "status": "COMPLETED"
+      },
+      {
+        "expected_confidence_increase": 0.0248,
+        "expected_information_gain": 0.045,
+        "experiment_id": "P4-CAMPAIGN-0010-EXP-02",
+        "experiment_type": "correlation_stability_test",
+        "status": "COMPLETED"
+      }
+    ],
+    "future_work": "Mechanism is too redundant with the approved safe-haven family and fails the scientific independence threshold.",
+    "hypotheses": [
+      "volatility_carry_shadow is an independent institutional alpha in VOLATILITY_REGIME_SHIFTS."
+    ],
+    "mechanism": "volatility_carry_shadow",
+    "replication_results": {
+      "cross_regime_after": 0.56,
+      "replication_after": 0.0,
+      "replication_before": 0.0
+    },
+    "research_questions": [
+      "Is the volatility-shadow mechanism scientifically independent from safe_haven_migration?",
+      "Can volatility_carry_shadow remain distinct from existing approved alphas after replication?"
+    ],
+    "results": {
+      "confidence_after": 0.53,
+      "confidence_before": 0.55,
+      "independence_after": 0.54,
+      "independence_before": 0.54,
+      "state_after": "REJECTED",
+      "state_before": "RESEARCH"
+    }
+  }
+]

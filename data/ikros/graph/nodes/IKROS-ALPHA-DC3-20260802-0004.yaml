@@ -1,0 +1,15 @@
+attributes:
+  mechanism_type: dealer_inventory
+  status: DISCOVERED
+confidence: 0.57
+created_at: '2026-08-02T14:11:24.758367+00:00'
+ikros_id: IKROS-ALPHA-DC3-20260802-0004
+label: Dealer Inventory Redistribution Mechanism
+node_id: IKROS-ALPHA-DC3-20260802-0004
+node_type: ALPHA_CANDIDATE
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

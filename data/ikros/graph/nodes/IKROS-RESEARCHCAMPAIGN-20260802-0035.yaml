@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Implement deterministic Tier 1 institutional market data ingestion, storage,
+    registries, manifests, checksums, dashboards, and IKROS integration for approved
+    free/public datasets.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0035
+confidence: 0.0
+created_at: '2026-08-02T15:36:04.599964+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0035
+label: Data Foundation V2 Phase 1 Institutional Market Data Infrastructure
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0035
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

@@ -1,0 +1,13 @@
+attributes: {}
+confidence: 0.74
+created_at: '2026-08-02T23:17:46.232454+00:00'
+ikros_id: IKROS-RF-20220927T000000+0000-commod
+label: commodity_cross_curve_divergence research feedback
+node_id: IKROS-RF-20220927T000000+0000-commod
+node_type: RESEARCH_CONCLUSION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0056

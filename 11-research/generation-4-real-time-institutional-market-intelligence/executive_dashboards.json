@@ -1,0 +1,262 @@
+{
+  "alpha_activity_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        "active"
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        "active"
+      ],
+      [
+        "policy_expectation_repricing",
+        "active"
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        "active"
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        "active"
+      ]
+    ]
+  },
+  "confidence_dashboard": {
+    "tiles": [
+      [
+        "Portfolio Conviction",
+        0.4219
+      ],
+      [
+        "Regime Conviction",
+        0.5049
+      ]
+    ]
+  },
+  "evidence_dashboard": {
+    "tiles": [
+      [
+        "Belief Updates",
+        18
+      ],
+      [
+        "Event Reasoning",
+        6
+      ],
+      [
+        "Research Triggers",
+        47
+      ]
+    ]
+  },
+  "institutional_beliefs_dashboard": {
+    "tiles": [
+      [
+        "inflation",
+        0.4912
+      ],
+      [
+        "growth",
+        0.5105
+      ],
+      [
+        "liquidity",
+        0.0
+      ],
+      [
+        "policy",
+        0.142
+      ],
+      [
+        "safe_haven_demand",
+        0.7222
+      ],
+      [
+        "market_stress",
+        0.7337
+      ],
+      [
+        "risk_appetite",
+        0.2393
+      ],
+      [
+        "cross_asset_relationships",
+        0.6897
+      ],
+      [
+        "regime_conviction",
+        0.5049
+      ],
+      [
+        "portfolio_conviction",
+        0.4219
+      ]
+    ]
+  },
+  "knowledge_growth_dashboard": {
+    "tiles": [
+      [
+        "Belief Registry Size",
+        18
+      ],
+      [
+        "Market State Registry Size",
+        18
+      ],
+      [
+        "Trigger Registry Size",
+        47
+      ]
+    ]
+  },
+  "market_state_dashboard": {
+    "tiles": [
+      [
+        "Timestamp",
+        "2025-08-04T00:00:00Z"
+      ],
+      [
+        "XAU/USD",
+        2049.4
+      ],
+      [
+        "Vol Index",
+        20.0
+      ],
+      [
+        "Event Type",
+        "normal"
+      ]
+    ]
+  },
+  "portfolio_dashboard": {
+    "tiles": [
+      [
+        "Decision",
+        "INCREASE"
+      ],
+      [
+        "Confidence",
+        0.4074
+      ],
+      [
+        "Uncertainty",
+        0.63
+      ],
+      [
+        "Risk",
+        0.687
+      ]
+    ]
+  },
+  "regimes_dashboard": {
+    "tiles": [
+      [
+        "BULL_TREND",
+        0.1299
+      ],
+      [
+        "BEAR_TREND",
+        0.1775
+      ],
+      [
+        "RISK_OFF",
+        0.2427
+      ],
+      [
+        "RISK_ON",
+        0.0811
+      ],
+      [
+        "MACRO_TRANSITION",
+        0.1448
+      ],
+      [
+        "LIQUIDITY_CRISIS",
+        0.224
+      ]
+    ]
+  },
+  "research_productivity_dashboard": {
+    "tiles": [
+      [
+        "High Severity Triggers",
+        47
+      ],
+      [
+        "Event Narratives",
+        6
+      ]
+    ]
+  },
+  "research_queue_dashboard": {
+    "tiles": [
+      [
+        "unknown_regime",
+        "REGIME_DISCOVERY"
+      ],
+      [
+        "novel_market_behavior",
+        "STRESS_DIAGNOSTICS"
+      ],
+      [
+        "evidence_conflict",
+        "PORTFOLIO_BELIEF_RECONCILIATION"
+      ],
+      [
+        "unknown_regime",
+        "REGIME_DISCOVERY"
+      ],
+      [
+        "unexpected_relationships",
+        "CROSS_ASSET_RELATIONSHIP_INVESTIGATION"
+      ],
+      [
+        "novel_market_behavior",
+        "STRESS_DIAGNOSTICS"
+      ],
+      [
+        "evidence_conflict",
+        "PORTFOLIO_BELIEF_RECONCILIATION"
+      ],
+      [
+        "unknown_regime",
+        "REGIME_DISCOVERY"
+      ],
+      [
+        "novel_market_behavior",
+        "STRESS_DIAGNOSTICS"
+      ],
+      [
+        "evidence_conflict",
+        "PORTFOLIO_BELIEF_RECONCILIATION"
+      ]
+    ]
+  },
+  "risk_dashboard": {
+    "tiles": [
+      [
+        "Market Stress",
+        0.7337
+      ],
+      [
+        "Portfolio Risk",
+        0.687
+      ]
+    ]
+  },
+  "scientific_health_dashboard": {
+    "tiles": [
+      [
+        "Scientific Maturity",
+        0.96
+      ],
+      [
+        "Evidence Conflict Triggers",
+        18
+      ]
+    ]
+  }
+}

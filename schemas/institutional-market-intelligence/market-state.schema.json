@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "dxy": {
+      "type": "number"
+    },
+    "real_yield": {
+      "type": "number"
+    },
+    "sources_quality": {
+      "type": "object"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "xauusd": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "timestamp",
+    "xauusd",
+    "dxy",
+    "real_yield",
+    "sources_quality"
+  ],
+  "title": "Market State",
+  "type": "object"
+}

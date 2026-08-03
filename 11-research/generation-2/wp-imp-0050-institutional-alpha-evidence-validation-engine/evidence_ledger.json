@@ -1,0 +1,51 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "confidence": 0.6067,
+    "contradictory_evidence": [],
+    "evidence_quality": 0.5377,
+    "evidence_weight": 0.6568,
+    "independent_confirmations": 5,
+    "independent_failures": 0,
+    "lineage": {
+      "source_phase4": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\dc3_phase4_batch1_validation.json",
+      "source_phase5": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\dc3_phase5_revision_analysis.json"
+    },
+    "replication_count": 1,
+    "supporting_evidence": [
+      "IKROS-ALPHA-DC3-20260802-0006::bootstrap",
+      "IKROS-ALPHA-DC3-20260802-0006::historical_replay",
+      "IKROS-ALPHA-DC3-20260802-0006::monte_carlo",
+      "IKROS-ALPHA-DC3-20260802-0006::nested_walk_forward",
+      "IKROS-ALPHA-DC3-20260802-0006::out_of_sample_validation",
+      "IKROS-ALPHA-DC3-20260802-0006::probabilistic_sharpe_ratio",
+      "IKROS-ALPHA-DC3-20260802-0006::probability_of_backtest_overfitting",
+      "IKROS-ALPHA-DC3-20260802-0006::stability_analysis",
+      "IKROS-ALPHA-DC3-20260802-0006::walk_forward_validation"
+    ]
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+    "confidence": 0.4402,
+    "contradictory_evidence": [
+      "IKROS-ALPHA-DC3-20260802-0009::concept_drift_detection",
+      "IKROS-ALPHA-DC3-20260802-0009::deflated_sharpe_ratio",
+      "IKROS-ALPHA-DC3-20260802-0009::sensitivity_analysis",
+      "IKROS-ALPHA-DC3-20260802-0009::spa_test",
+      "IKROS-ALPHA-DC3-20260802-0009::whites_reality_check"
+    ],
+    "evidence_quality": 0.3221,
+    "evidence_weight": 0.362,
+    "independent_confirmations": 0,
+    "independent_failures": 5,
+    "lineage": {
+      "source_phase4": "11-research\\discovery-cycle-3\\phase-4-adaptive-alpha-validation\\dc3_phase4_batch1_validation.json",
+      "source_phase5": "11-research\\discovery-cycle-3\\phase-5-institutional-alpha-revision\\dc3_phase5_revision_analysis.json"
+    },
+    "replication_count": 1,
+    "supporting_evidence": [
+      "IKROS-ALPHA-DC3-20260802-0009::bootstrap",
+      "IKROS-ALPHA-DC3-20260802-0009::walk_forward_validation"
+    ]
+  }
+]

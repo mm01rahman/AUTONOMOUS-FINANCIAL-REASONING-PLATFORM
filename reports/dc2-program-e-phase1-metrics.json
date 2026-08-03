@@ -1,0 +1,22 @@
+{
+  "ablation_runs": 64,
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0024",
+  "components_evaluated": 7,
+  "components_to_investigate": 2,
+  "components_to_redesign": 4,
+  "components_to_remove": 1,
+  "components_to_retain": 0,
+  "graph_edges_created": 10,
+  "graph_nodes_created": 10,
+  "phase": "DC2_PROGRAM_E_PHASE1",
+  "reports": {
+    "ablation_matrix": "11-research\\discovery-cycle-2\\research-program-e-phase1\\ABLATION_MATRIX.md",
+    "arb_recommendation": "11-research\\discovery-cycle-2\\research-program-e-phase1\\ARB_RECOMMENDATION.md",
+    "complexity_vs_benefit_analysis": "11-research\\discovery-cycle-2\\research-program-e-phase1\\COMPLEXITY_VS_BENEFIT_ANALYSIS.md",
+    "component_contribution_report": "11-research\\discovery-cycle-2\\research-program-e-phase1\\COMPONENT_CONTRIBUTION_REPORT.md",
+    "failure_attribution_report": "11-research\\discovery-cycle-2\\research-program-e-phase1\\FAILURE_ATTRIBUTION_REPORT.md",
+    "redesign_recommendations": "11-research\\discovery-cycle-2\\research-program-e-phase1\\REDESIGN_RECOMMENDATIONS.md",
+    "revision_priority_matrix": "11-research\\discovery-cycle-2\\research-program-e-phase1\\REVISION_PRIORITY_MATRIX.md",
+    "transition_engine_revision_plan": "11-research\\discovery-cycle-2\\research-program-e-phase1\\TRANSITION_ENGINE_REVISION_PLAN.md"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "decision_cascade": {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+    "campaign_history": [
+      "P3-CAMPAIGN-0004"
+    ],
+    "confidence": 0.544,
+    "confidence_history": [
+      0.59,
+      0.556,
+      0.544
+    ],
+    "evidence_completeness": 0.58,
+    "observation_completeness": 0.67,
+    "replication_quality": 0.0,
+    "terminal_state": "BLOCKED_BY_DATA"
+  },
+  "safe_haven_migration": {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "campaign_history": [
+      "P3-CAMPAIGN-0001",
+      "P3-CAMPAIGN-0002",
+      "P3-CAMPAIGN-0003"
+    ],
+    "confidence": 0.719,
+    "confidence_history": [
+      0.6,
+      0.618,
+      0.65,
+      0.678,
+      0.719
+    ],
+    "evidence_completeness": 0.81,
+    "observation_completeness": 0.76,
+    "replication_quality": 0.78,
+    "terminal_state": "APPROVED_ALPHA"
+  }
+}

@@ -1,0 +1,22 @@
+attributes:
+  arb_recommendation: Adopt a layered decision ecology in which macro hedge funds
+    and market makers update fastest, central banks and bullion banks anchor belief
+    formation, dealers relay strategic dependencies, and ETF/safe-haven flows turn
+    localized decisions into market-wide cascades.
+  dominant_cascade_initiators:
+  - market_makers
+  - macro_hedge_funds
+  - etf_investors
+  - safe_haven_capital_flows
+confidence: 0.72
+created_at: '2026-08-02T11:00:11.268612+00:00'
+ikros_id: IKROS-PB2-CONCLUSION-20260802-0001
+label: Decision ecology explains coordinated market-wide behavior
+node_id: IKROS-PB2-CONCLUSION-20260802-0001
+node_type: RESEARCH_CONCLUSION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

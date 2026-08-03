@@ -1,0 +1,48 @@
+{
+  "cadence": "monthly",
+  "checksum_sha256": "0567cd202d0941a1dc5fe712823ef3f3dceea8c4d703928f1210d237996a8635",
+  "covered_variables": [
+    "central_bank_gold_purchases",
+    "institutional_flow_direction"
+  ],
+  "dataset_id": "DS-014",
+  "dataset_name": "Central Bank Gold Purchases",
+  "generated_at": "2026-08-02T00:00:00Z",
+  "provenance": {
+    "fixture_or_remote": "fixture",
+    "retrieved_at": "2026-08-02T00:00:00Z",
+    "source_kind": "public_file",
+    "timezone": "UTC"
+  },
+  "provider": "WGCProvider",
+  "quality": {
+    "completeness": 1.0,
+    "confidence_score": 0.9765,
+    "coverage": 1.0,
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-07-31T00:00:00Z",
+    "freshness": 0.9833,
+    "missing_rate": 0.0,
+    "record_count": 4,
+    "schema_conformity": 1.0,
+    "start_timestamp": "2026-04-30T00:00:00Z",
+    "timestamp_consistency": 1.0,
+    "validation_score": 0.9972
+  },
+  "raw_checksum_sha256": "c6e831ad1ff336938cd7732e1fff98cb06b8011d4824baffda4aecc1e5445027",
+  "row_count": 4,
+  "source": "World Gold Council",
+  "source_url": "https://www.gold.org/goldhub/data/central-bank-net-purchases.csv",
+  "storage_path": "data\\data-foundation-v2\\datasets\\DS-014\\DF2-DS014-20260731-0567cd20\\data.csv",
+  "supported_families": [
+    "FAM-003",
+    "FAM-007"
+  ],
+  "supported_mechanisms": [
+    "safe_haven_migration",
+    "adaptive_ecology_shift"
+  ],
+  "timezone": "UTC",
+  "version_id": "DF2-DS014-20260731-0567cd20",
+  "work_package": "DF2-WP-004"
+}

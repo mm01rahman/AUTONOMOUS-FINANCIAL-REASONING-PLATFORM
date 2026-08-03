@@ -1,0 +1,11 @@
+{
+  "active_alpha_count": 5,
+  "approved_alpha_count": 5,
+  "current_regime": "MACRO_TRANSITION",
+  "portfolio_confidence": 0.7082,
+  "portfolio_decision": "BUY",
+  "portfolio_id": "IKROS-PORTFOLIO-P5-0001",
+  "portfolio_name": "Institutional Alpha Portfolio v1",
+  "portfolio_uncertainty": 0.2696,
+  "scientific_objective": "Maximize scientific robustness, institutional confidence, durability, and resilience without implementing trade execution."
+}

@@ -1,0 +1,50 @@
+archived_at: null
+capability_refs:
+- IKROS-MEMORY
+confidence: 0.9502
+created_at: '2026-08-02T15:36:18.809112+00:00'
+dependency_ids: []
+entity_type: DatasetQualitySnapshot
+evidence_refs:
+- 11-research\data-foundation-v2\phase-1-institutional-market-data-infrastructure\QUALITY_DASHBOARD.md
+graph_node_ids: []
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0083
+payload:
+  cadence: weekly
+  confidence_score: 0.9502
+  covered_variables:
+  - comex_positioning_direct
+  - cot_participant_mix
+  dataset_id: DS-009
+  domain: institutional_positioning
+  manifest_path: data\data-foundation-v2\datasets\DS-009\DF2-DS009-20260728-90146ca4\manifest.json
+  name: COMEX Non-Commercial Positioning
+  provider: CFTCProvider
+  quality_score: 0.9762
+  storage_path: data\data-foundation-v2\datasets\DS-009\DF2-DS009-20260728-90146ca4\data.csv
+  supported_mechanisms:
+  - cross_asset_transition
+  - dealer_inventory
+  - adaptive_ecology_shift
+  version_id: DF2-DS009-20260728-90146ca4
+  work_package: DF2-WP-002
+retired_at: null
+source_ids:
+- DS-009
+spec_refs:
+- SPEC-060
+summary: DS-009 quality 0.98, confidence 0.95.
+tags:
+- dataset-quality
+- ds-009
+tier: T1_EPISODIC
+title: Dataset quality snapshot DS-009
+updated_at: '2026-08-02T15:36:18.809112+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs:
+- WP-IMP-0048

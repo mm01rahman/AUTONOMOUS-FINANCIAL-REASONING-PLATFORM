@@ -1,0 +1,18 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Discover and prioritize institutionally explainable alpha mechanisms
+    from governed knowledge without validation, optimization, or strategy construction.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0026
+confidence: 0.0
+created_at: '2026-08-02T14:11:15.431140+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0026
+label: 'Discovery Cycle 3: Institutional Alpha Discovery Program'
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0026
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

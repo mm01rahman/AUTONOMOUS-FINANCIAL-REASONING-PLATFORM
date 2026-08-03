@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "roadmap_12_month": {
+      "type": "object"
+    },
+    "roadmap_30_day": {
+      "type": "object"
+    },
+    "roadmap_6_month": {
+      "type": "object"
+    },
+    "roadmap_90_day": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "roadmap_30_day",
+    "roadmap_90_day",
+    "roadmap_6_month",
+    "roadmap_12_month"
+  ],
+  "title": "Strategic Roadmap",
+  "type": "object"
+}

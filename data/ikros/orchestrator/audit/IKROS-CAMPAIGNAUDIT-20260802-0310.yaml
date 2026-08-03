@@ -1,0 +1,12 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0310
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0022
+detail: Task RESEARCH_QUESTION started
+entry_hash: e66fa42e8cba641e5e4661b74860c2ed69a713e5c9b32be6b3d8bd16bf59b6e8
+event_type: TASK_STARTED
+new_state: RUNNING
+output_refs: []
+previous_hash: 61603865ad18c38da0a12b318dbea3e7429e90274e02942cc117ddc82ecffb3a
+previous_state: READY
+task_id: IKROS-RESEARCHTASK-20260802-0109
+timestamp: '2026-08-02T11:34:51.610362+00:00'

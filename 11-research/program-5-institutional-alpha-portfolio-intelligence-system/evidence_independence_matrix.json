@@ -1,0 +1,96 @@
+[
+  {
+    "evidence_independence_score": 0.6369,
+    "left": "safe_haven_migration",
+    "right": "real_yield_dislocation_reversion",
+    "shared_datasets": [],
+    "shared_lineage": [
+      "PROGRAM_4"
+    ]
+  },
+  {
+    "evidence_independence_score": 0.6547,
+    "left": "safe_haven_migration",
+    "right": "policy_expectation_repricing",
+    "shared_datasets": [],
+    "shared_lineage": [
+      "PROGRAM_4"
+    ]
+  },
+  {
+    "evidence_independence_score": 0.5524,
+    "left": "safe_haven_migration",
+    "right": "etf_flow_accumulation_pressure",
+    "shared_datasets": [
+      "ETF-GLD"
+    ],
+    "shared_lineage": [
+      "PROGRAM_4"
+    ]
+  },
+  {
+    "evidence_independence_score": 0.6726,
+    "left": "safe_haven_migration",
+    "right": "commodity_cross_curve_divergence",
+    "shared_datasets": [],
+    "shared_lineage": [
+      "PROGRAM_4"
+    ]
+  },
+  {
+    "evidence_independence_score": 0.4227,
+    "left": "real_yield_dislocation_reversion",
+    "right": "policy_expectation_repricing",
+    "shared_datasets": [],
+    "shared_lineage": [
+      "PROGRAM_4"
+    ]
+  },
+  {
+    "evidence_independence_score": 0.3542,
+    "left": "real_yield_dislocation_reversion",
+    "right": "etf_flow_accumulation_pressure",
+    "shared_datasets": [
+      "FRED-DXY"
+    ],
+    "shared_lineage": [
+      "PROGRAM_4"
+    ]
+  },
+  {
+    "evidence_independence_score": 0.4621,
+    "left": "real_yield_dislocation_reversion",
+    "right": "commodity_cross_curve_divergence",
+    "shared_datasets": [],
+    "shared_lineage": [
+      "PROGRAM_4"
+    ]
+  },
+  {
+    "evidence_independence_score": 0.4417,
+    "left": "policy_expectation_repricing",
+    "right": "etf_flow_accumulation_pressure",
+    "shared_datasets": [],
+    "shared_lineage": [
+      "PROGRAM_4"
+    ]
+  },
+  {
+    "evidence_independence_score": 0.4417,
+    "left": "policy_expectation_repricing",
+    "right": "commodity_cross_curve_divergence",
+    "shared_datasets": [],
+    "shared_lineage": [
+      "PROGRAM_4"
+    ]
+  },
+  {
+    "evidence_independence_score": 0.4792,
+    "left": "etf_flow_accumulation_pressure",
+    "right": "commodity_cross_curve_divergence",
+    "shared_datasets": [],
+    "shared_lineage": [
+      "PROGRAM_4"
+    ]
+  }
+]

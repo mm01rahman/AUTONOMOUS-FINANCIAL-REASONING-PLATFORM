@@ -1,0 +1,666 @@
+{
+  "edges": [
+    {
+      "dependency_strength": 3.7953,
+      "dependency_type": "strategic_follow",
+      "source": "dealers",
+      "target": "market_makers"
+    },
+    {
+      "dependency_strength": 3.3287,
+      "dependency_type": "strategic_follow",
+      "source": "bullion_banks",
+      "target": "dealers"
+    },
+    {
+      "dependency_strength": 3.0762,
+      "dependency_type": "strategic_follow",
+      "source": "dealers",
+      "target": "macro_hedge_funds"
+    },
+    {
+      "dependency_strength": 3.015,
+      "dependency_type": "strategic_follow",
+      "source": "bullion_banks",
+      "target": "market_makers"
+    },
+    {
+      "dependency_strength": 2.9609,
+      "dependency_type": "strategic_follow",
+      "source": "dealers",
+      "target": "bullion_banks"
+    },
+    {
+      "dependency_strength": 2.8413,
+      "dependency_type": "strategic_follow",
+      "source": "bullion_banks",
+      "target": "commercial_hedgers"
+    },
+    {
+      "dependency_strength": 2.8115,
+      "dependency_type": "strategic_follow",
+      "source": "dealers",
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "dependency_strength": 2.785,
+      "dependency_type": "strategic_follow",
+      "source": "bullion_banks",
+      "target": "etf_investors"
+    },
+    {
+      "dependency_strength": 2.7219,
+      "dependency_type": "strategic_follow",
+      "source": "bullion_banks",
+      "target": "ctas"
+    },
+    {
+      "dependency_strength": 2.6401,
+      "dependency_type": "strategic_follow",
+      "source": "dealers",
+      "target": "retail_traders"
+    },
+    {
+      "dependency_strength": 2.5958,
+      "dependency_type": "strategic_follow",
+      "source": "dealers",
+      "target": "etf_investors"
+    },
+    {
+      "dependency_strength": 2.5736,
+      "dependency_type": "strategic_follow",
+      "source": "bullion_banks",
+      "target": "macro_hedge_funds"
+    },
+    {
+      "dependency_strength": 2.5452,
+      "dependency_type": "strategic_follow",
+      "source": "dealers",
+      "target": "commercial_hedgers"
+    },
+    {
+      "dependency_strength": 2.5369,
+      "dependency_type": "strategic_follow",
+      "source": "dealers",
+      "target": "ctas"
+    },
+    {
+      "dependency_strength": 2.5195,
+      "dependency_type": "strategic_follow",
+      "source": "dealers",
+      "target": "central_banks"
+    },
+    {
+      "dependency_strength": 2.5134,
+      "dependency_type": "strategic_follow",
+      "source": "bullion_banks",
+      "target": "retail_traders"
+    },
+    {
+      "dependency_strength": 2.3437,
+      "dependency_type": "strategic_follow",
+      "source": "macro_hedge_funds",
+      "target": "central_banks"
+    },
+    {
+      "dependency_strength": 2.2946,
+      "dependency_type": "strategic_follow",
+      "source": "bullion_banks",
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "dependency_strength": 2.2524,
+      "dependency_type": "strategic_follow",
+      "source": "central_banks",
+      "target": "macro_hedge_funds"
+    },
+    {
+      "dependency_strength": 2.2137,
+      "dependency_type": "strategic_follow",
+      "source": "safe_haven_capital_flows",
+      "target": "etf_investors"
+    },
+    {
+      "dependency_strength": 2.0658,
+      "dependency_type": "strategic_follow",
+      "source": "safe_haven_capital_flows",
+      "target": "macro_hedge_funds"
+    },
+    {
+      "dependency_strength": 2.0428,
+      "dependency_type": "strategic_follow",
+      "source": "bullion_banks",
+      "target": "central_banks"
+    },
+    {
+      "dependency_strength": 2.0027,
+      "dependency_type": "strategic_follow",
+      "source": "safe_haven_capital_flows",
+      "target": "central_banks"
+    },
+    {
+      "dependency_strength": 1.8583,
+      "dependency_type": "strategic_follow",
+      "source": "safe_haven_capital_flows",
+      "target": "market_makers"
+    },
+    {
+      "dependency_strength": 1.8011,
+      "dependency_type": "strategic_follow",
+      "source": "macro_hedge_funds",
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "dependency_strength": 1.7271,
+      "dependency_type": "strategic_follow",
+      "source": "market_makers",
+      "target": "retail_traders"
+    },
+    {
+      "dependency_strength": 1.6917,
+      "dependency_type": "strategic_follow",
+      "source": "safe_haven_capital_flows",
+      "target": "retail_traders"
+    },
+    {
+      "dependency_strength": 1.6467,
+      "dependency_type": "strategic_follow",
+      "source": "safe_haven_capital_flows",
+      "target": "dealers"
+    },
+    {
+      "dependency_strength": 1.6456,
+      "dependency_type": "strategic_follow",
+      "source": "macro_hedge_funds",
+      "target": "market_makers"
+    },
+    {
+      "dependency_strength": 1.6167,
+      "dependency_type": "strategic_follow",
+      "source": "market_makers",
+      "target": "etf_investors"
+    },
+    {
+      "dependency_strength": 1.6049,
+      "dependency_type": "strategic_follow",
+      "source": "ctas",
+      "target": "etf_investors"
+    },
+    {
+      "dependency_strength": 1.5977,
+      "dependency_type": "strategic_follow",
+      "source": "macro_hedge_funds",
+      "target": "ctas"
+    },
+    {
+      "dependency_strength": 1.5852,
+      "dependency_type": "strategic_follow",
+      "source": "macro_hedge_funds",
+      "target": "dealers"
+    },
+    {
+      "dependency_strength": 1.5761,
+      "dependency_type": "strategic_follow",
+      "source": "ctas",
+      "target": "commercial_hedgers"
+    },
+    {
+      "dependency_strength": 1.5361,
+      "dependency_type": "strategic_follow",
+      "source": "etf_investors",
+      "target": "market_makers"
+    },
+    {
+      "dependency_strength": 1.5326,
+      "dependency_type": "strategic_follow",
+      "source": "etf_investors",
+      "target": "retail_traders"
+    },
+    {
+      "dependency_strength": 1.4822,
+      "dependency_type": "strategic_follow",
+      "source": "etf_investors",
+      "target": "commercial_hedgers"
+    },
+    {
+      "dependency_strength": 1.4518,
+      "dependency_type": "strategic_follow",
+      "source": "etf_investors",
+      "target": "ctas"
+    },
+    {
+      "dependency_strength": 1.4511,
+      "dependency_type": "strategic_follow",
+      "source": "macro_hedge_funds",
+      "target": "etf_investors"
+    },
+    {
+      "dependency_strength": 1.4451,
+      "dependency_type": "strategic_follow",
+      "source": "market_makers",
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "dependency_strength": 1.4163,
+      "dependency_type": "strategic_follow",
+      "source": "ctas",
+      "target": "market_makers"
+    },
+    {
+      "dependency_strength": 1.3962,
+      "dependency_type": "strategic_follow",
+      "source": "safe_haven_capital_flows",
+      "target": "commercial_hedgers"
+    },
+    {
+      "dependency_strength": 1.3818,
+      "dependency_type": "strategic_follow",
+      "source": "ctas",
+      "target": "retail_traders"
+    },
+    {
+      "dependency_strength": 1.3581,
+      "dependency_type": "strategic_follow",
+      "source": "commercial_hedgers",
+      "target": "bullion_banks"
+    },
+    {
+      "dependency_strength": 1.3569,
+      "dependency_type": "strategic_follow",
+      "source": "market_makers",
+      "target": "ctas"
+    },
+    {
+      "dependency_strength": 1.3427,
+      "dependency_type": "strategic_follow",
+      "source": "market_makers",
+      "target": "commercial_hedgers"
+    },
+    {
+      "dependency_strength": 1.3372,
+      "dependency_type": "strategic_follow",
+      "source": "central_banks",
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "dependency_strength": 1.3354,
+      "dependency_type": "strategic_follow",
+      "source": "market_makers",
+      "target": "bullion_banks"
+    },
+    {
+      "dependency_strength": 1.3039,
+      "dependency_type": "strategic_follow",
+      "source": "market_makers",
+      "target": "dealers"
+    },
+    {
+      "dependency_strength": 1.3032,
+      "dependency_type": "strategic_follow",
+      "source": "market_makers",
+      "target": "macro_hedge_funds"
+    },
+    {
+      "dependency_strength": 1.2998,
+      "dependency_type": "strategic_follow",
+      "source": "safe_haven_capital_flows",
+      "target": "bullion_banks"
+    },
+    {
+      "dependency_strength": 1.299,
+      "dependency_type": "strategic_follow",
+      "source": "safe_haven_capital_flows",
+      "target": "ctas"
+    },
+    {
+      "dependency_strength": 1.2962,
+      "dependency_type": "strategic_follow",
+      "source": "macro_hedge_funds",
+      "target": "retail_traders"
+    },
+    {
+      "dependency_strength": 1.2901,
+      "dependency_type": "strategic_follow",
+      "source": "macro_hedge_funds",
+      "target": "commercial_hedgers"
+    },
+    {
+      "dependency_strength": 1.283,
+      "dependency_type": "strategic_follow",
+      "source": "macro_hedge_funds",
+      "target": "bullion_banks"
+    },
+    {
+      "dependency_strength": 1.2796,
+      "dependency_type": "strategic_follow",
+      "source": "ctas",
+      "target": "bullion_banks"
+    },
+    {
+      "dependency_strength": 1.1632,
+      "dependency_type": "strategic_follow",
+      "source": "etf_investors",
+      "target": "bullion_banks"
+    },
+    {
+      "dependency_strength": 1.16,
+      "dependency_type": "strategic_follow",
+      "source": "retail_traders",
+      "target": "etf_investors"
+    },
+    {
+      "dependency_strength": 1.1387,
+      "dependency_type": "strategic_follow",
+      "source": "commercial_hedgers",
+      "target": "etf_investors"
+    },
+    {
+      "dependency_strength": 1.1387,
+      "dependency_type": "strategic_follow",
+      "source": "retail_traders",
+      "target": "market_makers"
+    },
+    {
+      "dependency_strength": 1.0899,
+      "dependency_type": "strategic_follow",
+      "source": "commercial_hedgers",
+      "target": "ctas"
+    },
+    {
+      "dependency_strength": 1.0867,
+      "dependency_type": "strategic_follow",
+      "source": "etf_investors",
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "dependency_strength": 1.0284,
+      "dependency_type": "strategic_follow",
+      "source": "market_makers",
+      "target": "central_banks"
+    },
+    {
+      "dependency_strength": 0.9545,
+      "dependency_type": "strategic_follow",
+      "source": "ctas",
+      "target": "central_banks"
+    },
+    {
+      "dependency_strength": 0.9361,
+      "dependency_type": "strategic_follow",
+      "source": "ctas",
+      "target": "dealers"
+    },
+    {
+      "dependency_strength": 0.902,
+      "dependency_type": "strategic_follow",
+      "source": "ctas",
+      "target": "macro_hedge_funds"
+    },
+    {
+      "dependency_strength": 0.8815,
+      "dependency_type": "strategic_follow",
+      "source": "commercial_hedgers",
+      "target": "retail_traders"
+    },
+    {
+      "dependency_strength": 0.8659,
+      "dependency_type": "strategic_follow",
+      "source": "etf_investors",
+      "target": "central_banks"
+    },
+    {
+      "dependency_strength": 0.8659,
+      "dependency_type": "strategic_follow",
+      "source": "retail_traders",
+      "target": "ctas"
+    },
+    {
+      "dependency_strength": 0.8534,
+      "dependency_type": "strategic_follow",
+      "source": "commercial_hedgers",
+      "target": "market_makers"
+    },
+    {
+      "dependency_strength": 0.8517,
+      "dependency_type": "strategic_follow",
+      "source": "retail_traders",
+      "target": "commercial_hedgers"
+    },
+    {
+      "dependency_strength": 0.8224,
+      "dependency_type": "strategic_follow",
+      "source": "commercial_hedgers",
+      "target": "dealers"
+    },
+    {
+      "dependency_strength": 0.8199,
+      "dependency_type": "strategic_follow",
+      "source": "etf_investors",
+      "target": "dealers"
+    },
+    {
+      "dependency_strength": 0.8185,
+      "dependency_type": "strategic_follow",
+      "source": "ctas",
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "dependency_strength": 0.7995,
+      "dependency_type": "strategic_follow",
+      "source": "etf_investors",
+      "target": "macro_hedge_funds"
+    },
+    {
+      "dependency_strength": 0.6924,
+      "dependency_type": "strategic_follow",
+      "source": "retail_traders",
+      "target": "safe_haven_capital_flows"
+    },
+    {
+      "dependency_strength": 0.5876,
+      "dependency_type": "strategic_follow",
+      "source": "commercial_hedgers",
+      "target": "central_banks"
+    },
+    {
+      "dependency_strength": 0.5653,
+      "dependency_type": "strategic_follow",
+      "source": "retail_traders",
+      "target": "central_banks"
+    },
+    {
+      "dependency_strength": 0.5552,
+      "dependency_type": "strategic_follow",
+      "source": "central_banks",
+      "target": "retail_traders"
+    },
+    {
+      "dependency_strength": 0.555,
+      "dependency_type": "strategic_follow",
+      "source": "retail_traders",
+      "target": "bullion_banks"
+    },
+    {
+      "dependency_strength": 0.5491,
+      "dependency_type": "strategic_follow",
+      "source": "central_banks",
+      "target": "commercial_hedgers"
+    },
+    {
+      "dependency_strength": 0.5279,
+      "dependency_type": "strategic_follow",
+      "source": "central_banks",
+      "target": "bullion_banks"
+    },
+    {
+      "dependency_strength": 0.5234,
+      "dependency_type": "strategic_follow",
+      "source": "retail_traders",
+      "target": "dealers"
+    },
+    {
+      "dependency_strength": 0.5103,
+      "dependency_type": "strategic_follow",
+      "source": "central_banks",
+      "target": "dealers"
+    },
+    {
+      "dependency_strength": 0.4864,
+      "dependency_type": "strategic_follow",
+      "source": "central_banks",
+      "target": "market_makers"
+    },
+    {
+      "dependency_strength": 0.4862,
+      "dependency_type": "strategic_follow",
+      "source": "central_banks",
+      "target": "etf_investors"
+    },
+    {
+      "dependency_strength": 0.4776,
+      "dependency_type": "strategic_follow",
+      "source": "commercial_hedgers",
+      "target": "macro_hedge_funds"
+    },
+    {
+      "dependency_strength": 0.452,
+      "dependency_type": "strategic_follow",
+      "source": "central_banks",
+      "target": "ctas"
+    },
+    {
+      "dependency_strength": 0.4518,
+      "dependency_type": "strategic_follow",
+      "source": "retail_traders",
+      "target": "macro_hedge_funds"
+    },
+    {
+      "dependency_strength": 0.4206,
+      "dependency_type": "strategic_follow",
+      "source": "commercial_hedgers",
+      "target": "safe_haven_capital_flows"
+    }
+  ],
+  "matrix": {
+    "bullion_banks": {
+      "bullion_banks": 0.0,
+      "central_banks": 2.0428,
+      "commercial_hedgers": 2.8413,
+      "ctas": 2.7219,
+      "dealers": 3.3287,
+      "etf_investors": 2.785,
+      "macro_hedge_funds": 2.5736,
+      "market_makers": 3.015,
+      "retail_traders": 2.5134,
+      "safe_haven_capital_flows": 2.2946
+    },
+    "central_banks": {
+      "bullion_banks": 0.5279,
+      "central_banks": 0.0,
+      "commercial_hedgers": 0.5491,
+      "ctas": 0.452,
+      "dealers": 0.5103,
+      "etf_investors": 0.4862,
+      "macro_hedge_funds": 2.2524,
+      "market_makers": 0.4864,
+      "retail_traders": 0.5552,
+      "safe_haven_capital_flows": 1.3372
+    },
+    "commercial_hedgers": {
+      "bullion_banks": 1.3581,
+      "central_banks": 0.5876,
+      "commercial_hedgers": 0.0,
+      "ctas": 1.0899,
+      "dealers": 0.8224,
+      "etf_investors": 1.1387,
+      "macro_hedge_funds": 0.4776,
+      "market_makers": 0.8534,
+      "retail_traders": 0.8815,
+      "safe_haven_capital_flows": 0.4206
+    },
+    "ctas": {
+      "bullion_banks": 1.2796,
+      "central_banks": 0.9545,
+      "commercial_hedgers": 1.5761,
+      "ctas": 0.0,
+      "dealers": 0.9361,
+      "etf_investors": 1.6049,
+      "macro_hedge_funds": 0.902,
+      "market_makers": 1.4163,
+      "retail_traders": 1.3818,
+      "safe_haven_capital_flows": 0.8185
+    },
+    "dealers": {
+      "bullion_banks": 2.9609,
+      "central_banks": 2.5195,
+      "commercial_hedgers": 2.5452,
+      "ctas": 2.5369,
+      "dealers": 0.0,
+      "etf_investors": 2.5958,
+      "macro_hedge_funds": 3.0762,
+      "market_makers": 3.7953,
+      "retail_traders": 2.6401,
+      "safe_haven_capital_flows": 2.8115
+    },
+    "etf_investors": {
+      "bullion_banks": 1.1632,
+      "central_banks": 0.8659,
+      "commercial_hedgers": 1.4822,
+      "ctas": 1.4518,
+      "dealers": 0.8199,
+      "etf_investors": 0.0,
+      "macro_hedge_funds": 0.7995,
+      "market_makers": 1.5361,
+      "retail_traders": 1.5326,
+      "safe_haven_capital_flows": 1.0867
+    },
+    "macro_hedge_funds": {
+      "bullion_banks": 1.283,
+      "central_banks": 2.3437,
+      "commercial_hedgers": 1.2901,
+      "ctas": 1.5977,
+      "dealers": 1.5852,
+      "etf_investors": 1.4511,
+      "macro_hedge_funds": 0.0,
+      "market_makers": 1.6456,
+      "retail_traders": 1.2962,
+      "safe_haven_capital_flows": 1.8011
+    },
+    "market_makers": {
+      "bullion_banks": 1.3354,
+      "central_banks": 1.0284,
+      "commercial_hedgers": 1.3427,
+      "ctas": 1.3569,
+      "dealers": 1.3039,
+      "etf_investors": 1.6167,
+      "macro_hedge_funds": 1.3032,
+      "market_makers": 0.0,
+      "retail_traders": 1.7271,
+      "safe_haven_capital_flows": 1.4451
+    },
+    "retail_traders": {
+      "bullion_banks": 0.555,
+      "central_banks": 0.5653,
+      "commercial_hedgers": 0.8517,
+      "ctas": 0.8659,
+      "dealers": 0.5234,
+      "etf_investors": 1.16,
+      "macro_hedge_funds": 0.4518,
+      "market_makers": 1.1387,
+      "retail_traders": 0.0,
+      "safe_haven_capital_flows": 0.6924
+    },
+    "safe_haven_capital_flows": {
+      "bullion_banks": 1.2998,
+      "central_banks": 2.0027,
+      "commercial_hedgers": 1.3962,
+      "ctas": 1.299,
+      "dealers": 1.6467,
+      "etf_investors": 2.2137,
+      "macro_hedge_funds": 2.0658,
+      "market_makers": 1.8583,
+      "retail_traders": 1.6917,
+      "safe_haven_capital_flows": 0.0
+    }
+  }
+}

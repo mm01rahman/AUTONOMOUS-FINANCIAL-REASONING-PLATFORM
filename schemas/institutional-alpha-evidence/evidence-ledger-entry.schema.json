@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "confidence": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "contradictory_evidence": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidence_quality": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "evidence_weight": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "independent_confirmations": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "independent_failures": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "lineage": {
+      "type": "object"
+    },
+    "replication_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "supporting_evidence": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "supporting_evidence",
+    "contradictory_evidence",
+    "replication_count",
+    "independent_confirmations",
+    "independent_failures",
+    "evidence_quality",
+    "evidence_weight",
+    "confidence",
+    "lineage"
+  ],
+  "title": "Institutional Alpha Evidence Ledger Entry",
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+attributes:
+  cascade_strength: 0.91
+  initiator: safe_haven_capital_flows
+confidence: 0.66
+created_at: '2026-08-02T11:00:11.268612+00:00'
+ikros_id: IKROS-PB2-CASCADE-0004
+label: Decision Cascade 4
+node_id: IKROS-PB2-CASCADE-0004
+node_type: RESEARCH_CONCLUSION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

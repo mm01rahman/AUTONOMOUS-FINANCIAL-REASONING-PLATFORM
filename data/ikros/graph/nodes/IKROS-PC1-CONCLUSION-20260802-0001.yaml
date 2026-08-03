@@ -1,0 +1,22 @@
+attributes:
+  arb_recommendation: Adopt an institutional transition engine in which macro repricing,
+    dealer relay capacity, liquidity withdrawal, and participant decision cascades
+    jointly determine how XAU/USD moves between the six approved regimes.
+  priority_transitions:
+  - calm_carry__to__bear_unwind
+  - bear_unwind__to__calm_carry
+  - range_compression__to__calm_carry
+  - macro_transition__to__calm_carry
+  - calm_carry__to__range_compression
+confidence: 0.74
+created_at: '2026-08-02T11:34:56.451684+00:00'
+ikros_id: IKROS-PC1-CONCLUSION-20260802-0001
+label: Institutional transition engine explains regime emergence
+node_id: IKROS-PC1-CONCLUSION-20260802-0001
+node_type: RESEARCH_CONCLUSION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "alpha_id": {
+      "type": "string"
+    },
+    "current_state": {
+      "enum": [
+        "CANDIDATE",
+        "APPROVED",
+        "ACTIVE",
+        "REDUCED",
+        "SUSPENDED",
+        "UNDER_REVIEW",
+        "REVALIDATION",
+        "RETIRED",
+        "ARCHIVED"
+      ],
+      "type": "string"
+    },
+    "history": {
+      "type": "array"
+    },
+    "mechanism": {
+      "type": "string"
+    },
+    "revalidation_trigger": {
+      "type": "string"
+    },
+    "transition_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "alpha_id",
+    "mechanism",
+    "current_state",
+    "history",
+    "transition_reason",
+    "revalidation_trigger"
+  ],
+  "title": "Portfolio Lifecycle Entry",
+  "type": "object"
+}

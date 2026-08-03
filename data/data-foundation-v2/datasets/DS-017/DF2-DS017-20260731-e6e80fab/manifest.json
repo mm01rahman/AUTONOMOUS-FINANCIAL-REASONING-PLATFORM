@@ -1,0 +1,45 @@
+{
+  "cadence": "monthly",
+  "checksum_sha256": "e6e80fabe45edf55f5e43349cbfe23a446d94115244a47f286b5de45dae4be98",
+  "covered_variables": [
+    "geopolitical_risk_index"
+  ],
+  "dataset_id": "DS-017",
+  "dataset_name": "Geopolitical Risk Index",
+  "generated_at": "2026-08-02T00:00:00Z",
+  "provenance": {
+    "fixture_or_remote": "fixture",
+    "retrieved_at": "2026-08-02T00:00:00Z",
+    "source_kind": "public_file",
+    "timezone": "UTC"
+  },
+  "provider": "AcademicProvider",
+  "quality": {
+    "completeness": 1.0,
+    "confidence_score": 0.9765,
+    "coverage": 1.0,
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-07-31T00:00:00Z",
+    "freshness": 0.9833,
+    "missing_rate": 0.0,
+    "record_count": 4,
+    "schema_conformity": 1.0,
+    "start_timestamp": "2026-04-30T00:00:00Z",
+    "timestamp_consistency": 1.0,
+    "validation_score": 0.9972
+  },
+  "raw_checksum_sha256": "952612b3efb7343b2ef78b948d329df5098d727aa610c310d93649384e3a6153",
+  "row_count": 4,
+  "source": "Caldara-Iacoviello",
+  "source_url": "https://www.matteoiacoviello.com/gpr_files/GPR.csv",
+  "storage_path": "data\\data-foundation-v2\\datasets\\DS-017\\DF2-DS017-20260731-e6e80fab\\data.csv",
+  "supported_families": [
+    "FAM-003"
+  ],
+  "supported_mechanisms": [
+    "safe_haven_migration"
+  ],
+  "timezone": "UTC",
+  "version_id": "DF2-DS017-20260731-e6e80fab",
+  "work_package": "DF2-WP-004"
+}

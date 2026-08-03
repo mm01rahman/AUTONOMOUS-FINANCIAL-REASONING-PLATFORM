@@ -1,0 +1,13 @@
+attributes: {}
+confidence: 0.4211
+created_at: '2026-08-02T15:20:22.340107+00:00'
+ikros_id: IKROS-DC4P2-DATA-DS005
+label: DC4 Phase 2 Priority DS-005 (Tier 4)
+node_id: IKROS-DC4P2-DATA-DS005
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

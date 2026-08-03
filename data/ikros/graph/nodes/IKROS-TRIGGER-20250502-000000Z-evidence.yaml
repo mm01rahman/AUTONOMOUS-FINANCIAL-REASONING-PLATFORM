@@ -1,0 +1,13 @@
+attributes: {}
+confidence: 0.76
+created_at: '2026-08-02T23:29:44.951867+00:00'
+ikros_id: IKROS-TRIGGER-20250502-000000Z-evidence
+label: evidence_conflict trigger
+node_id: IKROS-TRIGGER-20250502-000000Z-evidence
+node_type: RESEARCH_CONCLUSION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0057

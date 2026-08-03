@@ -1,0 +1,38 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0006",
+    "concept_drift": 0.51,
+    "cross_asset_consistency": 0.59,
+    "economic_plausibility": 0.63,
+    "evidence_completeness": 0.5377,
+    "expected_capacity": 0.55,
+    "explainability": 0.6,
+    "failure_severity": 0.2,
+    "generalization": 0.5,
+    "institutional_confidence": 0.5902,
+    "observation_completeness": 0.76,
+    "proxy_dependence": 0.41,
+    "regime_stability": 0.56,
+    "robustness": 0.52,
+    "scientific_validity": 0.61,
+    "statistical_quality": 0.7176
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+    "concept_drift": 0.47,
+    "cross_asset_consistency": 0.5,
+    "economic_plausibility": 0.57,
+    "evidence_completeness": 0.3221,
+    "expected_capacity": 0.5,
+    "explainability": 0.51,
+    "failure_severity": 1.0,
+    "generalization": 0.46,
+    "institutional_confidence": 0.3212,
+    "observation_completeness": 0.67,
+    "proxy_dependence": 0.58,
+    "regime_stability": 0.51,
+    "robustness": 0.48,
+    "scientific_validity": 0.55,
+    "statistical_quality": 0.3529
+  }
+]

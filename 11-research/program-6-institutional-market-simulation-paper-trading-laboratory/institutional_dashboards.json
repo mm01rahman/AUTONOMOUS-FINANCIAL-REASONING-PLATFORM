@@ -1,0 +1,170 @@
+{
+  "alpha_activity_dashboard": {
+    "tiles": [
+      [
+        "real_yield_dislocation_reversion",
+        "active"
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        "active"
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        "active"
+      ],
+      [
+        "policy_expectation_repricing",
+        "active"
+      ],
+      [
+        "safe_haven_migration",
+        "active"
+      ]
+    ]
+  },
+  "attribution_dashboard": {
+    "tiles": [
+      [
+        "real_yield_dislocation_reversion",
+        -4.5863
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        2.4272
+      ],
+      [
+        "safe_haven_migration",
+        6.6199
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        1.9014
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        0.0
+      ]
+    ]
+  },
+  "decay_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        "retain"
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        "retain"
+      ],
+      [
+        "policy_expectation_repricing",
+        "retain"
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        "retain"
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        "retain"
+      ]
+    ]
+  },
+  "live_portfolio_dashboard": {
+    "tiles": [
+      [
+        "Timestamp",
+        "2024-10-07T00:00:00+00:00"
+      ],
+      [
+        "Regime",
+        "RISK_ON"
+      ],
+      [
+        "Decision",
+        "NO POSITION"
+      ],
+      [
+        "Portfolio Confidence",
+        0.8818
+      ],
+      [
+        "Portfolio Equity",
+        1003379.13669921
+      ]
+    ]
+  },
+  "paper_trading_dashboard": {
+    "tiles": [
+      [
+        "Trades Logged",
+        16
+      ],
+      [
+        "Final Equity",
+        1003379.1367
+      ],
+      [
+        "Decision",
+        "NO POSITION"
+      ]
+    ]
+  },
+  "performance_dashboard": {
+    "tiles": [
+      [
+        "Total Return",
+        0.0034
+      ],
+      [
+        "Sharpe",
+        7.5966
+      ],
+      [
+        "Max Drawdown",
+        0.0007
+      ]
+    ]
+  },
+  "research_feedback_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        "revalidation_request"
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        "research_campaign"
+      ],
+      [
+        "policy_expectation_repricing",
+        "research_campaign"
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        "research_campaign"
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        "research_campaign"
+      ]
+    ]
+  },
+  "risk_dashboard": {
+    "tiles": [
+      [
+        "VaR",
+        0.01
+      ],
+      [
+        "Expected Shortfall",
+        0.01
+      ],
+      [
+        "Tail Exposure",
+        0.034
+      ]
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+attributes:
+  campaign_type: RESEARCH_AUDIT
+  entity_type: ResearchCampaign
+  objective: Produce observability matrix, dataset gap catalogue, institutional data
+    source registry, market state model, observability scores, data foundation V2
+    spec, and feature expansion roadmap for all 12 alpha mechanisms.
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0032
+confidence: 0.0
+created_at: '2026-08-02T15:13:28.515431+00:00'
+ikros_id: IKROS-RESEARCHCAMPAIGN-20260802-0032
+label: DC4 Institutional Market Observability & Data Expansion Program
+node_id: IKROS-RESEARCHCAMPAIGN-20260802-0032
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

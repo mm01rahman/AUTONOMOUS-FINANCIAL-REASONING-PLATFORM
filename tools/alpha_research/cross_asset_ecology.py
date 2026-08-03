@@ -280,7 +280,9 @@ def _cross_correlation_profile(
         "peak_lag_days": peak_lag,
         "peak_correlation": round(peak_corr, 4),
         "t_stat_proxy": round(t_stat, 3),
-        "lead_direction": "signal_leads_xau" if peak_lag > 0 else ("lagged" if peak_lag < 0 else "contemporaneous"),
+        "lead_direction": "signal_leads_xau"
+        if peak_lag > 0
+        else ("lagged" if peak_lag < 0 else "contemporaneous"),
     }
 
 
@@ -369,9 +371,14 @@ def _granger_causality_proxy(
     # Enhanced: predict xau[t] from xau[t-1] and sig[t-lag]
     min_len = len(xau_arr) - lag - 1
     if min_len < 10:
-        return {"baseline_r2": round(baseline_r2, 5), "enhanced_r2": 0.0, "r2_gain": 0.0, "granger_positive": False}
+        return {
+            "baseline_r2": round(baseline_r2, 5),
+            "enhanced_r2": 0.0,
+            "r2_gain": 0.0,
+            "granger_positive": False,
+        }
     combined = np.column_stack([xau_arr[lag:-1], sig_arr[:min_len]])
-    enhanced_r2 = _ols_r2(combined, xau_arr[lag + 1:])
+    enhanced_r2 = _ols_r2(combined, xau_arr[lag + 1 :])
     r2_gain = enhanced_r2 - baseline_r2
     return {
         "baseline_r2": round(baseline_r2, 5),
@@ -404,7 +411,10 @@ def _information_flow_analysis(frame: pd.DataFrame) -> dict[str, Any]:
                 regime_mi[regime] = 0.0
                 continue
             regime_mi[regime] = round(
-                _mutual_information(subset[sig_name].astype(float), subset["xau_return_1"].astype(float), bins=5), 5
+                _mutual_information(
+                    subset[sig_name].astype(float), subset["xau_return_1"].astype(float), bins=5
+                ),
+                5,
             )
         conditional_mi[sig_name] = regime_mi
 
@@ -427,12 +437,14 @@ def _identify_transitions(frame: pd.DataFrame) -> list[dict[str, Any]]:
     dates = list(frame.index)
     for i in range(1, len(regimes)):
         if regimes[i] != regimes[i - 1]:
-            transitions.append({
-                "date": str(dates[i])[:10],
-                "from_regime": regimes[i - 1],
-                "to_regime": regimes[i],
-                "row_index": i,
-            })
+            transitions.append(
+                {
+                    "date": str(dates[i])[:10],
+                    "from_regime": regimes[i - 1],
+                    "to_regime": regimes[i],
+                    "row_index": i,
+                }
+            )
     return transitions
 
 
@@ -457,7 +469,19 @@ def _transition_window_stats(
 
 def _transition_ecology_analysis(frame: pd.DataFrame) -> dict[str, Any]:
     transitions = _identify_transitions(frame)
-    sig_names = [s for s in ("dxy_return_1", "dxy_return_5", "yield_10y_change_5", "yield_curve_10y_3m", "geo_severity", "macro_pressure", "forward_expectation") if s in frame.columns]
+    sig_names = [
+        s
+        for s in (
+            "dxy_return_1",
+            "dxy_return_5",
+            "yield_10y_change_5",
+            "yield_curve_10y_3m",
+            "geo_severity",
+            "macro_pressure",
+            "forward_expectation",
+        )
+        if s in frame.columns
+    ]
 
     # Aggregate: mean signal value by transition type and window offset
     transition_types: dict[str, list[dict[str, Any]]] = {}
@@ -478,7 +502,11 @@ def _transition_ecology_analysis(frame: pd.DataFrame) -> dict[str, Any]:
         for sig_name in sig_names:
             windows = list(rows[0][sig_name].keys()) if rows else []
             for w in windows:
-                vals = [r[sig_name].get(w, float("nan")) for r in rows if not math.isnan(r[sig_name].get(w, float("nan")))]
+                vals = [
+                    r[sig_name].get(w, float("nan"))
+                    for r in rows
+                    if not math.isnan(r[sig_name].get(w, float("nan")))
+                ]
                 if sig_name not in agg:
                     agg[sig_name] = {}
                 agg[sig_name][w] = round(float(np.mean(vals)), 6) if vals else 0.0
@@ -488,7 +516,9 @@ def _transition_ecology_analysis(frame: pd.DataFrame) -> dict[str, Any]:
         }
 
     # Most common transitions
-    common_transitions = sorted(aggregated.keys(), key=lambda k: aggregated[k]["count"], reverse=True)[:8]
+    common_transitions = sorted(
+        aggregated.keys(), key=lambda k: aggregated[k]["count"], reverse=True
+    )[:8]
 
     # Dominant pre-transition signals: which signal changes most before transitions?
     dominant_drivers: dict[str, float] = {}
@@ -500,7 +530,9 @@ def _transition_ecology_analysis(frame: pd.DataFrame) -> dict[str, Any]:
                 pre_0 = row[sig_name].get("w0", float("nan"))
                 if not math.isnan(pre_5) and not math.isnan(pre_0):
                     all_pre_changes.append(abs(pre_0 - pre_5))
-        dominant_drivers[sig_name] = round(float(np.mean(all_pre_changes)), 6) if all_pre_changes else 0.0
+        dominant_drivers[sig_name] = (
+            round(float(np.mean(all_pre_changes)), 6) if all_pre_changes else 0.0
+        )
 
     ranked_drivers = sorted(dominant_drivers.items(), key=lambda x: x[1], reverse=True)
 
@@ -510,8 +542,7 @@ def _transition_ecology_analysis(frame: pd.DataFrame) -> dict[str, Any]:
         "common_transitions": common_transitions,
         "aggregated_profiles": aggregated,
         "dominant_pre_transition_signals": [
-            {"signal": s, "mean_abs_change_w5_to_w0": v}
-            for s, v in ranked_drivers
+            {"signal": s, "mean_abs_change_w5_to_w0": v} for s, v in ranked_drivers
         ],
         "transition_list_sample": transitions[:20],
     }
@@ -530,7 +561,9 @@ def _synchronization_analysis(frame: pd.DataFrame) -> dict[str, Any]:
     rolling_corrs: dict[str, NDArray[np.float64]] = {}
     for sig_name in sig_names:
         sig = frame[sig_name].astype(float)
-        rolling_corrs[sig_name] = np.asarray(xau.rolling(SYNC_WINDOW).corr(sig).to_numpy(), dtype=float)
+        rolling_corrs[sig_name] = np.asarray(
+            xau.rolling(SYNC_WINDOW).corr(sig).to_numpy(), dtype=float
+        )
 
     # Stratify by period type
     def _period_mask(condition_col: str) -> NDArray[np.bool_]:
@@ -563,18 +596,24 @@ def _synchronization_analysis(frame: pd.DataFrame) -> dict[str, Any]:
         for sig_name in sig_names:
             subset_corrs = rolling_corrs[sig_name][mask]
             finite_corrs = subset_corrs[np.isfinite(subset_corrs)]
-            period_sync[sig_name] = round(float(np.mean(finite_corrs)), 4) if len(finite_corrs) > 0 else 0.0
+            period_sync[sig_name] = (
+                round(float(np.mean(finite_corrs)), 4) if len(finite_corrs) > 0 else 0.0
+            )
         sync_by_period[period_name] = period_sync
 
     # Regime-conditioned synchronization
     regime_sync: dict[str, dict[str, float]] = {}
     for regime in REGIME_ORDER:
-        regime_mask: NDArray[np.bool_] = np.asarray((frame["regime"] == regime).to_numpy(), dtype=bool)
+        regime_mask: NDArray[np.bool_] = np.asarray(
+            (frame["regime"] == regime).to_numpy(), dtype=bool
+        )
         regime_period: dict[str, float] = {}
         for sig_name in sig_names:
             subset_corrs = rolling_corrs[sig_name][regime_mask]
             finite_corrs = subset_corrs[np.isfinite(subset_corrs)]
-            regime_period[sig_name] = round(float(np.mean(finite_corrs)), 4) if len(finite_corrs) > 0 else 0.0
+            regime_period[sig_name] = (
+                round(float(np.mean(finite_corrs)), 4) if len(finite_corrs) > 0 else 0.0
+            )
         regime_sync[regime] = regime_period
 
     # Cross-signal synchronization matrix (pairwise)
@@ -586,14 +625,20 @@ def _synchronization_analysis(frame: pd.DataFrame) -> dict[str, Any]:
             if s1 == s2:
                 sync_matrix[s1][s2] = 1.0
             else:
-                sync_matrix[s1][s2] = round(_safe_pearson(frame[s1].astype(float), frame[s2].astype(float)), 4)
+                sync_matrix[s1][s2] = round(
+                    _safe_pearson(frame[s1].astype(float), frame[s2].astype(float)), 4
+                )
 
     return {
         "synchronization_by_period": sync_by_period,
         "synchronization_by_regime": regime_sync,
         "cross_signal_matrix": sync_matrix,
         "stress_synchronization_change": {
-            sig_name: round(sync_by_period["stress"].get(sig_name, 0.0) - sync_by_period["normal"].get(sig_name, 0.0), 4)
+            sig_name: round(
+                sync_by_period["stress"].get(sig_name, 0.0)
+                - sync_by_period["normal"].get(sig_name, 0.0),
+                4,
+            )
             for sig_name in sig_names
         },
     }
@@ -638,8 +683,10 @@ def _adaptive_behavior_analysis(frame: pd.DataFrame) -> dict[str, Any]:
             "max_correlation": round(float(np.max(corr_vals)), 4),
             "sign_flip_rate": round(sign_flip_rate, 4),
             "interpretation": (
-                "stable" if stability > 0.6 and sign_flip_rate < 0.1
-                else "moderately_stable" if stability > 0.4
+                "stable"
+                if stability > 0.6 and sign_flip_rate < 0.1
+                else "moderately_stable"
+                if stability > 0.4
                 else "unstable"
             ),
         }
@@ -686,20 +733,22 @@ def _cross_market_influence_matrix(
         stability_score = float(stab.get("stability_score", 0.0))
         # Composite influence score: correlation × MI × stability bonus
         influence = abs(peak_corr) * (1.0 + peak_mi * 100.0) * (0.5 + 0.5 * stability_score)
-        rows.append({
-            "signal": sig_name,
-            "title": sig_meta.get("title", ""),
-            "market": sig_meta.get("market", ""),
-            "category": sig_meta.get("category", ""),
-            "peak_lag_days": int(ll.get("peak_lag_days", 0)),
-            "peak_correlation": round(peak_corr, 4),
-            "peak_mi": round(peak_mi, 5),
-            "r2_gain": round(float(gc.get("r2_gain", 0.0)), 5),
-            "granger_positive": granger_pos,
-            "stability_score": round(stability_score, 4),
-            "composite_influence_score": round(influence, 4),
-            "lead_direction": ll.get("lead_direction", "unknown"),
-        })
+        rows.append(
+            {
+                "signal": sig_name,
+                "title": sig_meta.get("title", ""),
+                "market": sig_meta.get("market", ""),
+                "category": sig_meta.get("category", ""),
+                "peak_lag_days": int(ll.get("peak_lag_days", 0)),
+                "peak_correlation": round(peak_corr, 4),
+                "peak_mi": round(peak_mi, 5),
+                "r2_gain": round(float(gc.get("r2_gain", 0.0)), 5),
+                "granger_positive": granger_pos,
+                "stability_score": round(stability_score, 4),
+                "composite_influence_score": round(influence, 4),
+                "lead_direction": ll.get("lead_direction", "unknown"),
+            }
+        )
     rows.sort(key=lambda r: float(r["composite_influence_score"]), reverse=True)
     return {"influence_rows": rows}
 
@@ -722,11 +771,13 @@ def _arb_recommendation(
     top_drivers = [r["signal"] for r in transition.get("dominant_pre_transition_signals", [])[:3]]
     granger_positive = [r["signal"] for r in influence_rows if r.get("granger_positive")]
     stable_signals = [
-        sig for sig, stab in adaptive["temporal_stability"].items()
+        sig
+        for sig, stab in adaptive["temporal_stability"].items()
         if stab.get("interpretation") == "stable"
     ]
     stress_amplified = [
-        sig for sig, delta in synchronization.get("stress_synchronization_change", {}).items()
+        sig
+        for sig, delta in synchronization.get("stress_synchronization_change", {}).items()
         if float(delta) > 0.05
     ]
 
@@ -779,7 +830,9 @@ def prepare_dc2_program_a_artifacts(
     synchronization = _synchronization_analysis(frame)
     adaptive = _adaptive_behavior_analysis(frame)
     influence_matrix = _cross_market_influence_matrix(lead_lag, info_flow, adaptive)
-    arb = _arb_recommendation(lead_lag, info_flow, transition, synchronization, adaptive, influence_matrix)
+    arb = _arb_recommendation(
+        lead_lag, info_flow, transition, synchronization, adaptive, influence_matrix
+    )
 
     analysis: dict[str, Any] = {
         "program": {
@@ -822,8 +875,9 @@ def prepare_dc2_program_a_artifacts(
 
 
 def load_dc2_program_a_analysis(repo_root: Path) -> dict[str, Any]:
-    from typing import cast
     import json
+    from typing import cast
+
     analysis_path = repo_root / DC2_PROGRAM_A_ANALYSIS
     return cast(dict[str, Any], json.loads(analysis_path.read_text(encoding="utf-8")))
 
@@ -855,41 +909,63 @@ def emit_dc2_program_a_reports(
     ecology_md = output_dir / "CROSS_ASSET_ECOLOGY_REPORT.md"
     influence_rows_table = [
         [
-            r["signal"], r["market"], r["category"],
-            r["peak_lag_days"], r["peak_correlation"],
-            r["composite_influence_score"], r["lead_direction"],
+            r["signal"],
+            r["market"],
+            r["category"],
+            r["peak_lag_days"],
+            r["peak_correlation"],
+            r["composite_influence_score"],
+            r["lead_direction"],
         ]
         for r in influence[:10]
     ]
-    write_markdown(ecology_md, f"""
+    write_markdown(
+        ecology_md,
+        f"""
 # Cross-Asset Ecology Report
 
 ## Program
-**{prog['title']}**
+**{prog["title"]}**
 
-Cycle: {prog['cycle']} | Authority: {prog['authority']}
-Governing taxonomy: {prog['governing_taxonomy']}
-Rows analyzed: {prog['rows_analyzed']:,}
+Cycle: {prog["cycle"]} | Authority: {prog["authority"]}
+Governing taxonomy: {prog["governing_taxonomy"]}
+Rows analyzed: {prog["rows_analyzed"]:,}
 
 ## Research Themes
-{chr(10).join(f'- {t}' for t in prog['research_themes'])}
+{chr(10).join(f"- {t}" for t in prog["research_themes"])}
 
 ## Available Signals
-{chr(10).join(f'- `{s}`' for s in prog['available_signals'])}
+{chr(10).join(f"- `{s}`" for s in prog["available_signals"])}
 
 ## Unavailable Markets (Data Gaps)
-{chr(10).join(f'- **{g["market"]}** (severity: {g["gap_severity"]}) — {g["expected_contribution"]}' for g in analysis['data_availability']['unavailable_markets'])}
+{
+            chr(10).join(
+                f"- **{g['market']}** (severity: {g['gap_severity']}) - {g['expected_contribution']}"
+                for g in analysis["data_availability"]["unavailable_markets"]
+            )
+        }
 
 ## Cross-Market Influence Ranking
 
-{markdown_table(
-    ['Signal', 'Market', 'Category', 'Peak Lead (days)', 'Peak Corr', 'Influence Score', 'Direction'],
-    influence_rows_table,
-)}
+{
+            markdown_table(
+                [
+                    "Signal",
+                    "Market",
+                    "Category",
+                    "Peak Lead (days)",
+                    "Peak Corr",
+                    "Influence Score",
+                    "Direction",
+                ],
+                influence_rows_table,
+            )
+        }
 
 ## ARB Narrative
-{arb['arb_narrative']}
-""")
+{arb["arb_narrative"]}
+""",
+    )
     written["ecology_report"] = str(ecology_md)
 
     # 2. Lead-Lag Atlas
@@ -905,20 +981,32 @@ Rows analyzed: {prog['rows_analyzed']:,}
         ]
         for sig, meta in lead_lag["unconditional"].items()
     ]
-    write_markdown(ll_md, f"""
+    write_markdown(
+        ll_md,
+        f"""
 # Lead-Lag Atlas
 
 Positive peak lag → signal leads XAU/USD.
 Negative peak lag → signal lags XAU/USD.
 
-{markdown_table(
-    ['Signal', 'Market', 'Peak Lag (days)', 'Peak Correlation', 'T-Stat Proxy', 'Direction'],
-    ll_rows,
-)}
+{
+            markdown_table(
+                [
+                    "Signal",
+                    "Market",
+                    "Peak Lag (days)",
+                    "Peak Correlation",
+                    "T-Stat Proxy",
+                    "Direction",
+                ],
+                ll_rows,
+            )
+        }
 
 ## Regime-Conditioned Lead-Lag
-{_fmt_regime_lead_lag(lead_lag['regime_conditioned'])}
-""")
+{_fmt_regime_lead_lag(lead_lag["regime_conditioned"])}
+""",
+    )
     written["lead_lag_atlas"] = str(ll_md)
     write_json(output_dir / "lead_lag_atlas.json", lead_lag)
 
@@ -930,23 +1018,31 @@ Negative peak lag → signal lags XAU/USD.
         for t_key in transition.get("common_transitions", list(agg.keys())[:8])
         if t_key in agg
     ]
-    write_markdown(tn_md, f"""
+    write_markdown(
+        tn_md,
+        f"""
 # Transition Network
 
-Total regime transitions identified: **{transition['total_transitions']}**
-Unique transition types: **{transition['transition_type_count']}**
+Total regime transitions identified: **{transition["total_transitions"]}**
+Unique transition types: **{transition["transition_type_count"]}**
 
 ## Most Frequent Transitions
 
-{markdown_table(['Transition', 'Count'], tn_rows)}
+{markdown_table(["Transition", "Count"], tn_rows)}
 
 ## Dominant Pre-Transition Signals (Mean |ΔSignal| over w-5 to w0)
 
-{markdown_table(
-    ['Signal', 'Mean |ΔSignal|'],
-    [[r['signal'], r['mean_abs_change_w5_to_w0']] for r in transition.get('dominant_pre_transition_signals', [])],
-)}
-""")
+{
+            markdown_table(
+                ["Signal", "Mean |ΔSignal|"],
+                [
+                    [r["signal"], r["mean_abs_change_w5_to_w0"]]
+                    for r in transition.get("dominant_pre_transition_signals", [])
+                ],
+            )
+        }
+""",
+    )
     written["transition_network"] = str(tn_md)
     write_json(output_dir / "transition_network.json", transition)
 
@@ -963,33 +1059,48 @@ Unique transition types: **{transition['transition_type_count']}**
             gc.get(sig, {}).get("r2_gain", ""),
             gc.get(sig, {}).get("granger_positive", ""),
         ]
-        for sig in CROSS_ASSET_SIGNALS if sig in te
+        for sig in CROSS_ASSET_SIGNALS
+        if sig in te
     ]
-    write_markdown(if_md, f"""
+    write_markdown(
+        if_md,
+        f"""
 # Information Flow Atlas
 
 ## Transfer Entropy Proxy (Mutual Information at Lags)
 
-{markdown_table(
-    ['Signal', 'Peak TE Lag', 'Peak MI', 'MI Gain from Lag', 'Granger R² Gain', 'Granger Positive'],
-    if_rows,
-)}
+{
+            markdown_table(
+                [
+                    "Signal",
+                    "Peak TE Lag",
+                    "Peak MI",
+                    "MI Gain from Lag",
+                    "Granger R² Gain",
+                    "Granger Positive",
+                ],
+                if_rows,
+            )
+        }
 
 ## Regime-Conditioned Mutual Information
 
-{_fmt_conditional_mi(info_flow['regime_conditioned_mi'])}
-""")
+{_fmt_conditional_mi(info_flow["regime_conditioned_mi"])}
+""",
+    )
     written["information_flow_atlas"] = str(if_md)
     write_json(output_dir / "information_flow_atlas.json", info_flow)
 
     # 5. Cross-Asset Dependency Graph
     dep_md = output_dir / "CROSS_ASSET_DEPENDENCY_GRAPH.md"
-    write_markdown(dep_md, f"""
+    write_markdown(
+        dep_md,
+        f"""
 # Cross-Asset Dependency Graph
 
 ## Signal Correlation Matrix (Pairwise)
 
-{_fmt_sync_matrix(sync.get('cross_signal_matrix', {}))}
+{_fmt_sync_matrix(sync.get("cross_signal_matrix", {}))}
 
 ## Interpretation
 Pairwise correlations reveal structural collinearity among available signals.
@@ -998,83 +1109,135 @@ Yield-derived signals form a semi-independent yield ecology cluster.
 
 ## Data Gap Impact
 The following HIGH-severity markets, if added, would materially extend this dependency graph:
-{chr(10).join(f'- {g["market"]}: {g["expected_contribution"]}' for g in UNAVAILABLE_MARKETS if g["gap_severity"] == "HIGH")}
-""")
+{chr(10).join(
+    f"- {g['market']}: {g['expected_contribution']}"
+    for g in UNAVAILABLE_MARKETS
+    if g["gap_severity"] == "HIGH"
+)}
+""",
+    )
     written["dependency_graph"] = str(dep_md)
 
     # 6. Regime Transition Drivers
     rtd_md = output_dir / "REGIME_TRANSITION_DRIVERS.md"
-    write_markdown(rtd_md, f"""
+    write_markdown(
+        rtd_md,
+        f"""
 # Regime Transition Drivers
 
 ## Dominant Pre-Transition Signals
 
-{markdown_table(
-    ['Rank', 'Signal', 'Mean |ΔSignal| w-5→w0'],
-    [
-        [i + 1, r['signal'], r['mean_abs_change_w5_to_w0']]
-        for i, r in enumerate(transition.get('dominant_pre_transition_signals', []))
-    ],
-)}
+{
+            markdown_table(
+                ["Rank", "Signal", "Mean |ΔSignal| w-5→w0"],
+                [
+                    [i + 1, r["signal"], r["mean_abs_change_w5_to_w0"]]
+                    for i, r in enumerate(transition.get("dominant_pre_transition_signals", []))
+                ],
+            )
+        }
 
 ## Most Informative Transition Types
 
-{markdown_table(
-    ['Transition', 'Episode Count'],
-    [[t, agg[t]['count']] for t in transition.get('common_transitions', []) if t in agg],
-)}
+{
+            markdown_table(
+                ["Transition", "Episode Count"],
+                [
+                    [t, agg[t]["count"]]
+                    for t in transition.get("common_transitions", [])
+                    if t in agg
+                ],
+            )
+        }
 
 ## ARB Finding
-Dominant transition drivers (locally measurable): **{', '.join(arb['dominant_transition_drivers'])}**
-""")
+Dominant transition drivers (locally measurable): **{
+            ", ".join(arb["dominant_transition_drivers"])
+        }**
+""",
+    )
     written["regime_transition_drivers"] = str(rtd_md)
 
     # 7. Cross-Market Influence Matrix
     im_md = output_dir / "CROSS_MARKET_INFLUENCE_MATRIX.md"
-    write_markdown(im_md, f"""
+    write_markdown(
+        im_md,
+        f"""
 # Cross-Market Influence Matrix
 
-{markdown_table(
-    ['Signal', 'Market', 'Peak Lag', 'Peak Corr', 'MI', 'Granger R²+', 'Stability', 'Influence Score'],
-    [
-        [
-            r['signal'], r['market'], r['peak_lag_days'], r['peak_correlation'],
-            r['peak_mi'], r['granger_positive'], r['stability_score'], r['composite_influence_score'],
-        ]
-        for r in influence
-    ],
-)}
-""")
+{
+            markdown_table(
+                [
+                    "Signal",
+                    "Market",
+                    "Peak Lag",
+                    "Peak Corr",
+                    "MI",
+                    "Granger R²+",
+                    "Stability",
+                    "Influence Score",
+                ],
+                [
+                    [
+                        r["signal"],
+                        r["market"],
+                        r["peak_lag_days"],
+                        r["peak_correlation"],
+                        r["peak_mi"],
+                        r["granger_positive"],
+                        r["stability_score"],
+                        r["composite_influence_score"],
+                    ]
+                    for r in influence
+                ],
+            )
+        }
+""",
+    )
     written["influence_matrix"] = str(im_md)
-    write_json(output_dir / "cross_market_influence_matrix.json", analysis["cross_market_influence_matrix"])
+    write_json(
+        output_dir / "cross_market_influence_matrix.json", analysis["cross_market_influence_matrix"]
+    )
 
     # 8. Research Gap Analysis
     rga_md = output_dir / "RESEARCH_GAP_ANALYSIS.md"
-    write_markdown(rga_md, f"""
+    write_markdown(
+        rga_md,
+        f"""
 # Research Gap Analysis
 
 ## Critical Data Gaps
 
-{markdown_table(
-    ['Market', 'IKROS Gap ID', 'Gap Severity', 'Expected Contribution'],
-    [[g['market'], g['ikros_gap_id'], g['gap_severity'], g['expected_contribution']] for g in UNAVAILABLE_MARKETS],
-)}
+{
+            markdown_table(
+                ["Market", "IKROS Gap ID", "Gap Severity", "Expected Contribution"],
+                [
+                    [g["market"], g["ikros_gap_id"], g["gap_severity"], g["expected_contribution"]]
+                    for g in UNAVAILABLE_MARKETS
+                ],
+            )
+        }
 
 ## Impact on Research Quality
-- {len([g for g in UNAVAILABLE_MARKETS if g['gap_severity'] == 'HIGH'])} HIGH-severity gaps materially limit cross-asset network completeness.
+- {
+            len([g for g in UNAVAILABLE_MARKETS if g["gap_severity"] == "HIGH"])
+        } HIGH-severity gaps materially limit cross-asset network completeness.
 - VIX absence prevents equity-gold volatility synchronization analysis.
 - Absence of equity indices prevents risk-on/risk-off transmission study.
 - Absence of COMEX positioning blocks participant crowding analysis.
 
 ## Recommendation
 Authorize data acquisition for HIGH-severity gaps before DC2 scientific validation.
-""")
+""",
+    )
     written["research_gap_analysis"] = str(rga_md)
     write_json(output_dir / "research_gap_analysis.json", UNAVAILABLE_MARKETS)
 
     # 9. Method Comparison Report
     mc_md = output_dir / "METHOD_COMPARISON_REPORT.md"
-    write_markdown(mc_md, """
+    write_markdown(
+        mc_md,
+        """
 # Method Comparison Report
 
 | Method | Decision | Rationale |
@@ -1093,42 +1256,48 @@ Authorize data acquisition for HIGH-severity gaps before DC2 scientific validati
 
 ## Conclusion
 Four methods were applied. Dynamic methods (VAR, Bayesian Networks, SCM) deferred until cross-asset datasets available.
-""")
+""",
+    )
     written["method_comparison"] = str(mc_md)
 
     # 10. Institutional Recommendations
     ir_md = output_dir / "INSTITUTIONAL_RECOMMENDATIONS.md"
-    write_markdown(ir_md, f"""
+    write_markdown(
+        ir_md,
+        f"""
 # Institutional Recommendations
 
 ## Strongest Cross-Market Relationships
-{chr(10).join(f'{i+1}. `{s}`' for i, s in enumerate(arb['strongest_cross_market_relationships']))}
+{chr(10).join(f"{i + 1}. `{s}`" for i, s in enumerate(arb["strongest_cross_market_relationships"]))}
 
 ## Dominant Transition Drivers
-{chr(10).join(f'- `{s}`' for s in arb['dominant_transition_drivers'])}
+{chr(10).join(f"- `{s}`" for s in arb["dominant_transition_drivers"])}
 
 ## Granger-Positive Signals (Predictive Content Confirmed)
-{chr(10).join(f'- `{s}`' for s in arb['granger_positive_signals']) if arb['granger_positive_signals'] else '- None confirmed at this stage'}
+{chr(10).join(f"- `{s}`" for s in arb["granger_positive_signals"]) if arb["granger_positive_signals"] else "- None confirmed at this stage"}
 
 ## Stable Relationships (Temporally Consistent)
-{chr(10).join(f'- `{s}`' for s in arb['stable_relationships']) if arb['stable_relationships'] else '- None fully stable in available data'}
+{chr(10).join(f"- `{s}`" for s in arb["stable_relationships"]) if arb["stable_relationships"] else "- None fully stable in available data"}
 
 ## Stress-Amplified Relationships
-{chr(10).join(f'- `{s}`' for s in arb['stress_amplified_relationships']) if arb['stress_amplified_relationships'] else '- None significantly amplified'}
+{chr(10).join(f"- `{s}`" for s in arb["stress_amplified_relationships"]) if arb["stress_amplified_relationships"] else "- None significantly amplified"}
 
 ## Recommendations for ARB
 
-1. **Authorize data acquisition** for HIGH-severity gaps: {', '.join(arb['data_gap_priority'][:5])}.
-2. **Promote to DC2 validation**: {', '.join(arb['promotion_candidates_for_dc2_validation']) if arb['promotion_candidates_for_dc2_validation'] else 'pending data gap resolution'}.
-3. **Further research required** before promotion: {', '.join(arb['signals_requiring_further_research']) if arb['signals_requiring_further_research'] else 'none'}.
+1. **Authorize data acquisition** for HIGH-severity gaps: {", ".join(arb["data_gap_priority"][:5])}.
+2. **Promote to DC2 validation**: {", ".join(arb["promotion_candidates_for_dc2_validation"]) if arb["promotion_candidates_for_dc2_validation"] else "pending data gap resolution"}.
+3. **Further research required** before promotion: {", ".join(arb["signals_requiring_further_research"]) if arb["signals_requiring_further_research"] else "none"}.
 4. **Do not promote** any relationship to alpha candidate status at this stage — ecology mapping is complete; scientific validation is the next step.
-""")
+""",
+    )
     written["institutional_recommendations"] = str(ir_md)
 
     # 11. Final Campaign Report
     final_md = output_dir / "DC2_PROGRAM_A_FINAL_REPORT.md"
     status = campaign_result.get("lifecycle_status", "COMPLETE")
-    write_markdown(final_md, f"""
+    write_markdown(
+        final_md,
+        f"""
 # DC2 Research Program A — Final Report
 
 Cross-Asset Transition Ecology Research Program
@@ -1137,7 +1306,7 @@ Cross-Asset Transition Ecology Research Program
 **{status}**
 
 ## Deliverables Produced
-{chr(10).join(f'- {k}: {v}' for k, v in written.items())}
+{chr(10).join(f"- {k}: {v}" for k, v in written.items())}
 
 ## Summary
 Discovery Cycle 2 Research Program A has completed the Cross-Asset Transition Ecology mapping
@@ -1146,12 +1315,12 @@ across five research themes to determine how cross-asset information propagates 
 XAU/USD regime transitions.
 
 ## Key Findings
-- Available locally governed signals: {len(prog['available_signals'])} cross-asset signal series.
-- Regime transitions identified: {transition['total_transitions']}.
-- Dominant pre-transition drivers: {', '.join(arb['dominant_transition_drivers'])}.
-- Strongest relationships: {', '.join(arb['strongest_cross_market_relationships'][:3])}.
-- Granger-positive signals: {', '.join(arb['granger_positive_signals']) if arb['granger_positive_signals'] else 'none confirmed at threshold'}.
-- HIGH-severity data gaps blocking completeness: {len(arb['data_gap_priority'])}.
+- Available locally governed signals: {len(prog["available_signals"])} cross-asset signal series.
+- Regime transitions identified: {transition["total_transitions"]}.
+- Dominant pre-transition drivers: {", ".join(arb["dominant_transition_drivers"])}.
+- Strongest relationships: {", ".join(arb["strongest_cross_market_relationships"][:3])}.
+- Granger-positive signals: {", ".join(arb["granger_positive_signals"]) if arb["granger_positive_signals"] else "none confirmed at threshold"}.
+- HIGH-severity data gaps blocking completeness: {len(arb["data_gap_priority"])}.
 
 ## Constraints Observed
 - Runtime FROZEN throughout.
@@ -1161,10 +1330,11 @@ XAU/USD regime transitions.
 - No alpha candidates promoted.
 
 ## ARB Recommendation
-{arb['arb_narrative']}
+{arb["arb_narrative"]}
 
-{arb['stop_confirmation']}
-""")
+{arb["stop_confirmation"]}
+""",
+    )
     written["final_report"] = str(final_md)
 
     return written
@@ -1201,5 +1371,7 @@ def _fmt_sync_matrix(matrix: dict[str, dict[str, float]]) -> str:
         return "_No data_"
     signals = list(matrix.keys())
     header = ["Signal"] + signals
-    rows: list[list[object]] = [[sig] + [matrix[sig].get(other, 0.0) for other in signals] for sig in signals]
+    rows: list[list[object]] = [
+        [sig] + [matrix[sig].get(other, 0.0) for other in signals] for sig in signals
+    ]
     return markdown_table(header, rows)

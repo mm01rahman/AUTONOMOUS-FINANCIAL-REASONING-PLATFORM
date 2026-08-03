@@ -1,0 +1,13 @@
+attributes: {}
+confidence: 0.495
+created_at: '2026-08-02T15:13:39.153630+00:00'
+ikros_id: IKROS-DC4-OBS-MACROREPRIC
+label: 'DC4 Observability: macro_repricing (50%)'
+node_id: IKROS-DC4-OBS-MACROREPRIC
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

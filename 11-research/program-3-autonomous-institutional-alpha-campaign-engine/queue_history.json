@@ -1,0 +1,78 @@
+[
+  {
+    "iteration": 1,
+    "queue": [
+      {
+        "campaign_id": "P3-CAMPAIGN-0001",
+        "mechanism": "safe_haven_migration",
+        "phase": "TEMPORAL_STABILITY",
+        "priority": 0.082,
+        "selection_reason": "Highest expected information gain for a near-promotion mechanism with known temporal instability and strong observation completeness.",
+        "title": "Temporal stability ablation and stress-window redesign"
+      },
+      {
+        "campaign_id": "P3-CAMPAIGN-0004",
+        "mechanism": "decision_cascade",
+        "phase": "DATA_REVIEW",
+        "priority": 0.055,
+        "selection_reason": "Mechanism cannot advance because the observation gate remains below threshold. Highest-value action is to formalize the data limitation.",
+        "title": "Observation-gap investigation and data acquisition review"
+      }
+    ]
+  },
+  {
+    "iteration": 2,
+    "queue": [
+      {
+        "campaign_id": "P3-CAMPAIGN-0002",
+        "mechanism": "safe_haven_migration",
+        "phase": "REVALIDATION",
+        "priority": 0.071,
+        "selection_reason": "After temporal stabilization, the remaining bottleneck is cross-regime robustness and economic understanding. Revalidation can close both.",
+        "title": "Cross-regime revalidation and causal refinement"
+      },
+      {
+        "campaign_id": "P3-CAMPAIGN-0004",
+        "mechanism": "decision_cascade",
+        "phase": "DATA_REVIEW",
+        "priority": 0.055,
+        "selection_reason": "Mechanism cannot advance because the observation gate remains below threshold. Highest-value action is to formalize the data limitation.",
+        "title": "Observation-gap investigation and data acquisition review"
+      }
+    ]
+  },
+  {
+    "iteration": 3,
+    "queue": [
+      {
+        "campaign_id": "P3-CAMPAIGN-0003",
+        "mechanism": "safe_haven_migration",
+        "phase": "PROMOTION",
+        "priority": 0.066,
+        "selection_reason": "Mechanism is promotion-eligible pending one final independent replication pass and governed committee review.",
+        "title": "Promotion replication and committee review"
+      },
+      {
+        "campaign_id": "P3-CAMPAIGN-0004",
+        "mechanism": "decision_cascade",
+        "phase": "DATA_REVIEW",
+        "priority": 0.055,
+        "selection_reason": "Mechanism cannot advance because the observation gate remains below threshold. Highest-value action is to formalize the data limitation.",
+        "title": "Observation-gap investigation and data acquisition review"
+      }
+    ]
+  },
+  {
+    "iteration": 4,
+    "queue": [
+      {
+        "campaign_id": "P3-CAMPAIGN-0004",
+        "mechanism": "decision_cascade",
+        "phase": "DATA_REVIEW",
+        "priority": 0.055,
+        "selection_reason": "Mechanism cannot advance because the observation gate remains below threshold. Highest-value action is to formalize the data limitation.",
+        "title": "Observation-gap investigation and data acquisition review"
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+attributes:
+  description: Decision-layer model explaining how participant expectations and belief
+    updates create coordinated market actions.
+  program: DC2 Program B Phase 2
+confidence: 0.74
+created_at: '2026-08-02T11:00:11.268612+00:00'
+ikros_id: IKROS-PB2-WORLDMODEL-20260802-0001
+label: Institutional Decision Ecology Model
+node_id: IKROS-PB2-WORLDMODEL-20260802-0001
+node_type: WORLD_MODEL
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

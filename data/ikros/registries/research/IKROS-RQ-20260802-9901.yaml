@@ -1,0 +1,56 @@
+campaign_tag: ''
+capability_refs: []
+confidence:
+  data: 0.72
+  economic: 0.78
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.72
+  operational: 0.0
+  overall: 0.7394688177298846
+  prior: 0.75
+  replication: 0.0
+  statistical: 0.0
+  validation: 0.0
+entity_type: ResearchQuestion
+ikros_id: IKROS-RQ-20260802-9901
+instrument: XAU/USD
+lifecycle_state: OPEN
+lineage:
+  dependencies:
+    datasets: []
+    external_refs: []
+    features: []
+    inputs: []
+    models: []
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: data-foundation-v2-phase1
+    creation_context: Data Foundation V2 Phase 1 primary question
+    motivation: Implement permanent institutional-grade observation capability for
+      approved free Tier 1 datasets.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+linked_conclusions: []
+linked_hypotheses: []
+motivation: ''
+scope: MACRO
+spec_refs: []
+time_horizon: ''
+title: Data Foundation V2 Tier 1 Observation Question
+version: 1.0.0
+version_history: []
+work_package_refs: []

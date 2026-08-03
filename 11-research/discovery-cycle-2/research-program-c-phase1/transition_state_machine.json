@@ -1,0 +1,210 @@
+{
+  "edges": [
+    {
+      "confidence": 0.7077,
+      "source": "calm_carry",
+      "target": "bear_unwind",
+      "trigger": "real_rate_shock"
+    },
+    {
+      "confidence": 0.7077,
+      "source": "bear_unwind",
+      "target": "calm_carry",
+      "trigger": "range_stabilization"
+    },
+    {
+      "confidence": 0.7061,
+      "source": "range_compression",
+      "target": "calm_carry",
+      "trigger": "range_stabilization"
+    },
+    {
+      "confidence": 0.7061,
+      "source": "macro_transition",
+      "target": "calm_carry",
+      "trigger": "range_stabilization"
+    },
+    {
+      "confidence": 0.7061,
+      "source": "calm_carry",
+      "target": "range_compression",
+      "trigger": "volatility_decay"
+    },
+    {
+      "confidence": 0.7061,
+      "source": "calm_carry",
+      "target": "macro_transition",
+      "trigger": "macro_repricing"
+    },
+    {
+      "confidence": 0.7061,
+      "source": "calm_carry",
+      "target": "bull_trend",
+      "trigger": "trend_reinforcement"
+    },
+    {
+      "confidence": 0.7061,
+      "source": "bull_trend",
+      "target": "calm_carry",
+      "trigger": "range_stabilization"
+    },
+    {
+      "confidence": 0.7045,
+      "source": "range_compression",
+      "target": "bear_unwind",
+      "trigger": "real_rate_shock"
+    },
+    {
+      "confidence": 0.7045,
+      "source": "macro_transition",
+      "target": "bear_unwind",
+      "trigger": "real_rate_shock"
+    },
+    {
+      "confidence": 0.7045,
+      "source": "bull_trend",
+      "target": "bear_unwind",
+      "trigger": "real_rate_shock"
+    },
+    {
+      "confidence": 0.7045,
+      "source": "bear_unwind",
+      "target": "range_compression",
+      "trigger": "volatility_decay"
+    },
+    {
+      "confidence": 0.7045,
+      "source": "bear_unwind",
+      "target": "macro_transition",
+      "trigger": "macro_repricing"
+    },
+    {
+      "confidence": 0.7045,
+      "source": "bear_unwind",
+      "target": "bull_trend",
+      "trigger": "trend_reinforcement"
+    },
+    {
+      "confidence": 0.7029,
+      "source": "range_compression",
+      "target": "macro_transition",
+      "trigger": "macro_repricing"
+    },
+    {
+      "confidence": 0.7029,
+      "source": "range_compression",
+      "target": "bull_trend",
+      "trigger": "trend_reinforcement"
+    },
+    {
+      "confidence": 0.7029,
+      "source": "macro_transition",
+      "target": "range_compression",
+      "trigger": "volatility_decay"
+    },
+    {
+      "confidence": 0.7029,
+      "source": "macro_transition",
+      "target": "bull_trend",
+      "trigger": "trend_reinforcement"
+    },
+    {
+      "confidence": 0.7029,
+      "source": "crisis_dislocation",
+      "target": "calm_carry",
+      "trigger": "range_stabilization"
+    },
+    {
+      "confidence": 0.7029,
+      "source": "calm_carry",
+      "target": "crisis_dislocation",
+      "trigger": "systemic_stress"
+    },
+    {
+      "confidence": 0.7029,
+      "source": "bull_trend",
+      "target": "range_compression",
+      "trigger": "volatility_decay"
+    },
+    {
+      "confidence": 0.7029,
+      "source": "bull_trend",
+      "target": "macro_transition",
+      "trigger": "macro_repricing"
+    },
+    {
+      "confidence": 0.7013,
+      "source": "crisis_dislocation",
+      "target": "bear_unwind",
+      "trigger": "real_rate_shock"
+    },
+    {
+      "confidence": 0.7013,
+      "source": "bear_unwind",
+      "target": "crisis_dislocation",
+      "trigger": "systemic_stress"
+    },
+    {
+      "confidence": 0.6997,
+      "source": "range_compression",
+      "target": "crisis_dislocation",
+      "trigger": "systemic_stress"
+    },
+    {
+      "confidence": 0.6997,
+      "source": "macro_transition",
+      "target": "crisis_dislocation",
+      "trigger": "systemic_stress"
+    },
+    {
+      "confidence": 0.6997,
+      "source": "crisis_dislocation",
+      "target": "range_compression",
+      "trigger": "volatility_decay"
+    },
+    {
+      "confidence": 0.6997,
+      "source": "crisis_dislocation",
+      "target": "macro_transition",
+      "trigger": "macro_repricing"
+    },
+    {
+      "confidence": 0.6997,
+      "source": "crisis_dislocation",
+      "target": "bull_trend",
+      "trigger": "trend_reinforcement"
+    },
+    {
+      "confidence": 0.6997,
+      "source": "bull_trend",
+      "target": "crisis_dislocation",
+      "trigger": "systemic_stress"
+    }
+  ],
+  "states": [
+    {
+      "label": "Bull Trend",
+      "regime": "bull_trend"
+    },
+    {
+      "label": "Bear Unwind",
+      "regime": "bear_unwind"
+    },
+    {
+      "label": "Calm Carry",
+      "regime": "calm_carry"
+    },
+    {
+      "label": "Crisis Dislocation",
+      "regime": "crisis_dislocation"
+    },
+    {
+      "label": "Macro Transition",
+      "regime": "macro_transition"
+    },
+    {
+      "label": "Range Compression",
+      "regime": "range_compression"
+    }
+  ]
+}

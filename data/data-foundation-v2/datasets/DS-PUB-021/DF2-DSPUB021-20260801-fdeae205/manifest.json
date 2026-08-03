@@ -1,0 +1,49 @@
+{
+  "cadence": "derived",
+  "checksum_sha256": "fdeae205e6cf2958a27b05944908c0e28c730db5c185c5486e099d5896b83363",
+  "covered_variables": [
+    "policy_expectation_proxy_public",
+    "fomc_meeting_prob_public_proxy"
+  ],
+  "dataset_id": "DS-PUB-021",
+  "dataset_name": "Public Policy Expectation Curve",
+  "generated_at": "2026-08-02T00:00:00Z",
+  "provenance": {
+    "fixture_or_remote": "fixture",
+    "retrieved_at": "2026-08-02T00:00:00Z",
+    "source_kind": "derived",
+    "timezone": "UTC"
+  },
+  "provider": "DerivedPolicyProvider",
+  "quality": {
+    "completeness": 1.0,
+    "confidence_score": 0.9592,
+    "coverage": 1.0,
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "freshness": 0.9,
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "schema_conformity": 1.0,
+    "start_timestamp": "2026-07-27T00:00:00Z",
+    "timestamp_consistency": 1.0,
+    "validation_score": 0.9833
+  },
+  "raw_checksum_sha256": "fdeae205e6cf2958a27b05944908c0e28c730db5c185c5486e099d5896b83363",
+  "row_count": 6,
+  "source": "Derived from FRED Tier 1 series",
+  "source_url": "",
+  "storage_path": "data\\data-foundation-v2\\datasets\\DS-PUB-021\\DF2-DSPUB021-20260801-fdeae205\\data.csv",
+  "supported_families": [
+    "FAM-001",
+    "FAM-005"
+  ],
+  "supported_mechanisms": [
+    "macro_repricing",
+    "expectation_reset",
+    "policy_repricing"
+  ],
+  "timezone": "UTC",
+  "version_id": "DF2-DSPUB021-20260801-fdeae205",
+  "work_package": "DF2-WP-003"
+}

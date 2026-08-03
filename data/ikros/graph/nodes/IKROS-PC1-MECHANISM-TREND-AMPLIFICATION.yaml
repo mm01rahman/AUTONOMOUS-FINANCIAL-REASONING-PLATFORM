@@ -1,0 +1,14 @@
+attributes:
+  mechanism: trend_amplification
+confidence: 0.68
+created_at: '2026-08-02T11:34:56.451684+00:00'
+ikros_id: IKROS-PC1-MECHANISM-TREND-AMPLIFICATION
+label: Trend Amplification
+node_id: IKROS-PC1-MECHANISM-TREND-AMPLIFICATION
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

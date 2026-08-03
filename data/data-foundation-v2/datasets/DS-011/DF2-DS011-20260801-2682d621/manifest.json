@@ -1,0 +1,49 @@
+{
+  "cadence": "daily",
+  "checksum_sha256": "2682d6218c9027fcf477e3ed60f9b3fa1a43d2af1faf7633dc8161ae8873abb5",
+  "covered_variables": [
+    "vol_surface",
+    "dealer_gamma"
+  ],
+  "dataset_id": "DS-011",
+  "dataset_name": "Gold Volatility Index (GVZ)",
+  "generated_at": "2026-08-02T00:00:00Z",
+  "provenance": {
+    "fixture_or_remote": "fixture",
+    "retrieved_at": "2026-08-02T00:00:00Z",
+    "source_kind": "public_file",
+    "timezone": "UTC"
+  },
+  "provider": "CBOEProvider",
+  "quality": {
+    "completeness": 1.0,
+    "confidence_score": 0.9592,
+    "coverage": 1.0,
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "freshness": 0.9,
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "schema_conformity": 1.0,
+    "start_timestamp": "2026-07-27T00:00:00Z",
+    "timestamp_consistency": 1.0,
+    "validation_score": 0.9833
+  },
+  "raw_checksum_sha256": "604ba7203d5d339d45693db8b28d0a5af701ed4dc1f5b17dc5735ca53f06f550",
+  "row_count": 6,
+  "source": "CBOE",
+  "source_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/GVZ_History.csv",
+  "storage_path": "data\\data-foundation-v2\\datasets\\DS-011\\DF2-DS011-20260801-2682d621\\data.csv",
+  "supported_families": [
+    "FAM-002",
+    "FAM-006"
+  ],
+  "supported_mechanisms": [
+    "dealer_inventory",
+    "decision_cascade",
+    "liquidity_withdrawal"
+  ],
+  "timezone": "UTC",
+  "version_id": "DF2-DS011-20260801-2682d621",
+  "work_package": "DF2-WP-002"
+}

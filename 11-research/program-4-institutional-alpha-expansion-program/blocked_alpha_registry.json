@@ -1,0 +1,12 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-DC3-20260802-0009",
+    "mechanism": "decision_cascade",
+    "reason": "Public observations do not resolve institutional inventory transitions and intraday dealer positioning."
+  },
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0005",
+    "mechanism": "central_bank_reserve_reallocation",
+    "reason": "Official reserve disclosures are too delayed and sparse to support governed replication with current approved observations."
+  }
+]

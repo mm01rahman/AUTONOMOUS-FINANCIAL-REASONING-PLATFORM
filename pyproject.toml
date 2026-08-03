@@ -62,6 +62,9 @@ ignore_missing_imports = true
 testpaths = ["tests"]
 addopts = "-q"
 pythonpath = ["."]
+markers = [
+    "slow: marks tests as slow campaign end-to-end tests (deselect with '-m not slow'; run with --run-slow)",
+]
 
 [tool.coverage.run]
 branch = true

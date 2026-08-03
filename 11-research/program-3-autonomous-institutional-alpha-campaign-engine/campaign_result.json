@@ -1,0 +1,41 @@
+{
+  "audit_ids": [
+    "IKROS-CAMPAIGNAUDIT-20260802-0637",
+    "IKROS-CAMPAIGNAUDIT-20260802-0638",
+    "IKROS-CAMPAIGNAUDIT-20260802-0639",
+    "IKROS-CAMPAIGNAUDIT-20260802-0640",
+    "IKROS-CAMPAIGNAUDIT-20260802-0641",
+    "IKROS-CAMPAIGNAUDIT-20260802-0642",
+    "IKROS-CAMPAIGNAUDIT-20260802-0643",
+    "IKROS-CAMPAIGNAUDIT-20260802-0644"
+  ],
+  "blocked_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0225",
+    "IKROS-RESEARCHTASK-20260802-0229",
+    "IKROS-RESEARCHTASK-20260802-0231"
+  ],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0055",
+  "campaign_type": "HYPOTHESIS_VALIDATION",
+  "completed_task_ids": [],
+  "failed_task_ids": [
+    "IKROS-RESEARCHTASK-20260802-0221"
+  ],
+  "finished_at": "2026-08-02T23:41:28.257312+00:00",
+  "lifecycle_state": "FAILED",
+  "memory_record_ids": [
+    "IKMEM-T4-20260802-0062"
+  ],
+  "output_refs": [],
+  "progress": {
+    "blocked": 3,
+    "completed": 0,
+    "failed": 1,
+    "percent_complete": 0.0,
+    "skipped": 0,
+    "total": 4
+  },
+  "report_id": "IKROS-CAMPAIGNREPORT-20260802-0055",
+  "skipped_task_ids": [],
+  "started_at": "2026-08-02T23:41:17.980436+00:00",
+  "summary": "Program 3 \u2014 Autonomous Institutional Alpha Campaign Engine failed after 1 task failures."
+}

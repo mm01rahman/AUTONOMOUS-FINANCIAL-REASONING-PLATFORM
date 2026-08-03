@@ -1,0 +1,35 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0667
+- IKROS-CAMPAIGNAUDIT-20260802-0668
+- IKROS-CAMPAIGNAUDIT-20260802-0669
+- IKROS-CAMPAIGNAUDIT-20260802-0670
+- IKROS-CAMPAIGNAUDIT-20260802-0671
+- IKROS-CAMPAIGNAUDIT-20260802-0672
+- IKROS-CAMPAIGNAUDIT-20260802-0673
+- IKROS-CAMPAIGNAUDIT-20260802-0674
+blocked_task_ids:
+- IKROS-RESEARCHTASK-20260802-0237
+- IKROS-RESEARCHTASK-20260802-0241
+- IKROS-RESEARCHTASK-20260802-0243
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0058
+campaign_type: HYPOTHESIS_VALIDATION
+completed_task_ids: []
+failed_task_ids:
+- IKROS-RESEARCHTASK-20260802-0233
+finished_at: '2026-08-02T23:43:07.577486+00:00'
+lifecycle_state: FAILED
+memory_record_ids:
+- IKMEM-T4-20260802-0065
+output_refs: []
+progress:
+  blocked: 3
+  completed: 0
+  failed: 1
+  percent_complete: 0.0
+  skipped: 0
+  total: 4
+report_id: IKROS-CAMPAIGNREPORT-20260802-0058
+skipped_task_ids: []
+started_at: '2026-08-02T23:42:56.454936+00:00'
+summary: Generation 5 — Autonomous Research Organization & Self-Evolution failed after
+  1 task failures.

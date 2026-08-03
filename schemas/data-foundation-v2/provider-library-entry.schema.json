@@ -1,0 +1,47 @@
+{
+  "description": "Documented provider adapter capability.",
+  "properties": {
+    "checksum_enabled": {
+      "title": "Checksum Enabled",
+      "type": "boolean"
+    },
+    "deterministic": {
+      "title": "Deterministic",
+      "type": "boolean"
+    },
+    "historical_only": {
+      "title": "Historical Only",
+      "type": "boolean"
+    },
+    "provider": {
+      "title": "Provider",
+      "type": "string"
+    },
+    "requires_api_key": {
+      "title": "Requires Api Key",
+      "type": "boolean"
+    },
+    "retry_attempts": {
+      "title": "Retry Attempts",
+      "type": "integer"
+    },
+    "supported_source_kinds": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supported Source Kinds",
+      "type": "array"
+    }
+  },
+  "required": [
+    "provider",
+    "supported_source_kinds",
+    "deterministic",
+    "historical_only",
+    "requires_api_key",
+    "retry_attempts",
+    "checksum_enabled"
+  ],
+  "title": "ProviderLibraryEntry",
+  "type": "object"
+}

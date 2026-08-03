@@ -1,0 +1,13 @@
+attributes: {}
+confidence: 0.83
+created_at: '2026-08-02T22:25:54.935590+00:00'
+ikros_id: PROGRAM3-RESEARCH-LOOP
+label: Program 3 Autonomous Research Loop
+node_id: PROGRAM3-RESEARCH-LOOP
+node_type: RESEARCH_CONCLUSION
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0053

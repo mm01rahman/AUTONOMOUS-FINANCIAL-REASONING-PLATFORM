@@ -1,0 +1,12 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0005",
+    "justification": "Official reserve disclosures are too delayed and sparse to support governed replication with current approved observations.",
+    "mechanism": "central_bank_reserve_reallocation",
+    "requested_observations": [
+      "WGC-CENTRAL-BANK",
+      "IMF-RESERVES",
+      "FRED-DXY"
+    ]
+  }
+]

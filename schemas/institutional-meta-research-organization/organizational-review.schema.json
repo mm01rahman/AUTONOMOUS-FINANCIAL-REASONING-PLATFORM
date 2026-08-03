@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "engineering_quality": {
+      "type": "number"
+    },
+    "overall_scientific_health": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "overall_scientific_health",
+    "engineering_quality"
+  ],
+  "title": "Organizational Review",
+  "type": "object"
+}

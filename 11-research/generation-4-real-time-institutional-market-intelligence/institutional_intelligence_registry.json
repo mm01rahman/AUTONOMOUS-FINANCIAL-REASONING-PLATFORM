@@ -1,0 +1,12 @@
+{
+  "broker_connections": 0,
+  "continuous_operation": true,
+  "governed_research_triggers": 47,
+  "intelligence_cycle_count": 18,
+  "latest_confidence": 0.4074,
+  "latest_portfolio_decision": "INCREASE",
+  "latest_regime": "RISK_OFF",
+  "non_executing": true,
+  "scientific_health_score": 0.764,
+  "trade_execution_calls": 0
+}

@@ -1,0 +1,49 @@
+{
+  "cadence": "daily",
+  "checksum_sha256": "d7565c08f19f2561e5543df609fe4b5115e4f10a1736fceb1e491c0c904319ff",
+  "covered_variables": [
+    "gld_shares_outstanding",
+    "gld_etf_flows"
+  ],
+  "dataset_id": "DS-007",
+  "dataset_name": "GLD ETF Shares Outstanding",
+  "generated_at": "2026-08-02T00:00:00Z",
+  "provenance": {
+    "fixture_or_remote": "fixture",
+    "retrieved_at": "2026-08-02T00:00:00Z",
+    "source_kind": "public_file",
+    "timezone": "UTC"
+  },
+  "provider": "ETFHoldingsProvider",
+  "quality": {
+    "completeness": 1.0,
+    "confidence_score": 0.9592,
+    "coverage": 1.0,
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "freshness": 0.9,
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "schema_conformity": 1.0,
+    "start_timestamp": "2026-07-27T00:00:00Z",
+    "timestamp_consistency": 1.0,
+    "validation_score": 0.9833
+  },
+  "raw_checksum_sha256": "4f1041d8876fbc291ee374724b54e91b29b7cf714ca1c9d559637b91509540bc",
+  "row_count": 6,
+  "source": "SPDR",
+  "source_url": "https://www.spdrgoldshares.com/data/gld-holdings.csv",
+  "storage_path": "data\\data-foundation-v2\\datasets\\DS-007\\DF2-DS007-20260801-d7565c08\\data.csv",
+  "supported_families": [
+    "FAM-003",
+    "FAM-004"
+  ],
+  "supported_mechanisms": [
+    "safe_haven_migration",
+    "etf_flow_propagation",
+    "adaptive_ecology_shift"
+  ],
+  "timezone": "UTC",
+  "version_id": "DF2-DS007-20260801-d7565c08",
+  "work_package": "DF2-WP-002"
+}

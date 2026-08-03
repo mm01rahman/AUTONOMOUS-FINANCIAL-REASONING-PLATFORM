@@ -1,0 +1,50 @@
+{
+  "cadence": "daily",
+  "checksum_sha256": "08c94fe37e8a921d4f427d8180215f6fcc11ddadbc848d60b09cd9501712403d",
+  "covered_variables": [
+    "vix",
+    "macro_stress_proxy"
+  ],
+  "dataset_id": "DS-001",
+  "dataset_name": "VIX Index",
+  "generated_at": "2026-08-02T00:00:00Z",
+  "provenance": {
+    "fixture_or_remote": "fixture",
+    "retrieved_at": "2026-08-02T00:00:00Z",
+    "source_kind": "public_api",
+    "timezone": "UTC"
+  },
+  "provider": "FREDProvider",
+  "quality": {
+    "completeness": 1.0,
+    "confidence_score": 0.9592,
+    "coverage": 1.0,
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "freshness": 0.9,
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "schema_conformity": 1.0,
+    "start_timestamp": "2026-07-27T00:00:00Z",
+    "timestamp_consistency": 1.0,
+    "validation_score": 0.9833
+  },
+  "raw_checksum_sha256": "e283e0c0f9264aa8f12e5a8bd9e805b428df03560f9cee8e48b3fb2ab2e4726d",
+  "row_count": 6,
+  "source": "FRED",
+  "source_url": "https://fred.stlouisfed.org/series/VIXCLS/downloaddata/VIXCLS.csv",
+  "storage_path": "data\\data-foundation-v2\\datasets\\DS-001\\DF2-DS001-20260801-08c94fe3\\data.csv",
+  "supported_families": [
+    "FAM-002",
+    "FAM-003",
+    "FAM-007"
+  ],
+  "supported_mechanisms": [
+    "liquidity_withdrawal",
+    "safe_haven_migration",
+    "regime_transition_chain"
+  ],
+  "timezone": "UTC",
+  "version_id": "DF2-DS001-20260801-08c94fe3",
+  "work_package": "DF2-WP-001"
+}

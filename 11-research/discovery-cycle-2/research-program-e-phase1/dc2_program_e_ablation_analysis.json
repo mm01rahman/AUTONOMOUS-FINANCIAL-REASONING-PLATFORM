@@ -1,0 +1,1786 @@
+{
+  "ablation_matrix": [
+    {
+      "combination_key": "BASELINE",
+      "confidence_calibration_brier": 0.6393,
+      "cross_regime_consistency": 0.3189,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7182,
+      "missed_transition_rate": 0.4862,
+      "removed_components": [],
+      "removed_count": 0,
+      "transition_classification_accuracy": 0.2282,
+      "transition_detection_accuracy": 0.6051,
+      "transition_timing_error": 2.4092
+    },
+    {
+      "combination_key": "cross_asset_network_layer",
+      "confidence_calibration_brier": 0.6412,
+      "cross_regime_consistency": 0.2662,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7092,
+      "missed_transition_rate": 0.6584,
+      "removed_components": [
+        "cross_asset_network_layer"
+      ],
+      "removed_count": 1,
+      "transition_classification_accuracy": 0.2798,
+      "transition_detection_accuracy": 0.672,
+      "transition_timing_error": 3.5814
+    },
+    {
+      "combination_key": "cross_asset_network_layer+decision_ecology_layer",
+      "confidence_calibration_brier": 0.6275,
+      "cross_regime_consistency": 0.2808,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6836,
+      "missed_transition_rate": 0.7515,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "decision_ecology_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.3089,
+      "transition_detection_accuracy": 0.7166,
+      "transition_timing_error": 7.5124
+    },
+    {
+      "combination_key": "cross_asset_network_layer+decision_ecology_layer+interaction_layer",
+      "confidence_calibration_brier": 0.3496,
+      "cross_regime_consistency": 0.2013,
+      "early_warning_lead_time": 2.4875,
+      "false_transition_rate": 0.7714,
+      "missed_transition_rate": 0.7696,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "decision_ecology_layer",
+        "interaction_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.0451,
+      "transition_detection_accuracy": 0.6597,
+      "transition_timing_error": 17.9288
+    },
+    {
+      "combination_key": "cross_asset_network_layer+decision_ecology_layer+liquidity_layer",
+      "confidence_calibration_brier": 0.6275,
+      "cross_regime_consistency": 0.2808,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6836,
+      "missed_transition_rate": 0.7515,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "decision_ecology_layer",
+        "liquidity_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.3089,
+      "transition_detection_accuracy": 0.7166,
+      "transition_timing_error": 7.5124
+    },
+    {
+      "combination_key": "cross_asset_network_layer+decision_ecology_layer+macro_layer",
+      "confidence_calibration_brier": 0.6014,
+      "cross_regime_consistency": 0.237,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7489,
+      "missed_transition_rate": 0.8358,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "decision_ecology_layer",
+        "macro_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.343,
+      "transition_detection_accuracy": 0.7085,
+      "transition_timing_error": 13.6163
+    },
+    {
+      "combination_key": "cross_asset_network_layer+decision_ecology_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.5912,
+      "cross_regime_consistency": 0.1869,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.734,
+      "missed_transition_rate": 0.8488,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "decision_ecology_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.3663,
+      "transition_detection_accuracy": 0.7216,
+      "transition_timing_error": 12.2485
+    },
+    {
+      "combination_key": "cross_asset_network_layer+decision_ecology_layer+regime_layer",
+      "confidence_calibration_brier": 0.7801,
+      "cross_regime_consistency": 0.2507,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6991,
+      "missed_transition_rate": 0.9055,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "decision_ecology_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.351,
+      "transition_detection_accuracy": 0.7526,
+      "transition_timing_error": 81.9491
+    },
+    {
+      "combination_key": "cross_asset_network_layer+interaction_layer",
+      "confidence_calibration_brier": 0.3894,
+      "cross_regime_consistency": 0.2347,
+      "early_warning_lead_time": 2.0134,
+      "false_transition_rate": 0.756,
+      "missed_transition_rate": 0.681,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "interaction_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.0778,
+      "transition_detection_accuracy": 0.6329,
+      "transition_timing_error": 4.4709
+    },
+    {
+      "combination_key": "cross_asset_network_layer+interaction_layer+liquidity_layer",
+      "confidence_calibration_brier": 0.3894,
+      "cross_regime_consistency": 0.2347,
+      "early_warning_lead_time": 2.0134,
+      "false_transition_rate": 0.756,
+      "missed_transition_rate": 0.681,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "interaction_layer",
+        "liquidity_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.0778,
+      "transition_detection_accuracy": 0.6329,
+      "transition_timing_error": 4.4709
+    },
+    {
+      "combination_key": "cross_asset_network_layer+interaction_layer+macro_layer",
+      "confidence_calibration_brier": 0.329,
+      "cross_regime_consistency": 0.2274,
+      "early_warning_lead_time": 2.4693,
+      "false_transition_rate": 0.8086,
+      "missed_transition_rate": 0.8387,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "interaction_layer",
+        "macro_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.0879,
+      "transition_detection_accuracy": 0.6657,
+      "transition_timing_error": 7.0712
+    },
+    {
+      "combination_key": "cross_asset_network_layer+interaction_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.2719,
+      "cross_regime_consistency": 0.19,
+      "early_warning_lead_time": 2.9808,
+      "false_transition_rate": 0.7238,
+      "missed_transition_rate": 0.6911,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "interaction_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.0988,
+      "transition_detection_accuracy": 0.67,
+      "transition_timing_error": 2.6744
+    },
+    {
+      "combination_key": "cross_asset_network_layer+interaction_layer+regime_layer",
+      "confidence_calibration_brier": 0.3462,
+      "cross_regime_consistency": 0.2057,
+      "early_warning_lead_time": 2.5176,
+      "false_transition_rate": 0.7352,
+      "missed_transition_rate": 0.8728,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "interaction_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.0392,
+      "transition_detection_accuracy": 0.7304,
+      "transition_timing_error": 51.4862
+    },
+    {
+      "combination_key": "cross_asset_network_layer+liquidity_layer",
+      "confidence_calibration_brier": 0.6412,
+      "cross_regime_consistency": 0.2662,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7092,
+      "missed_transition_rate": 0.6584,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "liquidity_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.2798,
+      "transition_detection_accuracy": 0.672,
+      "transition_timing_error": 3.5814
+    },
+    {
+      "combination_key": "cross_asset_network_layer+liquidity_layer+macro_layer",
+      "confidence_calibration_brier": 0.6218,
+      "cross_regime_consistency": 0.2162,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7395,
+      "missed_transition_rate": 0.7013,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "liquidity_layer",
+        "macro_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.3067,
+      "transition_detection_accuracy": 0.6593,
+      "transition_timing_error": 4.0836
+    },
+    {
+      "combination_key": "cross_asset_network_layer+liquidity_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.6143,
+      "cross_regime_consistency": 0.191,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.73,
+      "missed_transition_rate": 0.7129,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "liquidity_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.327,
+      "transition_detection_accuracy": 0.6725,
+      "transition_timing_error": 4.2006
+    },
+    {
+      "combination_key": "cross_asset_network_layer+liquidity_layer+regime_layer",
+      "confidence_calibration_brier": 0.7801,
+      "cross_regime_consistency": 0.2503,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6989,
+      "missed_transition_rate": 0.9048,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "liquidity_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.351,
+      "transition_detection_accuracy": 0.7524,
+      "transition_timing_error": 81.9477
+    },
+    {
+      "combination_key": "cross_asset_network_layer+macro_layer",
+      "confidence_calibration_brier": 0.6218,
+      "cross_regime_consistency": 0.2162,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7395,
+      "missed_transition_rate": 0.7013,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "macro_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.3067,
+      "transition_detection_accuracy": 0.6593,
+      "transition_timing_error": 4.0836
+    },
+    {
+      "combination_key": "cross_asset_network_layer+macro_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.6129,
+      "cross_regime_consistency": 0.1827,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.728,
+      "missed_transition_rate": 0.7195,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "macro_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.327,
+      "transition_detection_accuracy": 0.6767,
+      "transition_timing_error": 4.3292
+    },
+    {
+      "combination_key": "cross_asset_network_layer+macro_layer+regime_layer",
+      "confidence_calibration_brier": 0.7801,
+      "cross_regime_consistency": 0.1667,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.8667,
+      "missed_transition_rate": 0.9985,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "macro_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.3852,
+      "transition_detection_accuracy": 0.7783,
+      "transition_timing_error": 581.7863
+    },
+    {
+      "combination_key": "cross_asset_network_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.6143,
+      "cross_regime_consistency": 0.191,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.73,
+      "missed_transition_rate": 0.7129,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.327,
+      "transition_detection_accuracy": 0.6725,
+      "transition_timing_error": 4.2006
+    },
+    {
+      "combination_key": "cross_asset_network_layer+participant_ecology_layer+regime_layer",
+      "confidence_calibration_brier": 0.7801,
+      "cross_regime_consistency": 0.1742,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.931,
+      "missed_transition_rate": 0.9971,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "participant_ecology_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.3852,
+      "transition_detection_accuracy": 0.7721,
+      "transition_timing_error": 158.0669
+    },
+    {
+      "combination_key": "cross_asset_network_layer+regime_layer",
+      "confidence_calibration_brier": 0.7801,
+      "cross_regime_consistency": 0.2503,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6989,
+      "missed_transition_rate": 0.9048,
+      "removed_components": [
+        "cross_asset_network_layer",
+        "regime_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.351,
+      "transition_detection_accuracy": 0.7524,
+      "transition_timing_error": 81.9477
+    },
+    {
+      "combination_key": "decision_ecology_layer",
+      "confidence_calibration_brier": 0.601,
+      "cross_regime_consistency": 0.3335,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7088,
+      "missed_transition_rate": 0.4448,
+      "removed_components": [
+        "decision_ecology_layer"
+      ],
+      "removed_count": 1,
+      "transition_classification_accuracy": 0.2529,
+      "transition_detection_accuracy": 0.6049,
+      "transition_timing_error": 4.3103
+    },
+    {
+      "combination_key": "decision_ecology_layer+interaction_layer",
+      "confidence_calibration_brier": 0.4908,
+      "cross_regime_consistency": 0.2764,
+      "early_warning_lead_time": 1.4088,
+      "false_transition_rate": 0.7402,
+      "missed_transition_rate": 0.5196,
+      "removed_components": [
+        "decision_ecology_layer",
+        "interaction_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.1453,
+      "transition_detection_accuracy": 0.5848,
+      "transition_timing_error": 8.1061
+    },
+    {
+      "combination_key": "decision_ecology_layer+interaction_layer+liquidity_layer",
+      "confidence_calibration_brier": 0.4908,
+      "cross_regime_consistency": 0.2764,
+      "early_warning_lead_time": 1.4088,
+      "false_transition_rate": 0.7402,
+      "missed_transition_rate": 0.5196,
+      "removed_components": [
+        "decision_ecology_layer",
+        "interaction_layer",
+        "liquidity_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.1453,
+      "transition_detection_accuracy": 0.5848,
+      "transition_timing_error": 8.1061
+    },
+    {
+      "combination_key": "decision_ecology_layer+interaction_layer+macro_layer",
+      "confidence_calibration_brier": 0.4089,
+      "cross_regime_consistency": 0.2588,
+      "early_warning_lead_time": 1.9556,
+      "false_transition_rate": 0.766,
+      "missed_transition_rate": 0.5182,
+      "removed_components": [
+        "decision_ecology_layer",
+        "interaction_layer",
+        "macro_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.1192,
+      "transition_detection_accuracy": 0.5392,
+      "transition_timing_error": 3.468
+    },
+    {
+      "combination_key": "decision_ecology_layer+interaction_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.3674,
+      "cross_regime_consistency": 0.2566,
+      "early_warning_lead_time": 1.814,
+      "false_transition_rate": 0.7734,
+      "missed_transition_rate": 0.3932,
+      "removed_components": [
+        "decision_ecology_layer",
+        "interaction_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.2558,
+      "transition_detection_accuracy": 0.458,
+      "transition_timing_error": 0.5523
+    },
+    {
+      "combination_key": "decision_ecology_layer+interaction_layer+regime_layer",
+      "confidence_calibration_brier": 0.4632,
+      "cross_regime_consistency": 0.2528,
+      "early_warning_lead_time": 1.5804,
+      "false_transition_rate": 0.6875,
+      "missed_transition_rate": 0.6839,
+      "removed_components": [
+        "decision_ecology_layer",
+        "interaction_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.1126,
+      "transition_detection_accuracy": 0.6967,
+      "transition_timing_error": 21.0799
+    },
+    {
+      "combination_key": "decision_ecology_layer+liquidity_layer",
+      "confidence_calibration_brier": 0.601,
+      "cross_regime_consistency": 0.3335,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7088,
+      "missed_transition_rate": 0.4448,
+      "removed_components": [
+        "decision_ecology_layer",
+        "liquidity_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.2529,
+      "transition_detection_accuracy": 0.6049,
+      "transition_timing_error": 4.3103
+    },
+    {
+      "combination_key": "decision_ecology_layer+liquidity_layer+macro_layer",
+      "confidence_calibration_brier": 0.5591,
+      "cross_regime_consistency": 0.2697,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7277,
+      "missed_transition_rate": 0.5262,
+      "removed_components": [
+        "decision_ecology_layer",
+        "liquidity_layer",
+        "macro_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.234,
+      "transition_detection_accuracy": 0.6059,
+      "transition_timing_error": 2.3561
+    },
+    {
+      "combination_key": "decision_ecology_layer+liquidity_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.5427,
+      "cross_regime_consistency": 0.2962,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6759,
+      "missed_transition_rate": 0.3365,
+      "removed_components": [
+        "decision_ecology_layer",
+        "liquidity_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.3895,
+      "transition_detection_accuracy": 0.6217,
+      "transition_timing_error": 0.8132
+    },
+    {
+      "combination_key": "decision_ecology_layer+liquidity_layer+regime_layer",
+      "confidence_calibration_brier": 0.6482,
+      "cross_regime_consistency": 0.3464,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6328,
+      "missed_transition_rate": 0.561,
+      "removed_components": [
+        "decision_ecology_layer",
+        "liquidity_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.314,
+      "transition_detection_accuracy": 0.7102,
+      "transition_timing_error": 4.9477
+    },
+    {
+      "combination_key": "decision_ecology_layer+macro_layer",
+      "confidence_calibration_brier": 0.5591,
+      "cross_regime_consistency": 0.2697,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7277,
+      "missed_transition_rate": 0.5262,
+      "removed_components": [
+        "decision_ecology_layer",
+        "macro_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.234,
+      "transition_detection_accuracy": 0.6059,
+      "transition_timing_error": 2.3561
+    },
+    {
+      "combination_key": "decision_ecology_layer+macro_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.5161,
+      "cross_regime_consistency": 0.1849,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7291,
+      "missed_transition_rate": 0.5218,
+      "removed_components": [
+        "decision_ecology_layer",
+        "macro_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.2733,
+      "transition_detection_accuracy": 0.6022,
+      "transition_timing_error": 1.4055
+    },
+    {
+      "combination_key": "decision_ecology_layer+macro_layer+regime_layer",
+      "confidence_calibration_brier": 0.608,
+      "cross_regime_consistency": 0.2815,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7156,
+      "missed_transition_rate": 0.8001,
+      "removed_components": [
+        "decision_ecology_layer",
+        "macro_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.306,
+      "transition_detection_accuracy": 0.7134,
+      "transition_timing_error": 14.4876
+    },
+    {
+      "combination_key": "decision_ecology_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.5427,
+      "cross_regime_consistency": 0.2962,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6759,
+      "missed_transition_rate": 0.3365,
+      "removed_components": [
+        "decision_ecology_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.3895,
+      "transition_detection_accuracy": 0.6217,
+      "transition_timing_error": 0.8132
+    },
+    {
+      "combination_key": "decision_ecology_layer+participant_ecology_layer+regime_layer",
+      "confidence_calibration_brier": 0.5992,
+      "cross_regime_consistency": 0.3042,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.5486,
+      "missed_transition_rate": 0.5145,
+      "removed_components": [
+        "decision_ecology_layer",
+        "participant_ecology_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.4782,
+      "transition_detection_accuracy": 0.7571,
+      "transition_timing_error": 4.6388
+    },
+    {
+      "combination_key": "decision_ecology_layer+regime_layer",
+      "confidence_calibration_brier": 0.6482,
+      "cross_regime_consistency": 0.3464,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6328,
+      "missed_transition_rate": 0.561,
+      "removed_components": [
+        "decision_ecology_layer",
+        "regime_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.314,
+      "transition_detection_accuracy": 0.7102,
+      "transition_timing_error": 4.9477
+    },
+    {
+      "combination_key": "interaction_layer",
+      "confidence_calibration_brier": 0.5457,
+      "cross_regime_consistency": 0.27,
+      "early_warning_lead_time": 1.2729,
+      "false_transition_rate": 0.7396,
+      "missed_transition_rate": 0.564,
+      "removed_components": [
+        "interaction_layer"
+      ],
+      "removed_count": 1,
+      "transition_classification_accuracy": 0.1483,
+      "transition_detection_accuracy": 0.6036,
+      "transition_timing_error": 3.4906
+    },
+    {
+      "combination_key": "interaction_layer+liquidity_layer",
+      "confidence_calibration_brier": 0.5457,
+      "cross_regime_consistency": 0.27,
+      "early_warning_lead_time": 1.2729,
+      "false_transition_rate": 0.7396,
+      "missed_transition_rate": 0.564,
+      "removed_components": [
+        "interaction_layer",
+        "liquidity_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.1483,
+      "transition_detection_accuracy": 0.6036,
+      "transition_timing_error": 3.4906
+    },
+    {
+      "combination_key": "interaction_layer+liquidity_layer+macro_layer",
+      "confidence_calibration_brier": 0.4895,
+      "cross_regime_consistency": 0.2283,
+      "early_warning_lead_time": 1.5399,
+      "false_transition_rate": 0.7675,
+      "missed_transition_rate": 0.6475,
+      "removed_components": [
+        "interaction_layer",
+        "liquidity_layer",
+        "macro_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.1083,
+      "transition_detection_accuracy": 0.6017,
+      "transition_timing_error": 3.085
+    },
+    {
+      "combination_key": "interaction_layer+liquidity_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.4541,
+      "cross_regime_consistency": 0.2453,
+      "early_warning_lead_time": 1.5137,
+      "false_transition_rate": 0.7519,
+      "missed_transition_rate": 0.4993,
+      "removed_components": [
+        "interaction_layer",
+        "liquidity_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.2376,
+      "transition_detection_accuracy": 0.5565,
+      "transition_timing_error": 1.4222
+    },
+    {
+      "combination_key": "interaction_layer+liquidity_layer+regime_layer",
+      "confidence_calibration_brier": 0.501,
+      "cross_regime_consistency": 0.2696,
+      "early_warning_lead_time": 1.4165,
+      "false_transition_rate": 0.7226,
+      "missed_transition_rate": 0.6577,
+      "removed_components": [
+        "interaction_layer",
+        "liquidity_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.1308,
+      "transition_detection_accuracy": 0.6593,
+      "transition_timing_error": 11.375
+    },
+    {
+      "combination_key": "interaction_layer+macro_layer",
+      "confidence_calibration_brier": 0.4895,
+      "cross_regime_consistency": 0.2283,
+      "early_warning_lead_time": 1.5399,
+      "false_transition_rate": 0.7675,
+      "missed_transition_rate": 0.6475,
+      "removed_components": [
+        "interaction_layer",
+        "macro_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.1083,
+      "transition_detection_accuracy": 0.6017,
+      "transition_timing_error": 3.085
+    },
+    {
+      "combination_key": "interaction_layer+macro_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.4185,
+      "cross_regime_consistency": 0.1892,
+      "early_warning_lead_time": 1.8935,
+      "false_transition_rate": 0.7596,
+      "missed_transition_rate": 0.6512,
+      "removed_components": [
+        "interaction_layer",
+        "macro_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.1468,
+      "transition_detection_accuracy": 0.6144,
+      "transition_timing_error": 2.8772
+    },
+    {
+      "combination_key": "interaction_layer+macro_layer+regime_layer",
+      "confidence_calibration_brier": 0.4218,
+      "cross_regime_consistency": 0.2461,
+      "early_warning_lead_time": 2.0602,
+      "false_transition_rate": 0.7464,
+      "missed_transition_rate": 0.702,
+      "removed_components": [
+        "interaction_layer",
+        "macro_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.1119,
+      "transition_detection_accuracy": 0.6527,
+      "transition_timing_error": 9.4041
+    },
+    {
+      "combination_key": "interaction_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.4541,
+      "cross_regime_consistency": 0.2453,
+      "early_warning_lead_time": 1.5137,
+      "false_transition_rate": 0.7519,
+      "missed_transition_rate": 0.4993,
+      "removed_components": [
+        "interaction_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.2376,
+      "transition_detection_accuracy": 0.5565,
+      "transition_timing_error": 1.4222
+    },
+    {
+      "combination_key": "interaction_layer+participant_ecology_layer+regime_layer",
+      "confidence_calibration_brier": 0.3774,
+      "cross_regime_consistency": 0.2469,
+      "early_warning_lead_time": 1.9123,
+      "false_transition_rate": 0.748,
+      "missed_transition_rate": 0.4985,
+      "removed_components": [
+        "interaction_layer",
+        "participant_ecology_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.2311,
+      "transition_detection_accuracy": 0.563,
+      "transition_timing_error": 0.9949
+    },
+    {
+      "combination_key": "interaction_layer+regime_layer",
+      "confidence_calibration_brier": 0.501,
+      "cross_regime_consistency": 0.2696,
+      "early_warning_lead_time": 1.4165,
+      "false_transition_rate": 0.7226,
+      "missed_transition_rate": 0.6577,
+      "removed_components": [
+        "interaction_layer",
+        "regime_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.1308,
+      "transition_detection_accuracy": 0.6593,
+      "transition_timing_error": 11.375
+    },
+    {
+      "combination_key": "liquidity_layer",
+      "confidence_calibration_brier": 0.6393,
+      "cross_regime_consistency": 0.3189,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7182,
+      "missed_transition_rate": 0.4862,
+      "removed_components": [
+        "liquidity_layer"
+      ],
+      "removed_count": 1,
+      "transition_classification_accuracy": 0.2282,
+      "transition_detection_accuracy": 0.6051,
+      "transition_timing_error": 2.4092
+    },
+    {
+      "combination_key": "liquidity_layer+macro_layer",
+      "confidence_calibration_brier": 0.6134,
+      "cross_regime_consistency": 0.2504,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7371,
+      "missed_transition_rate": 0.5756,
+      "removed_components": [
+        "liquidity_layer",
+        "macro_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.1999,
+      "transition_detection_accuracy": 0.6118,
+      "transition_timing_error": 2.2733
+    },
+    {
+      "combination_key": "liquidity_layer+macro_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.5853,
+      "cross_regime_consistency": 0.1919,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.733,
+      "missed_transition_rate": 0.5858,
+      "removed_components": [
+        "liquidity_layer",
+        "macro_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.2289,
+      "transition_detection_accuracy": 0.6211,
+      "transition_timing_error": 1.9862
+    },
+    {
+      "combination_key": "liquidity_layer+macro_layer+regime_layer",
+      "confidence_calibration_brier": 0.6452,
+      "cross_regime_consistency": 0.2719,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7315,
+      "missed_transition_rate": 0.7733,
+      "removed_components": [
+        "liquidity_layer",
+        "macro_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.2827,
+      "transition_detection_accuracy": 0.6941,
+      "transition_timing_error": 7.1933
+    },
+    {
+      "combination_key": "liquidity_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.5991,
+      "cross_regime_consistency": 0.2841,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6802,
+      "missed_transition_rate": 0.415,
+      "removed_components": [
+        "liquidity_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.3423,
+      "transition_detection_accuracy": 0.6351,
+      "transition_timing_error": 1.2769
+    },
+    {
+      "combination_key": "liquidity_layer+participant_ecology_layer+regime_layer",
+      "confidence_calibration_brier": 0.636,
+      "cross_regime_consistency": 0.2973,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.5803,
+      "missed_transition_rate": 0.5363,
+      "removed_components": [
+        "liquidity_layer",
+        "participant_ecology_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.4411,
+      "transition_detection_accuracy": 0.7411,
+      "transition_timing_error": 4.2144
+    },
+    {
+      "combination_key": "liquidity_layer+regime_layer",
+      "confidence_calibration_brier": 0.6704,
+      "cross_regime_consistency": 0.3435,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6573,
+      "missed_transition_rate": 0.5741,
+      "removed_components": [
+        "liquidity_layer",
+        "regime_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.3001,
+      "transition_detection_accuracy": 0.6941,
+      "transition_timing_error": 4.468
+    },
+    {
+      "combination_key": "macro_layer",
+      "confidence_calibration_brier": 0.6134,
+      "cross_regime_consistency": 0.2504,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7371,
+      "missed_transition_rate": 0.5756,
+      "removed_components": [
+        "macro_layer"
+      ],
+      "removed_count": 1,
+      "transition_classification_accuracy": 0.1999,
+      "transition_detection_accuracy": 0.6118,
+      "transition_timing_error": 2.2733
+    },
+    {
+      "combination_key": "macro_layer+participant_ecology_layer",
+      "confidence_calibration_brier": 0.5853,
+      "cross_regime_consistency": 0.1919,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.733,
+      "missed_transition_rate": 0.5858,
+      "removed_components": [
+        "macro_layer",
+        "participant_ecology_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.2289,
+      "transition_detection_accuracy": 0.6211,
+      "transition_timing_error": 1.9862
+    },
+    {
+      "combination_key": "macro_layer+participant_ecology_layer+regime_layer",
+      "confidence_calibration_brier": 0.6197,
+      "cross_regime_consistency": 0.1903,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7387,
+      "missed_transition_rate": 0.8612,
+      "removed_components": [
+        "macro_layer",
+        "participant_ecology_layer",
+        "regime_layer"
+      ],
+      "removed_count": 3,
+      "transition_classification_accuracy": 0.3278,
+      "transition_detection_accuracy": 0.7243,
+      "transition_timing_error": 10.9208
+    },
+    {
+      "combination_key": "macro_layer+regime_layer",
+      "confidence_calibration_brier": 0.6452,
+      "cross_regime_consistency": 0.2719,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.7315,
+      "missed_transition_rate": 0.7733,
+      "removed_components": [
+        "macro_layer",
+        "regime_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.2827,
+      "transition_detection_accuracy": 0.6941,
+      "transition_timing_error": 7.1933
+    },
+    {
+      "combination_key": "participant_ecology_layer",
+      "confidence_calibration_brier": 0.5991,
+      "cross_regime_consistency": 0.2841,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6802,
+      "missed_transition_rate": 0.415,
+      "removed_components": [
+        "participant_ecology_layer"
+      ],
+      "removed_count": 1,
+      "transition_classification_accuracy": 0.3423,
+      "transition_detection_accuracy": 0.6351,
+      "transition_timing_error": 1.2769
+    },
+    {
+      "combination_key": "participant_ecology_layer+regime_layer",
+      "confidence_calibration_brier": 0.636,
+      "cross_regime_consistency": 0.2973,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.5803,
+      "missed_transition_rate": 0.5363,
+      "removed_components": [
+        "participant_ecology_layer",
+        "regime_layer"
+      ],
+      "removed_count": 2,
+      "transition_classification_accuracy": 0.4411,
+      "transition_detection_accuracy": 0.7411,
+      "transition_timing_error": 4.2144
+    },
+    {
+      "combination_key": "regime_layer",
+      "confidence_calibration_brier": 0.6704,
+      "cross_regime_consistency": 0.3435,
+      "early_warning_lead_time": 1.0,
+      "false_transition_rate": 0.6573,
+      "missed_transition_rate": 0.5741,
+      "removed_components": [
+        "regime_layer"
+      ],
+      "removed_count": 1,
+      "transition_classification_accuracy": 0.3001,
+      "transition_detection_accuracy": 0.6941,
+      "transition_timing_error": 4.468
+    }
+  ],
+  "ablation_run_count": 64,
+  "arb_recommendation": {
+    "components_requiring_additional_evidence": [
+      "decision_ecology_layer",
+      "macro_layer"
+    ],
+    "components_to_redesign": [
+      "cross_asset_network_layer",
+      "interaction_layer",
+      "liquidity_layer",
+      "regime_layer"
+    ],
+    "components_to_remove": [
+      "participant_ecology_layer"
+    ],
+    "components_to_retain": [],
+    "revision_plan_steps": 7
+  },
+  "baseline_metrics": {
+    "confidence_calibration_brier": 0.6393,
+    "cross_regime_consistency": 0.3189,
+    "early_warning_lead_time": 1.0,
+    "false_transition_rate": 0.7182,
+    "missed_transition_rate": 0.4862,
+    "transition_classification_accuracy": 0.2282,
+    "transition_detection_accuracy": 0.6051,
+    "transition_timing_error": 2.4092
+  },
+  "complexity_vs_benefit_analysis": [
+    {
+      "complexity_cost": "low",
+      "component": "interaction_layer",
+      "efficiency_score": 0.0233,
+      "incremental_gain": 0.0233,
+      "verdict": "RETAIN"
+    },
+    {
+      "complexity_cost": "high",
+      "component": "macro_layer",
+      "efficiency_score": 0.0018,
+      "incremental_gain": 0.0054,
+      "verdict": "INVESTIGATE"
+    },
+    {
+      "complexity_cost": "medium",
+      "component": "decision_ecology_layer",
+      "efficiency_score": 0.0009,
+      "incremental_gain": 0.0019,
+      "verdict": "INVESTIGATE"
+    },
+    {
+      "complexity_cost": "low",
+      "component": "liquidity_layer",
+      "efficiency_score": 0.0,
+      "incremental_gain": 0.0,
+      "verdict": "REDESIGN"
+    },
+    {
+      "complexity_cost": "high",
+      "component": "participant_ecology_layer",
+      "efficiency_score": -0.0044,
+      "incremental_gain": -0.0132,
+      "verdict": "REMOVE"
+    },
+    {
+      "complexity_cost": "medium",
+      "component": "cross_asset_network_layer",
+      "efficiency_score": -0.0211,
+      "incremental_gain": -0.0423,
+      "verdict": "REDESIGN"
+    },
+    {
+      "complexity_cost": "low",
+      "component": "regime_layer",
+      "efficiency_score": -0.055,
+      "incremental_gain": -0.055,
+      "verdict": "REDESIGN"
+    }
+  ],
+  "component_contribution_report": [
+    {
+      "brier_contribution": -0.0936,
+      "classification_contribution": 0.0799,
+      "complexity_cost": "low",
+      "component": "interaction_layer",
+      "consistency_contribution": 0.0489,
+      "description": "Trigger-type interaction logic: regime-specific signal inversion for volatility_decay",
+      "detection_contribution": 0.0015,
+      "failure_link": "confidence_calibration_brier",
+      "false_rate_contribution": 0.0214,
+      "incremental_gain": 0.0233,
+      "missed_rate_contribution": 0.0778,
+      "signal_count": 0,
+      "timing_contribution": 1.0814
+    },
+    {
+      "brier_contribution": -0.0259,
+      "classification_contribution": 0.0283,
+      "complexity_cost": "high",
+      "component": "macro_layer",
+      "consistency_contribution": 0.0685,
+      "description": "Macroeconomic conditions: rates, FX levels, Fed surprise, yield curve",
+      "detection_contribution": -0.0067,
+      "failure_link": "false_transition_rate",
+      "false_rate_contribution": 0.0189,
+      "incremental_gain": 0.0054,
+      "missed_rate_contribution": 0.0894,
+      "signal_count": 5,
+      "timing_contribution": -0.1359
+    },
+    {
+      "brier_contribution": -0.0383,
+      "classification_contribution": -0.0247,
+      "complexity_cost": "medium",
+      "component": "decision_ecology_layer",
+      "consistency_contribution": -0.0146,
+      "description": "Institutional expectation formation: forward expectation signals",
+      "detection_contribution": 0.0002,
+      "failure_link": "missed_transition_rate",
+      "false_rate_contribution": -0.0094,
+      "incremental_gain": 0.0019,
+      "missed_rate_contribution": -0.0414,
+      "signal_count": 1,
+      "timing_contribution": 1.9011
+    },
+    {
+      "brier_contribution": 0.0,
+      "classification_contribution": 0.0,
+      "complexity_cost": "low",
+      "component": "liquidity_layer",
+      "consistency_contribution": 0.0,
+      "description": "Market liquidity and volatility: realized vol, breakout, breakdown signals",
+      "detection_contribution": 0.0,
+      "failure_link": "cross_regime_consistency",
+      "false_rate_contribution": 0.0,
+      "incremental_gain": 0.0,
+      "missed_rate_contribution": 0.0,
+      "signal_count": 3,
+      "timing_contribution": 0.0
+    },
+    {
+      "brier_contribution": -0.0402,
+      "classification_contribution": -0.1141,
+      "complexity_cost": "high",
+      "component": "participant_ecology_layer",
+      "consistency_contribution": 0.0348,
+      "description": "Institutional participant behavior proxies: geopolitical severity and safe-haven flow",
+      "detection_contribution": -0.03,
+      "failure_link": "missed_transition_rate",
+      "false_rate_contribution": -0.038,
+      "incremental_gain": -0.0132,
+      "missed_rate_contribution": -0.0712,
+      "signal_count": 1,
+      "timing_contribution": -1.1323
+    },
+    {
+      "brier_contribution": 0.0019,
+      "classification_contribution": -0.0516,
+      "complexity_cost": "medium",
+      "component": "cross_asset_network_layer",
+      "consistency_contribution": 0.0527,
+      "description": "Cross-asset information network: DXY momentum signals at 1d, 5d, 20d horizons",
+      "detection_contribution": -0.0669,
+      "failure_link": "false_transition_rate",
+      "false_rate_contribution": -0.009,
+      "incremental_gain": -0.0423,
+      "missed_rate_contribution": 0.1722,
+      "signal_count": 3,
+      "timing_contribution": 1.1722
+    },
+    {
+      "brier_contribution": 0.0311,
+      "classification_contribution": -0.0719,
+      "complexity_cost": "low",
+      "component": "regime_layer",
+      "consistency_contribution": -0.0246,
+      "description": "Primary asset price momentum: XAU/USD return signals",
+      "detection_contribution": -0.089,
+      "failure_link": "transition_detection_accuracy",
+      "false_rate_contribution": -0.0609,
+      "incremental_gain": -0.055,
+      "missed_rate_contribution": 0.0879,
+      "signal_count": 1,
+      "timing_contribution": 2.0588
+    }
+  ],
+  "components_evaluated": [
+    "macro_layer",
+    "participant_ecology_layer",
+    "decision_ecology_layer",
+    "cross_asset_network_layer",
+    "liquidity_layer",
+    "regime_layer",
+    "interaction_layer"
+  ],
+  "ecology_knowledge_graph": {
+    "component_nodes": [
+      {
+        "attributes": {
+          "complexity_cost": "low",
+          "failure_link": "confidence_calibration_brier",
+          "incremental_gain": 0.0233
+        },
+        "label": "interaction_layer",
+        "node_id": "IKROS-PE1-COMPONENT-INTERACTION-LAYER",
+        "node_type": "WORLD_MODEL"
+      },
+      {
+        "attributes": {
+          "complexity_cost": "high",
+          "failure_link": "false_transition_rate",
+          "incremental_gain": 0.0054
+        },
+        "label": "macro_layer",
+        "node_id": "IKROS-PE1-COMPONENT-MACRO-LAYER",
+        "node_type": "WORLD_MODEL"
+      },
+      {
+        "attributes": {
+          "complexity_cost": "medium",
+          "failure_link": "missed_transition_rate",
+          "incremental_gain": 0.0019
+        },
+        "label": "decision_ecology_layer",
+        "node_id": "IKROS-PE1-COMPONENT-DECISION-ECOLOGY-LAYER",
+        "node_type": "WORLD_MODEL"
+      },
+      {
+        "attributes": {
+          "complexity_cost": "low",
+          "failure_link": "cross_regime_consistency",
+          "incremental_gain": 0.0
+        },
+        "label": "liquidity_layer",
+        "node_id": "IKROS-PE1-COMPONENT-LIQUIDITY-LAYER",
+        "node_type": "WORLD_MODEL"
+      },
+      {
+        "attributes": {
+          "complexity_cost": "high",
+          "failure_link": "missed_transition_rate",
+          "incremental_gain": -0.0132
+        },
+        "label": "participant_ecology_layer",
+        "node_id": "IKROS-PE1-COMPONENT-PARTICIPANT-ECOLOGY-LAYER",
+        "node_type": "WORLD_MODEL"
+      },
+      {
+        "attributes": {
+          "complexity_cost": "medium",
+          "failure_link": "false_transition_rate",
+          "incremental_gain": -0.0423
+        },
+        "label": "cross_asset_network_layer",
+        "node_id": "IKROS-PE1-COMPONENT-CROSS-ASSET-NETWORK-LAYER",
+        "node_type": "WORLD_MODEL"
+      },
+      {
+        "attributes": {
+          "complexity_cost": "low",
+          "failure_link": "transition_detection_accuracy",
+          "incremental_gain": -0.055
+        },
+        "label": "regime_layer",
+        "node_id": "IKROS-PE1-COMPONENT-REGIME-LAYER",
+        "node_type": "WORLD_MODEL"
+      }
+    ],
+    "conclusion_node": {
+      "attributes": {
+        "components_to_redesign": 4,
+        "components_to_remove": 1,
+        "components_to_retain": 0
+      },
+      "label": "Transition Engine Decomposition Conclusion",
+      "node_id": "IKROS-PE1-CONCLUSION-20260802-0001",
+      "node_type": "RESEARCH_CONCLUSION"
+    },
+    "edges": [
+      {
+        "confidence": 0.7,
+        "relation": "EVALUATED",
+        "source": "IKROS-PE1-COMPONENT-INTERACTION-LAYER",
+        "target": "IKROS-PE1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "EVALUATED",
+        "source": "IKROS-PE1-COMPONENT-MACRO-LAYER",
+        "target": "IKROS-PE1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "EVALUATED",
+        "source": "IKROS-PE1-COMPONENT-DECISION-ECOLOGY-LAYER",
+        "target": "IKROS-PE1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "EVALUATED",
+        "source": "IKROS-PE1-COMPONENT-LIQUIDITY-LAYER",
+        "target": "IKROS-PE1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "EVALUATED",
+        "source": "IKROS-PE1-COMPONENT-PARTICIPANT-ECOLOGY-LAYER",
+        "target": "IKROS-PE1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "EVALUATED",
+        "source": "IKROS-PE1-COMPONENT-CROSS-ASSET-NETWORK-LAYER",
+        "target": "IKROS-PE1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "EVALUATED",
+        "source": "IKROS-PE1-COMPONENT-REGIME-LAYER",
+        "target": "IKROS-PE1-CONCLUSION-20260802-0001"
+      },
+      {
+        "confidence": 0.7,
+        "relation": "EXPLAINS",
+        "source": "IKROS-PE1-CONCLUSION-20260802-0001",
+        "target": "IKROS-PE1-REVISION-20260802-0001"
+      }
+    ],
+    "revision_node": {
+      "attributes": {
+        "step_count": 7
+      },
+      "label": "Transition Engine Revision Plan",
+      "node_id": "IKROS-PE1-REVISION-20260802-0001",
+      "node_type": "VALIDATION"
+    }
+  },
+  "failure_attribution_report": [
+    {
+      "ablated_metric": 0.7371,
+      "attribution_direction": "LAYER_MASKING_FAILURE",
+      "attribution_strength": -0.0189,
+      "baseline_metric": 0.7182,
+      "description": "Elevated false-transition rate indicates over-sensitive trigger assumptions.",
+      "failure_id": "F-001",
+      "metric_assessed": "false_transition_rate",
+      "primary_responsible_layer": "macro_layer",
+      "redesign_priority": "MEDIUM",
+      "secondary_layers": [
+        "cross_asset_network_layer"
+      ]
+    },
+    {
+      "ablated_metric": 0.415,
+      "attribution_direction": "LAYER_CAUSING_FAILURE",
+      "attribution_strength": 0.0712,
+      "baseline_metric": 0.4862,
+      "description": "Missed-transition rate indicates incomplete transition mechanism coverage.",
+      "failure_id": "F-002",
+      "metric_assessed": "missed_transition_rate",
+      "primary_responsible_layer": "participant_ecology_layer",
+      "redesign_priority": "HIGH",
+      "secondary_layers": [
+        "decision_ecology_layer"
+      ]
+    },
+    {
+      "ablated_metric": 0.5457,
+      "attribution_direction": "LAYER_CAUSING_FAILURE",
+      "attribution_strength": 0.0936,
+      "baseline_metric": 0.6393,
+      "description": "Confidence calibration is weak under transition-risk scoring.",
+      "failure_id": "F-003",
+      "metric_assessed": "confidence_calibration_brier",
+      "primary_responsible_layer": "interaction_layer",
+      "redesign_priority": "HIGH",
+      "secondary_layers": [
+        "regime_layer"
+      ]
+    },
+    {
+      "ablated_metric": 0.6051,
+      "attribution_direction": "NEUTRAL",
+      "attribution_strength": 0.0,
+      "baseline_metric": 0.6051,
+      "description": "Robustness under stress/event subsets is weaker than at least one simpler baseline.",
+      "failure_id": "F-004",
+      "metric_assessed": "transition_detection_accuracy",
+      "primary_responsible_layer": "liquidity_layer",
+      "redesign_priority": "LOW",
+      "secondary_layers": [
+        "macro_layer",
+        "cross_asset_network_layer"
+      ]
+    },
+    {
+      "ablated_metric": 0.6941,
+      "attribution_direction": "LAYER_CAUSING_FAILURE",
+      "attribution_strength": 0.089,
+      "baseline_metric": 0.6051,
+      "description": "Transition detection accuracy is not superior to simpler baselines.",
+      "failure_id": "F-005",
+      "metric_assessed": "transition_detection_accuracy",
+      "primary_responsible_layer": "regime_layer",
+      "redesign_priority": "HIGH",
+      "secondary_layers": [
+        "interaction_layer",
+        "cross_asset_network_layer"
+      ]
+    }
+  ],
+  "interaction_effects": [
+    {
+      "component_a": "participant_ecology_layer",
+      "component_b": "interaction_layer",
+      "individual_contribution_sum": -0.0285,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": 0.0486,
+      "synergy_index": 0.0771
+    },
+    {
+      "component_a": "decision_ecology_layer",
+      "component_b": "cross_asset_network_layer",
+      "individual_contribution_sum": -0.0667,
+      "interaction_type": "REDUNDANT",
+      "pair_ablation_effect": -0.1115,
+      "synergy_index": -0.0448
+    },
+    {
+      "component_a": "cross_asset_network_layer",
+      "component_b": "interaction_layer",
+      "individual_contribution_sum": -0.0654,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": -0.0278,
+      "synergy_index": 0.0376
+    },
+    {
+      "component_a": "regime_layer",
+      "component_b": "interaction_layer",
+      "individual_contribution_sum": -0.0875,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": -0.0542,
+      "synergy_index": 0.0333
+    },
+    {
+      "component_a": "participant_ecology_layer",
+      "component_b": "cross_asset_network_layer",
+      "individual_contribution_sum": -0.0969,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": -0.0674,
+      "synergy_index": 0.0295
+    },
+    {
+      "component_a": "macro_layer",
+      "component_b": "participant_ecology_layer",
+      "individual_contribution_sum": -0.0367,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": -0.016,
+      "synergy_index": 0.0207
+    },
+    {
+      "component_a": "macro_layer",
+      "component_b": "cross_asset_network_layer",
+      "individual_contribution_sum": -0.0736,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": -0.0542,
+      "synergy_index": 0.0194
+    },
+    {
+      "component_a": "decision_ecology_layer",
+      "component_b": "interaction_layer",
+      "individual_contribution_sum": 0.0017,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": 0.0203,
+      "synergy_index": 0.0186
+    },
+    {
+      "component_a": "participant_ecology_layer",
+      "component_b": "regime_layer",
+      "individual_contribution_sum": -0.119,
+      "interaction_type": "REDUNDANT",
+      "pair_ablation_effect": -0.136,
+      "synergy_index": -0.017
+    },
+    {
+      "component_a": "decision_ecology_layer",
+      "component_b": "regime_layer",
+      "individual_contribution_sum": -0.0888,
+      "interaction_type": "REDUNDANT",
+      "pair_ablation_effect": -0.1051,
+      "synergy_index": -0.0163
+    },
+    {
+      "component_a": "participant_ecology_layer",
+      "component_b": "decision_ecology_layer",
+      "individual_contribution_sum": -0.0298,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": -0.0166,
+      "synergy_index": 0.0132
+    },
+    {
+      "component_a": "macro_layer",
+      "component_b": "interaction_layer",
+      "individual_contribution_sum": -0.0052,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": 0.0034,
+      "synergy_index": 0.0086
+    },
+    {
+      "component_a": "cross_asset_network_layer",
+      "component_b": "regime_layer",
+      "individual_contribution_sum": -0.1559,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": -0.1473,
+      "synergy_index": 0.0086
+    },
+    {
+      "component_a": "macro_layer",
+      "component_b": "regime_layer",
+      "individual_contribution_sum": -0.0957,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": -0.089,
+      "synergy_index": 0.0067
+    },
+    {
+      "component_a": "macro_layer",
+      "component_b": "decision_ecology_layer",
+      "individual_contribution_sum": -0.0065,
+      "interaction_type": "SYNERGISTIC",
+      "pair_ablation_effect": -0.0008,
+      "synergy_index": 0.0057
+    }
+  ],
+  "phase": "DC2_PROGRAM_E_PHASE1",
+  "redesign_recommendations": [
+    {
+      "action": "INVESTIGATE",
+      "complexity_cost": "high",
+      "component": "macro_layer",
+      "failure_count": 0,
+      "recommendation": "Investigate macro_layer: marginal contribution requires additional evidence before design decision.",
+      "signals_affected": [
+        "macro_pressure",
+        "fed_surprise",
+        "yield_10y_change_5",
+        "yield_curve_10y_3m",
+        "yield_30y_change_20"
+      ]
+    },
+    {
+      "action": "REMOVE",
+      "complexity_cost": "high",
+      "component": "participant_ecology_layer",
+      "failure_count": 1,
+      "recommendation": "Remove participant_ecology_layer: high complexity with negative or negligible incremental gain; simplification improves performance.",
+      "signals_affected": [
+        "geo_severity"
+      ]
+    },
+    {
+      "action": "INVESTIGATE",
+      "complexity_cost": "medium",
+      "component": "decision_ecology_layer",
+      "failure_count": 0,
+      "recommendation": "Investigate decision_ecology_layer: marginal contribution requires additional evidence before design decision.",
+      "signals_affected": [
+        "forward_expectation"
+      ]
+    },
+    {
+      "action": "REDESIGN",
+      "complexity_cost": "medium",
+      "component": "cross_asset_network_layer",
+      "failure_count": 0,
+      "recommendation": "Redesign cross_asset_network_layer: contributes to at least one documented failure mode; current signal set requires revision.",
+      "signals_affected": [
+        "dxy_return_1",
+        "dxy_return_5",
+        "dxy_return_20"
+      ]
+    },
+    {
+      "action": "REDESIGN",
+      "complexity_cost": "low",
+      "component": "liquidity_layer",
+      "failure_count": 0,
+      "recommendation": "Redesign liquidity_layer: contributes to at least one documented failure mode; current signal set requires revision.",
+      "signals_affected": [
+        "regime_vol_20",
+        "breakout_60",
+        "breakdown_20"
+      ]
+    },
+    {
+      "action": "REDESIGN",
+      "complexity_cost": "low",
+      "component": "regime_layer",
+      "failure_count": 1,
+      "recommendation": "Redesign regime_layer: contributes to at least one documented failure mode; current signal set requires revision.",
+      "signals_affected": [
+        "xau_return_1"
+      ]
+    },
+    {
+      "action": "REDESIGN",
+      "complexity_cost": "low",
+      "component": "interaction_layer",
+      "failure_count": 1,
+      "recommendation": "Redesign interaction_layer: contributes to at least one documented failure mode; current signal set requires revision.",
+      "signals_affected": []
+    }
+  ],
+  "revision_priority_matrix": [
+    {
+      "action": "REMOVE",
+      "complexity_cost": "high",
+      "component": "participant_ecology_layer",
+      "failure_count": 1,
+      "priority_rank": 1,
+      "recommendation": "Remove participant_ecology_layer: high complexity with negative or negligible incremental gain; simplification improves performance."
+    },
+    {
+      "action": "REDESIGN",
+      "complexity_cost": "medium",
+      "component": "cross_asset_network_layer",
+      "failure_count": 0,
+      "priority_rank": 2,
+      "recommendation": "Redesign cross_asset_network_layer: contributes to at least one documented failure mode; current signal set requires revision."
+    },
+    {
+      "action": "REDESIGN",
+      "complexity_cost": "low",
+      "component": "interaction_layer",
+      "failure_count": 1,
+      "priority_rank": 3,
+      "recommendation": "Redesign interaction_layer: contributes to at least one documented failure mode; current signal set requires revision."
+    },
+    {
+      "action": "REDESIGN",
+      "complexity_cost": "low",
+      "component": "liquidity_layer",
+      "failure_count": 0,
+      "priority_rank": 4,
+      "recommendation": "Redesign liquidity_layer: contributes to at least one documented failure mode; current signal set requires revision."
+    },
+    {
+      "action": "REDESIGN",
+      "complexity_cost": "low",
+      "component": "regime_layer",
+      "failure_count": 1,
+      "priority_rank": 5,
+      "recommendation": "Redesign regime_layer: contributes to at least one documented failure mode; current signal set requires revision."
+    },
+    {
+      "action": "INVESTIGATE",
+      "complexity_cost": "medium",
+      "component": "decision_ecology_layer",
+      "failure_count": 0,
+      "priority_rank": 6,
+      "recommendation": "Investigate decision_ecology_layer: marginal contribution requires additional evidence before design decision."
+    },
+    {
+      "action": "INVESTIGATE",
+      "complexity_cost": "high",
+      "component": "macro_layer",
+      "failure_count": 0,
+      "priority_rank": 7,
+      "recommendation": "Investigate macro_layer: marginal contribution requires additional evidence before design decision."
+    }
+  ],
+  "title": "Institutional Transition Engine Decomposition & Ablation Analysis",
+  "transition_engine_revision_plan": {
+    "components_requiring_additional_evidence": [
+      "decision_ecology_layer",
+      "macro_layer"
+    ],
+    "components_to_redesign": [
+      "cross_asset_network_layer",
+      "interaction_layer",
+      "liquidity_layer",
+      "regime_layer"
+    ],
+    "components_to_remove": [
+      "participant_ecology_layer"
+    ],
+    "components_to_retain": [],
+    "estimated_complexity_reduction": "1 high-cost components removed",
+    "expected_benefit": "Improved transition detection accuracy and reduced false-transition rate",
+    "revision_steps": [
+      {
+        "action": "REMOVE",
+        "component": "participant_ecology_layer",
+        "rationale": "Institutional participant behavior proxies: geopolitical severity and safe-haven flow",
+        "step": 1
+      },
+      {
+        "action": "REDESIGN",
+        "component": "cross_asset_network_layer",
+        "rationale": "Cross-asset information network: DXY momentum signals at 1d, 5d, 20d horizons",
+        "step": 2
+      },
+      {
+        "action": "REDESIGN",
+        "component": "interaction_layer",
+        "rationale": "Trigger-type interaction logic: regime-specific signal inversion for volatility_decay",
+        "step": 3
+      },
+      {
+        "action": "REDESIGN",
+        "component": "liquidity_layer",
+        "rationale": "Market liquidity and volatility: realized vol, breakout, breakdown signals",
+        "step": 4
+      },
+      {
+        "action": "REDESIGN",
+        "component": "regime_layer",
+        "rationale": "Primary asset price momentum: XAU/USD return signals",
+        "step": 5
+      },
+      {
+        "action": "INVESTIGATE",
+        "component": "decision_ecology_layer",
+        "rationale": "Institutional expectation formation: forward expectation signals",
+        "step": 6
+      },
+      {
+        "action": "INVESTIGATE",
+        "component": "macro_layer",
+        "rationale": "Macroeconomic conditions: rates, FX levels, Fed surprise, yield curve",
+        "step": 7
+      }
+    ]
+  }
+}

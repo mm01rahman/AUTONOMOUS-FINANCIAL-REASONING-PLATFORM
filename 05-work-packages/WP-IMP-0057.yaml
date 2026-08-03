@@ -1,0 +1,153 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0057"
+capability_id:
+  id: "INSTITUTIONAL-MARKET-INTELLIGENCE"
+  version: "1.0"
+title: "Generation 4 — Real-Time Institutional Market Intelligence Platform"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
+    trace_sls: "AFRP-GEN4-WP0057-1.0.0"
+    trace_adr: ["ADR-0001", "ADR-IKROS-001", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "work_package.completed('WP-IMP-0056')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/alpha_research/real_time_institutional_market_intelligence.py"
+      - "tools/alpha_research/program7_real_time_institutional_market_intelligence.py"
+      - "tests/unit/test_program7_real_time_institutional_market_intelligence.py"
+      - "11-research/generation-4-real-time-institutional-market-intelligence/"
+      - "schemas/institutional-market-intelligence/"
+      - "data/ikros/graph/"
+      - "data/ikros/orchestrator/audit/"
+      - "data/ikros/orchestrator/campaigns/"
+      - "data/ikros/orchestrator/reports/"
+      - "data/ikros/memory/t1-episodic/"
+      - "data/ikros/memory/t4-institutional/"
+      - "data/ikros/registries/research/"
+      - "data/ikros/registries/experiments/"
+      - "05-work-packages/WP-IMP-0057.yaml"
+    read:
+      - "11-research/program-6-institutional-market-simulation-paper-trading-laboratory/"
+      - "11-research/program-5-institutional-alpha-portfolio-intelligence-system/"
+      - "data/ikros/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "24h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "11-research/program-6-institutional-market-simulation-paper-trading-laboratory/portfolio_performance_registry.json"
+    - "11-research/program-6-institutional-market-simulation-paper-trading-laboratory/live_market_monitor.json"
+    - "11-research/program-5-institutional-alpha-portfolio-intelligence-system/portfolio_registry.json"
+    - "data/ikros/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/alpha_research/real_time_institutional_market_intelligence.py"
+    - "tools/alpha_research/program7_real_time_institutional_market_intelligence.py"
+  expected_test_files:
+    - "tests/unit/test_program7_real_time_institutional_market_intelligence.py"
+  expected_documentation:
+    - "11-research/generation-4-real-time-institutional-market-intelligence/"
+  expected_evidence:
+    - "11-research/generation-4-real-time-institutional-market-intelligence/institutional_intelligence_registry.json"
+    - "11-research/generation-4-real-time-institutional-market-intelligence/research_trigger_registry.json"
+    - "11-research/generation-4-real-time-institutional-market-intelligence/FINAL_REPORT.md"
+    - "schemas/institutional-market-intelligence/"
+
+produces:
+  capability:
+    id: "INSTITUTIONAL-MARKET-INTELLIGENCE"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/alpha_research/real_time_institutional_market_intelligence.py"
+    - "tools/alpha_research/program7_real_time_institutional_market_intelligence.py"
+    - "tests/unit/test_program7_real_time_institutional_market_intelligence.py"
+    - "11-research/generation-4-real-time-institutional-market-intelligence/"
+    - "schemas/institutional-market-intelligence/"
+    - "data/ikros/graph/"
+    - "data/ikros/orchestrator/audit/"
+    - "data/ikros/orchestrator/campaigns/"
+    - "data/ikros/orchestrator/reports/"
+    - "data/ikros/memory/t1-episodic/"
+    - "data/ikros/memory/t4-institutional/"
+    - "data/ikros/registries/research/"
+    - "data/ikros/registries/experiments/"
+    - "05-work-packages/WP-IMP-0057.yaml"
+  non_goals:
+    - "No Runtime redesign."
+    - "No broker integration."
+    - "No order management."
+    - "No live trading."
+
+requirements:
+  intelligence_engine:
+    module: "tools/alpha_research/real_time_institutional_market_intelligence.py"
+    rules:
+      - "Continuously ingest timestamped market-state observations with quality scoring and lineage."
+      - "Update institutional beliefs and regime probabilities through governed evidence updates only."
+      - "Maintain alpha activation and non-executing portfolio recommendation updates."
+      - "Autonomously emit governed research triggers, event reasoning, and knowledge evolution updates."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0057"
+
+completion:
+  success_requires:
+    - "AFRP continuously observes markets, updates beliefs, maintains regime probabilities, monitors alpha activation, and revises portfolio recommendations without execution."
+    - "AFRP autonomously generates governed research triggers and explainable event reasoning."
+    - "IKROS belief, market-state, regime, event, trigger, longitudinal, and institutional-intelligence registries are emitted through the governed runner."
+    - "Generation 4 reports, schemas, dashboards, and tests are generated and versioned."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-NONDETERMINISTIC: "Intelligence-loop outputs differ across repeated executions."
+  ERR-OPAQUE: "Belief, portfolio, or trigger updates are emitted without explainability and lineage."
+  ERR-EXECUTION: "Any Generation 4 surface attempts to execute trades or connect to brokers."

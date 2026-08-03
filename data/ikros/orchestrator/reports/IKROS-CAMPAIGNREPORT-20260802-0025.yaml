@@ -1,0 +1,33 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0334
+- IKROS-CAMPAIGNAUDIT-20260802-0335
+- IKROS-CAMPAIGNAUDIT-20260802-0336
+- IKROS-CAMPAIGNAUDIT-20260802-0337
+- IKROS-CAMPAIGNAUDIT-20260802-0338
+- IKROS-CAMPAIGNAUDIT-20260802-0339
+- IKROS-CAMPAIGNAUDIT-20260802-0340
+blocked_task_ids:
+- IKROS-RESEARCHTASK-20260802-0122
+- IKROS-RESEARCHTASK-20260802-0128
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0025
+campaign_type: RESEARCH_AUDIT
+completed_task_ids: []
+failed_task_ids:
+- IKROS-RESEARCHTASK-20260802-0118
+finished_at: '2026-08-02T14:03:10.618975+00:00'
+lifecycle_state: FAILED
+memory_record_ids:
+- IKMEM-T4-20260802-0031
+output_refs: []
+progress:
+  blocked: 2
+  completed: 0
+  failed: 1
+  percent_complete: 0.0
+  skipped: 0
+  total: 3
+report_id: IKROS-CAMPAIGNREPORT-20260802-0025
+skipped_task_ids: []
+started_at: '2026-08-02T14:03:06.209271+00:00'
+summary: 'DC2 Program F Phase 1: Institutional Theory Extraction failed after 1 task
+  failures.'

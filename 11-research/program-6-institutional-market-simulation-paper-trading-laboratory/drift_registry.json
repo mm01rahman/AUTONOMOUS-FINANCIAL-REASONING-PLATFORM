@@ -1,0 +1,978 @@
+[
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.299,
+        "dataset_drift": 0.108,
+        "distribution_drift": 0.1,
+        "feature_drift": 0.0115,
+        "knowledge_drift": 0.0064,
+        "market_drift": 0.08,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.12,
+        "regime_drift": 0.33
+      },
+      {
+        "confidence_drift": 0.18,
+        "dataset_drift": 0.108,
+        "distribution_drift": 0.1,
+        "feature_drift": 0.0058,
+        "knowledge_drift": 0.0032,
+        "market_drift": 0.08,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.12,
+        "regime_drift": 0.21
+      },
+      {
+        "confidence_drift": 0.25,
+        "dataset_drift": 0.108,
+        "distribution_drift": 0.1,
+        "feature_drift": 0.0058,
+        "knowledge_drift": 0.0032,
+        "market_drift": 0.08,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.12,
+        "regime_drift": 0.29
+      },
+      {
+        "confidence_drift": 0.12,
+        "dataset_drift": 0.108,
+        "distribution_drift": 0.1,
+        "feature_drift": 0.0461,
+        "knowledge_drift": 0.0656,
+        "market_drift": 0.08,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.12,
+        "regime_drift": 0.07
+      },
+      {
+        "confidence_drift": 0.19,
+        "dataset_drift": 0.108,
+        "distribution_drift": 0.1,
+        "feature_drift": 0.0547,
+        "knowledge_drift": 0.0704,
+        "market_drift": 0.08,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.12,
+        "regime_drift": 0.13
+      }
+    ],
+    "replay_mode": "historical_replay",
+    "timestamp": "2021-01-04T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.4577,
+        "dataset_drift": 0.099,
+        "distribution_drift": 0.06,
+        "feature_drift": 0.0191,
+        "knowledge_drift": 0.0226,
+        "market_drift": 0.064,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.11,
+        "regime_drift": 0.47
+      },
+      {
+        "confidence_drift": 0.2658,
+        "dataset_drift": 0.099,
+        "distribution_drift": 0.06,
+        "feature_drift": 0.0133,
+        "knowledge_drift": 0.0074,
+        "market_drift": 0.064,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.11,
+        "regime_drift": 0.27
+      },
+      {
+        "confidence_drift": 0.2918,
+        "dataset_drift": 0.099,
+        "distribution_drift": 0.06,
+        "feature_drift": 0.0076,
+        "knowledge_drift": 0.009,
+        "market_drift": 0.064,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.11,
+        "regime_drift": 0.31
+      },
+      {
+        "confidence_drift": 0.1782,
+        "dataset_drift": 0.099,
+        "distribution_drift": 0.06,
+        "feature_drift": 0.0752,
+        "knowledge_drift": 0.0658,
+        "market_drift": 0.064,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.11,
+        "regime_drift": 0.16
+      },
+      {
+        "confidence_drift": 0.0031,
+        "dataset_drift": 0.099,
+        "distribution_drift": 0.06,
+        "feature_drift": 0.0479,
+        "knowledge_drift": 0.041,
+        "market_drift": 0.064,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.11,
+        "regime_drift": 0.03
+      }
+    ],
+    "replay_mode": "walk_forward_replay",
+    "timestamp": "2021-03-15T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.1321,
+        "dataset_drift": 0.135,
+        "distribution_drift": 0.04,
+        "feature_drift": 0.0295,
+        "knowledge_drift": 0.0324,
+        "market_drift": 0.112,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.15,
+        "regime_drift": 0.13
+      },
+      {
+        "confidence_drift": 0.1529,
+        "dataset_drift": 0.135,
+        "distribution_drift": 0.04,
+        "feature_drift": 0.0353,
+        "knowledge_drift": 0.0356,
+        "market_drift": 0.112,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.15,
+        "regime_drift": 0.17
+      },
+      {
+        "confidence_drift": 0.1977,
+        "dataset_drift": 0.135,
+        "distribution_drift": 0.04,
+        "feature_drift": 0.0396,
+        "knowledge_drift": 0.038,
+        "market_drift": 0.112,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.15,
+        "regime_drift": 0.2
+      },
+      {
+        "confidence_drift": 0.1523,
+        "dataset_drift": 0.135,
+        "distribution_drift": 0.04,
+        "feature_drift": 0.0166,
+        "knowledge_drift": 0.0188,
+        "market_drift": 0.112,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.15,
+        "regime_drift": 0.14
+      },
+      {
+        "confidence_drift": 0.0095,
+        "dataset_drift": 0.135,
+        "distribution_drift": 0.04,
+        "feature_drift": 0.0094,
+        "knowledge_drift": 0.0212,
+        "market_drift": 0.112,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.15,
+        "regime_drift": 0.01
+      }
+    ],
+    "replay_mode": "rolling_replay",
+    "timestamp": "2021-06-21T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.066,
+        "dataset_drift": 0.144,
+        "distribution_drift": 0.07,
+        "feature_drift": 0.0097,
+        "knowledge_drift": 0.0222,
+        "market_drift": 0.12,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.16,
+        "regime_drift": 0.03
+      },
+      {
+        "confidence_drift": 0.136,
+        "dataset_drift": 0.144,
+        "distribution_drift": 0.07,
+        "feature_drift": 0.0169,
+        "knowledge_drift": 0.0374,
+        "market_drift": 0.12,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.16,
+        "regime_drift": 0.08
+      },
+      {
+        "confidence_drift": 0.2419,
+        "dataset_drift": 0.144,
+        "distribution_drift": 0.07,
+        "feature_drift": 0.0342,
+        "knowledge_drift": 0.019,
+        "market_drift": 0.12,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.16,
+        "regime_drift": 0.2
+      },
+      {
+        "confidence_drift": 0.2995,
+        "dataset_drift": 0.144,
+        "distribution_drift": 0.07,
+        "feature_drift": 0.0428,
+        "knowledge_drift": 0.0238,
+        "market_drift": 0.12,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.16,
+        "regime_drift": 0.26
+      },
+      {
+        "confidence_drift": 0.2746,
+        "dataset_drift": 0.144,
+        "distribution_drift": 0.07,
+        "feature_drift": 0.04,
+        "knowledge_drift": 0.0362,
+        "market_drift": 0.12,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.16,
+        "regime_drift": 0.24
+      }
+    ],
+    "replay_mode": "multi_year_replay",
+    "timestamp": "2021-09-30T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.1299,
+        "dataset_drift": 0.18,
+        "distribution_drift": 0.12,
+        "feature_drift": 0.0594,
+        "knowledge_drift": 0.081,
+        "market_drift": 0.2,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.2,
+        "regime_drift": 0.2
+      },
+      {
+        "confidence_drift": 0.2061,
+        "dataset_drift": 0.18,
+        "distribution_drift": 0.12,
+        "feature_drift": 0.1055,
+        "knowledge_drift": 0.0874,
+        "market_drift": 0.2,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.2,
+        "regime_drift": 0.12
+      },
+      {
+        "confidence_drift": 0.2326,
+        "dataset_drift": 0.18,
+        "distribution_drift": 0.12,
+        "feature_drift": 0.1127,
+        "knowledge_drift": 0.1106,
+        "market_drift": 0.2,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.2,
+        "regime_drift": 0.17
+      },
+      {
+        "confidence_drift": 0.2854,
+        "dataset_drift": 0.18,
+        "distribution_drift": 0.12,
+        "feature_drift": 0.1213,
+        "knowledge_drift": 0.0674,
+        "market_drift": 0.2,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.2,
+        "regime_drift": 0.23
+      },
+      {
+        "confidence_drift": 0.3821,
+        "dataset_drift": 0.18,
+        "distribution_drift": 0.12,
+        "feature_drift": 0.1357,
+        "knowledge_drift": 0.085,
+        "market_drift": 0.2,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.2,
+        "regime_drift": 0.33
+      }
+    ],
+    "replay_mode": "regime_replay",
+    "timestamp": "2021-12-20T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.1043,
+        "dataset_drift": 0.252,
+        "distribution_drift": 0.18,
+        "feature_drift": 0.2038,
+        "knowledge_drift": 0.1852,
+        "market_drift": 0.32,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.28,
+        "regime_drift": 0.21
+      },
+      {
+        "confidence_drift": 0.2465,
+        "dataset_drift": 0.252,
+        "distribution_drift": 0.18,
+        "feature_drift": 0.2556,
+        "knowledge_drift": 0.142,
+        "market_drift": 0.32,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.28,
+        "regime_drift": 0.15
+      },
+      {
+        "confidence_drift": 0.3191,
+        "dataset_drift": 0.252,
+        "distribution_drift": 0.18,
+        "feature_drift": 0.27,
+        "knowledge_drift": 0.15,
+        "market_drift": 0.32,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.28,
+        "regime_drift": 0.25
+      },
+      {
+        "confidence_drift": 0.4671,
+        "dataset_drift": 0.252,
+        "distribution_drift": 0.18,
+        "feature_drift": 0.293,
+        "knowledge_drift": 0.1988,
+        "market_drift": 0.32,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.28,
+        "regime_drift": 0.41
+      },
+      {
+        "confidence_drift": 0.486,
+        "dataset_drift": 0.252,
+        "distribution_drift": 0.18,
+        "feature_drift": 0.2974,
+        "knowledge_drift": 0.2012,
+        "market_drift": 0.32,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.28,
+        "regime_drift": 0.44
+      }
+    ],
+    "replay_mode": "event_replay",
+    "timestamp": "2022-03-14T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.0171,
+        "dataset_drift": 0.27,
+        "distribution_drift": 0.09,
+        "feature_drift": 0.2621,
+        "knowledge_drift": 0.1816,
+        "market_drift": 0.36,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.3,
+        "regime_drift": 0.13
+      },
+      {
+        "confidence_drift": 0.0946,
+        "dataset_drift": 0.27,
+        "distribution_drift": 0.09,
+        "feature_drift": 0.2563,
+        "knowledge_drift": 0.1784,
+        "market_drift": 0.36,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.3,
+        "regime_drift": 0.17
+      },
+      {
+        "confidence_drift": 0.1599,
+        "dataset_drift": 0.27,
+        "distribution_drift": 0.09,
+        "feature_drift": 0.252,
+        "knowledge_drift": 0.176,
+        "market_drift": 0.36,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.3,
+        "regime_drift": 0.2
+      },
+      {
+        "confidence_drift": 0.1555,
+        "dataset_drift": 0.27,
+        "distribution_drift": 0.09,
+        "feature_drift": 0.301,
+        "knowledge_drift": 0.1888,
+        "market_drift": 0.36,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.3,
+        "regime_drift": 0.14
+      },
+      {
+        "confidence_drift": 0.012,
+        "dataset_drift": 0.27,
+        "distribution_drift": 0.09,
+        "feature_drift": 0.2822,
+        "knowledge_drift": 0.1928,
+        "market_drift": 0.36,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.3,
+        "regime_drift": 0.01
+      }
+    ],
+    "replay_mode": "shock_replay",
+    "timestamp": "2022-06-13T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.0955,
+        "dataset_drift": 0.189,
+        "distribution_drift": 0.11,
+        "feature_drift": 0.1125,
+        "knowledge_drift": 0.1065,
+        "market_drift": 0.248,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.21,
+        "regime_drift": 0.2
+      },
+      {
+        "confidence_drift": 0.1901,
+        "dataset_drift": 0.189,
+        "distribution_drift": 0.11,
+        "feature_drift": 0.1586,
+        "knowledge_drift": 0.1145,
+        "market_drift": 0.248,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.21,
+        "regime_drift": 0.12
+      },
+      {
+        "confidence_drift": 0.2072,
+        "dataset_drift": 0.189,
+        "distribution_drift": 0.11,
+        "feature_drift": 0.1658,
+        "knowledge_drift": 0.1361,
+        "market_drift": 0.248,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.21,
+        "regime_drift": 0.17
+      },
+      {
+        "confidence_drift": 0.2158,
+        "dataset_drift": 0.189,
+        "distribution_drift": 0.11,
+        "feature_drift": 0.1744,
+        "knowledge_drift": 0.0969,
+        "market_drift": 0.248,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.21,
+        "regime_drift": 0.23
+      },
+      {
+        "confidence_drift": 0.3126,
+        "dataset_drift": 0.189,
+        "distribution_drift": 0.11,
+        "feature_drift": 0.1888,
+        "knowledge_drift": 0.1137,
+        "market_drift": 0.248,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.21,
+        "regime_drift": 0.33
+      }
+    ],
+    "replay_mode": "session_replay",
+    "timestamp": "2022-09-27T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.4595,
+        "dataset_drift": 0.117,
+        "distribution_drift": 0.07,
+        "feature_drift": 0.0187,
+        "knowledge_drift": 0.0104,
+        "market_drift": 0.072,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.13,
+        "regime_drift": 0.33
+      },
+      {
+        "confidence_drift": 0.2799,
+        "dataset_drift": 0.117,
+        "distribution_drift": 0.07,
+        "feature_drift": 0.0274,
+        "knowledge_drift": 0.0152,
+        "market_drift": 0.072,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.13,
+        "regime_drift": 0.21
+      },
+      {
+        "confidence_drift": 0.323,
+        "dataset_drift": 0.117,
+        "distribution_drift": 0.07,
+        "feature_drift": 0.0158,
+        "knowledge_drift": 0.0088,
+        "market_drift": 0.072,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.13,
+        "regime_drift": 0.29
+      },
+      {
+        "confidence_drift": 0.0931,
+        "dataset_drift": 0.117,
+        "distribution_drift": 0.07,
+        "feature_drift": 0.0677,
+        "knowledge_drift": 0.0656,
+        "market_drift": 0.072,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.13,
+        "regime_drift": 0.07
+      },
+      {
+        "confidence_drift": 0.1642,
+        "dataset_drift": 0.117,
+        "distribution_drift": 0.07,
+        "feature_drift": 0.0763,
+        "knowledge_drift": 0.0704,
+        "market_drift": 0.072,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.13,
+        "regime_drift": 0.13
+      }
+    ],
+    "replay_mode": "historical_replay",
+    "timestamp": "2023-01-17T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.0168,
+        "dataset_drift": 0.126,
+        "distribution_drift": 0.05,
+        "feature_drift": 0.0565,
+        "knowledge_drift": 0.0514,
+        "market_drift": 0.096,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.14,
+        "regime_drift": 0.13
+      },
+      {
+        "confidence_drift": 0.0786,
+        "dataset_drift": 0.126,
+        "distribution_drift": 0.05,
+        "feature_drift": 0.0623,
+        "knowledge_drift": 0.0546,
+        "market_drift": 0.096,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.14,
+        "regime_drift": 0.17
+      },
+      {
+        "confidence_drift": 0.1472,
+        "dataset_drift": 0.126,
+        "distribution_drift": 0.05,
+        "feature_drift": 0.0666,
+        "knowledge_drift": 0.057,
+        "market_drift": 0.096,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.14,
+        "regime_drift": 0.2
+      },
+      {
+        "confidence_drift": 0.1444,
+        "dataset_drift": 0.126,
+        "distribution_drift": 0.05,
+        "feature_drift": 0.0176,
+        "knowledge_drift": 0.0218,
+        "market_drift": 0.096,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.14,
+        "regime_drift": 0.14
+      },
+      {
+        "confidence_drift": 0.0045,
+        "dataset_drift": 0.126,
+        "distribution_drift": 0.05,
+        "feature_drift": 0.0364,
+        "knowledge_drift": 0.0402,
+        "market_drift": 0.096,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.14,
+        "regime_drift": 0.01
+      }
+    ],
+    "replay_mode": "walk_forward_replay",
+    "timestamp": "2023-04-24T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.6495,
+        "dataset_drift": 0.09,
+        "distribution_drift": 0.08,
+        "feature_drift": 0.0209,
+        "knowledge_drift": 0.0276,
+        "market_drift": 0.048,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.1,
+        "regime_drift": 0.47
+      },
+      {
+        "confidence_drift": 0.3949,
+        "dataset_drift": 0.09,
+        "distribution_drift": 0.08,
+        "feature_drift": 0.0439,
+        "knowledge_drift": 0.0244,
+        "market_drift": 0.048,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.1,
+        "regime_drift": 0.27
+      },
+      {
+        "confidence_drift": 0.397,
+        "dataset_drift": 0.09,
+        "distribution_drift": 0.08,
+        "feature_drift": 0.0382,
+        "knowledge_drift": 0.0276,
+        "market_drift": 0.048,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.1,
+        "regime_drift": 0.31
+      },
+      {
+        "confidence_drift": 0.1286,
+        "dataset_drift": 0.09,
+        "distribution_drift": 0.08,
+        "feature_drift": 0.1058,
+        "knowledge_drift": 0.0908,
+        "market_drift": 0.048,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.1,
+        "regime_drift": 0.16
+      },
+      {
+        "confidence_drift": 0.0542,
+        "dataset_drift": 0.09,
+        "distribution_drift": 0.08,
+        "feature_drift": 0.0785,
+        "knowledge_drift": 0.0628,
+        "market_drift": 0.048,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.1,
+        "regime_drift": 0.03
+      }
+    ],
+    "replay_mode": "rolling_replay",
+    "timestamp": "2023-07-10T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.2193,
+        "dataset_drift": 0.198,
+        "distribution_drift": 0.1,
+        "feature_drift": 0.1501,
+        "knowledge_drift": 0.1074,
+        "market_drift": 0.24,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.22,
+        "regime_drift": 0.03
+      },
+      {
+        "confidence_drift": 0.2201,
+        "dataset_drift": 0.198,
+        "distribution_drift": 0.1,
+        "feature_drift": 0.1573,
+        "knowledge_drift": 0.1274,
+        "market_drift": 0.24,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.22,
+        "regime_drift": 0.08
+      },
+      {
+        "confidence_drift": 0.3014,
+        "dataset_drift": 0.198,
+        "distribution_drift": 0.1,
+        "feature_drift": 0.1746,
+        "knowledge_drift": 0.097,
+        "market_drift": 0.24,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.22,
+        "regime_drift": 0.2
+      },
+      {
+        "confidence_drift": 0.3157,
+        "dataset_drift": 0.198,
+        "distribution_drift": 0.1,
+        "feature_drift": 0.1832,
+        "knowledge_drift": 0.1018,
+        "market_drift": 0.24,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.22,
+        "regime_drift": 0.26
+      },
+      {
+        "confidence_drift": 0.2845,
+        "dataset_drift": 0.198,
+        "distribution_drift": 0.1,
+        "feature_drift": 0.1804,
+        "knowledge_drift": 0.1202,
+        "market_drift": 0.24,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.22,
+        "regime_drift": 0.24
+      }
+    ],
+    "replay_mode": "multi_year_replay",
+    "timestamp": "2023-10-02T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.0047,
+        "dataset_drift": 0.162,
+        "distribution_drift": 0.09,
+        "feature_drift": 0.0432,
+        "knowledge_drift": 0.06,
+        "market_drift": 0.176,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.18,
+        "regime_drift": 0.2
+      },
+      {
+        "confidence_drift": 0.2621,
+        "dataset_drift": 0.162,
+        "distribution_drift": 0.09,
+        "feature_drift": 0.0893,
+        "knowledge_drift": 0.0712,
+        "market_drift": 0.176,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.18,
+        "regime_drift": 0.12
+      },
+      {
+        "confidence_drift": 0.264,
+        "dataset_drift": 0.162,
+        "distribution_drift": 0.09,
+        "feature_drift": 0.0965,
+        "knowledge_drift": 0.0896,
+        "market_drift": 0.176,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.18,
+        "regime_drift": 0.17
+      },
+      {
+        "confidence_drift": 0.2736,
+        "dataset_drift": 0.162,
+        "distribution_drift": 0.09,
+        "feature_drift": 0.1051,
+        "knowledge_drift": 0.0584,
+        "market_drift": 0.176,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.18,
+        "regime_drift": 0.23
+      },
+      {
+        "confidence_drift": 0.3639,
+        "dataset_drift": 0.162,
+        "distribution_drift": 0.09,
+        "feature_drift": 0.1195,
+        "knowledge_drift": 0.0736,
+        "market_drift": 0.176,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.18,
+        "regime_drift": 0.33
+      }
+    ],
+    "replay_mode": "regime_replay",
+    "timestamp": "2024-01-29T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.0242,
+        "dataset_drift": 0.234,
+        "distribution_drift": 0.14,
+        "feature_drift": 0.1948,
+        "knowledge_drift": 0.1642,
+        "market_drift": 0.304,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.26,
+        "regime_drift": 0.21
+      },
+      {
+        "confidence_drift": 0.3057,
+        "dataset_drift": 0.234,
+        "distribution_drift": 0.14,
+        "feature_drift": 0.2466,
+        "knowledge_drift": 0.137,
+        "market_drift": 0.304,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.26,
+        "regime_drift": 0.15
+      },
+      {
+        "confidence_drift": 0.3537,
+        "dataset_drift": 0.234,
+        "distribution_drift": 0.14,
+        "feature_drift": 0.261,
+        "knowledge_drift": 0.145,
+        "market_drift": 0.304,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.26,
+        "regime_drift": 0.25
+      },
+      {
+        "confidence_drift": 0.4586,
+        "dataset_drift": 0.234,
+        "distribution_drift": 0.14,
+        "feature_drift": 0.284,
+        "knowledge_drift": 0.1858,
+        "market_drift": 0.304,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.26,
+        "regime_drift": 0.41
+      },
+      {
+        "confidence_drift": 0.471,
+        "dataset_drift": 0.234,
+        "distribution_drift": 0.14,
+        "feature_drift": 0.2884,
+        "knowledge_drift": 0.1882,
+        "market_drift": 0.304,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.26,
+        "regime_drift": 0.44
+      }
+    ],
+    "replay_mode": "event_replay",
+    "timestamp": "2024-04-15T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.1132,
+        "dataset_drift": 0.153,
+        "distribution_drift": 0.04,
+        "feature_drift": 0.0281,
+        "knowledge_drift": 0.0316,
+        "market_drift": 0.144,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.17,
+        "regime_drift": 0.13
+      },
+      {
+        "confidence_drift": 0.0336,
+        "dataset_drift": 0.153,
+        "distribution_drift": 0.04,
+        "feature_drift": 0.0281,
+        "knowledge_drift": 0.0316,
+        "market_drift": 0.144,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.17,
+        "regime_drift": 0.17
+      },
+      {
+        "confidence_drift": 0.1235,
+        "dataset_drift": 0.153,
+        "distribution_drift": 0.04,
+        "feature_drift": 0.0324,
+        "knowledge_drift": 0.034,
+        "market_drift": 0.144,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.17,
+        "regime_drift": 0.2
+      },
+      {
+        "confidence_drift": 0.1488,
+        "dataset_drift": 0.153,
+        "distribution_drift": 0.04,
+        "feature_drift": 0.067,
+        "knowledge_drift": 0.0468,
+        "market_drift": 0.144,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.17,
+        "regime_drift": 0.14
+      },
+      {
+        "confidence_drift": 0.0012,
+        "dataset_drift": 0.153,
+        "distribution_drift": 0.04,
+        "feature_drift": 0.0482,
+        "knowledge_drift": 0.0428,
+        "market_drift": 0.144,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.17,
+        "regime_drift": 0.01
+      }
+    ],
+    "replay_mode": "shock_replay",
+    "timestamp": "2024-07-22T00:00:00+00:00"
+  },
+  {
+    "entries": [
+      {
+        "confidence_drift": 0.72,
+        "dataset_drift": 0.108,
+        "distribution_drift": 0.06,
+        "feature_drift": 0.0371,
+        "knowledge_drift": 0.0326,
+        "market_drift": 0.056,
+        "mechanism": "safe_haven_migration",
+        "observation_drift": 0.12,
+        "regime_drift": 0.47
+      },
+      {
+        "confidence_drift": 0.4468,
+        "dataset_drift": 0.108,
+        "distribution_drift": 0.06,
+        "feature_drift": 0.0457,
+        "knowledge_drift": 0.0254,
+        "market_drift": 0.056,
+        "mechanism": "real_yield_dislocation_reversion",
+        "observation_drift": 0.12,
+        "regime_drift": 0.27
+      },
+      {
+        "confidence_drift": 0.4275,
+        "dataset_drift": 0.108,
+        "distribution_drift": 0.06,
+        "feature_drift": 0.04,
+        "knowledge_drift": 0.027,
+        "market_drift": 0.056,
+        "mechanism": "policy_expectation_repricing",
+        "observation_drift": 0.12,
+        "regime_drift": 0.31
+      },
+      {
+        "confidence_drift": 0.1341,
+        "dataset_drift": 0.108,
+        "distribution_drift": 0.06,
+        "feature_drift": 0.1076,
+        "knowledge_drift": 0.0838,
+        "market_drift": 0.056,
+        "mechanism": "etf_flow_accumulation_pressure",
+        "observation_drift": 0.12,
+        "regime_drift": 0.16
+      },
+      {
+        "confidence_drift": 0.0462,
+        "dataset_drift": 0.108,
+        "distribution_drift": 0.06,
+        "feature_drift": 0.0803,
+        "knowledge_drift": 0.059,
+        "market_drift": 0.056,
+        "mechanism": "commodity_cross_curve_divergence",
+        "observation_drift": 0.12,
+        "regime_drift": 0.03
+      }
+    ],
+    "replay_mode": "session_replay",
+    "timestamp": "2024-10-07T00:00:00+00:00"
+  }
+]

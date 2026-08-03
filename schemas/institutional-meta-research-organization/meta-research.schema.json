@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bottlenecks": {
+      "type": "array"
+    },
+    "campaign_efficiency": {
+      "type": "number"
+    },
+    "experiment_efficiency": {
+      "type": "number"
+    },
+    "research_throughput": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "research_throughput",
+    "campaign_efficiency",
+    "experiment_efficiency",
+    "bottlenecks"
+  ],
+  "title": "Meta Research Registry",
+  "type": "object"
+}

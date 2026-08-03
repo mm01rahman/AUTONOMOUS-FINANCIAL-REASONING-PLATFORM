@@ -1,0 +1,36 @@
+{
+  "arb_recommendation": {
+    "execute_batch_2_now": false,
+    "promote_any_alpha_now": false,
+    "recommended_next_action": "Approve focused observation/data remediation for blocked mechanisms, then run WP-IMP-0051 evidence execution for approved families only."
+  },
+  "blocked_on_observation_completeness": [
+    "IKROS-ALPHA-DC3-20260802-0009"
+  ],
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0044",
+  "engine_id": "AFRP-GEN2-EVIDENCE-ENGINE-1.0.0",
+  "graph_edges_created": 5,
+  "graph_nodes_created": 3,
+  "mechanisms_processed": 2,
+  "promote_any_alpha_now": false,
+  "ready_for_revalidation": [],
+  "report_paths": {
+    "campaign_result": "11-research\\generation-2\\wp-imp-0050-institutional-alpha-evidence-validation-engine\\wp_imp_0050_campaign_result.json",
+    "confidence_report": "11-research\\generation-2\\wp-imp-0050-institutional-alpha-evidence-validation-engine\\CONFIDENCE_REPORT.md",
+    "evidence_ledger": "11-research\\generation-2\\wp-imp-0050-institutional-alpha-evidence-validation-engine\\EVIDENCE_LEDGER.md",
+    "evidence_ledger_schema": "schemas\\institutional-alpha-evidence\\evidence-ledger-entry.schema.json",
+    "failure_dossier_schema": "schemas\\institutional-alpha-evidence\\failure-dossier-entry.schema.json",
+    "failure_dossiers": "11-research\\generation-2\\wp-imp-0050-institutional-alpha-evidence-validation-engine\\FAILURE_DOSSIERS.md",
+    "final_report": "11-research\\generation-2\\wp-imp-0050-institutional-alpha-evidence-validation-engine\\FINAL_REPORT.md",
+    "institutional_evidence_standard": "11-research\\generation-2\\wp-imp-0050-institutional-alpha-evidence-validation-engine\\INSTITUTIONAL_EVIDENCE_STANDARD.md",
+    "schemas_markdown": "11-research\\generation-2\\wp-imp-0050-institutional-alpha-evidence-validation-engine\\GOVERNED_JSON_SCHEMAS.md",
+    "validation_dashboard": "11-research\\generation-2\\wp-imp-0050-institutional-alpha-evidence-validation-engine\\VALIDATION_DASHBOARD.md",
+    "validation_scorecard_schema": "schemas\\institutional-alpha-evidence\\validation-scorecard.schema.json",
+    "validation_scorecards": "11-research\\generation-2\\wp-imp-0050-institutional-alpha-evidence-validation-engine\\VALIDATION_SCORECARDS.md"
+  },
+  "research_mechanisms": [
+    "IKROS-ALPHA-DC3-20260802-0006",
+    "IKROS-ALPHA-DC3-20260802-0009"
+  ],
+  "validated_mechanisms": []
+}

@@ -1,0 +1,33 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0307
+- IKROS-CAMPAIGNAUDIT-20260802-0308
+- IKROS-CAMPAIGNAUDIT-20260802-0309
+- IKROS-CAMPAIGNAUDIT-20260802-0310
+- IKROS-CAMPAIGNAUDIT-20260802-0311
+- IKROS-CAMPAIGNAUDIT-20260802-0312
+- IKROS-CAMPAIGNAUDIT-20260802-0313
+blocked_task_ids:
+- IKROS-RESEARCHTASK-20260802-0113
+- IKROS-RESEARCHTASK-20260802-0119
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0022
+campaign_type: RESEARCH_AUDIT
+completed_task_ids: []
+failed_task_ids:
+- IKROS-RESEARCHTASK-20260802-0109
+finished_at: '2026-08-02T11:34:53.820270+00:00'
+lifecycle_state: FAILED
+memory_record_ids:
+- IKMEM-T4-20260802-0028
+output_refs: []
+progress:
+  blocked: 2
+  completed: 0
+  failed: 1
+  percent_complete: 0.0
+  skipped: 0
+  total: 3
+report_id: IKROS-CAMPAIGNREPORT-20260802-0022
+skipped_task_ids: []
+started_at: '2026-08-02T11:34:50.014502+00:00'
+summary: 'DC2 Program C Phase 1: Institutional Market Transition Engine failed after
+  1 task failures.'

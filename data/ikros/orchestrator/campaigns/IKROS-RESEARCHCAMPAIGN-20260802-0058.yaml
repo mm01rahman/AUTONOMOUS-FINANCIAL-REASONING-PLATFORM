@@ -1,0 +1,233 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0667
+- IKROS-CAMPAIGNAUDIT-20260802-0668
+- IKROS-CAMPAIGNAUDIT-20260802-0669
+- IKROS-CAMPAIGNAUDIT-20260802-0670
+- IKROS-CAMPAIGNAUDIT-20260802-0671
+- IKROS-CAMPAIGNAUDIT-20260802-0672
+- IKROS-CAMPAIGNAUDIT-20260802-0673
+- IKROS-CAMPAIGNAUDIT-20260802-0674
+- IKROS-CAMPAIGNAUDIT-20260802-0675
+- IKROS-CAMPAIGNAUDIT-20260802-0676
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0058
+campaign_type: HYPOTHESIS_VALIDATION
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0058
+created_at: '2026-08-02T23:42:53.822268+00:00'
+evidence_refs: []
+failure_policy: CONTINUE
+finished_at: '2026-08-02T23:43:07.577486+00:00'
+lifecycle_state: FAILED
+objective: Evaluate AFRP research-system quality, identify bottlenecks, rank improvements,
+  apply autonomous ARB pre-screening, and emit governed roadmaps and organizational
+  memory updates.
+pipeline:
+  deterministic: true
+  name: HYPOTHESIS_VALIDATION pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0058
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - STATISTICAL_EVALUATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0233
+  - IKROS-RESEARCHTASK-20260802-0237
+  - IKROS-RESEARCHTASK-20260802-0241
+  - IKROS-RESEARCHTASK-20260802-0243
+research_question_id: null
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T23:42:56.454936+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T23:43:00.415411+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.75
+        economic: 0.76
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.79
+        operational: 0.0
+        overall: 0.7664796855500979
+        prior: 0.78
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260803-0059
+      instrument: XAU/USD
+      lifecycle_state: OPEN
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: program8-self-evolution
+          creation_context: Generation 5 autonomous institutional organization
+          motivation: Create a permanent meta-research and self-improvement loop without
+            introducing execution pathways.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: ''
+      scope: MACRO
+      spec_refs: []
+      time_horizon: ''
+      title: Generation 5 Primary Research Question
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: 'Duplicate: ResearchQuestion ''IKROS-RQ-20260803-0059'' already registered'
+    graph_node_id: null
+    memory_record_id: null
+    metrics: {}
+    output_refs: []
+    payload: {}
+    selected_ids: []
+  started_at: '2026-08-02T23:42:59.054918+00:00'
+  status: FAILED
+  task_id: IKROS-RESEARCHTASK-20260802-0233
+  title: Research Question
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0233
+  finished_at: null
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.74
+        economic: 0.75
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.78
+        operational: 0.0
+        overall: 0.7564772329019176
+        prior: 0.77
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260803-0059
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: program8-self-evolution
+          creation_context: Generation 5 governed autonomy campaign
+          motivation: Operate AFRP as a continuously self-improving institutional
+            research organization.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: c293248557484fcce76fe1dbb33684b413d2325340bf980f514fec1f7f89488c
+      spec_refs: []
+      title: Generation 5 Autonomous Self-Evolution Integration
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0237
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0237
+  finished_at: null
+  kind: STATISTICAL_EVALUATION
+  max_attempts: 1
+  payload: {}
+  planned_order: 9
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0241
+  title: Statistical Evaluation
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0241
+  finished_at: null
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0243
+  title: Final Report
+title: Generation 5 — Autonomous Research Organization & Self-Evolution
+updated_at: '2026-08-02T23:43:10.387926+00:00'
+work_package_refs:
+- WP-IMP-0048

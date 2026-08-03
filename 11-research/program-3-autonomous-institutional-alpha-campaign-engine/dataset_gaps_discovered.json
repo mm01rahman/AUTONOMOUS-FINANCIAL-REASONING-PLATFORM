@@ -1,0 +1,11 @@
+{
+  "decision_cascade": [
+    "Institutional inventory transitions",
+    "Intraday dealer positioning dynamics",
+    "High-resolution policy surprise features"
+  ],
+  "safe_haven_migration": [
+    "High-frequency funding stress proxy",
+    "Deep options-implied skew surfaces"
+  ]
+}

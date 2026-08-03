@@ -1,0 +1,47 @@
+{
+  "cadence": "daily",
+  "checksum_sha256": "35e90076c2fecfbbd4059da9511c7c2fca8e1a1e20576e16029853a64551c3c9",
+  "covered_variables": [
+    "ted_spread"
+  ],
+  "dataset_id": "DS-003",
+  "dataset_name": "TED Spread",
+  "generated_at": "2026-08-02T00:00:00Z",
+  "provenance": {
+    "fixture_or_remote": "fixture",
+    "retrieved_at": "2026-08-02T00:00:00Z",
+    "source_kind": "public_api",
+    "timezone": "UTC"
+  },
+  "provider": "FREDProvider",
+  "quality": {
+    "completeness": 1.0,
+    "confidence_score": 0.9592,
+    "coverage": 1.0,
+    "duplicate_rate": 0.0,
+    "end_timestamp": "2026-08-01T00:00:00Z",
+    "freshness": 0.9,
+    "missing_rate": 0.0,
+    "record_count": 6,
+    "schema_conformity": 1.0,
+    "start_timestamp": "2026-07-27T00:00:00Z",
+    "timestamp_consistency": 1.0,
+    "validation_score": 0.9833
+  },
+  "raw_checksum_sha256": "142cf0266fbba78293014c9fb61c753c0f8ab88dc71207d94ae76f2f6ee26eb1",
+  "row_count": 6,
+  "source": "FRED",
+  "source_url": "https://fred.stlouisfed.org/series/TEDRATE/downloaddata/TEDRATE.csv",
+  "storage_path": "data\\data-foundation-v2\\datasets\\DS-003\\DF2-DS003-20260801-35e90076\\data.csv",
+  "supported_families": [
+    "FAM-002",
+    "FAM-003"
+  ],
+  "supported_mechanisms": [
+    "liquidity_withdrawal",
+    "safe_haven_migration"
+  ],
+  "timezone": "UTC",
+  "version_id": "DF2-DS003-20260801-35e90076",
+  "work_package": "DF2-WP-001"
+}

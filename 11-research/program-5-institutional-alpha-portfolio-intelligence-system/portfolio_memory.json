@@ -1,0 +1,245 @@
+{
+  "conflict_memory": [
+    {
+      "aggregate_correlation": 0.3847,
+      "combined_recommendation": "HOLD",
+      "confidence_difference": 0.001,
+      "conflict_id": "PORTFOLIO-CONFLICT-0001",
+      "economic_rationale": "safe_haven_migration prioritizes risk_off transmission while real_yield_dislocation_reversion prioritizes macro_transition transmission.",
+      "evidence_strength_gap": 0.0322,
+      "historical_reliability_gap": 0.01,
+      "left": "safe_haven_migration",
+      "minority_opinion": {
+        "decision": "REDUCE",
+        "mechanism": "safe_haven_migration"
+      },
+      "regime_specificity": "RISK_ON",
+      "right": "real_yield_dislocation_reversion",
+      "root_cause": "Regime specificity and economic-channel disagreement across the approved alpha library.",
+      "winning_alpha": {
+        "decision": "HOLD",
+        "mechanism": "real_yield_dislocation_reversion"
+      }
+    },
+    {
+      "aggregate_correlation": 0.4001,
+      "combined_recommendation": "BUY",
+      "confidence_difference": 0.009,
+      "conflict_id": "PORTFOLIO-CONFLICT-0002",
+      "economic_rationale": "safe_haven_migration prioritizes risk_off transmission while policy_expectation_repricing prioritizes macro_transition transmission.",
+      "evidence_strength_gap": 0.1091,
+      "historical_reliability_gap": 0.03,
+      "left": "safe_haven_migration",
+      "minority_opinion": {
+        "decision": "HOLD",
+        "mechanism": "policy_expectation_repricing"
+      },
+      "regime_specificity": "LIQUIDITY_CRISIS",
+      "right": "policy_expectation_repricing",
+      "root_cause": "Regime specificity and economic-channel disagreement across the approved alpha library.",
+      "winning_alpha": {
+        "decision": "BUY",
+        "mechanism": "safe_haven_migration"
+      }
+    },
+    {
+      "aggregate_correlation": 0.3119,
+      "combined_recommendation": "BUY",
+      "confidence_difference": 0.019,
+      "conflict_id": "PORTFOLIO-CONFLICT-0003",
+      "economic_rationale": "safe_haven_migration prioritizes risk_off transmission while etf_flow_accumulation_pressure prioritizes risk_on transmission.",
+      "evidence_strength_gap": 0.1069,
+      "historical_reliability_gap": 0.03,
+      "left": "safe_haven_migration",
+      "minority_opinion": {
+        "decision": "REDUCE",
+        "mechanism": "safe_haven_migration"
+      },
+      "regime_specificity": "RISK_ON",
+      "right": "etf_flow_accumulation_pressure",
+      "root_cause": "Regime specificity and economic-channel disagreement across the approved alpha library.",
+      "winning_alpha": {
+        "decision": "BUY",
+        "mechanism": "etf_flow_accumulation_pressure"
+      }
+    },
+    {
+      "aggregate_correlation": 0.2842,
+      "combined_recommendation": "BUY",
+      "confidence_difference": 0.029,
+      "conflict_id": "PORTFOLIO-CONFLICT-0004",
+      "economic_rationale": "safe_haven_migration prioritizes risk_off transmission while commodity_cross_curve_divergence prioritizes bull_trend transmission.",
+      "evidence_strength_gap": 0.1598,
+      "historical_reliability_gap": 0.04,
+      "left": "safe_haven_migration",
+      "minority_opinion": {
+        "decision": "REDUCE",
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      "regime_specificity": "LIQUIDITY_CRISIS",
+      "right": "commodity_cross_curve_divergence",
+      "root_cause": "Regime specificity and economic-channel disagreement across the approved alpha library.",
+      "winning_alpha": {
+        "decision": "BUY",
+        "mechanism": "safe_haven_migration"
+      }
+    },
+    {
+      "aggregate_correlation": 0.4654,
+      "combined_recommendation": "HOLD",
+      "confidence_difference": 0.01,
+      "conflict_id": "PORTFOLIO-CONFLICT-0005",
+      "economic_rationale": "real_yield_dislocation_reversion prioritizes macro_transition transmission while policy_expectation_repricing prioritizes macro_transition transmission.",
+      "evidence_strength_gap": 0.0333,
+      "historical_reliability_gap": 0.02,
+      "left": "real_yield_dislocation_reversion",
+      "minority_opinion": {
+        "decision": "HOLD",
+        "mechanism": "policy_expectation_repricing"
+      },
+      "regime_specificity": "BEAR_TREND",
+      "right": "policy_expectation_repricing",
+      "root_cause": "Regime specificity and economic-channel disagreement across the approved alpha library.",
+      "winning_alpha": {
+        "decision": "BUY",
+        "mechanism": "real_yield_dislocation_reversion"
+      }
+    },
+    {
+      "aggregate_correlation": 0.3746,
+      "combined_recommendation": "HOLD",
+      "confidence_difference": 0.02,
+      "conflict_id": "PORTFOLIO-CONFLICT-0006",
+      "economic_rationale": "real_yield_dislocation_reversion prioritizes macro_transition transmission while etf_flow_accumulation_pressure prioritizes risk_on transmission.",
+      "evidence_strength_gap": 0.0447,
+      "historical_reliability_gap": 0.02,
+      "left": "real_yield_dislocation_reversion",
+      "minority_opinion": {
+        "decision": "HOLD",
+        "mechanism": "real_yield_dislocation_reversion"
+      },
+      "regime_specificity": "BULL_TREND",
+      "right": "etf_flow_accumulation_pressure",
+      "root_cause": "Regime specificity and economic-channel disagreement across the approved alpha library.",
+      "winning_alpha": {
+        "decision": "BUY",
+        "mechanism": "etf_flow_accumulation_pressure"
+      }
+    },
+    {
+      "aggregate_correlation": 0.3311,
+      "combined_recommendation": "BUY",
+      "confidence_difference": 0.03,
+      "conflict_id": "PORTFOLIO-CONFLICT-0007",
+      "economic_rationale": "real_yield_dislocation_reversion prioritizes macro_transition transmission while commodity_cross_curve_divergence prioritizes bull_trend transmission.",
+      "evidence_strength_gap": 0.054,
+      "historical_reliability_gap": 0.03,
+      "left": "real_yield_dislocation_reversion",
+      "minority_opinion": {
+        "decision": "REDUCE",
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      "regime_specificity": "BEAR_TREND",
+      "right": "commodity_cross_curve_divergence",
+      "root_cause": "Regime specificity and economic-channel disagreement across the approved alpha library.",
+      "winning_alpha": {
+        "decision": "BUY",
+        "mechanism": "real_yield_dislocation_reversion"
+      }
+    },
+    {
+      "aggregate_correlation": 0.3577,
+      "combined_recommendation": "BUY",
+      "confidence_difference": 0.01,
+      "conflict_id": "PORTFOLIO-CONFLICT-0008",
+      "economic_rationale": "policy_expectation_repricing prioritizes macro_transition transmission while etf_flow_accumulation_pressure prioritizes risk_on transmission.",
+      "evidence_strength_gap": 0.092,
+      "historical_reliability_gap": 0.0,
+      "left": "policy_expectation_repricing",
+      "minority_opinion": {
+        "decision": "NO POSITION",
+        "mechanism": "policy_expectation_repricing"
+      },
+      "regime_specificity": "RISK_ON",
+      "right": "etf_flow_accumulation_pressure",
+      "root_cause": "Regime specificity and economic-channel disagreement across the approved alpha library.",
+      "winning_alpha": {
+        "decision": "BUY",
+        "mechanism": "etf_flow_accumulation_pressure"
+      }
+    },
+    {
+      "aggregate_correlation": 0.3392,
+      "combined_recommendation": "HOLD",
+      "confidence_difference": 0.02,
+      "conflict_id": "PORTFOLIO-CONFLICT-0009",
+      "economic_rationale": "policy_expectation_repricing prioritizes macro_transition transmission while commodity_cross_curve_divergence prioritizes bull_trend transmission.",
+      "evidence_strength_gap": 0.0447,
+      "historical_reliability_gap": 0.01,
+      "left": "policy_expectation_repricing",
+      "minority_opinion": {
+        "decision": "NO POSITION",
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      "regime_specificity": "RISK_OFF",
+      "right": "commodity_cross_curve_divergence",
+      "root_cause": "Regime specificity and economic-channel disagreement across the approved alpha library.",
+      "winning_alpha": {
+        "decision": "BUY",
+        "mechanism": "policy_expectation_repricing"
+      }
+    },
+    {
+      "aggregate_correlation": 0.3715,
+      "combined_recommendation": "HOLD",
+      "confidence_difference": 0.01,
+      "conflict_id": "PORTFOLIO-CONFLICT-0010",
+      "economic_rationale": "etf_flow_accumulation_pressure prioritizes risk_on transmission while commodity_cross_curve_divergence prioritizes bull_trend transmission.",
+      "evidence_strength_gap": 0.0067,
+      "historical_reliability_gap": 0.01,
+      "left": "etf_flow_accumulation_pressure",
+      "minority_opinion": {
+        "decision": "REDUCE",
+        "mechanism": "commodity_cross_curve_divergence"
+      },
+      "regime_specificity": "BEAR_TREND",
+      "right": "commodity_cross_curve_divergence",
+      "root_cause": "Regime specificity and economic-channel disagreement across the approved alpha library.",
+      "winning_alpha": {
+        "decision": "HOLD",
+        "mechanism": "etf_flow_accumulation_pressure"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "allocation_weight": 0.2098,
+      "mechanism": "real_yield_dislocation_reversion",
+      "note": "Confidence-, evidence-, regime-, and independence-weighted allocation with explicit penalties for correlation, uncertainty, and failure severity."
+    },
+    {
+      "allocation_weight": 0.2059,
+      "mechanism": "policy_expectation_repricing",
+      "note": "Confidence-, evidence-, regime-, and independence-weighted allocation with explicit penalties for correlation, uncertainty, and failure severity."
+    },
+    {
+      "allocation_weight": 0.2023,
+      "mechanism": "safe_haven_migration",
+      "note": "Confidence-, evidence-, regime-, and independence-weighted allocation with explicit penalties for correlation, uncertainty, and failure severity."
+    },
+    {
+      "allocation_weight": 0.1921,
+      "mechanism": "commodity_cross_curve_divergence",
+      "note": "Confidence-, evidence-, regime-, and independence-weighted allocation with explicit penalties for correlation, uncertainty, and failure severity."
+    },
+    {
+      "allocation_weight": 0.1899,
+      "mechanism": "etf_flow_accumulation_pressure",
+      "note": "Confidence-, evidence-, regime-, and independence-weighted allocation with explicit penalties for correlation, uncertainty, and failure severity."
+    }
+  ],
+  "institutional_lessons": [
+    "Approved alpha diversification is strongest when safe-haven, macro-rate, ETF-flow, and intermarket channels are combined instead of concentrated in a single family.",
+    "Conflict resolution should preserve minority evidence rather than suppress it because contradictory institutional signals still improve governance explainability."
+  ]
+}

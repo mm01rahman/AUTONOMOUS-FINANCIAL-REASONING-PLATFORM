@@ -15,6 +15,8 @@ from tools.alpha_research.information_network import (
     prepare_dc2_phase3_artifacts,
 )
 
+pytestmark = pytest.mark.slow
+
 
 @pytest.fixture(scope="module")
 def analysis() -> dict[str, Any]:

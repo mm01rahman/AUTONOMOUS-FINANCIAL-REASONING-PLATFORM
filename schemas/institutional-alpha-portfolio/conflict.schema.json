@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "aggregate_correlation": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "combined_recommendation": {
+      "enum": [
+        "BUY",
+        "SELL",
+        "HOLD",
+        "REDUCE",
+        "INCREASE",
+        "NO POSITION"
+      ],
+      "type": "string"
+    },
+    "confidence_difference": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "conflict_id": {
+      "type": "string"
+    },
+    "economic_rationale": {
+      "type": "string"
+    },
+    "evidence_strength_gap": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "historical_reliability_gap": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "left": {
+      "type": "string"
+    },
+    "minority_opinion": {
+      "type": "object"
+    },
+    "regime_specificity": {
+      "type": "string"
+    },
+    "right": {
+      "type": "string"
+    },
+    "root_cause": {
+      "type": "string"
+    },
+    "winning_alpha": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "conflict_id",
+    "left",
+    "right",
+    "root_cause",
+    "winning_alpha",
+    "minority_opinion",
+    "combined_recommendation"
+  ],
+  "title": "Portfolio Conflict Entry",
+  "type": "object"
+}

@@ -1,0 +1,189 @@
+archived_at: null
+capability_refs:
+- IKROS-ORCHESTRATOR
+confidence: 1.0
+created_at: '2026-08-02T22:39:42.924337+00:00'
+dependency_ids:
+- IKROS-RESEARCHTASK-20260802-0189
+entity_type: ResearchTaskResult
+evidence_refs: []
+graph_node_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0047
+- IKROS-RESEARCHTASK-20260802-0193
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260802-0089
+payload:
+  campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0047
+  task:
+    allow_failure: false
+    attempts: 1
+    depends_on:
+    - IKROS-RESEARCHTASK-20260802-0189
+    finished_at: '2026-08-02T22:39:42.924337+00:00'
+    kind: EXPERIMENT_REGISTRATION
+    max_attempts: 1
+    payload:
+      entity:
+        capability_refs: []
+        completed_at: null
+        confidence:
+          data: 0.62
+          economic: 0.64
+          last_updated: '2026-08-03T00:00:00Z'
+          model: 0.65
+          operational: 0.0
+          overall: 0.6365438697898207
+          prior: 0.67
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        dataset_versions: []
+        entity_type: Experiment
+        failures_produced: []
+        feature_versions: []
+        git_commit: ''
+        hypotheses: []
+        ikros_id: IKROS-EXP-20260803-0055
+        in_sample_end: ''
+        in_sample_start: ''
+        lifecycle_state: DESIGNED
+        lineage:
+          dependencies:
+            datasets: []
+            external_refs: []
+            features: []
+            inputs: []
+            models: []
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-03T00:00:00Z'
+            created_by: program4-alpha-expansion
+            creation_context: Generation 2 Program 4 autonomous expansion
+            motivation: Continuously discover and promote additional independent institutional
+              alpha mechanisms.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        out_of_sample_end: ''
+        out_of_sample_start: ''
+        parameters: {}
+        protocol: ''
+        random_seed: 42
+        reproducibility_hash: 94d40616e1cb64b2e9e036c772834bb58a8e00cb13ed9a70948bfa6319843a89
+        spec_refs: []
+        title: Program 4 Alpha Expansion Integration
+        validations_produced: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      entity_type: Experiment
+    planned_order: 5
+    result:
+      error: null
+      graph_node_id: IKROS-RESEARCHTASK-20260802-0193
+      memory_record_id: null
+      metrics: {}
+      output_refs:
+      - IKROS-EXP-20260803-0055
+      payload:
+        capability_refs: []
+        completed_at: null
+        confidence:
+          data: 0.62
+          economic: 0.64
+          last_updated: '2026-08-03T00:00:00Z'
+          model: 0.65
+          operational: 0.0
+          overall: 0.6365438697898207
+          prior: 0.67
+          replication: 0.0
+          statistical: 0.0
+          validation: 0.0
+        dataset_versions: []
+        entity_type: Experiment
+        failures_produced: []
+        feature_versions: []
+        git_commit: ''
+        hypotheses: []
+        ikros_id: IKROS-EXP-20260803-0055
+        in_sample_end: ''
+        in_sample_start: ''
+        lifecycle_state: DESIGNED
+        lineage:
+          dependencies:
+            datasets: []
+            external_refs: []
+            features: []
+            inputs: []
+            models: []
+          evidence:
+            contradicting: []
+            ers_records: []
+            supporting: []
+          experiments:
+            tested_in: []
+            validated_by: []
+          origin:
+            created_at: '2026-08-03T00:00:00Z'
+            created_by: program4-alpha-expansion
+            creation_context: Generation 2 Program 4 autonomous expansion
+            motivation: Continuously discover and promote additional independent institutional
+              alpha mechanisms.
+          retirement:
+            retired_at: null
+            retired_by: null
+            retirement_reason: null
+            successor_id: null
+          successors:
+            inspired: []
+            refined_by: null
+            superseded_by: null
+        out_of_sample_end: ''
+        out_of_sample_start: ''
+        parameters: {}
+        protocol: ''
+        random_seed: 42
+        reproducibility_hash: 94d40616e1cb64b2e9e036c772834bb58a8e00cb13ed9a70948bfa6319843a89
+        spec_refs: []
+        title: Program 4 Alpha Expansion Integration
+        validations_produced: []
+        version: 1.0.0
+        version_history: []
+        work_package_refs: []
+      selected_ids: []
+    started_at: '2026-08-02T22:39:41.878306+00:00'
+    status: COMPLETED
+    task_id: IKROS-RESEARCHTASK-20260802-0193
+    title: Experiment Registration
+retired_at: null
+source_ids:
+- IKROS-RESEARCHCAMPAIGN-20260802-0047
+- IKROS-EXP-20260803-0055
+spec_refs:
+- SPEC-060
+summary: EXPERIMENT_REGISTRATION COMPLETED
+tags:
+- research-orchestrator
+- experiment_registration
+tier: T1_EPISODIC
+title: 'Program 4 — Institutional Alpha Expansion Program :: Experiment Registration'
+updated_at: '2026-08-02T22:39:42.924337+00:00'
+valid_from: null
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs:
+- WP-IMP-0048

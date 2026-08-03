@@ -1,0 +1,233 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0627
+- IKROS-CAMPAIGNAUDIT-20260802-0628
+- IKROS-CAMPAIGNAUDIT-20260802-0629
+- IKROS-CAMPAIGNAUDIT-20260802-0630
+- IKROS-CAMPAIGNAUDIT-20260802-0631
+- IKROS-CAMPAIGNAUDIT-20260802-0632
+- IKROS-CAMPAIGNAUDIT-20260802-0633
+- IKROS-CAMPAIGNAUDIT-20260802-0634
+- IKROS-CAMPAIGNAUDIT-20260802-0635
+- IKROS-CAMPAIGNAUDIT-20260802-0636
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0054
+campaign_type: HYPOTHESIS_VALIDATION
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0054
+created_at: '2026-08-02T23:40:41.879966+00:00'
+evidence_refs: []
+failure_policy: CONTINUE
+finished_at: '2026-08-02T23:40:55.211131+00:00'
+lifecycle_state: FAILED
+objective: Continuously observe market state, update beliefs, maintain regime and
+  alpha activation probabilities, revise portfolio recommendations, and open governed
+  research triggers in a non-executing loop.
+pipeline:
+  deterministic: true
+  name: HYPOTHESIS_VALIDATION pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0054
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - STATISTICAL_EVALUATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0217
+  - IKROS-RESEARCHTASK-20260802-0221
+  - IKROS-RESEARCHTASK-20260802-0225
+  - IKROS-RESEARCHTASK-20260802-0227
+research_question_id: null
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T23:40:44.506003+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T23:40:48.354443+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.73
+        economic: 0.74
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.77
+        operational: 0.0
+        overall: 0.7464747150425967
+        prior: 0.76
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260803-0058
+      instrument: XAU/USD
+      lifecycle_state: OPEN
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: program7-market-intelligence
+          creation_context: Generation 4 institutional intelligence bootstrap
+          motivation: Close the real-time market observation-to-research loop without
+            enabling execution.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: ''
+      scope: MACRO
+      spec_refs: []
+      time_horizon: ''
+      title: Generation 4 Primary Research Question
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: 'Duplicate: ResearchQuestion ''IKROS-RQ-20260803-0058'' already registered'
+    graph_node_id: null
+    memory_record_id: null
+    metrics: {}
+    output_refs: []
+    payload: {}
+    selected_ids: []
+  started_at: '2026-08-02T23:40:47.129043+00:00'
+  status: FAILED
+  task_id: IKROS-RESEARCHTASK-20260802-0217
+  title: Research Question
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0217
+  finished_at: null
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.72
+        economic: 0.73
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.76
+        operational: 0.0
+        overall: 0.7364721293358077
+        prior: 0.75
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260803-0058
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: program7-market-intelligence
+          creation_context: Generation 4 continuous intelligence campaign
+          motivation: Operate AFRP as a continuously reasoning institutional market
+            intelligence organization.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: a1933a07da5792688df01c74f516807fc036da3ad63ab1a4450acb09e625fbf5
+      spec_refs: []
+      title: Generation 4 Market Intelligence Integration
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0221
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0221
+  finished_at: null
+  kind: STATISTICAL_EVALUATION
+  max_attempts: 1
+  payload: {}
+  planned_order: 9
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0225
+  title: Statistical Evaluation
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0225
+  finished_at: null
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result: null
+  started_at: null
+  status: BLOCKED
+  task_id: IKROS-RESEARCHTASK-20260802-0227
+  title: Final Report
+title: Generation 4 — Real-Time Institutional Market Intelligence Platform
+updated_at: '2026-08-02T23:40:58.000790+00:00'
+work_package_refs:
+- WP-IMP-0048

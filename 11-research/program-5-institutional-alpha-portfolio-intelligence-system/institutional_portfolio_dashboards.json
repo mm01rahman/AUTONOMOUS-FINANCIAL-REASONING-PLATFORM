@@ -1,0 +1,218 @@
+{
+  "allocation_dashboard": {
+    "tiles": [
+      [
+        "real_yield_dislocation_reversion",
+        0.2098
+      ],
+      [
+        "policy_expectation_repricing",
+        0.2059
+      ],
+      [
+        "safe_haven_migration",
+        0.2023
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        0.1921
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        0.1899
+      ]
+    ]
+  },
+  "alpha_contribution_dashboard": {
+    "tiles": [
+      [
+        "policy_expectation_repricing",
+        0.2371
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        0.2341
+      ],
+      [
+        "safe_haven_migration",
+        0.2159
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        0.1724
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        0.1405
+      ]
+    ]
+  },
+  "capacity_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        0.3316
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        0.2874
+      ],
+      [
+        "policy_expectation_repricing",
+        0.3217
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        0.2793
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        0.2867
+      ]
+    ]
+  },
+  "confidence_dashboard": {
+    "tiles": [
+      [
+        "Portfolio Confidence",
+        0.7082
+      ],
+      [
+        "Portfolio Uncertainty",
+        0.2696
+      ]
+    ]
+  },
+  "conflict_dashboard": {
+    "tiles": [
+      [
+        "PORTFOLIO-CONFLICT-0001",
+        "HOLD"
+      ],
+      [
+        "PORTFOLIO-CONFLICT-0002",
+        "BUY"
+      ],
+      [
+        "PORTFOLIO-CONFLICT-0003",
+        "BUY"
+      ],
+      [
+        "PORTFOLIO-CONFLICT-0004",
+        "BUY"
+      ],
+      [
+        "PORTFOLIO-CONFLICT-0005",
+        "HOLD"
+      ],
+      [
+        "PORTFOLIO-CONFLICT-0006",
+        "HOLD"
+      ],
+      [
+        "PORTFOLIO-CONFLICT-0007",
+        "BUY"
+      ],
+      [
+        "PORTFOLIO-CONFLICT-0008",
+        "BUY"
+      ],
+      [
+        "PORTFOLIO-CONFLICT-0009",
+        "HOLD"
+      ],
+      [
+        "PORTFOLIO-CONFLICT-0010",
+        "HOLD"
+      ]
+    ]
+  },
+  "institutional_portfolio_dashboard": {
+    "tiles": [
+      [
+        "Current Regime",
+        "MACRO_TRANSITION"
+      ],
+      [
+        "Portfolio Decision",
+        "BUY"
+      ],
+      [
+        "Portfolio Confidence",
+        0.7082
+      ],
+      [
+        "Robustness Score",
+        0.25
+      ]
+    ]
+  },
+  "lifecycle_dashboard": {
+    "tiles": [
+      [
+        "safe_haven_migration",
+        "ACTIVE"
+      ],
+      [
+        "real_yield_dislocation_reversion",
+        "ACTIVE"
+      ],
+      [
+        "policy_expectation_repricing",
+        "ACTIVE"
+      ],
+      [
+        "etf_flow_accumulation_pressure",
+        "REDUCED"
+      ],
+      [
+        "commodity_cross_curve_divergence",
+        "ACTIVE"
+      ]
+    ]
+  },
+  "regime_dashboard": {
+    "tiles": [
+      [
+        "Bull trend",
+        0.7051
+      ],
+      [
+        "Bear trend",
+        0.7097
+      ],
+      [
+        "Risk-off",
+        0.7107
+      ],
+      [
+        "Risk-on",
+        0.7047
+      ],
+      [
+        "Macro transition",
+        0.7094
+      ],
+      [
+        "Liquidity crisis",
+        0.7121
+      ]
+    ]
+  },
+  "risk_dashboard": {
+    "tiles": [
+      [
+        "Expected Drawdown",
+        0.1539
+      ],
+      [
+        "Tail Vulnerability",
+        0.3433
+      ],
+      [
+        "Conflict Count",
+        10
+      ]
+    ]
+  }
+}

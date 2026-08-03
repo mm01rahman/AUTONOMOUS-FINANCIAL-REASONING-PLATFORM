@@ -1,0 +1,902 @@
+[
+  {
+    "max_probability": 0.1835,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8858,
+          "allocation_weight": 0.2066,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9222,
+          "allocation_weight": 0.2012,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8639,
+          "allocation_weight": 0.1994,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.8515,
+          "allocation_weight": 0.1973,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8445,
+          "allocation_weight": 0.1955,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "BUY",
+      "portfolio_concentration": 0.2066,
+      "portfolio_confidence": 0.5303,
+      "portfolio_diversification": 0.7934,
+      "portfolio_risk": 0.5343,
+      "portfolio_uncertainty": 0.5069,
+      "regime_top": "MACRO_TRANSITION",
+      "weighted_score": 0.8535
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.145,
+      "BULL_TREND": 0.1793,
+      "LIQUIDITY_CRISIS": 0.1676,
+      "MACRO_TRANSITION": 0.1835,
+      "RISK_OFF": 0.183,
+      "RISK_ON": 0.1416
+    },
+    "regime_top": "MACRO_TRANSITION",
+    "timestamp": "2025-01-02T00:00:00Z"
+  },
+  {
+    "max_probability": 0.1858,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8841,
+          "allocation_weight": 0.2065,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9217,
+          "allocation_weight": 0.2014,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8624,
+          "allocation_weight": 0.1994,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.8494,
+          "allocation_weight": 0.1973,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8426,
+          "allocation_weight": 0.1954,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2065,
+      "portfolio_confidence": 0.5259,
+      "portfolio_diversification": 0.7935,
+      "portfolio_risk": 0.5374,
+      "portfolio_uncertainty": 0.5113,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6849
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1458,
+      "BULL_TREND": 0.1795,
+      "LIQUIDITY_CRISIS": 0.171,
+      "MACRO_TRANSITION": 0.1771,
+      "RISK_OFF": 0.1858,
+      "RISK_ON": 0.1408
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-01-10T00:00:00Z"
+  },
+  {
+    "max_probability": 0.1945,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.882,
+          "allocation_weight": 0.2067,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.924,
+          "allocation_weight": 0.2021,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8549,
+          "allocation_weight": 0.1989,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.8472,
+          "allocation_weight": 0.1974,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8353,
+          "allocation_weight": 0.1949,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2067,
+      "portfolio_confidence": 0.5189,
+      "portfolio_diversification": 0.7933,
+      "portfolio_risk": 0.5549,
+      "portfolio_uncertainty": 0.5183,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6849
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1491,
+      "BULL_TREND": 0.1695,
+      "LIQUIDITY_CRISIS": 0.1794,
+      "MACRO_TRANSITION": 0.1777,
+      "RISK_OFF": 0.1945,
+      "RISK_ON": 0.1298
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-01-22T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2039,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8787,
+          "allocation_weight": 0.2068,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9228,
+          "allocation_weight": 0.2024,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8515,
+          "allocation_weight": 0.1988,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.8433,
+          "allocation_weight": 0.1973,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8311,
+          "allocation_weight": 0.1947,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2068,
+      "portfolio_confidence": 0.5124,
+      "portfolio_diversification": 0.7932,
+      "portfolio_risk": 0.5661,
+      "portfolio_uncertainty": 0.5248,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6847
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1505,
+      "BULL_TREND": 0.1683,
+      "LIQUIDITY_CRISIS": 0.181,
+      "MACRO_TRANSITION": 0.1684,
+      "RISK_OFF": 0.2039,
+      "RISK_ON": 0.1279
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-02-03T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2054,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8766,
+          "allocation_weight": 0.2068,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9221,
+          "allocation_weight": 0.2026,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8487,
+          "allocation_weight": 0.1987,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.8409,
+          "allocation_weight": 0.1973,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.828,
+          "allocation_weight": 0.1946,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2068,
+      "portfolio_confidence": 0.5061,
+      "portfolio_diversification": 0.7932,
+      "portfolio_risk": 0.5732,
+      "portfolio_uncertainty": 0.5311,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6846
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1525,
+      "BULL_TREND": 0.167,
+      "LIQUIDITY_CRISIS": 0.1855,
+      "MACRO_TRANSITION": 0.164,
+      "RISK_OFF": 0.2054,
+      "RISK_ON": 0.1256
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-02-14T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2127,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8727,
+          "allocation_weight": 0.2071,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9261,
+          "allocation_weight": 0.2039,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8359,
+          "allocation_weight": 0.1978,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.8367,
+          "allocation_weight": 0.1975,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8157,
+          "allocation_weight": 0.1937,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2071,
+      "portfolio_confidence": 0.4966,
+      "portfolio_diversification": 0.7929,
+      "portfolio_risk": 0.6019,
+      "portfolio_uncertainty": 0.5407,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6846
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1538,
+      "BULL_TREND": 0.1505,
+      "LIQUIDITY_CRISIS": 0.2098,
+      "MACRO_TRANSITION": 0.1639,
+      "RISK_OFF": 0.2127,
+      "RISK_ON": 0.1093
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-02-27T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2198,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8693,
+          "allocation_weight": 0.2071,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.925,
+          "allocation_weight": 0.2043,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8299,
+          "allocation_weight": 0.1976,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.8331,
+          "allocation_weight": 0.1975,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8096,
+          "allocation_weight": 0.1935,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2071,
+      "portfolio_confidence": 0.4856,
+      "portfolio_diversification": 0.7929,
+      "portfolio_risk": 0.6212,
+      "portfolio_uncertainty": 0.5517,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6844
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1609,
+      "BULL_TREND": 0.1453,
+      "LIQUIDITY_CRISIS": 0.2101,
+      "MACRO_TRANSITION": 0.1616,
+      "RISK_OFF": 0.2198,
+      "RISK_ON": 0.1023
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-03-11T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2202,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.867,
+          "allocation_weight": 0.2072,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9215,
+          "allocation_weight": 0.2041,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8294,
+          "allocation_weight": 0.1977,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.8305,
+          "allocation_weight": 0.1974,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8089,
+          "allocation_weight": 0.1936,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2072,
+      "portfolio_confidence": 0.4761,
+      "portfolio_diversification": 0.7928,
+      "portfolio_risk": 0.6261,
+      "portfolio_uncertainty": 0.5612,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6841
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1652,
+      "BULL_TREND": 0.149,
+      "LIQUIDITY_CRISIS": 0.2044,
+      "MACRO_TRANSITION": 0.1568,
+      "RISK_OFF": 0.2202,
+      "RISK_ON": 0.1044
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-03-24T00:00:00Z"
+  },
+  {
+    "max_probability": 0.218,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8659,
+          "allocation_weight": 0.2071,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9198,
+          "allocation_weight": 0.204,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.83,
+          "allocation_weight": 0.1979,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.8292,
+          "allocation_weight": 0.1973,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8091,
+          "allocation_weight": 0.1937,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2071,
+      "portfolio_confidence": 0.4689,
+      "portfolio_diversification": 0.7929,
+      "portfolio_risk": 0.6235,
+      "portfolio_uncertainty": 0.5684,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.684
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1648,
+      "BULL_TREND": 0.1524,
+      "LIQUIDITY_CRISIS": 0.2051,
+      "MACRO_TRANSITION": 0.1524,
+      "RISK_OFF": 0.218,
+      "RISK_ON": 0.1073
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-04-04T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2231,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8651,
+          "allocation_weight": 0.2071,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9204,
+          "allocation_weight": 0.2042,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8274,
+          "allocation_weight": 0.1977,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.8284,
+          "allocation_weight": 0.1974,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8065,
+          "allocation_weight": 0.1936,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2071,
+      "portfolio_confidence": 0.4619,
+      "portfolio_diversification": 0.7929,
+      "portfolio_risk": 0.6292,
+      "portfolio_uncertainty": 0.5754,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.684
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1653,
+      "BULL_TREND": 0.1488,
+      "LIQUIDITY_CRISIS": 0.206,
+      "MACRO_TRANSITION": 0.1534,
+      "RISK_OFF": 0.2231,
+      "RISK_ON": 0.1034
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-04-21T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2288,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.863,
+          "allocation_weight": 0.2073,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9225,
+          "allocation_weight": 0.2049,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.826,
+          "allocation_weight": 0.1975,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8203,
+          "allocation_weight": 0.1972,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.7997,
+          "allocation_weight": 0.1931,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2073,
+      "portfolio_confidence": 0.4535,
+      "portfolio_diversification": 0.7927,
+      "portfolio_risk": 0.644,
+      "portfolio_uncertainty": 0.5838,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.684
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1668,
+      "BULL_TREND": 0.1395,
+      "LIQUIDITY_CRISIS": 0.2173,
+      "MACRO_TRANSITION": 0.1537,
+      "RISK_OFF": 0.2288,
+      "RISK_ON": 0.0939
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-05-02T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2372,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.859,
+          "allocation_weight": 0.2074,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9245,
+          "allocation_weight": 0.206,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8216,
+          "allocation_weight": 0.1977,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8098,
+          "allocation_weight": 0.1965,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.7892,
+          "allocation_weight": 0.1924,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "HOLD",
+      "portfolio_concentration": 0.2074,
+      "portfolio_confidence": 0.4429,
+      "portfolio_diversification": 0.7926,
+      "portfolio_risk": 0.669,
+      "portfolio_uncertainty": 0.5944,
+      "regime_top": "LIQUIDITY_CRISIS",
+      "weighted_score": 0.5025
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1674,
+      "BULL_TREND": 0.1273,
+      "LIQUIDITY_CRISIS": 0.2372,
+      "MACRO_TRANSITION": 0.1516,
+      "RISK_OFF": 0.2343,
+      "RISK_ON": 0.0822
+    },
+    "regime_top": "LIQUIDITY_CRISIS",
+    "timestamp": "2025-05-16T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2374,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8573,
+          "allocation_weight": 0.2073,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9199,
+          "allocation_weight": 0.2055,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8199,
+          "allocation_weight": 0.1976,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.811,
+          "allocation_weight": 0.1969,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.7904,
+          "allocation_weight": 0.1927,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2073,
+      "portfolio_confidence": 0.4337,
+      "portfolio_diversification": 0.7927,
+      "portfolio_risk": 0.6733,
+      "portfolio_uncertainty": 0.6036,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6836
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1755,
+      "BULL_TREND": 0.1328,
+      "LIQUIDITY_CRISIS": 0.2196,
+      "MACRO_TRANSITION": 0.1495,
+      "RISK_OFF": 0.2374,
+      "RISK_ON": 0.0852
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-05-28T00:00:00Z"
+  },
+  {
+    "max_probability": 0.235,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8561,
+          "allocation_weight": 0.2073,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9181,
+          "allocation_weight": 0.2054,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8186,
+          "allocation_weight": 0.1975,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8117,
+          "allocation_weight": 0.197,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.7906,
+          "allocation_weight": 0.1928,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2073,
+      "portfolio_confidence": 0.4267,
+      "portfolio_diversification": 0.7927,
+      "portfolio_risk": 0.671,
+      "portfolio_uncertainty": 0.6106,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6835
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1751,
+      "BULL_TREND": 0.1361,
+      "LIQUIDITY_CRISIS": 0.2201,
+      "MACRO_TRANSITION": 0.1455,
+      "RISK_OFF": 0.235,
+      "RISK_ON": 0.0882
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-06-10T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2315,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8558,
+          "allocation_weight": 0.2071,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9163,
+          "allocation_weight": 0.2051,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8181,
+          "allocation_weight": 0.1974,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8142,
+          "allocation_weight": 0.1973,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.7929,
+          "allocation_weight": 0.1931,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2071,
+      "portfolio_confidence": 0.4225,
+      "portfolio_diversification": 0.7929,
+      "portfolio_risk": 0.6637,
+      "portfolio_uncertainty": 0.6148,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6834
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1731,
+      "BULL_TREND": 0.1415,
+      "LIQUIDITY_CRISIS": 0.2187,
+      "MACRO_TRANSITION": 0.1417,
+      "RISK_OFF": 0.2315,
+      "RISK_ON": 0.0935
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-06-23T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2345,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.856,
+          "allocation_weight": 0.2073,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9168,
+          "allocation_weight": 0.2051,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8185,
+          "allocation_weight": 0.1974,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8136,
+          "allocation_weight": 0.1972,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.7924,
+          "allocation_weight": 0.193,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2073,
+      "portfolio_confidence": 0.4189,
+      "portfolio_diversification": 0.7927,
+      "portfolio_risk": 0.664,
+      "portfolio_uncertainty": 0.6184,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6834
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1721,
+      "BULL_TREND": 0.14,
+      "LIQUIDITY_CRISIS": 0.2175,
+      "MACRO_TRANSITION": 0.1438,
+      "RISK_OFF": 0.2345,
+      "RISK_ON": 0.0921
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-07-08T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2399,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.854,
+          "allocation_weight": 0.2074,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9199,
+          "allocation_weight": 0.206,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.8163,
+          "allocation_weight": 0.1976,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8055,
+          "allocation_weight": 0.1966,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.7845,
+          "allocation_weight": 0.1924,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2074,
+      "portfolio_confidence": 0.4131,
+      "portfolio_diversification": 0.7926,
+      "portfolio_risk": 0.6818,
+      "portfolio_uncertainty": 0.6242,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6835
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1716,
+      "BULL_TREND": 0.1285,
+      "LIQUIDITY_CRISIS": 0.2329,
+      "MACRO_TRANSITION": 0.1458,
+      "RISK_OFF": 0.2399,
+      "RISK_ON": 0.0813
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-07-21T00:00:00Z"
+  },
+  {
+    "max_probability": 0.2427,
+    "portfolio": {
+      "allocation": [
+        {
+          "activation_probability": 0.8528,
+          "allocation_weight": 0.2074,
+          "mechanism": "real_yield_dislocation_reversion"
+        },
+        {
+          "activation_probability": 0.9177,
+          "allocation_weight": 0.2059,
+          "mechanism": "safe_haven_migration"
+        },
+        {
+          "activation_probability": 0.815,
+          "allocation_weight": 0.1975,
+          "mechanism": "policy_expectation_repricing"
+        },
+        {
+          "activation_probability": 0.8051,
+          "allocation_weight": 0.1967,
+          "mechanism": "etf_flow_accumulation_pressure"
+        },
+        {
+          "activation_probability": 0.7841,
+          "allocation_weight": 0.1925,
+          "mechanism": "commodity_cross_curve_divergence"
+        }
+      ],
+      "decision": "INCREASE",
+      "portfolio_concentration": 0.2074,
+      "portfolio_confidence": 0.4074,
+      "portfolio_diversification": 0.7926,
+      "portfolio_risk": 0.687,
+      "portfolio_uncertainty": 0.63,
+      "regime_top": "RISK_OFF",
+      "weighted_score": 0.6833
+    },
+    "regime_probabilities": {
+      "BEAR_TREND": 0.1775,
+      "BULL_TREND": 0.1299,
+      "LIQUIDITY_CRISIS": 0.224,
+      "MACRO_TRANSITION": 0.1448,
+      "RISK_OFF": 0.2427,
+      "RISK_ON": 0.0811
+    },
+    "regime_top": "RISK_OFF",
+    "timestamp": "2025-08-04T00:00:00Z"
+  }
+]

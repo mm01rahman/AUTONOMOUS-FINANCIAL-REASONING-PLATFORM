@@ -1,0 +1,13 @@
+actor: ikros-orchestrator
+audit_id: IKROS-CAMPAIGNAUDIT-20260802-0369
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0028
+detail: Completion report generated
+entry_hash: 56183745c027ac65e79bcfde48405240d289cfa157c6fc38ba71ff36183b13c5
+event_type: REPORT_GENERATED
+new_state: null
+output_refs:
+- IKROS-CAMPAIGNREPORT-20260802-0028
+previous_hash: c3bbf70614d99eb99b75dcc73975c92f7d1bb538408ac7e3d1655d2b804562ab
+previous_state: null
+task_id: null
+timestamp: '2026-08-02T14:30:44.567628+00:00'

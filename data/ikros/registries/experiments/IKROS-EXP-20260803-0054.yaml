@@ -1,0 +1,64 @@
+capability_refs: []
+completed_at: null
+confidence:
+  data: 0.6
+  economic: 0.62
+  last_updated: '2026-08-03T00:00:00Z'
+  model: 0.63
+  operational: 0.0
+  overall: 0.6165398651709444
+  prior: 0.65
+  replication: 0.0
+  statistical: 0.0
+  validation: 0.0
+dataset_versions: []
+entity_type: Experiment
+failures_produced: []
+feature_versions: []
+git_commit: ''
+hypotheses: []
+ikros_id: IKROS-EXP-20260803-0054
+in_sample_end: ''
+in_sample_start: ''
+lifecycle_state: DESIGNED
+lineage:
+  dependencies:
+    datasets: []
+    external_refs: []
+    features: []
+    inputs: []
+    models: []
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-03T00:00:00Z'
+    created_by: program3-autonomous-campaign-engine
+    creation_context: Generation 2 Program 3 autonomous execution
+    motivation: Run the research laboratory continuously until all current mechanisms
+      are scientifically resolved.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+out_of_sample_end: ''
+out_of_sample_start: ''
+parameters: {}
+protocol: ''
+random_seed: 42
+reproducibility_hash: f99b32a1d3fa89724930a9d6b956220c4ca2dc11ad355ac1ee68114895e1e286
+spec_refs: []
+title: Program 3 Autonomous Campaign Engine Integration
+validations_produced: []
+version: 1.0.0
+version_history: []
+work_package_refs: []

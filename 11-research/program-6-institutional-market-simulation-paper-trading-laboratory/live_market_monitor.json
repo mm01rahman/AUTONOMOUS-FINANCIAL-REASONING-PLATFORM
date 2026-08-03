@@ -1,0 +1,82 @@
+{
+  "alpha_activation": [
+    {
+      "allocation_weight": 0.2203,
+      "confidence": 0.9417,
+      "mechanism": "real_yield_dislocation_reversion",
+      "status": "active"
+    },
+    {
+      "allocation_weight": 0.22,
+      "confidence": 0.7999,
+      "mechanism": "etf_flow_accumulation_pressure",
+      "status": "active"
+    },
+    {
+      "allocation_weight": 0.2039,
+      "confidence": 0.7861,
+      "mechanism": "commodity_cross_curve_divergence",
+      "status": "active"
+    },
+    {
+      "allocation_weight": 0.1837,
+      "confidence": 0.8815,
+      "mechanism": "policy_expectation_repricing",
+      "status": "active"
+    },
+    {
+      "allocation_weight": 0.1721,
+      "confidence": 1.0,
+      "mechanism": "safe_haven_migration",
+      "status": "active"
+    }
+  ],
+  "confidence": 0.8818,
+  "current_price": 2029.7118,
+  "current_regime": "RISK_ON",
+  "portfolio_recommendation": "NO POSITION",
+  "research_queue": [
+    {
+      "feedback_count": 3,
+      "focus": "portfolio_revalidation",
+      "priority": "HIGH",
+      "timestamp": "2023-10-02T00:00:00+00:00"
+    },
+    {
+      "feedback_count": 0,
+      "focus": "portfolio_monitoring",
+      "priority": "NORMAL",
+      "timestamp": "2024-01-29T00:00:00+00:00"
+    },
+    {
+      "feedback_count": 5,
+      "focus": "portfolio_revalidation",
+      "priority": "HIGH",
+      "timestamp": "2024-04-15T00:00:00+00:00"
+    },
+    {
+      "feedback_count": 0,
+      "focus": "portfolio_monitoring",
+      "priority": "NORMAL",
+      "timestamp": "2024-07-22T00:00:00+00:00"
+    },
+    {
+      "feedback_count": 0,
+      "focus": "portfolio_monitoring",
+      "priority": "NORMAL",
+      "timestamp": "2024-10-07T00:00:00+00:00"
+    }
+  ],
+  "risk": {
+    "alerts": [],
+    "concentration": 0.2203,
+    "confidence_adjusted_drawdown": 0.0,
+    "expected_shortfall": 0.01,
+    "portfolio_var": 0.01,
+    "regime_concentration": "RISK_ON",
+    "shared_failure_exposure": [],
+    "tail_exposure": 0.034,
+    "timestamp": "2024-10-07T00:00:00+00:00"
+  },
+  "symbol": "XAU/USD"
+}

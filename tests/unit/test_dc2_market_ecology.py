@@ -14,6 +14,8 @@ from tools.alpha_research.market_ecology import (
     prepare_dc2_program_b_artifacts,
 )
 
+pytestmark = pytest.mark.slow
+
 
 @pytest.fixture(scope="module")
 def analysis() -> dict[str, Any]:
@@ -37,7 +39,12 @@ def test_program_b_has_all_participants(analysis: dict[str, Any]) -> None:
 
 def test_program_b_participant_profiles(analysis: dict[str, Any]) -> None:
     profile = analysis["participant_profiles"]["macro_hedge_funds"]
-    assert profile["ecology_role"] in ("ecology_driver", "ecology_relay", "ecology_sink", "ecology_adapter")
+    assert profile["ecology_role"] in (
+        "ecology_driver",
+        "ecology_relay",
+        "ecology_sink",
+        "ecology_adapter",
+    )
     assert profile["aggregate_ecology_score"] >= 0.0
     assert "macro_transition" in profile["expected_behaviour_by_regime"]
 
@@ -61,7 +68,12 @@ def test_program_b_capital_flow_network(analysis: dict[str, Any]) -> None:
 def test_program_b_liquidity_network(analysis: dict[str, Any]) -> None:
     liquidity = analysis["liquidity_network"]
     assert len(liquidity["edges"]) > 0
-    assert liquidity["edges"][0]["liquidity_effect"] in ("provision", "withdrawal_pressure", "competition", "balancing")
+    assert liquidity["edges"][0]["liquidity_effect"] in (
+        "provision",
+        "withdrawal_pressure",
+        "competition",
+        "balancing",
+    )
 
 
 def test_program_b_feedback_and_adaptive_model(analysis: dict[str, Any]) -> None:

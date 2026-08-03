@@ -1,0 +1,214 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0435
+- IKROS-CAMPAIGNAUDIT-20260802-0436
+- IKROS-CAMPAIGNAUDIT-20260802-0437
+- IKROS-CAMPAIGNAUDIT-20260802-0438
+- IKROS-CAMPAIGNAUDIT-20260802-0439
+- IKROS-CAMPAIGNAUDIT-20260802-0440
+- IKROS-CAMPAIGNAUDIT-20260802-0441
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0036
+campaign_type: RESEARCH_AUDIT
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0036
+created_at: '2026-08-02T15:44:55.395989+00:00'
+evidence_refs:
+- C:\Users\mm01r\copilot-worktrees\autonomous-financial-reasoning-platform\mm01rahman-didactic-meme\11-research\discovery-cycle-2\research-program-a\dc2_program_a_analysis.json
+failure_policy: FAIL_FAST
+finished_at: '2026-08-02T15:45:01.494572+00:00'
+lifecycle_state: FAILED
+objective: Map cross-asset transition ecology to determine how information propagates
+  before XAU/USD regime changes.
+pipeline:
+  deterministic: true
+  name: RESEARCH_AUDIT pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0036
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0153
+  - IKROS-RESEARCHTASK-20260802-0157
+  - IKROS-RESEARCHTASK-20260802-0163
+research_question_id: null
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T15:44:57.167121+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T15:44:59.475711+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: DC2-PROGRAM-A-001
+      capability_refs: []
+      confidence:
+        data: 0.5
+        economic: 0.5
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.5
+        operational: 0.5
+        overall: 0.5
+        prior: 0.5
+        replication: 0.0
+        statistical: 0.5
+        validation: 0.5
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260802-1001
+      instrument: XAU/USD
+      lifecycle_state: OPEN
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: dc2-program-a
+          creation_context: Discovery Cycle 2 Research Program A
+          motivation: Understand cross-asset information propagation before XAU/USD
+            regime transitions.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: Determine how cross-asset markets create, amplify, or suppress XAU/USD
+        regime transitions.
+      scope: MACRO
+      spec_refs: []
+      time_horizon: 1D
+      title: Cross-Asset Transition Ecology — Primary Research Question
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: 'Duplicate: ResearchQuestion ''IKROS-RQ-20260802-1001'' already registered'
+    graph_node_id: null
+    memory_record_id: null
+    metrics: {}
+    output_refs: []
+    payload: {}
+    selected_ids: []
+  started_at: '2026-08-02T15:44:58.723963+00:00'
+  status: FAILED
+  task_id: IKROS-RESEARCHTASK-20260802-0153
+  title: Research Question
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0153
+  finished_at: null
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.5
+        economic: 0.5
+        last_updated: '2026-08-02T00:00:00Z'
+        model: 0.5
+        operational: 0.5
+        overall: 0.5
+        prior: 0.5
+        replication: 0.0
+        statistical: 0.5
+        validation: 0.5
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260802-1001
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-02T00:00:00Z'
+          created_by: dc2-program-a
+          creation_context: DC2 Program A — Cross-Asset Ecology
+          motivation: Map cross-asset information flow before XAU/USD regime transitions.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: df22cd865c7a1bd2a10ca272d76945fd83dbfe35dc4ea967d9ae3707f4b1780f
+      spec_refs: []
+      title: DC2 Program A — Cross-Asset Ecology Experiment Suite
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 2
+  result: null
+  started_at: null
+  status: PENDING
+  task_id: IKROS-RESEARCHTASK-20260802-0157
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 0
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0157
+  finished_at: null
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 3
+  result: null
+  started_at: null
+  status: PENDING
+  task_id: IKROS-RESEARCHTASK-20260802-0163
+  title: Final Report
+title: DC2 Research Program A — Cross-Asset Transition Ecology
+updated_at: '2026-08-02T15:45:03.254746+00:00'
+work_package_refs:
+- WP-IMP-0048

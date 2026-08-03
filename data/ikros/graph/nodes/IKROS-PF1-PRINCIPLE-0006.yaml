@@ -1,0 +1,14 @@
+attributes:
+  classification: INSTITUTIONAL_AXIOM
+confidence: 0.86
+created_at: '2026-08-02T14:03:13.733162+00:00'
+ikros_id: IKROS-PF1-PRINCIPLE-0006
+label: High trigger sensitivity without calibration degrades transition validity
+node_id: IKROS-PF1-PRINCIPLE-0006
+node_type: KNOWLEDGE_OBJECT
+spec_refs:
+- SPEC-060
+valid_from: null
+valid_to: null
+wp_refs:
+- WP-IMP-0048

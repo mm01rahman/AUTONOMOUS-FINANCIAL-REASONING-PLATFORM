@@ -1,0 +1,58 @@
+campaign_tag: ''
+capability_refs: []
+confidence:
+  data: 0.46
+  economic: 0.68
+  last_updated: '2026-08-02T00:00:00Z'
+  model: 0.62
+  operational: 0.5
+  overall: 0.555064300174054
+  prior: 0.58
+  replication: 0.0
+  statistical: 0.58
+  validation: 0.52
+entity_type: ResearchQuestion
+ikros_id: IKROS-RQ-20260802-6001
+instrument: XAU/USD
+lifecycle_state: ANSWERED
+lineage:
+  dependencies:
+    datasets: []
+    external_refs: []
+    features: []
+    inputs: []
+    models: []
+  evidence:
+    contradicting: []
+    ers_records: []
+    supporting: []
+  experiments:
+    tested_in: []
+    validated_by: []
+  origin:
+    created_at: '2026-08-02T00:00:00Z'
+    created_by: dc2-program-c-phase1
+    creation_context: Program C Phase 1 primary research question
+    motivation: Program A and Program B established the approved foundations; Program
+      C integrates them into a unified transition explanation.
+  retirement:
+    retired_at: null
+    retired_by: null
+    retirement_reason: null
+    successor_id: null
+  successors:
+    inspired: []
+    refined_by: null
+    superseded_by: null
+linked_conclusions: []
+linked_hypotheses: []
+motivation: Institutional understanding now requires a systems-level transition engine
+  above the approved network, ecology, and decision models.
+scope: CROSS_ASSET
+spec_refs: []
+time_horizon: 1D
+title: 'DC2-PC1: How do macro conditions, institutional participants, decision processes,
+  liquidity, and cross-asset propagation combine to produce XAU/USD regime transitions?'
+version: 1.0.0
+version_history: []
+work_package_refs: []

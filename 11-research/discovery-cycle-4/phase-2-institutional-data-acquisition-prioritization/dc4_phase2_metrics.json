@@ -1,0 +1,58 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0033",
+  "dataset_count": 20,
+  "graph_edges_created": 13,
+  "graph_nodes_created": 13,
+  "highest_scientific_value_dataset": "DS-001",
+  "highest_validation_impact_dataset": "DS-007",
+  "no_acquisition_performed": true,
+  "no_validation_resumed": true,
+  "report_paths": {
+    "acquisition_dependency_graph": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\ACQUISITION_DEPENDENCY_GRAPH.md",
+    "arb_recommendation": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\ARB_RECOMMENDATION_DC4_PHASE2.md",
+    "campaign_result": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\dc4_phase2_campaign_result.json",
+    "data_foundation_work_package_plan": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\DATA_FOUNDATION_V2_WORK_PACKAGE_PLAN.md",
+    "dataset_impact_matrix": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\DATASET_IMPACT_MATRIX.md",
+    "dataset_priority_registry": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\INSTITUTIONAL_DATASET_PRIORITY_REGISTRY.md",
+    "dataset_roi_report": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\DATASET_ROI_REPORT.md",
+    "engineering_cost_report": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\ENGINEERING_COST_REPORT.md",
+    "governed_markdown_summary": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\GOVERNED_MARKDOWN_SUMMARY.md",
+    "institutional_acquisition_roadmap": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\INSTITUTIONAL_ACQUISITION_ROADMAP.md",
+    "scientific_value_matrix": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\SCIENTIFIC_VALUE_MATRIX.md",
+    "validation_readiness_matrix": "11-research\\discovery-cycle-4\\phase-2-institutional-data-acquisition-prioritization\\VALIDATION_READINESS_MATRIX.md"
+  },
+  "tier_1_immediate": [
+    "DS-001",
+    "DS-018",
+    "DS-007",
+    "DS-009",
+    "DS-012",
+    "DS-011",
+    "DS-003",
+    "DS-019",
+    "DS-010"
+  ],
+  "tier_4_commercial_only": [
+    "DS-006",
+    "DS-002",
+    "DS-015",
+    "DS-005",
+    "DS-004",
+    "DS-013"
+  ],
+  "tier_counts": {
+    "Tier 1": 9,
+    "Tier 2": 0,
+    "Tier 3": 3,
+    "Tier 4": 6,
+    "Tier 5": 2
+  },
+  "top_5_datasets": [
+    "DS-001",
+    "DS-018",
+    "DS-007",
+    "DS-009",
+    "DS-012"
+  ],
+  "top_roi_dataset": "DS-001"
+}

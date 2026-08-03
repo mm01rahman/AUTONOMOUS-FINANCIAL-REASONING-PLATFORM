@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, cast
+from typing import Any, Protocol, cast
 
 from tools.alpha_research.causal_analysis import (
     DC2_PHASE2_DIR,
@@ -31,6 +31,7 @@ from tools.ikros.orchestrator import (
 )
 from tools.ikros.registries.experiment import ExperimentRegistry
 from tools.ikros.registries.research import ResearchRegistry
+
 DC2_PHASE2_MANIFEST = (
     Path("11-research")
     / "discovery-cycle-2"
@@ -53,7 +54,9 @@ def _select_campaign_pipeline(
     """Filter campaign tasks to the named kind subset and rewire dependencies linearly."""
     kind_set = set(task_kinds)
     filtered = [t for t in campaign.tasks if t.kind in kind_set]
-    ordered = sorted(filtered, key=lambda t: task_kinds.index(t.kind) if t.kind in task_kinds else 999)
+    ordered = sorted(
+        filtered, key=lambda t: task_kinds.index(t.kind) if t.kind in task_kinds else 999
+    )
     for i, task in enumerate(ordered):
         task.depends_on = [ordered[i - 1].task_id] if i > 0 else []
     campaign.tasks = ordered
@@ -63,8 +66,23 @@ def _select_campaign_pipeline(
     return campaign
 
 
+class _TransitionEntity(Protocol):
+    lifecycle_state: str
+
+
+class _TransitionRegistry(Protocol):
+    def get(self, entity_id: str) -> _TransitionEntity: ...
+
+    def transition(
+        self,
+        entity_id: str,
+        target_state: str,
+        note: str = "",
+    ) -> object: ...
+
+
 def _transition_if_needed(
-    registry: Any,
+    registry: _TransitionRegistry,
     entity_id: str,
     target_state: str,
     note: str = "",
@@ -102,7 +120,8 @@ def run_dc2_phase2_campaign(repo_root: Path) -> dict[str, Any]:
     else:
         campaign_spec = _default_campaign_spec()
 
-    # ------------------------------------------------------------------ research question + experiment
+    # ------------------------------------------------------------------
+    # research question + experiment
     rq_primary_dict = campaign_spec.get("research_question_primary", {})
     rq_id = rq_primary_dict.get("ikros_id", "IKROS-RQ-20260802-2001")
     exp_spec = campaign_spec.get("experiment", {})
@@ -111,32 +130,61 @@ def run_dc2_phase2_campaign(repo_root: Path) -> dict[str, Any]:
         rq_obj = ResearchQuestion.from_dict(_with_reproducibility_hash(rq_primary_dict))
         exp_obj = Experiment.from_dict(_with_reproducibility_hash(exp_spec))
     except Exception:
-        rq_obj = ResearchQuestion.from_dict(_with_reproducibility_hash(_default_campaign_spec()["research_question_primary"]))
-        exp_obj = Experiment.from_dict(_with_reproducibility_hash(_default_campaign_spec()["experiment"]))
+        rq_obj = ResearchQuestion.from_dict(
+            _with_reproducibility_hash(_default_campaign_spec()["research_question_primary"])
+        )
+        exp_obj = Experiment.from_dict(
+            _with_reproducibility_hash(_default_campaign_spec()["experiment"])
+        )
 
-    # ------------------------------------------------------------------ build campaign (dict payload by TaskKind)
+    # ------------------------------------------------------------------
+    # build campaign (dict payload by TaskKind)
     task_payloads: dict[str, Any] = {
-        TaskKind.RESEARCH_QUESTION.value: {"entity_type": "ResearchQuestion", "entity": rq_obj.to_dict()},
-        TaskKind.EXPERIMENT_REGISTRATION.value: {"entity_type": "Experiment", "entity": exp_obj.to_dict()},
+        TaskKind.RESEARCH_QUESTION.value: {
+            "entity_type": "ResearchQuestion",
+            "entity": rq_obj.to_dict(),
+        },
+        TaskKind.EXPERIMENT_REGISTRATION.value: {
+            "entity_type": "Experiment",
+            "entity": exp_obj.to_dict(),
+        },
     }
     campaign = orchestrator.build_campaign(
-        title=str(campaign_spec.get("title", "DC2 Program A Phase 2: Cross-Asset Causal Transition Analysis")),
-        objective="Determine which observed cross-asset relationships represent genuine causal mechanisms preceding XAU/USD regime transitions.",
+        title=str(
+            campaign_spec.get(
+                "title", "DC2 Program A Phase 2: Cross-Asset Causal Transition Analysis"
+            )
+        ),
+        objective=(
+            "Determine which observed cross-asset relationships represent "
+            "genuine causal mechanisms preceding XAU/USD regime transitions."
+        ),
         campaign_type="RESEARCH_AUDIT",
         task_payloads=task_payloads,
         failure_policy=FailurePolicy.CONTINUE.value,
     )
     _select_campaign_pipeline(
         campaign,
-        [TaskKind.RESEARCH_QUESTION.value, TaskKind.EXPERIMENT_REGISTRATION.value, TaskKind.FINAL_REPORT.value],
+        [
+            TaskKind.RESEARCH_QUESTION.value,
+            TaskKind.EXPERIMENT_REGISTRATION.value,
+            TaskKind.FINAL_REPORT.value,
+        ],
     )
 
     # ------------------------------------------------------------------ run analysis
     analysis = prepare_dc2_phase2_artifacts(repo_root=repo_root)
 
-    # ------------------------------------------------------------------ register entities and run campaign
-    research_registry = cast(ResearchRegistry, orchestrator._registries.get("ResearchQuestion", ResearchRegistry(base_dir=resolved_base)))
-    experiment_registry = cast(ExperimentRegistry, orchestrator._registries.get("Experiment", ExperimentRegistry(base_dir=resolved_base)))
+    # ------------------------------------------------------------------
+    # register entities and run campaign
+    research_registry = cast(
+        ResearchRegistry,
+        orchestrator._registries.get("ResearchQuestion", ResearchRegistry(base_dir=resolved_base)),
+    )
+    experiment_registry = cast(
+        ExperimentRegistry,
+        orchestrator._registries.get("Experiment", ExperimentRegistry(base_dir=resolved_base)),
+    )
 
     if not research_registry.exists(rq_obj.ikros_id):
         research_registry.register(rq_obj)
@@ -149,7 +197,9 @@ def run_dc2_phase2_campaign(repo_root: Path) -> dict[str, Any]:
     # ------------------------------------------------------------------ emit reports
     out_dir = repo_root / DC2_PHASE2_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
-    report_paths = emit_dc2_phase2_reports(analysis, campaign_result=report.to_dict(), repo_root=repo_root)
+    report_paths = emit_dc2_phase2_reports(
+        analysis, campaign_result=report.to_dict(), repo_root=repo_root
+    )
 
     # ------------------------------------------------------------------ register secondary RQs
     secondary_rqs = campaign_spec.get("research_questions_secondary", [])
@@ -161,25 +211,58 @@ def run_dc2_phase2_campaign(repo_root: Path) -> dict[str, Any]:
                 "entity_type": "ResearchQuestion",
                 "version": "1.0.0",
                 "lifecycle_state": "ANSWERED",
-                "confidence": {"prior": 0.5, "statistical": 0.5, "economic": 0.5, "data": 0.5, "model": 0.5, "validation": 0.5, "replication": 0.0, "operational": 0.5, "last_updated": "2026-08-02T00:00:00Z"},
-                "lineage": {"origin": {"created_by": "dc2-phase2", "created_at": "2026-08-02T00:00:00Z", "creation_context": "DC2 Phase 2 secondary question", "motivation": rq_secondary.get("statement", "")}, "dependencies": {"supporting": [], "contradicting": [], "ers_records": []}},
-                "spec_refs": [], "capability_refs": [], "work_package_refs": [], "version_history": [],
+                "confidence": {
+                    "prior": 0.5,
+                    "statistical": 0.5,
+                    "economic": 0.5,
+                    "data": 0.5,
+                    "model": 0.5,
+                    "validation": 0.5,
+                    "replication": 0.0,
+                    "operational": 0.5,
+                    "last_updated": "2026-08-02T00:00:00Z",
+                },
+                "lineage": {
+                    "origin": {
+                        "created_by": "dc2-phase2",
+                        "created_at": "2026-08-02T00:00:00Z",
+                        "creation_context": "DC2 Phase 2 secondary question",
+                        "motivation": rq_secondary.get("statement", ""),
+                    },
+                    "dependencies": {"supporting": [], "contradicting": [], "ers_records": []},
+                },
+                "spec_refs": [],
+                "capability_refs": [],
+                "work_package_refs": [],
+                "version_history": [],
                 "title": f"DC2-P2: {rq_secondary.get('theme', rq_id_s)}",
                 "motivation": str(rq_secondary.get("statement", "")),
-                "instrument": "XAU/USD", "scope": "CROSS_ASSET", "time_horizon": "1D",
+                "instrument": "XAU/USD",
+                "scope": "CROSS_ASSET",
+                "time_horizon": "1D",
                 "reproducibility_hash": compute_reproducibility_hash(rq_secondary),
             }
             rq_obj_s = ResearchQuestion.from_dict(rq_d)
             research_registry.register(rq_obj_s)
             research_registry.link_conclusion(rq_id_s, campaign.campaign_id)
-            _transition_if_needed(research_registry, rq_id_s, "COMPLETE", note="DC2 Phase 2 addressed this secondary question.")
+            _transition_if_needed(
+                research_registry,
+                rq_id_s,
+                "COMPLETE",
+                note="DC2 Phase 2 addressed this secondary question.",
+            )
         except Exception:
             pass
 
     # ------------------------------------------------------------------ confidence updates
     arb = analysis.get("arb_summary", {})
     promoted = arb.get("promote_to_institutional_knowledge", [])
-    _transition_if_needed(research_registry, rq_id, "COMPLETE", note=f"DC2 Phase 2 complete. {len(promoted)} signals promoted to institutional knowledge.")
+    _transition_if_needed(
+        research_registry,
+        rq_id,
+        "COMPLETE",
+        note=f"DC2 Phase 2 complete. {len(promoted)} signals promoted to institutional knowledge.",
+    )
 
     # ------------------------------------------------------------------ write metrics
     (repo_root / "reports").mkdir(parents=True, exist_ok=True)
@@ -205,11 +288,36 @@ def run_dc2_phase2_campaign(repo_root: Path) -> dict[str, Any]:
 
 def _default_tasks() -> list[dict[str, Any]]:
     return [
-        {"task_id": "p2-t1", "title": "Theme 1: Conditional Causality", "kind": TaskKind.STATISTICAL_EVALUATION.value, "depends_on": []},
-        {"task_id": "p2-t2", "title": "Theme 2: Time-Lag Causality", "kind": TaskKind.STATISTICAL_EVALUATION.value, "depends_on": ["p2-t1"]},
-        {"task_id": "p2-t3", "title": "Theme 3: Macro Mediation", "kind": TaskKind.STATISTICAL_EVALUATION.value, "depends_on": ["p2-t2"]},
-        {"task_id": "p2-t4", "title": "Theme 4: Causal Stability", "kind": TaskKind.STATISTICAL_EVALUATION.value, "depends_on": ["p2-t3"]},
-        {"task_id": "p2-t5", "title": "Causal Synthesis and ARB Report", "kind": TaskKind.FINAL_REPORT.value, "depends_on": ["p2-t4"]},
+        {
+            "task_id": "p2-t1",
+            "title": "Theme 1: Conditional Causality",
+            "kind": TaskKind.STATISTICAL_EVALUATION.value,
+            "depends_on": [],
+        },
+        {
+            "task_id": "p2-t2",
+            "title": "Theme 2: Time-Lag Causality",
+            "kind": TaskKind.STATISTICAL_EVALUATION.value,
+            "depends_on": ["p2-t1"],
+        },
+        {
+            "task_id": "p2-t3",
+            "title": "Theme 3: Macro Mediation",
+            "kind": TaskKind.STATISTICAL_EVALUATION.value,
+            "depends_on": ["p2-t2"],
+        },
+        {
+            "task_id": "p2-t4",
+            "title": "Theme 4: Causal Stability",
+            "kind": TaskKind.STATISTICAL_EVALUATION.value,
+            "depends_on": ["p2-t3"],
+        },
+        {
+            "task_id": "p2-t5",
+            "title": "Causal Synthesis and ARB Report",
+            "kind": TaskKind.FINAL_REPORT.value,
+            "depends_on": ["p2-t4"],
+        },
     ]
 
 
@@ -223,8 +331,14 @@ def _default_campaign_spec() -> dict[str, Any]:
             "version": "1.0.0",
             "lifecycle_state": "ANSWERED",
             "confidence": {
-                "prior": 0.5, "statistical": 0.5, "economic": 0.6, "data": 0.4,
-                "model": 0.5, "validation": 0.5, "replication": 0.0, "operational": 0.5,
+                "prior": 0.5,
+                "statistical": 0.5,
+                "economic": 0.6,
+                "data": 0.4,
+                "model": 0.5,
+                "validation": 0.5,
+                "replication": 0.0,
+                "operational": 0.5,
                 "last_updated": "2026-08-02T00:00:00Z",
             },
             "lineage": {
@@ -232,7 +346,10 @@ def _default_campaign_spec() -> dict[str, Any]:
                     "created_by": "dc2-phase2",
                     "created_at": "2026-08-02T00:00:00Z",
                     "creation_context": "DC2 Program A Phase 2 primary research question",
-                    "motivation": "Phase 1 produced observational relationships. Phase 2 tests causal validity.",
+                    "motivation": (
+                        "Phase 1 produced observational relationships. "
+                        "Phase 2 tests causal validity."
+                    ),
                 },
                 "dependencies": {"supporting": [], "contradicting": [], "ers_records": []},
             },
@@ -240,8 +357,14 @@ def _default_campaign_spec() -> dict[str, Any]:
             "capability_refs": [],
             "work_package_refs": [],
             "version_history": [],
-            "title": "DC2-P2: Which observed cross-asset relationships represent genuine causal mechanisms?",
-            "motivation": "Phase 1 observational findings need causal validation before becoming institutional knowledge.",
+            "title": (
+                "DC2-P2: Which observed cross-asset relationships represent "
+                "genuine causal mechanisms?"
+            ),
+            "motivation": (
+                "Phase 1 observational findings need causal validation "
+                "before becoming institutional knowledge."
+            ),
             "instrument": "XAU/USD",
             "scope": "CROSS_ASSET",
             "time_horizon": "1D",
@@ -253,8 +376,14 @@ def _default_campaign_spec() -> dict[str, Any]:
             "version": "1.0.0",
             "lifecycle_state": "DESIGNED",
             "confidence": {
-                "prior": 0.5, "statistical": 0.5, "economic": 0.6, "data": 0.4,
-                "model": 0.5, "validation": 0.5, "replication": 0.0, "operational": 0.5,
+                "prior": 0.5,
+                "statistical": 0.5,
+                "economic": 0.6,
+                "data": 0.4,
+                "model": 0.5,
+                "validation": 0.5,
+                "replication": 0.0,
+                "operational": 0.5,
                 "last_updated": "2026-08-02T00:00:00Z",
             },
             "lineage": {
@@ -271,14 +400,47 @@ def _default_campaign_spec() -> dict[str, Any]:
             "work_package_refs": [],
             "version_history": [],
             "title": "DC2-P2-EXP-001: Cross-Asset Causal Audit",
-            "description": "Four-theme causal analysis: conditional Granger, lag-horizon Granger, macro mediation, rolling stability.",
+            "description": (
+                "Four-theme causal analysis: conditional Granger, "
+                "lag-horizon Granger, macro mediation, rolling stability."
+            ),
             "reproducibility_hash": "dc2-phase2-exp-v1",
         },
         "tasks": _default_tasks(),
         "research_questions_secondary": [
-            {"ikros_id": "IKROS-RQ-20260802-2002", "theme": "Conditional Causality", "statement": "Does causal influence from cross-asset signals to XAU/USD change across the six institutional regimes?"},
-            {"ikros_id": "IKROS-RQ-20260802-2003", "theme": "Time-Lag Causality", "statement": "At what horizons (immediate/short/medium/long) do cross-asset signals most causally precede XAU/USD transitions?"},
-            {"ikros_id": "IKROS-RQ-20260802-2004", "theme": "Macro Mediation", "statement": "Are cross-asset correlations direct causal paths or are they mediated by shared macro factors (DXY, yields, macro_pressure)?"},
-            {"ikros_id": "IKROS-RQ-20260802-2005", "theme": "Causal Stability", "statement": "Do identified causal relationships remain stable across macro cycles, volatility regimes, and stress periods?"},
+            {
+                "ikros_id": "IKROS-RQ-20260802-2002",
+                "theme": "Conditional Causality",
+                "statement": (
+                    "Does causal influence from cross-asset signals to XAU/USD "
+                    "change across the six institutional regimes?"
+                ),
+            },
+            {
+                "ikros_id": "IKROS-RQ-20260802-2003",
+                "theme": "Time-Lag Causality",
+                "statement": (
+                    "At what horizons (immediate/short/medium/long) do "
+                    "cross-asset signals most causally precede XAU/USD "
+                    "transitions?"
+                ),
+            },
+            {
+                "ikros_id": "IKROS-RQ-20260802-2004",
+                "theme": "Macro Mediation",
+                "statement": (
+                    "Are cross-asset correlations direct causal paths or are "
+                    "they mediated by shared macro factors (DXY, yields, "
+                    "macro_pressure)?"
+                ),
+            },
+            {
+                "ikros_id": "IKROS-RQ-20260802-2005",
+                "theme": "Causal Stability",
+                "statement": (
+                    "Do identified causal relationships remain stable across "
+                    "macro cycles, volatility regimes, and stress periods?"
+                ),
+            },
         ],
     }

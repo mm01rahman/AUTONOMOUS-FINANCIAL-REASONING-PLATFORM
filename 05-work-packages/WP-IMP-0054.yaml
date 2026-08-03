@@ -1,0 +1,153 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0054"
+capability_id:
+  id: "ALPHA-RESEARCH"
+  version: "1.0"
+title: "Program 4 — Institutional Alpha Expansion Program"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
+    trace_sls: "AFRP-GEN2-WP0054-1.0.0"
+    trace_adr: ["ADR-0001", "ADR-IKROS-001", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "work_package.completed('WP-IMP-0053')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/alpha_research/institutional_alpha_expansion_program.py"
+      - "tools/alpha_research/program4_institutional_alpha_expansion.py"
+      - "tests/unit/test_program4_institutional_alpha_expansion_program.py"
+      - "11-research/program-4-institutional-alpha-expansion-program/"
+      - "data/ikros/graph/"
+      - "data/ikros/orchestrator/audit/"
+      - "data/ikros/orchestrator/campaigns/"
+      - "data/ikros/orchestrator/reports/"
+      - "data/ikros/memory/t1-episodic/"
+      - "data/ikros/memory/t4-institutional/"
+      - "data/ikros/registries/research/"
+      - "data/ikros/registries/experiments/"
+      - "05-work-packages/WP-IMP-0054.yaml"
+    read:
+      - "11-research/program-3-autonomous-institutional-alpha-campaign-engine/"
+      - "11-research/program-2-institutional-alpha-research-laboratory/"
+      - "11-research/program-1-institutional-alpha-factory/"
+      - "data/ikros/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "20h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "11-research/program-3-autonomous-institutional-alpha-campaign-engine/final_mechanism_states.json"
+    - "11-research/program-3-autonomous-institutional-alpha-campaign-engine/research_economics.json"
+    - "11-research/program-2-institutional-alpha-research-laboratory/research_director.json"
+    - "11-research/program-1-institutional-alpha-factory/institutional_alpha_registry.json"
+    - "data/ikros/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/alpha_research/institutional_alpha_expansion_program.py"
+    - "tools/alpha_research/program4_institutional_alpha_expansion.py"
+  expected_test_files:
+    - "tests/unit/test_program4_institutional_alpha_expansion_program.py"
+  expected_documentation:
+    - "11-research/program-4-institutional-alpha-expansion-program/"
+  expected_evidence:
+    - "11-research/program-4-institutional-alpha-expansion-program/approved_alpha_registry.json"
+    - "11-research/program-4-institutional-alpha-expansion-program/mechanism_independence_matrix.json"
+    - "11-research/program-4-institutional-alpha-expansion-program/FINAL_REPORT.md"
+
+produces:
+  capability:
+    id: "ALPHA-RESEARCH"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/alpha_research/institutional_alpha_expansion_program.py"
+    - "tools/alpha_research/program4_institutional_alpha_expansion.py"
+    - "tests/unit/test_program4_institutional_alpha_expansion_program.py"
+    - "11-research/program-4-institutional-alpha-expansion-program/"
+    - "data/ikros/graph/"
+    - "data/ikros/orchestrator/audit/"
+    - "data/ikros/orchestrator/campaigns/"
+    - "data/ikros/orchestrator/reports/"
+    - "data/ikros/memory/t1-episodic/"
+    - "data/ikros/memory/t4-institutional/"
+    - "data/ikros/registries/research/"
+    - "data/ikros/registries/experiments/"
+    - "05-work-packages/WP-IMP-0054.yaml"
+  non_goals:
+    - "No Runtime redesign."
+    - "No portfolio engine."
+    - "No paper trading."
+    - "No live trading."
+    - "No manual mechanism specification in operational use."
+
+requirements:
+  expansion_engine:
+    module: "tools/alpha_research/institutional_alpha_expansion_program.py"
+    rules:
+      - "Use the existing approved and blocked inventory as seed state."
+      - "Autonomously expand the approved alpha library until at least five approved alphas exist or current observations are exhausted."
+      - "Maintain approved, rejected, and blocked registries together with family atlas, independence matrix, correlation matrix, evidence atlas, promotion history, and campaign archive."
+      - "Do not promote redundant mechanisms; enforce scientific independence and correlation-aware diversification."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0054"
+
+completion:
+  success_requires:
+    - "At least five approved independent alphas exist or governed data-expansion requests are produced."
+    - "Approved, rejected, and blocked registries are emitted."
+    - "Diversification metadata and independence analysis are generated for each approved alpha."
+    - "IKROS graph and campaign artifacts are updated through the governed runner."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-REDUNDANCY: "A redundant mechanism is promoted without independence screening."
+  ERR-NONDETERMINISTIC: "Expansion results differ across repeated executions."
+  ERR-UNRESOLVED: "Program stops before reaching five approved alphas or producing governed data-expansion requests."

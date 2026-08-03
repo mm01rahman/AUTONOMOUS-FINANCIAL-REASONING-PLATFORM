@@ -1,0 +1,412 @@
+audit_ids:
+- IKROS-CAMPAIGNAUDIT-20260802-0511
+- IKROS-CAMPAIGNAUDIT-20260802-0512
+- IKROS-CAMPAIGNAUDIT-20260802-0513
+- IKROS-CAMPAIGNAUDIT-20260802-0514
+- IKROS-CAMPAIGNAUDIT-20260802-0515
+- IKROS-CAMPAIGNAUDIT-20260802-0516
+- IKROS-CAMPAIGNAUDIT-20260802-0517
+- IKROS-CAMPAIGNAUDIT-20260802-0518
+- IKROS-CAMPAIGNAUDIT-20260802-0519
+- IKROS-CAMPAIGNAUDIT-20260802-0520
+- IKROS-CAMPAIGNAUDIT-20260802-0521
+- IKROS-CAMPAIGNAUDIT-20260802-0522
+- IKROS-CAMPAIGNAUDIT-20260802-0523
+- IKROS-CAMPAIGNAUDIT-20260802-0524
+- IKROS-CAMPAIGNAUDIT-20260802-0525
+- IKROS-CAMPAIGNAUDIT-20260802-0526
+campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0046
+campaign_type: HYPOTHESIS_VALIDATION
+capability_refs:
+- IKROS-ORCHESTRATOR
+completion_report_id: IKROS-CAMPAIGNREPORT-20260802-0046
+created_at: '2026-08-02T22:34:12.736784+00:00'
+evidence_refs: []
+failure_policy: CONTINUE
+finished_at: '2026-08-02T22:34:31.907953+00:00'
+lifecycle_state: COMPLETED
+objective: Operate governed research campaigns continuously until every current institutional
+  alpha mechanism reaches APPROVED_ALPHA, REJECTED, or BLOCKED_BY_DATA.
+pipeline:
+  deterministic: true
+  name: HYPOTHESIS_VALIDATION pipeline
+  pipeline_id: IKROS-RESEARCHPIPELINE-20260802-0046
+  stages:
+  - RESEARCH_QUESTION
+  - EXPERIMENT_REGISTRATION
+  - STATISTICAL_EVALUATION
+  - FINAL_REPORT
+  task_ids:
+  - IKROS-RESEARCHTASK-20260802-0185
+  - IKROS-RESEARCHTASK-20260802-0189
+  - IKROS-RESEARCHTASK-20260802-0193
+  - IKROS-RESEARCHTASK-20260802-0195
+research_question_id: IKROS-RQ-20260803-0054
+specification_refs:
+- SPEC-060
+started_at: '2026-08-02T22:34:14.655015+00:00'
+tasks:
+- allow_failure: false
+  attempts: 1
+  depends_on: []
+  finished_at: '2026-08-02T22:34:17.376406+00:00'
+  kind: RESEARCH_QUESTION
+  max_attempts: 1
+  payload:
+    entity:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.61
+        economic: 0.63
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.64
+        operational: 0.0
+        overall: 0.6265418996114618
+        prior: 0.66
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260803-0054
+      instrument: XAU/USD
+      lifecycle_state: OPEN
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: program3-autonomous-campaign-engine
+          creation_context: Generation 2 Program 3 bootstrap
+          motivation: Resolve the current institutional alpha inventory through continuous
+            governed research campaigns.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: ''
+      scope: MACRO
+      spec_refs: []
+      time_horizon: ''
+      title: Program 3 Primary Research Question
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: ResearchQuestion
+  planned_order: 1
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0185
+    memory_record_id: IKMEM-T1-20260802-0084
+    metrics: {}
+    output_refs:
+    - IKROS-RQ-20260803-0054
+    payload:
+      campaign_tag: ''
+      capability_refs: []
+      confidence:
+        data: 0.61
+        economic: 0.63
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.64
+        operational: 0.0
+        overall: 0.6265418996114618
+        prior: 0.66
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      entity_type: ResearchQuestion
+      ikros_id: IKROS-RQ-20260803-0054
+      instrument: XAU/USD
+      lifecycle_state: OPEN
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: program3-autonomous-campaign-engine
+          creation_context: Generation 2 Program 3 bootstrap
+          motivation: Resolve the current institutional alpha inventory through continuous
+            governed research campaigns.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      linked_conclusions: []
+      linked_hypotheses: []
+      motivation: ''
+      scope: MACRO
+      spec_refs: []
+      time_horizon: ''
+      title: Program 3 Primary Research Question
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    selected_ids: []
+  started_at: '2026-08-02T22:34:16.440975+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0185
+  title: Research Question
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0185
+  finished_at: '2026-08-02T22:34:21.632121+00:00'
+  kind: EXPERIMENT_REGISTRATION
+  max_attempts: 1
+  payload:
+    entity:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.6
+        economic: 0.62
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.63
+        operational: 0.0
+        overall: 0.6165398651709444
+        prior: 0.65
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260803-0054
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: program3-autonomous-campaign-engine
+          creation_context: Generation 2 Program 3 autonomous execution
+          motivation: Run the research laboratory continuously until all current mechanisms
+            are scientifically resolved.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: f99b32a1d3fa89724930a9d6b956220c4ca2dc11ad355ac1ee68114895e1e286
+      spec_refs: []
+      title: Program 3 Autonomous Campaign Engine Integration
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    entity_type: Experiment
+  planned_order: 5
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0189
+    memory_record_id: IKMEM-T1-20260802-0085
+    metrics: {}
+    output_refs:
+    - IKROS-EXP-20260803-0054
+    payload:
+      capability_refs: []
+      completed_at: null
+      confidence:
+        data: 0.6
+        economic: 0.62
+        last_updated: '2026-08-03T00:00:00Z'
+        model: 0.63
+        operational: 0.0
+        overall: 0.6165398651709444
+        prior: 0.65
+        replication: 0.0
+        statistical: 0.0
+        validation: 0.0
+      dataset_versions: []
+      entity_type: Experiment
+      failures_produced: []
+      feature_versions: []
+      git_commit: ''
+      hypotheses: []
+      ikros_id: IKROS-EXP-20260803-0054
+      in_sample_end: ''
+      in_sample_start: ''
+      lifecycle_state: DESIGNED
+      lineage:
+        dependencies:
+          datasets: []
+          external_refs: []
+          features: []
+          inputs: []
+          models: []
+        evidence:
+          contradicting: []
+          ers_records: []
+          supporting: []
+        experiments:
+          tested_in: []
+          validated_by: []
+        origin:
+          created_at: '2026-08-03T00:00:00Z'
+          created_by: program3-autonomous-campaign-engine
+          creation_context: Generation 2 Program 3 autonomous execution
+          motivation: Run the research laboratory continuously until all current mechanisms
+            are scientifically resolved.
+        retirement:
+          retired_at: null
+          retired_by: null
+          retirement_reason: null
+          successor_id: null
+        successors:
+          inspired: []
+          refined_by: null
+          superseded_by: null
+      out_of_sample_end: ''
+      out_of_sample_start: ''
+      parameters: {}
+      protocol: ''
+      random_seed: 42
+      reproducibility_hash: f99b32a1d3fa89724930a9d6b956220c4ca2dc11ad355ac1ee68114895e1e286
+      spec_refs: []
+      title: Program 3 Autonomous Campaign Engine Integration
+      validations_produced: []
+      version: 1.0.0
+      version_history: []
+      work_package_refs: []
+    selected_ids: []
+  started_at: '2026-08-02T22:34:20.594432+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0189
+  title: Experiment Registration
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0189
+  finished_at: '2026-08-02T22:34:25.692148+00:00'
+  kind: STATISTICAL_EVALUATION
+  max_attempts: 1
+  payload: {}
+  planned_order: 9
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0193
+    memory_record_id: IKMEM-T1-20260802-0086
+    metrics:
+      data_confidence: 0.2
+      effect_size: 0.0
+      experimental_confidence: 0.95
+      p_value: 1.0
+      statistical_confidence: 0.0
+      validation_confidence: 0.0
+    output_refs: []
+    payload:
+      data_confidence: 0.2
+      effect_size: 0.0
+      experimental_confidence: 0.95
+      p_value: 1.0
+      statistical_confidence: 0.0
+      validation_confidence: 0.0
+    selected_ids: []
+  started_at: '2026-08-02T22:34:24.740185+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0193
+  title: Statistical Evaluation
+- allow_failure: false
+  attempts: 1
+  depends_on:
+  - IKROS-RESEARCHTASK-20260802-0193
+  finished_at: '2026-08-02T22:34:29.822029+00:00'
+  kind: FINAL_REPORT
+  max_attempts: 1
+  payload: {}
+  planned_order: 11
+  result:
+    error: null
+    graph_node_id: IKROS-RESEARCHTASK-20260802-0195
+    memory_record_id: IKMEM-T1-20260802-0087
+    metrics:
+      blocked_task_ids: []
+      completed_task_ids:
+      - IKROS-RESEARCHTASK-20260802-0185
+      - IKROS-RESEARCHTASK-20260802-0189
+      - IKROS-RESEARCHTASK-20260802-0193
+      failed_task_ids: []
+      progress:
+        blocked: 0
+        completed: 3
+        failed: 0
+        percent_complete: 75.0
+        skipped: 0
+        total: 4
+    output_refs:
+    - IKROS-EXP-20260803-0054
+    - IKROS-RQ-20260803-0054
+    payload:
+      campaign_id: IKROS-RESEARCHCAMPAIGN-20260802-0046
+      outputs:
+      - IKROS-EXP-20260803-0054
+      - IKROS-RQ-20260803-0054
+    selected_ids: []
+  started_at: '2026-08-02T22:34:28.805436+00:00'
+  status: COMPLETED
+  task_id: IKROS-RESEARCHTASK-20260802-0195
+  title: Final Report
+title: Program 3 — Autonomous Institutional Alpha Campaign Engine
+updated_at: '2026-08-02T22:34:33.959475+00:00'
+work_package_refs:
+- WP-IMP-0048

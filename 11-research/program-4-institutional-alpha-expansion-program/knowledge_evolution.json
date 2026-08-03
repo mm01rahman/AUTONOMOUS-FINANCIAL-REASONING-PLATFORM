@@ -1,0 +1,97 @@
+{
+  "alpha_lineage": {
+    "central_bank_reserve_reallocation": [
+      "PROGRAM_4_DISCOVERY"
+    ],
+    "commodity_cross_curve_divergence": [
+      "PROGRAM_4_DISCOVERY"
+    ],
+    "decision_cascade": [
+      "DC3",
+      "WP-IMP-0050",
+      "PROGRAM_1",
+      "PROGRAM_2",
+      "PROGRAM_3"
+    ],
+    "etf_flow_accumulation_pressure": [
+      "PROGRAM_4_DISCOVERY"
+    ],
+    "policy_expectation_repricing": [
+      "PROGRAM_4_DISCOVERY"
+    ],
+    "real_yield_dislocation_reversion": [
+      "PROGRAM_4_DISCOVERY"
+    ],
+    "safe_haven_migration": [
+      "DC3",
+      "WP-IMP-0050",
+      "PROGRAM_1",
+      "PROGRAM_2",
+      "PROGRAM_3"
+    ],
+    "volatility_carry_shadow": [
+      "PROGRAM_4_DISCOVERY"
+    ]
+  },
+  "evidence_convergence": {
+    "commodity_cross_curve_divergence": 0.71,
+    "etf_flow_accumulation_pressure": 0.72,
+    "policy_expectation_repricing": 0.71,
+    "real_yield_dislocation_reversion": 0.72,
+    "safe_haven_migration": 0.719
+  },
+  "failure_atlas": {
+    "central_bank_reserve_reallocation": [
+      "Reporting lag",
+      "Sovereign disclosure incompleteness"
+    ],
+    "decision_cascade": [
+      "Proxy leakage",
+      "Observation incompleteness"
+    ],
+    "volatility_carry_shadow": [
+      "Redundant with safe-haven volatility response",
+      "Proxy overfit"
+    ]
+  },
+  "institutional_lessons": [
+    "Flow, macro-rate, and intermarket mechanisms can be promoted without becoming redundant.",
+    "Official-reserve and dealer-inventory mechanisms remain data-limited under current public observations."
+  ],
+  "mechanism_evolution": {
+    "central_bank_reserve_reallocation": [
+      "P4-CAMPAIGN-0009"
+    ],
+    "commodity_cross_curve_divergence": [
+      "P4-CAMPAIGN-0007",
+      "P4-CAMPAIGN-0008"
+    ],
+    "decision_cascade": [
+      "P3-CAMPAIGN-0004"
+    ],
+    "etf_flow_accumulation_pressure": [
+      "P4-CAMPAIGN-0005",
+      "P4-CAMPAIGN-0006"
+    ],
+    "policy_expectation_repricing": [
+      "P4-CAMPAIGN-0003",
+      "P4-CAMPAIGN-0004"
+    ],
+    "real_yield_dislocation_reversion": [
+      "P4-CAMPAIGN-0001",
+      "P4-CAMPAIGN-0002"
+    ],
+    "safe_haven_migration": [
+      "P3-CAMPAIGN-0001",
+      "P3-CAMPAIGN-0002",
+      "P3-CAMPAIGN-0003"
+    ],
+    "volatility_carry_shadow": [
+      "P4-CAMPAIGN-0010"
+    ]
+  },
+  "scientific_principles": [
+    "Promotion should prefer mechanisms with low family overlap and low dataset redundancy.",
+    "Observation-complete public macro and ETF datasets can support multiple independent alpha families."
+  ]
+}

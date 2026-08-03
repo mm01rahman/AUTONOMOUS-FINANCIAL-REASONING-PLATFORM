@@ -1,0 +1,29 @@
+{
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0021",
+  "graph_edges_created": 83,
+  "graph_nodes_created": 17,
+  "n_belief_edges": 90,
+  "n_cascades": 4,
+  "n_participants": 10,
+  "n_strategic_edges": 90,
+  "phase": "DC2_PROGRAM_B_PHASE2",
+  "reports": {
+    "belief_update_network_json": "11-research\\discovery-cycle-2\\research-program-b-phase2\\belief_update_network.json",
+    "belief_update_report": "11-research\\discovery-cycle-2\\research-program-b-phase2\\BELIEF_UPDATE_REPORT.md",
+    "decision_cascade_atlas": "11-research\\discovery-cycle-2\\research-program-b-phase2\\DECISION_CASCADE_ATLAS.md",
+    "decision_cascades_json": "11-research\\discovery-cycle-2\\research-program-b-phase2\\decision_cascades.json",
+    "decision_ecology_report": "11-research\\discovery-cycle-2\\research-program-b-phase2\\DECISION_ECOLOGY_REPORT.md",
+    "decision_failure_catalogue": "11-research\\discovery-cycle-2\\research-program-b-phase2\\DECISION_FAILURE_CATALOGUE.md",
+    "decision_failure_catalogue_json": "11-research\\discovery-cycle-2\\research-program-b-phase2\\decision_failure_catalogue.json",
+    "decision_graph_json": "11-research\\discovery-cycle-2\\research-program-b-phase2\\decision_graph.json",
+    "decision_profiles_json": "11-research\\discovery-cycle-2\\research-program-b-phase2\\decision_profiles.json",
+    "institutional_recommendations": "11-research\\discovery-cycle-2\\research-program-b-phase2\\INSTITUTIONAL_RECOMMENDATIONS.md",
+    "institutional_recommendations_json": "11-research\\discovery-cycle-2\\research-program-b-phase2\\institutional_recommendations.json",
+    "participant_decision_profiles": "11-research\\discovery-cycle-2\\research-program-b-phase2\\PARTICIPANT_DECISION_PROFILES.md",
+    "reaction_hierarchy": "11-research\\discovery-cycle-2\\research-program-b-phase2\\REACTION_HIERARCHY.md",
+    "reaction_hierarchy_json": "11-research\\discovery-cycle-2\\research-program-b-phase2\\reaction_hierarchy.json",
+    "regime_decision_matrix_json": "11-research\\discovery-cycle-2\\research-program-b-phase2\\regime_decision_matrix.json",
+    "strategic_dependency_network_json": "11-research\\discovery-cycle-2\\research-program-b-phase2\\strategic_dependency_network.json",
+    "strategic_interaction_matrix": "11-research\\discovery-cycle-2\\research-program-b-phase2\\STRATEGIC_INTERACTION_MATRIX.md"
+  }
+}

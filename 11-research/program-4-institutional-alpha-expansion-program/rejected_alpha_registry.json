@@ -1,0 +1,7 @@
+[
+  {
+    "alpha_id": "IKROS-ALPHA-P4-0006",
+    "mechanism": "volatility_carry_shadow",
+    "reason": "Mechanism is too redundant with the approved safe-haven family and fails the scientific independence threshold."
+  }
+]

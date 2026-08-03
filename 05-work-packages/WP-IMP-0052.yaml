@@ -1,0 +1,159 @@
+schema_version: "WPS-1.0"
+work_package_id: "WP-IMP-0052"
+capability_id:
+  id: "ALPHA-RESEARCH"
+  version: "1.0"
+title: "Program 2 — Institutional Alpha Research Laboratory"
+status: "Completed"
+is_immutable: false
+
+governance:
+  target_subsystem: "RESEARCH"
+  traceability:
+    implements_req: ["NFR-029", "NFR-030", "NFR-031", "NFR-032"]
+    trace_sls: "AFRP-GEN2-WP0052-1.0.0"
+    trace_adr: ["ADR-0001", "ADR-IKROS-001", "ADR-IKROS-005"]
+    trace_vvc: "TVM-001"
+
+preconditions:
+  - predicate: "work_package.completed('WP-IMP-0051')"
+
+resources:
+  cpu: "medium"
+  memory: "2GB"
+  network: false
+  filesystem:
+    write:
+      - "tools/alpha_research/institutional_alpha_research_laboratory.py"
+      - "tools/alpha_research/program2_research_laboratory.py"
+      - "tests/unit/test_program2_institutional_alpha_research_laboratory.py"
+      - "11-research/program-2-institutional-alpha-research-laboratory/"
+      - "schemas/institutional-alpha-research-laboratory/"
+      - "data/ikros/graph/"
+      - "data/ikros/registries/research/"
+      - "data/ikros/registries/experiments/"
+      - "05-work-packages/WP-IMP-0052.yaml"
+    read:
+      - "11-research/program-1-institutional-alpha-factory/"
+      - "11-research/generation-2/wp-imp-0050-institutional-alpha-evidence-validation-engine/"
+      - "data/ikros/"
+      - "03-engineering/CAPABILITY_REGISTRY.yaml"
+      - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+execution:
+  priority: "high"
+  estimated_complexity: "large"
+  estimated_duration: "16h"
+  parallelizable: false
+  deterministic: true
+
+rollback:
+  strategy: "git_checkout_bounded_files"
+  restore_tag: "HEAD"
+
+inputs:
+  required_files:
+    - "11-research/program-1-institutional-alpha-factory/institutional_alpha_registry.json"
+    - "11-research/program-1-institutional-alpha-factory/replication_registry.json"
+    - "11-research/generation-2/wp-imp-0050-institutional-alpha-evidence-validation-engine/wp_imp_0050_evidence_validation_engine.json"
+    - "data/ikros/"
+    - "03-engineering/CAPABILITY_REGISTRY.yaml"
+    - "03-engineering/TRACEABILITY_MATRIX.yaml"
+
+outputs:
+  expected_source_files:
+    - "tools/alpha_research/institutional_alpha_research_laboratory.py"
+    - "tools/alpha_research/program2_research_laboratory.py"
+  expected_test_files:
+    - "tests/unit/test_program2_institutional_alpha_research_laboratory.py"
+  expected_documentation:
+    - "11-research/program-2-institutional-alpha-research-laboratory/"
+  expected_evidence:
+    - "11-research/program-2-institutional-alpha-research-laboratory/research_director.json"
+    - "11-research/program-2-institutional-alpha-research-laboratory/eig_engine.json"
+    - "11-research/program-2-institutional-alpha-research-laboratory/FINAL_REPORT.md"
+
+produces:
+  capability:
+    id: "ALPHA-RESEARCH"
+    version: "1.0"
+  unlocks: []
+
+scope:
+  bounded_files:
+    - "tools/alpha_research/institutional_alpha_research_laboratory.py"
+    - "tools/alpha_research/program2_research_laboratory.py"
+    - "tests/unit/test_program2_institutional_alpha_research_laboratory.py"
+    - "11-research/program-2-institutional-alpha-research-laboratory/"
+    - "schemas/institutional-alpha-research-laboratory/"
+    - "data/ikros/graph/"
+    - "data/ikros/registries/research/"
+    - "data/ikros/registries/experiments/"
+    - "05-work-packages/WP-IMP-0052.yaml"
+  non_goals:
+    - "No Runtime modifications."
+    - "No broker integration."
+    - "No portfolio construction."
+    - "No paper trading."
+    - "No live trading."
+    - "No alpha promotion without explicit ARB approval."
+    - "Do NOT begin Portfolio Intelligence."
+
+requirements:
+  research_laboratory_engine:
+    module: "tools/alpha_research/institutional_alpha_research_laboratory.py"
+    rules:
+      - "Part A: Autonomous Research Director produces priority registry, schedule, campaign queue, calendar, budget."
+      - "Part B: Experiment Designer generates experiments for all failed criteria using 6 experiment types."
+      - "Part C: Feature Evolution Engine detects aging features, generates interactions, proposes replacements."
+      - "Part D: Causal Refinement Engine identifies missing variables, weak links, counterfactuals."
+      - "Part E: Dataset Intelligence Engine evaluates gaps and estimates acquisition ROI."
+      - "Part F: EIG Engine produces Bayesian-ranked list of all experiments and dataset acquisitions."
+      - "Part G: Mechanism Evolution Engine tracks specialization, decomposition, mutation, lineage."
+      - "Part H: Knowledge Synthesis produces lessons, contradictions, evidence atlas, scientific principles."
+      - "Part I: Research Economics produces cost-benefit analysis and investment priority."
+      - "Part J: Autonomous Research Scheduler produces daily/weekly agendas and campaign plan."
+      - "Part K: 10 institutional dashboards."
+      - "Part L: IKROS extensions for all laboratory registries."
+      - "Part M: 9 JSON schemas."
+      - "Part N: Documentation."
+      - "Part O: 15+ tests."
+
+quality_gates:
+  ruff_lint:
+    required: true
+    command: "uv run ruff check ."
+  mypy_typecheck:
+    required: true
+    command: "uv run mypy --strict tools 06-runtime 07-research tests"
+  pytest:
+    required: true
+    command: "uv run pytest -q --tb=short"
+  afrp_validate:
+    required: true
+    command: "uv run afrp validate"
+  afrp_plan:
+    required: true
+    command: "uv run afrp plan"
+  afrp_health:
+    required: true
+    command: "uv run afrp health"
+  afrp_evidence:
+    required: true
+    command: "uv run afrp evidence --wp WP-IMP-0052"
+
+completion:
+  success_requires:
+    - "Complete Institutional Alpha Research Laboratory implemented with Parts A-O."
+    - "Autonomous Research Director produces research queue and campaign schedule."
+    - "EIG Engine produces ranked experiment list with Bayesian information gain estimates."
+    - "10 institutional dashboards produced."
+    - "9 JSON schemas emitted."
+    - "No alpha promoted; no portfolio construction; no live trading."
+    - "No Runtime behavior changed."
+
+failure_modes:
+  ERR-RUNTIME: "Any modification to Runtime or Engineering OS files is an automatic failure."
+  ERR-PORTFOLIO: "Any portfolio construction or trading logic constitutes an automatic failure."
+  ERR-NONDETERMINISTIC: "Laboratory outputs are nondeterministic across runs."
+  ERR-PROMOTION-BYPASS: "Any alpha promoted without satisfying all 10 promotion criteria."

@@ -1,0 +1,31 @@
+{
+  "approved_improvements": 5,
+  "campaign_id": "IKROS-RESEARCHCAMPAIGN-20260802-0058",
+  "graph_edges_created": 1,
+  "graph_nodes_created": 0,
+  "overall_scientific_health": 0.7519,
+  "program": "GENERATION_5_AUTONOMOUS_RESEARCH_ORGANIZATION_AND_SELF_EVOLUTION",
+  "report_paths": {
+    "autonomous_arb_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\autonomous_arb_registry.json",
+    "campaign_result": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\campaign_result.json",
+    "continuous_improvement_loop_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\continuous_improvement_loop_registry.json",
+    "executive_dashboards": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\executive_dashboards.json",
+    "final_report": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\FINAL_REPORT.md",
+    "improvement_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\improvement_registry.json",
+    "institutional_organization_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\institutional_organization_registry.json",
+    "meta_learning_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\meta_learning_registry.json",
+    "meta_research_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\meta_research_registry.json",
+    "organizational_memory_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\organizational_memory_registry.json",
+    "productivity_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\productivity_registry.json",
+    "roadmap_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\roadmap_registry.json",
+    "schema:executive-review.schema.json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\schemas\\institutional-meta-research-organization\\executive-review.schema.json",
+    "schema:improvement-plan.schema.json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\schemas\\institutional-meta-research-organization\\improvement-plan.schema.json",
+    "schema:institutional-playbook.schema.json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\schemas\\institutional-meta-research-organization\\institutional-playbook.schema.json",
+    "schema:meta-research.schema.json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\schemas\\institutional-meta-research-organization\\meta-research.schema.json",
+    "schema:organizational-review.schema.json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\schemas\\institutional-meta-research-organization\\organizational-review.schema.json",
+    "schema:roadmap.schema.json": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\schemas\\institutional-meta-research-organization\\roadmap.schema.json",
+    "self_evaluation_registry": "C:\\Users\\mm01r\\copilot-worktrees\\autonomous-financial-reasoning-platform\\mm01rahman-didactic-meme\\11-research\\generation-5-autonomous-research-organization-self-evolution\\self_evaluation_registry.json"
+  },
+  "research_roi": 0.8258,
+  "top_priority_improvement": "IMP-004"
+}

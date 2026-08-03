@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "category": {
+      "type": "string"
+    },
+    "expected_cost": {
+      "type": "number"
+    },
+    "expected_value": {
+      "type": "number"
+    },
+    "improvement_id": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "improvement_id",
+    "category",
+    "priority",
+    "expected_value",
+    "expected_cost"
+  ],
+  "title": "Improvement Plan",
+  "type": "object"
+}
