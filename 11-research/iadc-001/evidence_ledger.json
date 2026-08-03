@@ -1,0 +1,81 @@
+{
+  "campaign_id": "IADC-001",
+  "dataset_checksums": [
+    {
+      "path": "C:\\Users\\mm01r\\AFRP-Datasets\\processed\\xauusd\\xauusd_1d.parquet",
+      "rows": 6502,
+      "sha256": "2ca8e145c58bba468c4ab24f75c2de6d4e1221d3ff392ec935fa156bafba8f96"
+    },
+    {
+      "path": "C:\\Users\\mm01r\\AFRP-Datasets\\processed\\dxy\\dxy_1d.parquet",
+      "rows": 14112,
+      "sha256": "8488ac25a23b3394afa0d102d79c669fbe05ed70567715fa08044714b193fc2e"
+    },
+    {
+      "path": "C:\\Users\\mm01r\\AFRP-Datasets\\processed\\yields\\yields_daily.parquet",
+      "rows": 16629,
+      "sha256": "832c04e688e9761460d8fa549c3111145ece8df49d2f5df47907859582c36623"
+    },
+    {
+      "path": "C:\\Users\\mm01r\\AFRP-Datasets\\processed\\economic_calendar\\economic_calendar.parquet",
+      "rows": 16629,
+      "sha256": "873471705051ff000e2682dcd9c0424fed5cf4b305a05f8a1ad0b14fd5d4c545"
+    },
+    {
+      "path": "C:\\Users\\mm01r\\AFRP-Datasets\\processed\\geopolitical\\geopolitical_events.parquet",
+      "rows": 12,
+      "sha256": "e393669ae74af2f471cd0ca715a1d5802462255e03afdc09b780e88ac3d131d3"
+    }
+  ],
+  "generated_at": "2026-08-03T03:32:07.301830+00:00",
+  "git_head": "11bc7595e7a0672c87a32bf0b1d28100e01c7e11",
+  "limitations": [
+    {
+      "available": "six-row fixture only",
+      "decision": "BLOCKED_BY_DATA",
+      "domain": "real yields",
+      "required": "historical TIPS real-yield curve"
+    },
+    {
+      "available": "not present",
+      "decision": "BLOCKED_BY_DATA",
+      "domain": "inflation surprise",
+      "required": "CPI/Core CPI/PCE releases, consensus, and vintages"
+    },
+    {
+      "available": "daily short-rate proxy only",
+      "decision": "BLOCKED_BY_DATA",
+      "domain": "FOMC event studies",
+      "required": "meeting/statement timestamps and expectation surprises"
+    },
+    {
+      "available": "four-to-six-row fixtures only",
+      "decision": "BLOCKED_BY_DATA",
+      "domain": "institutional positioning and ETF transmission",
+      "required": "multi-cycle CFTC and ETF holdings histories"
+    },
+    {
+      "available": "observational daily time series",
+      "decision": "NOT_ESTABLISHED",
+      "domain": "causal identification",
+      "required": "valid instruments, natural experiments, or identified structural model"
+    }
+  ],
+  "methods": [
+    "pre-specified hypothesis grid and expected direction",
+    "lag and horizon grid",
+    "regime conditioning",
+    "Fisher correlation test",
+    "Benjamini-Hochberg false-discovery control",
+    "early/late temporal stability",
+    "moving-block bootstrap",
+    "circular-shift permutation placebo",
+    "interaction ablation"
+  ],
+  "sample": {
+    "end": "2026-07-02 04:00:00+00:00",
+    "rows": 6242,
+    "start": "2001-08-15 04:00:00+00:00"
+  },
+  "seed": 42
+}

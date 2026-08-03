@@ -1,0 +1,30 @@
+[
+  {
+    "after_multiple_testing": 0.999751,
+    "causal_discount_applied": true,
+    "final": 0.75,
+    "mechanism_id": "IADC-MECH-001",
+    "prior": 0.5
+  },
+  {
+    "after_multiple_testing": 0.999957,
+    "causal_discount_applied": true,
+    "final": 0.75,
+    "mechanism_id": "IADC-MECH-002",
+    "prior": 0.5
+  },
+  {
+    "after_multiple_testing": 1.0,
+    "causal_discount_applied": true,
+    "final": 0.5,
+    "mechanism_id": "IADC-MECH-003",
+    "prior": 0.5
+  },
+  {
+    "after_multiple_testing": 0.997007,
+    "causal_discount_applied": true,
+    "final": 0.75,
+    "mechanism_id": "IADC-MECH-004",
+    "prior": 0.5
+  }
+]

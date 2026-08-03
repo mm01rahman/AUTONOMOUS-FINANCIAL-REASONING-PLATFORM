@@ -1,0 +1,80 @@
+{
+  "campaign_id": "IADC-003",
+  "narratives": [
+    {
+      "alternatives": [
+        "A rotated covariance mode rather than a discrete institutional mechanism.",
+        "Common response to omitted macro news or market microstructure shocks.",
+        "Rights-restricted series may disproportionately shape this pole."
+      ],
+      "failure_modes": [
+        "Loading drift across chronological folds.",
+        "Episode definition sensitivity near the activation threshold.",
+        "Sparse weekly positioning releases are represented as release-time innovations.",
+        "Forward XAU association can reverse by regime and is not causal."
+      ],
+      "narrative": "Etf Positioning / Gold Volatility positive pole is retrospectively classified when gld_holdings_change increase, gvz_return increase, real_yield_10y_change decrease co-occur persistently. It recurred in [1, 2, 3, 4]; its subsequent-XAU evidence is descriptive, not predictive.",
+      "process_id": "IADC003-P01-POS"
+    },
+    {
+      "alternatives": [
+        "A rotated covariance mode rather than a discrete institutional mechanism.",
+        "Common response to omitted macro news or market microstructure shocks.",
+        "Rights-restricted series may disproportionately shape this pole."
+      ],
+      "failure_modes": [
+        "Loading drift across chronological folds.",
+        "Episode definition sensitivity near the activation threshold.",
+        "Sparse weekly positioning releases are represented as release-time innovations.",
+        "Forward XAU association can reverse by regime and is not causal."
+      ],
+      "narrative": "Etf Positioning / Gold Volatility inverse pole is retrospectively classified when gld_holdings_change decrease, gvz_return decrease, real_yield_10y_change increase co-occur persistently. It recurred in [1, 2, 3, 4]; its subsequent-XAU evidence is descriptive, not predictive.",
+      "process_id": "IADC003-P01-NEG"
+    },
+    {
+      "alternatives": [
+        "A rotated covariance mode rather than a discrete institutional mechanism.",
+        "Common response to omitted macro news or market microstructure shocks.",
+        "Rights-restricted series may disproportionately shape this pole."
+      ],
+      "failure_modes": [
+        "Loading drift across chronological folds.",
+        "Episode definition sensitivity near the activation threshold.",
+        "Sparse weekly positioning releases are represented as release-time innovations.",
+        "Forward XAU association can reverse by regime and is not causal."
+      ],
+      "narrative": "Usd Fx / Cross Asset Fx inverse pole is retrospectively classified when dxy_return decrease, eurusd_return increase, usdjpy_return decrease co-occur persistently. It recurred in [1, 2, 3, 4]; its subsequent-XAU evidence is descriptive, not predictive.",
+      "process_id": "IADC003-P03-NEG"
+    },
+    {
+      "alternatives": [
+        "A rotated covariance mode rather than a discrete institutional mechanism.",
+        "Common response to omitted macro news or market microstructure shocks.",
+        "Rights-restricted series may disproportionately shape this pole."
+      ],
+      "failure_modes": [
+        "Loading drift across chronological folds.",
+        "Episode definition sensitivity near the activation threshold.",
+        "Sparse weekly positioning releases are represented as release-time innovations.",
+        "Forward XAU association can reverse by regime and is not causal."
+      ],
+      "narrative": "Cross Asset Volatility / Gold Volatility positive pole is retrospectively classified when vix_return increase, gvz_return increase, usdjpy_return decrease co-occur persistently. It recurred in [1, 2, 3, 4]; its subsequent-XAU evidence is descriptive, not predictive.",
+      "process_id": "IADC003-P04-POS"
+    },
+    {
+      "alternatives": [
+        "A rotated covariance mode rather than a discrete institutional mechanism.",
+        "Common response to omitted macro news or market microstructure shocks.",
+        "Rights-restricted series may disproportionately shape this pole."
+      ],
+      "failure_modes": [
+        "Loading drift across chronological folds.",
+        "Episode definition sensitivity near the activation threshold.",
+        "Sparse weekly positioning releases are represented as release-time innovations.",
+        "Forward XAU association can reverse by regime and is not causal."
+      ],
+      "narrative": "Real Yields / Nominal Yields positive pole is retrospectively classified when real_yield_10y_change increase, yield_2y_change increase, yield_10y_change increase co-occur persistently. It recurred in [1, 2, 3, 4]; its subsequent-XAU evidence is descriptive, not predictive.",
+      "process_id": "IADC003-P05-POS"
+    }
+  ]
+}

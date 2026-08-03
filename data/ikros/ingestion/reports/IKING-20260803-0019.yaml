@@ -1,0 +1,78 @@
+graph_node_ids:
+- IKROS-EVIDENCE-20260803-0904
+- IKROS-KO-20260803-0905
+- IKROS-KO-20260803-0906
+- IKROS-CONCL-20260803-0904
+ingested_at: '2026-08-03T11:31:41.313357+00:00'
+ingestion_id: IKING-20260803-0019
+memory_ids:
+- IKMEM-T1-20260803-0004
+- IKMEM-T2-20260803-0006
+- IKMEM-T2-20260803-0007
+- IKMEM-T4-20260803-0004
+object_fingerprints:
+- '{"attributes": {"bh_cross_process_transitions": 0, "bh_process_alpha_edges": 0,
+  "bounded_conclusion": "Latent processes do not explain XAU/USD more consistently
+  out of sample than the training-selected isolated-variable benchmark.", "campaign_id":
+  "IADC-003", "candidate_factors": 5, "causal_claims": 0, "causal_promotions": 0,
+  "retained_factors": 4, "retained_processes": 5, "retrospective_persistence_confirmed_episodes":
+  201, "supported_overlaps": 2, "trading_outputs": 0, "trading_rules": 0}, "capability_refs":
+  [], "confidence": 0.79, "created_at": "2026-08-03T11:31:39.865357+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/iadc-003/evidence_ledger.json", "11-research/iadc-003/hidden_process_validation_report.json"],
+  "identifier": "IKROS-EVIDENCE-20260803-0904", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "Evidence", "relationships": [], "source_format": "JSON", "source_ids":
+  [], "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "11-research\\iadc-003\\ikros_ingestion.json",
+  "specification_refs": ["SPEC-060"], "summary": "Governed evidence for bounded retrospective
+  latent-process discovery; no process alpha or causal promotion.", "title": "IADC-003
+  governed latent-process discovery evidence", "version": "1.0.0", "work_package_refs":
+  []}'
+- '{"attributes": {"campaign_id": "IADC-003", "causal_claims": 0, "observable_signatures":
+  18, "real_time_state": false, "retained_processes": 5, "retrospective_persistence_confirmed_episodes":
+  201, "trading_rules": 0}, "capability_refs": [], "confidence": 0.74, "created_at":
+  "2026-08-03T11:31:39.865357+00:00", "dependency_ids": [], "evidence_refs": ["11-research/iadc-003/hidden_process_registry.json",
+  "11-research/iadc-003/observable_signature_registry.json"], "identifier": "IKROS-KO-20260803-0905",
+  "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type": "KnowledgeObject",
+  "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-EVIDENCE-20260803-0904"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "11-research\\iadc-003\\ikros_ingestion.json",
+  "specification_refs": ["SPEC-060"], "summary": "Retrospective hidden-process registry
+  and conservative-availability observable signatures.", "title": "IADC-003 retrospective
+  hidden-process registry", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"bh_cross_process_transitions": 0, "campaign_id": "IADC-003", "causal_claims":
+  0, "descriptive_lifecycle_count": 201, "examined_cross_process_transitions": 80,
+  "examined_interactions": 9, "ontology_parent_count": 4, "supported_overlaps": 2,
+  "trading_outputs": 0}, "capability_refs": [], "confidence": 0.72, "created_at":
+  "2026-08-03T11:31:39.865357+00:00", "dependency_ids": [], "evidence_refs": ["11-research/iadc-003/behavioural_sequence_atlas.json",
+  "11-research/iadc-003/process_interaction_network.json", "11-research/iadc-003/process_ontology.json"],
+  "identifier": "IKROS-KO-20260803-0906", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-EVIDENCE-20260803-0904"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "11-research\\iadc-003\\ikros_ingestion.json", "specification_refs":
+  ["SPEC-060"], "summary": "Bounded process ontology with supported overlaps, exact-null
+  transitions, and descriptive lifecycles.", "title": "IADC-003 process ontology and
+  relational evidence", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"campaign_id": "IADC-003", "causal_claims": 0, "causal_promotions":
+  0, "cross_process_transition_edges": 0, "decision": "RETROSPECTIVE_STRUCTURE_FORWARD_ALPHA_UNSUPPORTED",
+  "process_alpha_edges": 0, "supported_overlaps": 2, "trading_outputs": 0, "trading_rules":
+  0}, "capability_refs": [], "confidence": 0.72, "created_at": "2026-08-03T11:31:39.865357+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/iadc-003/EXECUTIVE_SCIENTIFIC_REPORT.md",
+  "11-research/iadc-003/process_xau_evidence_registry.json"], "identifier": "IKROS-CONCL-20260803-0904",
+  "lifecycle_state": "PUBLISHED", "memory_tier": null, "object_type": "ResearchConclusion",
+  "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-EVIDENCE-20260803-0904",
+  "IKROS-KO-20260803-0905", "IKROS-KO-20260803-0906"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "11-research\\iadc-003\\ikros_ingestion.json", "specification_refs":
+  ["SPEC-060"], "summary": "Latent processes do not explain XAU/USD more consistently
+  out of sample than the training-selected isolated-variable benchmark. No retrospective
+  process alpha edge survives BH.", "title": "IADC-003 institutional latent-process
+  conclusion", "version": "1.0.0", "work_package_refs": []}'
+object_ids:
+- IKROS-EVIDENCE-20260803-0904
+- IKROS-KO-20260803-0905
+- IKROS-KO-20260803-0906
+- IKROS-CONCL-20260803-0904
+source_format: JSON
+source_hash: d9a43fc55c6afbc11c913e4ef409d6748269285d17b6c0ae6e274f82d870e015
+source_kind: INTERNAL_RESEARCH_REPORT
+source_ref: 11-research\iadc-003\ikros_ingestion.json
+source_version: 1.0.0
+status: INGESTED
+warnings: []

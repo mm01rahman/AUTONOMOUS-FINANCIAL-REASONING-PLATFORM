@@ -1,0 +1,301 @@
+{
+  "campaign_id": "IADC-003",
+  "causal_boundary": "No identification design was executed; all causal confidence fields are null.",
+  "determinism": {
+    "chronological_folds": 4,
+    "embargo_sessions": 5,
+    "fixed_threshold": 1.25,
+    "forward_horizon_sessions": 5,
+    "maximum_factors": 8,
+    "merge_gap_sessions": 0,
+    "minimum_persistence_sessions": 3,
+    "parallel_analysis_draws": 200,
+    "permutation_draws": 1000,
+    "random_seed": 20260803
+  },
+  "excluded_fields": [
+    {
+      "fields": [
+        "CPIAUCSL",
+        "CPILFESL",
+        "PCEPI",
+        "PCEPILFE"
+      ],
+      "reason": "Observation dates are not evidenced release timestamps or vintages; excluded rather than treated as point-in-time safe."
+    },
+    {
+      "fields": [
+        "GLD raw and normalized observations"
+      ],
+      "reason": "Workbook prohibits reproduction/redistribution; only aggregate factor statistics and episode summaries are emitted."
+    },
+    {
+      "fields": [
+        "VIXCLS raw observations",
+        "GVZCLS raw observations"
+      ],
+      "reason": "Rights review unresolved; only aggregate factor statistics and episode summaries are emitted."
+    },
+    {
+      "fields": [
+        "intraday sequencing",
+        "consensus surprises",
+        "futures-implied expectations"
+      ],
+      "reason": "No governed evidence with defensible historical availability is available."
+    }
+  ],
+  "generated_at": "2026-08-03T10:55:08Z",
+  "method": {
+    "availability_handling": "SOFR-minus-DFF innovations are neutral-zero coded before SOFR inception rather than imputed as observations; DFF and weekly CFTC open interest provide full-window policy/liquidity coverage.",
+    "domain_balance": "each standardized variable weighted by inverse square root of its domain signature count",
+    "edge_inference": "retrospective descriptive subsequent-outcome association from nonoverlapping persistence-confirmed episode onsets; not OOS or predictive alpha evidence",
+    "episodes": "retrospectively estimated from a full-sample PCA/rotation basis; persistence confirmed on the third consecutive threshold hit with no onset backfill or inactive-gap inclusion",
+    "factor_extraction": "eigendecomposition of robust standardized covariance matrix",
+    "factor_selection": "95th-percentile deterministic parallel analysis using independent within-column permutations",
+    "multiple_testing": "Benjamini-Hochberg correction separately across all retained-process XAU edges, examined transition edges, and examined interaction edges",
+    "retrospective_representation_boundary": "The atlas factor basis uses full-sample covariance and rotation. Atlas episodes are retrospective descriptive states, unsuitable as real-time or predictive states. Only the separate walk-forward benchmark refits its basis within each training fold.",
+    "rotation": "orthogonal varimax with deterministic sign and ordering",
+    "standardization": "median/MAD robust z-score, fallback standard deviation, clipped to +/-8",
+    "validation": "four leave-chronological-block-out training models with exact optimal Tucker assignment; three purged and embargoed expanding walk-forward folds"
+  },
+  "process_frame": {
+    "availability_label": "conservative next-session availability convention",
+    "end": "2026-07-30",
+    "point_in_time_warning": "Observation-date rows without historical release timestamps or vintages do not establish point-in-time safety.",
+    "sessions": 4562,
+    "start": "2008-06-05",
+    "variable_registry": [
+      {
+        "analysis_only": false,
+        "domain": "real_yields",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-DFII10",
+        "transformation": "difference_bp",
+        "variable": "real_yield_10y_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "inflation_expectations",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-T5YIE",
+        "transformation": "difference_bp",
+        "variable": "breakeven_5y_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "inflation_expectations",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-T10YIE",
+        "transformation": "difference_bp",
+        "variable": "breakeven_10y_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "nominal_yields",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-DGS2",
+        "transformation": "difference_bp",
+        "variable": "yield_2y_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "nominal_yields",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-DGS10",
+        "transformation": "difference_bp",
+        "variable": "yield_10y_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "nominal_yields",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-DGS30",
+        "transformation": "difference_bp",
+        "variable": "yield_30y_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "policy",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-DFF",
+        "transformation": "difference_bp",
+        "variable": "policy_rate_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "policy_liquidity",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "derived:SOFR-DFF",
+        "transformation": "difference_bp",
+        "variable": "sofr_policy_spread_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "usd_fx",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "official:DXY-1D",
+        "transformation": "log_return",
+        "variable": "dxy_return"
+      },
+      {
+        "analysis_only": false,
+        "domain": "cross_asset_fx",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-DEXUSEU",
+        "transformation": "log_return",
+        "variable": "eurusd_return"
+      },
+      {
+        "analysis_only": false,
+        "domain": "cross_asset_fx",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-DEXJPUS",
+        "transformation": "log_return",
+        "variable": "usdjpy_return"
+      },
+      {
+        "analysis_only": false,
+        "domain": "commodity",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-DCOILWTICO",
+        "transformation": "log_return",
+        "variable": "wti_return"
+      },
+      {
+        "analysis_only": true,
+        "domain": "cross_asset_volatility",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-VIXCLS",
+        "transformation": "log_return",
+        "variable": "vix_return"
+      },
+      {
+        "analysis_only": true,
+        "domain": "gold_volatility",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-GVZCLS",
+        "transformation": "log_return",
+        "variable": "gvz_return"
+      },
+      {
+        "analysis_only": true,
+        "domain": "etf_positioning",
+        "observability_rule": "conservative convention: observation-date/end-of-day value shifted to next XAU session",
+        "source": "IADC002-GLD-HISTORY",
+        "transformation": "log_return",
+        "variable": "gld_holdings_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "institutional_positioning",
+        "observability_rule": "Tuesday position mapped to first XAU session strictly after Friday",
+        "source": "IADC002-CFTC-COMEX-GOLD",
+        "transformation": "difference",
+        "variable": "managed_money_share_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "institutional_positioning",
+        "observability_rule": "Tuesday position mapped to first XAU session strictly after Friday",
+        "source": "IADC002-CFTC-COMEX-GOLD",
+        "transformation": "difference",
+        "variable": "producer_share_change"
+      },
+      {
+        "analysis_only": false,
+        "domain": "market_liquidity_proxy",
+        "observability_rule": "Tuesday position mapped to first XAU session strictly after Friday",
+        "source": "IADC002-CFTC-COMEX-GOLD",
+        "transformation": "log_return",
+        "variable": "cftc_open_interest_change"
+      }
+    ],
+    "variables": 18
+  },
+  "representation_diagnostics": {
+    "curve_sensitivity": {
+      "column_count": 18,
+      "covariance_condition_number": 4646.41389284,
+      "definition": "breakeven and nominal-yield constituents replaced by level-plus-curve coordinates",
+      "full_column_rank": true,
+      "rank": 18,
+      "selected_factor_count": 5,
+      "variables": [
+        "real_yield_10y_change",
+        "breakeven_10y_change",
+        "breakeven_curve_change",
+        "yield_10y_change",
+        "curve_10y2y_change",
+        "curve_30y10y_change",
+        "policy_rate_change",
+        "sofr_policy_spread_change",
+        "dxy_return",
+        "eurusd_return",
+        "usdjpy_return",
+        "wti_return",
+        "vix_return",
+        "gvz_return",
+        "gld_holdings_change",
+        "managed_money_share_change",
+        "producer_share_change",
+        "cftc_open_interest_change"
+      ]
+    },
+    "mean_score_subspace_congruence": 0.94751711,
+    "primary": {
+      "column_count": 18,
+      "covariance_condition_number": 8031.99285332,
+      "definition": "18 nonredundant base signatures; no exact derived curves alongside their constituents",
+      "full_column_rank": true,
+      "rank": 18,
+      "variables": [
+        "real_yield_10y_change",
+        "breakeven_5y_change",
+        "breakeven_10y_change",
+        "yield_2y_change",
+        "yield_10y_change",
+        "yield_30y_change",
+        "policy_rate_change",
+        "sofr_policy_spread_change",
+        "dxy_return",
+        "eurusd_return",
+        "usdjpy_return",
+        "wti_return",
+        "vix_return",
+        "gvz_return",
+        "gld_holdings_change",
+        "managed_money_share_change",
+        "producer_share_change",
+        "cftc_open_interest_change"
+      ]
+    },
+    "score_subspace_singular_congruences": [
+      0.99999855,
+      0.99640669,
+      0.99088411,
+      0.96407113,
+      0.78622507
+    ]
+  },
+  "rights_boundary": "No restricted source rows or normalized restricted observations are persisted.",
+  "source_checksums_sha256": {
+    "GVZCLS.csv_analysis_only": "9c453cae43da270ea6b04c0a7798e17874165612bffdbd60319afee3ecb4e454",
+    "IADC002-CFTC-COMEX-GOLD.csv": "1168d03cb9eefc38d268d195c70b86d7f5ea400df777bb9d7f3c1275b1e00401",
+    "IADC002-DCOILWTICO.csv": "482803cd0bd0343517d690abbf790aec9284e984eb08734013ff0ae2f538e030",
+    "IADC002-DEXJPUS.csv": "77c3b6cd5ad7474dc2fcf8054ad3352faf2f97229f12ee018a9a42c1fadf8ab0",
+    "IADC002-DEXUSEU.csv": "9d8866ba056f83260923c05769412f4dc80f1743794a93d6d2a752ae73e87e61",
+    "IADC002-DFF.csv": "3c413578f8c6833af98ce875166df4f78a89ec677d5e12c0c96033f4b986fcc2",
+    "IADC002-DFII10.csv": "91cb857bf7cca4adcdc46adc792ab33481fa4c8a2ba1db450ff5edb5b997c144",
+    "IADC002-DGS10.csv": "0ef7520d415182489f1bf81e6eab0f0e2e05adf854a383f864a027b92642ab51",
+    "IADC002-DGS2.csv": "5da263f96bb4bbfc0be938a5ef8da6e3515904059316a30369ce6f3a7b21e397",
+    "IADC002-DGS30.csv": "b0d438006750fbef70c54a0e9dcfd053fda2db8c6e4969373f125bdbc31389f5",
+    "IADC002-SOFR.csv": "1e3a3d94070e6595c2fa8cf3a3196a2e6fcf5f77c725494a730fe290ab0b8771",
+    "IADC002-T10YIE.csv": "514d093261c0ad28fd50d88a0e470a15f5b9716a2d4027946beefc489ebdd7dc",
+    "IADC002-T5YIE.csv": "bd83d483771045a3ae68255151938e43f476fb27800e5089615b9a0359052e5c",
+    "VIXCLS.csv_analysis_only": "d38d5b393cc65b841bb240d5efc0755ce5ae2c658039fb3820a47ca7e07a4d40",
+    "dxy_1d.parquet": "8488ac25a23b3394afa0d102d79c669fbe05ed70567715fa08044714b193fc2e",
+    "gld_history.xlsx_analysis_only": "aa5b0fd8bc002703e44853f175c175207c4f940033df129cd95d27245be1894c",
+    "xauusd_1d.parquet": "2ca8e145c58bba468c4ab24f75c2de6d4e1221d3ff392ec935fa156bafba8f96"
+  }
+}

@@ -1,0 +1,680 @@
+[
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_5",
+    "expanded_control_test": {
+      "p_value": 0.7687603293,
+      "partial_correlation": 0.00762899,
+      "sample_size": 1487
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.11195518,
+      "early_correlation": -0.12140374,
+      "late_correlation": -0.11413002,
+      "p_value": 2.4892e-06,
+      "sample_size": 1749
+    },
+    "horizon_days": 5,
+    "lag_days": 20,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-016",
+    "original_reported_correlation": -0.112204,
+    "regime": "policy_easing",
+    "source_hypothesis_id": "IADC-HYP-0662",
+    "status": "LIKELY_CONFOUNDED_OR_UNSTABLE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_5",
+    "expanded_control_test": {
+      "p_value": 0.5804240865,
+      "partial_correlation": -0.02228412,
+      "sample_size": 617
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.10368111,
+      "early_correlation": -0.10303636,
+      "late_correlation": -0.1060077,
+      "p_value": 0.0080124868,
+      "sample_size": 649
+    },
+    "horizon_days": 5,
+    "lag_days": 20,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-017",
+    "original_reported_correlation": -0.187601,
+    "regime": "market_stress",
+    "source_hypothesis_id": "IADC-HYP-0666",
+    "status": "WEAKENED_REQUIRES_MORE_EVIDENCE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_5",
+    "expanded_control_test": {
+      "p_value": 0.2292395653,
+      "partial_correlation": -0.04842534,
+      "sample_size": 617
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.14175234,
+      "early_correlation": -0.18236539,
+      "late_correlation": -0.08167982,
+      "p_value": 0.0002700862,
+      "sample_size": 649
+    },
+    "horizon_days": 1,
+    "lag_days": 20,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-014",
+    "original_reported_correlation": -0.137844,
+    "regime": "market_stress",
+    "source_hypothesis_id": "IADC-HYP-0657",
+    "status": "WEAKENED_REQUIRES_MORE_EVIDENCE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_1",
+    "expanded_control_test": {
+      "p_value": 0.4412724184,
+      "partial_correlation": -0.03103631,
+      "sample_size": 617
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.14902729,
+      "early_correlation": -0.17743187,
+      "late_correlation": -0.10611195,
+      "p_value": 0.0001263351,
+      "sample_size": 649
+    },
+    "horizon_days": 5,
+    "lag_days": 20,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-008",
+    "original_reported_correlation": -0.140562,
+    "regime": "market_stress",
+    "source_hypothesis_id": "IADC-HYP-0531",
+    "status": "WEAKENED_REQUIRES_MORE_EVIDENCE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "dxy_return_1",
+    "expanded_control_test": {
+      "p_value": 0.002810391,
+      "partial_correlation": -0.11961276,
+      "sample_size": 617
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.11054324,
+      "early_correlation": -0.12854694,
+      "late_correlation": -0.08207813,
+      "p_value": 0.0046673528,
+      "sample_size": 649
+    },
+    "horizon_days": 1,
+    "lag_days": 0,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-003",
+    "original_reported_correlation": -0.116315,
+    "regime": "market_stress",
+    "source_hypothesis_id": "IADC-HYP-0009",
+    "status": "ROBUST_TO_EXPANDED_CONTROLS"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "dxy_return_1",
+    "expanded_control_test": {
+      "p_value": 3.38196e-05,
+      "partial_correlation": -0.09763788,
+      "sample_size": 1788
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.08888687,
+      "early_correlation": -0.11604308,
+      "late_correlation": -0.04392606,
+      "p_value": 8.36631e-05,
+      "sample_size": 1945
+    },
+    "horizon_days": 1,
+    "lag_days": 0,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-002",
+    "original_reported_correlation": -0.088288,
+    "regime": "usd_strength",
+    "source_hypothesis_id": "IADC-HYP-0006",
+    "status": "ROBUST_TO_EXPANDED_CONTROLS"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "dxy_return_1",
+    "expanded_control_test": {
+      "p_value": 0.0009041505,
+      "partial_correlation": -0.07747425,
+      "sample_size": 1826
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.07698434,
+      "early_correlation": -0.05509159,
+      "late_correlation": -0.10311982,
+      "p_value": 0.0006913077,
+      "sample_size": 1933
+    },
+    "horizon_days": 1,
+    "lag_days": 10,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-004",
+    "original_reported_correlation": -0.076224,
+    "regime": "gold_bull",
+    "source_hypothesis_id": "IADC-HYP-0083",
+    "status": "ROBUST_TO_EXPANDED_CONTROLS"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_5",
+    "expanded_control_test": {
+      "p_value": 0.0354628445,
+      "partial_correlation": -0.02739676,
+      "sample_size": 5890
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.05137906,
+      "early_correlation": -0.04093211,
+      "late_correlation": -0.06536436,
+      "p_value": 3.50029e-05,
+      "sample_size": 6472
+    },
+    "horizon_days": 5,
+    "lag_days": 20,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-015",
+    "original_reported_correlation": -0.062943,
+    "regime": "all",
+    "source_hypothesis_id": "IADC-HYP-0658",
+    "status": "WEAKENED_REQUIRES_MORE_EVIDENCE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "dxy_return_1",
+    "expanded_control_test": {
+      "p_value": 3.57498e-05,
+      "partial_correlation": -0.05366152,
+      "sample_size": 5918
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.0478358,
+      "early_correlation": -0.0565881,
+      "late_correlation": -0.03494409,
+      "p_value": 0.0001131685,
+      "sample_size": 6500
+    },
+    "horizon_days": 1,
+    "lag_days": 0,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-001",
+    "original_reported_correlation": -0.047456,
+    "regime": "all",
+    "source_hypothesis_id": "IADC-HYP-0001",
+    "status": "ROBUST_TO_EXPANDED_CONTROLS"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_5",
+    "expanded_control_test": {
+      "p_value": 0.1814963307,
+      "partial_correlation": 0.03127046,
+      "sample_size": 1826
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.08908393,
+      "early_correlation": -0.10673447,
+      "late_correlation": -0.05002795,
+      "p_value": 8.66712e-05,
+      "sample_size": 1928
+    },
+    "horizon_days": 5,
+    "lag_days": 1,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-011",
+    "original_reported_correlation": -0.091719,
+    "regime": "gold_bear",
+    "source_hypothesis_id": "IADC-HYP-0579",
+    "status": "LIKELY_CONFOUNDED_OR_UNSTABLE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_5",
+    "expanded_control_test": {
+      "p_value": 0.3933976782,
+      "partial_correlation": -0.02006238,
+      "sample_size": 1811
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.07090289,
+      "early_correlation": -0.07885907,
+      "late_correlation": -0.0485787,
+      "p_value": 0.0018877947,
+      "sample_size": 1913
+    },
+    "horizon_days": 20,
+    "lag_days": 5,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-013",
+    "original_reported_correlation": -0.092533,
+    "regime": "gold_bear",
+    "source_hypothesis_id": "IADC-HYP-0615",
+    "status": "WEAKENED_REQUIRES_MORE_EVIDENCE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_1",
+    "expanded_control_test": {
+      "p_value": 0.1594368045,
+      "partial_correlation": -0.01828932,
+      "sample_size": 5918
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.01266553,
+      "early_correlation": -0.01808447,
+      "late_correlation": -0.00490192,
+      "p_value": 0.3072294983,
+      "sample_size": 6500
+    },
+    "horizon_days": 1,
+    "lag_days": 0,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-005",
+    "original_reported_correlation": -0.043201,
+    "regime": "all",
+    "source_hypothesis_id": "IADC-HYP-0406",
+    "status": "LIKELY_CONFOUNDED_OR_UNSTABLE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "curve_change_5",
+    "expanded_control_test": {
+      "p_value": 0.0001751245,
+      "partial_correlation": 0.04880262,
+      "sample_size": 5900
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": 0.0245537,
+      "early_correlation": 0.01149365,
+      "late_correlation": 0.04454205,
+      "p_value": 0.0480268294,
+      "sample_size": 6482
+    },
+    "horizon_days": 5,
+    "lag_days": 10,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-021",
+    "original_reported_correlation": 0.057786,
+    "regime": "all",
+    "source_hypothesis_id": "IADC-HYP-0901",
+    "status": "ROBUST_TO_EXPANDED_CONTROLS"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_1",
+    "expanded_control_test": {
+      "p_value": 0.9533785399,
+      "partial_correlation": -0.00151106,
+      "sample_size": 1499
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.08307295,
+      "early_correlation": -0.11927327,
+      "late_correlation": -0.03531694,
+      "p_value": 0.0004844022,
+      "sample_size": 1754
+    },
+    "horizon_days": 1,
+    "lag_days": 0,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-006",
+    "original_reported_correlation": -0.079936,
+    "regime": "policy_easing",
+    "source_hypothesis_id": "IADC-HYP-0410",
+    "status": "LIKELY_CONFOUNDED_OR_UNSTABLE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_5",
+    "expanded_control_test": {
+      "p_value": 0.0610363592,
+      "partial_correlation": 0.04381893,
+      "sample_size": 1826
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.09250488,
+      "early_correlation": -0.11281031,
+      "late_correlation": -0.04753213,
+      "p_value": 4.5587e-05,
+      "sample_size": 1928
+    },
+    "horizon_days": 5,
+    "lag_days": 0,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-009",
+    "original_reported_correlation": -0.095746,
+    "regime": "gold_bear",
+    "source_hypothesis_id": "IADC-HYP-0552",
+    "status": "LIKELY_CONFOUNDED_OR_UNSTABLE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_5",
+    "expanded_control_test": {
+      "p_value": 0.7252981508,
+      "partial_correlation": -0.00821831,
+      "sample_size": 1830
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.04844699,
+      "early_correlation": -0.06876584,
+      "late_correlation": -0.00717744,
+      "p_value": 0.0331003454,
+      "sample_size": 1932
+    },
+    "horizon_days": 1,
+    "lag_days": 5,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-012",
+    "original_reported_correlation": -0.063542,
+    "regime": "gold_bear",
+    "source_hypothesis_id": "IADC-HYP-0597",
+    "status": "LIKELY_CONFOUNDED_OR_UNSTABLE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "curve_change_5",
+    "expanded_control_test": {
+      "p_value": 0.0001043475,
+      "partial_correlation": 0.09058065,
+      "sample_size": 1822
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": 0.07112222,
+      "early_correlation": 0.02573027,
+      "late_correlation": 0.1260493,
+      "p_value": 0.0017287108,
+      "sample_size": 1933
+    },
+    "horizon_days": 5,
+    "lag_days": 10,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-022",
+    "original_reported_correlation": 0.080667,
+    "regime": "gold_bull",
+    "source_hypothesis_id": "IADC-HYP-0902",
+    "status": "ROBUST_TO_EXPANDED_CONTROLS"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_20",
+    "expanded_control_test": {
+      "p_value": 0.1897983563,
+      "partial_correlation": -0.03068626,
+      "sample_size": 1826
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.08172805,
+      "early_correlation": -0.1126303,
+      "late_correlation": -0.00211176,
+      "p_value": 0.0003197208,
+      "sample_size": 1928
+    },
+    "horizon_days": 5,
+    "lag_days": 0,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-018",
+    "original_reported_correlation": -0.095153,
+    "regime": "gold_bear",
+    "source_hypothesis_id": "IADC-HYP-0687",
+    "status": "WEAKENED_REQUIRES_MORE_EVIDENCE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_20",
+    "expanded_control_test": {
+      "p_value": 0.2288312939,
+      "partial_correlation": -0.02816542,
+      "sample_size": 1826
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.07207925,
+      "early_correlation": -0.09831103,
+      "late_correlation": -0.00132908,
+      "p_value": 0.0015163567,
+      "sample_size": 1928
+    },
+    "horizon_days": 5,
+    "lag_days": 1,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-020",
+    "original_reported_correlation": -0.087529,
+    "regime": "gold_bear",
+    "source_hypothesis_id": "IADC-HYP-0714",
+    "status": "WEAKENED_REQUIRES_MORE_EVIDENCE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_1",
+    "expanded_control_test": {
+      "p_value": 0.9192554021,
+      "partial_correlation": 0.00262002,
+      "sample_size": 1499
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.01027162,
+      "early_correlation": -0.00714343,
+      "late_correlation": -0.01461796,
+      "p_value": 0.66722417,
+      "sample_size": 1754
+    },
+    "horizon_days": 1,
+    "lag_days": 1,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-007",
+    "original_reported_correlation": -0.078347,
+    "regime": "policy_easing",
+    "source_hypothesis_id": "IADC-HYP-0437",
+    "status": "LIKELY_CONFOUNDED_OR_UNSTABLE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_20",
+    "expanded_control_test": {
+      "p_value": 0.3690540006,
+      "partial_correlation": -0.02100447,
+      "sample_size": 1830
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.04532398,
+      "early_correlation": -0.06115842,
+      "late_correlation": -0.00396354,
+      "p_value": 0.0462383925,
+      "sample_size": 1932
+    },
+    "horizon_days": 1,
+    "lag_days": 1,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-019",
+    "original_reported_correlation": -0.069445,
+    "regime": "gold_bear",
+    "source_hypothesis_id": "IADC-HYP-0705",
+    "status": "WEAKENED_REQUIRES_MORE_EVIDENCE"
+  },
+  {
+    "causal_confidence": null,
+    "causal_promotion": "OBSERVATIONAL_ONLY",
+    "driver": "yield_10y_change_5",
+    "expanded_control_test": {
+      "p_value": 0.5307394946,
+      "partial_correlation": 0.01483181,
+      "sample_size": 1788
+    },
+    "expanded_overlap_raw_test": {
+      "correlation": -0.05387208,
+      "early_correlation": -0.03486861,
+      "late_correlation": -0.06986977,
+      "p_value": 0.0174018174,
+      "sample_size": 1945
+    },
+    "horizon_days": 5,
+    "lag_days": 0,
+    "new_controls": [
+      "real_yield_change",
+      "breakeven_change",
+      "dxy_return",
+      "wti_return",
+      "vix_change"
+    ],
+    "observation_id": "IADC-OBS-001A-010",
+    "original_reported_correlation": -0.079556,
+    "regime": "usd_strength",
+    "source_hypothesis_id": "IADC-HYP-0555",
+    "status": "LIKELY_CONFOUNDED_OR_UNSTABLE"
+  }
+]

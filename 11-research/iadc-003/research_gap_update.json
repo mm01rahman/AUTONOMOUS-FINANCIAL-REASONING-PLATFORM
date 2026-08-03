@@ -1,0 +1,51 @@
+{
+  "campaign_id": "IADC-003",
+  "closed": [
+    "Deterministic multivariate latent structure extracted under a conservative next-session availability convention.",
+    "Signed process episodes, interactions, recurrence, transitions, and XAU benchmark evidence are now registered."
+  ],
+  "open": [
+    {
+      "fields": [
+        "CPIAUCSL",
+        "CPILFESL",
+        "PCEPI",
+        "PCEPILFE"
+      ],
+      "reason": "Observation dates are not evidenced release timestamps or vintages; excluded rather than treated as point-in-time safe."
+    },
+    {
+      "fields": [
+        "GLD raw and normalized observations"
+      ],
+      "reason": "Workbook prohibits reproduction/redistribution; only aggregate factor statistics and episode summaries are emitted."
+    },
+    {
+      "fields": [
+        "VIXCLS raw observations",
+        "GVZCLS raw observations"
+      ],
+      "reason": "Rights review unresolved; only aggregate factor statistics and episode summaries are emitted."
+    },
+    {
+      "fields": [
+        "intraday sequencing",
+        "consensus surprises",
+        "futures-implied expectations"
+      ],
+      "reason": "No governed evidence with defensible historical availability is available."
+    },
+    {
+      "fields": [
+        "causal identification"
+      ],
+      "reason": "No natural experiment, instrument, discontinuity, or other identification design exists."
+    },
+    {
+      "fields": [
+        "restricted-input reproducibility by independent users"
+      ],
+      "reason": "GLD/VIX/GVZ may be analyzed locally but cannot be redistributed in campaign artifacts."
+    }
+  ]
+}

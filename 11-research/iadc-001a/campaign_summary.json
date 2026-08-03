@@ -1,0 +1,16 @@
+{
+  "campaign_id": "IADC-001A",
+  "causal_claims": 0,
+  "conditional_observations": 8,
+  "datasets_evaluated": 20,
+  "failed_hypotheses_classified": 1058,
+  "generated_at": "2026-08-03T03:39:57.212828+00:00",
+  "institutional_conclusion": "AFRP has repeatable but weak-to-moderate observational knowledge concentrated in USD, nominal-yield, and curve relationships. Scientific maturity is capped by dependent variants, absent multi-provider replication, and major expectation, flow, positioning, event, and causal-identification gaps.",
+  "observation_clusters": 5,
+  "repeatable_observations": 14,
+  "research_gaps_ranked": 8,
+  "retained_associations_reanalyzed": 22,
+  "status": "COMPLETE",
+  "title": "Institutional Observational Alpha Discovery & Research Gap Analysis",
+  "trading_rules_generated": 0
+}

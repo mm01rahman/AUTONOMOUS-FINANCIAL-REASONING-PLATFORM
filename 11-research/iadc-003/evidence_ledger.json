@@ -1,0 +1,37 @@
+{
+  "campaign_id": "IADC-003",
+  "evidence_class": "OBSERVATIONAL_LATENT_PROCESS_DISCOVERY",
+  "negative_and_bounded": {
+    "causal_promotions": 0,
+    "rejected_factor_candidates": 1,
+    "rejected_signed_processes": 5,
+    "restricted_sources_persisted_as_rows": 0,
+    "trading_outputs": 0
+  },
+  "positive": {
+    "bh_significant_forward_edges": 0,
+    "candidate_factors": 5,
+    "recurring_processes_all_folds": 5,
+    "retained_factors": 4,
+    "retained_signed_processes": 5
+  },
+  "source_checksums_sha256": {
+    "GVZCLS.csv_analysis_only": "9c453cae43da270ea6b04c0a7798e17874165612bffdbd60319afee3ecb4e454",
+    "IADC002-CFTC-COMEX-GOLD.csv": "1168d03cb9eefc38d268d195c70b86d7f5ea400df777bb9d7f3c1275b1e00401",
+    "IADC002-DCOILWTICO.csv": "482803cd0bd0343517d690abbf790aec9284e984eb08734013ff0ae2f538e030",
+    "IADC002-DEXJPUS.csv": "77c3b6cd5ad7474dc2fcf8054ad3352faf2f97229f12ee018a9a42c1fadf8ab0",
+    "IADC002-DEXUSEU.csv": "9d8866ba056f83260923c05769412f4dc80f1743794a93d6d2a752ae73e87e61",
+    "IADC002-DFF.csv": "3c413578f8c6833af98ce875166df4f78a89ec677d5e12c0c96033f4b986fcc2",
+    "IADC002-DFII10.csv": "91cb857bf7cca4adcdc46adc792ab33481fa4c8a2ba1db450ff5edb5b997c144",
+    "IADC002-DGS10.csv": "0ef7520d415182489f1bf81e6eab0f0e2e05adf854a383f864a027b92642ab51",
+    "IADC002-DGS2.csv": "5da263f96bb4bbfc0be938a5ef8da6e3515904059316a30369ce6f3a7b21e397",
+    "IADC002-DGS30.csv": "b0d438006750fbef70c54a0e9dcfd053fda2db8c6e4969373f125bdbc31389f5",
+    "IADC002-SOFR.csv": "1e3a3d94070e6595c2fa8cf3a3196a2e6fcf5f77c725494a730fe290ab0b8771",
+    "IADC002-T10YIE.csv": "514d093261c0ad28fd50d88a0e470a15f5b9716a2d4027946beefc489ebdd7dc",
+    "IADC002-T5YIE.csv": "bd83d483771045a3ae68255151938e43f476fb27800e5089615b9a0359052e5c",
+    "VIXCLS.csv_analysis_only": "d38d5b393cc65b841bb240d5efc0755ce5ae2c658039fb3820a47ca7e07a4d40",
+    "dxy_1d.parquet": "8488ac25a23b3394afa0d102d79c669fbe05ed70567715fa08044714b193fc2e",
+    "gld_history.xlsx_analysis_only": "aa5b0fd8bc002703e44853f175c175207c4f940033df129cd95d27245be1894c",
+    "xauusd_1d.parquet": "2ca8e145c58bba468c4ab24f75c2de6d4e1221d3ff392ec935fa156bafba8f96"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "campaign_id": "IADC-003",
+  "domain_parents": [
+    {
+      "children": [
+        "IADC003-P04-POS"
+      ],
+      "domain": "cross_asset_volatility",
+      "induction_basis": "dominant absolute rotated loading among observed signatures",
+      "parent_id": "IADC003-DOMAIN-CROSS_ASSET_VOLATILITY"
+    },
+    {
+      "children": [
+        "IADC003-P01-POS",
+        "IADC003-P01-NEG"
+      ],
+      "domain": "etf_positioning",
+      "induction_basis": "dominant absolute rotated loading among observed signatures",
+      "parent_id": "IADC003-DOMAIN-ETF_POSITIONING"
+    },
+    {
+      "children": [
+        "IADC003-P05-POS"
+      ],
+      "domain": "real_yields",
+      "induction_basis": "dominant absolute rotated loading among observed signatures",
+      "parent_id": "IADC003-DOMAIN-REAL_YIELDS"
+    },
+    {
+      "children": [
+        "IADC003-P03-NEG"
+      ],
+      "domain": "usd_fx",
+      "induction_basis": "dominant absolute rotated loading among observed signatures",
+      "parent_id": "IADC003-DOMAIN-USD_FX"
+    }
+  ],
+  "entity_types": [
+    "latent_factor",
+    "signed_process",
+    "episode",
+    "observable_signature",
+    "induced_domain_parent"
+  ],
+  "relations": [
+    "manifests_as",
+    "positive_pole_of",
+    "negative_pole_of",
+    "overlaps",
+    "transitions_to",
+    "nested_under"
+  ],
+  "scientific_semantics": "Process denotes a retrospectively estimated multivariate observational state from a full-sample basis, not a real-time state, identified institution, or cause."
+}

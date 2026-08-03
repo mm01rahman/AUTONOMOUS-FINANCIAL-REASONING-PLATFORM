@@ -1,0 +1,40 @@
+{
+  "campaign_id": "IADC-003",
+  "causal_confidence": null,
+  "confidence_cap": 0.79,
+  "formula": "min(0.79, 0.79 * min(1, mean_Tucker/0.90) * fold_recurrence_ratio * min(1, independent_onsets/20))",
+  "process_confidences": [
+    {
+      "causal_confidence": null,
+      "failure_frequency": 0.47619048,
+      "observational_stability_score": 0.79,
+      "process_id": "IADC003-P01-POS"
+    },
+    {
+      "causal_confidence": null,
+      "failure_frequency": 0.41791045,
+      "observational_stability_score": 0.79,
+      "process_id": "IADC003-P01-NEG"
+    },
+    {
+      "causal_confidence": null,
+      "failure_frequency": 0.42857143,
+      "observational_stability_score": 0.553,
+      "process_id": "IADC003-P03-NEG"
+    },
+    {
+      "causal_confidence": null,
+      "failure_frequency": 0.5,
+      "observational_stability_score": 0.553,
+      "process_id": "IADC003-P04-POS"
+    },
+    {
+      "causal_confidence": null,
+      "failure_frequency": 0.3,
+      "observational_stability_score": 0.395,
+      "process_id": "IADC003-P05-POS"
+    }
+  ],
+  "score_name": "observational_stability_score",
+  "semantics": "Empirical stability summary, not probability of truth or causal confidence."
+}

@@ -1,0 +1,94 @@
+[
+  {
+    "causal_status": "NOT_ASSESSED",
+    "cluster_id": "IADC-CLUSTER-CURVE_EXPECTATIONS-CURVE_CHANGE_5",
+    "count": 2,
+    "distinct_regimes": [
+      "all",
+      "gold_bull"
+    ],
+    "mean_confidence": 0.649255,
+    "mean_repeatability": 0.833333,
+    "observation_ids": [
+      "IADC-OBS-001A-021",
+      "IADC-OBS-001A-022"
+    ]
+  },
+  {
+    "causal_status": "NOT_ASSESSED",
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_1",
+    "count": 4,
+    "distinct_regimes": [
+      "all",
+      "market_stress",
+      "policy_easing"
+    ],
+    "mean_confidence": 0.664494,
+    "mean_repeatability": 0.75,
+    "observation_ids": [
+      "IADC-OBS-001A-005",
+      "IADC-OBS-001A-006",
+      "IADC-OBS-001A-007",
+      "IADC-OBS-001A-008"
+    ]
+  },
+  {
+    "causal_status": "NOT_ASSESSED",
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_20",
+    "count": 3,
+    "distinct_regimes": [
+      "gold_bear"
+    ],
+    "mean_confidence": 0.616816,
+    "mean_repeatability": 0.666667,
+    "observation_ids": [
+      "IADC-OBS-001A-018",
+      "IADC-OBS-001A-019",
+      "IADC-OBS-001A-020"
+    ]
+  },
+  {
+    "causal_status": "NOT_ASSESSED",
+    "cluster_id": "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+    "count": 9,
+    "distinct_regimes": [
+      "all",
+      "gold_bear",
+      "market_stress",
+      "policy_easing",
+      "usd_strength"
+    ],
+    "mean_confidence": 0.687562,
+    "mean_repeatability": 0.814815,
+    "observation_ids": [
+      "IADC-OBS-001A-009",
+      "IADC-OBS-001A-010",
+      "IADC-OBS-001A-011",
+      "IADC-OBS-001A-012",
+      "IADC-OBS-001A-013",
+      "IADC-OBS-001A-014",
+      "IADC-OBS-001A-015",
+      "IADC-OBS-001A-016",
+      "IADC-OBS-001A-017"
+    ]
+  },
+  {
+    "causal_status": "NOT_ASSESSED",
+    "cluster_id": "IADC-CLUSTER-USD_TRANSMISSION-DXY_RETURN_1",
+    "count": 4,
+    "distinct_regimes": [
+      "all",
+      "gold_bull",
+      "market_stress",
+      "usd_strength"
+    ],
+    "mean_confidence": 0.70843,
+    "mean_repeatability": 1.0,
+    "observation_ids": [
+      "IADC-OBS-001A-001",
+      "IADC-OBS-001A-002",
+      "IADC-OBS-001A-003",
+      "IADC-OBS-001A-004"
+    ]
+  }
+]

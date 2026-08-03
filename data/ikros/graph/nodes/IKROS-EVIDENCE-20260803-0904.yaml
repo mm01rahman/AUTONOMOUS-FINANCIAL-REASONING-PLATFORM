@@ -1,0 +1,30 @@
+attributes:
+  bh_cross_process_transitions: 0
+  bh_process_alpha_edges: 0
+  bounded_conclusion: Latent processes do not explain XAU/USD more consistently out
+    of sample than the training-selected isolated-variable benchmark.
+  campaign_id: IADC-003
+  candidate_factors: 5
+  causal_claims: 0
+  causal_promotions: 0
+  retained_factors: 4
+  retained_processes: 5
+  retrospective_persistence_confirmed_episodes: 201
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: 11-research\iadc-003\ikros_ingestion.json
+  summary: Governed evidence for bounded retrospective latent-process discovery; no
+    process alpha or causal promotion.
+  supported_overlaps: 2
+  trading_outputs: 0
+  trading_rules: 0
+confidence: 0.79
+created_at: '2026-08-03T11:31:39.865357+00:00'
+ikros_id: IKROS-EVIDENCE-20260803-0904
+label: IADC-003 governed latent-process discovery evidence
+node_id: IKROS-EVIDENCE-20260803-0904
+node_type: EVIDENCE
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T11:31:39.865357+00:00'
+valid_to: null
+wp_refs: []

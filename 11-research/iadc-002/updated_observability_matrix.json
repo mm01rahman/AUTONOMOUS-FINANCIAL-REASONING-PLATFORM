@@ -1,0 +1,121 @@
+[
+  {
+    "dataset_ids": [
+      "IADC002-DCOILWTICO"
+    ],
+    "domain": "cross_asset_commodity",
+    "increase": 0.92,
+    "observability_after": 0.92,
+    "observability_before": 0.0,
+    "repository_snapshot": true,
+    "research_depth": true
+  },
+  {
+    "dataset_ids": [
+      "IADC002-CPIAUCSL",
+      "IADC002-CPILFESL",
+      "IADC002-PCEPI",
+      "IADC002-PCEPILFE"
+    ],
+    "domain": "inflation",
+    "increase": 0.92,
+    "observability_after": 0.92,
+    "observability_before": 0.0,
+    "repository_snapshot": true,
+    "research_depth": true
+  },
+  {
+    "dataset_ids": [
+      "IADC002-DFII10"
+    ],
+    "domain": "real_yields",
+    "increase": 0.92,
+    "observability_after": 0.92,
+    "observability_before": 0.0,
+    "repository_snapshot": true,
+    "research_depth": true
+  },
+  {
+    "dataset_ids": [
+      "IADC002-CFTC-COMEX-GOLD"
+    ],
+    "domain": "institutional_positioning",
+    "increase": 0.82,
+    "observability_after": 0.92,
+    "observability_before": 0.1,
+    "repository_snapshot": true,
+    "research_depth": true
+  },
+  {
+    "dataset_ids": [
+      "IADC002-DFF",
+      "IADC002-SOFR"
+    ],
+    "domain": "policy",
+    "increase": 0.82,
+    "observability_after": 0.92,
+    "observability_before": 0.1,
+    "repository_snapshot": true,
+    "research_depth": true
+  },
+  {
+    "dataset_ids": [
+      "IADC002-DEXJPUS",
+      "IADC002-DEXUSEU"
+    ],
+    "domain": "cross_asset_fx",
+    "increase": 0.72,
+    "observability_after": 0.92,
+    "observability_before": 0.2,
+    "repository_snapshot": true,
+    "research_depth": true
+  },
+  {
+    "dataset_ids": [
+      "IADC002-T10YIE",
+      "IADC002-T5YIE"
+    ],
+    "domain": "inflation_expectations",
+    "increase": 0.72,
+    "observability_after": 0.92,
+    "observability_before": 0.2,
+    "repository_snapshot": true,
+    "research_depth": true
+  },
+  {
+    "dataset_ids": [
+      "IADC002-GLD-HISTORY"
+    ],
+    "domain": "etf_positioning",
+    "increase": 0.62,
+    "observability_after": 0.72,
+    "observability_before": 0.1,
+    "repository_snapshot": false,
+    "research_depth": true
+  },
+  {
+    "dataset_ids": [
+      "IADC002-GVZCLS",
+      "IADC002-VIXCLS"
+    ],
+    "domain": "cross_asset_volatility",
+    "increase": 0.52,
+    "observability_after": 0.72,
+    "observability_before": 0.2,
+    "repository_snapshot": false,
+    "research_depth": true
+  },
+  {
+    "dataset_ids": [
+      "IADC002-DGS10",
+      "IADC002-DGS2",
+      "IADC002-DGS30"
+    ],
+    "domain": "nominal_yields",
+    "increase": -0.08,
+    "observability_after": 0.92,
+    "observability_before": 1.0,
+    "repository_snapshot": true,
+    "research_depth": true
+  }
+]

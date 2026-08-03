@@ -1,0 +1,31 @@
+{
+  "cadence": "daily",
+  "dataset_id": "IADC002-DFF",
+  "domain": "policy",
+  "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+  "limitations": [
+    "Observational data; no identification design or causal warrant."
+  ],
+  "name": "Effective Federal Funds Rate",
+  "normalized_checksum_sha256": "3c413578f8c6833af98ce875166df4f78a89ec677d5e12c0c96033f4b986fcc2",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-DFF.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "FRED",
+  "quality": {
+    "calendar_coverage_ratio": 1.0,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 26328,
+    "research_depth": true,
+    "start_timestamp": "1954-07-01T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "c85aa2518db619b048026e12037389014679f05b02b6ea55917a7155ee514f89",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-DFF.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "Board of Governors of the Federal Reserve System",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF",
+  "timezone": "UTC",
+  "variable": "effective_fed_funds"
+}

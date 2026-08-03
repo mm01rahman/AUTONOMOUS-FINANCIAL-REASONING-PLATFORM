@@ -1,0 +1,318 @@
+[
+  {
+    "affected_features": [
+      "real_yield_change",
+      "inflation_expectation_change"
+    ],
+    "affected_mechanisms": [
+      "nominal_yield_transmission",
+      "curve_expectations"
+    ],
+    "affected_regimes": [
+      "policy_transition",
+      "market_stress",
+      "gold_bull",
+      "gold_bear"
+    ],
+    "cost_score": 1,
+    "estimated_cost": "LOW",
+    "expected_confidence_increase": 0.298,
+    "expected_information_gain": 0.9,
+    "failure_evidence": {
+      "EVIDENCE_SUPPORTS_NULL_OR_NEGLIGIBLE_EFFECT": 513,
+      "MULTIPLE_TESTING_OR_EFFECT_GATE_FAILURE": 128,
+      "OBSERVABILITY_INSUFFICIENT": 135,
+      "REPEATABILITY_OR_PLACEBO_FAILURE": 27,
+      "TEMPORAL_COVERAGE_INSUFFICIENT": 206,
+      "TEMPORAL_INSTABILITY": 49
+    },
+    "gap_id": "IADC-GAP-001A-001",
+    "potential_providers": [
+      "FRED"
+    ],
+    "priority": 1,
+    "priority_score": 90.0,
+    "recommended_dataset": "FRED DGS10, DFII10, T10YIE",
+    "scientific_importance": "HIGH",
+    "title": "Historical real yields and breakevens"
+  },
+  {
+    "affected_features": [
+      "event_surprise",
+      "sequence_order",
+      "participant_flow"
+    ],
+    "affected_mechanisms": [
+      "usd_transmission",
+      "safe_haven_migration"
+    ],
+    "affected_regimes": [
+      "policy_transition",
+      "market_stress",
+      "gold_bull",
+      "gold_bear"
+    ],
+    "cost_score": 1,
+    "estimated_cost": "LOW",
+    "expected_confidence_increase": 0.2936,
+    "expected_information_gain": 0.88,
+    "failure_evidence": {
+      "EVIDENCE_SUPPORTS_NULL_OR_NEGLIGIBLE_EFFECT": 513,
+      "MULTIPLE_TESTING_OR_EFFECT_GATE_FAILURE": 128,
+      "OBSERVABILITY_INSUFFICIENT": 135,
+      "REPEATABILITY_OR_PLACEBO_FAILURE": 27,
+      "TEMPORAL_COVERAGE_INSUFFICIENT": 206,
+      "TEMPORAL_INSTABILITY": 49
+    },
+    "gap_id": "IADC-GAP-001A-004",
+    "potential_providers": [
+      "CFTC"
+    ],
+    "priority": 2,
+    "priority_score": 88.0,
+    "recommended_dataset": "CFTC disaggregated COMEX gold history",
+    "scientific_importance": "HIGH",
+    "title": "Multi-cycle CFTC positioning"
+  },
+  {
+    "affected_features": [
+      "event_surprise",
+      "sequence_order",
+      "participant_flow"
+    ],
+    "affected_mechanisms": [
+      "safe_haven_migration",
+      "etf_flow_propagation"
+    ],
+    "affected_regimes": [
+      "policy_transition",
+      "market_stress",
+      "gold_bull",
+      "gold_bear"
+    ],
+    "cost_score": 1,
+    "estimated_cost": "LOW",
+    "expected_confidence_increase": 0.2892,
+    "expected_information_gain": 0.86,
+    "failure_evidence": {
+      "EVIDENCE_SUPPORTS_NULL_OR_NEGLIGIBLE_EFFECT": 513,
+      "MULTIPLE_TESTING_OR_EFFECT_GATE_FAILURE": 128,
+      "OBSERVABILITY_INSUFFICIENT": 135,
+      "REPEATABILITY_OR_PLACEBO_FAILURE": 27,
+      "TEMPORAL_COVERAGE_INSUFFICIENT": 206,
+      "TEMPORAL_INSTABILITY": 49
+    },
+    "gap_id": "IADC-GAP-001A-005",
+    "potential_providers": [
+      "SPDR",
+      "iShares",
+      "SEC EDGAR"
+    ],
+    "priority": 3,
+    "priority_score": 86.0,
+    "recommended_dataset": "GLD/IAU shares, NAV, creation-redemption history",
+    "scientific_importance": "HIGH",
+    "title": "Multi-cycle ETF holdings and flows"
+  },
+  {
+    "affected_features": [
+      "event_surprise",
+      "sequence_order",
+      "participant_flow"
+    ],
+    "affected_mechanisms": [
+      "usd_transmission",
+      "safe_haven_migration"
+    ],
+    "affected_regimes": [
+      "policy_transition",
+      "market_stress",
+      "gold_bull",
+      "gold_bear"
+    ],
+    "cost_score": 1,
+    "estimated_cost": "LOW",
+    "expected_confidence_increase": 0.2716,
+    "expected_information_gain": 0.78,
+    "failure_evidence": {
+      "EVIDENCE_SUPPORTS_NULL_OR_NEGLIGIBLE_EFFECT": 513,
+      "MULTIPLE_TESTING_OR_EFFECT_GATE_FAILURE": 128,
+      "OBSERVABILITY_INSUFFICIENT": 135,
+      "REPEATABILITY_OR_PLACEBO_FAILURE": 27,
+      "TEMPORAL_COVERAGE_INSUFFICIENT": 206,
+      "TEMPORAL_INSTABILITY": 49
+    },
+    "gap_id": "IADC-GAP-001A-006",
+    "potential_providers": [
+      "FRED",
+      "CBOE",
+      "public market archives"
+    ],
+    "priority": 4,
+    "priority_score": 78.0,
+    "recommended_dataset": "VIX, GVZ, EURUSD, USDJPY, silver, oil, equities",
+    "scientific_importance": "MEDIUM",
+    "title": "Cross-asset risk observatory"
+  },
+  {
+    "affected_features": [
+      "event_surprise",
+      "sequence_order",
+      "participant_flow"
+    ],
+    "affected_mechanisms": [
+      "policy_anchor",
+      "macro_repricing"
+    ],
+    "affected_regimes": [
+      "policy_transition",
+      "market_stress",
+      "gold_bull",
+      "gold_bear"
+    ],
+    "cost_score": 2,
+    "estimated_cost": "MEDIUM",
+    "expected_confidence_increase": 0.3024,
+    "expected_information_gain": 0.92,
+    "failure_evidence": {
+      "EVIDENCE_SUPPORTS_NULL_OR_NEGLIGIBLE_EFFECT": 513,
+      "MULTIPLE_TESTING_OR_EFFECT_GATE_FAILURE": 128,
+      "OBSERVABILITY_INSUFFICIENT": 135,
+      "REPEATABILITY_OR_PLACEBO_FAILURE": 27,
+      "TEMPORAL_COVERAGE_INSUFFICIENT": 206,
+      "TEMPORAL_INSTABILITY": 49
+    },
+    "gap_id": "IADC-GAP-001A-002",
+    "potential_providers": [
+      "FRED",
+      "ALFRED",
+      "commercial consensus"
+    ],
+    "priority": 5,
+    "priority_score": 46.0,
+    "recommended_dataset": "ALFRED/FRED plus consensus archive",
+    "scientific_importance": "HIGH",
+    "title": "Macro release actual/consensus/vintage history"
+  },
+  {
+    "affected_features": [
+      "event_surprise",
+      "sequence_order",
+      "participant_flow"
+    ],
+    "affected_mechanisms": [
+      "IADC-CLUSTER-CURVE_EXPECTATIONS-CURVE_CHANGE_5",
+      "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_1",
+      "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_20",
+      "IADC-CLUSTER-NOMINAL_YIELD_TRANSMISSION-YIELD_10Y_CHANGE_5",
+      "IADC-CLUSTER-USD_TRANSMISSION-DXY_RETURN_1"
+    ],
+    "affected_regimes": [
+      "policy_transition",
+      "market_stress",
+      "gold_bull",
+      "gold_bear"
+    ],
+    "cost_score": 3,
+    "estimated_cost": "HIGH",
+    "expected_confidence_increase": 0.3134,
+    "expected_information_gain": 0.97,
+    "failure_evidence": {
+      "EVIDENCE_SUPPORTS_NULL_OR_NEGLIGIBLE_EFFECT": 513,
+      "MULTIPLE_TESTING_OR_EFFECT_GATE_FAILURE": 128,
+      "OBSERVABILITY_INSUFFICIENT": 135,
+      "REPEATABILITY_OR_PLACEBO_FAILURE": 27,
+      "TEMPORAL_COVERAGE_INSUFFICIENT": 206,
+      "TEMPORAL_INSTABILITY": 49
+    },
+    "gap_id": "IADC-GAP-001A-008",
+    "potential_providers": [
+      "Federal Reserve",
+      "academic replications"
+    ],
+    "priority": 6,
+    "priority_score": 32.333333,
+    "recommended_dataset": "Policy instruments, natural experiments, and vintage controls",
+    "scientific_importance": "HIGH",
+    "title": "Identified causal designs"
+  },
+  {
+    "affected_features": [
+      "event_surprise",
+      "sequence_order",
+      "participant_flow"
+    ],
+    "affected_mechanisms": [
+      "policy_anchor",
+      "policy_repricing"
+    ],
+    "affected_regimes": [
+      "policy_transition",
+      "market_stress",
+      "gold_bull",
+      "gold_bear"
+    ],
+    "cost_score": 3,
+    "estimated_cost": "HIGH",
+    "expected_confidence_increase": 0.309,
+    "expected_information_gain": 0.95,
+    "failure_evidence": {
+      "EVIDENCE_SUPPORTS_NULL_OR_NEGLIGIBLE_EFFECT": 513,
+      "MULTIPLE_TESTING_OR_EFFECT_GATE_FAILURE": 128,
+      "OBSERVABILITY_INSUFFICIENT": 135,
+      "REPEATABILITY_OR_PLACEBO_FAILURE": 27,
+      "TEMPORAL_COVERAGE_INSUFFICIENT": 206,
+      "TEMPORAL_INSTABILITY": 49
+    },
+    "gap_id": "IADC-GAP-001A-003",
+    "potential_providers": [
+      "CME DataMine",
+      "Federal Reserve"
+    ],
+    "priority": 7,
+    "priority_score": 31.666667,
+    "recommended_dataset": "Fed Funds and SOFR futures with event timestamps",
+    "scientific_importance": "HIGH",
+    "title": "FOMC and rate-expectation history"
+  },
+  {
+    "affected_features": [
+      "event_surprise",
+      "sequence_order",
+      "participant_flow"
+    ],
+    "affected_mechanisms": [
+      "policy_anchor",
+      "information_cascade"
+    ],
+    "affected_regimes": [
+      "policy_transition",
+      "market_stress",
+      "gold_bull",
+      "gold_bear"
+    ],
+    "cost_score": 4,
+    "estimated_cost": "VERY_HIGH",
+    "expected_confidence_increase": 0.3068,
+    "expected_information_gain": 0.94,
+    "failure_evidence": {
+      "EVIDENCE_SUPPORTS_NULL_OR_NEGLIGIBLE_EFFECT": 513,
+      "MULTIPLE_TESTING_OR_EFFECT_GATE_FAILURE": 128,
+      "OBSERVABILITY_INSUFFICIENT": 135,
+      "REPEATABILITY_OR_PLACEBO_FAILURE": 27,
+      "TEMPORAL_COVERAGE_INSUFFICIENT": 206,
+      "TEMPORAL_INSTABILITY": 49
+    },
+    "gap_id": "IADC-GAP-001A-007",
+    "potential_providers": [
+      "CME",
+      "CBOE",
+      "commercial market data"
+    ],
+    "priority": 8,
+    "priority_score": 23.5,
+    "recommended_dataset": "Timestamped gold, DXY, rates, spreads and event tape",
+    "scientific_importance": "HIGH",
+    "title": "Intraday event sequencing"
+  }
+]

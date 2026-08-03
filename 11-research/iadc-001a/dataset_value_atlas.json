@@ -1,0 +1,74 @@
+[
+  {
+    "cost": "LOW",
+    "dataset": "FRED DGS10, DFII10, T10YIE",
+    "expected_confidence_increase": 0.298,
+    "expected_information_gain": 0.9,
+    "gap_id": "IADC-GAP-001A-001",
+    "rank": 1,
+    "scientific_return_score": 90.0
+  },
+  {
+    "cost": "LOW",
+    "dataset": "CFTC disaggregated COMEX gold history",
+    "expected_confidence_increase": 0.2936,
+    "expected_information_gain": 0.88,
+    "gap_id": "IADC-GAP-001A-004",
+    "rank": 2,
+    "scientific_return_score": 88.0
+  },
+  {
+    "cost": "LOW",
+    "dataset": "GLD/IAU shares, NAV, creation-redemption history",
+    "expected_confidence_increase": 0.2892,
+    "expected_information_gain": 0.86,
+    "gap_id": "IADC-GAP-001A-005",
+    "rank": 3,
+    "scientific_return_score": 86.0
+  },
+  {
+    "cost": "LOW",
+    "dataset": "VIX, GVZ, EURUSD, USDJPY, silver, oil, equities",
+    "expected_confidence_increase": 0.2716,
+    "expected_information_gain": 0.78,
+    "gap_id": "IADC-GAP-001A-006",
+    "rank": 4,
+    "scientific_return_score": 78.0
+  },
+  {
+    "cost": "MEDIUM",
+    "dataset": "ALFRED/FRED plus consensus archive",
+    "expected_confidence_increase": 0.3024,
+    "expected_information_gain": 0.92,
+    "gap_id": "IADC-GAP-001A-002",
+    "rank": 5,
+    "scientific_return_score": 46.0
+  },
+  {
+    "cost": "HIGH",
+    "dataset": "Policy instruments, natural experiments, and vintage controls",
+    "expected_confidence_increase": 0.3134,
+    "expected_information_gain": 0.97,
+    "gap_id": "IADC-GAP-001A-008",
+    "rank": 6,
+    "scientific_return_score": 32.333333
+  },
+  {
+    "cost": "HIGH",
+    "dataset": "Fed Funds and SOFR futures with event timestamps",
+    "expected_confidence_increase": 0.309,
+    "expected_information_gain": 0.95,
+    "gap_id": "IADC-GAP-001A-003",
+    "rank": 7,
+    "scientific_return_score": 31.666667
+  },
+  {
+    "cost": "VERY_HIGH",
+    "dataset": "Timestamped gold, DXY, rates, spreads and event tape",
+    "expected_confidence_increase": 0.3068,
+    "expected_information_gain": 0.94,
+    "gap_id": "IADC-GAP-001A-007",
+    "rank": 8,
+    "scientific_return_score": 23.5
+  }
+]

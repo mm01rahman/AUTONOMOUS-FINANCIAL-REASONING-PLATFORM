@@ -1,0 +1,127 @@
+archived_at: null
+capability_refs: []
+confidence: 0.72
+created_at: '2026-08-03T03:32:33.516772+00:00'
+dependency_ids: []
+entity_type: ResearchConclusion
+evidence_refs:
+- 11-research/iadc-001/EXECUTIVE_SUMMARY.md
+- 11-research/iadc-001/evidence_ledger.json
+graph_node_ids:
+- IKROS-CONCL-20260803-0901
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T4-20260803-0001
+payload:
+  attributes:
+    decision: EVIDENCE_EXHAUSTED_FOR_AVAILABLE_DATA
+    mechanism_states:
+    - best_correlation: 0.057786
+      best_horizon_days: 5
+      best_hypothesis_id: IADC-HYP-0901
+      best_lag_days: 10
+      best_q_value: 0.0002486111
+      best_regime: all
+      causal_status: NOT_ESTABLISHED
+      confidence: 0.75
+      economic_mechanism: Curve steepening can reflect easing or inflation expectations
+        supportive of gold.
+      failure_modes:
+      - common macro driver
+      - regime misclassification
+      - non-stationarity
+      - overlapping forward returns
+      family: curve_expectations
+      mechanism_id: IADC-MECH-001
+      portfolio_contribution: Not assessed
+      state: SUPPORTED_ASSOCIATION
+      supported_hypothesis_count: 2
+    - best_correlation: -0.062943
+      best_horizon_days: 5
+      best_hypothesis_id: IADC-HYP-0658
+      best_lag_days: 20
+      best_q_value: 4.29141e-05
+      best_regime: all
+      causal_status: NOT_ESTABLISHED
+      confidence: 0.75
+      economic_mechanism: Sustained nominal-yield repricing can pressure gold through
+        carry and USD channels.
+      failure_modes:
+      - common macro driver
+      - regime misclassification
+      - non-stationarity
+      - overlapping forward returns
+      family: nominal_yield_transmission
+      mechanism_id: IADC-MECH-002
+      portfolio_contribution: Not assessed
+      state: SUPPORTED_ASSOCIATION
+      supported_hypothesis_count: 16
+    - best_correlation: 0.156463
+      best_horizon_days: 20
+      best_hypothesis_id: IADC-HYP-1020
+      best_lag_days: 5
+      best_q_value: 0.0
+      best_regime: gold_bear
+      causal_status: NOT_ESTABLISHED
+      confidence: 0.5
+      economic_mechanism: A rising short-rate policy proxy tightens carry conditions
+        for non-yielding gold.
+      failure_modes:
+      - common macro driver
+      - regime misclassification
+      - non-stationarity
+      - overlapping forward returns
+      family: policy_anchor
+      mechanism_id: IADC-MECH-003
+      portfolio_contribution: Not assessed
+      state: REJECTED_OR_UNRESOLVED
+      supported_hypothesis_count: 0
+    - best_correlation: -0.088288
+      best_horizon_days: 1
+      best_hypothesis_id: IADC-HYP-0006
+      best_lag_days: 0
+      best_q_value: 0.0029925467
+      best_regime: usd_strength
+      causal_status: NOT_ESTABLISHED
+      confidence: 0.75
+      economic_mechanism: USD appreciation raises the non-USD price of gold and can
+        reduce marginal demand.
+      failure_modes:
+      - common macro driver
+      - regime misclassification
+      - non-stationarity
+      - overlapping forward returns
+      family: usd_transmission
+      mechanism_id: IADC-MECH-004
+      portfolio_contribution: Not assessed
+      state: SUPPORTED_ASSOCIATION
+      supported_hypothesis_count: 4
+    supported_associations: 22
+    validated_causal_mechanisms: 0
+  lifecycle_state: PUBLISHED
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\autonomous-financial-reasoning-platform\11-research\iadc-001\ikros_ingestion.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-CONCL-20260803-0901
+- IKROS-CONTRA-20260803-0901
+- IKROS-EVIDENCE-20260803-0901
+spec_refs:
+- SPEC-060
+summary: The available archive supports observational tests of USD, nominal-yield,
+  curve, and policy-anchor transmission. It cannot validate real-yield, inflation-surprise,
+  FOMC-event, positioning, ETF, or causal mechanisms.
+tags:
+- researchconclusion
+- internal_research_report
+- ingested
+tier: T4_INSTITUTIONAL
+title: IADC-001 bounded monetary-policy conclusion
+updated_at: '2026-08-03T03:32:33.516772+00:00'
+valid_from: '2026-08-03T03:32:33.516772+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

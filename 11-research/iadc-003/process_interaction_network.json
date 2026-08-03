@@ -1,0 +1,143 @@
+{
+  "bh_significant_interaction_count": 2,
+  "campaign_id": "IADC-003",
+  "classification_policy": "SUPPORTED_OVERLAP only at BH q<=0.05; otherwise OBSERVED_OVERLAP or UNRESOLVED; no mechanism labels inferred.",
+  "examined_interaction_count": 9,
+  "interactions": [
+    {
+      "bh_qvalue": 0.00899101,
+      "causal_confidence": null,
+      "null_method": "within-fold circular shift of one complete retrospective persistence-confirmed mask",
+      "null_overlap_95_interval": [
+        0.0,
+        2.0
+      ],
+      "overlap_lift": 8.26449275,
+      "overlap_sessions": 4,
+      "permutation_pvalue": 0.001998,
+      "relation": "SUPPORTED_OVERLAP",
+      "source": "IADC003-P01-POS",
+      "target": "IADC003-P03-NEG"
+    },
+    {
+      "bh_qvalue": 0.00899101,
+      "causal_confidence": null,
+      "null_method": "within-fold circular shift of one complete retrospective persistence-confirmed mask",
+      "null_overlap_95_interval": [
+        0.0,
+        1.0
+      ],
+      "overlap_lift": 31.68055556,
+      "overlap_sessions": 2,
+      "permutation_pvalue": 0.001998,
+      "relation": "SUPPORTED_OVERLAP",
+      "source": "IADC003-P03-NEG",
+      "target": "IADC003-P04-POS"
+    },
+    {
+      "bh_qvalue": 0.07492507,
+      "causal_confidence": null,
+      "null_method": "within-fold circular shift of one complete retrospective persistence-confirmed mask",
+      "null_overlap_95_interval": [
+        0.0,
+        2.0
+      ],
+      "overlap_lift": 5.50966184,
+      "overlap_sessions": 3,
+      "permutation_pvalue": 0.02497502,
+      "relation": "OBSERVED_OVERLAP",
+      "source": "IADC003-P01-POS",
+      "target": "IADC003-P04-POS"
+    },
+    {
+      "bh_qvalue": 0.1006993,
+      "causal_confidence": null,
+      "null_method": "within-fold circular shift of one complete retrospective persistence-confirmed mask",
+      "null_overlap_95_interval": [
+        0.0,
+        3.0
+      ],
+      "overlap_lift": 4.56809079,
+      "overlap_sessions": 3,
+      "permutation_pvalue": 0.05194805,
+      "relation": "OBSERVED_OVERLAP",
+      "source": "IADC003-P01-NEG",
+      "target": "IADC003-P05-POS"
+    },
+    {
+      "bh_qvalue": 0.1006993,
+      "causal_confidence": null,
+      "null_method": "within-fold circular shift of one complete retrospective persistence-confirmed mask",
+      "null_overlap_95_interval": [
+        0.0,
+        1.0
+      ],
+      "overlap_lift": 20.36607143,
+      "overlap_sessions": 1,
+      "permutation_pvalue": 0.05594406,
+      "relation": "OBSERVED_OVERLAP",
+      "source": "IADC003-P03-NEG",
+      "target": "IADC003-P05-POS"
+    },
+    {
+      "bh_qvalue": 0.10789211,
+      "causal_confidence": null,
+      "null_method": "within-fold circular shift of one complete retrospective persistence-confirmed mask",
+      "null_overlap_95_interval": [
+        0.0,
+        2.025
+      ],
+      "overlap_lift": 4.72256729,
+      "overlap_sessions": 2,
+      "permutation_pvalue": 0.07192807,
+      "relation": "OBSERVED_OVERLAP",
+      "source": "IADC003-P01-POS",
+      "target": "IADC003-P05-POS"
+    },
+    {
+      "bh_qvalue": 1.0,
+      "causal_confidence": null,
+      "null_method": "within-fold circular shift of one complete retrospective persistence-confirmed mask",
+      "null_overlap_95_interval": [
+        0.0,
+        3.0
+      ],
+      "overlap_lift": 0.0,
+      "overlap_sessions": 0,
+      "permutation_pvalue": 1.0,
+      "relation": "UNRESOLVED",
+      "source": "IADC003-P01-NEG",
+      "target": "IADC003-P03-NEG"
+    },
+    {
+      "bh_qvalue": 1.0,
+      "causal_confidence": null,
+      "null_method": "within-fold circular shift of one complete retrospective persistence-confirmed mask",
+      "null_overlap_95_interval": [
+        0.0,
+        4.0
+      ],
+      "overlap_lift": 0.0,
+      "overlap_sessions": 0,
+      "permutation_pvalue": 1.0,
+      "relation": "UNRESOLVED",
+      "source": "IADC003-P01-NEG",
+      "target": "IADC003-P04-POS"
+    },
+    {
+      "bh_qvalue": 1.0,
+      "causal_confidence": null,
+      "null_method": "within-fold circular shift of one complete retrospective persistence-confirmed mask",
+      "null_overlap_95_interval": [
+        0.0,
+        1.0
+      ],
+      "overlap_lift": 0.0,
+      "overlap_sessions": 0,
+      "permutation_pvalue": 1.0,
+      "relation": "UNRESOLVED",
+      "source": "IADC003-P04-POS",
+      "target": "IADC003-P05-POS"
+    }
+  ]
+}

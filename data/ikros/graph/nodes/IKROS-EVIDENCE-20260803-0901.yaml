@@ -1,0 +1,30 @@
+attributes:
+  blocked_research_domains: 5
+  campaign_id: IADC-001
+  generated_at: '2026-08-03T03:32:07.301830+00:00'
+  hypotheses_generated: 1080
+  hypotheses_tested: 1080
+  no_trading_rules_generated: true
+  rejected_hypotheses: 1058
+  sample_blocked_hypotheses: 0
+  scientific_conclusion: The available archive supports observational tests of USD,
+    nominal-yield, curve, and policy-anchor transmission. It cannot validate real-yield,
+    inflation-surprise, FOMC-event, positioning, ETF, or causal mechanisms.
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\autonomous-financial-reasoning-platform\11-research\iadc-001\ikros_ingestion.json
+  status: EVIDENCE_EXHAUSTED_FOR_AVAILABLE_DATA
+  summary: 1080 hypotheses tested over 6242 daily observations.
+  supported_associations: 22
+  title: Institutional Real Yield & Monetary Policy Alpha Discovery
+  validated_causal_mechanisms: 0
+confidence: 0.95
+created_at: '2026-08-03T03:32:33.516772+00:00'
+ikros_id: IKROS-EVIDENCE-20260803-0901
+label: IADC-001 historical evidence ledger
+node_id: IKROS-EVIDENCE-20260803-0901
+node_type: EVIDENCE
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T03:32:33.516772+00:00'
+valid_to: null
+wp_refs: []

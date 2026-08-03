@@ -1,0 +1,91 @@
+{
+  "campaign_id": "IADC-003",
+  "state_definition": "Retrospective state: highest absolute persistence-confirmed signed-process score from the full-sample basis, otherwise INACTIVE; unsuitable for real-time use.",
+  "transition_count": 14,
+  "transitions": [
+    {
+      "from_state": "INACTIVE",
+      "probability": 0.45454545,
+      "support": 85,
+      "to_state": "IADC003-P01-NEG"
+    },
+    {
+      "from_state": "IADC003-P01-NEG",
+      "probability": 0.97674419,
+      "support": 84,
+      "to_state": "INACTIVE"
+    },
+    {
+      "from_state": "IADC003-P01-POS",
+      "probability": 1.0,
+      "support": 74,
+      "to_state": "INACTIVE"
+    },
+    {
+      "from_state": "INACTIVE",
+      "probability": 0.37967914,
+      "support": 71,
+      "to_state": "IADC003-P01-POS"
+    },
+    {
+      "from_state": "INACTIVE",
+      "probability": 0.07486631,
+      "support": 14,
+      "to_state": "IADC003-P04-POS"
+    },
+    {
+      "from_state": "IADC003-P04-POS",
+      "probability": 0.92857143,
+      "support": 13,
+      "to_state": "INACTIVE"
+    },
+    {
+      "from_state": "IADC003-P03-NEG",
+      "probability": 0.90909091,
+      "support": 10,
+      "to_state": "INACTIVE"
+    },
+    {
+      "from_state": "INACTIVE",
+      "probability": 0.04812834,
+      "support": 9,
+      "to_state": "IADC003-P03-NEG"
+    },
+    {
+      "from_state": "INACTIVE",
+      "probability": 0.04278075,
+      "support": 8,
+      "to_state": "IADC003-P05-POS"
+    },
+    {
+      "from_state": "IADC003-P05-POS",
+      "probability": 0.75,
+      "support": 6,
+      "to_state": "INACTIVE"
+    },
+    {
+      "from_state": "IADC003-P05-POS",
+      "probability": 0.25,
+      "support": 2,
+      "to_state": "IADC003-P01-POS"
+    },
+    {
+      "from_state": "IADC003-P01-NEG",
+      "probability": 0.02325581,
+      "support": 2,
+      "to_state": "IADC003-P03-NEG"
+    },
+    {
+      "from_state": "IADC003-P04-POS",
+      "probability": 0.07142857,
+      "support": 1,
+      "to_state": "IADC003-P01-POS"
+    },
+    {
+      "from_state": "IADC003-P03-NEG",
+      "probability": 0.09090909,
+      "support": 1,
+      "to_state": "IADC003-P01-NEG"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "cadence": "daily",
+  "dataset_id": "IADC002-DFII10",
+  "domain": "real_yields",
+  "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+  "limitations": [
+    "Observational data; no identification design or causal warrant."
+  ],
+  "name": "10-Year TIPS Real Yield",
+  "normalized_checksum_sha256": "91cb857bf7cca4adcdc46adc792ab33481fa4c8a2ba1db450ff5edb5b997c144",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-DFII10.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "FRED",
+  "quality": {
+    "calendar_coverage_ratio": 0.684938,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 5898,
+    "research_depth": true,
+    "start_timestamp": "2003-01-02T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "275fe35b2a955b8d2071235ac0b87d8716c67551638a8b5aea57bf7b49ab4c3a",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-DFII10.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "U.S. Department of the Treasury",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
+  "timezone": "UTC",
+  "variable": "real_yield_10y"
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "causal_identification_score": 0,
+    "data_coverage_score": 1,
+    "economic_explanation_score": 3,
+    "mechanism": "curve_expectations",
+    "method_independence_score": 3,
+    "overall_maturity_level": 3,
+    "replication_score": 2
+  },
+  {
+    "causal_identification_score": 0,
+    "data_coverage_score": 3,
+    "economic_explanation_score": 3,
+    "mechanism": "nominal_yield_transmission",
+    "method_independence_score": 3,
+    "overall_maturity_level": 3,
+    "replication_score": 4
+  },
+  {
+    "causal_identification_score": 0,
+    "data_coverage_score": 1,
+    "economic_explanation_score": 2,
+    "mechanism": "policy_anchor",
+    "method_independence_score": 1,
+    "overall_maturity_level": 1,
+    "replication_score": 0
+  },
+  {
+    "causal_identification_score": 0,
+    "data_coverage_score": 3,
+    "economic_explanation_score": 3,
+    "mechanism": "usd_transmission",
+    "method_independence_score": 3,
+    "overall_maturity_level": 3,
+    "replication_score": 4
+  },
+  {
+    "causal_identification_score": 0,
+    "data_coverage_score": 1,
+    "economic_explanation_score": 2,
+    "mechanism": "commodity_cross_curve_divergence",
+    "method_independence_score": 1,
+    "overall_maturity_level": 1,
+    "replication_score": 0
+  },
+  {
+    "causal_identification_score": 0,
+    "data_coverage_score": 1,
+    "economic_explanation_score": 2,
+    "mechanism": "etf_flow_accumulation_pressure",
+    "method_independence_score": 1,
+    "overall_maturity_level": 1,
+    "replication_score": 0
+  },
+  {
+    "causal_identification_score": 0,
+    "data_coverage_score": 1,
+    "economic_explanation_score": 2,
+    "mechanism": "policy_expectation_repricing",
+    "method_independence_score": 1,
+    "overall_maturity_level": 1,
+    "replication_score": 0
+  },
+  {
+    "causal_identification_score": 0,
+    "data_coverage_score": 1,
+    "economic_explanation_score": 2,
+    "mechanism": "real_yield_dislocation_reversion",
+    "method_independence_score": 1,
+    "overall_maturity_level": 1,
+    "replication_score": 0
+  },
+  {
+    "causal_identification_score": 0,
+    "data_coverage_score": 1,
+    "economic_explanation_score": 2,
+    "mechanism": "safe_haven_migration",
+    "method_independence_score": 1,
+    "overall_maturity_level": 1,
+    "replication_score": 0
+  }
+]

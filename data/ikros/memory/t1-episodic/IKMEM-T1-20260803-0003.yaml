@@ -1,0 +1,60 @@
+archived_at: null
+capability_refs: []
+confidence: 0.97
+created_at: '2026-08-03T03:55:50.218191+00:00'
+dependency_ids: []
+entity_type: Evidence
+evidence_refs:
+- 11-research/iadc-002/evidence_ledger.json
+- 11-research/iadc-002/expanded_dataset_registry.json
+graph_node_ids:
+- IKROS-EVIDENCE-20260803-0903
+lifecycle_state: ACTIVE
+lineage_ids: []
+memory_id: IKMEM-T1-20260803-0003
+payload:
+  attributes:
+    campaign_id: IADC-002
+    causal_promotions: 0
+    datasets_analysis_only: 3
+    datasets_persisted: 16
+    decision: EVIDENCE_EXPANDED_CAUSAL_IDENTIFICATION_STILL_BLOCKED
+    gaps_closed_research_depth: 2
+    generated_at: '2026-08-03T03:54:38.538774+00:00'
+    incremental_experiments: 27
+    institutional_conclusion: AFRP now has research-depth public real-yield, breakeven,
+      CFTC positioning, official inflation, policy-rate, FX, and oil histories with
+      governed provenance. These datasets improve confounder control and reactivate
+      previously blocked observational research, but no result is causally identified.
+      ETF redistribution rights, consensus surprises, futures-implied expectations,
+      intraday sequencing, and valid causal designs remain unresolved.
+    prior_observations_retested: 22
+    prior_observations_robust: 6
+    prior_observations_unstable_or_confounded: 8
+    prior_observations_weakened: 8
+    status: COMPLETE
+    supported_observations: 0
+    trading_rules_generated: 0
+  lifecycle_state: ACTIVE
+  source_format: JSON
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: 11-research\iadc-002\ikros_ingestion.json
+  version: 1.0.0
+retired_at: null
+source_ids:
+- IKROS-EVIDENCE-20260803-0903
+spec_refs:
+- SPEC-060
+summary: 16 immutable historical datasets acquired; 22 observations retested.
+tags:
+- evidence
+- internal_research_report
+- ingested
+tier: T1_EPISODIC
+title: IADC-002 governed dataset expansion evidence
+updated_at: '2026-08-03T03:55:50.218191+00:00'
+valid_from: '2026-08-03T03:55:50.218191+00:00'
+valid_to: null
+version: 1.0.0
+version_history: []
+work_package_refs: []

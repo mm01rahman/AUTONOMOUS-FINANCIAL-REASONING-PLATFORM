@@ -1,0 +1,50 @@
+[
+  {
+    "gap_id": "IADC-GAP-001A-001",
+    "remaining_constraint": "No causal identification or independent non-FRED replication.",
+    "status": "CLOSED_RESEARCH_DEPTH",
+    "title": "Historical real yields and breakevens"
+  },
+  {
+    "gap_id": "IADC-GAP-001A-004",
+    "remaining_constraint": "Weekly publication lag and observational endogeneity remain.",
+    "status": "CLOSED_RESEARCH_DEPTH",
+    "title": "Multi-cycle CFTC positioning"
+  },
+  {
+    "gap_id": "IADC-GAP-001A-005",
+    "remaining_constraint": "SPDR archive prohibits reproduction or redistribution without consent; IAU history not acquired.",
+    "status": "ANALYZED_NOT_INGESTED_LICENSE_RESTRICTED",
+    "title": "Multi-cycle ETF holdings and flows"
+  },
+  {
+    "gap_id": "IADC-GAP-001A-006",
+    "remaining_constraint": "Government FX and oil persisted; CBOE series analysis-only; silver and unrestricted long equity history absent.",
+    "status": "PARTIALLY_CLOSED",
+    "title": "Cross-asset risk observatory"
+  },
+  {
+    "gap_id": "IADC-GAP-001A-002",
+    "remaining_constraint": "Official actual inflation levels acquired; consensus surprise and vintage-aware release timestamps absent.",
+    "status": "PARTIALLY_CLOSED",
+    "title": "Macro release actual/consensus/vintage history"
+  },
+  {
+    "gap_id": "IADC-GAP-001A-008",
+    "remaining_constraint": "No valid instrument, natural experiment, or quasi-experimental design acquired.",
+    "status": "OPEN",
+    "title": "Identified causal designs"
+  },
+  {
+    "gap_id": "IADC-GAP-001A-003",
+    "remaining_constraint": "DFF and SOFR acquired; futures-implied expectations and event timestamps absent.",
+    "status": "PARTIALLY_CLOSED",
+    "title": "FOMC and rate-expectation history"
+  },
+  {
+    "gap_id": "IADC-GAP-001A-007",
+    "remaining_constraint": "No unrestricted synchronized institutional event tape acquired.",
+    "status": "OPEN",
+    "title": "Intraday event sequencing"
+  }
+]

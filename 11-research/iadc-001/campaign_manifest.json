@@ -1,0 +1,21 @@
+{
+  "artifact_count": 32,
+  "authority": "Architecture Review Board",
+  "campaign_id": "IADC-001",
+  "governance": [
+    "Engineering OS",
+    "IKROS",
+    "WPS-1.0",
+    "ERS-1.0",
+    "RSM-1.0"
+  ],
+  "objective": "Discover and preserve evidence-backed XAU/USD monetary-policy mechanisms.",
+  "prohibitions_observed": [
+    "no trading rules",
+    "no broker connection",
+    "no live trading",
+    "no paper trading",
+    "no synthetic evidence"
+  ],
+  "seed": 42
+}

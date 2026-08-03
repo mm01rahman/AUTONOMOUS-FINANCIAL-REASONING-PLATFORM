@@ -1,0 +1,31 @@
+{
+  "cadence": "monthly",
+  "dataset_id": "IADC002-PCEPILFE",
+  "domain": "inflation",
+  "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+  "limitations": [
+    "Observational data; no identification design or causal warrant."
+  ],
+  "name": "Core PCE Price Index",
+  "normalized_checksum_sha256": "0ec56cbf8bd84b6abdd053633e2263f5ee9676535e1bc4694d6e09e2ac4e7ad6",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-PCEPILFE.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "FRED",
+  "quality": {
+    "calendar_coverage_ratio": 0.987805,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-06-01T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 810,
+    "research_depth": true,
+    "start_timestamp": "1959-01-01T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "dfb91c73baa1d3dab20014699f8337b8076c8da42e77ff75cc71bcccd608b133",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-PCEPILFE.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "U.S. Bureau of Economic Analysis",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE",
+  "timezone": "UTC",
+  "variable": "core_pce"
+}

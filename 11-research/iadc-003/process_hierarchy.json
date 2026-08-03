@@ -1,0 +1,39 @@
+{
+  "campaign_id": "IADC-003",
+  "parents": [
+    {
+      "children": [
+        "IADC003-P04-POS"
+      ],
+      "domain": "cross_asset_volatility",
+      "induction_basis": "dominant absolute rotated loading among observed signatures",
+      "parent_id": "IADC003-DOMAIN-CROSS_ASSET_VOLATILITY"
+    },
+    {
+      "children": [
+        "IADC003-P01-POS",
+        "IADC003-P01-NEG"
+      ],
+      "domain": "etf_positioning",
+      "induction_basis": "dominant absolute rotated loading among observed signatures",
+      "parent_id": "IADC003-DOMAIN-ETF_POSITIONING"
+    },
+    {
+      "children": [
+        "IADC003-P05-POS"
+      ],
+      "domain": "real_yields",
+      "induction_basis": "dominant absolute rotated loading among observed signatures",
+      "parent_id": "IADC003-DOMAIN-REAL_YIELDS"
+    },
+    {
+      "children": [
+        "IADC003-P03-NEG"
+      ],
+      "domain": "usd_fx",
+      "induction_basis": "dominant absolute rotated loading among observed signatures",
+      "parent_id": "IADC003-DOMAIN-USD_FX"
+    }
+  ],
+  "rule": "Parents induced only from each process's dominant absolute loading domain."
+}

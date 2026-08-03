@@ -1,0 +1,31 @@
+{
+  "cadence": "daily",
+  "dataset_id": "IADC002-DGS30",
+  "domain": "nominal_yields",
+  "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+  "limitations": [
+    "Observational data; no identification design or causal warrant."
+  ],
+  "name": "30-Year Treasury Yield",
+  "normalized_checksum_sha256": "b0d438006750fbef70c54a0e9dcfd053fda2db8c6e4969373f125bdbc31389f5",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-DGS30.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "FRED",
+  "quality": {
+    "calendar_coverage_ratio": 0.684216,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 12359,
+    "research_depth": true,
+    "start_timestamp": "1977-02-15T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "1e2089bb19c9178e9cd95b9dcdc604999b98bcf17b0009d3f1ac6251a0e914db",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-DGS30.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "Board of Governors of the Federal Reserve System",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS30",
+  "timezone": "UTC",
+  "variable": "yield_30y_fred"
+}

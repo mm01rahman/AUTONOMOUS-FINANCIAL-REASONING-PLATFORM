@@ -1,0 +1,31 @@
+{
+  "cadence": "daily",
+  "dataset_id": "IADC002-T5YIE",
+  "domain": "inflation_expectations",
+  "license_status": "PUBLIC_RESEARCH_DOWNLOAD",
+  "limitations": [
+    "Observational data; no identification design or causal warrant."
+  ],
+  "name": "5-Year Breakeven Inflation",
+  "normalized_checksum_sha256": "bd83d483771045a3ae68255151938e43f476fb27800e5089615b9a0359052e5c",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-T5YIE.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "FRED",
+  "quality": {
+    "calendar_coverage_ratio": 0.684974,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-31T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 5899,
+    "research_depth": true,
+    "start_timestamp": "2003-01-02T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "c0af4aa8107410572d18a57d6835e1d45457087909bd7311b9f05cda9805ccbd",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-T5YIE.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "Federal Reserve Bank of St. Louis",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T5YIE",
+  "timezone": "UTC",
+  "variable": "breakeven_5y"
+}

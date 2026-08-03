@@ -1,0 +1,32 @@
+[
+  {
+    "count": 513,
+    "failure_class": "EVIDENCE_SUPPORTS_NULL_OR_NEGLIGIBLE_EFFECT",
+    "share": 0.484877
+  },
+  {
+    "count": 206,
+    "failure_class": "TEMPORAL_COVERAGE_INSUFFICIENT",
+    "share": 0.194707
+  },
+  {
+    "count": 135,
+    "failure_class": "OBSERVABILITY_INSUFFICIENT",
+    "share": 0.127599
+  },
+  {
+    "count": 128,
+    "failure_class": "MULTIPLE_TESTING_OR_EFFECT_GATE_FAILURE",
+    "share": 0.120983
+  },
+  {
+    "count": 49,
+    "failure_class": "TEMPORAL_INSTABILITY",
+    "share": 0.046314
+  },
+  {
+    "count": 27,
+    "failure_class": "REPEATABILITY_OR_PLACEBO_FAILURE",
+    "share": 0.02552
+  }
+]

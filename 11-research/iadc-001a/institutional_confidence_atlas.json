@@ -1,0 +1,178 @@
+[
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-016",
+    "observational_confidence": 0.763799,
+    "rank": 1
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-017",
+    "observational_confidence": 0.750789,
+    "rank": 2
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-014",
+    "observational_confidence": 0.744386,
+    "rank": 3
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-008",
+    "observational_confidence": 0.732651,
+    "rank": 4
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-003",
+    "observational_confidence": 0.726465,
+    "rank": 5
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-002",
+    "observational_confidence": 0.711704,
+    "rank": 6
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-004",
+    "observational_confidence": 0.70535,
+    "rank": 7
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-015",
+    "observational_confidence": 0.691954,
+    "rank": 8
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-001",
+    "observational_confidence": 0.690199,
+    "rank": 9
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-011",
+    "observational_confidence": 0.681171,
+    "rank": 10
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-013",
+    "observational_confidence": 0.676936,
+    "rank": 11
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-005",
+    "observational_confidence": 0.67429,
+    "rank": 12
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-021",
+    "observational_confidence": 0.661325,
+    "rank": 13
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-006",
+    "observational_confidence": 0.644895,
+    "rank": 14
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-009",
+    "observational_confidence": 0.643291,
+    "rank": 15
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-012",
+    "observational_confidence": 0.641578,
+    "rank": 16
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-022",
+    "observational_confidence": 0.637186,
+    "rank": 17
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-018",
+    "observational_confidence": 0.633736,
+    "rank": 18
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-020",
+    "observational_confidence": 0.621451,
+    "rank": 19
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-007",
+    "observational_confidence": 0.606138,
+    "rank": 20
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-019",
+    "observational_confidence": 0.595261,
+    "rank": 21
+  },
+  {
+    "causal_confidence": null,
+    "ceiling_reason": "Observational archive without identified causal design.",
+    "confidence_ceiling": 0.79,
+    "observation_id": "IADC-OBS-001A-010",
+    "observational_confidence": 0.594155,
+    "rank": 22
+  }
+]

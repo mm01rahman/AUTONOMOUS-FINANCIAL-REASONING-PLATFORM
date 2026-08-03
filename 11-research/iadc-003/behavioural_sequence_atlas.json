@@ -1,0 +1,1281 @@
+{
+  "bh_significant_cross_process_transition_count": 0,
+  "campaign_id": "IADC-003",
+  "descriptive_lifecycle_episode_count": 201,
+  "descriptive_lifecycles": [
+    {
+      "episode_count": 75,
+      "interpretation": "descriptive onset-to-termination lifecycle of retrospectively estimated episodes; excluded from cross-process transition tests",
+      "median_confirmed_duration_sessions": 1.0,
+      "process_id": "IADC003-P01-POS"
+    },
+    {
+      "episode_count": 86,
+      "interpretation": "descriptive onset-to-termination lifecycle of retrospectively estimated episodes; excluded from cross-process transition tests",
+      "median_confirmed_duration_sessions": 2.0,
+      "process_id": "IADC003-P01-NEG"
+    },
+    {
+      "episode_count": 15,
+      "interpretation": "descriptive onset-to-termination lifecycle of retrospectively estimated episodes; excluded from cross-process transition tests",
+      "median_confirmed_duration_sessions": 1.0,
+      "process_id": "IADC003-P03-NEG"
+    },
+    {
+      "episode_count": 15,
+      "interpretation": "descriptive onset-to-termination lifecycle of retrospectively estimated episodes; excluded from cross-process transition tests",
+      "median_confirmed_duration_sessions": 1.0,
+      "process_id": "IADC003-P04-POS"
+    },
+    {
+      "episode_count": 10,
+      "interpretation": "descriptive onset-to-termination lifecycle of retrospectively estimated episodes; excluded from cross-process transition tests",
+      "median_confirmed_duration_sessions": 1.0,
+      "process_id": "IADC003-P05-POS"
+    }
+  ],
+  "event_window_sessions": 10,
+  "examined_cross_process_transition_count": 80,
+  "interpretation": "Corrected recurrence and lift remain observational temporal ordering, not event causality.",
+  "multi_step_count": 34,
+  "multi_step_sequences": [
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-POS:ONSET"
+      ],
+      "support": 8,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.25,
+      "sequence": [
+        "IADC003-P03-NEG:ONSET",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 7,
+      "temporal_fold_recurrence": 3
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.25,
+      "sequence": [
+        "IADC003-P03-NEG:TERMINATION",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 7,
+      "temporal_fold_recurrence": 3
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-POS:TERMINATION"
+      ],
+      "support": 7,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.25,
+      "sequence": [
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-POS:ONSET",
+        "IADC003-P01-POS:TERMINATION"
+      ],
+      "support": 6,
+      "temporal_fold_recurrence": 3
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.25,
+      "sequence": [
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-POS:ONSET",
+        "IADC003-P01-POS:TERMINATION"
+      ],
+      "support": 6,
+      "temporal_fold_recurrence": 3
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-POS:ONSET"
+      ],
+      "support": 5,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-POS:ONSET"
+      ],
+      "support": 5,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P03-NEG:ONSET",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-POS:ONSET"
+      ],
+      "support": 5,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P03-NEG:TERMINATION",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-POS:ONSET"
+      ],
+      "support": 5,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P03-NEG:ONSET",
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-POS:ONSET"
+      ],
+      "support": 5,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P03-NEG:TERMINATION",
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-POS:ONSET"
+      ],
+      "support": 5,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-POS:TERMINATION"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-POS:ONSET"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-POS:TERMINATION"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.75,
+      "sequence": [
+        "IADC003-P03-NEG:ONSET",
+        "IADC003-P05-POS:ONSET",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 1
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.75,
+      "sequence": [
+        "IADC003-P03-NEG:TERMINATION",
+        "IADC003-P05-POS:ONSET",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 1
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.75,
+      "sequence": [
+        "IADC003-P03-NEG:ONSET",
+        "IADC003-P05-POS:TERMINATION",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 1
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.75,
+      "sequence": [
+        "IADC003-P03-NEG:TERMINATION",
+        "IADC003-P05-POS:TERMINATION",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 1
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P03-NEG:ONSET",
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-POS:TERMINATION"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P03-NEG:TERMINATION",
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-POS:TERMINATION"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-POS:TERMINATION",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-POS:TERMINATION",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-POS:ONSET"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-POS:TERMINATION",
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-POS:ONSET"
+      ],
+      "support": 4,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.25,
+      "sequence": [
+        "IADC003-P01-POS:ONSET",
+        "IADC003-P01-POS:TERMINATION",
+        "IADC003-P03-NEG:ONSET"
+      ],
+      "support": 3,
+      "temporal_fold_recurrence": 3
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.25,
+      "sequence": [
+        "IADC003-P01-POS:ONSET",
+        "IADC003-P01-POS:TERMINATION",
+        "IADC003-P03-NEG:TERMINATION"
+      ],
+      "support": 3,
+      "temporal_fold_recurrence": 3
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P05-POS:TERMINATION",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 3,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-POS:ONSET",
+        "IADC003-P04-POS:ONSET",
+        "IADC003-P04-POS:TERMINATION"
+      ],
+      "support": 3,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-POS:TERMINATION",
+        "IADC003-P04-POS:ONSET",
+        "IADC003-P04-POS:TERMINATION"
+      ],
+      "support": 3,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P04-POS:ONSET",
+        "IADC003-P04-POS:TERMINATION",
+        "IADC003-P01-NEG:ONSET"
+      ],
+      "support": 3,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P04-POS:ONSET",
+        "IADC003-P04-POS:TERMINATION",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 3,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P04-POS:ONSET",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 3,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P04-POS:TERMINATION",
+        "IADC003-P01-NEG:ONSET",
+        "IADC003-P01-NEG:TERMINATION"
+      ],
+      "support": 3,
+      "temporal_fold_recurrence": 2
+    },
+    {
+      "causal_interpretation": null,
+      "failure_rate": 0.5,
+      "sequence": [
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-NEG:TERMINATION",
+        "IADC003-P01-POS:TERMINATION"
+      ],
+      "support": 3,
+      "temporal_fold_recurrence": 2
+    }
+  ],
+  "null": "exact finite enumeration of common within-fold circular offsets; complete target-process event streams shift together",
+  "reported_cross_process_transition_count": 39,
+  "risk_set": "source events with ten subsequent sessions remaining in the same chronological fold; target must occur at lag 1..10",
+  "tied_event_policy": "same-date events are an unordered set and never enter ordered transitions or multi-step sequences",
+  "transitions": [
+    {
+      "base_probability": 0.02211411,
+      "bh_qvalue": 0.1754386,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P03-NEG:ONSET",
+      "lift": 9.044,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        2.0
+      ],
+      "permutation_pvalue": 0.00789474,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P05-POS:ONSET",
+      "transition_probability": 0.2
+    },
+    {
+      "base_probability": 0.02211411,
+      "bh_qvalue": 0.1754386,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P03-NEG:ONSET",
+      "lift": 9.044,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        2.0
+      ],
+      "permutation_pvalue": 0.00877193,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P05-POS:TERMINATION",
+      "transition_probability": 0.2
+    },
+    {
+      "base_probability": 0.02211411,
+      "bh_qvalue": 0.1754386,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P03-NEG:TERMINATION",
+      "lift": 9.044,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        2.0
+      ],
+      "permutation_pvalue": 0.00789474,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P05-POS:ONSET",
+      "transition_probability": 0.2
+    },
+    {
+      "base_probability": 0.02211411,
+      "bh_qvalue": 0.1754386,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P03-NEG:TERMINATION",
+      "lift": 9.044,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        2.0
+      ],
+      "permutation_pvalue": 0.00877193,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P05-POS:TERMINATION",
+      "transition_probability": 0.2
+    },
+    {
+      "base_probability": 0.17226891,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P03-NEG:ONSET",
+      "lift": 1.93495935,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.09473684,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 5,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P01-NEG:ONSET",
+      "transition_probability": 0.33333333
+    },
+    {
+      "base_probability": 0.17226891,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P03-NEG:TERMINATION",
+      "lift": 1.93495935,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.09561404,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 5,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P01-NEG:ONSET",
+      "transition_probability": 0.33333333
+    },
+    {
+      "base_probability": 0.17315347,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P03-NEG:ONSET",
+      "lift": 1.5400596,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.19824561,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 4,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P01-NEG:TERMINATION",
+      "transition_probability": 0.26666667
+    },
+    {
+      "base_probability": 0.17315347,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P03-NEG:TERMINATION",
+      "lift": 1.5400596,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.20175439,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 4,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P01-NEG:TERMINATION",
+      "transition_probability": 0.26666667
+    },
+    {
+      "base_probability": 0.15325077,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P04-POS:ONSET",
+      "lift": 1.74006734,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        5.0
+      ],
+      "permutation_pvalue": 0.17807018,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 4,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P01-POS:ONSET",
+      "transition_probability": 0.26666667
+    },
+    {
+      "base_probability": 0.15369306,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P04-POS:ONSET",
+      "lift": 1.73505995,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        5.0
+      ],
+      "permutation_pvalue": 0.16666667,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 4,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P01-POS:TERMINATION",
+      "transition_probability": 0.26666667
+    },
+    {
+      "base_probability": 0.15369306,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P04-POS:TERMINATION",
+      "lift": 1.73505995,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        5.0
+      ],
+      "permutation_pvalue": 0.16929825,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 4,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P01-POS:TERMINATION",
+      "transition_probability": 0.26666667
+    },
+    {
+      "base_probability": 0.15325077,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P05-POS:ONSET",
+      "lift": 2.61010101,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        4.0
+      ],
+      "permutation_pvalue": 0.07894737,
+      "risk_set_size": 10,
+      "same_date_events_excluded": true,
+      "support": 4,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P01-POS:ONSET",
+      "transition_probability": 0.4
+    },
+    {
+      "base_probability": 0.02211411,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P01-NEG:ONSET",
+      "lift": 1.57744186,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        4.0
+      ],
+      "permutation_pvalue": 0.25350877,
+      "risk_set_size": 86,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P05-POS:TERMINATION",
+      "transition_probability": 0.03488372
+    },
+    {
+      "base_probability": 0.03206546,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.75,
+      "from_event": "IADC003-P01-NEG:TERMINATION",
+      "lift": 1.08789094,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.40789474,
+      "risk_set_size": 86,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 1,
+      "to_event": "IADC003-P03-NEG:ONSET",
+      "transition_probability": 0.03488372
+    },
+    {
+      "base_probability": 0.03206546,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.75,
+      "from_event": "IADC003-P01-NEG:TERMINATION",
+      "lift": 1.08789094,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.40526316,
+      "risk_set_size": 86,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 1,
+      "to_event": "IADC003-P03-NEG:TERMINATION",
+      "transition_probability": 0.03488372
+    },
+    {
+      "base_probability": 0.03206546,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P01-POS:ONSET",
+      "lift": 1.26430568,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.39736842,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P03-NEG:ONSET",
+      "transition_probability": 0.04054054
+    },
+    {
+      "base_probability": 0.03206546,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P01-POS:ONSET",
+      "lift": 1.26430568,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.39824561,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P03-NEG:TERMINATION",
+      "transition_probability": 0.04054054
+    },
+    {
+      "base_probability": 0.03295002,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P01-POS:ONSET",
+      "lift": 1.23036459,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        5.0
+      ],
+      "permutation_pvalue": 0.41842105,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P04-POS:ONSET",
+      "transition_probability": 0.04054054
+    },
+    {
+      "base_probability": 0.02211411,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P01-POS:ONSET",
+      "lift": 1.83324324,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        5.0
+      ],
+      "permutation_pvalue": 0.26315789,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P05-POS:ONSET",
+      "transition_probability": 0.04054054
+    },
+    {
+      "base_probability": 0.02211411,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P01-POS:ONSET",
+      "lift": 1.83324324,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        5.0
+      ],
+      "permutation_pvalue": 0.25789474,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P05-POS:TERMINATION",
+      "transition_probability": 0.04054054
+    },
+    {
+      "base_probability": 0.03206546,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P01-POS:TERMINATION",
+      "lift": 1.26430568,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.40964912,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P03-NEG:ONSET",
+      "transition_probability": 0.04054054
+    },
+    {
+      "base_probability": 0.03206546,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P01-POS:TERMINATION",
+      "lift": 1.26430568,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.41140351,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P03-NEG:TERMINATION",
+      "transition_probability": 0.04054054
+    },
+    {
+      "base_probability": 0.03295002,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P01-POS:TERMINATION",
+      "lift": 1.23036459,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        5.0
+      ],
+      "permutation_pvalue": 0.40789474,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P04-POS:ONSET",
+      "transition_probability": 0.04054054
+    },
+    {
+      "base_probability": 0.02211411,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P01-POS:TERMINATION",
+      "lift": 1.83324324,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        5.0
+      ],
+      "permutation_pvalue": 0.25614035,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P05-POS:ONSET",
+      "transition_probability": 0.04054054
+    },
+    {
+      "base_probability": 0.02211411,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P01-POS:TERMINATION",
+      "lift": 1.83324324,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        5.0
+      ],
+      "permutation_pvalue": 0.25526316,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P05-POS:TERMINATION",
+      "transition_probability": 0.04054054
+    },
+    {
+      "base_probability": 0.15325077,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P04-POS:TERMINATION",
+      "lift": 1.30505051,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        5.0
+      ],
+      "permutation_pvalue": 0.38947368,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P01-POS:ONSET",
+      "transition_probability": 0.2
+    },
+    {
+      "base_probability": 0.15369306,
+      "bh_qvalue": 0.81643132,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P05-POS:ONSET",
+      "lift": 1.95194245,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        4.0
+      ],
+      "permutation_pvalue": 0.20877193,
+      "risk_set_size": 10,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P01-POS:TERMINATION",
+      "transition_probability": 0.3
+    },
+    {
+      "base_probability": 0.17226891,
+      "bh_qvalue": 0.89473684,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P04-POS:ONSET",
+      "lift": 1.16097561,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.56754386,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P01-NEG:ONSET",
+      "transition_probability": 0.2
+    },
+    {
+      "base_probability": 0.17315347,
+      "bh_qvalue": 0.89473684,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P04-POS:ONSET",
+      "lift": 1.1550447,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.57192982,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P01-NEG:TERMINATION",
+      "transition_probability": 0.2
+    },
+    {
+      "base_probability": 0.17226891,
+      "bh_qvalue": 0.89473684,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P04-POS:TERMINATION",
+      "lift": 1.16097561,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.56491228,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P01-NEG:ONSET",
+      "transition_probability": 0.2
+    },
+    {
+      "base_probability": 0.17315347,
+      "bh_qvalue": 0.89473684,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.5,
+      "from_event": "IADC003-P04-POS:TERMINATION",
+      "lift": 1.1550447,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        0.0,
+        6.0
+      ],
+      "permutation_pvalue": 0.56929825,
+      "risk_set_size": 15,
+      "same_date_events_excluded": true,
+      "support": 3,
+      "temporal_fold_recurrence": 2,
+      "to_event": "IADC003-P01-NEG:TERMINATION",
+      "transition_probability": 0.2
+    },
+    {
+      "base_probability": 0.15325077,
+      "bh_qvalue": 1.0,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P01-NEG:TERMINATION",
+      "lift": 0.68287526,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        6.0,
+        21.0
+      ],
+      "permutation_pvalue": 0.91666667,
+      "risk_set_size": 86,
+      "same_date_events_excluded": true,
+      "support": 9,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P01-POS:ONSET",
+      "transition_probability": 0.10465116
+    },
+    {
+      "base_probability": 0.15369306,
+      "bh_qvalue": 1.0,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P01-NEG:TERMINATION",
+      "lift": 0.68091016,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        6.0,
+        21.0
+      ],
+      "permutation_pvalue": 0.91666667,
+      "risk_set_size": 86,
+      "same_date_events_excluded": true,
+      "support": 9,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P01-POS:TERMINATION",
+      "transition_probability": 0.10465116
+    },
+    {
+      "base_probability": 0.15325077,
+      "bh_qvalue": 1.0,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P01-NEG:ONSET",
+      "lift": 0.60700023,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        6.0,
+        21.0
+      ],
+      "permutation_pvalue": 0.95438596,
+      "risk_set_size": 86,
+      "same_date_events_excluded": true,
+      "support": 8,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P01-POS:ONSET",
+      "transition_probability": 0.09302326
+    },
+    {
+      "base_probability": 0.15369306,
+      "bh_qvalue": 1.0,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.25,
+      "from_event": "IADC003-P01-NEG:ONSET",
+      "lift": 0.52959679,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        6.0,
+        21.0
+      ],
+      "permutation_pvalue": 0.96929825,
+      "risk_set_size": 86,
+      "same_date_events_excluded": true,
+      "support": 7,
+      "temporal_fold_recurrence": 3,
+      "to_event": "IADC003-P01-POS:TERMINATION",
+      "transition_probability": 0.08139535
+    },
+    {
+      "base_probability": 0.17226891,
+      "bh_qvalue": 1.0,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.0,
+      "from_event": "IADC003-P01-POS:TERMINATION",
+      "lift": 0.39222149,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        6.0,
+        20.0
+      ],
+      "permutation_pvalue": 0.99385965,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 5,
+      "temporal_fold_recurrence": 4,
+      "to_event": "IADC003-P01-NEG:ONSET",
+      "transition_probability": 0.06756757
+    },
+    {
+      "base_probability": 0.17315347,
+      "bh_qvalue": 1.0,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.0,
+      "from_event": "IADC003-P01-POS:TERMINATION",
+      "lift": 0.3902178,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        6.0,
+        20.0
+      ],
+      "permutation_pvalue": 0.99385965,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 5,
+      "temporal_fold_recurrence": 4,
+      "to_event": "IADC003-P01-NEG:TERMINATION",
+      "transition_probability": 0.06756757
+    },
+    {
+      "base_probability": 0.17226891,
+      "bh_qvalue": 1.0,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.0,
+      "from_event": "IADC003-P01-POS:ONSET",
+      "lift": 0.31377719,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        6.475,
+        20.0
+      ],
+      "permutation_pvalue": 1.0,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 4,
+      "temporal_fold_recurrence": 4,
+      "to_event": "IADC003-P01-NEG:ONSET",
+      "transition_probability": 0.05405405
+    },
+    {
+      "base_probability": 0.17315347,
+      "bh_qvalue": 1.0,
+      "causal_interpretation": null,
+      "classification": "UNRESOLVED",
+      "exact_shift_count": 1140,
+      "failure_rate": 0.0,
+      "from_event": "IADC003-P01-POS:ONSET",
+      "lift": 0.31217424,
+      "null_method": "exact enumeration of every unique common circular-shift offset admissible in all folds; complete target-process onset/termination stream shifted together",
+      "null_support_95_interval": [
+        6.475,
+        20.0
+      ],
+      "permutation_pvalue": 0.99824561,
+      "risk_set_size": 74,
+      "same_date_events_excluded": true,
+      "support": 4,
+      "temporal_fold_recurrence": 4,
+      "to_event": "IADC003-P01-NEG:TERMINATION",
+      "transition_probability": 0.05405405
+    }
+  ]
+}

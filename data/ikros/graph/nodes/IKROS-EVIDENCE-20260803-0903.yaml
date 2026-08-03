@@ -1,0 +1,36 @@
+attributes:
+  campaign_id: IADC-002
+  causal_promotions: 0
+  datasets_analysis_only: 3
+  datasets_persisted: 16
+  decision: EVIDENCE_EXPANDED_CAUSAL_IDENTIFICATION_STILL_BLOCKED
+  gaps_closed_research_depth: 2
+  generated_at: '2026-08-03T03:54:38.538774+00:00'
+  incremental_experiments: 27
+  institutional_conclusion: AFRP now has research-depth public real-yield, breakeven,
+    CFTC positioning, official inflation, policy-rate, FX, and oil histories with
+    governed provenance. These datasets improve confounder control and reactivate
+    previously blocked observational research, but no result is causally identified.
+    ETF redistribution rights, consensus surprises, futures-implied expectations,
+    intraday sequencing, and valid causal designs remain unresolved.
+  prior_observations_retested: 22
+  prior_observations_robust: 6
+  prior_observations_unstable_or_confounded: 8
+  prior_observations_weakened: 8
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: 11-research\iadc-002\ikros_ingestion.json
+  status: COMPLETE
+  summary: 16 immutable historical datasets acquired; 22 observations retested.
+  supported_observations: 0
+  trading_rules_generated: 0
+confidence: 0.97
+created_at: '2026-08-03T03:55:50.218191+00:00'
+ikros_id: IKROS-EVIDENCE-20260803-0903
+label: IADC-002 governed dataset expansion evidence
+node_id: IKROS-EVIDENCE-20260803-0903
+node_type: EVIDENCE
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T03:55:50.218191+00:00'
+valid_to: null
+wp_refs: []

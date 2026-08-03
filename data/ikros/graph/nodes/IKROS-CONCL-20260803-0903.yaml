@@ -1,0 +1,23 @@
+attributes:
+  causal_claims: 0
+  decision: EVIDENCE_EXPANDED_CAUSAL_IDENTIFICATION_STILL_BLOCKED
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: 11-research\iadc-002\ikros_ingestion.json
+  summary: AFRP now has research-depth public real-yield, breakeven, CFTC positioning,
+    official inflation, policy-rate, FX, and oil histories with governed provenance.
+    These datasets improve confounder control and reactivate previously blocked observational
+    research, but no result is causally identified. ETF redistribution rights, consensus
+    surprises, futures-implied expectations, intraday sequencing, and valid causal
+    designs remain unresolved.
+  trading_rules: 0
+confidence: 0.84
+created_at: '2026-08-03T03:55:50.218191+00:00'
+ikros_id: IKROS-CONCL-20260803-0903
+label: IADC-002 institutional evidence recovery conclusion
+node_id: IKROS-CONCL-20260803-0903
+node_type: RESEARCH_CONCLUSION
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T03:55:50.218191+00:00'
+valid_to: null
+wp_refs: []

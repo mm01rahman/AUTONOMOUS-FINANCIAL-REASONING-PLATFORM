@@ -1,0 +1,42 @@
+audit_id: IQA-20260803-0001
+executed_at: '2026-08-03T03:34:24.065312+00:00'
+parsed_query:
+  direction: out
+  filters: {}
+  graph_operation: null
+  include_archive: false
+  max_depth: null
+  raw: GET ENTITY IKROS-CONCL-20260803-0901
+  source: ENTITY
+  source_id: null
+  target: IKROS-CONCL-20260803-0901
+  target_id: null
+plan:
+  query:
+    direction: out
+    filters: {}
+    graph_operation: null
+    include_archive: false
+    max_depth: null
+    raw: GET ENTITY IKROS-CONCL-20260803-0901
+    source: ENTITY
+    source_id: null
+    target: IKROS-CONCL-20260803-0901
+    target_id: null
+  steps:
+  - detail: Search registries for exact identifier
+    name: resolve_registry_entity
+    source: registry
+  - detail: Search memory store for exact identifier
+    name: resolve_memory_record
+    source: memory
+  - detail: Search graph nodes for exact identifier
+    name: resolve_graph_node
+    source: graph
+  - detail: Sort exact matches deterministically
+    name: rank_results
+    source: engine
+raw_query: GET ENTITY IKROS-CONCL-20260803-0901
+result_count: 1
+result_ids:
+- IKROS-CONCL-20260803-0901

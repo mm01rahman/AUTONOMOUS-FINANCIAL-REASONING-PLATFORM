@@ -1,0 +1,37 @@
+attributes:
+  reasons:
+  - available: six-row fixture only
+    decision: BLOCKED_BY_DATA
+    domain: real yields
+    required: historical TIPS real-yield curve
+  - available: not present
+    decision: BLOCKED_BY_DATA
+    domain: inflation surprise
+    required: CPI/Core CPI/PCE releases, consensus, and vintages
+  - available: daily short-rate proxy only
+    decision: BLOCKED_BY_DATA
+    domain: FOMC event studies
+    required: meeting/statement timestamps and expectation surprises
+  - available: four-to-six-row fixtures only
+    decision: BLOCKED_BY_DATA
+    domain: institutional positioning and ETF transmission
+    required: multi-cycle CFTC and ETF holdings histories
+  - available: observational daily time series
+    decision: NOT_ESTABLISHED
+    domain: causal identification
+    required: valid instruments, natural experiments, or identified structural model
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\autonomous-financial-reasoning-platform\11-research\iadc-001\ikros_ingestion.json
+  summary: Critical requested mechanism families cannot be tested with the available
+    archive.
+confidence: 0.99
+created_at: '2026-08-03T03:32:33.516772+00:00'
+ikros_id: IKROS-CONTRA-20260803-0901
+label: IADC-001 evidence-boundary contradictions
+node_id: IKROS-CONTRA-20260803-0901
+node_type: EVIDENCE
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T03:32:33.516772+00:00'
+valid_to: null
+wp_refs: []

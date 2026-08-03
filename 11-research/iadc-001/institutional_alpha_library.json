@@ -1,0 +1,90 @@
+[
+  {
+    "best_correlation": 0.057786,
+    "best_horizon_days": 5,
+    "best_hypothesis_id": "IADC-HYP-0901",
+    "best_lag_days": 10,
+    "best_q_value": 0.0002486111,
+    "best_regime": "all",
+    "causal_status": "NOT_ESTABLISHED",
+    "confidence": 0.75,
+    "economic_mechanism": "Curve steepening can reflect easing or inflation expectations supportive of gold.",
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "family": "curve_expectations",
+    "mechanism_id": "IADC-MECH-001",
+    "portfolio_contribution": "Not assessed",
+    "state": "SUPPORTED_ASSOCIATION",
+    "supported_hypothesis_count": 2
+  },
+  {
+    "best_correlation": -0.062943,
+    "best_horizon_days": 5,
+    "best_hypothesis_id": "IADC-HYP-0658",
+    "best_lag_days": 20,
+    "best_q_value": 4.29141e-05,
+    "best_regime": "all",
+    "causal_status": "NOT_ESTABLISHED",
+    "confidence": 0.75,
+    "economic_mechanism": "Sustained nominal-yield repricing can pressure gold through carry and USD channels.",
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "family": "nominal_yield_transmission",
+    "mechanism_id": "IADC-MECH-002",
+    "portfolio_contribution": "Not assessed",
+    "state": "SUPPORTED_ASSOCIATION",
+    "supported_hypothesis_count": 16
+  },
+  {
+    "best_correlation": 0.156463,
+    "best_horizon_days": 20,
+    "best_hypothesis_id": "IADC-HYP-1020",
+    "best_lag_days": 5,
+    "best_q_value": 0.0,
+    "best_regime": "gold_bear",
+    "causal_status": "NOT_ESTABLISHED",
+    "confidence": 0.5,
+    "economic_mechanism": "A rising short-rate policy proxy tightens carry conditions for non-yielding gold.",
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "family": "policy_anchor",
+    "mechanism_id": "IADC-MECH-003",
+    "portfolio_contribution": "Not assessed",
+    "state": "REJECTED_OR_UNRESOLVED",
+    "supported_hypothesis_count": 0
+  },
+  {
+    "best_correlation": -0.088288,
+    "best_horizon_days": 1,
+    "best_hypothesis_id": "IADC-HYP-0006",
+    "best_lag_days": 0,
+    "best_q_value": 0.0029925467,
+    "best_regime": "usd_strength",
+    "causal_status": "NOT_ESTABLISHED",
+    "confidence": 0.75,
+    "economic_mechanism": "USD appreciation raises the non-USD price of gold and can reduce marginal demand.",
+    "failure_modes": [
+      "common macro driver",
+      "regime misclassification",
+      "non-stationarity",
+      "overlapping forward returns"
+    ],
+    "family": "usd_transmission",
+    "mechanism_id": "IADC-MECH-004",
+    "portfolio_contribution": "Not assessed",
+    "state": "SUPPORTED_ASSOCIATION",
+    "supported_hypothesis_count": 4
+  }
+]

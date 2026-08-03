@@ -1,0 +1,31 @@
+{
+  "cadence": "daily",
+  "dataset_id": "IADC002-SOFR",
+  "domain": "policy",
+  "license_status": "US_GOVERNMENT_PUBLIC_DATA",
+  "limitations": [
+    "Observational data; no identification design or causal warrant."
+  ],
+  "name": "Secured Overnight Financing Rate",
+  "normalized_checksum_sha256": "1e3a3d94070e6595c2fa8cf3a3196a2e6fcf5f77c725494a730fe290ab0b8771",
+  "normalized_path": "data/historical-observatory/iadc-002/normalized/IADC002-SOFR.csv",
+  "persistence_status": "RAW_AND_NORMALIZED_IMMUTABLE_SNAPSHOT",
+  "provider": "FRED",
+  "quality": {
+    "calendar_coverage_ratio": 0.683657,
+    "completeness": 1.0,
+    "duplicate_timestamp_count": 0,
+    "end_timestamp": "2026-07-30T00:00:00+00:00",
+    "monotonic_timestamps": true,
+    "record_count": 2079,
+    "research_depth": true,
+    "start_timestamp": "2018-04-03T00:00:00+00:00"
+  },
+  "raw_checksum_sha256": "c9772cd17e8a50e0e96384a438ba1940fac4c69597ff145ea04c805d6f08758e",
+  "raw_path": "data/historical-observatory/iadc-002/raw/IADC002-SOFR.csv",
+  "source_accessed_at": "2026-08-03T03:54:38.538774+00:00",
+  "source_owner": "Federal Reserve Bank of New York",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SOFR",
+  "timezone": "UTC",
+  "variable": "sofr"
+}

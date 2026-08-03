@@ -1,0 +1,21 @@
+attributes:
+  causal_claims: 0
+  decision: OBSERVATIONAL_MAP_COMPLETE
+  source_kind: INTERNAL_RESEARCH_REPORT
+  source_reference: C:\Users\mm01r\autonomous-financial-reasoning-platform\11-research\iadc-001a\ikros_ingestion.json
+  summary: AFRP has repeatable but weak-to-moderate observational knowledge concentrated
+    in USD, nominal-yield, and curve relationships. Scientific maturity is capped
+    by dependent variants, absent multi-provider replication, and major expectation,
+    flow, positioning, event, and causal-identification gaps.
+  trading_rules: 0
+confidence: 0.79
+created_at: '2026-08-03T03:40:30.492221+00:00'
+ikros_id: IKROS-CONCL-20260803-0902
+label: IADC-001A institutional evidence-quality conclusion
+node_id: IKROS-CONCL-20260803-0902
+node_type: RESEARCH_CONCLUSION
+spec_refs:
+- SPEC-060
+valid_from: '2026-08-03T03:40:30.492221+00:00'
+valid_to: null
+wp_refs: []

@@ -1,0 +1,243 @@
+{
+  "benchmark_policy": "Best isolated variable selected only within each purged training fold; factor-model benchmark basis is also fold-local.",
+  "campaign_id": "IADC-003",
+  "conclusion": "Latent processes do not explain XAU/USD more consistently out of sample than the training-selected isolated-variable benchmark. No retrospective process edge survives BH and no process alpha is supported.",
+  "contemporaneous": {
+    "factor": {
+      "mean_direction_accuracy": 0.51644305,
+      "mean_oos_correlation": 0.1296719,
+      "mean_oos_r2": 0.01139999,
+      "positive_r2_folds": 1
+    },
+    "folds": [
+      {
+        "embargo_sessions_before_test": 5,
+        "factor_model": {
+          "correlation": 0.264746,
+          "direction_accuracy": 0.51447368,
+          "n": 760,
+          "r2": 0.03848172
+        },
+        "fold": 1,
+        "fold_selected_factor_count": 4,
+        "isolated_benchmark": {
+          "correlation": 0.11586966,
+          "direction_accuracy": 0.51184211,
+          "n": 760,
+          "r2": 0.0134891,
+          "variable": "gld_holdings_change"
+        },
+        "mode": "contemporaneous",
+        "parallel_analysis_first_rejected_cutoff": 1.46209132,
+        "parallel_analysis_first_rejected_eigenvalue": 1.17647026,
+        "purged_sessions_before_test": 5,
+        "test_end": "2020-07-13",
+        "test_start": "2017-06-30",
+        "train_end": "2017-06-15",
+        "train_start": "2008-06-05"
+      },
+      {
+        "embargo_sessions_before_test": 5,
+        "factor_model": {
+          "correlation": 0.08314325,
+          "direction_accuracy": 0.525,
+          "n": 760,
+          "r2": -0.00317823
+        },
+        "fold": 2,
+        "fold_selected_factor_count": 6,
+        "isolated_benchmark": {
+          "correlation": 0.09789602,
+          "direction_accuracy": 0.51710526,
+          "n": 760,
+          "r2": 0.0088553,
+          "variable": "real_yield_10y_change"
+        },
+        "mode": "contemporaneous",
+        "parallel_analysis_first_rejected_cutoff": 1.21119822,
+        "parallel_analysis_first_rejected_eigenvalue": 1.03430369,
+        "purged_sessions_before_test": 5,
+        "test_end": "2023-07-20",
+        "test_start": "2020-07-14",
+        "train_end": "2020-06-26",
+        "train_start": "2008-06-05"
+      },
+      {
+        "embargo_sessions_before_test": 5,
+        "factor_model": {
+          "correlation": 0.04112645,
+          "direction_accuracy": 0.50985545,
+          "n": 761,
+          "r2": -0.00110353
+        },
+        "fold": 3,
+        "fold_selected_factor_count": 5,
+        "isolated_benchmark": {
+          "correlation": -0.01915521,
+          "direction_accuracy": 0.50328515,
+          "n": 761,
+          "r2": -0.00762479,
+          "variable": "real_yield_10y_change"
+        },
+        "mode": "contemporaneous",
+        "parallel_analysis_first_rejected_cutoff": 1.39219148,
+        "parallel_analysis_first_rejected_eigenvalue": 1.33060452,
+        "purged_sessions_before_test": 5,
+        "test_end": "2026-07-30",
+        "test_start": "2023-07-21",
+        "train_end": "2023-07-06",
+        "train_start": "2008-06-05"
+      }
+    ],
+    "isolated": {
+      "mean_direction_accuracy": 0.51074417,
+      "mean_oos_correlation": 0.06487016,
+      "mean_oos_r2": 0.00490654,
+      "positive_r2_folds": 2
+    }
+  },
+  "edge_test": "retrospective persistence-confirmed onsets with buffering, controls without replacement, dependence-preserving circular-shift permutation, paired bootstrap interval, and BH correction",
+  "forward_5_session": {
+    "factor": {
+      "mean_direction_accuracy": 0.52001611,
+      "mean_oos_correlation": -0.02377262,
+      "mean_oos_r2": -0.01069032,
+      "positive_r2_folds": 0
+    },
+    "folds": [
+      {
+        "embargo_sessions_before_test": 5,
+        "factor_model": {
+          "correlation": -0.05006376,
+          "direction_accuracy": 0.51184211,
+          "n": 760,
+          "r2": -0.01411119
+        },
+        "fold": 1,
+        "fold_selected_factor_count": 4,
+        "isolated_benchmark": {
+          "correlation": -0.00758746,
+          "direction_accuracy": 0.53552632,
+          "n": 760,
+          "r2": -0.00721809,
+          "variable": "yield_10y_change"
+        },
+        "mode": "forward_5_session",
+        "parallel_analysis_first_rejected_cutoff": 1.46209132,
+        "parallel_analysis_first_rejected_eigenvalue": 1.17647026,
+        "purged_sessions_before_test": 5,
+        "test_end": "2020-07-13",
+        "test_start": "2017-06-30",
+        "train_end": "2017-06-15",
+        "train_start": "2008-06-05"
+      },
+      {
+        "embargo_sessions_before_test": 5,
+        "factor_model": {
+          "correlation": 0.00777536,
+          "direction_accuracy": 0.50263158,
+          "n": 760,
+          "r2": -0.01080504
+        },
+        "fold": 2,
+        "fold_selected_factor_count": 6,
+        "isolated_benchmark": {
+          "correlation": 0.01703889,
+          "direction_accuracy": 0.52105263,
+          "n": 760,
+          "r2": -0.01233988,
+          "variable": "yield_2y_change"
+        },
+        "mode": "forward_5_session",
+        "parallel_analysis_first_rejected_cutoff": 1.21119822,
+        "parallel_analysis_first_rejected_eigenvalue": 1.03430369,
+        "purged_sessions_before_test": 5,
+        "test_end": "2023-07-20",
+        "test_start": "2020-07-14",
+        "train_end": "2020-06-26",
+        "train_start": "2008-06-05"
+      },
+      {
+        "embargo_sessions_before_test": 5,
+        "factor_model": {
+          "correlation": -0.02902945,
+          "direction_accuracy": 0.54557464,
+          "n": 757,
+          "r2": -0.00715474
+        },
+        "fold": 3,
+        "fold_selected_factor_count": 5,
+        "isolated_benchmark": {
+          "correlation": -0.00887929,
+          "direction_accuracy": 0.57859974,
+          "n": 757,
+          "r2": -0.00298658,
+          "variable": "yield_10y_change"
+        },
+        "mode": "forward_5_session",
+        "parallel_analysis_first_rejected_cutoff": 1.39219148,
+        "parallel_analysis_first_rejected_eigenvalue": 1.33060452,
+        "purged_sessions_before_test": 5,
+        "test_end": "2026-07-30",
+        "test_start": "2023-07-21",
+        "train_end": "2023-07-06",
+        "train_start": "2008-06-05"
+      }
+    ],
+    "isolated": {
+      "mean_direction_accuracy": 0.54505956,
+      "mean_oos_correlation": 0.00019071,
+      "mean_oos_r2": -0.00751485,
+      "positive_r2_folds": 0
+    }
+  },
+  "process_alpha_conclusion": "NO_PROCESS_ALPHA_EVIDENCE",
+  "process_edges": [
+    {
+      "active_minus_inactive_forward_log_return": 0.00227666,
+      "bh_qvalue": 0.75674326,
+      "causal_confidence": null,
+      "matched_episode_forward_log_return_difference": 0.00227666,
+      "passes_bh_5pct": false,
+      "process_id": "IADC003-P01-POS",
+      "pvalue": 0.60539461
+    },
+    {
+      "active_minus_inactive_forward_log_return": -0.00261291,
+      "bh_qvalue": 0.75674326,
+      "causal_confidence": null,
+      "matched_episode_forward_log_return_difference": -0.00261291,
+      "passes_bh_5pct": false,
+      "process_id": "IADC003-P01-NEG",
+      "pvalue": 0.54445554
+    },
+    {
+      "active_minus_inactive_forward_log_return": -0.00260564,
+      "bh_qvalue": 0.77222777,
+      "causal_confidence": null,
+      "matched_episode_forward_log_return_difference": -0.00260564,
+      "passes_bh_5pct": false,
+      "process_id": "IADC003-P03-NEG",
+      "pvalue": 0.77222777
+    },
+    {
+      "active_minus_inactive_forward_log_return": 0.00879478,
+      "bh_qvalue": 0.75674326,
+      "causal_confidence": null,
+      "matched_episode_forward_log_return_difference": 0.00879478,
+      "passes_bh_5pct": false,
+      "process_id": "IADC003-P04-POS",
+      "pvalue": 0.31568432
+    },
+    {
+      "active_minus_inactive_forward_log_return": -0.01497086,
+      "bh_qvalue": 0.75674326,
+      "causal_confidence": null,
+      "matched_episode_forward_log_return_difference": -0.01497086,
+      "passes_bh_5pct": false,
+      "process_id": "IADC003-P05-POS",
+      "pvalue": 0.18181818
+    }
+  ],
+  "representation_boundary": "Process-edge episodes use a full-sample latent basis and are retrospective descriptive subsequent-outcome associations, not OOS or predictive alpha evidence."
+}

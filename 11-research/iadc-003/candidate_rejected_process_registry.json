@@ -1,0 +1,256 @@
+{
+  "campaign_id": "IADC-003",
+  "components": [
+    {
+      "component_id": "PC01",
+      "eigenvalue": 8.80747366,
+      "parallel_analysis_95pct_cutoff": 8.70948218,
+      "reason": "parallel-analysis candidate passed leave-block-out Tucker and pole recurrence gates",
+      "status": "retained"
+    },
+    {
+      "component_id": "PC02",
+      "eigenvalue": 3.64823854,
+      "parallel_analysis_95pct_cutoff": 2.00793317,
+      "reason": "minimum adjacent Tucker congruence below 0.85",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC03",
+      "eigenvalue": 2.8569651,
+      "parallel_analysis_95pct_cutoff": 1.81943501,
+      "reason": "parallel-analysis candidate passed leave-block-out Tucker and pole recurrence gates",
+      "status": "retained"
+    },
+    {
+      "component_id": "PC04",
+      "eigenvalue": 1.93589875,
+      "parallel_analysis_95pct_cutoff": 1.69706215,
+      "reason": "parallel-analysis candidate passed leave-block-out Tucker and pole recurrence gates",
+      "status": "retained"
+    },
+    {
+      "component_id": "PC05",
+      "eigenvalue": 1.62182252,
+      "parallel_analysis_95pct_cutoff": 1.48108916,
+      "reason": "parallel-analysis candidate passed leave-block-out Tucker and pole recurrence gates",
+      "status": "retained"
+    },
+    {
+      "component_id": "PC06",
+      "eigenvalue": 1.22588149,
+      "parallel_analysis_95pct_cutoff": 1.33765151,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC07",
+      "eigenvalue": 1.0138516,
+      "parallel_analysis_95pct_cutoff": 1.11587052,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC08",
+      "eigenvalue": 0.99672394,
+      "parallel_analysis_95pct_cutoff": 0.9922477,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC09",
+      "eigenvalue": 0.77559107,
+      "parallel_analysis_95pct_cutoff": 0.90669974,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC10",
+      "eigenvalue": 0.58208437,
+      "parallel_analysis_95pct_cutoff": 0.87197522,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC11",
+      "eigenvalue": 0.53760736,
+      "parallel_analysis_95pct_cutoff": 0.84052216,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC12",
+      "eigenvalue": 0.35078791,
+      "parallel_analysis_95pct_cutoff": 0.68775607,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC13",
+      "eigenvalue": 0.21762658,
+      "parallel_analysis_95pct_cutoff": 0.58005376,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC14",
+      "eigenvalue": 0.19092629,
+      "parallel_analysis_95pct_cutoff": 0.54887841,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC15",
+      "eigenvalue": 0.17117234,
+      "parallel_analysis_95pct_cutoff": 0.51147126,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC16",
+      "eigenvalue": 0.14871183,
+      "parallel_analysis_95pct_cutoff": 0.49595976,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC17",
+      "eigenvalue": 0.03566554,
+      "parallel_analysis_95pct_cutoff": 0.46333031,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    },
+    {
+      "component_id": "PC18",
+      "eigenvalue": 0.00109655,
+      "parallel_analysis_95pct_cutoff": 0.1908774,
+      "reason": "eigenvalue did not exceed deterministic null cutoff or fixed maximum",
+      "status": "rejected"
+    }
+  ],
+  "criterion": "parallel-analysis extraction followed by predeclared leave-block-out Tucker, recurrence, and independent-onset gates",
+  "retained_signed_processes": [
+    "IADC003-P01-POS",
+    "IADC003-P01-NEG",
+    "IADC003-P03-NEG",
+    "IADC003-P04-POS",
+    "IADC003-P05-POS"
+  ],
+  "signed_process_candidates": [
+    {
+      "episode_count": 75,
+      "episode_fold_recurrence": 4,
+      "factor_id": "F01",
+      "pole": "positive",
+      "pre_match_nonoverlapping_onsets": 64,
+      "process_id": "IADC003-P01-POS",
+      "rejection_reasons": [],
+      "status": "retained"
+    },
+    {
+      "episode_count": 86,
+      "episode_fold_recurrence": 4,
+      "factor_id": "F01",
+      "pole": "negative",
+      "pre_match_nonoverlapping_onsets": 67,
+      "process_id": "IADC003-P01-NEG",
+      "rejection_reasons": [],
+      "status": "retained"
+    },
+    {
+      "episode_count": 15,
+      "episode_fold_recurrence": 4,
+      "factor_id": "F02",
+      "pole": "positive",
+      "pre_match_nonoverlapping_onsets": 12,
+      "process_id": "IADC003-P02-POS",
+      "rejection_reasons": [
+        "minimum adjacent Tucker congruence below 0.85"
+      ],
+      "status": "rejected"
+    },
+    {
+      "episode_count": 18,
+      "episode_fold_recurrence": 4,
+      "factor_id": "F02",
+      "pole": "negative",
+      "pre_match_nonoverlapping_onsets": 17,
+      "process_id": "IADC003-P02-NEG",
+      "rejection_reasons": [
+        "minimum adjacent Tucker congruence below 0.85"
+      ],
+      "status": "rejected"
+    },
+    {
+      "episode_count": 7,
+      "episode_fold_recurrence": 4,
+      "factor_id": "F03",
+      "pole": "positive",
+      "pre_match_nonoverlapping_onsets": 7,
+      "process_id": "IADC003-P03-POS",
+      "rejection_reasons": [
+        "independent onset count below 10"
+      ],
+      "status": "rejected"
+    },
+    {
+      "episode_count": 15,
+      "episode_fold_recurrence": 4,
+      "factor_id": "F03",
+      "pole": "negative",
+      "pre_match_nonoverlapping_onsets": 14,
+      "process_id": "IADC003-P03-NEG",
+      "rejection_reasons": [],
+      "status": "retained"
+    },
+    {
+      "episode_count": 15,
+      "episode_fold_recurrence": 4,
+      "factor_id": "F04",
+      "pole": "positive",
+      "pre_match_nonoverlapping_onsets": 14,
+      "process_id": "IADC003-P04-POS",
+      "rejection_reasons": [],
+      "status": "retained"
+    },
+    {
+      "episode_count": 6,
+      "episode_fold_recurrence": 3,
+      "factor_id": "F04",
+      "pole": "negative",
+      "pre_match_nonoverlapping_onsets": 6,
+      "process_id": "IADC003-P04-NEG",
+      "rejection_reasons": [
+        "independent onset count below 10"
+      ],
+      "status": "rejected"
+    },
+    {
+      "episode_count": 10,
+      "episode_fold_recurrence": 4,
+      "factor_id": "F05",
+      "pole": "positive",
+      "pre_match_nonoverlapping_onsets": 10,
+      "process_id": "IADC003-P05-POS",
+      "rejection_reasons": [],
+      "status": "retained"
+    },
+    {
+      "episode_count": 11,
+      "episode_fold_recurrence": 2,
+      "factor_id": "F05",
+      "pole": "negative",
+      "pre_match_nonoverlapping_onsets": 11,
+      "process_id": "IADC003-P05-NEG",
+      "rejection_reasons": [
+        "episode recurrence below 3 chronological folds"
+      ],
+      "status": "rejected"
+    }
+  ],
+  "stability_gates": {
+    "mean_adjacent_tucker_congruence": 0.9,
+    "minimum_adjacent_tucker_congruence": 0.85,
+    "trace_required_across_all_models": true
+  }
+}

@@ -1,0 +1,80 @@
+graph_node_ids:
+- IKROS-EVIDENCE-20260803-0903
+- IKROS-KO-20260803-0903
+- IKROS-KO-20260803-0904
+- IKROS-CONCL-20260803-0903
+ingested_at: '2026-08-03T03:55:51.696850+00:00'
+ingestion_id: IKING-20260803-0018
+memory_ids:
+- IKMEM-T1-20260803-0003
+- IKMEM-T2-20260803-0004
+- IKMEM-T2-20260803-0005
+- IKMEM-T4-20260803-0003
+object_fingerprints:
+- '{"attributes": {"campaign_id": "IADC-002", "causal_promotions": 0, "datasets_analysis_only":
+  3, "datasets_persisted": 16, "decision": "EVIDENCE_EXPANDED_CAUSAL_IDENTIFICATION_STILL_BLOCKED",
+  "gaps_closed_research_depth": 2, "generated_at": "2026-08-03T03:54:38.538774+00:00",
+  "incremental_experiments": 27, "institutional_conclusion": "AFRP now has research-depth
+  public real-yield, breakeven, CFTC positioning, official inflation, policy-rate,
+  FX, and oil histories with governed provenance. These datasets improve confounder
+  control and reactivate previously blocked observational research, but no result
+  is causally identified. ETF redistribution rights, consensus surprises, futures-implied
+  expectations, intraday sequencing, and valid causal designs remain unresolved.",
+  "prior_observations_retested": 22, "prior_observations_robust": 6, "prior_observations_unstable_or_confounded":
+  8, "prior_observations_weakened": 8, "status": "COMPLETE", "supported_observations":
+  0, "trading_rules_generated": 0}, "capability_refs": [], "confidence": 0.97, "created_at":
+  "2026-08-03T03:55:50.218191+00:00", "dependency_ids": [], "evidence_refs": ["11-research/iadc-002/evidence_ledger.json",
+  "11-research/iadc-002/expanded_dataset_registry.json"], "identifier": "IKROS-EVIDENCE-20260803-0903",
+  "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type": "Evidence", "relationships":
+  [], "source_format": "JSON", "source_ids": [], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "11-research\\iadc-002\\ikros_ingestion.json", "specification_refs":
+  ["SPEC-060"], "summary": "16 immutable historical datasets acquired; 22 observations
+  retested.", "title": "IADC-002 governed dataset expansion evidence", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"analysis_only_datasets": 3, "persisted_datasets": 16}, "capability_refs":
+  [], "confidence": 0.97, "created_at": "2026-08-03T03:55:50.218191+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/iadc-002/expanded_dataset_registry.json", "11-research/iadc-002/source_access_register.json"],
+  "identifier": "IKROS-KO-20260803-0903", "lifecycle_state": "ACTIVE", "memory_tier":
+  null, "object_type": "KnowledgeObject", "relationships": [], "source_format": "JSON",
+  "source_ids": ["IKROS-EVIDENCE-20260803-0903"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "11-research\\iadc-002\\ikros_ingestion.json", "specification_refs":
+  ["SPEC-060"], "summary": "Permanent registry of acquired, analysis-only, and blocked
+  historical sources.", "title": "IADC-002 dataset and provenance registry", "version":
+  "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"causal_promotions": 0, "supported_observations": 0}, "capability_refs":
+  [], "confidence": 0.88, "created_at": "2026-08-03T03:55:50.218191+00:00", "dependency_ids":
+  [], "evidence_refs": ["11-research/iadc-002/incremental_experiment_registry.json",
+  "11-research/iadc-002/observation_reevaluation_registry.json"], "identifier": "IKROS-KO-20260803-0904",
+  "lifecycle_state": "ACTIVE", "memory_tier": null, "object_type": "KnowledgeObject",
+  "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-EVIDENCE-20260803-0903"],
+  "source_kind": "INTERNAL_RESEARCH_REPORT", "source_reference": "11-research\\iadc-002\\ikros_ingestion.json",
+  "specification_refs": ["SPEC-060"], "summary": "Incremental observational results
+  and prior-observation control sensitivity.", "title": "IADC-002 reactivated experiment
+  registry", "version": "1.0.0", "work_package_refs": []}'
+- '{"attributes": {"causal_claims": 0, "decision": "EVIDENCE_EXPANDED_CAUSAL_IDENTIFICATION_STILL_BLOCKED",
+  "trading_rules": 0}, "capability_refs": [], "confidence": 0.84, "created_at": "2026-08-03T03:55:50.218191+00:00",
+  "dependency_ids": [], "evidence_refs": ["11-research/iadc-002/CAUSAL_RECOVERY_REPORT.md",
+  "11-research/iadc-002/EXECUTIVE_SUMMARY.md"], "identifier": "IKROS-CONCL-20260803-0903",
+  "lifecycle_state": "PUBLISHED", "memory_tier": null, "object_type": "ResearchConclusion",
+  "relationships": [], "source_format": "JSON", "source_ids": ["IKROS-EVIDENCE-20260803-0903",
+  "IKROS-KO-20260803-0903", "IKROS-KO-20260803-0904"], "source_kind": "INTERNAL_RESEARCH_REPORT",
+  "source_reference": "11-research\\iadc-002\\ikros_ingestion.json", "specification_refs":
+  ["SPEC-060"], "summary": "AFRP now has research-depth public real-yield, breakeven,
+  CFTC positioning, official inflation, policy-rate, FX, and oil histories with governed
+  provenance. These datasets improve confounder control and reactivate previously
+  blocked observational research, but no result is causally identified. ETF redistribution
+  rights, consensus surprises, futures-implied expectations, intraday sequencing,
+  and valid causal designs remain unresolved.", "title": "IADC-002 institutional evidence
+  recovery conclusion", "version": "1.0.0", "work_package_refs": []}'
+object_ids:
+- IKROS-EVIDENCE-20260803-0903
+- IKROS-KO-20260803-0903
+- IKROS-KO-20260803-0904
+- IKROS-CONCL-20260803-0903
+source_format: JSON
+source_hash: 1a33b050751e24d170d694e7f692bc477ffb4ec54a1f09fc80b440d292683fb3
+source_kind: INTERNAL_RESEARCH_REPORT
+source_ref: 11-research\iadc-002\ikros_ingestion.json
+source_version: 1.0.0
+status: INGESTED
+warnings: []

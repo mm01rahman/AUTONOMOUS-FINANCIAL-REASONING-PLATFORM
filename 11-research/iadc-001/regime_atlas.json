@@ -1,0 +1,83 @@
+[
+  {
+    "best_correlation": -0.062943,
+    "best_driver": "yield_10y_change_5",
+    "best_hypothesis": "IADC-HYP-0658",
+    "best_q_value": 4.29141e-05,
+    "regime": "all",
+    "supported": 4,
+    "tested": 120
+  },
+  {
+    "best_correlation": 0.080667,
+    "best_driver": "curve_change_5",
+    "best_hypothesis": "IADC-HYP-0902",
+    "best_q_value": 0.0079726815,
+    "regime": "gold_bull",
+    "supported": 2,
+    "tested": 120
+  },
+  {
+    "best_correlation": -0.095746,
+    "best_driver": "yield_10y_change_5",
+    "best_hypothesis": "IADC-HYP-0552",
+    "best_q_value": 0.0012515375,
+    "regime": "gold_bear",
+    "supported": 7,
+    "tested": 120
+  },
+  {
+    "best_correlation": 0.090324,
+    "best_driver": "dxy_return_20",
+    "best_hypothesis": "IADC-HYP-0319",
+    "best_q_value": 0.0025702997,
+    "regime": "policy_tightening",
+    "supported": 0,
+    "tested": 120
+  },
+  {
+    "best_correlation": -0.112204,
+    "best_driver": "yield_10y_change_5",
+    "best_hypothesis": "IADC-HYP-0662",
+    "best_q_value": 6.7842e-05,
+    "regime": "policy_easing",
+    "supported": 3,
+    "tested": 120
+  },
+  {
+    "best_correlation": -0.088288,
+    "best_driver": "dxy_return_1",
+    "best_hypothesis": "IADC-HYP-0006",
+    "best_q_value": 0.0029925467,
+    "regime": "usd_strength",
+    "supported": 2,
+    "tested": 120
+  },
+  {
+    "best_correlation": 0.10807,
+    "best_driver": "dxy_return_20",
+    "best_hypothesis": "IADC-HYP-0403",
+    "best_q_value": 0.0001536891,
+    "regime": "usd_weakness",
+    "supported": 0,
+    "tested": 120
+  },
+  {
+    "best_correlation": -0.12127,
+    "best_driver": "curve_change_5",
+    "best_hypothesis": "IADC-HYP-0854",
+    "best_q_value": 0.0244990787,
+    "regime": "policy_transition",
+    "supported": 0,
+    "tested": 120
+  },
+  {
+    "best_correlation": -0.187601,
+    "best_driver": "yield_10y_change_5",
+    "best_hypothesis": "IADC-HYP-0666",
+    "best_q_value": 0.0001447996,
+    "regime": "market_stress",
+    "supported": 4,
+    "tested": 120
+  }
+]
